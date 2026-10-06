@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Article Trainer (der / die / das) — Free Interactive Quiz | Bayzubaan</title>
+<meta name="description" content="Master German noun genders with a free interactive der/die/das quiz. Learn the gender rules, endings and patterns, then test yourself with 20 random nouns per round and review every mistake.">
+<link rel="canonical" href="https://bayzubaan.com/tools/german-article-trainer/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="German Article Trainer (der / die / das) — Free Interactive Quiz">
+<meta property="og:description" content="Learn and drill German noun genders: the rules, the patterns, and a 20-question quiz with instant feedback.">
+<meta property="og:url" content="https://bayzubaan.com/tools/german-article-trainer/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="German Article Trainer (der / die / das) — Free Interactive Quiz">
+<meta name="twitter:description" content="Learn and drill German noun genders: the rules, the patterns, and a 20-question quiz with instant feedback.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When do I use der, die, or das in German?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use der for masculine nouns, die for feminine nouns, and das for neuter nouns. These are the definite articles (the) in the nominative case. Every German noun has a fixed grammatical gender that you must learn together with the noun itself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there rules for German noun gender, or do I have to memorise every article?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both. Many endings reliably predict gender: nouns ending in -ung, -heit, -keit, -schaft, -tion or -tät are almost always feminine (die); nouns ending in -chen or -lein are almost always neuter (das); days, months and seasons are masculine (der). But a large number of common nouns follow no rule, so always learn each new noun together with its article."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is Mädchen (girl) neuter in German?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because of its ending: the diminutive suffix -chen always makes a noun neuter, regardless of meaning. Das Mädchen (the girl), das Brötchen (the bread roll) and das Häuschen (the little house) are all neuter. Grammatical gender does not always match natural gender."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the article change in the plural?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. In the nominative plural, all genders use die: der Tisch becomes die Tische, das Buch becomes die Bücher, die Lampe becomes die Lampen. This is why many learners find plurals easier — the gender distinction disappears."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best way to learn German articles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Never learn a noun without its article — say 'der Tisch', not 'Tisch'. Learn the reliable ending patterns, use colour coding (blue for masculine, red for feminine, green for neuter), and drill with quizzes like this one so the article becomes automatic before you need it in conversation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do compound nouns in German take the gender of the last word?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The gender of a German compound noun is determined by its final component: der Kühlschrank is masculine because Schrank is masculine, and die Fernbedienung is feminine because of the -ung ending. Knowing this lets you guess the gender of many long compounds."
+      }
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --primary:#2563eb; --correct:#10b981; --incorrect:#ef4444;
+  --bg:#f8fafc; --card:#ffffff; --border:#e2e8f0; --radius:8px;
+  --text:#0f172a; --muted:#64748b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+header.site{background:var(--card);border-bottom:1px solid var(--border);padding:16px 20px}
+header.site .inner{max-width:860px;margin:0 auto;display:flex;align-items:center;gap:12px}
+.brand{font-weight:700;font-size:1.15rem;color:var(--primary);text-decoration:none}
+main{max-width:860px;margin:0 auto;padding:24px 20px 64px}
+h1{font-size:2rem;line-height:1.25;margin:12px 0 16px}
+h2{font-size:1.45rem;margin:36px 0 12px;padding-top:8px}
+h3{font-size:1.15rem;margin:24px 0 8px}
+p{margin:0 0 14px}
+ul,ol{margin:0 0 14px 24px}
+li{margin-bottom:8px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin:24px 0}
+table{width:100%;border-collapse:collapse;margin:16px 0;background:var(--card)}
+th,td{border:1px solid var(--border);padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:var(--primary)}
+.example{background:#f1f5f9;border-left:4px solid var(--primary);border-radius:0 var(--radius) var(--radius) 0;padding:12px 16px;margin:14px 0}
+.example .de{font-weight:600}
+.example .en{color:var(--muted);font-size:.95rem}
+.tip{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:var(--radius);padding:14px 18px;margin:16px 0}
+/* Quiz styles */
+#quiz-app{margin-top:16px}
+#quiz-progress-wrap{background:#e2e8f0;border-radius:999px;height:14px;overflow:hidden;margin:12px 0}
+#quiz-progress{height:100%;width:0;background:var(--primary);border-radius:999px;transition:width .3s ease}
+#quiz-meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-weight:600;color:var(--muted);font-size:.95rem}
+#quiz-streak{color:var(--primary)}
+#quiz-noun{font-size:2.4rem;font-weight:700;text-align:center;margin:28px 0 8px}
+#quiz-prompt{text-align:center;color:var(--muted);margin-bottom:20px}
+#quiz-buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.quiz-btn{font-size:1.35rem;font-weight:700;min-width:120px;min-height:64px;padding:14px 24px;border:2px solid var(--primary);background:#fff;color:var(--primary);border-radius:var(--radius);cursor:pointer;transition:transform .08s ease,background .15s ease,color .15s ease}
+.quiz-btn:hover{background:#eff6ff}
+.quiz-btn:active{transform:scale(.97)}
+.quiz-btn:disabled{cursor:default;opacity:1}
+.quiz-btn.correct{background:var(--correct);border-color:var(--correct);color:#fff}
+.quiz-btn.wrong{background:var(--incorrect);border-color:var(--incorrect);color:#fff}
+.quiz-btn.dim{opacity:.35}
+#quiz-feedback{text-align:center;font-weight:700;font-size:1.15rem;min-height:2rem;margin-top:18px}
+#quiz-feedback.ok{color:var(--correct)}
+#quiz-feedback.bad{color:var(--incorrect)}
+#quiz-end{display:none;text-align:center}
+#quiz-end h2{margin-top:0}
+#missed-list{list-style:none;margin:16px 0 0;padding:0;text-align:left}
+#missed-list li{background:#fef2f2;border:1px solid #fecaca;border-radius:var(--radius);padding:10px 14px;margin-bottom:8px}
+#missed-list .corr{color:var(--primary);font-weight:700}
+.btn-primary{background:var(--primary);color:#fff;border:none;border-radius:var(--radius);font-size:1.1rem;font-weight:700;padding:14px 32px;min-height:56px;cursor:pointer;margin-top:16px}
+.btn-primary:hover{background:#1d4ed8}
+.author-credit{margin-top:40px;padding:16px 20px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);color:var(--muted);font-size:.95rem}
+footer.site{border-top:1px solid var(--border);padding:20px;text-align:center;color:var(--muted);font-size:.9rem;background:var(--card)}
+@media(max-width:560px){
+  h1{font-size:1.6rem}
+  #quiz-noun{font-size:2rem}
+  .quiz-btn{min-width:100px;font-size:1.2rem}
+  .card{padding:18px}
+}
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <a class="brand" href="https://bayzubaan.com/">Bayzubaan</a>
+    <span style="color:var(--muted)">German Learning Tools</span>
+  </div>
+</header>
+<main>
+<h1>German Article Trainer: Master der, die and das</h1>
+<!-- GUIDE-START -->
+<p>Every German noun has a grammatical gender — masculine, feminine or neuter — and the definite article changes with it: <strong>der</strong> for masculine, <strong>die</strong> for feminine, <strong>das</strong> for neuter. There is no way around articles in German. You cannot say "the table" without deciding whether it is <em>der Tisch</em>, <em>die Tisch</em> or <em>das Tisch</em> (it is <em>der Tisch</em>). The article also affects adjectives, pronouns and case endings throughout the sentence, so getting the gender right is the foundation of correct German. The good news is that gender is not completely random: reliable patterns cover a large share of the vocabulary, and the rest can be drilled until it becomes automatic. That is exactly what this page is for — first the rules, then a quiz to make them stick.</p>
+
+<h2>The three articles at a glance</h2>
+<p>In the nominative case (the subject of a sentence), the definite articles are refreshingly simple. Note that <em>die</em> also serves as the plural article for all genders, which is a small mercy for learners.</p>
+<table>
+<tr><th>Gender</th><th>Singular</th><th>Example</th><th>Plural</th></tr>
+<tr><td>Masculine</td><td><strong>der</strong></td><td>der Mann (the man)</td><td>die Männer</td></tr>
+<tr><td>Feminine</td><td><strong>die</strong></td><td>die Frau (the woman)</td><td>die Frauen</td></tr>
+<tr><td>Neuter</td><td><strong>das</strong></td><td>das Kind (the child)</td><td>die Kinder</td></tr>
+</table>
+<p>Be aware that the articles change in other cases (accusative, dative, genitive) — for example, masculine <em>der</em> becomes <em>den</em> in the accusative — but gender itself never changes. Once you know that Tisch is masculine, you know its article in every case forever.</p>
+
+<h2>Reliable pattern 1: feminine endings</h2>
+<p>Several word endings are feminine almost without exception. If you see one of these endings, you can confidently choose <strong>die</strong>:</p>
+<ul>
+<li><strong>-ung</strong>: die Zeitung (newspaper), die Übung (exercise), die Fernbedienung (remote control), die Rechnung (bill)</li>
+<li><strong>-heit</strong> and <strong>-keit</strong>: die Freiheit (freedom), die Möglichkeit (possibility), die Krankheit (illness)</li>
+<li><strong>-schaft</strong>: die Freundschaft (friendship), die Gesellschaft (society), die Mannschaft (team)</li>
+<li><strong>-tion / -sion</strong>: die Nation, die Diskussion (discussion), die Television... well, <em>das Fernsehen</em>, but die Station (station)</li>
+<li><strong>-tät</strong>: die Universität (university), die Qualität (quality), die Realität (reality)</li>
+<li><strong>-ik</strong>: die Musik (music), die Politik (politics), die Klinik (clinic)</li>
+<li><strong>-in</strong> (female persons and professions): die Lehrerin (female teacher), die Ärztin (female doctor), die Freundin (female friend)</li>
+</ul>
+<p>Most nouns ending in <strong>-e</strong> are feminine too — die Lampe (lamp), die Tasche (bag), die Blume (flower), die Straße (street) — though there are exceptions such as der Name (name) and das Ende (end).</p>
+
+<h2>Reliable pattern 2: neuter endings</h2>
+<p>These endings point to <strong>das</strong>:</p>
+<ul>
+<li><strong>-chen</strong> and <strong>-lein</strong> (diminutives): das Mädchen (girl), das Brötchen (bread roll), das Fräulein (young lady, dated). This is the famous reason <em>Mädchen</em> is neuter despite referring to a girl — grammar follows the ending, not the meaning.</li>
+<li><strong>-ment</strong> (mostly): das Dokument (document), das Instrument (instrument), das Apartment</li>
+<li><strong>-um</strong> (Latin origin): das Museum, das Zentrum (centre), das Datum (date)</li>
+<li>Infinitives used as nouns: das Essen (food/eating), das Lesen (reading), das Schwimmen (swimming)</li>
+<li>Most metals and chemical elements: das Gold, das Eisen (iron), das Silber (silver)</li>
+</ul>
+
+<h2>Reliable pattern 3: masculine groups</h2>
+<p>These categories are masculine, so take <strong>der</strong>:</p>
+<ul>
+<li><strong>Days of the week</strong>: der Montag, der Dienstag, der Mittwoch, der Donnerstag, der Freitag, der Samstag, der Sonntag</li>
+<li><strong>Months</strong>: der Januar, der Februar, der März, der April, der Mai, der Juni, der Juli, der August, der September, der Oktober, der November, der Dezember</li>
+<li><strong>Seasons</strong>: der Frühling (spring), der Sommer (summer), der Herbst (autumn), der Winter (winter)</li>
+<li><strong>Times of day</strong>: der Morgen (morning), der Mittag (midday), der Abend (evening) — but note <em>die Nacht</em> (night) is feminine</li>
+<li><strong>Weather phenomena</strong> (mostly): der Regen (rain), der Schnee (snow), der Wind, der Sturm (storm)</li>
+<li><strong>-ismus</strong>: der Tourismus (tourism), der Kapitalismus (capitalism)</li>
+<li><strong>-ling</strong>: der Frühling, der Schmetterling (butterfly), der Lehrling (apprentice)</li>
+<li>Many nouns ending in <strong>-or</strong>, <strong>-ist</strong>, <strong>-ant</strong>: der Doktor, der Tourist, der Elefant (elephant)</li>
+<li>Alcoholic drinks: der Wein (wine), der Kaffee (coffee), der Tee (tea), der Saft (juice) — but <em>das Bier</em> (beer) and <em>die Milch</em> (milk) are famous exceptions</li>
+<li>Makes of car: der BMW, der Mercedes, der Volkswagen (but <em>das Auto</em> itself is neuter)</li>
+</ul>
+
+<h2>When there is no pattern: learn the article with the noun</h2>
+<p>A large number of everyday nouns follow no rule at all, and this is where most learners stumble. Is it der, die or das Butter? (Die Butter.) Der, die or das Tisch? (Der Tisch.) There is no shortcut — you simply have to memorise them. The golden rule experienced teachers give is: <strong>never learn a noun without its article</strong>. Do not write "Tisch = table" in your vocabulary book; write "<strong>der</strong> Tisch = table". Say it aloud with the article every time. Flashcards should show the article on the front, and when you test yourself, the article is part of the answer, not optional decoration.</p>
+<p>It also helps to learn each noun with its plural form at the same time, because plural formation is irregular too: der Tisch → die Tische, das Buch → die Bücher, die Lampe → die Lampen. One entry per noun — article, noun, plural — gives you everything you need to actually use the word in a sentence.</p>
+
+<h2>Compound nouns: the last word decides</h2>
+<p>German loves long compound nouns, but their gender is easy: <strong>the final component determines the gender</strong>. Der Kühlschrank (refrigerator) is masculine because Schrank (cupboard) is masculine. Die Fernbedienung is feminine because of its -ung ending. Das Schlafzimmer (bedroom) is neuter because Zimmer (room) is neuter. Once you know the gender of the building blocks, you can decode compounds you have never seen before.</p>
+<div class="tip"><strong>Watch out for false friends of meaning:</strong> grammatical gender often ignores natural gender or logic. Das Mädchen (the girl) is neuter, das Kind (the child) is neuter, die Person (the person) is always feminine even for a man, and der See is a lake while die See is the sea. When meaning and grammar disagree, grammar wins.</div>
+
+<h2>Example sentences with translations</h2>
+<p>Articles in action — notice how the article is simply part of each noun phrase:</p>
+<div class="example"><div class="de">Der Hund spielt im Garten.</div><div class="en">The dog is playing in the garden.</div></div>
+<div class="example"><div class="de">Die Katze schläft auf dem Sofa.</div><div class="en">The cat is sleeping on the sofa.</div></div>
+<div class="example"><div class="de">Das Kind liest ein Buch.</div><div class="en">The child is reading a book.</div></div>
+<div class="example"><div class="de">Der Lehrer schreibt an die Tafel.</div><div class="en">The teacher is writing on the board.</div></div>
+<div class="example"><div class="de">Die Ärztin arbeitet im Krankenhaus.</div><div class="en">The (female) doctor works in the hospital.</div></div>
+<div class="example"><div class="de">Das Mädchen trinkt ein Glas Wasser.</div><div class="en">The girl is drinking a glass of water.</div></div>
+<div class="example"><div class="de">Am Montag kaufe ich Brot und Butter.</div><div class="en">On Monday I buy bread and butter. (der Montag, das Brot, die Butter)</div></div>
+<div class="example"><div class="de">Die Lampe steht auf dem Tisch neben dem Fenster.</div><div class="en">The lamp is on the table next to the window. (die Lampe, der Tisch, das Fenster)</div></div>
+<div class="example"><div class="de">Im Winter trinke ich gern heißen Tee.</div><div class="en">In winter I like to drink hot tea. (der Winter, der Tee)</div></div>
+<div class="example"><div class="de">Die Prüfung an der Universität war schwer.</div><div class="en">The exam at the university was difficult. (die Prüfung, die Universität)</div></div>
+
+<h2>Practical tips that actually work</h2>
+<ol>
+<li><strong>Colour-code your vocabulary.</strong> Write masculine nouns in blue, feminine in red, neuter in green. Your brain remembers colours faster than grammar tables, and the association becomes automatic with repetition.</li>
+<li><strong>Learn in chunks, not lists.</strong> Instead of memorising twenty isolated nouns, learn short phrases: <em>der Tisch im Zimmer</em> (the table in the room), <em>die Tasche auf dem Stuhl</em> (the bag on the chair). The article gets stored with the noun.</li>
+<li><strong>Prioritise high-frequency nouns first.</strong> The 100 most common nouns cover an enormous share of daily conversation. Master der Mann, die Frau, das Kind, das Jahr, der Tag, die Zeit and their friends before worrying about rare words.</li>
+<li><strong>Test both directions.</strong> Can you produce the article when you see the noun, and can you recall the noun when you hear the article? The quiz below tests recognition; say the answers aloud to train production too.</li>
+<li><strong>Accept mistakes as data.</strong> Every wrong answer in the quiz tells you exactly which noun needs attention. Review the missed words at the end of each round — that list is your personalised study plan.</li>
+<li><strong>Read with the articles highlighted.</strong> When reading German texts, underline or highlight every article. You will start noticing the patterns (-ung, -chen, days, months) in the wild, which reinforces the rules far better than re-reading a grammar table.</li>
+</ol>
+<p>German noun gender feels arbitrary at first, but it is roughly 80% predictable once you know the patterns, and the remaining 20% yields to steady drilling. Work through the quiz below — twenty random nouns per round, instant feedback, and a review list of everything you missed. A few rounds a day will do more for your articles than a week of staring at tables.</p>
+<!-- GUIDE-END -->
+
+<h2>Test yourself: the der / die / das quiz</h2>
+<div class="card" id="quiz-app">
+  <div id="quiz-meta">
+    <span id="quiz-round">Question 1/20</span>
+    <span>Score: <span id="quiz-score">0</span></span>
+    <span id="quiz-streak">Streak: 0</span>
+  </div>
+  <div id="quiz-progress-wrap" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0">
+    <div id="quiz-progress"></div>
+  </div>
+  <div id="quiz-play">
+    <div id="quiz-noun" aria-live="polite">Tisch</div>
+    <p id="quiz-prompt">Which article goes with this noun?</p>
+    <div id="quiz-buttons" role="group" aria-label="Choose the correct article">
+      <button class="quiz-btn" data-article="der" aria-label="Answer: der (masculine)">der</button>
+      <button class="quiz-btn" data-article="die" aria-label="Answer: die (feminine)">die</button>
+      <button class="quiz-btn" data-article="das" aria-label="Answer: das (neuter)">das</button>
+    </div>
+    <div id="quiz-feedback" aria-live="polite"></div>
+  </div>
+  <div id="quiz-end">
+    <h2>Round complete!</h2>
+    <p style="font-size:1.2rem">You scored <strong id="quiz-final-score">0</strong> out of 20.</p>
+    <p id="quiz-end-message"></p>
+    <div id="quiz-review" style="margin-top:8px">
+      <h3>Words to review</h3>
+      <p id="quiz-no-missed" style="color:var(--correct);font-weight:600">Perfect round — nothing to review!</p>
+      <ul id="missed-list"></ul>
+    </div>
+    <button class="btn-primary" id="quiz-restart">New round</button>
+  </div>
+</div>
+
+<div class="author-credit">Written by Dr Taimoor Asghar · Reviewed 2026-10-07 · Free German learning tool</div>
+</main>
+<footer class="site">© 2026 Bayzubaan — German learning tools</footer>
+<script>
+"use strict";
+/* Word bank: {w: noun, a: correct article}. Articles verified against standard German dictionaries. */
+const WORDS = [
+["der","Baum"],["der","Tisch"],["der","Mann"],["der","Stuhl"],["der","Hund"],["der","Lehrer"],
+["der","Garten"],["der","Apfel"],["der","Brief"],["der","Bruder"],["der","Vater"],["der","Sohn"],
+["der","Freund"],["der","Arzt"],["der","Kaffee"],["der","Tee"],["der","Kuchen"],["der","Stift"],
+["der","Bleistift"],["der","Schlüssel"],["der","Berg"],["der","Fluss"],["der","Wald"],["der","Zug"],
+["der","Bus"],["der","Bahnhof"],["der","Markt"],["der","Preis"],["der","Traum"],["der","Tag"],
+["der","Morgen"],["der","Montag"],["der","Dienstag"],["der","Mittwoch"],["der","Donnerstag"],["der","Freitag"],
+["der","Samstag"],["der","Sonntag"],["der","Januar"],["der","Februar"],["der","März"],["der","Frühling"],
+["der","Sommer"],["der","Herbst"],["der","Winter"],["der","Computer"],["der","Bildschirm"],["der","Film"],
+["der","Fußball"],["der","Schuh"],["der","Hut"],["der","Mantel"],["der","Spiegel"],["der","Teppich"],
+["der","Sessel"],["der","Herd"],["der","Kühlschrank"],["der","Topf"],["der","Teller"],["der","Löffel"],
+["der","Fernseher"],["der","Regen"],["der","Abend"],["der","Joghurt"],["der","Laptop"],
+["die","Frau"],["die","Lampe"],["die","Tür"],["die","Tasche"],["die","Katze"],["die","Schule"],
+["die","Ärztin"],["die","Nacht"],["die","Woche"],["die","Uhr"],["die","Blume"],["die","Schwester"],
+["die","Mutter"],["die","Tochter"],["die","Freundin"],["die","Lehrerin"],["die","Tasse"],["die","Gabel"],
+["die","Milch"],["die","Suppe"],["die","Küche"],["die","Wohnung"],["die","Straße"],["die","Stadt"],
+["die","Karte"],["die","Zeitung"],["die","Sprache"],["die","Frage"],["die","Antwort"],["die","Aufgabe"],
+["die","Prüfung"],["die","Universität"],["die","Bibliothek"],["die","Kirche"],["die","Jacke"],["die","Hose"],
+["die","Brille"],["die","Hand"],["die","Sonne"],["die","Welt"],["die","Natur"],["die","Wolke"],
+["die","Treppe"],["die","Rechnung"],["die","E-Mail"],["die","Zitrone"],["die","Orange"],["die","Banane"],
+["die","Kartoffel"],["die","Tomate"],["die","Pizza"],["die","Reise"],["die","Couch"],["die","Fernbedienung"],
+["die","Butter"],["die","Brücke"],["die","Nachricht"],["die","Zeitschrift"],
+["das","Mädchen"],["das","Buch"],["das","Kind"],["das","Fenster"],["das","Auto"],["das","Wasser"],
+["das","Handy"],["das","Zimmer"],["das","Haus"],["das","Bett"],["das","Bad"],["das","Brot"],
+["das","Ei"],["das","Fleisch"],["das","Gemüse"],["das","Obst"],["das","Salz"],["das","Glas"],
+["das","Messer"],["das","Bild"],["das","Foto"],["das","Kino"],["das","Hotel"],["das","Büro"],
+["das","Geschenk"],["das","Spiel"],["das","Wetter"],["das","Jahr"],["das","Wochenende"],["das","Frühstück"],
+["das","Kleid"],["das","Hemd"],["das","Fahrrad"],["das","Flugzeug"],["das","Ticket"],["das","Geld"],
+["das","Konto"],["das","Internet"],["das","Auge"],["das","Ohr"],["das","Haar"],["das","Bein"],
+["das","Herz"],["das","Pferd"],["das","Schwein"],["das","Sofa"],["das","Radio"],["das","Café"],
+["das","Restaurant"],["das","Abendessen"]
+];
+const ROUND_SIZE = 20;
+let round = [], idx = 0, score = 0, streak = 0, missed = [], answered = false;
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+function articleOf(noun){
+  const found = WORDS.find(e => e[1] === noun);
+  return found ? found[0] : null;
+}
+const nounEl = document.getElementById("quiz-noun");
+const roundEl = document.getElementById("quiz-round");
+const scoreEl = document.getElementById("quiz-score");
+const streakEl = document.getElementById("quiz-streak");
+const progressEl = document.getElementById("quiz-progress");
+const progressWrap = document.getElementById("quiz-progress-wrap");
+const feedbackEl = document.getElementById("quiz-feedback");
+const buttons = Array.from(document.querySelectorAll(".quiz-btn"));
+
+function newRound(){
+  round = shuffle(WORDS).slice(0, ROUND_SIZE);
+  idx = 0; score = 0; streak = 0; missed = [];
+  document.getElementById("quiz-play").style.display = "block";
+  document.getElementById("quiz-end").style.display = "none";
+  updateMeta(); showQuestion();
+}
+function updateMeta(){
+  roundEl.textContent = "Question " + Math.min(idx + 1, ROUND_SIZE) + "/" + ROUND_SIZE;
+  scoreEl.textContent = score;
+  streakEl.textContent = "Streak: " + streak;
+  progressEl.style.width = (idx / ROUND_SIZE * 100) + "%";
+  progressWrap.setAttribute("aria-valuenow", idx);
+}
+function showQuestion(){
+  answered = false;
+  nounEl.textContent = round[idx][1];
+  feedbackEl.textContent = ""; feedbackEl.className = "";
+  buttons.forEach(b => { b.disabled = false; b.className = "quiz-btn"; });
+}
+function answer(choice, btn){
+  if(answered) return;
+  answered = true;
+  const correct = round[idx][0];
+  const noun = round[idx][1];
+  buttons.forEach(b => {
+    b.disabled = true;
+    if(b.dataset.article === correct){ b.classList.add("correct"); }
+    else if(b === btn){ b.classList.add("wrong"); }
+    else { b.classList.add("dim"); }
+  });
+  if(choice === correct){
+    score++; streak++;
+    feedbackEl.textContent = "Correct! " + correct + " " + noun;
+    feedbackEl.className = "ok";
+  } else {
+    streak = 0;
+    missed.push([correct, noun]);
+    feedbackEl.textContent = "Not quite — " + correct + " " + noun;
+    feedbackEl.className = "bad";
+  }
+  updateMeta();
+  setTimeout(() => {
+    idx++;
+    if(idx < ROUND_SIZE){ updateMeta(); showQuestion(); }
+    else { endRound(); }
+  }, 900);
+}
+function endRound(){
+  progressEl.style.width = "100%";
+  progressWrap.setAttribute("aria-valuenow", ROUND_SIZE);
+  document.getElementById("quiz-play").style.display = "none";
+  document.getElementById("quiz-end").style.display = "block";
+  document.getElementById("quiz-final-score").textContent = score;
+  const msg = document.getElementById("quiz-end-message");
+  if(score === 20) msg.textContent = "Flawless! Your articles are rock solid.";
+  else if(score >= 16) msg.textContent = "Excellent — nearly perfect.";
+  else if(score >= 12) msg.textContent = "Good progress — review the words below and go again.";
+  else msg.textContent = "Keep practising — the review list below is your study plan.";
+  const list = document.getElementById("missed-list");
+  list.innerHTML = "";
+  document.getElementById("quiz-no-missed").style.display = missed.length ? "none" : "block";
+  missed.forEach(([art, noun]) => {
+    const li = document.createElement("li");
+    li.innerHTML = "<span class='corr'></span> " + noun;
+    li.querySelector(".corr").textContent = art;
+    list.appendChild(li);
+  });
+}
+buttons.forEach(b => b.addEventListener("click", () => answer(b.dataset.article, b)));
+document.getElementById("quiz-restart").addEventListener("click", newRound);
+newRound();
+</script>
+</body>
+</html>
