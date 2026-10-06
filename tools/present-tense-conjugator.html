@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Present Tense Conjugator — Free Verb Conjugation Tool | Bayzubaan</title>
+<meta name="description" content="Conjugate any German verb in the present tense instantly: regular verbs, stem-changing verbs (fahren→fährt, sprechen→spricht), -eln/-ern verbs, and irregulars sein, haben, werden. Full ich/du/er/wir/ihr/sie table with rules.">
+<link rel="canonical" href="https://bayzubaan.com/tools/present-tense-conjugator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="German Present Tense Conjugator — Free Verb Conjugation Tool">
+<meta property="og:description" content="Type any German verb, get the full present-tense table: regular, stem-changing and irregular verbs with rule explanations.">
+<meta property="og:url" content="https://bayzubaan.com/tools/present-tense-conjugator/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="German Present Tense Conjugator — Free Verb Conjugation Tool">
+<meta name="twitter:description" content="Type any German verb, get the full present-tense table with rules.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you conjugate spielen in the German present tense?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ich spiele, du spielst, er/sie/es spielt, wir spielen, ihr spielt, sie/Sie spielen. Take the stem (spiel-) and add -e, -st, -t, -en, -t, -en. This is the regular pattern that most German verbs follow."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which German verbs change their stem vowel in the present tense?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 170 strong verbs change the stem vowel in the du and er/sie/es forms: e→i (sprechen→spricht, essen→isst, geben→gibt), e→ie (sehen→sieht, lesen→liest), and a→ä (fahren→fährt, schlafen→schläft, laufen→läuft). The change never affects ich, wir, ihr or sie."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is it 'du arbeitest' and not 'du arbeitst'?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "German inserts an -e- before the ending when the stem ends in -d or -t (also -tm, -dm, -chn, -gn, -ffn), because the consonant cluster would be unpronounceable: du arbeit-est, er arbeit-et, ihr arbeit-et. Compare du spiel-st, where no extra vowel is needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are sein, haben and werden conjugated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "sein: ich bin, du bist, er ist, wir sind, ihr seid, sie sind. haben: ich habe, du hast, er hat, wir haben, ihr habt, sie haben. werden: ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden. These three are fully irregular and must be memorised."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the German present tense express the future?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — German routinely uses the present tense with a time expression for future meaning: 'Ich komme morgen' (I'm coming tomorrow), 'Wir fliegen nächste Woche'. The werden-future ('ich werde kommen') is reserved for predictions, promises and formal statements."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="hero">
+<h1>German Present Tense Conjugator</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Medically and linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">Type any German verb infinitive — <em>spielen, arbeiten, fahren, sprechen, sein</em> — and get the complete present-tense table instantly. The conjugator handles regular verbs, the -e- insertion rule, stem-changing verbs (<span class="hl">fahren → fährt</span>), -eln/-ern verbs, and the three great irregulars.</p>
+</header>
+
+<div class="calc-card">
+<h2>Conjugate a verb</h2>
+<div class="field">
+<label for="verb">Infinitive (e.g. spielen, arbeiten, fahren)</label>
+<input id="verb" type="text" value="spielen" maxlength="40" aria-label="German verb infinitive" autocomplete="off" spellcheck="false">
+</div>
+<button id="calc-btn">Conjugate</button>
+<div class="try-row" aria-label="Try these verbs">
+<button data-v="spielen">spielen</button>
+<button data-v="arbeiten">arbeiten</button>
+<button data-v="fahren">fahren</button>
+<button data-v="sprechen">sprechen</button>
+<button data-v="sehen">sehen</button>
+<button data-v="essen">essen</button>
+<button data-v="sein">sein</button>
+<button data-v="haben">haben</button>
+</div>
+<div id="result" role="status" aria-live="polite">
+<table aria-label="Conjugation table">
+<tr><th>Person</th><th>Form</th></tr>
+<tbody id="conj-body"></tbody>
+</table>
+<div class="note" id="conj-note"></div>
+</div>
+</div>
+
+<article class="prose">
+<h2>The regular pattern: stem + ending</h2>
+<p>Most German verbs are regular, and the present tense is built with beautiful simplicity: take the <strong>stem</strong> (infinitive minus <em>-en</em>) and add six endings — <strong>-e, -st, -t, -en, -t, -en</strong>:</p>
+<table>
+<tr><th></th><th>spielen</th><th>machen</th><th>lernen</th></tr>
+<tr><td>ich</td><td>spiel<strong>e</strong></td><td>mach<strong>e</strong></td><td>lern<strong>e</strong></td></tr>
+<tr><td>du</td><td>spiel<strong>st</strong></td><td>mach<strong>st</strong></td><td>lern<strong>st</strong></td></tr>
+<tr><td>er/sie/es</td><td>spiel<strong>t</strong></td><td>mach<strong>t</strong></td><td>lern<strong>t</strong></td></tr>
+<tr><td>wir</td><td>spiel<strong>en</strong></td><td>mach<strong>en</strong></td><td>lern<strong>en</strong></td></tr>
+<tr><td>ihr</td><td>spiel<strong>t</strong></td><td>mach<strong>t</strong></td><td>lern<strong>t</strong></td></tr>
+<tr><td>sie/Sie</td><td>spiel<strong>en</strong></td><td>mach<strong>en</strong></td><td>lern<strong>en</strong></td></tr>
+</table>
+<p>Notice the symmetries: <em>wir</em> and <em>sie/Sie</em> always equal the infinitive; <em>er/sie/es</em> and <em>ihr</em> share the same form. You really only memorise four distinct shapes.</p>
+<h2>The -e- insertion rule</h2>
+<p>When the stem ends in <strong>-d</strong> or <strong>-t</strong> (or -tm, -dm, -chn, -gn, -ffn), German inserts an <strong>-e-</strong> before the <em>du</em>, <em>er/sie/es</em> and <em>ihr</em> endings, because the cluster would otherwise be unpronounceable: <em>du arbeit<strong>e</strong>st, er arbeit<strong>e</strong>t, ihr arbeit<strong>e</strong>t</em>; <em>du findest, du atmest, du rechnest, du öffnest</em>. Verbs whose stem ends in <strong>-s, -ß, -x or -z</strong> do the opposite — they drop the <em>s</em> of <em>-st</em>: <em>du reist</em> (reisen), <em>du tanzt</em> (tanzen), <em>du heißt</em> (heißen), <em>du mixt</em> (mixen). These aren't exceptions to memorise; they're pronunciation logic, and once heard, they feel inevitable.</p>
+<h2>Stem-changing verbs: the famous vowel shifts</h2>
+<p>About 170 common strong verbs change their stem vowel — but <strong>only in the du and er/sie/es forms</strong>. Three patterns cover nearly all of them. <strong>e → i</strong>: <em>sprechen → du sprichst, er spricht; essen → du isst, er isst; geben → du gibst, er gibt; nehmen → du nimmst, er nimmt; helfen → du hilfst; treffen → du triffst</em>. <strong>e → ie</strong>: <em>sehen → du siehst, er sieht; lesen → du liest, er liest; stehlen → du stiehlst; empfehlen → du empfiehlst</em>. <strong>a → ä</strong>: <em>fahren → du fährst, er fährt; schlafen → du schläfst; tragen → du trägst; laufen → du läufst, er läuft; halten → du hältst; fallen → du fällst; lassen → du lässt; waschen → du wäschst</em>. The <em>ich, wir, ihr, sie</em> forms stay perfectly regular — <em>ich fahre, wir fahren</em> — which is why the conjugator above only alters the middle two rows.</p>
+<h2>The three great irregulars</h2>
+<p><strong>Sein, haben</strong> and <strong>werden</strong> follow no pattern and must simply be known — fortunately they're also the three most frequent verbs in the language, so they memorise themselves through exposure:</p>
+<table>
+<tr><th></th><th>sein</th><th>haben</th><th>werden</th></tr>
+<tr><td>ich</td><td>bin</td><td>habe</td><td>werde</td></tr>
+<tr><td>du</td><td>bist</td><td>hast</td><td>wirst</td></tr>
+<tr><td>er/sie/es</td><td>ist</td><td>hat</td><td>wird</td></tr>
+<tr><td>wir</td><td>sind</td><td>haben</td><td>werden</td></tr>
+<tr><td>ihr</td><td>seid</td><td>habt</td><td>werdet</td></tr>
+<tr><td>sie/Sie</td><td>sind</td><td>haben</td><td>werden</td></tr>
+</table>
+<h2>-eln and -ern verbs</h2>
+<p>Verbs in <strong>-eln</strong> (<em>segeln, lächeln, sammeln</em>) drop the <em>e</em> in the ich-form: <em>ich segle, du segelst, er segelt</em>. Verbs in <strong>-ern</strong> (<em>wandern, ändern, plaudern</em>) keep it: <em>ich wandere, du wanderst, er wandert</em>. These are the only verbs where the ich-form looks different from a plain stem + -e, and the conjugator handles both.</p>
+<h2>Present tense, future meaning</h2>
+<p>German uses the present tense far more broadly than English does. With a time expression it covers the future: <em>Ich komme morgen</em> (I'm coming tomorrow), <em>Wir fliegen nächste Woche nach Berlin</em>. The <em>werden</em>-future (<em>ich werde kommen</em>) is reserved for predictions, promises and formal announcements. The present also expresses habitual action (<em>Er raucht nicht</em> — he doesn't smoke) and timeless truths. As a learner, default to the present tense with a time word — it's what native speakers do most of the time.</p>
+<h2>du, ihr, Sie — and the imperative hiding in the table</h2>
+<p>The conjugation table also settles two social questions. <strong>du</strong> is for friends, family, children and fellow students; <strong>Sie</strong> (always capitalised) is for strangers, officials and professional settings — and its verb form is identical to <em>sie</em> (they): <em>Sie spielen</em>. <strong>ihr</strong> addresses multiple people informally: <em>Spielt ihr mit?</em>. The <strong>imperative</strong> (commands) is built straight from the present tense: for <em>du</em>, take the present stem and usually drop the -e — <em>spiel!, arbeite!, iss!, sprich!, lies!, fahr!</em> (stem-changers keep their changed vowel: <em>sprich!</em> not <em>sprech!</em>); for <em>ihr</em> it's identical to the present (<em>spielt!</em>); for <em>Sie</em> it's the infinitive + Sie (<em>Spielen Sie!</em>). So every table you generate above quietly contains three more forms — one more reason to drill the present tense until it's automatic.</p>
+<h2>How to practise</h2>
+<p>Type ten verbs into the conjugator — five regular, five stem-changers — and say each full table aloud before looking at the answer, then check. Pay special attention to the du/er rows of stem-changers; that's where all the action is. Then write five sentences about your own routine (<em>ich stehe auf, ich frühstücke…</em>) and five about someone else (<em>er fährt, sie liest…</em>), forcing the stem changes into production. Separable-prefix verbs (<em>anrufen → ich rufe an</em>) conjugate identically — the prefix just moves to the end, a topic for its own tool.</p>
+</article>
+
+<div class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>How do you conjugate spielen in the present tense?</h3><p><strong>ich spiele, du spielst, er/sie/es spielt, wir spielen, ihr spielt, sie/Sie spielen.</strong> Stem (<em>spiel-</em>) + <em>-e, -st, -t, -en, -t, -en</em> — the regular pattern most verbs follow.</p></div>
+<div class="faq-item"><h3>Which verbs change their stem vowel?</h3><p>About 170 strong verbs, only in <strong>du</strong> and <strong>er/sie/es</strong>: e→i (<em>sprechen→spricht</em>), e→ie (<em>sehen→sieht</em>), a→ä (<em>fahren→fährt</em>).</p></div>
+<div class="faq-item"><h3>Why is it "du arbeitest"?</h3><p>Stems ending in <strong>-d/-t</strong> (also -tm, -chn, -gn, -ffn) insert <strong>-e-</strong> before the ending: <em>du arbeitest, er arbeitet</em>. Stems in -s/-ß/-x/-z drop the <em>s</em> of <em>-st</em>: <em>du reist</em>.</p></div>
+<div class="faq-item"><h3>How are sein, haben and werden conjugated?</h3><p><strong>sein:</strong> bin, bist, ist, sind, seid, sind. <strong>haben:</strong> habe, hast, hat, haben, habt, haben. <strong>werden:</strong> werde, wirst, wird, werden, werdet, werden.</p></div>
+<div class="faq-item"><h3>Can the present tense express the future?</h3><p>Yes — with a time expression: <em>Ich komme morgen</em>. The <em>werden</em>-future is for predictions and promises.</p></div>
+</div>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+const IRREG={
+sein:{forms:["bin","bist","ist","sind","seid","sind"],note:"Sein is fully irregular — the most important verb in German. Memorise: bin, bist, ist, sind, seid, sind."},
+haben:{forms:["habe","hast","hat","haben","habt","haben"],note:"Haben is irregular in the du/er forms (hast, hat) but regular elsewhere."},
+werden:{forms:["werde","wirst","wird","werden","werdet","werden"],note:"Werden is irregular (wirst, wird) and doubles as the future auxiliary: ich werde kommen."}
+};
+/* infinitive -> changed stem used for du + er/sie/es */
+const STEMCHANGE={
+"fahren":"fähr","tragen":"träg","schlafen":"schläf","fangen":"fäng","waschen":"wäsch","laufen":"läuf","halten":"hält","fallen":"fäll","lassen":"läss","raten":"rät","braten":"brät","laden":"lädt","schlagen":"schlägt","wachsen":"wächst","graben":"gräbt","blasen":"bläst","backen":"bäckt","saufen":"säuft","schaufeln":"schäufel",
+"sprechen":"sprich","essen":"iss","geben":"gib","nehmen":"nimm","helfen":"hilf","treffen":"triff","vergessen":"vergiss","werfen":"wirf","brechen":"brich","stehlen":"stiehl","empfehlen":"empfiehl","gelten":"gilt","messen":"miss","treten":"tritt","geschehen":"geschieht","fressen":"friss","befehlen":"befiehl",
+"sehen":"sieh","lesen":"lies","geschehen2":"geschieht"
+};
+delete STEMCHANGE["geschehen2"];
+const PERSONS=["ich","du","er/sie/es","wir","ihr","sie/Sie"];
+function conjugate(raw){
+  let v=(raw||"").trim().toLowerCase().replace(/^sich\s+/,"").replace(/[^a-zäöüß]/g,"");
+  if(!v) return null;
+  if(IRREG[v]) return {verb:v,forms:IRREG[v].forms,note:IRREG[v].note};
+  let stem, ichForm, duForm, erForm, ihrForm, note="";
+  if(/eln$/.test(v)){
+    const root=v.slice(0,-3);
+    ichForm=root+"le"; duForm=root+"elst"; erForm=root+"elt"; ihrForm=root+"elt";
+    note="Verbs in -eln drop the e in the ich-form: ich "+ichForm+".";
+    return {verb:v,forms:[ichForm,duForm,erForm,v,ihrForm,v],note};
+  }
+  if(/ern$/.test(v)){
+    stem=v.slice(0,-1);
+    note="Verbs in -ern keep the e throughout: ich "+stem+"e.";
+  } else {
+    if(!/en$/.test(v)) return {error:"That doesn't look like a German infinitive — infinitives end in -en (or -n). Try e.g. spielen."};
+    stem=v.slice(0,-2);
+  }
+  const changed=STEMCHANGE[v];
+  const duStem=changed||stem, erStem=changed||stem;
+  const needE=/(d|t|tm|dm|chn|gn|ffn)$/.test(stem);
+  const sEnd=/[sßxz]$/.test(stem);
+  ichForm=stem+"e";
+  duForm=duStem+(sEnd?"t":(needE?"est":"st"));
+  erForm=erStem+(needE?"et":"t");
+  ihrForm=stem+(needE?"et":"t");
+  if(changed) note="Stem-changing verb: "+v+" → "+changed+"- in the du and er/sie/es forms (ich/wir/ihr/sie stay regular).";
+  else if(needE) note="The stem ends in -"+stem.match(/(d|t|tm|dm|chn|gn|ffn)$/)[0]+", so an -e- is inserted: du "+duForm+", er "+erForm+".";
+  else if(sEnd) note="The stem ends in -"+stem.slice(-1)+", so the du-form drops the s of -st: du "+duForm+".";
+  return {verb:v,forms:[ichForm,duForm,erForm,v,ihrForm,v],note};
+}
+function renderConj(){
+  const input=document.getElementById("verb").value;
+  const r=conjugate(input);
+  const box=document.getElementById("result");
+  if(!r){box.style.display="none";return;}
+  if(r.error){
+    box.style.display="block";
+    document.getElementById("conj-body").innerHTML="";
+    document.getElementById("conj-note").textContent=r.error;
+    return;
+  }
+  document.getElementById("conj-body").innerHTML=r.forms.map((f,i)=>`<tr><td><strong>${PERSONS[i]}</strong></td><td>${PERSONS[i].split("/")[0]} ${f}</td></tr>`).join("");
+  document.getElementById("conj-note").textContent=r.note||"Regular verb: stem "+r.verb.replace(/en$/,"")+"- + -e, -st, -t, -en, -t, -en.";
+  box.style.display="block";
+}
+document.getElementById("calc-btn").onclick=renderConj;
+document.getElementById("verb").addEventListener("keydown",e=>{if(e.key==="Enter")renderConj();});
+document.querySelectorAll(".try-row button").forEach(b=>b.onclick=()=>{document.getElementById("verb").value=b.dataset.v;renderConj();});
+renderConj();
+</script>
+</body>
+</html>
