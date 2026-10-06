@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Präteritum Conjugator — Simple Past Tense Tool | Bayzubaan</title>
+<meta name="description" content="Conjugate any German verb in the Präteritum (simple past): regular -te forms, strong vowel changes (sein→war, fahren→fuhr), and mixed verbs (bringen→brachte). Full table with rules and usage notes.">
+<link rel="canonical" href="https://bayzubaan.com/tools/prateritum-conjugator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="German Präteritum Conjugator — Simple Past Tense Tool">
+<meta property="og:description" content="Type any German verb, get the full Präteritum table: regular, strong and mixed verbs with rule explanations.">
+<meta property="og:url" content="https://bayzubaan.com/tools/prateritum-conjugator/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="German Präteritum Conjugator — Simple Past Tense Tool">
+<meta name="twitter:description" content="Type any German verb, get the full Präteritum table with rules.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you conjugate machen in the German Präteritum?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ich machte, du machtest, er/sie/es machte, wir machten, ihr machtet, sie/Sie machten. Regular (weak) verbs add -te plus the endings -∅, -st, -∅, -n, -t, -n to the stem."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you conjugate sein in the Präteritum?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ich war, du warst, er/sie/es war, wir waren, ihr wart, sie/Sie waren. Sein is a strong verb: the stem changes to war- and the endings are -∅, -st, -∅, -en, -t, -en."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When do Germans use the Präteritum vs. the Perfekt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In conversation, Germans overwhelmingly use the Perfekt (ich habe gemacht). The Präteritum dominates written German — novels, news reports, formal writing — and is standard in speech only for sein, haben, werden and the modal verbs (ich war, ich hatte, ich konnte)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are mixed verbs in the German past tense?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mixed verbs change their stem vowel like strong verbs but take the weak -te endings: bringen→brachte, denken→dachte, wissen→wusste, kennen→kannte, nennen→nannte, rennen→rannte, haben→hatte."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is there no -e ending on 'ich' in the strong Präteritum?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Strong Präteritum forms for ich and er/sie/es take no ending at all: ich fuhr, er fuhr, ich kam, er kam, ich sah, er sah. Only the weak verbs add -te in these persons (ich machte, er machte). The bare stem + vowel change is the signature of the strong past."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="hero">
+<h1>German Präteritum Conjugator</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Medically and linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">The simple past of any German verb, instantly. Type an infinitive — <em>machen, sein, fahren, bringen</em> — and get the full Präteritum table: regular <span class="hl">-te</span> forms, strong vowel changes (<span class="hl">war, fuhr, sprach</span>), and the mixed verbs in between, each with its rule explained.</p>
+</header>
+
+<div class="calc-card">
+<h2>Conjugate in the Präteritum</h2>
+<div class="field">
+<label for="verb">Infinitive (e.g. machen, sein, fahren, bringen)</label>
+<input id="verb" type="text" value="machen" maxlength="40" aria-label="German verb infinitive" autocomplete="off" spellcheck="false">
+</div>
+<button id="calc-btn">Conjugate</button>
+<div class="try-row" aria-label="Try these verbs">
+<button data-v="machen">machen</button>
+<button data-v="sein">sein</button>
+<button data-v="haben">haben</button>
+<button data-v="fahren">fahren</button>
+<button data-v="sprechen">sprechen</button>
+<button data-v="bringen">bringen</button>
+<button data-v="wissen">wissen</button>
+<button data-v="gehen">gehen</button>
+</div>
+<div id="result" role="status" aria-live="polite">
+<table aria-label="Präteritum conjugation table">
+<tr><th>Person</th><th>Form</th></tr>
+<tbody id="conj-body"></tbody>
+</table>
+<div class="note" id="conj-note"></div>
+</div>
+</div>
+
+<article class="prose">
+<h2>Weak verbs: stem + -te</h2>
+<p>Regular (weak) verbs form the Präteritum with total predictability: add <strong>-te</strong> to the stem, then the endings <strong>-∅, -st, -∅, -n, -t, -n</strong>. <em>Machen</em> gives the textbook table: <em>ich machte, du machtest, er machte, wir machten, ihr machtet, sie machten</em>. As in the present tense, stems ending in <strong>-d/-t</strong> insert an -e- (<em>ich arbeitete, du arbeitetest</em>), and stems in <strong>-m/-n + consonant</strong> often do too (<em>ich öffnete, ich regnete</em>). If you can conjugate the present tense, the weak Präteritum is one small step: swap the present endings for the -te set.</p>
+<h2>Strong verbs: vowel change, no -te</h2>
+<p>Strong verbs change their stem vowel and take <strong>no -te</strong> — and the <em>ich</em> and <em>er/sie/es</em> forms take <strong>no ending at all</strong>: <em>ich fuhr, du fuhrst, er fuhr, wir fuhren, ihr fuhrt, sie fuhren</em>. This bare-stem shape (<em>ich kam, er sah, ich blieb, er schrieb</em>) is the visual signature of the strong past. The vowel changes fall into families worth learning as groups: <strong>a→u</strong> (<em>fahren→fuhr, tragen→trug, schlagen→schlug, graben→grub, waschen→wusch</em>), <strong>e→a</strong> (<em>sprechen→sprach, sehen→sah, lesen→las, essen→aß, geben→gab, nehmen→nahm, helfen→half, treffen→traf</em>), <strong>i→a→u</strong> (<em>singen→sang, trinken→trank, finden→fand, beginnen→begann, gewinnen→gewann, schwimmen→schwamm</em>), <strong>ei→ie</strong> (<em>bleiben→blieb, schreiben→schrieb, steigen→stieg, scheinen→schien</em>), <strong>ie→o</strong> (<em>fliegen→flog, ziehen→zog, frieren→fror, verlieren→verlor, biegen→bog</em>). Learn them in these families and the "irregular" verbs start looking systematic.</p>
+<h2>Mixed verbs: the in-betweeners</h2>
+<p>Seven common verbs change their vowel <em>and</em> take the weak -te endings — the mixed class: <em>bringen→brachte, denken→dachte, wissen→wusste, kennen→kannte, nennen→nannte, rennen→rannte, brennen→brannte</em>, plus <em>haben→hatte</em> (the most frequent of all). So: <em>ich brachte, du brachtest, er brachte; ich wusste, du wusstest</em>. These are high-frequency verbs — <em>wissen, kennen, denken, bringen</em> appear constantly — so they repay direct memorisation early. Note <em>senden</em> and <em>wenden</em>, which accept both forms (<em>sandte/sendete</em>).</p>
+<h2>Präteritum vs. Perfekt: when to use which</h2>
+<p>This is the question every learner asks, and the answer is about register, not meaning. In <strong>spoken</strong> German, the Perfekt rules: <em>ich habe gemacht, ich bin gegangen</em>. The Präteritum in speech survives mainly for <strong>sein, haben, werden and the modals</strong> — <em>ich war, ich hatte, ich wurde, ich konnte, ich musste, ich wollte</em> — which sound more natural than their Perfekt forms in conversation. In <strong>written</strong> German (novels, news, reports, formal emails), the Präteritum is the default narrative tense: <em>Er ging zur Tür und öffnete sie</em>. Exams test both, but reading comprehension lives or dies on recognising strong Präteritum forms — which is exactly what the conjugator above trains.</p>
+<h2>Word order: the verb still goes second</h2>
+<p>The Präteritum changes nothing about sentence structure: the conjugated verb still occupies position two in main clauses — <em>Gestern <strong>fuhr</strong> er nach Berlin</em> — and moves to the end in subordinate clauses: <em>…, weil er nach Berlin <strong>fuhr</strong></em>. One form, one position, same as the present tense. This is why teachers introduce the Präteritum early despite its "past" label: grammatically it's the simplest past tense German has.</p>
+<h2>Modal verbs in the Präteritum: the spoken exception</h2>
+<p>The modal verbs deserve their own table because they are the Präteritum forms you'll actually <em>speak</em>. Each modal loses its umlaut and takes weak -te endings: <em>können→ich konnte, müssen→ich musste, dürfen→ich durfte, sollen→ich sollte, wollen→ich wollte, mögen→ich mochte</em>. Full paradigm for können: <em>ich konnte, du konntest, er konnte, wir konnten, ihr konntet, sie konnten</em>. In conversation, <em>ich konnte nicht kommen</em> sounds far more natural than the Perfekt <em>ich habe nicht kommen können</em> (with its infamous double infinitive). The same applies to <em>wissen</em> (<em>ich wusste</em>) and the full set above. Practical rule: for modals, sein, haben and werden, default to the Präteritum even when speaking; for every other verb, default to the Perfekt in speech and the Präteritum in writing. This one habit instantly makes your spoken German sound more native.</p>
+<h2>Regional colour: the North-South split</h2>
+<p>A quirk worth knowing: in southern Germany, Austria and Switzerland, the Präteritum has nearly vanished from speech <em>entirely</em> — even <em>ich war</em> often becomes <em>ich bin gewesen</em> in casual Bavarian or Austrian conversation, and written Southern German still uses it normally. In the north, the spoken Präteritum of sein/haben/modals is standard. As a learner this changes nothing about what you should produce — the "modals + sein/haben/were in Präteritum when speaking" rule works everywhere — but it explains why you'll hear <em>ich bin gewesen</em> from a Munich taxi driver and <em>ich war</em> from a Hamburg one. Both are correct; they're just different regional defaults layered over the same written standard.</p>
+<h2>How to practise</h2>
+<p>Conjugate ten verbs above — five weak, five strong — saying each table aloud before checking. Then convert: take five present-tense sentences from your own routine and rewrite them as yesterday's news (<em>Ich stehe auf → Ich stand auf; Ich esse → Ich aß</em>). Finally, read one short news paragraph and circle every Präteritum form, naming weak/strong/mixed for each. Recognition first, production second — the strong forms in particular need to be <em>seen</em> dozens of times before they're <em>produced</em> correctly.</p>
+</article>
+
+<div class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>How do you conjugate machen in the Präteritum?</h3><p><strong>ich machte, du machtest, er machte, wir machten, ihr machtet, sie machten.</strong> Stem + <em>-te</em> + the endings <em>-∅, -st, -∅, -n, -t, -n</em>.</p></div>
+<div class="faq-item"><h3>How do you conjugate sein in the Präteritum?</h3><p><strong>ich war, du warst, er war, wir waren, ihr wart, sie waren.</strong> Strong verb: stem changes to <em>war-</em>, no <em>-te</em>, no ending on ich/er.</p></div>
+<div class="faq-item"><h3>When do Germans use Präteritum vs. Perfekt?</h3><p><strong>Perfekt</strong> dominates conversation; <strong>Präteritum</strong> dominates writing. In speech, the Präteritum survives mainly for <em>sein, haben, werden</em> and modals (<em>ich war, ich konnte</em>).</p></div>
+<div class="faq-item"><h3>What are mixed verbs?</h3><p>Verbs with a vowel change <em>plus</em> weak -te endings: <em>bringen→brachte, denken→dachte, wissen→wusste, kennen→kannte, haben→hatte</em>.</p></div>
+<div class="faq-item"><h3>Why is there no ending on "ich fuhr"?</h3><p>Strong Präteritum <em>ich</em> and <em>er/sie/es</em> forms take no ending: <em>ich fuhr, er kam, ich sah</em>. The bare changed stem is the signature of the strong past.</p></div>
+</div>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+/* infinitive -> {stem, mixed} ; mixed=true takes -te endings */
+const PAST={
+"sein":{stem:"war"},"haben":{stem:"hat",mixed:true},"werden":{stem:"wurd"},
+"gehen":{stem:"ging"},"kommen":{stem:"kam"},"fahren":{stem:"fuhr"},"tragen":{stem:"trug"},
+"schlagen":{stem:"schlug"},"graben":{stem:"grub"},"waschen":{stem:"wusch"},"wachsen":{stem:"wuchs"},
+"fangen":{stem:"fing"},"saufen":{stem:"soff"},
+"sprechen":{stem:"sprach"},"sehen":{stem:"sah"},"lesen":{stem:"las"},"essen":{stem:"aß"},
+"geben":{stem:"gab"},"nehmen":{stem:"nahm"},"helfen":{stem:"half"},"treffen":{stem:"traf"},
+"werfen":{stem:"warf"},"brechen":{stem:"brach"},"stechen":{stem:"stach"},"stehlen":{stem:"stahl"},
+"befehlen":{stem:"befahl"},"empfehlen":{stem:"empfahl"},"gelten":{stem:"galt"},"vergessen":{stem:"vergaß"},
+"messen":{stem:"maß"},"fressen":{stem:"fraß"},
+"singen":{stem:"sang"},"trinken":{stem:"trank"},"sinken":{stem:"sank"},"springen":{stem:"sprang"},
+"beginnen":{stem:"begann"},"gewinnen":{stem:"gewann"},"schwimmen":{stem:"schwamm"},
+"finden":{stem:"fand"},"binden":{stem:"band"},"schwinden":{stem:"schwand"},"klingen":{stem:"klang"},
+"zwingen":{stem:"zwang"},"dringen":{stem:"drang"},
+"bleiben":{stem:"blieb"},"schreiben":{stem:"schrieb"},"steigen":{stem:"stieg"},"scheinen":{stem:"schien"},
+"schweigen":{stem:"schwieg"},"treiben":{stem:"trieb"},"meiden":{stem:"mied"},"leihen":{stem:"lieh"},
+"fliegen":{stem:"flog"},"ziehen":{stem:"zog"},"frieren":{stem:"fror"},"verlieren":{stem:"verlor"},
+"fliehen":{stem:"floh"},"biegen":{stem:"bog"},"lügen":{stem:"log"},"wiegen":{stem:"wog"},
+"schieben":{stem:"schob"},"heben":{stem:"hob"},"schaffen":{stem:"schuf"},
+"rufen":{stem:"rief"},"laufen":{stem:"lief"},"schlafen":{stem:"schlief"},"lassen":{stem:"ließ"},
+"fallen":{stem:"fiel"},"halten":{stem:"hielt"},"raten":{stem:"riet"},"braten":{stem:"briet"},
+"heißen":{stem:"hieß"},"stoßen":{stem:"stieß"},
+"beißen":{stem:"biss"},"reißen":{stem:"riss"},"schließen":{stem:"schloss"},"genießen":{stem:"genoss"},
+"fließen":{stem:"floss"},"schießen":{stem:"schoss"},"gießen":{stem:"goss"},
+"greifen":{stem:"griff"},"pfeifen":{stem:"pfiff"},"kneifen":{stem:"kniff"},
+"schneiden":{stem:"schnitt"},"reiten":{stem:"ritt"},"streiten":{stem:"stritt"},"leiden":{stem:"litt"},
+"stehen":{stem:"stand"},"verstehen":{stem:"verstand"},"gestehen":{stem:"gestand"},
+"liegen":{stem:"lag"},"sitzen":{stem:"saß"},"bitten":{stem:"bat"},
+"sterben":{stem:"starb"},"werben":{stem:"warb"},"verderben":{stem:"verdarb"},"bergen":{stem:"barg"},
+"bringen":{stem:"brach",mixed:true},"denken":{stem:"dach",mixed:true},"wissen":{stem:"wuss",mixed:true},
+"kennen":{stem:"kann",mixed:true},"nennen":{stem:"nann",mixed:true},"rennen":{stem:"rann",mixed:true},
+"brennen":{stem:"brann",mixed:true}
+};
+const PERSONS=["ich","du","er/sie/es","wir","ihr","sie/Sie"];
+function conjugatePast(raw){
+  let v=(raw||"").trim().toLowerCase().replace(/^sich\s+/,"").replace(/[^a-zäöüß]/g,"");
+  if(!v) return null;
+  const info=PAST[v];
+  let stem, mixed=false, note="";
+  if(info){ stem=info.stem; mixed=!!info.mixed; }
+  else{
+    let inf=v;
+    if(/ern$/.test(inf)) stem=inf.slice(0,-1);
+    else if(/eln$/.test(inf)) stem=inf.slice(0,-3)+"el";
+    else{
+      if(!/en$/.test(inf)) return {error:"That doesn't look like a German infinitive — infinitives end in -en. Try e.g. machen."};
+      stem=inf.slice(0,-2);
+    }
+  }
+  let forms;
+  if(mixed){
+    /* e-insertion is decided by the INFINITIVE stem, not the past stem:
+       none of the mixed verbs (bringen, denken, wissen, kennen, haben…)
+       need it, and checking the past stem ("hat") wrongly doubles the t */
+    const infStem=/en$/.test(v)?v.slice(0,-2):v;
+    const e=/(d|t|tm|dm|chn|gn|ffn)$/.test(infStem)?"e":"";
+    forms=[stem+"te",stem+e+"test",stem+"te",stem+"ten",stem+e+"tet",stem+"ten"];
+    note="Mixed verb: vowel change ("+v+" → "+stem+"-) plus the weak -te endings: ich "+forms[0]+".";
+  }else if(info){
+    forms=[stem,stem+"st",stem,stem+"en",stem+"t",stem+"en"];
+    note="Strong verb: "+v+" → "+stem+"- in the Präteritum, no -te, and no ending on ich/er: ich "+stem+", er "+stem+".";
+  }else{
+    const e=/(d|t|tm|dm|chn|gn|ffn)$/.test(stem)?"e":"";
+    forms=[stem+e+"te",stem+e+"test",stem+e+"te",stem+e+"ten",stem+e+"tet",stem+e+"ten"];
+    note="Regular (weak) verb: stem "+stem+"- + -te endings: ich "+forms[0]+", du "+forms[1]+".";
+  }
+  return {verb:v,forms,note};
+}
+function renderConj(){
+  const input=document.getElementById("verb").value;
+  const r=conjugatePast(input);
+  const box=document.getElementById("result");
+  if(!r){box.style.display="none";return;}
+  if(r.error){
+    box.style.display="block";
+    document.getElementById("conj-body").innerHTML="";
+    document.getElementById("conj-note").textContent=r.error;
+    return;
+  }
+  document.getElementById("conj-body").innerHTML=r.forms.map((f,i)=>`<tr><td><strong>${PERSONS[i]}</strong></td><td>${PERSONS[i].split("/")[0]} ${f}</td></tr>`).join("");
+  document.getElementById("conj-note").textContent=r.note;
+  box.style.display="block";
+}
+document.getElementById("calc-btn").onclick=renderConj;
+document.getElementById("verb").addEventListener("keydown",e=>{if(e.key==="Enter")renderConj();});
+document.querySelectorAll(".try-row button").forEach(b=>b.onclick=()=>{document.getElementById("verb").value=b.dataset.v;renderConj();});
+renderConj();
+</script>
+</body>
+</html>
