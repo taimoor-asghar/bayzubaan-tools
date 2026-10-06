@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Plural Quiz: Master Noun Plural Forms (der, die, das) | Bayzubaan</title>
+<meta name="description" content="Free German plural quiz: 20 rounds, type the plural of 115 nouns covering every pattern (-e, -er, -n, -s, umlaut-only, no change). Includes a full guide to German plural rules, umlaut patterns and exceptions.">
+<link rel="canonical" href="https://bayzubaan.com/tools/german-plural-quiz/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="German Plural Quiz: Master Noun Plural Forms">
+<meta property="og:description" content="20-round interactive quiz plus a complete guide to German plural patterns: -e, -er, -(e)n, -s, umlaut-only and no-change nouns.">
+<meta property="og:url" content="https://bayzubaan.com/tools/german-plural-quiz/">
+<meta property="og:site_name" content="Bayzubaan">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many plural patterns does German have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "German has five main plural endings: -e (der Tisch → die Tische), -er (das Kind → die Kinder), -(e)n (die Frau → die Frauen), -s (das Auto → die Autos), and no change (das Fenster → die Fenster). Many nouns also add an umlaut (ä, ö, ü) to the stem vowel, either together with an ending or on its own (der Vater → die Väter)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do all German plurals add an umlaut?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Umlauts appear in some patterns but not all. Plurals ending in -er almost always take an umlaut (das Haus → die Häuser, das Buch → die Bücher), while most feminine -(e)n plurals never do (die Frau → die Frauen, die Blume → die Blumen). A small group changes by umlaut alone with no added ending (der Vater → die Väter, der Apfel → die Äpfel)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the plural of 'der Tisch' and 'das Kind'?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The plural of der Tisch is die Tische (pattern: add -e, no umlaut). The plural of das Kind is die Kinder (pattern: add -er with umlaut). Both are irregular from an English speaker's perspective, which is why German learners are advised to memorise every noun together with its article and its plural."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do some German nouns not change in the plural?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Masculine and neuter nouns ending in -er, -en or -el usually keep the same form in the plural: der Lehrer → die Lehrer, der Computer → die Computer, das Fenster → die Fenster, das Zimmer → die Zimmer, der Schüler → die Schüler. Only the article changes, from der or das to die."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the plural article in German always 'die'?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. In the plural, der, die and das all become die: der Tisch → die Tische, die Frau → die Frauen, das Kind → die Kinder. There are no exceptions to this rule."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I remember which plural pattern a noun takes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no fully reliable rule, so learn each noun with its article and plural from the start (der Tisch, die Tische). Gender gives hints: most feminine nouns take -(e)n, many masculine nouns take -e, and many neuter monosyllables take -er or -e. Loanwords usually take -s. Regular quizzing, like the 20-round quiz on this page, is one of the fastest ways to fix the patterns in memory."
+      }
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --accent:#2563eb; --accent-dark:#1d4ed8;
+  --correct:#10b981; --incorrect:#ef4444;
+  --bg:#f8fafc; --card:#ffffff; --border:#e2e8f0;
+  --text:#1e293b; --muted:#64748b; --radius:8px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.65; font-size:17px;
+}
+.font-loaded body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header.site{border-bottom:1px solid var(--border);background:var(--card)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+.brand{font-weight:700;font-size:20px;color:var(--accent);text-decoration:none}
+.tagline{font-size:13px;color:var(--muted)}
+h1{font-size:2rem;line-height:1.25;margin:32px 0 12px}
+h2{font-size:1.45rem;margin:40px 0 12px;color:var(--text)}
+h3{font-size:1.15rem;margin:26px 0 8px}
+p{margin:0 0 14px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin:20px 0}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:16px}
+th,td{text-align:left;padding:10px 12px;border:1px solid var(--border)}
+th{background:#f1f5f9;font-weight:600}
+tr:nth-child(even) td{background:#fbfdff}
+ul,ol{margin:0 0 14px;padding-left:24px}
+li{margin-bottom:8px}
+code{background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:0.92em}
+/* Quiz UI */
+.quiz-head{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-bottom:14px}
+.pill{background:#eff6ff;color:var(--accent-dark);border:1px solid #bfdbfe;border-radius:999px;padding:6px 14px;font-weight:600;font-size:14px}
+.pill.streak{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.progress-track{height:12px;background:#e2e8f0;border-radius:999px;overflow:hidden;margin:6px 0 18px}
+.progress-fill{height:100%;width:0;background:var(--accent);border-radius:999px;transition:width .3s ease}
+.noun-display{text-align:center;margin:8px 0 18px}
+.noun-display .article{font-size:18px;color:var(--muted);display:block;margin-bottom:2px}
+.noun-display .noun{font-size:44px;font-weight:700;color:var(--text)}
+.answer-row{display:flex;flex-direction:column;gap:10px}
+label.answer-label{font-weight:600;font-size:15px}
+input#answer{
+  width:100%;padding:16px;font-size:19px;border:2px solid var(--border);
+  border-radius:var(--radius);background:#fff;color:var(--text);
+}
+input#answer:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(37,99,235,.18)}
+.btn{
+  display:inline-block;min-height:52px;padding:14px 26px;font-size:17px;font-weight:600;
+  border:none;border-radius:var(--radius);cursor:pointer;text-decoration:none;text-align:center;
+}
+.btn-primary{background:var(--accent);color:#fff;width:100%}
+.btn-primary:hover{background:var(--accent-dark)}
+.btn-secondary{background:#fff;color:var(--accent);border:2px solid var(--accent);width:100%}
+.btn-secondary:hover{background:#eff6ff}
+.btn:disabled{opacity:.55;cursor:not-allowed}
+.btn-row{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+.feedback{
+  margin-top:16px;padding:16px;border-radius:var(--radius);font-size:17px;font-weight:500;
+  border:1px solid var(--border);display:none;
+}
+.feedback.show{display:block}
+.feedback.correct{background:#ecfdf5;border-color:var(--correct);color:#065f46}
+.feedback.incorrect{background:#fef2f2;border-color:var(--incorrect);color:#991b1b}
+.feedback.hint{background:#eff6ff;border-color:var(--accent);color:#1e3a8a;font-weight:400}
+.missed-list{margin:12px 0 0;padding-left:22px}
+.missed-list li{margin-bottom:6px}
+.score-big{font-size:56px;font-weight:700;color:var(--accent);text-align:center;margin:6px 0}
+.hidden{display:none!important}
+.author-line{font-size:14px;color:var(--muted);border-top:1px solid var(--border);margin-top:40px;padding:20px 0 40px}
+footer.site{border-top:1px solid var(--border);background:var(--card);margin-top:20px}
+footer.site .wrap{padding:18px 20px;font-size:14px;color:var(--muted)}
+@media (min-width:640px){
+  .answer-row{flex-direction:row}
+  .answer-row .btn-primary{width:auto;flex:0 0 160px}
+  .btn-row{flex-direction:row}
+  .btn-row .btn{flex:1}
+}
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="https://bayzubaan.com/">Bayzubaan</a>
+    <span class="tagline">Language tools &amp; quizzes</span>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>German Plural Quiz</h1>
+  <p>German nouns change in unpredictable ways when they become plural: <em>der Tisch → die Tische</em>, <em>das Kind → die Kinder</em>, <em>der Vater → die Väter</em>, <em>das Fenster → die Fenster</em>. This interactive quiz tests you over <strong>20 rounds</strong>, drawn from a bank of 115 nouns covering <strong>every plural pattern</strong>. Type the plural form, get instant feedback, and review every word you missed at the end. Below the quiz you will find a complete guide to the German plural system.</p>
+
+  <!-- QUIZ -->
+  <section class="card" id="quiz" aria-label="German plural quiz">
+    <div id="quiz-play">
+      <div class="quiz-head">
+        <span class="pill" id="round-pill">Round 1 / 20</span>
+        <span class="pill" id="score-pill">Score: 0</span>
+        <span class="pill streak" id="streak-pill">Streak: 0</span>
+      </div>
+      <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0" id="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <p style="text-align:center;color:var(--muted);margin-bottom:4px">What is the plural of…</p>
+      <div class="noun-display">
+        <span class="article" id="q-article">der</span>
+        <span class="noun" id="q-noun">Tisch</span>
+      </div>
+      <div class="answer-row">
+        <div style="flex:1">
+          <label class="answer-label" for="answer">Type the plural (you may include or omit “die”):</label>
+          <input type="text" id="answer" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="e.g. die Tische">
+        </div>
+        <button class="btn btn-primary" id="btn-check" style="align-self:flex-end">Check</button>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-secondary" id="btn-hint">Give me a hint</button>
+        <button class="btn btn-secondary hidden" id="btn-next">Next →</button>
+      </div>
+      <div class="feedback" id="feedback" aria-live="polite"></div>
+    </div>
+    <div id="quiz-end" class="hidden">
+      <h2 style="margin-top:0;text-align:center">Quiz complete!</h2>
+      <div class="score-big" id="final-score">0 / 20</div>
+      <p style="text-align:center" id="final-message"></p>
+      <div id="missed-wrap" class="hidden">
+        <h3>Words to review</h3>
+        <ul class="missed-list" id="missed-list"></ul>
+      </div>
+      <div class="btn-row" style="margin-top:20px">
+        <button class="btn btn-primary" id="btn-restart">Restart quiz</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE -->
+  <article id="guide">
+    <h2>The complete guide to German plurals</h2>
+    <p>English plurals are easy: add <em>-s</em>, with a handful of exceptions like <em>children</em> and <em>feet</em>. German works the other way round — the exceptions are the system. A German noun can form its plural in five different ways, and on top of that the stem vowel may change to an umlaut (<em>a → ä</em>, <em>o → ö</em>, <em>u → ü</em>). There is no single rule that predicts which pattern a noun follows, which is why every textbook advises the same thing: <strong>learn each noun together with its article and its plural</strong>. Memorise <em>der Tisch, die Tische</em> as one unit, not <em>Tisch</em> alone.</p>
+    <p>That said, the patterns are not random chaos. Each one has tendencies — typical genders, typical endings — and knowing them turns pure memorisation into educated guessing. Here are the five patterns, each with the examples used in the quiz above.</p>
+
+    <h3>Pattern 1: add -e (der Tisch → die Tische)</h3>
+    <p>This is the most common plural for <strong>masculine</strong> nouns and for many short <strong>neuter</strong> nouns. Simply add <em>-e</em> to the singular:</p>
+    <table>
+      <tr><th>Singular</th><th>Plural</th><th>Notes</th></tr>
+      <tr><td>der Tisch</td><td>die Tische</td><td>classic masculine -e plural</td></tr>
+      <tr><td>der Tag</td><td>die Tage</td><td>no umlaut</td></tr>
+      <tr><td>der Hund</td><td>die Hunde</td><td>no umlaut</td></tr>
+      <tr><td>der Brief</td><td>die Briefe</td><td>no umlaut</td></tr>
+      <tr><td>das Jahr</td><td>die Jahre</td><td>neuter nouns often take -e</td></tr>
+      <tr><td>das Brot</td><td>die Brote</td><td>neuter -e plural</td></tr>
+      <tr><td>das Heft</td><td>die Hefte</td><td>neuter -e plural</td></tr>
+    </table>
+    <p>A large subgroup adds <strong>-e plus an umlaut</strong>. This is one of the trickiest combinations for learners because you must change two things at once:</p>
+    <table>
+      <tr><th>Singular</th><th>Plural</th><th>Notes</th></tr>
+      <tr><td>der Stuhl</td><td>die Stühle</td><td>u → ü, add -e</td></tr>
+      <tr><td>die Stadt</td><td>die Städte</td><td>a → ä, add -e</td></tr>
+      <tr><td>der Gast</td><td>die Gäste</td><td>a → ä, add -e</td></tr>
+      <tr><td>der Sohn</td><td>die Söhne</td><td>o → ö, add -e</td></tr>
+      <tr><td>der Baum</td><td>die Bäume</td><td>au → äu, add -e</td></tr>
+      <tr><td>die Hand</td><td>die Hände</td><td>a → ä, add -e</td></tr>
+      <tr><td>die Nacht</td><td>die Nächte</td><td>a → ä, add -e</td></tr>
+      <tr><td>der Arzt</td><td>die Ärzte</td><td>a → ä, add -e</td></tr>
+      <tr><td>der Zug</td><td>die Züge</td><td>u → ü, add -e</td></tr>
+    </table>
+
+    <h3>Pattern 2: add -er with umlaut (das Kind → die Kinder)</h3>
+    <p>Plurals in <em>-er</em> <strong>almost always</strong> take an umlaut as well. This pattern belongs mostly to short <strong>neuter</strong> nouns, with a few masculine ones and exactly one common feminine noun:</p>
+    <table>
+      <tr><th>Singular</th><th>Plural</th><th>Notes</th></tr>
+      <tr><td>das Kind</td><td>die Kinder</td><td>the textbook example</td></tr>
+      <tr><td>das Buch</td><td>die Bücher</td><td>u → ü</td></tr>
+      <tr><td>das Haus</td><td>die Häuser</td><td>au → äu</td></tr>
+      <tr><td>das Glas</td><td>die Gläser</td><td>a → ä</td></tr>
+      <tr><td>das Bild</td><td>die Bilder</td><td>no umlaut possible (i)</td></tr>
+      <tr><td>das Ei</td><td>die Eier</td><td>no umlaut possible</td></tr>
+      <tr><td>das Dorf</td><td>die Dörfer</td><td>o → ö</td></tr>
+      <tr><td>das Land</td><td>die Länder</td><td>a → ä</td></tr>
+      <tr><td>das Wort</td><td>die Wörter</td><td>o → ö</td></tr>
+      <tr><td>der Mann</td><td>die Männer</td><td>masculine exception</td></tr>
+      <tr><td>der Wald</td><td>die Wälder</td><td>masculine, a → ä</td></tr>
+      <tr><td>die Tochter</td><td>die Töchter</td><td>the one feminine -er noun</td></tr>
+    </table>
+    <p>Notice that <em>das Bild → die Bilder</em> and <em>das Ei → die Eier</em> take <em>-er</em> without an umlaut — simply because the vowels <em>i</em> and <em>e</em> cannot take one. The umlaut rule is: only <em>a, o, u</em> and <em>au</em> can change.</p>
+
+    <h3>Pattern 3: add -(e)n (die Frau → die Frauen)</h3>
+    <p>This is the standard plural for <strong>feminine</strong> nouns — the great majority of them. Nouns already ending in <em>-e</em> just add <em>-n</em>; others add <em>-en</em>:</p>
+    <table>
+      <tr><th>Singular</th><th>Plural</th><th>Notes</th></tr>
+      <tr><td>die Frau</td><td>die Frauen</td><td>add -en</td></tr>
+      <tr><td>die Blume</td><td>die Blumen</td><td>ends in -e, add -n</td></tr>
+      <tr><td>die Lampe</td><td>die Lampen</td><td>ends in -e, add -n</td></tr>
+      <tr><td>die Tasse</td><td>die Tassen</td><td>ends in -e, add -n</td></tr>
+      <tr><td>die Straße</td><td>die Straßen</td><td>add -n</td></tr>
+      <tr><td>die Uhr</td><td>die Uhren</td><td>add -en</td></tr>
+      <tr><td>die Schwester</td><td>die Schwestern</td><td>add -n</td></tr>
+    </table>
+    <p>The same ending appears with <strong>weak masculine nouns</strong> (a special group that takes <em>-n/-en</em> in every case except the nominative singular): <em>der Student → die Studenten</em>, <em>der Herr → die Herren</em>, <em>der Junge → die Jungen</em>, <em>der Name → die Namen</em>, <em>der Kollege → die Kollegen</em>. A few neuter nouns follow too: <em>das Auge → die Augen</em>, <em>das Bett → die Betten</em>, <em>das Hemd → die Hemden</em>, <em>das Ende → die Enden</em>. Feminine <em>-(e)n</em> plurals <strong>never</strong> take an umlaut — <em>die Mütter</em> belongs to the next pattern, not this one.</p>
+
+    <h3>Pattern 4: add -s (das Auto → die Autos)</h3>
+    <p>The <em>-s</em> plural will feel familiar to English speakers. In German it is reserved mainly for <strong>loanwords</strong> and words ending in a vowel:</p>
+    <table>
+      <tr><th>Singular</th><th>Plural</th><th>Notes</th></tr>
+      <tr><td>das Auto</td><td>die Autos</td><td>loanword</td></tr>
+      <tr><td>das Handy</td><td>die Handys</td><td>loanword (“mobile phone”)</td></tr>
+      <tr><td>das Hotel</td><td>die Hotels</td><td>loanword</td></tr>
+      <tr><td>das Café</td><td>die Cafés</td><td>loanword, keeps the accent</td></tr>
+      <tr><td>das Sofa</td><td>die Sofas</td><td>loanword</td></tr>
+      <tr><td>die Kamera</td><td>die Kameras</td><td>ends in a vowel</td></tr>
+      <tr><td>der Park</td><td>die Parks</td><td>loanword</td></tr>
+      <tr><td>der Chef</td><td>die Chefs</td><td>loanword</td></tr>
+      <tr><td>der Club</td><td>die Clubs</td><td>loanword</td></tr>
+    </table>
+    <p>This is the only pattern where English intuition helps — but beware false friends like <em>das Handy</em>, which means “mobile phone”, not something convenient.</p>
+
+    <h3>Pattern 5: no change (das Fenster → die Fenster)</h3>
+    <p>Masculine and neuter nouns ending in <em>-er</em>, <em>-en</em> or <em>-el</em> usually keep the identical form. Only the article changes from <em>der/das</em> to <em>die</em>:</p>
+    <table>
+      <tr><th>Singular</th><th>Plural</th><th>Notes</th></tr>
+      <tr><td>der Lehrer</td><td>die Lehrer</td><td>ends in -er</td></tr>
+      <tr><td>der Fahrer</td><td>die Fahrer</td><td>ends in -er</td></tr>
+      <tr><td>der Schüler</td><td>die Schüler</td><td>ends in -er</td></tr>
+      <tr><td>der Computer</td><td>die Computer</td><td>ends in -er</td></tr>
+      <tr><td>der Koffer</td><td>die Koffer</td><td>ends in -er</td></tr>
+      <tr><td>das Fenster</td><td>die Fenster</td><td>ends in -er</td></tr>
+      <tr><td>das Zimmer</td><td>die Zimmer</td><td>ends in -er</td></tr>
+      <tr><td>das Mädchen</td><td>die Mädchen</td><td>ends in -chen</td></tr>
+    </table>
+    <p>A closely related mini-pattern changes <strong>only the umlaut</strong>, with no added ending. It applies to a small set of masculine nouns (plus <em>die Mutter</em>):</p>
+    <table>
+      <tr><th>Singular</th><th>Plural</th><th>Notes</th></tr>
+      <tr><td>der Vater</td><td>die Väter</td><td>umlaut only</td></tr>
+      <tr><td>die Mutter</td><td>die Mütter</td><td>umlaut only</td></tr>
+      <tr><td>der Bruder</td><td>die Brüder</td><td>umlaut only</td></tr>
+      <tr><td>der Apfel</td><td>die Äpfel</td><td>umlaut only</td></tr>
+      <tr><td>der Garten</td><td>die Gärten</td><td>umlaut only</td></tr>
+      <tr><td>der Mantel</td><td>die Mäntel</td><td>umlaut only</td></tr>
+    </table>
+
+    <h3>The umlaut rules, in one place</h3>
+    <p>Only four sounds can take an umlaut: <em>a → ä</em> (<em>der Gast → die Gäste</em>), <em>o → ö</em> (<em>der Sohn → die Söhne</em>), <em>u → ü</em> (<em>das Buch → die Bücher</em>), and <em>au → äu</em> (<em>das Haus → die Häuser</em>). The vowels <em>e</em> and <em>i</em> never change, which is why <em>das Bett → die Betten</em> and <em>das Bild → die Bilder</em> have no umlaut. Whether a particular noun takes an umlaut cannot be derived from any rule — <em>der Hund</em> becomes <em>die Hunde</em> but <em>der Mund</em> becomes <em>die Münder</em>. You simply have to know it, which is exactly what the quiz trains.</p>
+
+    <h3>Which pattern goes with which noun? Tendencies, not laws</h3>
+    <p>Gender is your best clue. Feminine nouns take <em>-(e)n</em> in the overwhelming majority of cases (<em>die Frau → die Frauen</em>, <em>die Blume → die Blumen</em>). Masculine nouns most often take <em>-e</em>, with or without umlaut (<em>der Tisch → die Tische</em>, <em>der Stuhl → die Stühle</em>). Neuter nouns split between <em>-er</em> (<em>das Kind → die Kinder</em>) and <em>-e</em> (<em>das Jahr → die Jahre</em>). Nouns ending in <em>-er, -en, -el</em> usually do not change (<em>der Lehrer → die Lehrer</em>), and recent loanwords take <em>-s</em> (<em>das Auto → die Autos</em>).</p>
+    <p>Every tendency has exceptions, and the exceptions are frequent enough to matter: <em>die Mutter → die Mütter</em> breaks the feminine <em>-(e)n</em> rule, <em>das Bett → die Betten</em> breaks the neuter <em>-er/-e</em> expectation, and <em>der Mann → die Männer</em> is a masculine noun with an <em>-er</em> plural. Treat the tendencies as a first guess and memorisation as the real answer.</p>
+
+    <h3>How the quiz hints map to the patterns</h3>
+    <p>Stuck on a round? The “Give me a hint” button reveals the pattern category without giving away the answer:</p>
+    <table>
+      <tr><th>Hint text</th><th>What to do</th><th>Example</th></tr>
+      <tr><td>Add -e (no umlaut)</td><td>Append <em>-e</em> to the singular</td><td>der Tisch → die Tische</td></tr>
+      <tr><td>Add -e and add an umlaut</td><td>Umlaut the stem vowel, then add <em>-e</em></td><td>der Stuhl → die Stühle</td></tr>
+      <tr><td>Add -er and add an umlaut</td><td>Umlaut the stem vowel, then add <em>-er</em></td><td>das Kind → die Kinder</td></tr>
+      <tr><td>Add -n or -en</td><td>Append <em>-n</em> (or <em>-en</em>)</td><td>die Frau → die Frauen</td></tr>
+      <tr><td>Add -s</td><td>Append <em>-s</em></td><td>das Auto → die Autos</td></tr>
+      <tr><td>Umlaut only — no ending added</td><td>Change the vowel, add nothing</td><td>der Vater → die Väter</td></tr>
+      <tr><td>No change — plural is identical</td><td>Keep the noun, change the article to <em>die</em></td><td>das Fenster → die Fenster</td></tr>
+    </table>
+
+    <h3>Common exceptions and traps</h3>
+    <p>A few nouns have <strong>two plurals with different meanings</strong>. The most famous is <em>das Wort</em>: <em>die Wörter</em> means separate, individual words (as in a vocabulary list), while <em>die Worte</em> means connected words, a speech or saying. Similarly, <em>die Bank</em> becomes <em>die Banken</em> for financial institutions but <em>die Bänke</em> for benches to sit on; <em>der Strauß</em> becomes <em>die Sträuße</em> for bouquets but <em>die Strauße</em> for ostriches; and <em>der Band</em> becomes <em>die Bände</em> for volumes of a book series but <em>die Bands</em> for music groups. These double plurals are a favourite exam trap.</p>
+    <p>Watch out for nouns that look alike but pluralise differently: <em>der Leiter</em> (the leader) → <em>die Leiter</em> (no change), but <em>die Leiter</em> (the ladder) → <em>die Leitern</em>. And remember that the plural article is always <em>die</em> — no exceptions: <em>der Tisch → die Tische</em>, <em>das Kind → die Kinder</em>, <em>die Frau → die Frauen</em>.</p>
+
+    <h3>Tips for mastering German plurals</h3>
+    <ul>
+      <li><strong>Learn the triple:</strong> never learn <em>Tisch</em> alone — learn <em>der Tisch, die Tische</em>. Article plus plural, every time, from day one.</li>
+      <li><strong>Say umlauts out loud:</strong> <em>Äpfel</em> and <em>Apfel</em> sound different; pronouncing the plural correctly cements the spelling.</li>
+      <li><strong>Use the gender tendencies</strong> above as a first guess when you meet a new noun, then verify in a dictionary.</li>
+      <li><strong>Drill in both directions:</strong> this quiz asks singular → plural; also practise plural → singular so you recognise forms like <em>die Häuser</em> in reading.</li>
+      <li><strong>Revisit your misses:</strong> the quiz lists every word you got wrong at the end — write those triples on flashcards and re-test yourself the next day.</li>
+    </ul>
+
+    <h2>Frequently asked questions</h2>
+    <h3>How many plural patterns does German have?</h3>
+    <p>Five main endings — <em>-e</em>, <em>-er</em>, <em>-(e)n</em>, <em>-s</em>, and no change — plus umlaut changes that combine with several of them. The quiz covers all of them across 115 nouns.</p>
+    <h3>Do all German plurals add an umlaut?</h3>
+    <p>No. The <em>-er</em> pattern almost always includes one (<em>das Haus → die Häuser</em>), the <em>-e</em> pattern sometimes does (<em>der Stuhl → die Stühle</em>, but <em>der Tisch → die Tische</em>), and <em>-(e)n</em> plurals never do (<em>die Frau → die Frauen</em>).</p>
+    <h3>What is the plural of “der Tisch” and “das Kind”?</h3>
+    <p><em>Der Tisch → die Tische</em> and <em>das Kind → die Kinder</em>. These two are the classic examples teachers use to show that German plurals must be memorised, not derived.</p>
+    <h3>Why do some German nouns not change in the plural?</h3>
+    <p>Masculine and neuter nouns ending in <em>-er</em>, <em>-en</em> or <em>-el</em> typically keep the same form: <em>der Lehrer → die Lehrer</em>, <em>das Fenster → die Fenster</em>. Only the article changes to <em>die</em>.</p>
+    <h3>Is the plural article always “die”?</h3>
+    <p>Yes — <em>der</em>, <em>die</em> and <em>das</em> all become <em>die</em> in the plural, with no exceptions.</p>
+    <h3>How can I remember which pattern a noun takes?</h3>
+    <p>Learn each noun as a triple (article + singular + plural), use gender tendencies as a first guess, and drill regularly — the 20-round quiz on this page samples all patterns so every session trains the full system.</p>
+  </article>
+
+  <p class="author-line">Written by Dr Taimoor Asghar · Reviewed 2026-10-07</p>
+</main>
+
+<footer class="site">
+  <div class="wrap">© 2026 Bayzubaan · Free language learning tools</div>
+</footer>
+
+<script>
+//__QUIZLOGIC_START__
+function normalizeAnswer(s){
+  return s.trim().toLowerCase().replace(/^die\s+/, '');
+}
+function checkAnswer(userInput, correctPlural){
+  return normalizeAnswer(userInput) === correctPlural.toLowerCase();
+}
+//__QUIZLOGIC_END__
+/* Word bank: 115 nouns with verified plurals.
+   pat: "e" (add -e, no umlaut) | "e-umlaut" (add -e + umlaut) |
+        "er" (add -er + umlaut) | "en" (add -n/-en) |
+        "s" (add -s) | "umlaut" (umlaut only) | "same" (no change) */
+const WORDS = [
+  // Pattern: add -e, no umlaut
+  {a:"der", w:"Tisch", p:"Tische", pat:"e"},
+  {a:"der", w:"Tag", p:"Tage", pat:"e"},
+  {a:"der", w:"Hund", p:"Hunde", pat:"e"},
+  {a:"der", w:"Brief", p:"Briefe", pat:"e"},
+  {a:"der", w:"Film", p:"Filme", pat:"e"},
+  {a:"der", w:"Schuh", p:"Schuhe", pat:"e"},
+  {a:"der", w:"Monat", p:"Monate", pat:"e"},
+  {a:"der", w:"Abend", p:"Abende", pat:"e"},
+  {a:"der", w:"Freund", p:"Freunde", pat:"e"},
+  {a:"der", w:"Beruf", p:"Berufe", pat:"e"},
+  {a:"das", w:"Jahr", p:"Jahre", pat:"e"},
+  {a:"das", w:"Brot", p:"Brote", pat:"e"},
+  {a:"das", w:"Bein", p:"Beine", pat:"e"},
+  {a:"das", w:"Heft", p:"Hefte", pat:"e"},
+  {a:"das", w:"Geschenk", p:"Geschenke", pat:"e"},
+  // Pattern: add -e + umlaut
+  {a:"der", w:"Stuhl", p:"Stühle", pat:"e-umlaut"},
+  {a:"die", w:"Stadt", p:"Städte", pat:"e-umlaut"},
+  {a:"der", w:"Gast", p:"Gäste", pat:"e-umlaut"},
+  {a:"die", w:"Hand", p:"Hände", pat:"e-umlaut"},
+  {a:"die", w:"Nacht", p:"Nächte", pat:"e-umlaut"},
+  {a:"die", w:"Kraft", p:"Kräfte", pat:"e-umlaut"},
+  {a:"der", w:"Baum", p:"Bäume", pat:"e-umlaut"},
+  {a:"der", w:"Traum", p:"Träume", pat:"e-umlaut"},
+  {a:"der", w:"Sohn", p:"Söhne", pat:"e-umlaut"},
+  {a:"die", w:"Maus", p:"Mäuse", pat:"e-umlaut"},
+  {a:"die", w:"Wand", p:"Wände", pat:"e-umlaut"},
+  {a:"der", w:"Arzt", p:"Ärzte", pat:"e-umlaut"},
+  {a:"der", w:"Zug", p:"Züge", pat:"e-umlaut"},
+  {a:"der", w:"Fluss", p:"Flüsse", pat:"e-umlaut"},
+  {a:"der", w:"Platz", p:"Plätze", pat:"e-umlaut"},
+  {a:"der", w:"Schrank", p:"Schränke", pat:"e-umlaut"},
+  // Pattern: add -er + umlaut
+  {a:"das", w:"Kind", p:"Kinder", pat:"er"},
+  {a:"das", w:"Buch", p:"Bücher", pat:"er"},
+  {a:"das", w:"Haus", p:"Häuser", pat:"er"},
+  {a:"das", w:"Glas", p:"Gläser", pat:"er"},
+  {a:"das", w:"Bild", p:"Bilder", pat:"er"},
+  {a:"das", w:"Dorf", p:"Dörfer", pat:"er"},
+  {a:"das", w:"Ei", p:"Eier", pat:"er"},
+  {a:"das", w:"Kleid", p:"Kleider", pat:"er"},
+  {a:"das", w:"Land", p:"Länder", pat:"er"},
+  {a:"das", w:"Wort", p:"Wörter", pat:"er"},
+  {a:"das", w:"Rad", p:"Räder", pat:"er"},
+  {a:"der", w:"Mann", p:"Männer", pat:"er"},
+  {a:"der", w:"Wald", p:"Wälder", pat:"er"},
+  {a:"das", w:"Lied", p:"Lieder", pat:"er"},
+  {a:"das", w:"Tuch", p:"Tücher", pat:"er"},
+  {a:"das", w:"Schloss", p:"Schlösser", pat:"er"},
+  {a:"das", w:"Dach", p:"Dächer", pat:"er"},
+  {a:"das", w:"Huhn", p:"Hühner", pat:"er"},
+  {a:"das", w:"Amt", p:"Ämter", pat:"er"},
+  {a:"die", w:"Tochter", p:"Töchter", pat:"er"},
+  {a:"der", w:"Geist", p:"Geister", pat:"er"},
+  {a:"der", w:"Mund", p:"Münder", pat:"er"},
+  {a:"der", w:"Strauch", p:"Sträucher", pat:"er"},
+  {a:"der", w:"Wurm", p:"Würmer", pat:"er"},
+  {a:"der", w:"Irrtum", p:"Irrtümer", pat:"er"},
+  // Pattern: add -n / -en
+  {a:"die", w:"Frau", p:"Frauen", pat:"en"},
+  {a:"die", w:"Blume", p:"Blumen", pat:"en"},
+  {a:"die", w:"Lampe", p:"Lampen", pat:"en"},
+  {a:"die", w:"Tasse", p:"Tassen", pat:"en"},
+  {a:"die", w:"Straße", p:"Straßen", pat:"en"},
+  {a:"die", w:"Uhr", p:"Uhren", pat:"en"},
+  {a:"die", w:"Tür", p:"Türen", pat:"en"},
+  {a:"die", w:"Schwester", p:"Schwestern", pat:"en"},
+  {a:"der", w:"Name", p:"Namen", pat:"en"},
+  {a:"der", w:"Student", p:"Studenten", pat:"en"},
+  {a:"der", w:"Herr", p:"Herren", pat:"en"},
+  {a:"das", w:"Auge", p:"Augen", pat:"en"},
+  {a:"das", w:"Bett", p:"Betten", pat:"en"},
+  {a:"das", w:"Hemd", p:"Hemden", pat:"en"},
+  {a:"das", w:"Ende", p:"Enden", pat:"en"},
+  {a:"der", w:"Junge", p:"Jungen", pat:"en"},
+  {a:"der", w:"Kollege", p:"Kollegen", pat:"en"},
+  // Pattern: add -s
+  {a:"das", w:"Auto", p:"Autos", pat:"s"},
+  {a:"das", w:"Café", p:"Cafés", pat:"s"},
+  {a:"das", w:"Hotel", p:"Hotels", pat:"s"},
+  {a:"das", w:"Sofa", p:"Sofas", pat:"s"},
+  {a:"das", w:"Handy", p:"Handys", pat:"s"},
+  {a:"der", w:"Park", p:"Parks", pat:"s"},
+  {a:"der", w:"Chef", p:"Chefs", pat:"s"},
+  {a:"das", w:"Restaurant", p:"Restaurants", pat:"s"},
+  {a:"die", w:"Kamera", p:"Kameras", pat:"s"},
+  {a:"das", w:"Hobby", p:"Hobbys", pat:"s"},
+  {a:"das", w:"Baby", p:"Babys", pat:"s"},
+  {a:"der", w:"Club", p:"Clubs", pat:"s"},
+  {a:"der", w:"Job", p:"Jobs", pat:"s"},
+  {a:"das", w:"Team", p:"Teams", pat:"s"},
+  {a:"der", w:"Test", p:"Tests", pat:"s"},
+  // Pattern: umlaut only
+  {a:"der", w:"Vater", p:"Väter", pat:"umlaut"},
+  {a:"die", w:"Mutter", p:"Mütter", pat:"umlaut"},
+  {a:"der", w:"Bruder", p:"Brüder", pat:"umlaut"},
+  {a:"der", w:"Apfel", p:"Äpfel", pat:"umlaut"},
+  {a:"der", w:"Garten", p:"Gärten", pat:"umlaut"},
+  {a:"der", w:"Ofen", p:"Öfen", pat:"umlaut"},
+  {a:"der", w:"Boden", p:"Böden", pat:"umlaut"},
+  {a:"der", w:"Faden", p:"Fäden", pat:"umlaut"},
+  {a:"der", w:"Hafen", p:"Häfen", pat:"umlaut"},
+  {a:"der", w:"Nagel", p:"Nägel", pat:"umlaut"},
+  {a:"der", w:"Sattel", p:"Sättel", pat:"umlaut"},
+  {a:"der", w:"Mantel", p:"Mäntel", pat:"umlaut"},
+  {a:"der", w:"Hammer", p:"Hämmer", pat:"umlaut"},
+  // Pattern: no change
+  {a:"das", w:"Fenster", p:"Fenster", pat:"same"},
+  {a:"der", w:"Lehrer", p:"Lehrer", pat:"same"},
+  {a:"das", w:"Mädchen", p:"Mädchen", pat:"same"},
+  {a:"der", w:"Fahrer", p:"Fahrer", pat:"same"},
+  {a:"der", w:"Computer", p:"Computer", pat:"same"},
+  {a:"das", w:"Zimmer", p:"Zimmer", pat:"same"},
+  {a:"der", w:"Schüler", p:"Schüler", pat:"same"},
+  {a:"der", w:"Koffer", p:"Koffer", pat:"same"},
+  {a:"der", w:"Onkel", p:"Onkel", pat:"same"},
+  {a:"der", w:"Sessel", p:"Sessel", pat:"same"},
+  {a:"der", w:"Teller", p:"Teller", pat:"same"},
+  {a:"der", w:"Löffel", p:"Löffel", pat:"same"},
+  {a:"der", w:"Schlüssel", p:"Schlüssel", pat:"same"},
+  {a:"der", w:"Fehler", p:"Fehler", pat:"same"}
+];
+
+const HINTS = {
+  "e": "Pattern: add -e (no umlaut change)",
+  "e-umlaut": "Pattern: add -e AND change the stem vowel to an umlaut (a→ä, o→ö, u→ü, au→äu)",
+  "er": "Pattern: add -er AND change the stem vowel to an umlaut",
+  "en": "Pattern: add -n or -en",
+  "s": "Pattern: add -s",
+  "umlaut": "Pattern: umlaut only — no ending is added",
+  "same": "Pattern: no change — the plural is identical to the singular"
+};
+
+const ROUNDS = 20;
+
+function shuffle(arr){
+  for(let i = arr.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+/* Sample 20 nouns without repeats, guaranteeing at least 2 per pattern. */
+function sampleQuiz(){
+  const groups = {};
+  WORDS.forEach(w => { (groups[w.pat] = groups[w.pat] || []).push(w); });
+  let picks = [];
+  Object.keys(groups).forEach(pat => {
+    picks = picks.concat(shuffle(groups[pat].slice()).slice(0, 2));
+  });
+  const remaining = shuffle(WORDS.filter(w => picks.indexOf(w) === -1));
+  while(picks.length < ROUNDS && remaining.length) picks.push(remaining.pop());
+  return shuffle(picks).slice(0, ROUNDS);
+}
+
+/* ---- Quiz state ---- */
+let quizWords = [];
+let roundIdx = 0;
+let score = 0;
+let streak = 0;
+let missed = [];
+let answered = false;
+
+const $ = id => document.getElementById(id);
+
+function startQuiz(){
+  quizWords = sampleQuiz();
+  roundIdx = 0; score = 0; streak = 0; missed = [];
+  $('quiz-play').classList.remove('hidden');
+  $('quiz-end').classList.add('hidden');
+  renderRound();
+}
+
+function renderRound(){
+  answered = false;
+  const w = quizWords[roundIdx];
+  $('round-pill').textContent = 'Round ' + (roundIdx + 1) + ' / ' + ROUNDS;
+  $('score-pill').textContent = 'Score: ' + score;
+  $('streak-pill').textContent = 'Streak: ' + streak;
+  $('progress-fill').style.width = ((roundIdx) / ROUNDS * 100) + '%';
+  $('progress-bar').setAttribute('aria-valuenow', roundIdx);
+  $('q-article').textContent = w.a;
+  $('q-noun').textContent = w.w;
+  $('answer').value = '';
+  $('answer').disabled = false;
+  $('btn-check').disabled = false;
+  $('btn-hint').classList.remove('hidden');
+  $('btn-next').classList.add('hidden');
+  const fb = $('feedback');
+  fb.className = 'feedback';
+  fb.textContent = '';
+  setTimeout(() => $('answer').focus(), 50);
+}
+
+function showFeedback(kind, html){
+  const fb = $('feedback');
+  fb.className = 'feedback show ' + kind;
+  fb.innerHTML = html;
+}
+
+function doCheck(){
+  if(answered) return;
+  const w = quizWords[roundIdx];
+  const raw = $('answer').value;
+  if(!raw.trim()){
+    showFeedback('hint', 'Please type an answer first — or press “Give me a hint”.');
+    return;
+  }
+  answered = true;
+  $('answer').disabled = true;
+  $('btn-check').disabled = true;
+  $('btn-hint').classList.add('hidden');
+  $('btn-next').classList.remove('hidden');
+  $('btn-next').textContent = (roundIdx === ROUNDS - 1) ? 'See results →' : 'Next →';
+  const ok = checkAnswer(raw, w.p);
+  if(ok){
+    score++; streak++;
+    showFeedback('correct', '✓ Correct! <strong>' + w.a + ' ' + w.w + ' → die ' + w.p + '</strong>');
+  } else {
+    streak = 0;
+    missed.push(w);
+    showFeedback('incorrect', '✗ Not quite. The correct plural is <strong>die ' + w.p + '</strong> (' + w.a + ' ' + w.w + ' → die ' + w.p + ').');
+  }
+  $('score-pill').textContent = 'Score: ' + score;
+  $('streak-pill').textContent = 'Streak: ' + streak;
+  $('progress-fill').style.width = ((roundIdx + 1) / ROUNDS * 100) + '%';
+  $('progress-bar').setAttribute('aria-valuenow', roundIdx + 1);
+}
+
+function doHint(){
+  if(answered) return;
+  const w = quizWords[roundIdx];
+  showFeedback('hint', '💡 Hint: ' + HINTS[w.pat] + '.');
+}
+
+function doNext(){
+  if(roundIdx < ROUNDS - 1){
+    roundIdx++;
+    renderRound();
+  } else {
+    endQuiz();
+  }
+}
+
+function endQuiz(){
+  $('quiz-play').classList.add('hidden');
+  $('quiz-end').classList.remove('hidden');
+  $('final-score').textContent = score + ' / ' + ROUNDS;
+  let msg;
+  if(score === ROUNDS) msg = 'Perfect score! You have mastered every plural pattern. 🏆';
+  else if(score >= 16) msg = 'Excellent! Just review the few you missed below.';
+  else if(score >= 12) msg = 'Good work! Review the missed words and try again to push your score up.';
+  else if(score >= 8) msg = 'A solid start. Read the guide below, then retake the quiz.';
+  else msg = 'German plurals are tricky — read the guide below and try again. You will improve fast.';
+  $('final-message').textContent = msg;
+  if(missed.length){
+    $('missed-wrap').classList.remove('hidden');
+    $('missed-list').innerHTML = missed.map(w =>
+      '<li><strong>' + w.a + ' ' + w.w + '</strong> → die <strong>' + w.p + '</strong></li>'
+    ).join('');
+  } else {
+    $('missed-wrap').classList.add('hidden');
+  }
+}
+
+$('btn-check').addEventListener('click', doCheck);
+$('btn-hint').addEventListener('click', doHint);
+$('btn-next').addEventListener('click', doNext);
+$('btn-restart').addEventListener('click', startQuiz);
+$('answer').addEventListener('keydown', e => {
+  if(e.key === 'Enter') doCheck();
+});
+
+startQuiz();
+</script>
+</body>
+</html>
