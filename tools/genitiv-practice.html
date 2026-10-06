@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Genitiv Case Practice (des / der) — Free Interactive German Quiz | Bayzubaan</title>
+<meta name="description" content="Master the German genitive case with a free interactive drill: 15 sentences, instant feedback, genitive prepositions (wegen, trotz, während), masculine/neuter des vs. feminine/plural der, and when to use von + dative instead.">
+<link rel="canonical" href="https://bayzubaan.com/tools/genitiv-practice/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Genitiv Case Practice (des / der) — Free Interactive German Quiz">
+<meta property="og:description" content="Drill the German genitive: des for masculine/neuter, der for feminine/plural, genitive prepositions, and the von + dative alternative. 15 sentences with instant feedback.">
+<meta property="og:url" content="https://bayzubaan.com/tools/genitiv-practice/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Genitiv Case Practice (des / der) — Free Interactive German Quiz">
+<meta name="twitter:description" content="Drill the German genitive: des for masculine/neuter, der for feminine/plural, genitive prepositions, and the von + dative alternative.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When do I use des and when der in the German genitive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the genitive, masculine and neuter nouns take des (des Mannes, des Kindes), while feminine nouns and all plurals take der (der Frau, der Kinder). Masculine and neuter nouns also add -s or -es to the noun itself: des Mannes, des Hauses, des Lehrers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which German prepositions take the genitive case?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most common genitive prepositions are wegen (because of), trotz (despite), während (during), anstelle (instead of), infolge (as a result of), and dank (thanks to). Example: wegen des Regens (because of the rain), trotz des Wetters (despite the weather)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I add -s or -es to the noun in the genitive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Masculine and neuter nouns add -s after a vowel or unstressed ending (des Lehrers, des Autos) and -es after sibilants and most stressed one-syllable nouns (des Hauses, des Mannes, des Tages). Feminine and plural nouns never add an ending."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the genitive dying out in German? Can I use von instead?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In spoken German, von + dative often replaces the genitive (das Auto von dem Mann instead of das Auto des Mannes). This is fully acceptable in conversation, but written and formal German still expects the genitive, and exams test it — so learn both."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does 'der Frau' appear in the genitive if der is masculine?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because der is also the genitive article for feminine nouns and for all plurals: der Frau (the woman's), der Kinder (the children's). The article der serves three roles: masculine nominative, feminine dative, and feminine/plural genitive — which is why you must always consider the noun's gender and the case together."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.quiz-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.quiz-card h2{font-size:1.35rem;margin-bottom:8px;color:#0f172a}
+.progress-wrap{background:#e2e8f0;border-radius:999px;height:10px;margin:16px 0;overflow:hidden}
+.progress-fill{background:#2563eb;height:100%;width:0%;transition:width .3s;border-radius:999px}
+.progress-label{font-size:.9rem;color:#64748b;margin-bottom:8px}
+#question{font-size:1.15rem;font-weight:600;margin:18px 0;color:#0f172a}
+.options{display:grid;gap:12px;margin-bottom:16px}
+.opt-btn{background:#fff;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;font-size:1.05rem;font-weight:600;cursor:pointer;transition:all .15s;font-family:inherit;color:#1e293b}
+.opt-btn:hover:not(:disabled){border-color:#2563eb;background:#eff6ff}
+.opt-btn:disabled{cursor:default;opacity:.85}
+.opt-btn.correct{background:#10b981;border-color:#10b981;color:#fff}
+.opt-btn.wrong{background:#ef4444;border-color:#ef4444;color:#fff}
+.feedback{border-radius:8px;padding:14px 16px;margin-bottom:16px;font-size:.98rem;display:none}
+.feedback.show{display:block}
+.feedback.good{background:#ecfdf5;border:1px solid #10b981;color:#065f46}
+.feedback.bad{background:#fef2f2;border:1px solid #ef4444;color:#991b1b}
+.quiz-meta{display:flex;gap:16px;flex-wrap:wrap;font-size:.95rem;color:#64748b;margin-bottom:8px}
+.quiz-meta strong{color:#0f172a}
+#next-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:12px 28px;font-size:1rem;font-weight:600;cursor:pointer;display:none;margin-top:8px}
+#next-btn:hover{background:#1d4ed8}
+#restart-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:12px 28px;font-size:1rem;font-weight:600;cursor:pointer;margin-top:16px}
+#results{display:none;text-align:center}
+#results h3{font-size:1.5rem;margin-bottom:12px;color:#0f172a}
+.missed{background:#fffbeb;border:1px solid #f59e0b;border-radius:8px;padding:16px;margin-top:16px;text-align:left}
+.missed h4{margin-bottom:8px;color:#92400e}
+.missed li{margin-bottom:6px;list-style:none}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.quiz-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="hero">
+<h1>Genitiv Case Practice (des / der) — Free Interactive Quiz</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Medically and linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">The genitive is German's "possession case" — and the one English speakers meet last. This drill walks you through <span class="hl">des</span> vs. <span class="hl">der</span>, the famous -s/-es noun ending, the classic genitive prepositions (wegen, trotz, während), and the von + dative escape hatch that native speakers actually use in conversation.</p>
+</header>
+
+<div class="quiz-card" id="quiz">
+<h2>Genitiv Drill — 15 Sentences</h2>
+<div class="quiz-meta"><span>Score: <strong id="score">0</strong>/15</span><span>Streak: <strong id="streak">0</strong> 🔥</span></div>
+<div class="progress-label" id="q-label">Question 1 of 15</div>
+<div class="progress-wrap"><div class="progress-fill" id="q-bar"></div></div>
+<div id="question"></div>
+<div class="options" id="options"></div>
+<div class="feedback" id="feedback"></div>
+<button id="next-btn">Next →</button>
+<div id="results">
+<h3>Round complete!</h3>
+<p id="final-score"></p>
+<div class="missed" id="missed-box" style="display:none"><h4>Review your misses</h4><ul id="missed-list"></ul></div>
+<button id="restart-btn">Play again</button>
+</div>
+</div>
+
+<article class="prose">
+<h2>What the genitive actually does</h2>
+<p>The genitive answers the question <strong>wessen?</strong> (whose?) or <strong>wovon?</strong> (of what?). Its two core jobs in German are possession and part-of-a-whole: <em>das Auto des Mannes</em> (the man's car), <em>die Farbe des Hauses</em> (the colour of the house), <em>die Hälfte des Kuchens</em> (half of the cake). English usually handles these with an apostrophe-s or with "of"; German packs the meaning into a special article plus a noun ending. Once you learn the pattern, the genitive is one of the most regular parts of German grammar.</p>
+<h2>The article table: only two forms</h2>
+<p>Good news first: the genitive has the simplest article table of all four cases. Memorise these four cells:</p>
+<table>
+<tr><th></th><th>Masculine</th><th>Feminine</th><th>Neuter</th><th>Plural</th></tr>
+<tr><td><strong>Definite</strong></td><td><strong>des</strong></td><td><strong>der</strong></td><td><strong>des</strong></td><td><strong>der</strong></td></tr>
+<tr><td><strong>Indefinite</strong></td><td><strong>eines</strong></td><td><strong>einer</strong></td><td><strong>eines</strong></td><td>— (no article)</td></tr>
+</table>
+<p>Masculine and neuter merge into <span class="hl">des</span>; feminine and plural merge into <span class="hl">der</span>. The indefinite forms mirror this: <em>eines Mannes, eines Kindes, einer Frau</em>. Watch out for the classic trap: <em>der</em> is the masculine nominative article you learned on day one, but in the genitive it belongs to feminine and plural nouns — <em>der Frau</em> (the woman's), <em>der Kinder</em> (the children's). Always read article + gender + case together.</p>
+<h2>The -s / -es ending on the noun</h2>
+<p>The article alone isn't enough: masculine and neuter nouns in the genitive also add <strong>-s</strong> or <strong>-es</strong> to the noun itself. The rule is phonetic. Add <strong>-es</strong> after sibilant sounds (s, ß, x, z) and after most stressed one-syllable masculine/neuter nouns: <em>des Hauses, des Mannes, des Tages, des Buches</em>. Add plain <strong>-s</strong> after a vowel or an unstressed syllable: <em>des Lehrers, des Autos, des Hotels, des Mädchens</em>. Feminine nouns and all plurals take no ending at all: <em>der Frau, der Kinder, der Autos</em>. Two groups of masculine nouns skip the ending entirely: the so-called weak (n-declension) nouns like <em>der Student, der Kollege</em>, which take <strong>-n</strong> in every case except nominative (<em>des Studenten</em>), and a handful of foreign borrowings.</p>
+<h2>Genitive prepositions</h2>
+<p>Several high-frequency prepositions always govern the genitive. The big five worth memorising: <strong>wegen</strong> (because of) — <em>wegen des Regens</em>; <strong>trotz</strong> (despite) — <em>trotz des Wetters</em>; <strong>während</strong> (during) — <em>während des Meetings</em>; <strong>anstelle</strong> (instead of) — <em>anstelle des Vaters</em>; <strong>infolge</strong> (as a result of) — <em>infolge des Unfalls</em>. Add <strong>dank</strong> (thanks to) — <em>dank der Hilfe</em> — and <strong>angesichts</strong> (in view of). A practical note: in colloquial speech, <em>wegen</em> is often heard with the dative (<em>wegen dem Regen</em>), which purists call wrong. For exams and formal writing, keep the genitive.</p>
+<h2>The spoken shortcut: von + dative</h2>
+<p>Here is the secret native speakers use constantly: in conversation, the genitive of possession is routinely replaced by <strong>von + dative</strong>. <em>Das Auto des Mannes</em> becomes <em>das Auto von dem Mann</em> (or contracted <em>vom Mann</em>). This is perfectly normal spoken German — not a mistake, not slang. It does two things for you: it works when you can't remember the genitive form, and it sounds natural with names and inanimates (<em>die Farbe von dem Haus</em>). But keep the real genitive in your toolkit: written German, news broadcasts, official documents, and every German exam still expect it.</p>
+<h2>Adjectives in the genitive</h2>
+<p>Adjectives are unusually easy in the genitive: after a definite article, <strong>all genders take -en</strong> — <em>des guten Mannes, der guten Frau, des guten Kindes, der guten Kinder</em>. No -er, no -es, no exceptions. After an indefinite article the pattern is equally flat: <em>eines guten Mannes, einer guten Frau</em>. If there is no article at all, the adjective carries the case: <em>kalten Wassers, guter Freunde</em> (genitive of <em>kaltes Wasser, gute Freunde</em>). One uniform ending makes genitive adjectives the least error-prone in the language — a small reward for learning the case.</p>
+<h2>Proper names: the bare -s genitive</h2>
+<p>Proper names take a shortcut: they form the genitive with a bare <strong>-s</strong> and no article — <em>Marias Buch</em> (Maria's book), <em>Peters Auto</em> (Peter's car), <em>Deutschlands Hauptstadt</em> (Germany's capital). No <em>des</em>, no fuss. Note two details: German never uses an apostrophe before the -s in standard writing (so <em>Marias</em>, not <em>Maria's</em>), and names ending in a sibilant sound take no ending at all but may use von instead — <em>das Buch von Max</em> rather than <em>Maxs Buch</em>. City and country names ending in -s behave the same way (<em>Paris' Sehenswürdigkeiten</em> is sometimes seen with a trailing apostrophe, a tolerated exception).</p>
+<h2>How to drill this effectively</h2>
+<p>Work the quiz above in rounds of 15 and read every explanation, especially for feminine nouns — <em>der Frau, der Reise, der Sitzung</em> are where most learners slip, because <em>der</em> "feels" masculine. Say each correct answer aloud with the noun ending: "des MannES, des HausES, des LehrerS". Then practise the prepositions as fixed chunks: <em>wegen des..., trotz des..., während der...</em>. Finally, train the von-switch: for every genitive sentence you drill, also say the von + dative version, so both live in your active German. Fifteen focused minutes a day will make the genitive automatic within two weeks.</p>
+</article>
+
+<div class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>When do I use des and when der in the German genitive?</h3><p>Masculine and neuter nouns take <strong>des</strong> (des Mannes, des Kindes); feminine nouns and all plurals take <strong>der</strong> (der Frau, der Kinder). Masculine and neuter nouns also add -s or -es to the noun itself.</p></div>
+<div class="faq-item"><h3>Which German prepositions take the genitive case?</h3><p><strong>Wegen</strong> (because of), <strong>trotz</strong> (despite), <strong>während</strong> (during), <strong>anstelle</strong> (instead of), <strong>infolge</strong> (as a result of) and <strong>dank</strong> (thanks to). Example: <em>wegen des Regens</em>.</p></div>
+<div class="faq-item"><h3>Do I add -s or -es to the noun in the genitive?</h3><p>Add <strong>-es</strong> after sibilants and stressed one-syllable masculine/neuter nouns (<em>des Hauses, des Mannes</em>); plain <strong>-s</strong> after vowels or unstressed endings (<em>des Lehrers, des Autos</em>). Feminine and plural nouns take no ending.</p></div>
+<div class="faq-item"><h3>Is the genitive dying out? Can I use von instead?</h3><p>In conversation, <strong>von + dative</strong> (<em>das Auto von dem Mann</em>) is fully acceptable. But written and formal German still expects the genitive, and exams test it — learn both.</p></div>
+<div class="faq-item"><h3>Why does "der Frau" appear in the genitive?</h3><p>Because <strong>der</strong> is also the genitive article for feminine nouns and all plurals: <em>der Frau</em> (the woman's), <em>der Kinder</em> (the children's). Always consider noun gender and case together.</p></div>
+</div>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+const QUESTIONS = [
+{q:"Das Auto ___ Mannes ist neu.", opts:["des","der","dem","den"], a:0, why:"Masculine genitive → des, and Mann takes -es: des Mannes."},
+{q:"Die Farbe ___ Hauses gefällt mir.", opts:["des","der","dem","das"], a:0, why:"Neuter genitive → des; Haus adds -es: des Hauses."},
+{q:"Der Name ___ Frau ist Anna.", opts:["der","des","die","dem"], a:0, why:"Feminine genitive → der, no noun ending: der Frau."},
+{q:"Die Meinung ___ Kinder zählt.", opts:["der","des","den","die"], a:0, why:"Plural genitive → der, no noun ending: der Kinder."},
+{q:"Wegen ___ Regens bleiben wir zu Hause.", opts:["des","der","dem","den"], a:0, why:"wegen takes the genitive; der Regen is masculine → des Regens."},
+{q:"Trotz ___ Wetters gehen wir spazieren.", opts:["des","der","dem","das"], a:0, why:"trotz takes the genitive; das Wetter is neuter → des Wetters."},
+{q:"Berlin ist die Hauptstadt ___ Landes.", opts:["des","der","dem","den"], a:0, why:"Neuter genitive → des; das Land adds -es: des Landes."},
+{q:"Anstelle ___ Vaters kam die Mutter.", opts:["des","der","dem","den"], a:0, why:"anstelle takes the genitive; der Vater is masculine → des Vaters."},
+{q:"Der Anfang ___ Films war langweilig.", opts:["des","der","dem","den"], a:0, why:"Masculine genitive → des; der Film takes -s: des Films."},
+{q:"Die Tür ___ Zimmers steht offen.", opts:["des","der","dem","das"], a:0, why:"Neuter genitive → des; das Zimmer takes -s: des Zimmers."},
+{q:"Während ___ Sitzung darf man nicht sprechen.", opts:["der","des","die","dem"], a:0, why:"während takes the genitive; die Sitzung is feminine → der Sitzung."},
+{q:"Die Kosten ___ Reise waren hoch.", opts:["der","des","die","dem"], a:0, why:"Feminine genitive → der, no noun ending: der Reise."},
+{q:"Die Stimme ___ Sängers war wunderbar.", opts:["des","der","dem","den"], a:0, why:"Masculine genitive → des; der Sänger takes -s: des Sängers."},
+{q:"Infolge ___ Unfalls gab es einen Stau.", opts:["des","der","dem","den"], a:0, why:"infolge takes the genitive; der Unfall is masculine → des Unfalls."},
+{q:"Die Blätter ___ Baumes fallen im Herbst.", opts:["des","der","dem","den"], a:0, why:"Masculine genitive → des; der Baum takes -es: des Baumes."}
+];
+let idx=0, score=0, streak=0, missed=[];
+const $=id=>document.getElementById(id);
+function render(){
+  const q=QUESTIONS[idx];
+  $("q-label").textContent=`Question ${idx+1} of ${QUESTIONS.length}`;
+  $("q-bar").style.width=(idx/QUESTIONS.length*100)+"%";
+  $("question").textContent=q.q;
+  $("feedback").className="feedback";$("feedback").style.display="none";
+  $("next-btn").style.display="none";
+  const box=$("options");box.innerHTML="";
+  q.opts.forEach((o,i)=>{
+    const b=document.createElement("button");
+    b.className="opt-btn";b.textContent=o;
+    b.onclick=()=>answer(i,b);
+    box.appendChild(b);
+  });
+}
+function answer(i,btn){
+  const q=QUESTIONS[idx];
+  const btns=document.querySelectorAll(".opt-btn");
+  btns.forEach(b=>b.disabled=true);
+  const fb=$("feedback");
+  if(i===q.a){
+    btn.classList.add("correct");score++;streak++;
+    fb.className="feedback show good";fb.textContent="✓ Correct! "+q.why;
+  }else{
+    btn.classList.add("wrong");btns[q.a].classList.add("correct");streak=0;
+    missed.push({q:q.q,correct:q.opts[q.a],why:q.why});
+    fb.className="feedback show bad";fb.textContent="✗ Not quite. Correct answer: "+q.opts[q.a]+". "+q.why;
+  }
+  $("score").textContent=score;$("streak").textContent=streak;
+  $("next-btn").style.display="inline-block";
+}
+$("next-btn").onclick=()=>{
+  idx++;
+  if(idx<QUESTIONS.length){render();}
+  else{
+    $("question").style.display="none";$("options").style.display="none";
+    $("q-label").style.display="none";$("next-btn").style.display="none";
+    $("feedback").style.display="none";
+    $("q-bar").style.width="100%";
+    $("results").style.display="block";
+    $("final-score").innerHTML=`You scored <strong>${score}/${QUESTIONS.length}</strong>${score===QUESTIONS.length?" — perfect! 🏆":score>=12?" — excellent genitive instincts!":" — keep drilling the des/der split."}`;
+    if(missed.length){
+      $("missed-box").style.display="block";
+      $("missed-list").innerHTML=missed.map(m=>`<li><strong>${m.q.replace("___","<u>"+m.correct+"</u>")}</strong><br><span style="color:#64748b">${m.why}</span></li>`).join("");
+    }
+  }
+};
+$("restart-btn").onclick=()=>location.reload();
+render();
+</script>
+</body>
+</html>
