@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Irregular Verb Trainer — Strong Verb Principal Parts | Bayzubaan</title>
+<meta name="description" content="Master German strong verbs: quiz on the 20 most frequent irregular verbs — 3rd person singular, Präteritum, Partizip II — with ablaut family guide.">
+<link rel="canonical" href="https://bayzubaan.com/tools/irregular-verb-trainer/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="German Irregular Verb Trainer — Strong Verb Principal Parts">
+<meta property="og:description" content="Drill the 20 most frequent German strong verbs: type the three principal parts for each and get instant feedback.">
+<meta property="og:url" content="https://bayzubaan.com/tools/irregular-verb-trainer/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="German Irregular Verb Trainer — Strong Verb Principal Parts">
+<meta name="twitter:description" content="Drill the 20 most frequent German strong verbs: type the three principal parts for each and get instant feedback.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the four principal parts of sprechen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "sprechen — spricht — sprach — gesprochen: infinitive, 3rd-person singular present, Präteritum, Partizip II. These four forms generate every tense of the verb."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does 'essen' become 'isst' in the third person?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Strong verbs with stem vowel e change it to i or ie in the du and er/sie/es forms: essen→isst, sprechen→spricht, sehen→sieht, vergessen→vergisst. This is the e→i ablaut, one of the oldest patterns in German."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between strong, weak and mixed verbs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Weak verbs form the past with -te and never change the vowel (machen–machte–gemacht). Strong verbs change the vowel and take no -te ending (sprechen–sprach–gesprochen). Mixed verbs do both: vowel change plus -te (bringen–brachte–gebracht, denken–dachte–gedacht)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many strong verbs are there in German?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 170 in the modern standard language, but a small core of roughly 40 covers the vast majority of everyday usage. This trainer drills the 20 most frequent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is 'aß' or 'ass' correct for the past of essen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both spellings represent the same word: aß is the standard spelling after a long vowel; ass is the Swiss spelling (which has no ß) and is accepted as equivalent. This quiz accepts either."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>German Irregular Verb Trainer</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">Drill the 20 most frequent German strong verbs: type the three principal parts for each and get instant feedback.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+<div class="quiz-meta"><span id="qcount">Question 1/20</span><span id="qscore">Score: 0/60</span></div>
+<div class="progress"><div id="pbar"></div></div>
+<div id="quiz-box">
+<p style="margin-bottom:6px"><strong>Infinitive:</strong> <span id="q-inf" style="font-size:1.3rem;color:#1d4ed8"></span> <span id="q-en" style="color:#64748b"></span></p>
+<div class="answer-inputs">
+<div class="field"><label for="a-p3">er/sie/es (3rd person singular present)</label><input type="text" id="a-p3" autocomplete="off" placeholder="e.g. spricht"></div>
+<div class="field"><label for="a-pr">Präteritum (er/sie/es form)</label><input type="text" id="a-pr" autocomplete="off" placeholder="e.g. sprach"></div>
+<div class="field"><label for="a-pp">Partizip II</label><input type="text" id="a-pp" autocomplete="off" placeholder="e.g. gesprochen"></div>
+</div>
+<button id="calc-btn" type="button">Check answers</button>
+<div id="quiz-feedback"></div>
+</div>
+<div id="quiz-summary" style="display:none"></div>
+<p class="note" style="margin-top:12px;color:#64748b;font-size:.9rem">Tip: ß may be typed as ss (aß = ass). Case and umlauts are checked.</p>
+</div>
+
+<article class="prose">
+<h2>Why German strong verbs feel hard — and how to tame them</h2>
+<p>German has around <strong>170 strong (irregular) verbs</strong>, and they include almost every verb you actually use daily: gehen, kommen, sehen, essen, trinken, sprechen, lesen, schreiben, geben, nehmen. You cannot sidestep them. The good news is that strong verbs are not random. They fall into <strong>ablaut families</strong> — vowel-change patterns shared across dozens of verbs. Learn the family, and you get the whole clan for free.</p>
+<p>Every strong verb is summarised by its <strong>principal parts</strong>: infinitive, 3rd-person singular present, Präteritum, Partizip II. <span class="hl">sprechen — spricht — sprach — gesprochen</span>. If you know these four forms, you can build every tense: the present from spricht, the past from sprach, the perfect from gesprochen. Dictionaries print exactly these four for a reason.</p>
+<h2>The seven ablaut families</h2>
+<p>The classical grammar divides strong verbs into seven classes by their vowel sequence (infinitive → Präteritum → Partizip II):</p>
+<ul>
+<li><strong>ei – i – i:</strong> bleiben–blieb–geblieben, schreiben–schrieb–geschrieben, leiden–litt–gelitten. The most regular family: once you know one, the pattern is locked.</li>
+<li><strong>ie – o – o:</strong> fliegen–flog–geflogen, schießen–schoss–geschossen, frieren–fror–gefroren. Note the doubled consonant after a short vowel (schoss, not schos).</li>
+<li><strong>i – a – u:</strong> singen–sang–gesungen, trinken–trank–getrunken, finden–fand–gefunden, binden–band–gebunden. Probably the largest family — very productive.</li>
+<li><strong>e – a – o:</strong> sprechen–sprach–gesprochen, nehmen–nahm–genommen, stehlen–stahl–gestohlen, befehlen–befahl–befohlen.</li>
+<li><strong>e – a – e:</strong> lesen–las–gelesen, sehen–sah–gesehen, geschehen–geschah–geschehen. The participle keeps the infinitive vowel — a memory hook.</li>
+<li><strong>a – u – a:</strong> fahren–fuhr–gefahren, tragen–trug–getragen, graben–grub–gegraben, schlagen–schlug–geschlagen.</li>
+<li><strong>au – ie – au:</strong> laufen–lief–gelaufen, saufen–soff–gesoffen. Small but high-frequency.</li>
+</ul>
+<p>Inside each family there are spelling quirks — <strong>ß alternates with ss</strong> (aß/ass, vergaß/vergaß stays ß), short vowels double the following consonant (litt, schoss, soff) — but the vowel skeleton holds.</p>
+<h2>The 3rd-person singular trap</h2>
+<p>The second principal part exists because of one specific quirk: verbs whose stem vowel is <strong>e or ä change to i or ie in the du/er forms</strong> (sprechen→spricht, sehen→sieht, essen→isst, vergessen→vergisst), and verbs with stem <strong>a or au often umlaut to ä/äu</strong> (fahren→fährt, laufen→läuft, schlafen→schläft, waschen→wäscht, fallen→fällt, fangen→fängt, tragen→trägt). Verbs with other stem vowels do not change (kommen→kommt, trinken→trinkt). This is the form learners most often get wrong in speech, so the quiz above drills it explicitly.</p>
+<h2>How to memorise them efficiently</h2>
+<p>Do not learn verbs alphabetically — learn them <strong>by family</strong>. Take the i–a–u family and drill singen, trinken, finden, binden, springen together; the shared rhythm anchors all of them. Second, always learn the four principal parts as one chant: "sprechen, spricht, sprach, gesprochen" — rhythm is a memory device. Third, use the verbs in the Perfekt in daily narration (<span class="hl">ich habe gegessen, ich bin gegangen</span>), because the participle is the form you will say most often.</p>
+<p>Watch out for <strong>false regularity</strong>: bringen–brachte–gebracht and denken–dachte–gedacht look strong (vowel change) but take weak -te endings — they are "mixed" verbs. And a handful of verbs have both forms in different meanings: hängen (intransitive, strong: hing, gehangen) vs. hängen (transitive, weak: hängte, gehängt).</p>
+<h2>The compound multiplier: one pattern, many verbs</h2>
+<p>Here is the fact that halves your memorisation load: <strong>prefixed compounds inherit the base verb's strong pattern</strong>. Learn <span class="hl">stehen — stand — gestanden</span> and you automatically know aufstehen (stand auf, aufgestanden), verstehen (verstand, verstanden), bestehen (bestand, bestanden) and widerstehen. Learn <span class="hl">schlagen — schlug — geschlagen</span> and you get vorschlagen, zuschlagen, aufschlagen. Learn <span class="hl">sehen — sah — gesehen</span> and fernsehen, ansehen, aussehen, zusehen follow for free, with the ge- tucked after the separable prefix (ferngesehen, angesehen). The ~170 strong verbs therefore generate many hundreds of compounds at zero extra cost.</p>
+<p>This is also why the separable-verb quiz and this trainer reinforce each other: the prefix tells you about word order, the stem tells you about the vowel. When you meet an unfamiliar compound like <span class="hl">unterbrechen</span>, strip the prefix, find <span class="hl">brechen — brach — gebrochen</span>, and you have unterbrach and unterbrochen immediately. Intermediate learners who think in compounds like this stop memorising verb-by-verb and start seeing the system.</p>
+<h2>Reading real German with strong verbs</h2>
+<p>In written German — newspapers, novels, the Fachsprachenprüfung texts — the Präteritum of strong verbs appears constantly, and it is worth training your eye for it. The bare stem with no ending in the ich/er form is the giveaway: <span class="hl">er ging</span>, <span class="hl">sie sah</span>, <span class="hl">es begann</span>. In a news sentence like <span class="hl">"Der Minister trat zurück und sprach von einem Neuanfang"</span>, trat and sprach are the only past markers; recognising them as treten and sprechen keeps your reading speed up.</p>
+<p>Also watch for <strong>verbs that change meaning with the prefix</strong>: umfahren (to drive around, weak: umfuhr? no — umfahren with separable prefix um- means "to knock down": er fuhr ihn um). Stress is the audible clue (UMfahren vs. umFAHren), and in writing you must simply know which verb you are looking at. The trainer's 20 verbs are the safe core; the medical German section later builds Fachsprache verbs on the same foundation.</p>
+<h2>Using this trainer</h2>
+<p>The quiz picks 20 high-frequency strong verbs in random order. For each, type the three derived forms. The checker normalises ß to ss, so typing "ass" for aß is accepted. At the end you get your score out of 60 and a review table of every verb you missed — re-drill those first. Run the quiz until you score above 54 consistently; at that point the principal parts are in long-term memory and the perfect-tense builder becomes fully automatic.</p>
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>What are the four principal parts of sprechen?</h3><p>sprechen — spricht — sprach — gesprochen: infinitive, 3rd-person singular present, Präteritum, Partizip II. These four forms generate every tense of the verb.</p></div><div class="faq-item"><h3>Why does &#x27;essen&#x27; become &#x27;isst&#x27; in the third person?</h3><p>Strong verbs with stem vowel e change it to i or ie in the du and er/sie/es forms: essen→isst, sprechen→spricht, sehen→sieht, vergessen→vergisst. This is the e→i ablaut, one of the oldest patterns in German.</p></div><div class="faq-item"><h3>What is the difference between strong, weak and mixed verbs?</h3><p>Weak verbs form the past with -te and never change the vowel (machen–machte–gemacht). Strong verbs change the vowel and take no -te ending (sprechen–sprach–gesprochen). Mixed verbs do both: vowel change plus -te (bringen–brachte–gebracht, denken–dachte–gedacht).</p></div><div class="faq-item"><h3>How many strong verbs are there in German?</h3><p>About 170 in the modern standard language, but a small core of roughly 40 covers the vast majority of everyday usage. This trainer drills the 20 most frequent.</p></div><div class="faq-item"><h3>Is &#x27;aß&#x27; or &#x27;ass&#x27; correct for the past of essen?</h3><p>Both spellings represent the same word: aß is the standard spelling after a long vowel; ass is the Swiss spelling (which has no ß) and is accepted as equivalent. This quiz accepts either.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+const VERBS = [
+  {i:"sprechen",en:"to speak",p3:"spricht",pr:"sprach",pp:"gesprochen"},
+  {i:"fahren",en:"to drive / travel",p3:"fährt",pr:"fuhr",pp:"gefahren"},
+  {i:"sehen",en:"to see",p3:"sieht",pr:"sah",pp:"gesehen"},
+  {i:"essen",en:"to eat",p3:"isst",pr:"aß",pp:"gegessen"},
+  {i:"trinken",en:"to drink",p3:"trinkt",pr:"trank",pp:"getrunken"},
+  {i:"lesen",en:"to read",p3:"liest",pr:"las",pp:"gelesen"},
+  {i:"schreiben",en:"to write",p3:"schreibt",pr:"schrieb",pp:"geschrieben"},
+  {i:"geben",en:"to give",p3:"gibt",pr:"gab",pp:"gegeben"},
+  {i:"nehmen",en:"to take",p3:"nimmt",pr:"nahm",pp:"genommen"},
+  {i:"kommen",en:"to come",p3:"kommt",pr:"kam",pp:"gekommen"},
+  {i:"gehen",en:"to go",p3:"geht",pr:"ging",pp:"gegangen"},
+  {i:"bleiben",en:"to stay",p3:"bleibt",pr:"blieb",pp:"geblieben"},
+  {i:"finden",en:"to find",p3:"findet",pr:"fand",pp:"gefunden"},
+  {i:"singen",en:"to sing",p3:"singt",pr:"sang",pp:"gesungen"},
+  {i:"fallen",en:"to fall",p3:"fällt",pr:"fiel",pp:"gefallen"},
+  {i:"schlafen",en:"to sleep",p3:"schläft",pr:"schlief",pp:"geschlafen"},
+  {i:"laufen",en:"to run",p3:"läuft",pr:"lief",pp:"gelaufen"},
+  {i:"fangen",en:"to catch",p3:"fängt",pr:"fing",pp:"gefangen"},
+  {i:"waschen",en:"to wash",p3:"wäscht",pr:"wusch",pp:"gewaschen"},
+  {i:"vergessen",en:"to forget",p3:"vergisst",pr:"vergaß",pp:"vergessen"}
+];
+function norm(s){ return s.trim().toLowerCase().replace(/ß/g,"ss"); }
+let order = [], idx = 0, score = 0, missed = [];
+function shuffle(a){ for (let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+function start(){ order = shuffle([...VERBS]); idx = 0; score = 0; missed = []; next(); }
+function next(){
+  document.getElementById("quiz-summary").style.display = "none";
+  document.getElementById("quiz-box").style.display = "block";
+  if (idx >= order.length){ summary(); return; }
+  const v = order[idx];
+  document.getElementById("q-inf").textContent = v.i;
+  document.getElementById("q-en").textContent = "(" + v.en + ")";
+  document.getElementById("qcount").textContent = "Question " + (idx+1) + "/" + order.length;
+  document.getElementById("qscore").textContent = "Score: " + score + "/60";
+  document.getElementById("pbar").style.width = (idx/order.length*100) + "%";
+  for (const id of ["a-p3","a-pr","a-pp"]){
+    const el = document.getElementById(id);
+    el.value = ""; el.classList.remove("correct","wrong"); el.disabled = false;
+  }
+  const fb = document.getElementById("quiz-feedback");
+  fb.className = ""; fb.style.display = "none";
+  document.getElementById("calc-btn").textContent = "Check answers";
+}
+function check(){
+  const v = order[idx];
+  const pairs = [["a-p3",v.p3],["a-pr",v.pr],["a-pp",v.pp]];
+  let allRight = true;
+  for (const [id,exp] of pairs){
+    const el = document.getElementById(id);
+    const ok = norm(el.value) === norm(exp);
+    el.classList.add(ok ? "correct" : "wrong");
+    el.disabled = true;
+    if (ok) score++; else { allRight = false; }
+    if (!ok && !el.value) el.value = "";
+  }
+  document.getElementById("qscore").textContent = "Score: " + score + "/60";
+  const fb = document.getElementById("quiz-feedback");
+  fb.style.display = "block";
+  if (allRight){ fb.className = "ok"; fb.textContent = "✓ Perfect — all three forms correct!"; }
+  else {
+    fb.className = "no";
+    fb.textContent = "✗ Correct answers: " + v.p3 + " · " + v.pr + " · " + v.pp;
+    missed.push(v);
+  }
+  document.getElementById("calc-btn").textContent = (idx === order.length - 1) ? "See results" : "Next verb";
+}
+function summary(){
+  document.getElementById("quiz-box").style.display = "none";
+  const s = document.getElementById("quiz-summary");
+  s.style.display = "block";
+  document.getElementById("pbar").style.width = "100%";
+  let h = "<h2 style='margin-bottom:12px'>Results: " + score + "/60</h2>";
+  h += "<p>" + (score >= 54 ? "Excellent — strong verbs under control!" : score >= 40 ? "Good progress — review the missed ones below." : "Keep drilling — the patterns will click with repetition.") + "</p>";
+  if (missed.length){
+    h += "<table style='margin-top:14px'><tr><th>Infinitive</th><th>3rd sg</th><th>Präteritum</th><th>Partizip II</th></tr>";
+    for (const v of missed) h += "<tr><td>" + v.i + "</td><td>" + v.p3 + "</td><td>" + v.pr + "</td><td>" + v.pp + "</td></tr>";
+    h += "</table>";
+  }
+  h += "<button id='calc-btn' type='button' style='margin-top:16px' onclick='start()'>Restart quiz</button>";
+  s.innerHTML = h;
+}
+document.getElementById("calc-btn").addEventListener("click", () => {
+  const t = document.getElementById("calc-btn").textContent;
+  if (t === "Check answers") check(); else { idx++; next(); }
+});
+start();
+if (typeof module !== "undefined") module.exports = { VERBS, norm };
+
+
+</script>
+</body>
+</html>
