@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Perfect Tense Builder — haben/sein + Partizip II | Bayzubaan</title>
+<meta name="description" content="Build the German Perfekt for any verb: correct haben/sein auxiliary, Partizip II formation, separable and -ieren rules, with example sentences.">
+<link rel="canonical" href="https://bayzubaan.com/tools/perfect-tense-builder/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="German Perfect Tense Builder — haben/sein + Partizip II">
+<meta property="og:description" content="Type any German verb and get the full perfect tense: auxiliary, Partizip II, the rule behind it, and an example sentence.">
+<meta property="og:url" content="https://bayzubaan.com/tools/perfect-tense-builder/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="German Perfect Tense Builder — haben/sein + Partizip II">
+<meta name="twitter:description" content="Type any German verb and get the full perfect tense: auxiliary, Partizip II, the rule behind it, and an example sentence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you form the German perfect tense?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Take the present tense of haben or sein (ich habe / ich bin) and add the Partizip II at the end of the clause: ich habe gelernt, ich bin gegangen. The auxiliary goes in second position; the participle goes last."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When do you use sein instead of haben in the perfect tense?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Intransitive verbs of movement (gehen, fahren, kommen) and change of state (einschlafen, sterben, werden, bleiben) take sein. Nearly everything else takes haben. If a movement verb has a direct object, it takes haben: ich habe das Auto gefahren."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Partizip II of gehen and machen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gehen → ist gegangen (irregular, takes sein). Machen → hat gemacht (regular: ge + mach + t)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does 'studiert' have no ge- prefix?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Verbs ending in -ieren never take ge- in the Partizip II: studieren → studiert, telefonieren → telefoniert. The same applies to inseparable-prefix verbs like besuchen → besucht."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do separable verbs form the perfect tense?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The ge- goes between the prefix and the stem: anrufen → angerufen, aufstehen → aufgestanden. The prefix rejoins the participle — it is only separated in present-tense main clauses."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>German Perfect Tense Builder</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">Type any German verb and get the full perfect tense: auxiliary, Partizip II, the rule behind it, and an example sentence.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+<div class="field">
+<label for="verb">German verb (infinitive)</label>
+<input type="text" id="verb" placeholder="e.g. gehen, machen, anrufen" autocomplete="off">
+<div class="try-row">
+<button type="button" data-v="gehen">gehen</button>
+<button type="button" data-v="machen">machen</button>
+<button type="button" data-v="ankommen">ankommen</button>
+<button type="button" data-v="studieren">studieren</button>
+<button type="button" data-v="aufstehen">aufstehen</button>
+<button type="button" data-v="besuchen">besuchen</button>
+</div>
+</div>
+<button id="calc-btn" type="button">Build the perfect tense</button>
+<div id="result"></div>
+</div>
+
+<article class="prose">
+<h2>The German perfect tense: how it works</h2>
+<p>The <strong>Perfekt</strong> (present perfect) is the tense German speakers reach for in everyday conversation. When someone tells you about their weekend, describes what they bought, or explains what happened at work, roughly nine out of ten past-time statements will be in the Perfekt, not the Präteritum. It is the single most important past tense for spoken German, and mastering its construction — <strong>haben or sein + Partizip II</strong> — unlocks fluent conversation faster than almost anything else in the grammar.</p>
+<p>The structure looks simple: take the present tense of the auxiliary (ich habe, ich bin), and put the past participle at the end of the clause. <span class="hl">Ich habe gegessen</span> (I ate / I have eaten), <span class="hl">Ich bin gegangen</span> (I went / I have gone). But two decisions sit inside every Perfekt sentence: which auxiliary, and how to form the participle. Get those right and the tense is mechanical.</p>
+<h2>Haben or sein: the auxiliary rule</h2>
+<p>Most verbs take <strong>haben</strong>. You only need to memorise the minority that take <strong>sein</strong>, and the rule is narrow: verbs of <strong>movement from A to B</strong> and verbs of <strong>change of state</strong> take sein, provided they are intransitive (no direct object). Ich bin gefahren (I drove), sie ist eingeschlafen (she fell asleep), wir sind geblieben (we stayed), das Glas ist zerbrochen (the glass broke).</p>
+<p>The classic exceptions trip up learners. <span class="hl">sein</span> itself takes sein (ich bin gewesen), <span class="hl">werden</span> takes sein (ich bin geworden), and <span class="hl">bleiben</span> takes sein (ich bin geblieben) — none of these is movement, so memorise the trio. Everything else that is transitive takes haben: ich habe das Auto gefahren (with a direct object, even a movement verb switches to haben!). That last point is the most common intermediate mistake: movement + object = haben.</p>
+<h2>Forming the Partizip II</h2>
+<p>Weak (regular) verbs are predictable: <strong>ge- + stem + -t</strong>. Machen → gemacht, lernen → gelernt, spielen → gespielt. When the stem ends in -d or -t, insert an e for pronounceability: arbeiten → gearbeitet, reden → geredet. The same -et appears when the stem ends in -m or -n after another consonant: atmen → geatmet, öffnen → geöffnet, rechnen → gerechnet.</p>
+<p>Strong verbs change the stem vowel and end in <strong>-en</strong>: sprechen → gesprochen, sehen → gesehen, gehen → gegangen. There is no shortcut here — each pattern must be learnt, which is exactly what the irregular verb trainer in this series drills.</p>
+<p>Two special rules handle prefixes. <strong>Separable verbs</strong> tuck the ge- between the prefix and the stem: anrufen → angerufen, aufstehen → aufgestanden, einkaufen → eingekauft. <strong>Inseparable verbs</strong> (be-, ge-, er-, ver-, zer-, ent-, emp-, miss-) take no ge- at all: besuchen → besucht, verstehen → verstanden, erzählen → erzählt. And verbs ending in <strong>-ieren</strong> — almost all borrowed from French or Latin — never take ge-: studieren → studiert, telefonieren → telefoniert, reparieren → repariert.</p>
+<h2>Word order in the Perfekt</h2>
+<p>In a main clause, the conjugated auxiliary sits in second position and the participle goes to the very end: <span class="hl">Ich habe gestern mit meiner Schwester telefoniert.</span> In a subordinate clause, both verbs pile up at the end, auxiliary last: <span class="hl">…, weil ich gestern mit meiner Schwester telefoniert habe.</span> In questions the pattern is the same as statements with the auxiliary first: <span class="hl">Hast du das Buch gelesen?</span></p>
+<h2>Perfekt vs. Präteritum: when to use which</h2>
+<p>The rough rule: <strong>Perfekt for speech, Präteritum for writing</strong>. Novels, newspapers and formal reports use the Präteritum (er ging, sie sagte); conversation uses the Perfekt (er ist gegangen, sie hat gesagt). Four verbs break the rule and prefer the Präteritum even in speech: sein (ich war), haben (ich hatte), werden (ich wurde) and the modal verbs (ich konnte, ich musste). Saying "ich habe gekonnt" marks you as a learner instantly — the natural form is "ich konnte".</p>
+<p>The Perfekt also covers the English present perfect: <span class="hl">Ich habe noch nie Sushi gegessen</span> = "I have never eaten sushi". German does not distinguish "I ate" from "I have eaten" grammatically; context does the work.</p>
+<h2>Common mistakes to avoid</h2>
+<ul>
+<li>Adding ge- to -ieren verbs: <em>gestudiert</em> is wrong; it is <strong>studiert</strong>.</li>
+<li>Adding ge- to inseparable verbs: <em>gebesucht</em> is wrong; it is <strong>besucht</strong>.</li>
+<li>Using haben with intransitive movement: <em>ich habe gegangen</em> is wrong; it is <strong>ich bin gegangen</strong>.</li>
+<li>Putting the participle in second position: <em>ich gegessen habe</em> (main clause) is wrong; the participle goes last.</li>
+<li>Forgetting the vowel change in strong participles: <em>gesprecht</em> is wrong; it is <strong>gesprochen</strong>.</li>
+</ul>
+<p>One final tip: the Perfekt is also your safety net. When you are unsure whether a verb is strong or weak, or you cannot recall the Präteritum form, the Perfekt almost always works in conversation. <span class="hl">Ich habe das gemacht</span> is correct even where a native might write <span class="hl">ich tat das</span> in a novel. Build the habit of thinking "auxiliary + participle at the end" and your spoken German will sound natural long before your written Präteritum catches up. Practise by narrating your day each evening — <span class="hl">Ich bin aufgestanden, ich habe gefrühstückt, ich bin zur Arbeit gefahren</span> — and the pattern becomes automatic within weeks.</p>
+<p>Type any verb into the tool above and it will tell you the auxiliary, the Partizip II, and the rule that produced it — with an example sentence. Use it alongside the Präteritum conjugator and the irregular verb trainer to build a complete picture of the German past.</p>
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>How do you form the German perfect tense?</h3><p>Take the present tense of haben or sein (ich habe / ich bin) and add the Partizip II at the end of the clause: ich habe gelernt, ich bin gegangen. The auxiliary goes in second position; the participle goes last.</p></div><div class="faq-item"><h3>When do you use sein instead of haben in the perfect tense?</h3><p>Intransitive verbs of movement (gehen, fahren, kommen) and change of state (einschlafen, sterben, werden, bleiben) take sein. Nearly everything else takes haben. If a movement verb has a direct object, it takes haben: ich habe das Auto gefahren.</p></div><div class="faq-item"><h3>What is the Partizip II of gehen and machen?</h3><p>Gehen → ist gegangen (irregular, takes sein). Machen → hat gemacht (regular: ge + mach + t).</p></div><div class="faq-item"><h3>Why does &#x27;studiert&#x27; have no ge- prefix?</h3><p>Verbs ending in -ieren never take ge- in the Partizip II: studieren → studiert, telefonieren → telefoniert. The same applies to inseparable-prefix verbs like besuchen → besucht.</p></div><div class="faq-item"><h3>How do separable verbs form the perfect tense?</h3><p>The ge- goes between the prefix and the stem: anrufen → angerufen, aufstehen → aufgestanden. The prefix rejoins the participle — it is only separated in present-tense main clauses.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+/* infinitive -> {aux, pp, rule} ; logic gate testable via node */
+const SEIN = new Set(["sein","werden","bleiben","gehen","fahren","kommen","reisen","laufen","schwimmen","fliegen","wandern","rennen","reiten","segeln","sterben","fallen","wachsen","sinken","steigen","verschwinden","gelingen","misslingen","passieren","geschehen","aufwachen","aufstehen","einschlafen","ankommen","abfahren","ausziehen","umziehen","einsteigen","aussteigen","zurückkommen","heimkehren","umfallen","auftauchen"]);
+const IRREG = {
+  "sein":["ist","gewesen"], "werden":["ist","geworden"], "bleiben":["ist","geblieben"],
+  "gehen":["ist","gegangen"], "fahren":["ist","gefahren"], "kommen":["ist","gekommen"],
+  "reisen":["ist","gereist"], "laufen":["ist","gelaufen"], "schwimmen":["ist","geschwommen"],
+  "fliegen":["ist","geflogen"], "wandern":["ist","gewandert"], "sterben":["ist","gestorben"],
+  "fallen":["ist","gefallen"], "wachsen":["ist","gewachsen"], "sinken":["ist","gesunken"],
+  "steigen":["ist","gestiegen"], "verschwinden":["ist","verschwunden"],
+  "gelingen":["ist","gelungen"], "misslingen":["ist","misslungen"],
+  "passieren":["ist","passiert"], "geschehen":["ist","geschehen"],
+  "aufwachen":["ist","aufgewacht"], "aufstehen":["ist","aufgestanden"],
+  "einschlafen":["ist","eingeschlafen"], "ankommen":["ist","angekommen"],
+  "abfahren":["ist","abgefahren"], "ausziehen":["ist","ausgezogen"],
+  "umziehen":["ist","umgezogen"], "einsteigen":["ist","eingestiegen"],
+  "essen":["hat","gegessen"], "trinken":["hat","getrunken"], "lesen":["hat","gelesen"],
+  "schreiben":["hat","geschrieben"], "geben":["hat","gegeben"], "nehmen":["hat","genommen"],
+  "sprechen":["hat","gesprochen"], "sehen":["hat","gesehen"], "finden":["hat","gefunden"],
+  "singen":["hat","gesungen"], "schlafen":["hat","geschlafen"], "fangen":["hat","gefangen"],
+  "waschen":["hat","gewaschen"], "vergessen":["hat","vergessen"], "tragen":["hat","getragen"],
+  "anrufen":["hat","angerufen"], "aufmachen":["hat","aufgemacht"], "einkaufen":["hat","eingekauft"],
+  "fernsehen":["hat","ferngesehen"], "einladen":["hat","eingeladen"], "abholen":["hat","abgeholt"],
+  "mitnehmen":["hat","mitgenommen"], "besuchen":["hat","besucht"], "erzählen":["hat","erzählt"],
+  "verstehen":["hat","verstanden"], "verlieren":["hat","verloren"], "bekommen":["hat","bekommen"],
+  "beschreiben":["hat","beschrieben"], "kennenlernen":["hat","kennengelernt"],
+  "beginnen":["hat","begonnen"], "gewinnen":["hat","gewonnen"], "schwören":["hat","geschworen"]
+};
+const SEP = ["ab","an","auf","aus","bei","ein","mit","nach","vor","zu","zurück","zusammen","weg","weiter","fern","heim","her","hin","los","nieder","statt","dabei","dazwischen","empor","entgegen","fest","fort","frei","gegenüber","gleich","hinterher","hoch","nieder","umher","voran","vorbei","vorüber","wieder","zu","zurecht"];
+const INSEP = ["be","ge","er","ver","zer","ent","emp","miss","wider"];
+const SEIN_CORE = new Set(["gehen","fahren","kommen","reisen","laufen","schwimmen","fliegen","wandern","rennen","reiten","segeln","sterben","fallen","wachsen","sinken","steigen","verschwinden"]);
+
+function weakParticiple(stem){
+  let s = stem;
+  if (/[dt]$/.test(s)) return "ge" + s + "et";
+  if (/[bcdfghjklmnpqrstvwxyz][mn]$/.test(s)) return "ge" + s + "et";
+  return "ge" + s + "t";
+}
+function buildPerfect(inf){
+  inf = inf.trim().toLowerCase();
+  if (!inf) return null;
+  if (IRREG[inf]) return {aux: IRREG[inf][0], pp: IRREG[inf][1], rule: "dictionary"};
+  // separable prefix
+  for (const p of SEP.sort((a,b)=>b.length-a.length)){
+    if (inf.startsWith(p) && inf.length > p.length + 2){
+      const core = inf.slice(p.length);
+      if (IRREG[core]) return {aux: IRREG[core][0], pp: p + IRREG[core][1], rule: "separable: prefix + ge + stem"};
+      if (/ieren$/.test(core)) return {aux:"hat", pp: p + core.slice(0,-5) + "iert", rule:"separable -ieren verb: no extra ge-"};
+      const stem = core.replace(/en$/,"");
+      const ppCore = weakParticiple(stem).slice(2); // strip leading ge
+      const aux = SEIN.has(inf) || SEIN_CORE.has(core) ? "ist" : "hat";
+      return {aux, pp: p + "ge" + ppCore, rule:"separable prefix: " + p + " + ge + stem + -t"};
+    }
+  }
+  // inseparable prefix
+  for (const p of INSEP){
+    if (inf.startsWith(p) && inf.length > p.length + 2){
+      const core = inf.slice(p.length);
+      if (IRREG[core]) return {aux: IRREG[core][0], pp: p + IRREG[core][1], rule:"inseparable prefix: no ge-"};
+      const stem = core.replace(/en$/,"");
+      return {aux:"hat", pp: p + stem + "t", rule:"inseparable prefix: no ge-, just -t"};
+    }
+  }
+  // -ieren verbs: no ge-
+  if (/ieren$/.test(inf)){
+    return {aux:"hat", pp: inf.slice(0,-5) + "iert", rule:"-ieren verbs never take ge-"};
+  }
+  const stem = inf.replace(/en$/,"");
+  const aux = SEIN.has(inf) ? "ist" : "hat";
+  return {aux, pp: weakParticiple(stem), rule: aux === "ist" ? "motion/change-of-state verb takes sein" : "regular weak verb: ge + stem + -t"};
+}
+const EXAMPLES = {
+  "gehen":"Ich bin gestern in die Stadt gegangen.",
+  "machen":"Ich habe meine Hausaufgaben gemacht.",
+  "ankommen":"Wir sind um acht Uhr angekommen.",
+  "studieren":"Sie hat Medizin studiert.",
+  "aufstehen":"Ich bin früh aufgestanden.",
+  "besuchen":"Wir haben meine Eltern besucht.",
+  "essen":"Ich habe eine Pizza gegessen.",
+  "bleiben":"Er ist zu Hause geblieben."
+};
+function render(){
+  const box = document.getElementById("result");
+  const inf = document.getElementById("verb").value;
+  const r = buildPerfect(inf);
+  if (!r){ box.style.display="none"; return; }
+  const ex = EXAMPLES[inf.trim().toLowerCase()] ||
+    (r.aux === "ist" ? "Ich bin gestern <span class='hl'>" + r.pp + "</span>." :
+                       "Ich habe gestern <span class='hl'>" + r.pp + "</span>.");
+  box.style.display = "block";
+  box.innerHTML =
+    "<table><tr><th>Form</th><th></th></tr>" +
+    "<tr><td><strong>Auxiliary</strong></td><td>" + r.aux + "</td></tr>" +
+    "<tr><td><strong>Partizip II</strong></td><td><span class='hl'>" + r.pp + "</span></td></tr>" +
+    "<tr><td><strong>Perfect</strong></td><td>ich <strong>" + r.aux + "</strong> <span class='hl'>" + r.pp + "</span></td></tr></table>" +
+    "<p class='note'><strong>Example:</strong> " + ex + "<br><strong>Rule:</strong> " + r.rule + ".</p>";
+}
+document.getElementById("calc-btn").addEventListener("click", render);
+document.getElementById("verb").addEventListener("keydown", e => { if (e.key === "Enter") render(); });
+document.querySelectorAll(".try-row button").forEach(b =>
+  b.addEventListener("click", () => { document.getElementById("verb").value = b.dataset.v; render(); }));
+if (typeof module !== "undefined") module.exports = { buildPerfect };
+
+
+</script>
+</body>
+</html>
