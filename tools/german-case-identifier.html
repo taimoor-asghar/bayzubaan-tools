@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Case Identifier — Which Case Is It? Free Quiz | Bayzubaan</title>
+<meta name="description" content="Can you spot nominative, accusative, dative and genitive in real German sentences? Free interactive quiz: 15 sentences with a highlighted noun, instant explanations, dative-verb clues and preposition tricks.">
+<link rel="canonical" href="https://bayzubaan.com/tools/german-case-identifier/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="German Case Identifier — Which Case Is It? Free Quiz">
+<meta property="og:description" content="Identify nominative, accusative, dative and genitive in 15 real German sentences. Instant feedback with explanations.">
+<meta property="og:url" content="https://bayzubaan.com/tools/german-case-identifier/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="German Case Identifier — Which Case Is It? Free Quiz">
+<meta name="twitter:description" content="Identify nominative, accusative, dative and genitive in 15 real German sentences. Instant feedback with explanations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I identify which case a German noun is in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ask the four question words: wer/was? (who/what?) → nominative; wen/was? (whom/what?) → accusative; wem? (to/for whom?) → dative; wessen? (whose?) → genitive. Then check what controls the noun: the verb (helfen takes dative, sehen takes accusative), a preposition (mit takes dative, wegen takes genitive), or its role as subject or possessor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which German verbs always take the dative case?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The classic dative verbs are helfen (to help), danken (to thank), folgen (to follow), gratulieren (to congratulate), gefallen (to please), gehören (to belong to), antworten (to answer), glauben (to believe someone), and passen (to fit/suit). With these verbs the person is always in the dative: ich helfe dem Kind."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between accusative and dative in German?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The accusative marks the direct object — the thing directly affected by the verb (ich sehe den Mann). The dative marks the indirect object — the recipient or beneficiary (ich gebe dem Mann das Buch). Verbs like helfen, danken and folgen take a dative object even where English would expect a direct object."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I tell the genitive apart from the other cases?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Look for possession (das Auto des Mannes), part-of-a-whole (die Hälfte des Kuchens), or a genitive preposition (wegen des Regens, trotz des Wetters, während des Meetings). The des/der article plus the -s/-es ending on masculine and neuter nouns is the visual signature of the genitive."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does German have cases at all?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cases mark each noun's grammatical role, which frees up word order. Den Mann sieht der Hund and Der Hund sieht den Mann mean the same thing — the cases, not the position, tell you who sees whom. This flexibility is why German can emphasise different sentence parts just by moving them."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.quiz-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.quiz-card h2{font-size:1.35rem;margin-bottom:8px;color:#0f172a}
+.progress-wrap{background:#e2e8f0;border-radius:999px;height:10px;margin:16px 0;overflow:hidden}
+.progress-fill{background:#2563eb;height:100%;width:0%;transition:width .3s;border-radius:999px}
+.progress-label{font-size:.9rem;color:#64748b;margin-bottom:8px}
+#question{font-size:1.2rem;margin:18px 0;color:#0f172a;line-height:1.8}
+#question .target{background:#fef9c3;padding:2px 8px;border-radius:6px;font-weight:700;border:1px solid #f59e0b}
+.options{display:grid;gap:12px;margin-bottom:16px}
+.opt-btn{background:#fff;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;font-size:1.05rem;font-weight:600;cursor:pointer;transition:all .15s;font-family:inherit;color:#1e293b}
+.opt-btn:hover:not(:disabled){border-color:#2563eb;background:#eff6ff}
+.opt-btn:disabled{cursor:default;opacity:.85}
+.opt-btn.correct{background:#10b981;border-color:#10b981;color:#fff}
+.opt-btn.wrong{background:#ef4444;border-color:#ef4444;color:#fff}
+.feedback{border-radius:8px;padding:14px 16px;margin-bottom:16px;font-size:.98rem;display:none}
+.feedback.show{display:block}
+.feedback.good{background:#ecfdf5;border:1px solid #10b981;color:#065f46}
+.feedback.bad{background:#fef2f2;border:1px solid #ef4444;color:#991b1b}
+.quiz-meta{display:flex;gap:16px;flex-wrap:wrap;font-size:.95rem;color:#64748b;margin-bottom:8px}
+.quiz-meta strong{color:#0f172a}
+#next-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:12px 28px;font-size:1rem;font-weight:600;cursor:pointer;display:none;margin-top:8px}
+#next-btn:hover{background:#1d4ed8}
+#restart-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:12px 28px;font-size:1rem;font-weight:600;cursor:pointer;margin-top:16px}
+#results{display:none;text-align:center}
+#results h3{font-size:1.5rem;margin-bottom:12px;color:#0f172a}
+.missed{background:#fffbeb;border:1px solid #f59e0b;border-radius:8px;padding:16px;margin-top:16px;text-align:left}
+.missed h4{margin-bottom:8px;color:#92400e}
+.missed li{margin-bottom:6px;list-style:none}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.quiz-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header class="hero">
+<h1>German Case Identifier — Which Case Is It?</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Medically and linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">Knowing the case tables is one thing — <em>recognising</em> cases in real sentences is the skill that unlocks fluent reading. In each of the 15 rounds below, one noun phrase is highlighted. Your job: name its case. Every answer comes with an explanation of <em>why</em>, so you learn the detective tricks: question words, verb clues, and preposition signals.</p>
+</header>
+
+<div class="quiz-card" id="quiz">
+<h2>Case Detective — 15 Sentences</h2>
+<div class="quiz-meta"><span>Score: <strong id="score">0</strong>/15</span><span>Streak: <strong id="streak">0</strong> 🔥</span></div>
+<div class="progress-label" id="q-label">Question 1 of 15</div>
+<div class="progress-wrap"><div class="progress-fill" id="q-bar"></div></div>
+<div id="question"></div>
+<div class="options" id="options"></div>
+<div class="feedback" id="feedback"></div>
+<button id="next-btn">Next →</button>
+<div id="results">
+<h3>Round complete!</h3>
+<p id="final-score"></p>
+<div class="missed" id="missed-box" style="display:none"><h4>Review your misses</h4><ul id="missed-list"></ul></div>
+<button id="restart-btn">Play again</button>
+</div>
+</div>
+
+<article class="prose">
+<h2>The four question words: your first tool</h2>
+<p>Every case answers one question. Train yourself to ask them automatically: <strong>wer oder was?</strong> (who or what?) → <span class="hl">Nominativ</span>, the subject doing the action. <strong>Wen oder was?</strong> (whom or what?) → <span class="hl">Akkusativ</span>, the direct object. <strong>Wem?</strong> (to/for whom?) → <span class="hl">Dativ</span>, the indirect object. <strong>Wessen?</strong> (whose?) → <span class="hl">Genitiv</span>, possession. Take <em>Die Frau gibt dem Kind das Buch</em>: wer gibt? Die Frau (nominative). Wen oder was gibt sie? Das Buch (accusative). Wem gibt sie es? Dem Kind (dative). Four questions, three cases, zero tables consulted — this is how native speakers feel their way through sentences, and it works for learners too.</p>
+<h2>Clue 1: the verb decides</h2>
+<p>Many verbs dictate the case of their object, and memorising these is the fastest route to confident case identification. The famous <strong>dative verbs</strong> — helfen, danken, folgen, gratulieren, gefallen, gehören, antworten, glauben (believe a person), passen — always take a dative object even when English suggests otherwise: <em>ich helfe <strong>dem</strong> Kind</em>, <em>ich danke <strong>der</strong> Frau</em>. Most other transitive verbs take the accusative: <em>ich sehe <strong>den</strong> Mann</em>, <em>sie besucht <strong>die</strong> Tante</em>. When you see a verb you know is a dative verb, the case of the following noun is settled before you even look at the article. A handful of verbs take two objects (geben, schenken, zeigen, schicken): person in dative, thing in accusative — <em>ich gebe <strong>dem</strong> Kind <strong>das</strong> Buch</em>.</p>
+<h2>Clue 2: the preposition decides</h2>
+<p>Prepositions are the most reliable case signals in German because they never change their mind. The <strong>accusative prepositions</strong> — durch, für, gegen, ohne, um (plus bis and entlang) — lock the next noun into the accusative: <em>für <strong>den</strong> Mann</em>, <em>ohne <strong>das</strong> Buch</em>. The <strong>dative prepositions</strong> — aus, bei, mit, nach, seit, von, zu (plus gegenüber) — do the same for the dative: <em>mit <strong>dem</strong> Kind</em>, <em>bei <strong>seinem</strong> Freund</em>. The <strong>genitive prepositions</strong> — wegen, trotz, während, anstelle, infolge, dank — are the rarest but the most distinctive: <em>wegen <strong>des</strong> Regens</em>, <em>trotz <strong>des</strong> Wetters</em>. The notorious <strong>two-way prepositions</strong> (an, auf, hinter, in, neben, über, unter, vor, zwischen) switch between accusative (movement toward) and dative (position): <em>ich gehe in <strong>das</strong> Haus</em> vs. <em>ich bin in <strong>dem</strong> Haus</em>. For those, ask: movement or location?</p>
+<h2>Clue 3: the article and ending</h2>
+<p>Sometimes the noun phrase itself tells you the case, even without context. <span class="hl">Den</span> is unambiguous: masculine accusative singular or dative plural — <em>den Mann</em> vs. <em>den Männern</em> (note the -n). <span class="hl">Dem</span> is always dative. <span class="hl">Des</span> is always genitive. <span class="hl">Der</span> is the chameleon — masculine nominative (<em>der Mann</em>), feminine dative (<em>der Frau</em> in <em>ich danke der Frau</em>), feminine genitive (<em>der Frau</em> in <em>der Name der Frau</em>), or plural genitive (<em>der Kinder</em>). When you see <em>der</em>, the article alone can't settle it: check the noun's gender and the sentence role. The genitive -s/-es ending on masculine and neuter nouns (<em>des Mannes, des Hauses</em>) is another visual giveaway that appears in no other case.</p>
+<h2>Clue 4: sentence position (with caution)</h2>
+<p>In a standard main clause, the first noun is usually the subject in the nominative: <em><strong>Der Mann</strong> liest ein Buch</em>. But German loves to front other elements for emphasis — <em><strong>Den Mann</strong> sieht der Hund</em> means the dog sees the man, despite <em>den Mann</em> coming first. So position is a hint, never proof. The case endings are the proof. This is exactly why cases exist: they let word order move freely while the roles stay clear. When identifying cases, trust endings and controllers (verbs, prepositions) over position every time.</p>
+<h2>Common ambiguity traps</h2>
+<p>Three situations trip up even advanced learners. First, <strong>feminine and neuter articles often don't change</strong>: <em>die Frau</em> is identical in nominative and accusative, <em>das Kind</em> likewise — only the sentence role reveals the case (<em>das Kind sieht die Frau</em> vs. <em>die Frau sieht das Kind</em>). Second, <strong>der</strong> needs disambiguation as described above — use the question-word test. Third, <strong>dative plural</strong> adds -n to the noun (<em>den Kindern, den Männern</em>), which can be confused with accusative <em>den Mann</em>; the noun ending (-n on a plural vs. bare singular) plus the article resolves it. When in doubt, run the four questions on the sentence — wer, wen, wem, wessen — and let the answers place each noun.</p>
+<h2>How to use this drill</h2>
+<p>Don't just click answers — narrate your reasoning: "helfen is a dative verb, so dem Kind is dative." After each round, re-read the explanations for any sentence you got by guessing. Then take a German text (news headline, textbook dialogue) and mark every noun phrase with its case using the four clues in order: verb, preposition, article/ending, position. Within a few weeks of this, case identification stops being a puzzle and becomes background processing — the moment German reading starts to feel fluent.</p>
+</article>
+
+<div class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>How do I identify which case a German noun is in?</h3><p>Ask the four question words: <strong>wer/was?</strong> → nominative, <strong>wen/was?</strong> → accusative, <strong>wem?</strong> → dative, <strong>wessen?</strong> → genitive. Then check the controller: the verb, a preposition, or the noun's role as subject or possessor.</p></div>
+<div class="faq-item"><h3>Which German verbs always take the dative case?</h3><p><strong>helfen, danken, folgen, gratulieren, gefallen, gehören, antworten, glauben</strong> (a person) and <strong>passen</strong>. With these, the person is always dative: <em>ich helfe dem Kind</em>.</p></div>
+<div class="faq-item"><h3>What is the difference between accusative and dative?</h3><p>The <strong>accusative</strong> marks the direct object (<em>ich sehe den Mann</em>); the <strong>dative</strong> marks the indirect object — the recipient (<em>ich gebe dem Mann das Buch</em>).</p></div>
+<div class="faq-item"><h3>How can I tell the genitive apart?</h3><p>Look for possession (<em>das Auto des Mannes</em>), part-of-a-whole (<em>die Hälfte des Kuchens</em>), or a genitive preposition (<em>wegen des Regens</em>). The <strong>des</strong> article plus the -s/-es noun ending is the visual signature.</p></div>
+<div class="faq-item"><h3>Why does German have cases at all?</h3><p>Cases mark each noun's role, freeing up word order. <em>Den Mann sieht der Hund</em> and <em>Der Hund sieht den Mann</em> mean the same thing — the cases, not the position, tell you who sees whom.</p></div>
+</div>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+const CASES=["Nominativ","Akkusativ","Dativ","Genitiv"];
+const QUESTIONS=[
+{q:"Ich helfe <span class='target'>dem Kind</span>.",t:"dem Kind",a:2,why:"helfen is a dative verb, so its object is always dative: dem Kind."},
+{q:"<span class='target'>Der Mann</span> liest ein Buch.",t:"Der Mann",a:0,why:"Wer liest? Der Mann — the subject of the sentence is nominative."},
+{q:"Ich sehe <span class='target'>den Mann</span>.",t:"den Mann",a:1,why:"Wen sehe ich? Den Mann — direct object of sehen, accusative. Den (masc.) only occurs in accusative singular or dative plural."},
+{q:"Das Auto <span class='target'>des Mannes</span> ist neu.",t:"des Mannes",a:3,why:"Wessen Auto? Des Mannes — possession, genitive. Note des + the -es noun ending."},
+{q:"<span class='target'>Die Frau</span> gibt dem Kind ein Buch.",t:"Die Frau",a:0,why:"Wer gibt? Die Frau — the subject is nominative (die is nominative or accusative for feminine; here she is the doer)."},
+{q:"Ich danke <span class='target'>der Frau</span>.",t:"der Frau",a:2,why:"danken is a dative verb. Feminine dative article is der: der Frau."},
+{q:"Wegen <span class='target'>des Regens</span> bleiben wir zu Hause.",t:"des Regens",a:3,why:"wegen is a genitive preposition; der Regen is masculine → des Regens."},
+{q:"Sie besucht <span class='target'>die Tante</span> am Sonntag.",t:"die Tante",a:1,why:"Wen besucht sie? Die Tante — direct object of besuchen, accusative (die is nominative or accusative for feminine; here she is visited)."},
+{q:"<span class='target'>Das Kind</span> spielt im Garten.",t:"Das Kind",a:0,why:"Wer spielt? Das Kind — subject, nominative."},
+{q:"Er wohnt bei <span class='target'>seinem Freund</span>.",t:"seinem Freund",a:2,why:"bei is a dative preposition; seinem Freund is dative."},
+{q:"Die Farbe <span class='target'>des Hauses</span> gefällt mir.",t:"des Hauses",a:3,why:"Wessen Farbe? Des Hauses — possession, genitive; das Haus is neuter → des + -es."},
+{q:"Wir gratulieren <span class='target'>dem Gewinner</span>.",t:"dem Gewinner",a:2,why:"gratulieren is a dative verb → dem Gewinner. Dem is unambiguously dative."},
+{q:"Der Lehrer fragt <span class='target'>den Schüler</span>.",t:"den Schüler",a:1,why:"Wen fragt er? Den Schüler — direct object of fragen, accusative."},
+{q:"Trotz <span class='target'>des Wetters</span> gehen wir spazieren.",t:"des Wetters",a:3,why:"trotz is a genitive preposition; das Wetter is neuter → des Wetters."},
+{q:"<span class='target'>Die Kinder</span> spielen Fußball.",t:"Die Kinder",a:0,why:"Wer spielt? Die Kinder — subject, nominative plural."}
+];
+let idx=0, score=0, streak=0, missed=[];
+const $=id=>document.getElementById(id);
+function render(){
+  const q=QUESTIONS[idx];
+  $("q-label").textContent=`Question ${idx+1} of ${QUESTIONS.length}`;
+  $("q-bar").style.width=(idx/QUESTIONS.length*100)+"%";
+  $("question").innerHTML=`Which case is <span class="target">${q.t}</span> in?<br><span style="font-weight:400;font-size:1rem;color:#475569">${q.q}</span>`;
+  $("feedback").className="feedback";$("feedback").style.display="none";
+  $("next-btn").style.display="none";
+  const box=$("options");box.innerHTML="";
+  CASES.forEach((c,i)=>{
+    const b=document.createElement("button");
+    b.className="opt-btn";b.textContent=c;
+    b.onclick=()=>answer(i,b);
+    box.appendChild(b);
+  });
+}
+function answer(i,btn){
+  const q=QUESTIONS[idx];
+  const btns=document.querySelectorAll(".opt-btn");
+  btns.forEach(b=>b.disabled=true);
+  const fb=$("feedback");
+  if(i===q.a){
+    btn.classList.add("correct");score++;streak++;
+    fb.className="feedback show good";fb.textContent="✓ Correct — "+CASES[q.a]+". "+q.why;
+  }else{
+    btn.classList.add("wrong");btns[q.a].classList.add("correct");streak=0;
+    missed.push({t:q.t,case:CASES[q.a],why:q.why});
+    fb.className="feedback show bad";fb.textContent="✗ Not quite — it's "+CASES[q.a]+". "+q.why;
+  }
+  $("score").textContent=score;$("streak").textContent=streak;
+  $("next-btn").style.display="inline-block";
+}
+$("next-btn").onclick=()=>{
+  idx++;
+  if(idx<QUESTIONS.length){render();}
+  else{
+    $("question").style.display="none";$("options").style.display="none";
+    $("q-label").style.display="none";$("next-btn").style.display="none";
+    $("feedback").style.display="none";
+    $("q-bar").style.width="100%";
+    $("results").style.display="block";
+    $("final-score").innerHTML=`You scored <strong>${score}/${QUESTIONS.length}</strong>${score===QUESTIONS.length?" — perfect case detective! 🏆":score>=12?" — sharp instincts!":" — keep drilling the four question words."}`;
+    if(missed.length){
+      $("missed-box").style.display="block";
+      $("missed-list").innerHTML=missed.map(m=>`<li><strong>${m.t}</strong> → ${m.case}<br><span style="color:#64748b">${m.why}</span></li>`).join("");
+    }
+  }
+};
+$("restart-btn").onclick=()=>location.reload();
+render();
+</script>
+</body>
+</html>
