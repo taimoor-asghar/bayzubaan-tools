@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nominative Case Practice: Master der, die, das | Bayzubaan German Learning Tools</title>
+<meta name="description" content="Free interactive drill: practice the German nominative case with 15 real sentences. Choose the correct article (der, die, das, die plural), get instant feedback, translations, and a score. Includes a full guide to when the nominative is used.">
+<link rel="canonical" href="https://bayzubaan.com/tools/nominativ-practice/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nominative Case Practice: Master der, die, das">
+<meta property="og:description" content="Interactive German drill: 15 sentences, instant feedback, English translations, and a complete guide to the nominative case.">
+<meta property="og:url" content="https://bayzubaan.com/tools/nominativ-practice/">
+<meta property="og:site_name" content="Bayzubaan">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#2563eb;
+  --primary-dark:#1d4ed8;
+  --correct:#10b981;
+  --incorrect:#ef4444;
+  --bg:#f8fafc;
+  --card:#ffffff;
+  --border:#e2e8f0;
+  --text:#0f172a;
+  --muted:#64748b;
+  --radius:8px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Noto Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
+  padding:0;
+}
+.wrap{max-width:760px;margin:0 auto;padding:24px 16px 64px}
+header.site-head{margin-bottom:24px}
+.breadcrumb{font-size:0.85rem;color:var(--muted);margin-bottom:12px}
+.breadcrumb a{color:var(--primary);text-decoration:none}
+h1{font-size:1.9rem;line-height:1.3;margin-bottom:12px;font-weight:700}
+.credit{font-size:0.85rem;color:var(--muted);margin-bottom:24px}
+.credit strong{color:var(--text)}
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:24px;
+  margin-bottom:24px;
+  box-shadow:0 1px 2px rgba(15,23,42,0.04);
+}
+.guide h2{font-size:1.35rem;margin:1.6em 0 0.6em;color:var(--primary-dark)}
+.guide h2:first-child{margin-top:0}
+.guide p{margin-bottom:1em}
+.guide ul,.guide ol{margin:0 0 1em 1.4em}
+.guide li{margin-bottom:0.5em}
+.example{
+  background:#eff6ff;
+  border-left:4px solid var(--primary);
+  padding:10px 14px;
+  margin:0.8em 0;
+  border-radius:0 var(--radius) var(--radius) 0;
+}
+.example .de{font-weight:600}
+.example .en{color:var(--muted);font-size:0.95em}
+table.articles{width:100%;border-collapse:collapse;margin:1em 0}
+table.articles th,table.articles td{border:1px solid var(--border);padding:10px 12px;text-align:left}
+table.articles th{background:#eff6ff;font-weight:600}
+.faq-item{margin-bottom:1.2em}
+.faq-item h3{font-size:1.05rem;margin-bottom:0.4em}
+
+/* Quiz */
+.quiz-meta{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+.progress-label{font-weight:600;font-size:0.95rem}
+.score-label{font-weight:600;font-size:0.95rem;color:var(--primary-dark)}
+.progress-track{height:10px;background:#e2e8f0;border-radius:999px;overflow:hidden;margin-bottom:20px}
+.progress-fill{height:100%;width:0;background:var(--primary);border-radius:999px;transition:width 0.3s ease}
+.sentence{font-size:1.5rem;font-weight:600;margin:8px 0 20px;text-align:center}
+.sentence .blank{display:inline-block;min-width:3.2em;border-bottom:3px solid var(--primary);color:var(--primary);text-align:center}
+.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:16px}
+.option-btn{
+  font-family:inherit;
+  font-size:1.25rem;
+  font-weight:600;
+  padding:16px 12px;
+  min-height:64px;
+  border:2px solid var(--primary);
+  background:#fff;
+  color:var(--primary-dark);
+  border-radius:var(--radius);
+  cursor:pointer;
+  transition:background 0.15s ease,color 0.15s ease,border-color 0.15s ease;
+}
+.option-btn:hover:not(:disabled){background:#eff6ff}
+.option-btn:disabled{cursor:default;opacity:0.85}
+.option-btn small{display:block;font-size:0.75rem;font-weight:400;color:var(--muted)}
+.option-btn.correct{background:var(--correct);border-color:var(--correct);color:#fff}
+.option-btn.correct small{color:#e6fffa}
+.option-btn.wrong{background:var(--incorrect);border-color:var(--incorrect);color:#fff}
+.option-btn.wrong small{color:#fee2e2}
+.feedback{margin:12px 0;padding:14px 16px;border-radius:var(--radius);display:none}
+.feedback.show{display:block}
+.feedback.right{background:#ecfdf5;border:1px solid var(--correct)}
+.feedback.wrongf{background:#fef2f2;border:1px solid var(--incorrect)}
+.feedback .verdict{font-weight:700;margin-bottom:4px}
+.feedback.right .verdict{color:#047857}
+.feedback.wrongf .verdict{color:#b91c1c}
+.feedback .translation{color:var(--muted);font-size:0.95em;margin-top:4px}
+.next-btn{
+  font-family:inherit;
+  display:block;width:100%;padding:16px;min-height:56px;
+  background:var(--primary);color:#fff;border:none;border-radius:var(--radius);
+  font-size:1.1rem;font-weight:600;cursor:pointer;margin-top:8px;
+}
+.next-btn:hover{background:var(--primary-dark)}
+.end-screen{text-align:center;padding:16px 0}
+.end-screen h2{font-size:1.6rem;margin-bottom:12px}
+.end-score{font-size:3rem;font-weight:700;color:var(--primary-dark);margin:8px 0 16px}
+.end-msg{color:var(--muted);margin-bottom:20px;max-width:480px;margin-left:auto;margin-right:auto}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+footer{margin-top:32px;font-size:0.85rem;color:var(--muted);text-align:center}
+@media (max-width:520px){
+  h1{font-size:1.5rem}
+  .sentence{font-size:1.25rem}
+  .options{grid-template-columns:1fr}
+  .card{padding:18px}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the nominative case in German?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The nominative case (Nominativ) is the grammatical case used for the subject of a sentence — the person or thing performing the action. It is also the dictionary form of every German noun, so the article you learn with a new word (der, die, or das) is its nominative article."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When do you use the nominative case in German?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the nominative for the subject of the sentence ('Der Mann liest' — the man reads) and for predicate nouns after the verbs sein (to be), werden (to become), and bleiben (to remain), as in 'Sie ist eine Lehrerin' (she is a teacher)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the nominative articles in German?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The German nominative articles are der (masculine), die (feminine), das (neuter), and die (plural — all genders). Plural nouns always take die in the nominative, regardless of the singular gender."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it 'ein Mann' or 'eine Mann' in the nominative?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is 'ein Mann'. In the nominative, masculine and neuter nouns take 'ein' (ein Mann, ein Kind), while feminine and plural nouns take 'eine' (eine Frau) or no article at all in the plural (Kinder). Only in the accusative does the masculine change to 'einen'."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I remember German noun genders?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Learn each noun together with its article from day one, and use patterns as shortcuts: -ung, -heit, -keit, -schaft and -tät endings are almost always feminine (die); -chen and -lein diminutives are always neuter (das); days, months, seasons, and most weather nouns are masculine (der). Plural nouns always take die."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the most common nominative mistake learners make?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The most common mistake is guessing the gender of a noun instead of learning the article with it — for example saying 'das Tür' instead of 'die Tür'. Another frequent error is using the accusative 'einen' for a masculine subject, as in 'Einen Mann ist hier', which is wrong; the nominative 'Ein Mann ist hier' is correct."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+
+<header class="site-head">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="https://bayzubaan.com/">Bayzubaan</a> / <a href="https://bayzubaan.com/tools/">Tools</a> / Nominative Practice</nav>
+  <h1>Nominative Case Practice: Master der, die, das</h1>
+  <p class="credit">Written by <strong>Dr Taimoor Asghar</strong> &middot; Reviewed 2026-10-07</p>
+</header>
+
+<section class="card" aria-labelledby="quiz-heading">
+  <h2 id="quiz-heading" style="font-size:1.25rem;margin-bottom:16px">Interactive Drill: Fill in the Nominative Article</h2>
+  <div id="quiz">
+    <div class="quiz-meta">
+      <span class="progress-label" id="progress-label">Question 1 of 15</span>
+      <span class="score-label" id="score-label">Score: 0</span>
+    </div>
+    <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="15" aria-valuenow="0" aria-label="Quiz progress" id="progress-track">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+    <p class="sentence" id="sentence" aria-live="off"></p>
+    <div class="options" id="options" role="group" aria-label="Choose the correct nominative article">
+      <button type="button" class="option-btn" data-gender="m" aria-label="der, masculine article">der<small>masculine</small></button>
+      <button type="button" class="option-btn" data-gender="f" aria-label="die, feminine article">die<small>feminine</small></button>
+      <button type="button" class="option-btn" data-gender="n" aria-label="das, neuter article">das<small>neuter</small></button>
+      <button type="button" class="option-btn" data-gender="p" aria-label="die, plural article">die<small>plural</small></button>
+    </div>
+    <div class="feedback" id="feedback" aria-live="polite"></div>
+    <button type="button" class="next-btn" id="next-btn" style="display:none">Next question &rarr;</button>
+  </div>
+  <div id="end-screen" class="end-screen" style="display:none" aria-live="polite">
+    <h2>Drill complete!</h2>
+    <div class="end-score" id="end-score"></div>
+    <p class="end-msg" id="end-msg"></p>
+    <button type="button" class="next-btn" id="restart-btn">Restart the drill</button>
+  </div>
+</section>
+
+<article class="card guide" id="guide">
+  <h2>What Is the Nominative Case?</h2>
+  <p>Every German sentence has a subject — the person or thing that performs the action. The grammatical case used for that subject is the <strong>nominative case</strong> (<em>Nominativ</em>). It is the first of the four German cases and the one every learner meets first. It is also the &ldquo;dictionary form&rdquo; of every noun: when you look up a German word, the article shown with it — <em>der</em>, <em>die</em>, or <em>das</em> — is its nominative article. That is why learning the article together with each new noun, right from the start, is the single most important habit in German.</p>
+  <p>The nominative answers the questions <em>wer?</em> (who?) and <em>was?</em> (what?) about the verb. In the sentence &ldquo;Der Mann liest ein Buch&rdquo; (the man reads a book), asking &ldquo;Who reads?&rdquo; gives you &ldquo;der Mann&rdquo; — and that tells you the subject is in the nominative. Because word order in German is flexible, identifying the nominative article is often the only way to know who is doing what: &ldquo;Der Hund bei&szlig;t den Mann&rdquo; and &ldquo;Den Mann bei&szlig;t der Hund&rdquo; both mean the dog bites the man, because only the dog carries the nominative article.</p>
+
+  <h2>When Do You Use the Nominative?</h2>
+  <p>There are exactly two jobs for the nominative case, and once you know them you will recognise it everywhere:</p>
+  <ol>
+    <li><strong>The subject of the sentence.</strong> Whoever or whatever performs the verb takes the nominative. &ldquo;Die Katze schl&auml;ft&rdquo; (the cat sleeps) — <em>die Katze</em> is doing the sleeping, so it is nominative. &ldquo;Das Wasser ist kalt&rdquo; (the water is cold) — <em>das Wasser</em> is the subject being described.</li>
+    <li><strong>Predicate nouns after <em>sein</em>, <em>werden</em>, and <em>bleiben</em>.</strong> After the verbs &ldquo;to be&rdquo;, &ldquo;to become&rdquo;, and &ldquo;to remain&rdquo;, the noun that renames the subject also stands in the nominative — it is not an object. &ldquo;Er ist ein Lehrer&rdquo; (he is a teacher), &ldquo;Sie wird &Auml;rztin&rdquo; (she is becoming a doctor), &ldquo;Wir bleiben Freunde&rdquo; (we remain friends). This surprises English speakers who expect a different case after &ldquo;is&rdquo;, but in German both sides of &ldquo;sein&rdquo; are nominative.</li>
+  </ol>
+  <p>Everything else — the direct object, the indirect object, anything after most prepositions — belongs to the accusative, dative, or genitive. But those cases only make sense once the nominative is automatic, which is exactly what the drill above trains.</p>
+
+  <h2>The Nominative Article Table</h2>
+  <p>Memorise this small table and you have the entire nominative article system. There are only three singular articles plus one plural article:</p>
+  <table class="articles">
+    <thead><tr><th>Gender</th><th>Definite article</th><th>Indefinite article</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td>Masculine</td><td><strong>der</strong></td><td>ein</td><td>der Mann &middot; ein Mann (the/a man)</td></tr>
+      <tr><td>Feminine</td><td><strong>die</strong></td><td>eine</td><td>die Frau &middot; eine Frau (the/a woman)</td></tr>
+      <tr><td>Neuter</td><td><strong>das</strong></td><td>ein</td><td>das Kind &middot; ein Kind (the/a child)</td></tr>
+      <tr><td>Plural (all genders)</td><td><strong>die</strong></td><td>&mdash; (no article)</td><td>die Kinder &middot; Kinder (the/children)</td></tr>
+    </tbody>
+  </table>
+  <p>Two things to notice. First, the plural always takes <strong>die</strong> in the nominative, no matter what gender the noun has in the singular: <em>der Mann &rarr; die M&auml;nner</em>, <em>die Frau &rarr; die Frauen</em>, <em>das Kind &rarr; die Kinder</em>. Second, there is no indefinite article in the plural — you simply say &ldquo;Kinder spielen&rdquo; (children play), not &ldquo;eine Kinder&rdquo;.</p>
+
+  <h2>How to Guess Noun Gender</h2>
+  <p>German noun gender feels random at first, but many endings follow reliable patterns. Use these as shortcuts — and still learn the article with every new word:</p>
+  <ul>
+    <li><strong>Usually masculine (<em>der</em>):</strong> days, months, seasons, and directions (der Montag, der Januar, der Sommer, der Norden); most weather nouns (der Regen, der Schnee, der Wind); nouns ending in <em>-er</em> that describe people (der Lehrer, der Fahrer); many nouns ending in <em>-el</em> or <em>-en</em> (der Apfel, der Garten).</li>
+    <li><strong>Usually feminine (<em>die</em>):</strong> nouns ending in <em>-ung</em> (die Zeitung, die &Uuml;bung), <em>-heit</em> (die Gesundheit), <em>-keit</em> (die M&ouml;glichkeit), <em>-schaft</em> (die Freundschaft), <em>-t&auml;t</em> (die Universit&auml;t), <em>-ion</em> (die Nation), <em>-ik</em> (die Musik), and <em>-ei</em> (die B&auml;ckerei); female persons and professions (die Lehrerin, die &Auml;rztin); most nouns ending in <em>-e</em> (die Katze, die T&uuml;r, die Lampe).</li>
+    <li><strong>Usually neuter (<em>das</em>):</strong> diminutives ending in <em>-chen</em> or <em>-lein</em> — always neuter, even for people and animals (das M&auml;dchen, das K&auml;tzchen); nouns ending in <em>-ment</em> (das Instrument); most nouns beginning with <em>Ge-</em> (das Geb&auml;ude, das Gespr&auml;ch); metals and chemical elements (das Gold, das Eisen); young animals and babies (das Kind, das Kalb).</li>
+  </ul>
+  <p>These rules cover a large share of everyday vocabulary, but exceptions exist (der L&ouml;ffel, die Gabel, das Messer — the famous cutlery trio every learner memorises). When in doubt, trust your dictionary over your guess.</p>
+  <div class="example"><span class="de">___ T&uuml;r ist offen.</span> &rarr; <span class="de">Die T&uuml;r ist offen.</span><br><span class="en">&ldquo;T&uuml;r&rdquo; ends in <em>-e</em>, a strong feminine signal &rarr; <em>die</em>. English: &ldquo;The door is open.&rdquo;</span></div>
+  <div class="example"><span class="de">___ Fenster sind geschlossen.</span> &rarr; <span class="de">Die Fenster sind geschlossen.</span><br><span class="en">Singular <em>das Fenster</em> is neuter, but this is plural — and plural always takes <em>die</em>. English: &ldquo;The windows are closed.&rdquo;</span></div>
+
+  <h2>Common Learner Mistakes</h2>
+  <ul>
+    <li><strong>Guessing gender instead of learning it.</strong> Saying &ldquo;das T&uuml;r&rdquo; or &ldquo;der Wasser&rdquo; marks you as a beginner instantly. Always learn nouns as <em>der/die/das + noun</em> — flashcards should never show a bare noun.</li>
+    <li><strong>Using the accusative <em>einen</em> for a masculine subject.</strong> &ldquo;Einen Mann ist hier&rdquo; is wrong; the subject needs the nominative &ldquo;Ein Mann ist hier&rdquo;. Remember: <em>einen</em> only appears when the masculine noun is the direct object (&ldquo;Ich sehe einen Mann&rdquo; — I see a man).</li>
+    <li><strong>Forgetting that plural is always <em>die</em>.</strong> Learners who know &ldquo;das Kind&rdquo; sometimes write &ldquo;das Kinder&rdquo;. The singular gender disappears in the plural — it is always <em>die Kinder</em>, <em>die M&auml;nner</em>, <em>die Fenster</em>.</li>
+    <li><strong>Putting a predicate noun in the accusative.</strong> &ldquo;Er ist einen Lehrer&rdquo; is a classic error. After <em>sein</em>, <em>werden</em>, and <em>bleiben</em> the noun stays nominative: &ldquo;Er ist ein Lehrer&rdquo;.</li>
+    <li><strong>Forgetting capitalisation.</strong> All German nouns are capitalised — <em>Mann</em>, <em>Frau</em>, <em>Kind</em>. This is not decoration; it helps you spot nouns (and therefore subjects) while reading.</li>
+  </ul>
+
+  <h2>How to Use This Drill</h2>
+  <p>Read each sentence, find the subject, and choose the nominative article that fits its gender — <em>der</em> for masculine, <em>die</em> for feminine, <em>das</em> for neuter, and <em>die</em> again for plurals. You will get instant green or red feedback, the English translation, and a short gender note for every sentence. Aim for 13 out of 15 or better, then repeat the drill the next day: spaced repetition is what moves article choice from conscious effort to reflex. Once the nominative feels automatic, you are ready for the accusative — where <em>der</em> becomes <em>den</em> and the real fun begins.</p>
+
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <h3>What is the nominative case in German?</h3>
+    <p>The nominative case (<em>Nominativ</em>) is the case of the subject — the person or thing performing the action of the verb. It is also the dictionary form of every noun, so the article you learn with a new word (<em>der</em>, <em>die</em>, <em>das</em>) is its nominative article.</p>
+  </div>
+  <div class="faq-item">
+    <h3>When do you use the nominative case?</h3>
+    <p>Use the nominative for the subject of the sentence (&ldquo;Der Mann liest&rdquo;) and for predicate nouns after <em>sein</em>, <em>werden</em>, and <em>bleiben</em> (&ldquo;Sie ist eine Lehrerin&rdquo; — she is a teacher). These are its only two jobs.</p>
+  </div>
+  <div class="faq-item">
+    <h3>What are the nominative articles?</h3>
+    <p><em>Der</em> (masculine), <em>die</em> (feminine), <em>das</em> (neuter), and <em>die</em> for the plural of all genders. The indefinite articles are <em>ein</em> (masculine/neuter), <em>eine</em> (feminine), with no indefinite article in the plural.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Is it &ldquo;ein Mann&rdquo; or &ldquo;einen Mann&rdquo; as the subject?</h3>
+    <p>&ldquo;Ein Mann ist hier&rdquo; is correct. <em>Einen</em> is the accusative form and only appears when the masculine noun is the direct object, as in &ldquo;Ich sehe einen Mann&rdquo; (I see a man).</p>
+  </div>
+  <div class="faq-item">
+    <h3>How can I remember whether a noun is der, die, or das?</h3>
+    <p>Learn the article with every new noun from day one, and lean on ending patterns: <em>-ung/-heit/-keit/-schaft/-t&auml;t</em> are nearly always feminine (<em>die</em>), <em>-chen/-lein</em> diminutives are always neuter (<em>das</em>), and days, months, seasons, and weather nouns are usually masculine (<em>der</em>).</p>
+  </div>
+  <div class="faq-item">
+    <h3>Why is the plural always &ldquo;die&rdquo;?</h3>
+    <p>In the nominative, plural nouns take <em>die</em> regardless of their singular gender — <em>der Mann &rarr; die M&auml;nner</em>, <em>das Kind &rarr; die Kinder</em>. Gender distinctions simply collapse in the plural, which is one small mercy of German grammar.</p>
+  </div>
+</article>
+
+<footer>
+  <p>Bayzubaan German Learning Tools &middot; Free interactive German grammar practice</p>
+</footer>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var QUIZ = [
+    { parts: ["", " Mann ist hier."], gender: "m", genderNote: "der Mann (masculine)", translation: "The man is here." },
+    { parts: ["", " Frau arbeitet in Berlin."], gender: "f", genderNote: "die Frau (feminine)", translation: "The woman works in Berlin." },
+    { parts: ["", " Kind spielt im Garten."], gender: "n", genderNote: "das Kind (neuter)", translation: "The child plays in the garden." },
+    { parts: ["", " Kinder sind laut."], gender: "p", genderNote: "die Kinder (plural — singular: das Kind)", translation: "The children are loud." },
+    { parts: ["", " Buch liegt auf dem Tisch."], gender: "n", genderNote: "das Buch (neuter)", translation: "The book is on the table." },
+    { parts: ["", " Hund ist gro\u00DF."], gender: "m", genderNote: "der Hund (masculine)", translation: "The dog is big." },
+    { parts: ["", " Katze schl\u00E4ft."], gender: "f", genderNote: "die Katze (feminine)", translation: "The cat sleeps." },
+    { parts: ["", " M\u00E4nner warten drau\u00DFen."], gender: "p", genderNote: "die M\u00E4nner (plural — singular: der Mann)", translation: "The men are waiting outside." },
+    { parts: ["", " Auto ist neu."], gender: "n", genderNote: "das Auto (neuter)", translation: "The car is new." },
+    { parts: ["", " Lehrer erkl\u00E4rt die Regel."], gender: "m", genderNote: "der Lehrer (masculine)", translation: "The teacher explains the rule." },
+    { parts: ["", " Sch\u00FCler lernen Deutsch."], gender: "p", genderNote: "die Sch\u00FCler (plural — singular: der Sch\u00FCler)", translation: "The pupils are learning German." },
+    { parts: ["", " Wasser ist kalt."], gender: "n", genderNote: "das Wasser (neuter)", translation: "The water is cold." },
+    { parts: ["", " T\u00FCr ist offen."], gender: "f", genderNote: "die T\u00FCr (feminine)", translation: "The door is open." },
+    { parts: ["", " Fenster sind geschlossen."], gender: "p", genderNote: "die Fenster (plural — singular: das Fenster)", translation: "The windows are closed." },
+    { parts: ["", " Apfel schmeckt gut."], gender: "m", genderNote: "der Apfel (masculine)", translation: "The apple tastes good." }
+  ];
+
+  var TOTAL = QUIZ.length;
+  var current = 0;
+  var score = 0;
+
+  var els = {
+    progressLabel: document.getElementById("progress-label"),
+    scoreLabel: document.getElementById("score-label"),
+    progressFill: document.getElementById("progress-fill"),
+    progressTrack: document.getElementById("progress-track"),
+    sentence: document.getElementById("sentence"),
+    options: document.getElementById("options"),
+    feedback: document.getElementById("feedback"),
+    nextBtn: document.getElementById("next-btn"),
+    quiz: document.getElementById("quiz"),
+    endScreen: document.getElementById("end-screen"),
+    endScore: document.getElementById("end-score"),
+    endMsg: document.getElementById("end-msg"),
+    restartBtn: document.getElementById("restart-btn")
+  };
+
+  var LABELS = { m: "der", f: "die", n: "das", p: "die (plural)" };
+
+  function escapeHtml(s){
+    return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }
+
+  function renderSentence(){
+    var q = QUIZ[current];
+    els.sentence.innerHTML = '<span class="blank" aria-hidden="true">___</span>' + escapeHtml(q.parts[1]);
+    els.sentence.setAttribute("aria-label", "Fill in the blank: " + q.parts[1].trim());
+  }
+
+  function updateMeta(){
+    els.progressLabel.textContent = "Question " + (current + 1) + " of " + TOTAL;
+    els.scoreLabel.textContent = "Score: " + score;
+    var pct = Math.round((current / TOTAL) * 100);
+    els.progressFill.style.width = pct + "%";
+    els.progressTrack.setAttribute("aria-valuenow", String(current));
+  }
+
+  function resetOptions(){
+    var btns = els.options.querySelectorAll(".option-btn");
+    btns.forEach(function(b){
+      b.classList.remove("correct","wrong");
+      b.disabled = false;
+    });
+  }
+
+  function showFeedback(isCorrect, q){
+    els.feedback.className = "feedback show " + (isCorrect ? "right" : "wrongf");
+    var verdict = isCorrect ? "\u2713 Correct!" : "\u2717 Not quite \u2014 the answer is \u201C" + LABELS[q.gender] + "\u201D.";
+    els.feedback.innerHTML =
+      '<p class="verdict">' + verdict + "</p>" +
+      "<p>" + escapeHtml(q.genderNote) + "</p>" +
+      '<p class="translation">' + escapeHtml(q.translation) + "</p>";
+  }
+
+  function handleChoice(e){
+    var btn = e.target.closest(".option-btn");
+    if (!btn || btn.disabled) return;
+    var q = QUIZ[current];
+    var chosen = btn.getAttribute("data-gender");
+    var isCorrect = chosen === q.gender;
+    if (isCorrect) score++;
+
+    var btns = els.options.querySelectorAll(".option-btn");
+    btns.forEach(function(b){
+      b.disabled = true;
+      if (b.getAttribute("data-gender") === q.gender) b.classList.add("correct");
+    });
+    if (!isCorrect) btn.classList.add("wrong");
+
+    // reveal completed sentence
+    var article = LABELS[q.gender].replace(" (plural)", "");
+    article = article.charAt(0).toUpperCase() + article.slice(1);
+    els.sentence.innerHTML = escapeHtml(article + q.parts[1]);
+
+    showFeedback(isCorrect, q);
+    els.scoreLabel.textContent = "Score: " + score;
+    els.nextBtn.style.display = "block";
+    els.nextBtn.textContent = (current === TOTAL - 1) ? "See my score \u2192" : "Next question \u2192";
+  }
+
+  function next(){
+    current++;
+    if (current >= TOTAL){
+      finish();
+      return;
+    }
+    els.feedback.className = "feedback";
+    els.feedback.innerHTML = "";
+    els.nextBtn.style.display = "none";
+    resetOptions();
+    renderSentence();
+    updateMeta();
+  }
+
+  function finish(){
+    els.quiz.style.display = "none";
+    els.endScreen.style.display = "block";
+    els.endScore.textContent = score + " / " + TOTAL;
+    var msg;
+    if (score === TOTAL) msg = "Perfect score! Your nominative articles are rock solid. Try the drill again tomorrow to lock it in — or move on to the accusative, where der becomes den.";
+    else if (score >= 12) msg = "Excellent work — the nominative is nearly automatic for you. Review the gender notes on any you missed, then drill once more.";
+    else if (score >= 8) msg = "Good progress. Re-read the article table and the gender hints above, then try the drill again to push past 12.";
+    else msg = "A solid start — the nominative takes repetition. Read through the guide above once more, learn each noun with its article, and drill again.";
+    els.endMsg.textContent = msg;
+    els.restartBtn.focus();
+  }
+
+  function restart(){
+    current = 0;
+    score = 0;
+    els.endScreen.style.display = "none";
+    els.quiz.style.display = "block";
+    els.feedback.className = "feedback";
+    els.feedback.innerHTML = "";
+    els.nextBtn.style.display = "none";
+    resetOptions();
+    renderSentence();
+    updateMeta();
+  }
+
+  els.options.addEventListener("click", handleChoice);
+  els.nextBtn.addEventListener("click", next);
+  els.restartBtn.addEventListener("click", restart);
+
+  renderSentence();
+  updateMeta();
+})();
+</script>
+</body>
+</html>
