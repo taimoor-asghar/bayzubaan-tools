@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fachsprachenprüfung Mock — Timed German Medical Exam | Bayzubaan</title>
+<meta name="description" content="Full FSP mock: 3 stations x 2 scenarios with task checklists, 20-minute timer, and a 12-round station-tagged quiz.">
+<link rel="canonical" href="https://bayzubaan.com/tools/fachsprachenpruefung-mock/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fachsprachenprüfung Mock — Timed German Medical Exam">
+<meta property="og:description" content="FSP mock exam: 6 scenarios, 20-minute timer per station, task checklists, and a station-tagged quiz.">
+<meta property="og:url" content="https://bayzubaan.com/tools/fachsprachenpruefung-mock/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fachsprachenprüfung Mock — Timed German Medical Exam">
+<meta name="twitter:description" content="FSP mock exam: 6 scenarios, 20-minute timer per station, task checklists, and a station-tagged quiz.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the three FSP stations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Arzt-Patienten-Gespräch (20 min: history-taking and explanation), Arzt-Arzt-Gespräch (20 min: structured case presentation), Dokumentation (20 min: dictating the Arztbrief or writing the referral). Same medicine, three different registers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should I open the patient conversation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Was führt Sie zu uns? — the standard opening. Never 'Was haben Sie?' Keep it Sie-form, short sentences, no jargon, and explain before every procedure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I structure the case presentation in station 2?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ich stelle Ihnen Herrn X vor — age, history, examination, labs (laborchemisch zeigt sich …), therapy proposal (ich schlage … vor), plan (Procedere: …). Numbers first, interpretation second, consequence third."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the documentation register?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Impersonal, nominal, abbreviated: Entlassungsdiagnose: akute Appendizitis. Der Verlauf war komplikationslos. No ich, no wir — the register of the Entlassungsbrief and Überweisung tools."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I justify a therapy to a colleague in German?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ich halte eine Dialyseeinleitung für indiziert — für indiziert halten is the formal medical opinion construction, stronger than 'I think' and standard in consultations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why practise with the 20-minute timer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Real FSP stations end at 20:00 whether you are finished or not. Candidates who never practise against the clock discover too late that their German takes 35 minutes. Drill scenarios as intervals until all four tasks fit with time to spare."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>Fachsprachenprüfung Mock: Timed Exam Simulation</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">FSP mock exam: 6 scenarios, 20-minute timer per station, task checklists, and a station-tagged quiz.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+
+<h2>The mock exam: 3 stations, 20 minutes each</h2>
+<p style="margin-bottom:16px">Six exam scenarios — two per station — with case vignettes, task checklists, and key phrases. Run the <strong>20-minute timer</strong> per station like the real Fachsprachenprüfung, check off your tasks, then prove it with the 12-round quiz.</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">
+<button type="button" class="tab" onclick="setStation(0)">1 · Arzt-Patienten-Gespräch</button>
+<button type="button" class="tab" onclick="setStation(1)">2 · Arzt-Arzt-Gespräch</button>
+<button type="button" class="tab" onclick="setStation(2)">3 · Dokumentation</button>
+</div>
+<div id="timer-box" style="background:#eff6ff;border:2px solid #2563eb;border-radius:8px;padding:14px 16px;margin-bottom:16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+<div id="timer-display" style="font-size:2rem;font-weight:700;color:#1d4ed8;font-variant-numeric:tabular-nums">20:00</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<button type="button" onclick="startTimer()" style="background:#2563eb;color:#fff;border:none;border-radius:8px;padding:10px 18px;font-weight:700;cursor:pointer">Start</button>
+<button type="button" onclick="pauseTimer()" style="background:#fff;color:#2563eb;border:2px solid #2563eb;border-radius:8px;padding:10px 18px;font-weight:700;cursor:pointer">Pause</button>
+<button type="button" onclick="resetTimer()" style="background:#fff;color:#64748b;border:2px solid #e2e8f0;border-radius:8px;padding:10px 18px;font-weight:700;cursor:pointer">Reset</button>
+<button type="button" onclick="setTimer(10)" style="background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:8px 14px;cursor:pointer;font-family:inherit">10 min</button>
+<button type="button" onclick="setTimer(5)" style="background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:8px 14px;cursor:pointer;font-family:inherit">5 min</button>
+</div>
+<div id="timer-msg" style="color:#b45309;font-weight:600"></div>
+</div>
+<div id="scen-list"></div>
+<h2 style="margin-top:28px">Quiz: 12 station rounds</h2>
+<p style="margin-bottom:16px">Each round is tagged with its station. 4 rounds per station — the exact sentences examiners listen for.</p>
+<button id="calc-btn" type="button" onclick="startQuiz()">Start 12-round quiz</button>
+<div id="quiz-zone" style="display:none;margin-top:20px">
+<div class="progress"><div id="qbar"></div></div>
+<div class="quiz-meta"><span id="qcount">Round 1/12</span><span id="qscore">Correct: 0 · Missed: 0</span></div>
+<div id="quiz-station" style="font-size:.85rem;color:#1d4ed8;font-weight:700;margin-bottom:6px"></div>
+<div id="quiz-sentence" style="font-size:1.4rem;font-weight:700;margin-bottom:14px"></div>
+<div id="quiz-options"></div>
+<div id="quiz-feedback"></div>
+<button type="button" id="quiz-next" style="display:none;margin-top:12px" onclick="nextQ()">Next</button>
+<div id="quiz-summary"></div>
+</div>
+
+</div>
+
+<article class="prose">
+
+<h2>The Fachsprachenprüfung: three stations, one language</h2>
+<p>The <em>Fachsprachenprüfung</em> (FSP) — the medical German exam every foreign doctor must pass to practise in Germany — runs as three stations of 20 minutes each: the <em>Arzt-Patienten-Gespräch</em> (doctor-patient conversation: history-taking and explanation), the <em>Arzt-Arzt-Gespräch</em> (doctor-doctor conversation: structured case presentation), and the <em>Dokumentation</em> (documentation: dictating the Arztbrief or writing the referral). Same medicine, three different registers — and the exam fails candidates who bring the wrong register to the wrong station. This tool is a complete mock: six scenarios (two per station) with case vignettes, task checklists, and key phrases, a 20-minute countdown timer, and a 12-round station-tagged quiz on the exact sentences examiners listen for.</p>
+<p>The stations test different German. Station 1 is spoken, simple, and patient-facing: short sentences, no jargon, constant checking of understanding. Station 2 is collegial and dense: structured presentation, lab values, therapy proposals, Konjunktiv-free directness. Station 3 is written register spoken aloud: impersonal, nominal, abbreviated. The candidate who code-switches between all three — <em>Was führt Sie zu uns?</em> to the patient, <em>Ich halte eine Dialyseeinleitung für indiziert</em> to the colleague, <em>Der Verlauf war komplikationslos</em> to the dictaphone — is the candidate who passes.</p>
+<h2>Station 1: Arzt-Patienten-Gespräch — the human station</h2>
+<p>Two scenarios. First, Herr Weber's chest pain: the classic emergency anamnesis. The tasks walk the station's real choreography — greeting and introduction, pain history (localisation, radiation, duration), risk factors (smoking, blood pressure, family), then explaining the ECG and blood draw. The key phrases are the station's greatest hits: <em>Was führt Sie zu uns?</em> (the standard opening — never "Was haben Sie?"), <em>Wo genau tut es weh?</em>, <em>Strahlt der Schmerz aus?</em>, <em>Wir machen jetzt ein EKG und nehmen Blut ab.</em> Note the Sie-form throughout and the explanation before the procedure — the exam scores patient-centredness as well as grammar.</p>
+<p>Second, Frau Kaya's diabetes: the chronic-care conversation. The tasks — current wellbeing, previous medication, demonstrating the insulin pen, hypoglycaemia teaching — test the explaining register: <em>Ich zeige Ihnen den Insulinpen.</em> <em>Bei Unterzucker: Traubenzucker nehmen.</em> Short, imperative, checkable. The FSP examiners play the patient and will ask "Was heißt das?" — the candidate who can rephrase in simpler German (<em>Der Zucker im Blut wird zu niedrig</em>) passes the communication test that fails so many technically strong doctors.</p>
+<h2>Station 2: Arzt-Arzt-Gespräch — the presentation station</h2>
+<p>Two scenarios. First, the pneumonia case presentation: the tasks enforce the structure examiners expect — age and history, examination, labs, therapy proposal, plan. The key phrases are presentation skeletons: <em>Ich stelle Ihnen Herrn Schneider vor.</em> <em>Laborchemisch zeigt sich ein erhöhtes CRP.</em> <em>Ich schlage eine antibiotische Therapie vor.</em> <em>Procedere: Verlaufskontrolle in 48 Stunden.</em> Note <em>laborchemisch</em> — the single adverb that opens every lab presentation — and <em>ich schlage … vor</em>, the collegial proposal form (not "we should", not "I will").</p>
+<p>Second, the kidney-failure consultation: the high-stakes numbers conversation. <em>Das Kreatinin liegt bei 3,2 mg/dl. Die GFR beträgt 18 ml/min.</em> Then the justification sentence the whole station turns on: <em>Ich halte eine Dialyseeinleitung für indiziert.</em> <em>Für indiziert halten</em> is the formal medical opinion construction — stronger than "I think", standard in consultations. Close with <em>Bitte um nephrologische Mitbeurteilung.</em> The candidate who presents numbers, interprets them, and states the consequence in three sentences has mastered station 2.</p>
+<h2>Station 3: Dokumentation — the written register</h2>
+<p>Two scenarios. First, dictating the appendectomy discharge letter: the tasks — diagnosis, course, medication, plan plus sick note — are the Entlassungsbrief in miniature. The key phrases are pure documentation German: <em>Entlassungsdiagnose: akute Appendizitis.</em> <em>Der Verlauf war komplikationslos.</em> <em>Entlassungsmedikation: Ibuprofen 600 mg bei Bedarf.</em> <em>Arbeitsunfähigkeit besteht für 2 Wochen.</em> Impersonal, colon-structured, abbreviated — the register of tools 78 and 79, now under time pressure.</p>
+<p>Second, writing the cardiology referral: <em>Ich überweise Ihnen meinen Patienten zur Mitbeurteilung. Verdachtsdiagnose: koronare Herzkrankheit. Fragestellung: Ausschluss einer KHK. Um zeitnahe Vorstellung wird gebeten.</em> The four referral pillars in four sentences. The exam's documentation station often pairs exactly these two tasks — one Arztbrief, one Überweisung — because together they cover the complete written output of a German doctor's day.</p>
+<h2>The timer: training under pressure</h2>
+<p>The 20-minute timer is not decoration — it is the exam's defining constraint. Real FSP stations end at 20:00 whether you are finished or not, and candidates who have never practised against the clock discover too late that their beautiful German takes 35 minutes. Use the timer the way athletes use intervals: run one scenario at 20 minutes, check off the tasks as you complete them, and note where the time went. The 10- and 5-minute presets are for drilling single scenarios or the quiz under pressure. When you can complete all four tasks of a scenario with time to spare, the station is yours.</p>
+<h2>How to drill: the full mock</h2>
+<p>Run the exam end to end: station 1 (pick a scenario, start the timer, speak the anamnesis aloud, check the tasks), station 2 (present the case to an imaginary colleague, numbers first), station 3 (dictate the letter or write the referral against the clock). Then take the 12-round quiz — 4 rounds per station, each tagged, each testing a sentence from the key-phrase lists with one-slot distractors. Score 12/12 twice, then run the whole mock again from memory: three stations, three registers, one passing candidate.</p>
+
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>What are the three FSP stations?</h3><p>Arzt-Patienten-Gespräch (20 min: history-taking and explanation), Arzt-Arzt-Gespräch (20 min: structured case presentation), Dokumentation (20 min: dictating the Arztbrief or writing the referral). Same medicine, three different registers.</p></div><div class="faq-item"><h3>How should I open the patient conversation?</h3><p>Was führt Sie zu uns? — the standard opening. Never &#x27;Was haben Sie?&#x27; Keep it Sie-form, short sentences, no jargon, and explain before every procedure.</p></div><div class="faq-item"><h3>How do I structure the case presentation in station 2?</h3><p>Ich stelle Ihnen Herrn X vor — age, history, examination, labs (laborchemisch zeigt sich …), therapy proposal (ich schlage … vor), plan (Procedere: …). Numbers first, interpretation second, consequence third.</p></div><div class="faq-item"><h3>What is the documentation register?</h3><p>Impersonal, nominal, abbreviated: Entlassungsdiagnose: akute Appendizitis. Der Verlauf war komplikationslos. No ich, no wir — the register of the Entlassungsbrief and Überweisung tools.</p></div><div class="faq-item"><h3>How do I justify a therapy to a colleague in German?</h3><p>Ich halte eine Dialyseeinleitung für indiziert — für indiziert halten is the formal medical opinion construction, stronger than &#x27;I think&#x27; and standard in consultations.</p></div><div class="faq-item"><h3>Why practise with the 20-minute timer?</h3><p>Real FSP stations end at 20:00 whether you are finished or not. Candidates who never practise against the clock discover too late that their German takes 35 minutes. Drill scenarios as intervals until all four tasks fit with time to spare.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+var SCENARIOS = [{"st": "Arzt-Patienten-Gespräch", "title": "Brustschmerz in der Notaufnahme", "cde": "Herr Weber, 58 Jahre, stellt sich mit akutem thorakalem Schmerz seit 2 Stunden vor. Der Schmerz strahlt in den linken Arm aus. Anamnese und Aufklärung über EKG und Blutabnahme.", "cen": "Mr Weber, 58, presents with acute chest pain for 2 hours, radiating to the left arm. Take the history and explain the ECG and blood draw.", "tasks": ["Begrüßung und Vorstellung auf Deutsch", "Schmerzanamnese (Lokalisation, Ausstrahlung, Dauer)", "Risikofaktoren erfragen (Rauchen, Blutdruck, Familie)", "Aufklärung: EKG und Blutabnahme erklären"], "phrases": [{"de": "Was führt Sie zu uns?", "en": "What brings you to us?"}, {"de": "Wo genau tut es weh?", "en": "Where exactly does it hurt?"}, {"de": "Strahlt der Schmerz aus?", "en": "Does the pain radiate?"}, {"de": "Wir machen jetzt ein EKG und nehmen Blut ab.", "en": "We will now do an ECG and take blood."}]}, {"st": "Arzt-Patienten-Gespräch", "title": "Diabetes-Neueinstellung", "cde": "Frau Kaya, 52 Jahre, HbA1c 9,1 %. Insulinstart geplant. Erklären Sie die Therapie und die Hypoglykämie-Zeichen.", "cen": "Mrs Kaya, 52, HbA1c 9.1%. Starting insulin. Explain the therapy and hypoglycaemia signs.", "tasks": ["Aktuelles Befinden und Blutzuckerwerte erfragen", "Bisherige Medikation erheben", "Insulinpen erklären und demonstrieren", "Hypoglykämie-Aufklärung (Zeichen, Traubenzucker)"], "phrases": [{"de": "Wie geht es Ihnen mit dem Zucker?", "en": "How are you doing with your sugar?"}, {"de": "Welche Tabletten nehmen Sie?", "en": "Which tablets do you take?"}, {"de": "Ich zeige Ihnen den Insulinpen.", "en": "I will show you the insulin pen."}, {"de": "Bei Unterzucker: Traubenzucker nehmen.", "en": "If low: take glucose tablets."}]}, {"st": "Arzt-Arzt-Gespräch", "title": "Pneumonie-Fallvorstellung", "cde": "67-jähriger Patient mit Fieber, Husten und Infiltrat im rechten Unterlappen. Stellen Sie den Fall strukturiert vor und schlagen Sie die Therapie vor.", "cen": "67-year-old patient with fever, cough and right lower lobe infiltrate. Present the case in structured form and propose therapy.", "tasks": ["Strukturierte Vorstellung (Alter, Anamnese, Befund)", "Laborwerte präsentieren (CRP, Leukozyten)", "Therapievorschlag formulieren", "Procedere festlegen"], "phrases": [{"de": "Ich stelle Ihnen Herrn Schneider vor.", "en": "I would like to present Mr Schneider to you."}, {"de": "Laborchemisch zeigt sich ein erhöhtes CRP.", "en": "Labs show an elevated CRP."}, {"de": "Ich schlage eine antibiotische Therapie vor.", "en": "I propose antibiotic therapy."}, {"de": "Procedere: Verlaufskontrolle in 48 Stunden.", "en": "Plan: follow-up in 48 hours."}]}, {"st": "Arzt-Arzt-Gespräch", "title": "Nierenversagen-Konsil", "cde": "Kreatinin 3,2 mg/dl, GFR 18 ml/min, Hyperkaliämie 6,1 mmol/l. Begründen Sie die Dialyseindikation gegenüber dem Nephrologen.", "cen": "Creatinine 3.2 mg/dl, GFR 18 ml/min, hyperkalaemia 6.1 mmol/l. Justify the dialysis indication to the nephrologist.", "tasks": ["Befundlage zusammenfassen (Kreatinin, GFR, Kalium)", "Dringlichkeit kommunizieren", "Dialyseindikation begründen", "Übergabe und Rückmeldung vereinbaren"], "phrases": [{"de": "Das Kreatinin liegt bei 3,2 mg/dl.", "en": "Creatinine is at 3.2 mg/dl."}, {"de": "Die GFR beträgt 18 ml/min.", "en": "The GFR is 18 ml/min."}, {"de": "Ich halte eine Dialyseeinleitung für indiziert.", "en": "I consider starting dialysis indicated."}, {"de": "Bitte um nephrologische Mitbeurteilung.", "en": "Requesting nephrological co-assessment."}]}, {"st": "Dokumentation", "title": "Appendektomie-Arztbrief", "cde": "Diktieren Sie den Entlassungsbrief: 24-jährige Patientin, laparoskopische Appendektomie, komplikationsloser Verlauf, Entlassung am 3. postoperativen Tag.", "cen": "Dictate the discharge letter: 24-year-old patient, laparoscopic appendectomy, uncomplicated course, discharge on postoperative day 3.", "tasks": ["Entlassungsdiagnose formulieren", "Verlauf beschreiben (komplikationslos)", "Entlassungsmedikation auflisten", "Procedere und AU festlegen"], "phrases": [{"de": "Entlassungsdiagnose: akute Appendizitis.", "en": "Discharge diagnosis: acute appendicitis."}, {"de": "Der Verlauf war komplikationslos.", "en": "The course was uncomplicated."}, {"de": "Entlassungsmedikation: Ibuprofen 600 mg bei Bedarf.", "en": "Discharge medication: ibuprofen 600 mg as needed."}, {"de": "Arbeitsunfähigkeit besteht für 2 Wochen.", "en": "Unfit for work for 2 weeks."}]}, {"st": "Dokumentation", "title": "Überweisung an die Kardiologie", "cde": "Schreiben Sie die Überweisung: 62-jähriger Patient, V. a. koronare Herzkrankheit, EKG unauffällig, Troponin negativ, Fragestellung: Ausschluss KHK.", "cen": "Write the referral: 62-year-old patient, suspected coronary heart disease, ECG unremarkable, troponin negative, question: exclusion of CHD.", "tasks": ["Anlass und Verdachtsdiagnose formulieren", "Bisherige Befunde zusammenfassen", "Fragestellung präzisieren", "Dringlichkeit markieren"], "phrases": [{"de": "Ich überweise Ihnen meinen Patienten zur Mitbeurteilung.", "en": "I am referring my patient to you for co-assessment."}, {"de": "Verdachtsdiagnose: koronare Herzkrankheit.", "en": "Suspected diagnosis: coronary heart disease."}, {"de": "Fragestellung: Ausschluss einer KHK.", "en": "Question: exclusion of CHD."}, {"de": "Um zeitnahe Vorstellung wird gebeten.", "en": "Prompt presentation is requested."}]}];
+var STATIONS = ["Arzt-Patienten-Gespräch","Arzt-Arzt-Gespräch","Dokumentation"];
+var curSt = 0;
+var style = document.createElement("style");
+style.textContent = ".tab{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}.tab.on{background:#2563eb;color:#fff;border-color:#2563eb}.task{display:flex;gap:8px;align-items:flex-start;margin:6px 0;font-size:.95rem}.task input{margin-top:4px;transform:scale(1.2)}";
+document.head.appendChild(style);
+function setStation(i){ curSt = i; renderScen(); }
+function renderScen(){
+  var tabs = document.querySelectorAll(".tab");
+  tabs.forEach(function(t, i){ t.classList.toggle("on", i === curSt); });
+  var box = document.getElementById("scen-list"); box.innerHTML = "";
+  SCENARIOS.forEach(function(s, si){
+    if(s.st !== STATIONS[curSt]) return;
+    var d = document.createElement("div");
+    d.style.cssText = "background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:16px;margin-bottom:12px";
+    var h = document.createElement("div");
+    h.style.cssText = "font-size:1.15rem;font-weight:700;color:#0f172a";
+    h.textContent = s.title; d.appendChild(h);
+    var c = document.createElement("p");
+    c.style.cssText = "color:#475569;margin:8px 0"; c.textContent = s.cde; d.appendChild(c);
+    var ce = document.createElement("p");
+    ce.style.cssText = "color:#64748b;font-size:.9rem;margin:0 0 8px"; ce.textContent = s.cen; d.appendChild(ce);
+    var th = document.createElement("div");
+    th.style.cssText = "font-weight:700;margin:10px 0 4px"; th.textContent = "Tasks ("; d.appendChild(th);
+    var tcount = document.createElement("span"); tcount.id = "tc-" + si; tcount.textContent = "0/" + s.tasks.length;
+    th.appendChild(tcount); th.appendChild(document.createTextNode(")"));
+    s.tasks.forEach(function(t, ti){
+      var lab = document.createElement("label"); lab.className = "task";
+      var cb = document.createElement("input"); cb.type = "checkbox";
+      cb.setAttribute("aria-label", t);
+      cb.addEventListener("change", function(){
+        var n = d.querySelectorAll(".task input:checked").length;
+        document.getElementById("tc-" + si).textContent = n + "/" + s.tasks.length;
+      });
+      var sp = document.createElement("span"); sp.textContent = t;
+      lab.appendChild(cb); lab.appendChild(sp); d.appendChild(lab);
+    });
+    var ph = document.createElement("div");
+    ph.style.cssText = "font-weight:700;margin:12px 0 4px"; ph.textContent = "Key phrases:"; d.appendChild(ph);
+    var ul = document.createElement("ul"); ul.style.cssText = "margin:0 0 0 18px";
+    s.phrases.forEach(function(p){
+      var li = document.createElement("li"); li.style.marginBottom = "4px";
+      var b = document.createElement("strong"); b.textContent = p.de + " ";
+      var e = document.createElement("span"); e.style.color = "#64748b"; e.textContent = "(" + p.en + ")";
+      li.appendChild(b); li.appendChild(e); ul.appendChild(li);
+    });
+    d.appendChild(ul); box.appendChild(d);
+  });
+}
+var tLeft = 1200, tInt = null;
+function fmt(s){ var m = Math.floor(s/60), r = s%60; return (m<10?"0":"")+m + ":" + (r<10?"0":"")+r; }
+function drawTimer(){ document.getElementById("timer-display").textContent = fmt(tLeft); }
+function startTimer(){
+  document.getElementById("timer-msg").textContent = "";
+  if(tInt) return;
+  tInt = setInterval(function(){
+    tLeft--;
+    if(tLeft <= 0){ tLeft = 0; clearInterval(tInt); tInt = null;
+      document.getElementById("timer-msg").textContent = "Zeit um! Station beendet."; }
+    drawTimer();
+  }, 1000);
+}
+function pauseTimer(){ if(tInt){ clearInterval(tInt); tInt = null; } }
+function resetTimer(){ pauseTimer(); tLeft = 1200; drawTimer(); document.getElementById("timer-msg").textContent = ""; }
+function setTimer(min){ pauseTimer(); tLeft = min*60; drawTimer(); document.getElementById("timer-msg").textContent = ""; }
+var QUIZ = [{"st": "Arzt-Patienten-Gespräch", "p": "What brings you to us?", "a": "Was führt Sie zu uns?", "d": ["Was bringen Sie uns mit?", "Warum sind Sie heute hier?", "Was fehlt Ihnen denn?"]}, {"st": "Arzt-Patienten-Gespräch", "p": "Where exactly does it hurt?", "a": "Wo genau tut es weh?", "d": ["Wo tut es ungefähr weh?", "Tut es überall weh?", "Wo genau tut es Ihnen weh?"]}, {"st": "Arzt-Patienten-Gespräch", "p": "Does the pain radiate?", "a": "Strahlt der Schmerz aus?", "d": ["Strahlt der Schmerz ein?", "Bleibt der Schmerz lokal?", "Wandert der Schmerz umher?"]}, {"st": "Arzt-Patienten-Gespräch", "p": "I will show you the insulin pen.", "a": "Ich zeige Ihnen den Insulinpen.", "d": ["Ich gebe Ihnen den Insulinpen.", "Ich zeige Ihnen die Insulinspritze.", "Ich erkläre Ihnen das Insulin."]}, {"st": "Arzt-Arzt-Gespräch", "p": "I would like to present Mr Schneider to you.", "a": "Ich stelle Ihnen Herrn Schneider vor.", "d": ["Ich stelle Sie Herrn Schneider vor.", "Ich präsentiere Ihnen Herrn Schneider.", "Darf ich Herrn Schneider vorstellen?"]}, {"st": "Arzt-Arzt-Gespräch", "p": "Creatinine is at 3.2 mg/dl.", "a": "Das Kreatinin liegt bei 3,2 mg/dl.", "d": ["Das Kreatinin beträgt 3,2 mg/dl.", "Das Kreatinin ist 3,2 mg/dl hoch.", "Der Kreatinin liegt bei 3,2 mg/dl."]}, {"st": "Arzt-Arzt-Gespräch", "p": "I consider starting dialysis indicated.", "a": "Ich halte eine Dialyseeinleitung für indiziert.", "d": ["Ich halte eine Dialyse für indiziert.", "Ich empfehle eine Dialyseeinleitung.", "Eine Dialyseeinleitung ist indiziert."]}, {"st": "Arzt-Arzt-Gespräch", "p": "Plan: follow-up in 48 hours.", "a": "Procedere: Verlaufskontrolle in 48 Stunden.", "d": ["Procedere: Kontrolle in 48 Stunden.", "Plan: Verlaufskontrolle nach 48 Stunden.", "Procedere: Wiedervorstellung in zwei Tagen."]}, {"st": "Dokumentation", "p": "Discharge diagnosis: acute appendicitis.", "a": "Entlassungsdiagnose: akute Appendizitis.", "d": ["Diagnose: akute Appendizitis.", "Entlassungsdiagnose: akute Blinddarmentzündung.", "Entlassung: akute Appendizitis."]}, {"st": "Dokumentation", "p": "The course was uncomplicated.", "a": "Der Verlauf war komplikationslos.", "d": ["Der Verlauf war unkompliziert.", "Der Verlauf verlief komplikationslos.", "Verlauf: komplikationslos."]}, {"st": "Dokumentation", "p": "Suspected diagnosis: coronary heart disease.", "a": "Verdachtsdiagnose: koronare Herzkrankheit.", "d": ["Verdacht: koronare Herzkrankheit.", "V. a. koronare Herzerkrankung.", "Diagnose: koronare Herzkrankheit."]}, {"st": "Dokumentation", "p": "Prompt presentation is requested.", "a": "Um zeitnahe Vorstellung wird gebeten.", "d": ["Eilige Vorstellung erbeten.", "Um schnelle Vorstellung wird gebeten.", "Zeitnahe Vorstellung wird erbeten."]}];
+var ROUNDS = 12, pool = [], qi = 0, correctN = 0, missedN = 0, missedList = [], qa = null;
+function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
+function startQuiz(){
+  pool = shuffle(QUIZ.slice()); qi = 0; correctN = 0; missedN = 0; missedList = [];
+  document.getElementById("quiz-zone").style.display = "block";
+  document.getElementById("quiz-summary").innerHTML = "";
+  document.getElementById("calc-btn").style.display = "none";
+  showQ();
+}
+function showQ(){
+  qa = pool[qi % pool.length];
+  var opts = shuffle([qa.a].concat(qa.d));
+  document.getElementById("quiz-station").textContent = "Station: " + qa.st;
+  document.getElementById("quiz-sentence").textContent = qa.p;
+  document.getElementById("qcount").textContent = "Round " + (qi+1) + "/" + ROUNDS;
+  document.getElementById("qbar").style.width = (qi/ROUNDS*100) + "%";
+  var box = document.getElementById("quiz-options"); box.innerHTML = "";
+  var fb = document.getElementById("quiz-feedback"); fb.className = ""; fb.style.display = "none";
+  document.getElementById("quiz-next").style.display = "none";
+  opts.forEach(function(opt){
+    var b = document.createElement("button");
+    b.className = "quiz-btn"; b.textContent = opt;
+    b.addEventListener("click", function(){ answer(opt, b); });
+    box.appendChild(b);
+  });
+}
+function answer(opt, btn){
+  var fb = document.getElementById("quiz-feedback");
+  var btns = document.querySelectorAll("#quiz-options .quiz-btn");
+  btns.forEach(function(x){ x.disabled = true; if(x.textContent === qa.a) x.classList.add("correct"); });
+  if(opt === qa.a){ correctN++; fb.className = "ok"; fb.textContent = "\u2713 Correct!"; }
+  else { missedN++; missedList.push(qa); fb.className = "no"; btn.classList.add("wrong");
+    fb.textContent = "\u2717 Correct: \u201c" + qa.a + "\u201d (" + qa.st + ")."; }
+  document.getElementById("qscore").textContent = "Correct: " + correctN + " \u00b7 Missed: " + missedN;
+  var nb = document.getElementById("quiz-next");
+  nb.style.display = "block";
+  nb.textContent = (qi + 1 < ROUNDS) ? "Next" : "See results";
+}
+function nextQ(){
+  qi++;
+  if(qi < ROUNDS) showQ();
+  else {
+    document.getElementById("quiz-station").textContent = "";
+    document.getElementById("quiz-sentence").textContent = "";
+    document.getElementById("quiz-options").innerHTML = "";
+    document.getElementById("quiz-feedback").style.display = "none";
+    document.getElementById("quiz-next").style.display = "none";
+    document.getElementById("qbar").style.width = "100%";
+    var uniq = {}; missedList.forEach(function(m){ uniq[m.a] = m; });
+    var missArr = Object.keys(uniq).map(function(k){ return uniq[k]; });
+    var msg = "<strong>" + correctN + " / " + ROUNDS + " correct.</strong> ";
+    if(missArr.length === 0) msg += "Pr\u00fcfungsreif — exam-ready.";
+    else {
+      msg += "Review these " + missArr.length + ":<ul style='margin:8px 0 0 18px'>";
+      missArr.forEach(function(m){ msg += "<li><strong>" + m.a + "</strong> <span style='color:#64748b'>(" + m.st + ")</span></li>"; });
+      msg += "</ul>";
+    }
+    document.getElementById("quiz-summary").innerHTML = '<div class="note">' + msg + "</div>";
+    document.getElementById("calc-btn").style.display = "block";
+    document.getElementById("calc-btn").textContent = "Play again";
+  }
+}
+renderScen();
+drawTimer();
+
+
+</script>
+</body>
+</html>
