@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Negation: nicht vs kein — Placement Builder + Quiz | Bayzubaan</title>
+<meta name="description" content="Master German negation: kein vs nicht rules, position in sentences, kein declension table. Interactive negation builder + 15-round quiz with explanations.">
+<link rel="canonical" href="https://bayzubaan.com/tools/negation-placement/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="German Negation: nicht vs kein — Placement Builder + Quiz">
+<meta property="og:description" content="nicht or kein? Build negated German sentences correctly — interactive builder + 15-round quiz.">
+<meta property="og:url" content="https://bayzubaan.com/tools/negation-placement/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="German Negation: nicht vs kein — Placement Builder + Quiz">
+<meta name="twitter:description" content="nicht or kein? Build negated German sentences correctly — interactive builder + 15-round quiz.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between nicht and kein?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "kein negates an indefinite noun by replacing ein/eine (Ich habe kein Auto = I have no car). nicht negates everything else — verbs, adjectives, adverbs, definite nouns, proper names, possessives (Er kommt nicht, nicht neu, nicht den Film)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does nicht go in a German sentence?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Directly before the element it negates (nicht neu, nicht gut). For whole-clause negation it goes at the end: Sie kommt heute nicht. With separable verbs it sits before the prefix: Ich rufe dich morgen nicht an."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it 'Ich habe kein Auto' or 'Ich habe nicht ein Auto'?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "'Ich habe kein Auto.' kein replaces the indefinite article — nicht never stands before ein/eine in normal negation. 'Nicht ein' only appears in emphatic contrasts ('not ONE car')."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why 'keinen Hund' but 'kein Auto'?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "kein declines like ein. Hund is masculine accusative (Ich habe einen Hund → keinen Hund); Auto is neuter accusative (Ich habe ein Auto → kein Auto). Same endings you learned in the case tools."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can kein be used in the plural?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes: keine in all plural cases except dative (keinen Kindern). 'Wir haben keine Freunde' = we have no friends. kein is the plural equivalent of the indefinite article, which English doesn't have."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What about nichts, niemand and nie?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "These are standalone negative words — they replace nicht + etwas/jemand/nie. They are never combined with nicht (no double negatives in standard German). For emphasis use gar nicht, überhaupt nicht or keineswegs."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>Nicht oder kein? German Negation</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">nicht or kein? Build negated German sentences correctly — interactive builder + 15-round quiz.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+
+<h2>Negation Sentence Builder</h2>
+<p style="margin-bottom:16px">Pick a pattern, fill in the word, and the tool places <strong>nicht</strong> or <strong>kein</strong> correctly — and tells you why.</p>
+<div class="field">
+<label for="neg-pattern">Sentence pattern:</label>
+<select id="neg-pattern">
+<option value="indef-obj">Indefinite object — "Ich habe ___ Auto." (haben)</option>
+<option value="def-obj">Definite object — "Ich sehe ___ Film." (sehen)</option>
+<option value="pred-noun">Predicate noun — "Er ist ___ Lehrer." (sein)</option>
+<option value="pred-adj">Predicate adjective — "Das Auto ist ___ neu." (sein)</option>
+<option value="adverb">Adverb of time — "Er kommt ___ heute." (kommen)</option>
+<option value="verb-only">Whole action — "Wir spielen." (spielen)</option>
+</select>
+</div>
+<div class="field" id="word-field">
+<label for="neg-word" id="neg-word-label">Noun (with gender):</label>
+<input id="neg-word" type="text" value="Auto" placeholder="e.g. Auto, Hund, Katze">
+</div>
+<div class="field" id="gender-field">
+<label for="neg-gender">Noun gender:</label>
+<select id="neg-gender">
+<option value="n">neuter (das)</option>
+<option value="m">masculine (der)</option>
+<option value="f">feminine (die)</option>
+</select>
+</div>
+<div class="field" id="adj-field" style="display:none">
+<label for="neg-adj">Adjective:</label>
+<input id="neg-adj" type="text" value="neu" placeholder="e.g. neu, gut, teuer">
+</div>
+<div class="field" id="adv-field" style="display:none">
+<label for="neg-adv">Adverb:</label>
+<input id="neg-adv" type="text" value="heute" placeholder="e.g. heute, morgen, oft">
+</div>
+<button id="calc-btn" type="button">Negate it</button>
+<div id="result"></div>
+<h2 style="margin-top:28px">Quiz: 15 rounds</h2>
+<div class="progress"><div id="qbar"></div></div>
+<div class="quiz-meta"><span id="qcount">Round 1/15</span><span id="qscore">Score: 0</span></div>
+<div id="quiz-sentence" style="font-size:1.15rem;font-weight:600;margin-bottom:14px"></div>
+<div id="quiz-options"></div>
+<div id="quiz-feedback"></div>
+<button type="button" id="quiz-next" style="display:none;margin-top:12px" onclick="nextQ()">Next question</button>
+<div id="quiz-summary"></div>
+
+</div>
+
+<article class="prose">
+
+<p>German negation has exactly two workhorses — <strong>nicht</strong> and <strong>kein</strong> — and English speakers mix them up constantly, because English uses "not" for everything and "no" only sometimes. Get this one distinction right and whole sentences stop breaking: <em>kein</em> negates an indefinite noun ("no car"), <em>nicht</em> negates everything else. The rest of this page is placement: where each word sits once you've chosen it. Use the sentence builder above to see the rules applied live, then prove it with the 15-round quiz.</p>
+<h2>The core decision: noun or not-a-noun</h2>
+<p>Ask one question: am I negating a <strong>noun with an indefinite article</strong> (ein, eine, einen, einem …)? If yes, use <strong>kein</strong> — it slides into the article's slot and carries its endings. <em>Ich habe ein Auto</em> becomes <em>Ich habe <strong>kein</strong> Auto</em> (I have no car). <em>Er kauft eine Katze</em> becomes <em>Er kauft <strong>keine</strong> Katze</em>. Everything else takes <strong>nicht</strong>: verbs (<em>Er kommt <strong>nicht</strong></em>), adjectives (<em>Das Auto ist <strong>nicht</strong> neu</em>), adverbs (<em>Sie singt <strong>nicht</strong> gut</em>), definite nouns (<em>Ich sehe den Film <strong>nicht</strong></em>), proper names (<em>Das ist <strong>nicht</strong> Peter</em>), and possessive pronouns (<em>Das ist <strong>nicht</strong> mein Buch</em>).</p>
+<h2>The kein table: four forms, one logic</h2>
+<p>kein declines like ein — same endings, same genders, same cases. You already know these endings from the adjective-ending and case tools in this series, so this is consolidation, not new material:</p>
+<table><tr><th></th><th>masculine</th><th>feminine</th><th>neuter</th><th>plural</th></tr>
+<tr><td><strong>Nominative</strong></td><td>kein Mann</td><td>keine Frau</td><td>kein Kind</td><td>keine Kinder</td></tr>
+<tr><td><strong>Accusative</strong></td><td>keinen Mann</td><td>keine Frau</td><td>kein Kind</td><td>keine Kinder</td></tr>
+<tr><td><strong>Dative</strong></td><td>keinem Mann</td><td>keiner Frau</td><td>keinem Kind</td><td>keinen Kindern</td></tr>
+<tr><td><strong>Genitive</strong></td><td>keines Mannes</td><td>keiner Frau</td><td>keines Kindes</td><td>keiner Kinder</td></tr></table>
+<p>The pattern is simple: wherever ein would take an ending, kein takes it too. The most-used forms are accusative <em>keinen</em> (masculine: <em>Ich habe keinen Hund</em>) and <em>keine</em> (feminine/neuter/plural). Note the plural row — kein works fine in the plural (<em>Wir haben keine Freunde</em>), which surprises English speakers who expect "no" to be singular-only. One trap to kill early: <em>Ich habe nicht ein Auto</em> is wrong as a default negation — use <em>kein Auto</em>. (<em>Nicht ein</em> exists but means "not ONE car", an emphatic contrast, not a normal sentence.)</p>
+<h2>Where nicht goes: before what it negates</h2>
+<p>nicht's rule is positional: it stands <strong>directly before the element it negates</strong>. Adjective? <em>nicht neu</em>. Adverb? <em>nicht gut</em>. Definite noun? <em>nicht den Film</em> ("not the FILM" — as opposed to something else). When nothing specific is targeted and the whole clause is negated, nicht goes to the <strong>end</strong>: <em>Sie kommt heute nicht.</em> Three finer points. First, with separable verbs it sits <em>before</em> the prefix: <em>Ich rufe dich morgen <strong>nicht</strong> an</em> — never <em>an nicht</em>. Second, in the perfect tense it goes before the participle: <em>Er hat heute <strong>nicht</strong> gearbeitet.</em> Third, with modal + infinitive it precedes the infinitive: <em>Ich kann <strong>nicht</strong> kommen.</em> The logic is one rule seen three ways: nicht never crosses the verb's sentence-final elements — it waits in front of them.</p>
+<h2>Predicate nouns and adjectives: the classic mix-up</h2>
+<p>With sein, learners guess wrong constantly. A predicate <strong>noun</strong> with an indefinite article takes kein: <em>Er ist <strong>kein</strong> Lehrer</em> (he's no teacher), <em>Sie ist <strong>keine</strong> Ärztin</em>. A predicate <strong>adjective</strong> takes nicht: <em>Das Auto ist <strong>nicht</strong> neu</em>. The noun/adjective distinction is the whole game — drill it until the choice is instant. Predicate nouns with a <em>definite</em> article or possessive take nicht: <em>Er ist <strong>nicht</strong> der Lehrer</em>, <em>Das sind <strong>nicht</strong> meine Freunde</em>. And proper names are always nicht: <em>Das ist <strong>nicht</strong> Berlin</em>, <em>Ich bin <strong>nicht</strong> müde</em>.</p>
+<h2>Beyond the pair: nie, nichts, niemand</h2>
+<p>German has dedicated negative words that replace nicht + something: <em>nichts</em> (nothing — not "nicht etwas"), <em>niemand</em> (nobody), <em>nie/niemals</em> (never), <em>nirgendwo/nirgends</em> (nowhere), <em>weder … noch</em> (neither … nor). <em>Ich verstehe nichts</em> is the idiomatic "I don't understand anything" — <em>Ich verstehe nicht</em> ("I don't understand", period) is different. These words are already negative, so they never combine with nicht: <em>Ich sehe nichts</em> ("I see nothing") is correct; <em>Ich sehe nicht nichts</em> is a double negative and wrong in standard German. For emphasis, German stacks adverbs instead: <em>gar nicht</em> (not at all), <em>überhaupt nicht</em> (not at all), <em>keineswegs</em> (by no means).</p>
+<h2>The five classic learner errors</h2>
+<p><strong>1. "Ich habe nicht ein Auto."</strong> → <em>Ich habe kein Auto.</em> kein replaces the indefinite article; don't negate the article with nicht. <strong>2. "Er ist kein neu."</strong> → <em>Er ist nicht neu.</em> Adjectives never take kein. <strong>3. "Ich rufe dich morgen an nicht."</strong> → <em>… nicht an.</em> nicht precedes the separable prefix. <strong>4. "Das ist kein mein Buch."</strong> → <em>Das ist nicht mein Buch.</em> Possessives negate with nicht. <strong>5. "Sie kommt nicht heute."</strong> → usually <em>Sie kommt heute nicht</em> — sentence-final for whole-clause negation (the "nicht heute" order is only a contrastive emphasis: "not TODAY").</p>
+<h2>Study strategy</h2>
+<p>Start with the builder: run each pattern with three different nouns (masculine, feminine, neuter) and read the "Why" line every time — the reason matters more than the sentence. Then take the quiz, and for every wrong answer, write the correct sentence by hand; the physical act fixes placement faster than re-reading. The quiz distractors are the five classic errors above, so 15/15 means all of them are closed. As a capstone, negate ten affirmative sentences from your German textbook's current chapter and check them against the rule table on this page. In the Fachsprachenprüfung (medical German), negation precision matters — <em>kein Fieber</em> vs <em>nicht fieberhaft</em> is a real documentation distinction — so this tool feeds directly into the medical German batch later in this series.</p>
+
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>What is the difference between nicht and kein?</h3><p>kein negates an indefinite noun by replacing ein/eine (Ich habe kein Auto = I have no car). nicht negates everything else — verbs, adjectives, adverbs, definite nouns, proper names, possessives (Er kommt nicht, nicht neu, nicht den Film).</p></div><div class="faq-item"><h3>Where does nicht go in a German sentence?</h3><p>Directly before the element it negates (nicht neu, nicht gut). For whole-clause negation it goes at the end: Sie kommt heute nicht. With separable verbs it sits before the prefix: Ich rufe dich morgen nicht an.</p></div><div class="faq-item"><h3>Is it &#x27;Ich habe kein Auto&#x27; or &#x27;Ich habe nicht ein Auto&#x27;?</h3><p>&#x27;Ich habe kein Auto.&#x27; kein replaces the indefinite article — nicht never stands before ein/eine in normal negation. &#x27;Nicht ein&#x27; only appears in emphatic contrasts (&#x27;not ONE car&#x27;).</p></div><div class="faq-item"><h3>Why &#x27;keinen Hund&#x27; but &#x27;kein Auto&#x27;?</h3><p>kein declines like ein. Hund is masculine accusative (Ich habe einen Hund → keinen Hund); Auto is neuter accusative (Ich habe ein Auto → kein Auto). Same endings you learned in the case tools.</p></div><div class="faq-item"><h3>Can kein be used in the plural?</h3><p>Yes: keine in all plural cases except dative (keinen Kindern). &#x27;Wir haben keine Freunde&#x27; = we have no friends. kein is the plural equivalent of the indefinite article, which English doesn&#x27;t have.</p></div><div class="faq-item"><h3>What about nichts, niemand and nie?</h3><p>These are standalone negative words — they replace nicht + etwas/jemand/nie. They are never combined with nicht (no double negatives in standard German). For emphasis use gar nicht, überhaupt nicht or keineswegs.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+var KEIN = { "m": {"nom":"kein","acc":"keinen"}, "f": {"nom":"keine","acc":"keine"}, "n": {"nom":"kein","acc":"kein"} };
+var DEFACC = { "m":"den", "f":"die", "n":"das" };
+function keinForm(gender, kase){ return KEIN[gender][kase]; }
+function buildNegation(pattern, word, gender, adj, adv){
+  if(pattern === "indef-obj") return { s: "Ich habe " + keinForm(gender,"acc") + " " + word + ".",
+    r: "Indefinite accusative object: kein takes the slot of ein/eine (" + keinForm(gender,"acc") + " before " + ({m:"masculine",f:"feminine",n:"neuter"}[gender]) + " " + word + ")." };
+  if(pattern === "def-obj") return { s: "Ich sehe " + DEFACC[gender] + " " + word + " nicht.",
+    r: "Definite noun: kein cannot replace the definite article, so the whole clause is negated with nicht at the end." };
+  if(pattern === "pred-noun"){ var subj = gender === "f" ? "Sie" : "Er";
+    return { s: subj + " ist " + keinForm(gender,"nom") + " " + word + ".",
+    r: "Predicate noun with an indefinite article: kein in the nominative (" + keinForm(gender,"nom") + ")." }; }
+  if(pattern === "pred-adj") return { s: "Das Auto ist nicht " + adj + ".",
+    r: "Adjectives are negated with nicht placed directly before the adjective — kein only works with nouns." };
+  if(pattern === "adverb") return { s: "Er kommt " + adv + " nicht.",
+    r: "Adverb of time, whole-clause negation: nicht goes at the end, after the adverb." };
+  return { s: "Wir spielen nicht.",
+    r: "No object or adverb to target: nicht negates the whole action and sits at the very end." };
+}
+function cap(w){ return w.charAt(0).toUpperCase() + w.slice(1); }
+document.getElementById("neg-pattern").addEventListener("change", function(){
+  var p = this.value;
+  document.getElementById("word-field").style.display = (p==="pred-adj"||p==="adverb"||p==="verb-only") ? "none" : "";
+  document.getElementById("gender-field").style.display = (p==="pred-adj"||p==="adverb"||p==="verb-only") ? "none" : "";
+  document.getElementById("adj-field").style.display = (p==="pred-adj") ? "" : "none";
+  document.getElementById("adv-field").style.display = (p==="adverb") ? "" : "none";
+  var labels = {"indef-obj":"Noun (with gender):","def-obj":"Noun (with gender):","pred-noun":"Noun (profession, with gender):"};
+  document.getElementById("neg-word-label").textContent = labels[p] || "Noun:";
+});
+document.getElementById("calc-btn").addEventListener("click", function(){
+  var p = document.getElementById("neg-pattern").value;
+  var w = cap((document.getElementById("neg-word").value || "Auto").trim());
+  var g = document.getElementById("neg-gender").value;
+  var a = (document.getElementById("neg-adj").value || "neu").trim();
+  var adv = (document.getElementById("neg-adv").value || "heute").trim();
+  var out = buildNegation(p, w, g, a, adv);
+  var r = document.getElementById("result");
+  r.style.display = "block";
+  r.innerHTML = '<div class="note"><strong>' + out.s + '</strong></div>' +
+    '<p style="margin-top:12px">Why: ' + out.r + '</p>';
+});
+var ITEMS = [{"s": "Ich habe ___ Auto. (I don't have a car.)", "o": ["kein", "nicht", "keines"], "c": "kein", "e": "\"Ich habe kein Auto.\" — kein replaces the indefinite article ein before a neuter noun (Auto is neuter). nicht never stands before an indefinite article."}, {"s": "Das ist ___ mein Buch. (That is not my book.)", "o": ["nicht", "kein", "keine"], "c": "nicht", "e": "\"Das ist nicht mein Buch.\" — possessive pronouns (mein, dein, sein …) are negated with nicht, never kein. kein only replaces ein/eine."}, {"s": "Er ist ___ Lehrer, er ist Arzt. (He is not a teacher.)", "o": ["kein", "nicht", "keiner"], "c": "kein", "e": "\"Er ist kein Lehrer.\" — predicate nouns with an indefinite article take kein (masculine nominative: kein)."}, {"s": "Sie kommt heute ___. (She isn't coming today.)", "o": ["nicht", "kein", "nein"], "c": "nicht", "e": "\"Sie kommt heute nicht.\" — negating the whole clause puts nicht at the end of the sentence, after the adverb."}, {"s": "Wir haben ___ Zeit. (We have no time.)", "o": ["keine", "kein", "nicht"], "c": "keine", "e": "\"Wir haben keine Zeit.\" — Zeit is feminine, so kein becomes keine (feminine accusative)."}, {"s": "Das Auto ist ___ neu. (The car is not new.)", "o": ["nicht", "kein", "keinen"], "c": "nicht", "e": "\"Das Auto ist nicht neu.\" — adjectives are negated with nicht, placed directly before the adjective."}, {"s": "Ich sehe den Film ___. (I don't watch the film.)", "o": ["nicht", "kein", "keinen"], "c": "nicht", "e": "\"Ich sehe den Film nicht.\" — definite nouns (den Film) are negated with nicht at the end; kein is only for indefinite nouns."}, {"s": "Er trinkt ___ Kaffee. (He doesn't drink coffee.)", "o": ["keinen", "kein", "nicht"], "c": "keinen", "e": "\"Er trinkt keinen Kaffee.\" — Kaffee is masculine, and here it's the accusative object, so kein becomes keinen."}, {"s": "Sie singt ___ gut. (She doesn't sing well.)", "o": ["nicht", "kein", "keine"], "c": "nicht", "e": "\"Sie singt nicht gut.\" — nicht negates the adverb/adjective gut by standing directly before it."}, {"s": "Das ist ___ wahr. (That is not true.)", "o": ["nicht", "kein", "nein"], "c": "nicht", "e": "\"Das ist nicht wahr.\" — predicate adjectives take nicht. \"Kein wahr\" is impossible — kein only works with nouns."}, {"s": "Wir haben ___ Hund. (We don't have a dog.)", "o": ["keinen", "kein", "nicht"], "c": "keinen", "e": "\"Wir haben keinen Hund.\" — Hund is masculine accusative object → keinen (masculine accusative of kein)."}, {"s": "Er arbeitet ___ fleißig. (He doesn't work diligently.)", "o": ["nicht", "kein", "keinen"], "c": "nicht", "e": "\"Er arbeitet nicht fleißig.\" — adverbs of manner are negated with nicht placed right before them."}, {"s": "Das sind ___ meine Freunde. (Those are not my friends.)", "o": ["nicht", "keine", "kein"], "c": "nicht", "e": "\"Das sind nicht meine Freunde.\" — plural nouns with a possessive take nicht. (Without a possessive it would be \"Das sind keine Freunde.\")"}, {"s": "Sie hat ___ Geld. (She has no money.)", "o": ["kein", "nicht", "keinen"], "c": "kein", "e": "\"Sie hat kein Geld.\" — Geld is neuter accusative; the indefinite-article slot takes kein."}, {"s": "Ich rufe dich morgen ___ an. (I won't call you tomorrow.)", "o": ["nicht", "kein", "keinen"], "c": "nicht", "e": "\"Ich rufe dich morgen nicht an.\" — in separable-verb sentences, nicht goes BEFORE the prefix at the end, never after it."}];
+var qi = 0, qs = 0, qa = null;
+function showQ(){
+  qa = ITEMS[qi];
+  document.getElementById("quiz-sentence").textContent = qa.s;
+  document.getElementById("qcount").textContent = "Round " + (qi+1) + "/" + ITEMS.length;
+  document.getElementById("qbar").style.width = (qi/ITEMS.length*100) + "%";
+  var box = document.getElementById("quiz-options"); box.innerHTML = "";
+  var fb = document.getElementById("quiz-feedback"); fb.className = ""; fb.style.display = "none";
+  document.getElementById("quiz-next").style.display = "none";
+  qa.o.forEach(function(opt){
+    var b = document.createElement("button");
+    b.className = "quiz-btn"; b.textContent = opt;
+    b.addEventListener("click", function(){ answer(opt, b); });
+    box.appendChild(b);
+  });
+}
+function answer(opt, btn){
+  var fb = document.getElementById("quiz-feedback");
+  var btns = document.querySelectorAll("#quiz-options .quiz-btn");
+  btns.forEach(function(x){ x.disabled = true; });
+  if(opt === qa.c){
+    qs++; btn.className = "quiz-btn correct";
+    fb.className = "ok"; fb.innerHTML = "<strong>Correct.</strong> " + qa.e;
+  } else {
+    btn.className = "quiz-btn wrong";
+    fb.className = "no"; fb.innerHTML = "<strong>Not quite.</strong> Correct answer: <strong>" + qa.c + "</strong>. " + qa.e;
+    btns.forEach(function(x){ if(x.textContent === qa.c) x.className = "quiz-btn correct"; });
+  }
+  document.getElementById("qscore").textContent = "Score: " + qs;
+  if(qi + 1 < ITEMS.length){ document.getElementById("quiz-next").style.display = ""; }
+  else {
+    var fb2 = document.getElementById("quiz-summary");
+    var msg = qs === 15 ? "Perfect 15/15 — negation mastered!" :
+      qs >= 12 ? "Strong: " + qs + "/15. Re-run the ones you missed." :
+      "You scored " + qs + "/15. Read the kein/nicht table below, then retry.";
+    fb2.innerHTML = '<div class="note" style="margin-top:16px"><strong>Done.</strong> ' + msg + '</div>' +
+      '<button type="button" class="try-row" style="margin-top:12px" onclick="location.reload()">Retry quiz</button>';
+  }
+}
+function nextQ(){ qi++; showQ(); }
+showQ();
+
+
+</script>
+</body>
+</html>
