@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Comparative &amp; Superlative Builder + Quiz | Bayzubaan</title>
+<meta name="description" content="Build German comparatives and superlatives instantly: umlaut rules, irregulars like gut → besser, e-drop adjectives. 15-round quiz with instant feedback.">
+<link rel="canonical" href="https://bayzubaan.com/tools/comparative-superlative-builder/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="German Comparative &amp; Superlative Builder + Quiz">
+<meta property="og:description" content="Master German Komparativ and Superlativ: interactive builder + 15-round quiz.">
+<meta property="og:url" content="https://bayzubaan.com/tools/comparative-superlative-builder/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="German Comparative &amp; Superlative Builder + Quiz">
+<meta name="twitter:description" content="Master German Komparativ and Superlativ: interactive builder + 15-round quiz.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you form the comparative in German?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Add -er to the adjective: schnell → schneller. One-syllable adjectives with a, o, or u usually add an umlaut: alt → älter, groß → größer. Adjectives in -euer, -el, -er drop the e: teuer → teurer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you form the superlative in German?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In predicative position use am + -sten: am schnellsten, am größten. Before a noun, use the declined form: der schnellste Zug, die größte Stadt. Irregulars: am besten, am liebsten, am meisten, am höchsten, am nächsten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which German adjectives are irregular in comparison?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Six must be memorised: gut → besser → am besten, gern → lieber → am liebsten, viel → mehr → am meisten, hoch → höher → am höchsten, nah → näher → am nächsten. The e-droppers (teuer → teurer, dunkel → dunkler) follow a pattern rather than being fully irregular."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When do you use 'als' and when 'wie' in comparisons?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use 'als' with the comparative (größer als — bigger than) and 'wie' with the positive (so groß wie — as big as). Mixing these up is the most common comparison error among English speakers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do comparative adjectives need umlauts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One-syllable adjectives with a, o, or u usually do: alt → älter, jung → jünger, kalt → kälter. Longer adjectives do not (interessanter). A few one-syllable adjectives also skip it (froher, voller)."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>Komparativ &amp; Superlativ: Comparative &amp; Superlative Builder and Quiz</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">Master German Komparativ and Superlativ: interactive builder + 15-round quiz.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+
+<h2>Komparativ &amp; Superlativ Builder</h2>
+<div class="field">
+<label for="adj-input">Type a German adjective (e.g. schnell, gut, groß):</label>
+<input id="adj-input" type="text" placeholder="schnell" autocomplete="off">
+</div>
+<button id="calc-btn" type="button">Build forms</button>
+<div id="result"></div>
+<div class="try-row">
+<button type="button" data-try="schnell">schnell</button>
+<button type="button" data-try="gut">gut</button>
+<button type="button" data-try="groß">groß</button>
+<button type="button" data-try="teuer">teuer</button>
+<button type="button" data-try="hoch">hoch</button>
+</div>
+<h2 style="margin-top:28px">Quiz: 15 rounds</h2>
+<div class="progress"><div id="qbar"></div></div>
+<div class="quiz-meta"><span id="qcount">Round 1/15</span><span id="qscore">Score: 0</span></div>
+<div id="quiz-sentence" style="font-size:1.15rem;font-weight:600;margin-bottom:14px"></div>
+<div id="quiz-options"></div>
+<div id="quiz-feedback"></div>
+<button type="button" id="quiz-next" style="display:none;margin-top:12px" onclick="nextQ()">Next question</button>
+<div id="quiz-summary"></div>
+
+</div>
+
+<article class="prose">
+
+<h2>How comparatives and superlatives work in German</h2>
+<p>German adjectives have three <strong>degrees of comparison</strong>: the positive (schnell), the comparative (schneller — "faster"), and the superlative (am schnellsten — "fastest"). The good news is that the basic pattern is completely regular: add <strong>-er</strong> for the comparative and use <strong>am … -sten</strong> for the superlative. So <em>klein</em> becomes <em>kleiner</em> and <em>am kleinsten</em>. The irregularities you need to learn are the umlaut rule, a handful of e-drops, and six truly irregular adjectives — all covered in the builder above.</p>
+<h2>The umlaut rule</h2>
+<p>Many <strong>one-syllable adjectives containing a, o, or u</strong> add an umlaut in the comparative and superlative: <em>alt → älter → am ältesten</em>, <em>jung → jünger</em>, <em>kalt → kälter</em>, <em>warm → wärmer</em>, <em>lang → länger</em>, <em>stark → stärker</em>, <em>groß → größer → am größten</em>. Multi-syllable adjectives almost never take an umlaut (<em>interessant → interessanter</em>), and a few one-syllable adjectives resist it too (<em>froh → froher</em>, <em>voll → voller</em>). When in doubt, check the builder — it encodes the standard umlaut list.</p>
+<h2>E-dropping adjectives</h2>
+<p>Adjectives ending in <strong>-euer, -el, or -er</strong> drop the middle e in the comparative to keep pronunciation smooth: <em>teuer → teurer</em> (never "teuerer"), <em>dunkel → dunkler</em>, <em>sauer → saurer</em>. This is one of the most common spelling mistakes learners make — writing the e back in immediately marks you as a non-native.</p>
+<h2>The six irregulars</h2>
+<p>These must be memorised: <em>gut → besser → am besten</em>, <em>gern → lieber → am liebsten</em>, <em>viel → mehr → am meisten</em>, <em>hoch → höher → am höchsten</em>, <em>nah → näher → am nächsten</em>. Note the spelling quirks: <em>hoch</em> loses its c before the vowel, and <em>nah</em> changes its stem entirely. These are among the most frequent words in German, so drill them until they are automatic.</p>
+<h2>Comparative sentences: "als" vs "wie"</h2>
+<p>A classic learner error is confusing <strong>als</strong> and <strong>wie</strong>. The rule is simple: <em>als</em> goes with the comparative (<em>größer als</em> — "bigger than"), <em>wie</em> goes with the positive (<em>so groß wie</em> — "as big as"). The superlative takes <strong>am … -sten</strong> in predicative position (<em>Dieser Zug ist am schnellsten</em>) but declines normally as an attributive adjective: <em>der schnellste Zug</em>, <em>die größte Stadt</em>, <em>das beste Hotel</em>.</p>
+<h2>Attributive forms decline too</h2>
+<p>When the comparative or superlative stands before a noun, it takes normal adjective endings on top of the comparison ending: <em>ein schnellerer Zug</em>, <em>die schnellste Verbindung</em>, <em>einem älteren Herrn</em>. The comparison stem (schneller-, schnellst-) behaves like any other adjective stem — just apply the definite/indefinite/none endings you already know from the adjective declension drills.</p>
+<h2>Common mistakes to avoid</h2>
+<p><strong>1. "Teuerer" instead of "teurer".</strong> The e-drop rule catches almost every learner once. Build the habit: any adjective ending in -euer, -el, or -er shortens in the comparative — <em>teuer → teurer</em>, <em>dunkel → dunkler</em>, <em>sauer → saurer</em>. <strong>2. Missing the umlaut.</strong> Writing "alter" instead of "älter" is the classic tell of an English speaker. When you learn a new one-syllable adjective, learn its comparative form in the same breath. <strong>3. "Als" with "wie".</strong> <em>Größer wie</em> is wrong; <em>größer als</em> is right. <em>So groß wie</em> is right. Say the pair out loud ten times and it sticks. <strong>4. Double superlatives.</strong> "Am bestensten" does not exist — the superlative is already the maximum. <strong>5. Forgetting to decline attributive forms.</strong> "Der schnellste Zug" needs that -e on schnellste; a bare "schnellst Zug" is a grammar error, not a shortcut.</p>
+<h2>Comparatives in everyday German</h2>
+<p>These patterns appear constantly in real life, which makes them high-value to automate. At the doctor's: <em>"Es tut mehr weh"</em> (it hurts more), <em>"Die Schmerzen sind schlimmer geworden"</em> (the pain got worse). Shopping: <em>"Haben Sie etwas Billigeres?"</em> (do you have something cheaper?), <em>"Das ist das beste Angebot"</em> (that's the best offer). At work: <em>"Könnten Sie das bitte etwas langsamer erklären?"</em> (could you explain that a bit more slowly?). With friends: <em>"Ich hätte lieber den roten"</em> (I'd prefer the red one), <em>"Das war der schönste Abend seit langem"</em> (that was the nicest evening in a long time). Notice how naturally <em>lieber</em> expresses preference — Germans reach for it instead of the clunky "ich bevorzuge". Also note <em>mehr</em> and <em>weniger</em> do the heavy lifting for quantities: <em>"mehr Zeit"</em>, <em>"weniger Stress"</em>. Practise by narrating your day in comparisons: your coffee was <em>stärker</em> than yesterday's, the queue was <em>länger</em>, and the weather is definitely <em>schöner</em>.</p>
+<h2>Study strategy</h2>
+<p>Start with the builder: type the 20 most common adjectives (schnell, gut, groß, klein, neu, alt, jung, lang, kurz, teuer, billig, warm, kalt, schön, wichtig) and say each trio aloud. Then run the 15-round quiz twice — once open-book using the builder for anything uncertain, once closed. Pay special attention to items you miss twice; those are the adjectives your brain hasn't encoded yet. Common real-world wins from mastering this: describing symptoms to a doctor (<em>stärker</em>, <em>schlimmer</em>), shopping comparisons (<em>billiger</em>, <em>besser</em>), and polite preferences (<em>lieber</em>, <em>am liebsten</em>).</p>
+
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>How do you form the comparative in German?</h3><p>Add -er to the adjective: schnell → schneller. One-syllable adjectives with a, o, or u usually add an umlaut: alt → älter, groß → größer. Adjectives in -euer, -el, -er drop the e: teuer → teurer.</p></div><div class="faq-item"><h3>How do you form the superlative in German?</h3><p>In predicative position use am + -sten: am schnellsten, am größten. Before a noun, use the declined form: der schnellste Zug, die größte Stadt. Irregulars: am besten, am liebsten, am meisten, am höchsten, am nächsten.</p></div><div class="faq-item"><h3>Which German adjectives are irregular in comparison?</h3><p>Six must be memorised: gut → besser → am besten, gern → lieber → am liebsten, viel → mehr → am meisten, hoch → höher → am höchsten, nah → näher → am nächsten. The e-droppers (teuer → teurer, dunkel → dunkler) follow a pattern rather than being fully irregular.</p></div><div class="faq-item"><h3>When do you use &#x27;als&#x27; and when &#x27;wie&#x27; in comparisons?</h3><p>Use &#x27;als&#x27; with the comparative (größer als — bigger than) and &#x27;wie&#x27; with the positive (so groß wie — as big as). Mixing these up is the most common comparison error among English speakers.</p></div><div class="faq-item"><h3>Do comparative adjectives need umlauts?</h3><p>One-syllable adjectives with a, o, or u usually do: alt → älter, jung → jünger, kalt → kälter. Longer adjectives do not (interessanter). A few one-syllable adjectives also skip it (froher, voller).</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+const IRREG = {
+"gut":["besser","am besten","irregular stem: gut → bess-"],
+"gern":["lieber","am liebsten","irregular stem: gern → lieb-"],
+"viel":["mehr","am meisten","irregular stem: viel → mehr-/meist-"],
+"hoch":["höher","am höchsten","irregular: ch → h before vowel; umlaut ö"],
+"nah":["näher","am nächsten","irregular stem: nah → näh-/nächst-"],
+"teuer":["teurer","am teuersten","the -e- of -euer drops: teurer"],
+"dunkel":["dunkler","am dunkelsten","the -e- of -el drops: dunkler"],
+"sauer":["saurer","am sauersten","the -e- of -er drops: saurer"]
+};
+const UMLAUT = ["alt","jung","kalt","warm","lang","stark","krank","arm","hart","scharf","groß","kurz","dumm","gesund","klug","groß","nass","voll"];
+function umlautStem(s){return s.replace("a","ä").replace("o","ö").replace("u","ü").replace("A","Ä").replace("O","Ö").replace("U","Ü");}
+function supForm(stem){if(/[ß]$/.test(stem)) return "am " + stem + ((stem==="heiß"||stem==="süß"||stem==="weiß") ? "esten" : "ten"); return "am " + stem + (/([dtsz]|sch)$/.test(stem) ? "esten" : "sten");}
+function buildForms(adj){
+  adj = adj.trim().toLowerCase();
+  if(!adj) return null;
+  if(IRREG[adj]) return {base:adj, comp:IRREG[adj][0], sup:IRREG[adj][1], note:IRREG[adj][2]};
+  let stem, note;
+  if(UMLAUT.indexOf(adj) !== -1){
+    stem = umlautStem(adj);
+    note = "one-syllable adjective: adds an umlaut (a→ä, o→ö, u→ü) + -er / am …-sten";
+  } else {
+    stem = adj;
+    note = "regular: + -er / am …-sten, no umlaut";
+  }
+  return {base:adj, comp:stem+"er", sup:supForm(stem), note:note};
+}
+function runBuild(){
+  const f = buildForms(document.getElementById("adj-input").value);
+  const r = document.getElementById("result");
+  if(!f){ r.style.display="block"; r.innerHTML = '<div class="note">Type an adjective first.</div>'; return; }
+  r.style.display = "block";
+  r.innerHTML = "<table><tr><th>Form</th><th>Example</th></tr>"
+    + "<tr><td>Positive</td><td><strong>" + f.base + "</strong> — so " + f.base + " wie</td></tr>"
+    + "<tr><td>Comparative</td><td><strong>" + f.comp + "</strong> — " + f.comp + " als …</td></tr>"
+    + "<tr><td>Superlative</td><td><strong>" + f.sup + "</strong></td></tr></table>"
+    + '<div class="note">' + f.note + "</div>";
+}
+document.getElementById("calc-btn").addEventListener("click", runBuild);
+document.querySelectorAll(".try-row button").forEach(function(b){
+  b.addEventListener("click", function(){ document.getElementById("adj-input").value = b.getAttribute("data-try"); runBuild(); });
+});
+const ITEMS = [{\'s\': \'Mein Bruder ist ___ (alt) als ich.\', \'o\': [\'älter\', \'alter\', \'am ältesten\'], \'c\': \'älter\', \'e\': \'Comparative of alt: one-syllable adjectives with a take an umlaut → älter.\'}, {\'s\': \'Das ist der ___ (schnell) Zug der Welt.\', \'o\': [\'schnellste\', \'schneller\', \'am schnellsten\'], \'c\': \'am schnellsten\', \'e\': \'Superlative with attributive use needs am + -sten: am schnellsten.\'}, {\'s\': \'Heute ist es ___ (warm) als gestern.\', \'o\': [\'wärmer\', \'warmer\', \'am wärmsten\'], \'c\': \'wärmer\', \'e\': \'warm takes an umlaut in the comparative: wärmer.\'}, {\'s\': \'Das Wetter heute ist ___ (gut).\', \'o\': [\'besser\', \'guter\', \'am besten\'], \'c\': \'besser\', \'e\': \'gut is irregular: besser, am besten.\'}, {\'s\': \'Das ist die ___ (groß) Stadt Deutschlands.\', \'o\': [\'größte\', \'größer\', \'am größten\'], \'c\': \'am größten\', \'e\': \'Attributive superlative → am + -sten, with umlaut: am größten.\'}, {\'s\': \'Dieses Restaurant ist ___ (teuer) als das andere.\', \'o\': [\'teurer\', \'teuerer\', \'am teuersten\'], \'c\': \'teurer\', \'e\': \'teuer drops its -e- in the comparative: teurer (not teuerer).\'}, {\'s\': \'Ich trinke Kaffee ___ (gern) als Tee.\', \'o\': [\'lieber\', \'gerner\', \'am liebsten\'], \'c\': \'lieber\', \'e\': \'gern is irregular: lieber, am liebsten.\'}, {\'s\': \'Der Winter war ___ (kalt) als erwartet.\', \'o\': [\'kälter\', \'kalter\', \'am kältesten\'], \'c\': \'kälter\', \'e\': \'kalt takes an umlaut: kälter.\'}, {\'s\': \'Sie ist die ___ (jung) Spielerin im Team.\', \'o\': [\'jüngste\', \'jünger\', \'am jüngsten\'], \'c\': \'am jüngsten\', \'e\': \'Superlative: am jüngsten (umlaut jü-).\'}, {\'s\': \'Mein Deutsch wird ___ (gut).\', \'o\': [\'besser\', \'guter\', \'am besten\'], \'c\': \'besser\', \'e\': \'Irregular again: gut → besser. "wird besser" = is getting better.\'}, {\'s\': \'Der Berg ist ___ (hoch).\', \'o\': [\'höher\', \'hocher\', \'am höchsten\'], \'c\': \'höher\', \'e\': \'hoch is irregular: höher, am höchsten.\'}, {\'s\': \'Das Zimmer wird ___ (dunkel).\', \'o\': [\'dunkler\', \'dunkeler\', \'am dunkelsten\'], \'c\': \'dunkler\', \'e\': \'dunkel drops the -e-: dunkler.\'}, {\'s\': \'Wer ist ___ (stark) — du oder ich?\', \'o\': [\'stärker\', \'starker\', \'am stärksten\'], \'c\': \'stärker\', \'e\': \'stark takes an umlaut: stärker.\'}, {\'s\': \'Das ist ___ (viel) Geld!\', \'o\': [\'mehr\', \'vieler\', \'am meisten\'], \'c\': \'mehr\', \'e\': \'viel is irregular: mehr, am meisten.\'}, {\'s\': \'Berlin ist ___ (nah) an Hamburg als München.\', \'o\': [\'näher\', \'naher\', \'am nächsten\'], \'c\': \'näher\', \'e\': \'nah is irregular: näher, am nächsten.\'}];
+let qi = 0, qs = 0, qa = null;
+function showQ(){
+  qa = ITEMS[qi];
+  document.getElementById("quiz-sentence").textContent = qa.s;
+  document.getElementById("qcount").textContent = "Round " + (qi+1) + "/" + ITEMS.length;
+  document.getElementById("qbar").style.width = (qi/ITEMS.length*100) + "%";
+  const box = document.getElementById("quiz-options"); box.innerHTML = "";
+  const fb = document.getElementById("quiz-feedback"); fb.className = ""; fb.style.display = "none";
+  document.getElementById("quiz-next").style.display = "none";
+  qa.o.forEach(function(opt){
+    const b = document.createElement("button");
+    b.className = "quiz-btn"; b.textContent = opt;
+    b.addEventListener("click", function(){ answer(opt, b); });
+    box.appendChild(b);
+  });
+}
+function answer(opt, btn){
+  const fb = document.getElementById("quiz-feedback");
+  const btns = document.querySelectorAll("#quiz-options .quiz-btn");
+  btns.forEach(function(x){ x.disabled = true; if(x.textContent === qa.c) x.classList.add("correct"); });
+  if(opt === qa.c){ qs++; fb.className = "ok"; fb.textContent = "✓ Correct! " + qa.e; }
+  else { btn.classList.add("wrong"); fb.className = "no"; fb.textContent = "✗ The answer is “" + qa.c + "”. " + qa.e; }
+  document.getElementById("qscore").textContent = "Score: " + qs;
+  document.getElementById("quiz-next").style.display = "block";
+  document.getElementById("quiz-next").textContent = (qi + 1 < ITEMS.length) ? "Next question" : "See results";
+}
+function nextQ(){
+  qi++;
+  if(qi < ITEMS.length) showQ();
+  else {
+    document.getElementById("quiz-sentence").textContent = "";
+    document.getElementById("quiz-options").innerHTML = "";
+    document.getElementById("quiz-feedback").style.display = "none";
+    document.getElementById("quiz-next").style.display = "none";
+    document.getElementById("qbar").style.width = "100%";
+    document.getElementById("qcount").textContent = "Done";
+    document.getElementById("quiz-summary").innerHTML =
+      '<div class="note">You scored <strong>' + qs + "/" + ITEMS.length + "</strong>." +
+      (qs === ITEMS.length ? " Perfect — Komparativ and Superlativ mastered!" :
+       qs >= 11 ? " Strong work! Review the umlaut and irregular rules above." :
+       " Keep practising — re-read the umlaut and irregular adjective lists.") + "</div>";
+  }
+}
+showQ();
+
+
+</script>
+</body>
+</html>
