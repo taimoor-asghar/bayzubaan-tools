@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anamnesis Phrase Builder — German History-Taking Frames | Bayzubaan</title>
+<meta name="description" content="25 German history-taking frames with swappable slots: build a complete anamnesis script for the Fachsprachenprüfung, copy it, and quiz yourself.">
+<link rel="canonical" href="https://bayzubaan.com/tools/anamnesis-phrase-builder/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Anamnesis Phrase Builder — German History-Taking Frames">
+<meta property="og:description" content="Build a complete German anamnesis: 25 sentence frames with symptom/condition slots, script builder, and a 12-round quiz.">
+<meta property="og:url" content="https://bayzubaan.com/tools/anamnesis-phrase-builder/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Anamnesis Phrase Builder — German History-Taking Frames">
+<meta name="twitter:description" content="Build a complete German anamnesis: 25 sentence frames with symptom/condition slots, script builder, and a 12-round quiz.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between Beschwerden and Symptome?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Beschwerden is what the patient reports (their complaints); Symptome is the more technical term. In the anamnesis, say Beschwerden — it is the neutral clinical word examiners expect."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does this tool use frames with slots instead of fixed phrases?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One frame with swappable slots generates dozens of correct questions. Seit wann haben Sie {symptom}? covers pain, nausea, dizziness and more — learning the frame multiplies your vocabulary instead of just adding to it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I ask Rauchen Sie? so directly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — asked directly and without judgement, it is the standard clinical phrasing. The key is the follow-up (wenn ja, wie viel?), which turns a yes/no question into clinically useful information."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does bestehen mean in Bestehen Allergien?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bestehen means to exist or persist — Bestehen Allergien? is the formal register for Do allergies exist? Examiners expect this formal phrasing rather than the learner's Haben Sie Allergien? in the allergy history."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I close an anamnesis properly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With the two catch-all questions: Gibt es noch etwas, das ich wissen sollte? (anything else I should know) and Haben Sie noch Fragen an mich? (any questions for me). Patients often reveal the real concern at this point — never skip the closer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this enough for the Fachsprachenprüfung anamnesis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "These 25 frames cover the complete arc the FSP's first part tests: opening, pain history, past history, medications, allergies, social history, review of systems, closing. Fluency with these frames plus the vocabulary tools handles the history-taking confidently."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>Anamnesis Phrase Builder: German History-Taking Frames</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">Build a complete German anamnesis: 25 sentence frames with symptom/condition slots, script builder, and a 12-round quiz.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+
+<h2>Build your anamnesis: pick a frame, fill the slots</h2>
+<p style="margin-bottom:16px">25 history-taking frames across 8 anamnesis sections. <strong>Choose a section</strong>, fill each frame's slots, and copy the result into your script — or test yourself with the 12-round quiz.</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px"><button type="button" class="try-row" style="margin:0" onclick="setCat(0)">Eröffnung</button><button type="button" class="try-row" style="margin:0" onclick="setCat(1)">Schmerzanamnese</button><button type="button" class="try-row" style="margin:0" onclick="setCat(2)">Vorerkrankungen</button><button type="button" class="try-row" style="margin:0" onclick="setCat(3)">Medikamente</button><button type="button" class="try-row" style="margin:0" onclick="setCat(4)">Allergien</button><button type="button" class="try-row" style="margin:0" onclick="setCat(5)">Sozialanamnese</button><button type="button" class="try-row" style="margin:0" onclick="setCat(6)">Systemabfrage</button><button type="button" class="try-row" style="margin:0" onclick="setCat(7)">Abschluss</button></div>
+<div id="frame-list"></div>
+<h2 style="margin-top:24px">Your anamnesis script</h2>
+<p style="margin-bottom:12px;color:#64748b">Frames you add appear here in order — a ready-made history-taking script. Copy it and practise aloud.</p>
+<ol id="script-list" style="margin:0 0 12px 22px"></ol>
+<div style="display:flex;gap:10px;flex-wrap:wrap">
+<button type="button" style="background:#2563eb;color:#fff;border:none;border-radius:8px;padding:12px 24px;font-size:1rem;font-weight:700;cursor:pointer" onclick="copyScript()">Copy script (German)</button>
+<button type="button" style="background:#fff;color:#2563eb;border:2px solid #2563eb;border-radius:8px;padding:12px 24px;font-size:1rem;font-weight:700;cursor:pointer" onclick="clearScript()">Clear</button>
+</div>
+<div id="copy-msg" style="margin-top:8px;color:#065f46;font-weight:600"></div>
+<h2 style="margin-top:28px">Quiz: English prompt → German question</h2>
+<p style="margin-bottom:16px">12 rounds. Read the English prompt and pick the German question a doctor would actually ask.</p>
+<button id="calc-btn" type="button" onclick="startQuiz()">Start 12-round quiz</button>
+<div id="quiz-zone" style="display:none;margin-top:20px">
+<div class="progress"><div id="qbar"></div></div>
+<div class="quiz-meta"><span id="qcount">Round 1/12</span><span id="qscore">Correct: 0 · Missed: 0</span></div>
+<div id="quiz-prompt" style="font-size:.85rem;color:#64748b;margin-bottom:6px"></div>
+<div id="quiz-sentence" style="font-size:1.4rem;font-weight:700;margin-bottom:14px"></div>
+<div id="quiz-options"></div>
+<div id="quiz-feedback"></div>
+<button type="button" id="quiz-next" style="display:none;margin-top:12px" onclick="nextQ()">Next</button>
+<div id="quiz-summary"></div>
+</div>
+
+</div>
+
+<article class="prose">
+
+<h2>Why frames, not phrases</h2>
+<p>A phrasebook gives you <em>Seit wann haben Sie die Schmerzen?</em> — useful exactly once, for pain. A frame gives you <em>Seit wann haben Sie {symptom}?</em> — and with it you can ask about pain, nausea, dizziness, breathlessness, itching, or any symptom you will ever meet. The frame is the grammar with a socket; the slot is the vocabulary you plug in. Learn one frame and you own fifty questions. Learn fifty phrases and you own fifty questions. This tool is built on that arithmetic: 25 frames across the 8 sections of a complete anamnesis, each with swappable slots, each producing a correct, natural, polite German question.</p>
+<p>The builder works the way you will work in the clinic. Choose the section you are in — opening, pain history, past history, medications, allergies, social history, review of systems, closing — then fill the slots: the symptom, the condition, the detail. Watch the sentence compose itself in real time, add it to your script, and move on. When the script reads like a real history-taking from greeting to <em>Haben Sie noch Fragen an mich?</em>, copy it and say it aloud. The Fachsprachenprüfung's first part is exactly this: a structured anamnesis, in order, with the right questions at the right moment.</p>
+<h2>The arc of the anamnesis</h2>
+<p>Every history follows the same arc, and the eight sections of this tool follow it too. <strong>Eröffnung</strong> opens with an open question — <em>Was führt Sie zu mir?</em> — because closed questions at the start make patients report what you ask about, not what troubles them. <strong>Schmerzanamnese</strong> is the largest section because pain is the most common presenting complaint and its history has the richest structure: onset, localisation, intensity, radiation, relieving and aggravating factors, character. <strong>Vorerkrankungen</strong> and <strong>Medikamente</strong> establish the baseline; <strong>Allergien</strong> is asked explicitly because patients rarely volunteer it; <strong>Sozialanamnese</strong> covers smoking, alcohol, occupation, and home situation — the context every treatment plan needs; <strong>Systemabfrage</strong> sweeps for what the patient forgot to mention; <strong>Abschluss</strong> closes with the two questions that must never be skipped.</p>
+<p>Notice the grammar doing clinical work. <em>Seit wann</em> (since when) opens every onset question. <em>Bestehen Allergien gegen…?</em> uses <em>bestehen</em> (to exist) — the formal register examiners expect instead of the learner's <em>haben</em>. <em>Wurden Sie schon einmal operiert?</em> is passive because the patient is the receiver of surgery, not the doer — a distinction that matters in German. <em>Gab es in Ihrer Familie…?</em> uses <em>gab es</em> (was there) rather than <em>haben</em>, because family history is something that happened, not something anyone owns.</p>
+<h2>Slot grammar: the details that make frames work</h2>
+<p>Slots are not plug-and-play in German — the inserted word must agree with the frame. Every slot option here was written into its frame, not pasted: <em>die Schmerzen</em> fits <em>Seit wann haben Sie {symptom}?</em> because the accusative plural is right; <em>der Schwindel</em> fits <em>Wie stark ist {symptom}?</em> because the singular verb <em>ist</em> matches a singular noun. This is the discipline frames demand: every combination must be a sentence a native doctor could say, which is why the slot lists here are curated per frame rather than shared globally.</p>
+<p>The social-history slots show a second technique: the optional follow-up. <em>Rauchen Sie{detail}?</em> with <em> — wenn ja, wie viel</em> teaches you the reflex that separates a box-ticking question from a clinical one. Anyone can ask <em>Rauchen Sie?</em>; the doctor asks the follow-up. Drill the frame <em>with</em> its follow-up until the follow-up feels like part of the question — because in the exam, it is.</p>
+<h2>The questions patients answer badly</h2>
+<p>Some frames exist because patients systematically misreport. <em>Nehmen Sie regelmäßig Medikamente?</em> — the word <em>regelmäßig</em> is doing real work: patients who take a tablet "sometimes" will say yes to <em>Nehmen Sie Medikamente?</em> and no to <em>regelmäßig</em>, and the distinction changes dosing decisions. <em>Vertragen Sie die Medikamente gut?</em> is gentler than <em>Haben Sie Nebenwirkungen?</em> — patients downplay side effects when asked directly, but <em>vertragen</em> (tolerate) invites an honest answer.</p>
+<p><em>Ist Ihnen etwas Ungewöhnliches aufgefallen?</em> is the softest way to ask about alarming symptoms, and softness is strategic: <em>Haben Sie Blut im Stuhl?</em> asked cold can make patients defensive, while the <em>aufgefallen</em> (noticed) frame lets them report without feeling accused of hiding something. These are the phrasing instincts the FSP tests under the label "patient-centred communication" — and they are all grammatical choices, not personality traits. You can learn them the way you learned the dative.</p>
+<h2>How to drill: the script method</h2>
+<p>Build a full anamnesis script: 3 frames from Eröffnung, 6–8 from Schmerzanamnese (or Systemabfrage if the case has no pain), 3 from Vorerkrankungen, 2 from Medikamente, 2 from Allergien, 3 from Sozialanamnese, and the 2 closers. That is a 20-question history — copy it, and deliver it to an imaginary patient, leaving pauses for answers. Change the slots each time: different symptom, different condition, different follow-up. The frames stay; the cases change. After ten different scripts, the frames are reflexes.</p>
+<p>Then take the quiz: it runs the hard direction, English prompt to German question, with distractors from the same section — <em>Was lindert die Schmerzen?</em> against <em>Was verstärkt die Schmerzen?</em>, the exact confusion pair. Every round is one frame you must produce, not recognise. When you score 12/12, rebuild a script from memory without looking at the tool: the frames should come out in order, slots filled, Sie-form intact. That is the exam, rehearsed.</p>
+
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>What is the difference between Beschwerden and Symptome?</h3><p>Beschwerden is what the patient reports (their complaints); Symptome is the more technical term. In the anamnesis, say Beschwerden — it is the neutral clinical word examiners expect.</p></div><div class="faq-item"><h3>Why does this tool use frames with slots instead of fixed phrases?</h3><p>One frame with swappable slots generates dozens of correct questions. Seit wann haben Sie {symptom}? covers pain, nausea, dizziness and more — learning the frame multiplies your vocabulary instead of just adding to it.</p></div><div class="faq-item"><h3>Should I ask Rauchen Sie? so directly?</h3><p>Yes — asked directly and without judgement, it is the standard clinical phrasing. The key is the follow-up (wenn ja, wie viel?), which turns a yes/no question into clinically useful information.</p></div><div class="faq-item"><h3>What does bestehen mean in Bestehen Allergien?</h3><p>Bestehen means to exist or persist — Bestehen Allergien? is the formal register for Do allergies exist? Examiners expect this formal phrasing rather than the learner&#x27;s Haben Sie Allergien? in the allergy history.</p></div><div class="faq-item"><h3>How do I close an anamnesis properly?</h3><p>With the two catch-all questions: Gibt es noch etwas, das ich wissen sollte? (anything else I should know) and Haben Sie noch Fragen an mich? (any questions for me). Patients often reveal the real concern at this point — never skip the closer.</p></div><div class="faq-item"><h3>Is this enough for the Fachsprachenprüfung anamnesis?</h3><p>These 25 frames cover the complete arc the FSP&#x27;s first part tests: opening, pain history, past history, medications, allergies, social history, review of systems, closing. Fluency with these frames plus the vocabulary tools handles the history-taking confidently.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+var FRAMES = [{"cat": "Eröffnung", "de": "Was führt Sie zu mir?", "en": "What brings you in today?", "slots": {}, "note": "The standard consultation opening — open question, Sie form."}, {"cat": "Eröffnung", "de": "Welche Beschwerden haben Sie?", "en": "What symptoms do you have?", "slots": {}, "note": "Beschwerden is the neutral clinical word for symptoms."}, {"cat": "Eröffnung", "de": "Was ist Ihr Hauptanliegen heute?", "en": "What is your main concern today?", "slots": {}, "note": "Hauptanliegen focuses the consultation when the patient lists many issues."}, {"cat": "Schmerzanamnese", "de": "Seit wann haben Sie {symptom}?", "en": "Since when have you had {symptom}?", "slots": {"symptom": [{"de": "die Schmerzen", "en": "the pain"}, {"de": "die Bauchschmerzen", "en": "the abdominal pain"}, {"de": "die Kopfschmerzen", "en": "the headache"}, {"de": "die Brustschmerzen", "en": "the chest pain"}, {"de": "die Rückenschmerzen", "en": "the back pain"}]}, "note": "Onset question — slot in the symptom, the frame stays identical."}, {"cat": "Schmerzanamnese", "de": "Wo genau ist {symptom} am stärksten?", "en": "Where exactly is {symptom} worst?", "slots": {"symptom": [{"de": "der Schmerz", "en": "the pain"}, {"de": "das Taubheitsgefühl", "en": "the numbness"}, {"de": "das Brennen", "en": "the burning sensation"}, {"de": "der Druck", "en": "the pressure"}]}, "note": "Genau (exactly) pushes the patient to localise precisely."}, {"cat": "Schmerzanamnese", "de": "Wie stark ist {symptom} auf einer Skala von eins bis zehn?", "en": "How strong is {symptom} on a scale of one to ten?", "slots": {"symptom": [{"de": "der Schmerz", "en": "the pain"}, {"de": "die Übelkeit", "en": "the nausea"}, {"de": "der Schwindel", "en": "the dizziness"}, {"de": "die Atemnot", "en": "the shortness of breath"}]}, "note": "The standardised 1–10 scale — slot any gradable symptom."}, {"cat": "Schmerzanamnese", "de": "Strahlen {symptom} aus?", "en": "Does {symptom} radiate?", "slots": {"symptom": [{"de": "die Schmerzen", "en": "the pain"}, {"de": "die Schmerzen in den Arm", "en": "the pain into the arm"}, {"de": "die Schmerzen ins Bein", "en": "the pain into the leg"}, {"de": "die Schmerzen in der Schulter", "en": "the pain in the shoulder"}]}, "note": "Ausstrahlen = radiate; key for cardiac vs musculoskeletal differentials."}, {"cat": "Schmerzanamnese", "de": "Was lindert {symptom}?", "en": "What relieves {symptom}?", "slots": {"symptom": [{"de": "die Schmerzen", "en": "the pain"}, {"de": "den Husten", "en": "the cough"}, {"de": "den Juckreiz", "en": "the itching"}, {"de": "die Beschwerden", "en": "the symptoms"}]}, "note": "Lindern = relieve; pair with the verstärkt frame below."}, {"cat": "Schmerzanamnese", "de": "Was verstärkt {symptom}?", "en": "What makes {symptom} worse?", "slots": {"symptom": [{"de": "die Schmerzen", "en": "the pain"}, {"de": "die Atemnot", "en": "the shortness of breath"}, {"de": "den Schwindel", "en": "the dizziness"}, {"de": "die Beschwerden", "en": "the symptoms"}]}, "note": "Verstärken = intensify; the classic relieving/aggravating pair."}, {"cat": "Schmerzanamnese", "de": "Sind {symptom} dauerhaft oder kommen sie in Schüben?", "en": "Is {symptom} constant or does it come in episodes?", "slots": {"symptom": [{"de": "die Schmerzen", "en": "the pain"}, {"de": "die Beschwerden", "en": "the symptoms"}, {"de": "die Krämpfe", "en": "the cramps"}]}, "note": "Dauerhaft vs. in Schüben — the character of the symptom."}, {"cat": "Vorerkrankungen", "de": "Haben Sie {cond}?", "en": "Do you have {cond}?", "slots": {"cond": [{"de": "Vorerkrankungen", "en": "any pre-existing conditions"}, {"de": "Bluthochdruck", "en": "high blood pressure"}, {"de": "Diabetes", "en": "diabetes"}, {"de": "eine Herzerkrankung", "en": "a heart condition"}, {"de": "Asthma", "en": "asthma"}, {"de": "eine Schilddrüsenerkrankung", "en": "a thyroid condition"}]}, "note": "The core FSP history question — asked in every anamnesis."}, {"cat": "Vorerkrankungen", "de": "Wurden Sie schon einmal {op}?", "en": "Have you ever had {op}?", "slots": {"op": [{"de": "operiert", "en": "surgery"}, {"de": "am Herzen operiert", "en": "heart surgery"}, {"de": "am Knie operiert", "en": "knee surgery"}, {"de": "im Krankenhaus behandelt", "en": "hospital treatment"}]}, "note": "Schon einmal = ever; covers operations and admissions."}, {"cat": "Vorerkrankungen", "de": "Gab es in Ihrer Familie {fam}?", "en": "Has there been {fam} in your family?", "slots": {"fam": [{"de": "Herzerkrankungen", "en": "heart disease"}, {"de": "Diabetes", "en": "diabetes"}, {"de": "Krebs", "en": "cancer"}, {"de": "Schlaganfälle", "en": "strokes"}]}, "note": "Family history — gab es (was there) is the natural phrasing."}, {"cat": "Medikamente", "de": "Nehmen Sie regelmäßig {med}?", "en": "Do you take {med} regularly?", "slots": {"med": [{"de": "Medikamente", "en": "medication"}, {"de": "Blutdrucktabletten", "en": "blood pressure tablets"}, {"de": "Schmerzmittel", "en": "painkillers"}, {"de": "Blutverdünner", "en": "blood thinners"}, {"de": "Insulin", "en": "insulin"}]}, "note": "Regelmäßig distinguishes daily meds from as-needed ones."}, {"cat": "Medikamente", "de": "Vertragen Sie {med} gut?", "en": "Do you tolerate {med} well?", "slots": {"med": [{"de": "die Medikamente", "en": "the medication"}, {"de": "das neue Medikament", "en": "the new medication"}, {"de": "Penicillin", "en": "penicillin"}]}, "note": "Vertragen = tolerate; gentler than asking about side effects directly."}, {"cat": "Allergien", "de": "Bestehen Allergien gegen {alg}?", "en": "Do you have any allergies to {alg}?", "slots": {"alg": [{"de": "Medikamente", "en": "medications"}, {"de": "Penicillin", "en": "penicillin"}, {"de": "Nüsse", "en": "nuts"}, {"de": "Pollen", "en": "pollen"}, {"de": "Latex", "en": "latex"}]}, "note": "Bestehen + gegen is the formal allergy phrasing."}, {"cat": "Allergien", "de": "Hatten Sie schon einmal {react}?", "en": "Have you ever had {react}?", "slots": {"react": [{"de": "einen allergischen Schock", "en": "anaphylactic shock"}, {"de": "einen Hautausschlag nach Medikamenten", "en": "a rash after medication"}, {"de": "Atemnot nach Medikamenten", "en": "breathing difficulty after medication"}]}, "note": "Severity history — distinguishes rash from anaphylaxis."}, {"cat": "Sozialanamnese", "de": "Rauchen Sie{detail}?", "en": "Do you smoke{detail}?", "slots": {"detail": [{"de": "", "en": ""}, {"de": " — wenn ja, wie viel", "en": " — if so, how much?"}, {"de": " — seit wann", "en": " — since when?"}]}, "note": "Social history — asked directly, without judgement."}, {"cat": "Sozialanamnese", "de": "Trinken Sie Alkohol{detail}?", "en": "Do you drink alcohol{detail}?", "slots": {"detail": [{"de": "", "en": ""}, {"de": " — wenn ja, wie viel", "en": " — if so, how much?"}, {"de": " — täglich", "en": " — daily?"}]}, "note": "The quantity follow-up is what makes this clinically useful."}, {"cat": "Sozialanamnese", "de": "Was machen Sie beruflich{detail}?", "en": "What do you do for work{detail}?", "slots": {"detail": [{"de": "", "en": ""}, {"de": " — sitzen Sie viel", "en": " — do you sit a lot?"}, {"de": " — arbeiten Sie im Schichtdienst", "en": " — do you work shifts?"}]}, "note": "Occupational history with exposure-relevant follow-ups."}, {"cat": "Sozialanamnese", "de": "Leben Sie allein{detail}?", "en": "Do you live alone{detail}?", "slots": {"detail": [{"de": "", "en": ""}, {"de": " — wer versorgt Sie zu Hause", "en": " — who looks after you at home?"}, {"de": " — haben Sie Unterstützung", "en": " — do you have support?"}]}, "note": "Home situation — crucial for discharge planning."}, {"cat": "Systemabfrage", "de": "Haben Sie {sys}?", "en": "Do you have {sys}?", "slots": {"sys": [{"de": "Fieber", "en": "fever"}, {"de": "Nachtschweiß", "en": "night sweats"}, {"de": "ungewollten Gewichtsverlust", "en": "unintentional weight loss"}, {"de": "Herzrasen", "en": "palpitations"}, {"de": "Luftnot bei Belastung", "en": "breathlessness on exertion"}, {"de": "Ödeme in den Beinen", "en": "swelling in the legs"}, {"de": "Taubheitsgefühle", "en": "numbness"}]}, "note": "Review of systems — one frame, seven high-yield symptoms."}, {"cat": "Systemabfrage", "de": "Ist Ihnen {sens} aufgefallen?", "en": "Have you noticed {sens}?", "slots": {"sens": [{"de": "etwas Ungewöhnliches", "en": "anything unusual"}, {"de": "Blut im Stuhl", "en": "blood in the stool"}, {"de": "Blut im Urin", "en": "blood in the urine"}, {"de": "ein Knoten", "en": "a lump"}]}, "note": "Ist Ihnen aufgefallen is softer than asking about alarming symptoms directly."}, {"cat": "Abschluss", "de": "Gibt es noch etwas, das ich wissen sollte?", "en": "Is there anything else I should know?", "slots": {}, "note": "The catch-all closer — patients often reveal the real concern here."}, {"cat": "Abschluss", "de": "Haben Sie noch Fragen an mich?", "en": "Do you have any questions for me?", "slots": {}, "note": "Ends the history-taking on the patient's terms."}];
+var CATS = ["Eröffnung","Schmerzanamnese","Vorerkrankungen","Medikamente","Allergien","Sozialanamnese","Systemabfrage","Abschluss"];
+var cur = 0, script = [];
+function composeDe(f, picks){
+  var s = f.de;
+  for(var k in picks){ s = s.replace("{" + k + "}", picks[k].de); }
+  return s;
+}
+function composeEn(f, picks){
+  var s = f.en;
+  for(var k in picks){ s = s.replace("{" + k + "}", picks[k].en); }
+  return s;
+}
+function setCat(i){ cur = i; renderFrames(); }
+function renderFrames(){
+  var box = document.getElementById("frame-list"); box.innerHTML = "";
+  FRAMES.forEach(function(f, fi){
+    if(f.cat !== CATS[cur]) return;
+    var d = document.createElement("div");
+    d.style.cssText = "background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px";
+    var head = document.createElement("div");
+    head.style.cssText = "font-size:1.1rem;font-weight:700;color:#0f172a;margin-bottom:10px";
+    head.textContent = f.de.replace(/\{(\w+)\}/g, "[___]");
+    d.appendChild(head);
+    var picks = {};
+    var slotNames = Object.keys(f.slots);
+    slotNames.forEach(function(sn){
+      picks[sn] = f.slots[sn][0];
+      var lab = document.createElement("label");
+      lab.style.cssText = "display:block;font-size:.85rem;font-weight:600;color:#475569;margin:8px 0 4px";
+      lab.textContent = sn;
+      var sel = document.createElement("select");
+      sel.style.cssText = "width:100%;padding:10px 12px;border:2px solid #e2e8f0;border-radius:8px;font-size:1rem;font-family:inherit;background:#fff";
+      sel.setAttribute("aria-label", sn);
+      f.slots[sn].forEach(function(opt){
+        var o = document.createElement("option");
+        o.value = opt.de; o.textContent = opt.de + "  (" + opt.en + ")";
+        sel.appendChild(o);
+      });
+      sel.addEventListener("change", function(){
+        var found = f.slots[sn].filter(function(o){ return o.de === sel.value; })[0];
+        picks[sn] = found;
+        preview.textContent = composeDe(f, picks);
+        prevEn.textContent = composeEn(f, picks);
+      });
+      d.appendChild(lab); d.appendChild(sel);
+    });
+    var preview = document.createElement("div");
+    preview.style.cssText = "margin-top:12px;font-size:1.15rem;font-weight:700;color:#1d4ed8";
+    var prevEn = document.createElement("div");
+    prevEn.style.cssText = "color:#475569;margin-top:2px";
+    preview.textContent = composeDe(f, picks);
+    prevEn.textContent = composeEn(f, picks);
+    d.appendChild(preview); d.appendChild(prevEn);
+    var note = document.createElement("div");
+    note.style.cssText = "font-size:.85rem;color:#64748b;margin-top:8px;font-style:italic";
+    note.textContent = f.note;
+    d.appendChild(note);
+    var b = document.createElement("button");
+    b.type = "button"; b.textContent = "+ Script";
+    b.style.cssText = "margin-top:10px;background:#eff6ff;border:1px solid #2563eb;color:#1d4ed8;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit";
+    b.addEventListener("click", function(){ addToScript(composeDe(f, picks), composeEn(f, picks)); });
+    d.appendChild(b);
+    box.appendChild(d);
+  });
+}
+function addToScript(de, en){ script.push({de: de, en: en}); renderScript(); }
+function removeFromScript(i){ script.splice(i, 1); renderScript(); }
+function renderScript(){
+  var ol = document.getElementById("script-list"); ol.innerHTML = "";
+  script.forEach(function(p, i){
+    var li = document.createElement("li"); li.style.marginBottom = "6px";
+    var s = document.createElement("span"); s.textContent = p.de + " ";
+    var b = document.createElement("button");
+    b.type = "button"; b.textContent = "\u2715"; b.setAttribute("aria-label", "Remove phrase");
+    b.style.cssText = "background:none;border:none;color:#ef4444;cursor:pointer;font-size:1rem";
+    b.addEventListener("click", function(){ removeFromScript(i); });
+    li.appendChild(s); li.appendChild(b); ol.appendChild(li);
+  });
+}
+function clearScript(){ script = []; renderScript(); document.getElementById("copy-msg").textContent = ""; }
+function copyScript(){
+  var txt = script.map(function(p){ return p.de; }).join("\n");
+  var msg = document.getElementById("copy-msg");
+  if(!txt){ msg.textContent = "Add some frames first."; return; }
+  function done(){ msg.textContent = "Copied " + script.length + " questions — practise them aloud!"; }
+  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(done, function(){ fallback(); }); }
+  else { fallback(); }
+  function fallback(){
+    var ta = document.createElement("textarea"); ta.value = txt;
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); } catch(e){}
+    document.body.removeChild(ta); done();
+  }
+}
+// ---- quiz ----
+var QUIZ = [{"p": "What brings you in today?", "a": "Was führt Sie zu mir?", "d": ["Was machen Sie beruflich?", "Wo tut es weh?", "Haben Sie Fieber?"]}, {"p": "Since when have you had the pain?", "a": "Seit wann haben Sie die Schmerzen?", "d": ["Wo sind die Schmerzen?", "Wie stark sind die Schmerzen?", "Was lindert die Schmerzen?"]}, {"p": "Does the pain radiate?", "a": "Strahlen die Schmerzen aus?", "d": ["Sind die Schmerzen dauerhaft?", "Was verstärkt die Schmerzen?", "Haben Sie nachts Schmerzen?"]}, {"p": "Do you have any pre-existing conditions?", "a": "Haben Sie Vorerkrankungen?", "d": ["Haben Sie Allergien?", "Nehmen Sie Medikamente?", "Wurden Sie operiert?"]}, {"p": "Have you ever had surgery?", "a": "Wurden Sie schon einmal operiert?", "d": ["Wurden Sie schon einmal untersucht?", "Haben Sie schon einmal geraucht?", "Nehmen Sie schon einmal Tabletten?"]}, {"p": "Has there been heart disease in your family?", "a": "Gab es in Ihrer Familie Herzerkrankungen?", "d": ["Gibt es Herzerkrankungen bei Ihnen?", "Haben Sie eine Herzerkrankung?", "Gab es Operationen in Ihrer Familie?"]}, {"p": "Do you take medication regularly?", "a": "Nehmen Sie regelmäßig Medikamente?", "d": ["Nehmen Sie manchmal Medikamente?", "Vertragen Sie die Medikamente?", "Brauchen Sie Medikamente?"]}, {"p": "Do you have any allergies to medications?", "a": "Bestehen Allergien gegen Medikamente?", "d": ["Haben Sie Medikamente vertragen?", "Bestehen Beschwerden gegen Medikamente?", "Haben Sie Allergien geheilt?"]}, {"p": "Have you ever had anaphylactic shock?", "a": "Hatten Sie schon einmal einen allergischen Schock?", "d": ["Hatten Sie schon einmal einen Hautausschlag?", "Haben Sie schon einmal einen Schock gehabt?", "Hatten Sie schon einmal Fieber?"]}, {"p": "Do you smoke — if so, how much?", "a": "Rauchen Sie — wenn ja, wie viel?", "d": ["Rauchen Sie allein?", "Rauchen Sie beruflich?", "Rauchen Sie manchmal nicht?"]}, {"p": "Is there anything else I should know?", "a": "Gibt es noch etwas, das ich wissen sollte?", "d": ["Gibt es noch Fragen an mich?", "Gibt es noch Beschwerden?", "Weiß ich noch etwas?"]}, {"p": "Have you noticed blood in the stool?", "a": "Ist Ihnen Blut im Stuhl aufgefallen?", "d": ["Ist Ihnen Blut im Stuhl bekannt?", "Haben Sie Blut im Stuhl gesehen?", "Ist Blut im Stuhl normal?"]}];
+var ROUNDS = 12, pool = [], qi = 0, correctN = 0, missedN = 0, missedList = [], qa = null;
+function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
+function startQuiz(){
+  pool = shuffle(QUIZ.slice()); qi = 0; correctN = 0; missedN = 0; missedList = [];
+  document.getElementById("quiz-zone").style.display = "block";
+  document.getElementById("quiz-summary").innerHTML = "";
+  document.getElementById("calc-btn").style.display = "none";
+  showQ();
+}
+function showQ(){
+  qa = pool[qi % pool.length];
+  var opts = shuffle([qa.a].concat(qa.d));
+  document.getElementById("quiz-prompt").textContent = "Which German question means this?";
+  document.getElementById("quiz-sentence").textContent = qa.p;
+  document.getElementById("qcount").textContent = "Round " + (qi+1) + "/" + ROUNDS;
+  document.getElementById("qbar").style.width = (qi/ROUNDS*100) + "%";
+  var box = document.getElementById("quiz-options"); box.innerHTML = "";
+  var fb = document.getElementById("quiz-feedback"); fb.className = ""; fb.style.display = "none";
+  document.getElementById("quiz-next").style.display = "none";
+  opts.forEach(function(opt){
+    var b = document.createElement("button");
+    b.className = "quiz-btn"; b.textContent = opt;
+    b.addEventListener("click", function(){ answer(opt, b); });
+    box.appendChild(b);
+  });
+}
+function answer(opt, btn){
+  var fb = document.getElementById("quiz-feedback");
+  var btns = document.querySelectorAll("#quiz-options .quiz-btn");
+  btns.forEach(function(x){ x.disabled = true; if(x.textContent === qa.a) x.classList.add("correct"); });
+  if(opt === qa.a){ correctN++; fb.className = "ok"; fb.textContent = "\u2713 Correct!"; }
+  else { missedN++; missedList.push(qa); fb.className = "no"; btn.classList.add("wrong");
+    fb.textContent = "\u2717 The question is: \u201c" + qa.a + "\u201d."; }
+  document.getElementById("qscore").textContent = "Correct: " + correctN + " · Missed: " + missedN;
+  var nb = document.getElementById("quiz-next");
+  nb.style.display = "block";
+  nb.textContent = (qi + 1 < ROUNDS) ? "Next" : "See results";
+}
+function nextQ(){
+  qi++;
+  if(qi < ROUNDS) showQ();
+  else {
+    document.getElementById("quiz-prompt").textContent = "";
+    document.getElementById("quiz-sentence").textContent = "";
+    document.getElementById("quiz-options").innerHTML = "";
+    document.getElementById("quiz-feedback").style.display = "none";
+    document.getElementById("quiz-next").style.display = "none";
+    document.getElementById("qbar").style.width = "100%";
+    var uniq = {}; missedList.forEach(function(m){ uniq[m.a] = m; });
+    var missArr = Object.keys(uniq).map(function(k){ return uniq[k]; });
+    var msg = "<strong>" + correctN + " / " + ROUNDS + " correct.</strong> ";
+    if(missArr.length === 0) msg += "Anamnesis-ready — in German.";
+    else {
+      msg += "Say these " + missArr.length + " aloud five times each:<ul style='margin:8px 0 0 18px'>";
+      missArr.forEach(function(m){ msg += "<li><strong>" + m.a + "</strong> <span style='color:#64748b'>(" + m.p + ")</span></li>"; });
+      msg += "</ul>";
+    }
+    document.getElementById("quiz-summary").innerHTML = '<div class="note">' + msg + '</div>';
+    document.getElementById("calc-btn").style.display = "block";
+    document.getElementById("calc-btn").textContent = "Play again";
+  }
+}
+renderFrames();
+
+
+</script>
+</body>
+</html>
