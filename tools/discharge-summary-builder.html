@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discharge Summary Builder — German Entlassungsbrief | Bayzubaan</title>
+<meta name="description" content="Build a German discharge summary: 10 Entlassungsbrief section frames (Diagnose to AU), letter builder, 12-round quiz.">
+<link rel="canonical" href="https://bayzubaan.com/tools/discharge-summary-builder/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Discharge Summary Builder — German Entlassungsbrief">
+<meta property="og:description" content="Entlassungsbrief in German: 10 documentation frames, letter builder, and a precision quiz.">
+<meta property="og:url" content="https://bayzubaan.com/tools/discharge-summary-builder/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Discharge Summary Builder — German Entlassungsbrief">
+<meta name="twitter:description" content="Entlassungsbrief in German: 10 documentation frames, letter builder, and a precision quiz.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the standard sections of a German Entlassungsbrief?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Diagnose, Aufnahme, Anamnese, Befund, Diagnostik, Therapie, Verlauf, Medikation, Procedere, Arbeitsunfähigkeit — walk them in order and you sound like a German Assistenzarzt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is German medical documentation impersonal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No ich, no wir — the therapy happens, the course was, the finding shows. Therapeutisch erfolgte eine antibiotische Therapie. Examiners mark candidates who dictate 'I gave antibiotics' as not yet in the register."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I write 'the course was uncomplicated'?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Der Verlauf war komplikationslos. For other courses: erfreulich mit rascher Besserung, verzögert bei Wundinfektion, stabil unter Therapie — always with the reason attached."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is discharge medication written in German?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Entlassungsmedikation: Metoprolol 50 mg 1-0-0 — the 1-0-0 notation means morning–midday–evening and is universal in German prescribing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What belongs in the Procedere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Who does what by when: Wiedervorstellung beim Hausarzt in einer Woche, Fadenzug in 10 Tagen, Kontrolle der Nierenwerte in 2 Wochen. The three coordinates of a safe handover."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Arbeitsunfähigkeit documented?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Arbeitsunfähigkeit besteht für 2 Wochen — or ist nicht erforderlich. The Arbeitsunfähigkeit exists impersonally; nobody 'gives' it in German documentation."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>Discharge Summary Builder: German Entlassungsbrief</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">Entlassungsbrief in German: 10 documentation frames, letter builder, and a precision quiz.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+
+<h2>Build the discharge letter: from admission to Procedere</h2>
+<p style="margin-bottom:16px">10 Entlassungsbrief frames — one per section — with swappable slots. Fill them to compose a complete discharge summary in German with its English translation. Add sentences to your letter, copy it, then drill with the 12-round quiz.</p>
+<div id="frame-list"></div>
+<h2 style="margin-top:24px">Your Entlassungsbrief</h2>
+<p style="margin-bottom:12px;color:#64748b">Sentences you add appear here in order. Copy the letter and practise dictating it the way you would after a ward round.</p>
+<ol id="script-list" style="margin:0 0 12px 22px"></ol>
+<div style="display:flex;gap:10px;flex-wrap:wrap">
+<button type="button" style="background:#2563eb;color:#fff;border:none;border-radius:8px;padding:12px 24px;font-size:1rem;font-weight:700;cursor:pointer" onclick="copyScript()">Copy letter (German)</button>
+<button type="button" style="background:#fff;color:#2563eb;border:2px solid #2563eb;border-radius:8px;padding:12px 24px;font-size:1rem;font-weight:700;cursor:pointer" onclick="clearScript()">Clear</button>
+</div>
+<div id="copy-msg" style="margin-top:8px;color:#065f46;font-weight:600"></div>
+<h2 style="margin-top:28px">Quiz: English → exact German</h2>
+<p style="margin-bottom:16px">12 rounds. Read the English sentence and pick the exact German documentation wording.</p>
+<button id="calc-btn" type="button" onclick="startQuiz()">Start 12-round quiz</button>
+<div id="quiz-zone" style="display:none;margin-top:20px">
+<div class="progress"><div id="qbar"></div></div>
+<div class="quiz-meta"><span id="qcount">Round 1/12</span><span id="qscore">Correct: 0 · Missed: 0</span></div>
+<div id="quiz-prompt" style="font-size:.85rem;color:#64748b;margin-bottom:6px"></div>
+<div id="quiz-sentence" style="font-size:1.4rem;font-weight:700;margin-bottom:14px"></div>
+<div id="quiz-options"></div>
+<div id="quiz-feedback"></div>
+<button type="button" id="quiz-next" style="display:none;margin-top:12px" onclick="nextQ()">Next</button>
+<div id="quiz-summary"></div>
+</div>
+
+</div>
+
+<article class="prose">
+
+<h2>The Entlassungsbrief: the document that never leaves the patient</h2>
+<p>The <em>Entlassungsbrief</em> — the discharge summary — is the single most-read document in German medicine. The GP reads it, the patient reads it, the next hospital reads it, and in the Fachsprachenprüfung the examiners make you dictate one: the Dokumentation station is, in practice, an Entlassungsbrief spoken aloud. It follows a fixed architecture — Diagnose, Aufnahme, Anamnese, Befund, Diagnostik, Therapie, Verlauf, Medikation, Procedere, Arbeitsunfähigkeit — and the candidate who walks that architecture without prompting sounds like a German Assistenzarzt. This tool gives you 10 frames, one per section, with swappable slots and a 12-round quiz on the exact sentences.</p>
+<p>The style rule that governs everything: German medical documentation is impersonal. No <em>ich</em>, no <em>wir</em> — the therapy happens, the course was, the finding shows. <em>Therapeutisch erfolgte eine antibiotische Therapie.</em> <em>Der Verlauf war komplikationslos.</em> This nominal, passive style is not optional colour; examiners mark the candidate who dictates "I gave antibiotics" as not yet thinking in German medical register. Every frame in this tool is built in that style — steal the skeletons.</p>
+<h2>Diagnose and Aufnahme: the header of the story</h2>
+<p><em>Entlassungsdiagnose: akute Appendizitis.</em> The discharge diagnosis opens the letter, and in German it takes the colon form — diagnosis first, explanation later. The four slot options cover the classic discharge cases: <em>akute Appendizitis, Pneumonie rechts, Herzinsuffizienz NYHA II, Diabetes mellitus Typ 2, entgleist</em>. Note <em>entgleist</em> (decompensated) — the single word that turns a chronic diagnosis into an admission reason.</p>
+<p><em>Die Aufnahme erfolgte als Notfall über die Notaufnahme.</em> The admission sentence establishes the story's beginning: emergency vs. elective changes everything that follows. <em>Erfolgte</em> — the past of <em>erfolgen</em> — is the documentation verb par excellence: <em>Die Aufnahme erfolgte …, therapeutisch erfolgte …, die Einstellung erfolgte …</em> Learn it as the default verb of the Entlassungsbrief and half your sentences write themselves.</p>
+<h2>Anamnese, Befund, Diagnostik: the evidence chain</h2>
+<p><em>Anamnestisch bestehen seit drei Tagen Bauchschmerzen.</em> The history frame uses the impersonal <em>bestehen</em> with the symptom as subject — the classic German construction that avoids "the patient has". Alternatives: <em>berichtet der Patient über …</em> (the patient reports — for subjective symptoms), <em>ist … bekannt</em> (is known — for past history), <em>klagt der Patient über …</em> (complains of — slightly stronger). Four verbs, four registers of history-taking — the examiner hears which one you choose.</p>
+<p><em>Klinisch Druckschmerz im rechten Unterbauch.</em> The examination frame is telegraphic: no verb at all, just the finding. <em>Klinisch</em> + noun phrase is the complete German examination note, and the quiz tests exactly this compression — the candidate who adds a verb ("Klinisch gibt es Druckschmerz") has not yet learned the register. <em>Diagnostisch bestätigte das Röntgen die Pneumonie.</em> The workup frame restores the verb but keeps it factual: <em>zeigten sich</em> (were seen), <em>bestätigte</em> (confirmed), <em>ergab</em> (yielded), <em>war erhöht</em> (was elevated).</p>
+<h2>Therapie and Verlauf: what was done, how it went</h2>
+<p><em>Therapeutisch wurde eine laparoskopische Appendektomie durchgeführt.</em> The therapy frame is passive by design — <em>wurde … durchgeführt</em> (was performed), <em>erfolgte</em> (was given), <em>wurde … optimiert</em> (was optimised). The doer is irrelevant; the deed is the documentation. Then the Verlauf — the one sentence examiners always ask for: <em>Der Verlauf war komplikationslos.</em> Four options cover the reality: <em>komplikationslos</em> (the word every doctor wants to write), <em>erfreulich mit rascher Besserung</em> (favourable), <em>verzögert bei Wundinfektion</em> (delayed — with the reason attached, as German documentation demands), <em>stabil unter Therapie</em> (stable).</p>
+<h2>Medikation, Procedere, AU: the handover</h2>
+<p>The last three frames are the handover — what the GP actually acts on. <em>Entlassungsmedikation: Metoprolol 50 mg 1-0-0.</em> The 1-0-0 notation (morning–midday–evening) is universal in German prescribing; writing it correctly is a small signal of system fluency. <em>Procedere: Wiedervorstellung beim Hausarzt in einer Woche.</em> The Procedere is the plan in imperative-noun form: <em>Wiedervorstellung</em> (review), <em>Fadenzug</em> (suture removal), <em>Kontrolle der Nierenwerte</em> (recheck). Each names who does what by when — the three coordinates of a safe handover.</p>
+<p><em>Arbeitsunfähigkeit besteht für 2 Wochen.</em> The sick-note sentence closes the letter. <em>Besteht</em> (exists/is certified) vs. <em>ist nicht erforderlich</em> (not required) — the binary that decides the patient's next weeks. Note the impersonal subject: the <em>Arbeitsunfähigkeit</em> exists; nobody "gives" it in German documentation.</p>
+<h2>Abbreviations and dictation traps</h2>
+<p>German discharge letters are dense with abbreviations, and the FSP tests whether you expand them correctly when dictating: <em>Z. n.</em> (Zustand nach — status post), <em>V. a.</em> (Verdacht auf — suspected), <em>bds.</em> (beidseits — bilateral), <em>o. p. B.</em> (ohne pathologischen Befund — no pathological findings), <em>k. A.</em> (kein Anhalt — no evidence). Dictate them expanded the first time — <em>Zustand nach laparoskopischer Appendektomie</em> — because the examiner scores the spoken form, not the written shortcut. Three dictation traps catch candidates every session: saying <em>der</em> instead of <em>die</em> before feminine Latin nouns (<em>die Pneumonie</em>, <em>die Appendizitis</em>), dropping the colon after <em>Entlassungsdiagnose</em> (the colon is the structure), and forgetting the unit on every number (1,4 mg/dl, never bare 1,4). Drill the letter above until the abbreviations expand automatically and the articles land without thought.</p>
+<h2>How to drill: dictate the letter</h2>
+<p>Build a complete letter for one case: <em>Entlassungsdiagnose: akute Appendizitis. Die Aufnahme erfolgte als Notfall über die Notaufnahme. Anamnestisch bestehen seit drei Tagen Bauchschmerzen. Klinisch Druckschmerz im rechten Unterbauch. Diagnostisch zeigten sich erhöhte Entzündungswerte. Therapeutisch wurde eine laparoskopische Appendektomie durchgeführt. Der Verlauf war komplikationslos. Entlassungsmedikation: Amoxicillin 875/125 mg 1-0-1 für 7 Tage. Procedere: Fadenzug beim Hausarzt in 10 Tagen. Arbeitsunfähigkeit besteht für 2 Wochen.</em> Copy it, then dictate it aloud — dictation, not reading, is the FSP skill. Swap every slot and dictate a second case. Then take the quiz: every distractor differs by one slot, testing the one-slot precision documentation demands.</p>
+
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>What are the standard sections of a German Entlassungsbrief?</h3><p>Diagnose, Aufnahme, Anamnese, Befund, Diagnostik, Therapie, Verlauf, Medikation, Procedere, Arbeitsunfähigkeit — walk them in order and you sound like a German Assistenzarzt.</p></div><div class="faq-item"><h3>Why is German medical documentation impersonal?</h3><p>No ich, no wir — the therapy happens, the course was, the finding shows. Therapeutisch erfolgte eine antibiotische Therapie. Examiners mark candidates who dictate &#x27;I gave antibiotics&#x27; as not yet in the register.</p></div><div class="faq-item"><h3>How do I write &#x27;the course was uncomplicated&#x27;?</h3><p>Der Verlauf war komplikationslos. For other courses: erfreulich mit rascher Besserung, verzögert bei Wundinfektion, stabil unter Therapie — always with the reason attached.</p></div><div class="faq-item"><h3>How is discharge medication written in German?</h3><p>Entlassungsmedikation: Metoprolol 50 mg 1-0-0 — the 1-0-0 notation means morning–midday–evening and is universal in German prescribing.</p></div><div class="faq-item"><h3>What belongs in the Procedere?</h3><p>Who does what by when: Wiedervorstellung beim Hausarzt in einer Woche, Fadenzug in 10 Tagen, Kontrolle der Nierenwerte in 2 Wochen. The three coordinates of a safe handover.</p></div><div class="faq-item"><h3>How is Arbeitsunfähigkeit documented?</h3><p>Arbeitsunfähigkeit besteht für 2 Wochen — or ist nicht erforderlich. The Arbeitsunfähigkeit exists impersonally; nobody &#x27;gives&#x27; it in German documentation.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+var FRAMES = [{"de": "Entlassungsdiagnose: {dx}.", "en": "Discharge diagnosis: {dx}.", "slots": {"dx": [{"de": "akute Appendizitis", "en": "acute appendicitis"}, {"de": "Pneumonie rechts", "en": "right-sided pneumonia"}, {"de": "Herzinsuffizienz NYHA II", "en": "heart failure NYHA II"}, {"de": "Diabetes mellitus Typ 2, entgleist", "en": "decompensated type 2 diabetes"}]}}, {"de": "Die Aufnahme erfolgte {reason}.", "en": "Admission was {reason}.", "slots": {"reason": [{"de": "als Notfall über die Notaufnahme", "en": "as an emergency via the emergency department"}, {"de": "elektiv zur geplanten Operation", "en": "electively for planned surgery"}, {"de": "zur Abklärung von Brustschmerzen", "en": "for workup of chest pain"}, {"de": "zur Einstellung des Blutzuckers", "en": "for blood sugar adjustment"}]}}, {"de": "Anamnestisch {hx}.", "en": "On history, {hx}.", "slots": {"hx": [{"de": "bestehen seit drei Tagen Bauchschmerzen", "en": "there is abdominal pain for three days"}, {"de": "berichtet der Patient über Luftnot bei Belastung", "en": "the patient reports dyspnoea on exertion"}, {"de": "ist ein langjähriger Bluthochdruck bekannt", "en": "long-standing hypertension is known"}, {"de": "klagt der Patient über Fieber und Husten", "en": "the patient complains of fever and cough"}]}}, {"de": "Klinisch {exam}.", "en": "Clinically, {exam}.", "slots": {"exam": [{"de": "unauffälliger Untersuchungsbefund", "en": "unremarkable examination"}, {"de": "Druckschmerz im rechten Unterbauch", "en": "tenderness in the right lower abdomen"}, {"de": "feuchte Rasselgeräusche basal beidseits", "en": "bibasal moist crackles"}, {"de": "Beinödeme beidseits", "en": "bilateral leg oedema"}]}}, {"de": "Diagnostisch {tests}.", "en": "On workup, {tests}.", "slots": {"tests": [{"de": "zeigten sich erhöhte Entzündungswerte", "en": "inflammatory markers were elevated"}, {"de": "bestätigte das Röntgen die Pneumonie", "en": "the X-ray confirmed the pneumonia"}, {"de": "ergab das EKG keine Ischämiezeichen", "en": "the ECG showed no ischaemia"}, {"de": "war der Blutzucker deutlich erhöht", "en": "blood sugar was clearly elevated"}]}}, {"de": "Therapeutisch {tx}.", "en": "Therapeutically, {tx}.", "slots": {"tx": [{"de": "erfolgte eine antibiotische Therapie", "en": "antibiotic therapy was given"}, {"de": "wurde eine laparoskopische Appendektomie durchgeführt", "en": "a laparoscopic appendectomy was performed"}, {"de": "wurde die Diuretikatherapie optimiert", "en": "diuretic therapy was optimised"}, {"de": "erfolgte die Blutzuckereinstellung mit Insulin", "en": "blood sugar was adjusted with insulin"}]}}, {"de": "Der Verlauf war {course}.", "en": "The course was {course}.", "slots": {"course": [{"de": "komplikationslos", "en": "uncomplicated"}, {"de": "erfreulich mit rascher Besserung", "en": "favourable with rapid improvement"}, {"de": "verzögert bei Wundinfektion", "en": "delayed due to wound infection"}, {"de": "stabil unter Therapie", "en": "stable under therapy"}]}}, {"de": "Entlassungsmedikation: {meds}.", "en": "Discharge medication: {meds}.", "slots": {"meds": [{"de": "Metoprolol 50 mg 1-0-0", "en": "Metoprolol 50 mg 1-0-0"}, {"de": "Amoxicillin 875/125 mg 1-0-1 für 7 Tage", "en": "Amoxicillin 875/125 mg 1-0-1 for 7 days"}, {"de": "Furosemid 40 mg 1-0-0", "en": "Furosemide 40 mg 1-0-0"}, {"de": "Metformin 850 mg 1-0-1", "en": "Metformin 850 mg 1-0-1"}]}}, {"de": "Procedere: {plan}.", "en": "Plan: {plan}.", "slots": {"plan": [{"de": "Wiedervorstellung beim Hausarzt in einer Woche", "en": "GP review in one week"}, {"de": "Fadenzug beim Hausarzt in 10 Tagen", "en": "suture removal by GP in 10 days"}, {"de": "Kontrolle der Nierenwerte in 2 Wochen", "en": "kidney values recheck in 2 weeks"}, {"de": "erneute Blutzuckerkontrolle in 4 Wochen", "en": "repeat blood sugar check in 4 weeks"}]}}, {"de": "Arbeitsunfähigkeit {au}.", "en": "Unfit for work {au}.", "slots": {"au": [{"de": "besteht für 2 Wochen", "en": "for 2 weeks"}, {"de": "ist nicht erforderlich", "en": "not required"}, {"de": "besteht bis zur Kontrolluntersuchung", "en": "until the follow-up examination"}, {"de": "besteht für 4 Wochen", "en": "for 4 weeks"}]}}];
+var script = [];
+function composeDe(f, picks){ var s = f.de; for(var k in picks){ s = s.split("{"+k+"}").join(picks[k].de); } return s; }
+function composeEn(f, picks){ var s = f.en; for(var k in picks){ s = s.split("{"+k+"}").join(picks[k].en); } return s; }
+function renderFrames(){
+  var box = document.getElementById("frame-list"); box.innerHTML = "";
+  FRAMES.forEach(function(f){
+    var d = document.createElement("div");
+    d.style.cssText = "background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px";
+    var head = document.createElement("div");
+    head.style.cssText = "font-size:1.1rem;font-weight:700;color:#0f172a;margin-bottom:10px";
+    head.textContent = f.de.replace(/\{(\w+)\}/g, "[___]");
+    d.appendChild(head);
+    var picks = {};
+    Object.keys(f.slots).forEach(function(sn){
+      picks[sn] = f.slots[sn][0];
+      var lab = document.createElement("label");
+      lab.style.cssText = "display:block;font-size:.85rem;font-weight:600;color:#475569;margin:8px 0 4px";
+      lab.textContent = sn;
+      var sel = document.createElement("select");
+      sel.style.cssText = "width:100%;padding:10px 12px;border:2px solid #e2e8f0;border-radius:8px;font-size:1rem;font-family:inherit;background:#fff";
+      sel.setAttribute("aria-label", sn);
+      f.slots[sn].forEach(function(opt){
+        var o = document.createElement("option");
+        o.value = opt.de; o.textContent = opt.de + "  (" + opt.en + ")";
+        sel.appendChild(o);
+      });
+      sel.addEventListener("change", function(){
+        var found = f.slots[sn].filter(function(o){ return o.de === sel.value; })[0];
+        picks[sn] = found;
+        preview.textContent = composeDe(f, picks);
+        prevEn.textContent = composeEn(f, picks);
+      });
+      d.appendChild(lab); d.appendChild(sel);
+    });
+    var preview = document.createElement("div");
+    preview.style.cssText = "margin-top:12px;font-size:1.15rem;font-weight:700;color:#1d4ed8";
+    var prevEn = document.createElement("div");
+    prevEn.style.cssText = "color:#475569;margin-top:2px";
+    preview.textContent = composeDe(f, picks);
+    prevEn.textContent = composeEn(f, picks);
+    d.appendChild(preview); d.appendChild(prevEn);
+    var b = document.createElement("button");
+    b.type = "button"; b.textContent = "+ Letter";
+    b.style.cssText = "margin-top:10px;background:#eff6ff;border:1px solid #2563eb;color:#1d4ed8;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit";
+    b.addEventListener("click", function(){ addToScript(composeDe(f, picks)); });
+    d.appendChild(b);
+    box.appendChild(d);
+  });
+}
+function addToScript(de){ script.push(de); renderScript(); }
+function removeFromScript(i){ script.splice(i, 1); renderScript(); }
+function renderScript(){
+  var ol = document.getElementById("script-list"); ol.innerHTML = "";
+  script.forEach(function(de, i){
+    var li = document.createElement("li"); li.style.marginBottom = "6px";
+    var s = document.createElement("span"); s.textContent = de + " ";
+    var b = document.createElement("button");
+    b.type = "button"; b.textContent = "\u2715"; b.setAttribute("aria-label", "Remove sentence");
+    b.style.cssText = "background:none;border:none;color:#ef4444;cursor:pointer;font-size:1rem";
+    b.addEventListener("click", function(){ removeFromScript(i); });
+    li.appendChild(s); li.appendChild(b); ol.appendChild(li);
+  });
+}
+function clearScript(){ script = []; renderScript(); document.getElementById("copy-msg").textContent = ""; }
+function copyScript(){
+  var txt = script.join("\n");
+  var msg = document.getElementById("copy-msg");
+  if(!txt){ msg.textContent = "Add some sentences first."; return; }
+  function done(){ msg.textContent = "Copied " + script.length + " sentences!"; }
+  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(done, function(){ fallback(); }); }
+  else { fallback(); }
+  function fallback(){
+    var ta = document.createElement("textarea"); ta.value = txt;
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); } catch(e){}
+    document.body.removeChild(ta); done();
+  }
+}
+var QUIZ = [{"p": "Discharge diagnosis: acute appendicitis.", "a": "Entlassungsdiagnose: akute Appendizitis.", "d": ["Entlassungsdiagnose: Pneumonie rechts.", "Entlassungsdiagnose: Herzinsuffizienz NYHA II.", "Entlassungsdiagnose: Diabetes mellitus Typ 2, entgleist."]}, {"p": "Admission was as an emergency via the emergency department.", "a": "Die Aufnahme erfolgte als Notfall über die Notaufnahme.", "d": ["Die Aufnahme erfolgte elektiv zur geplanten Operation.", "Die Aufnahme erfolgte zur Abklärung von Brustschmerzen.", "Die Aufnahme erfolgte zur Einstellung des Blutzuckers."]}, {"p": "On history, there is abdominal pain for three days.", "a": "Anamnestisch bestehen seit drei Tagen Bauchschmerzen.", "d": ["Anamnestisch berichtet der Patient über Luftnot bei Belastung.", "Anamnestisch ist ein langjähriger Bluthochdruck bekannt.", "Anamnestisch klagt der Patient über Fieber und Husten."]}, {"p": "Clinically, tenderness in the right lower abdomen.", "a": "Klinisch Druckschmerz im rechten Unterbauch.", "d": ["Klinisch unauffälliger Untersuchungsbefund.", "Klinisch feuchte Rasselgeräusche basal beidseits.", "Klinisch Beinödeme beidseits."]}, {"p": "The X-ray confirmed the pneumonia.", "a": "Diagnostisch bestätigte das Röntgen die Pneumonie.", "d": ["Diagnostisch zeigten sich erhöhte Entzündungswerte.", "Diagnostisch ergab das EKG keine Ischämiezeichen.", "Diagnostisch war der Blutzucker deutlich erhöht."]}, {"p": "A laparoscopic appendectomy was performed.", "a": "Therapeutisch wurde eine laparoskopische Appendektomie durchgeführt.", "d": ["Therapeutisch erfolgte eine antibiotische Therapie.", "Therapeutisch wurde die Diuretikatherapie optimiert.", "Therapeutisch erfolgte die Blutzuckereinstellung mit Insulin."]}, {"p": "The course was uncomplicated.", "a": "Der Verlauf war komplikationslos.", "d": ["Der Verlauf war erfreulich mit rascher Besserung.", "Der Verlauf war verzögert bei Wundinfektion.", "Der Verlauf war stabil unter Therapie."]}, {"p": "Discharge medication: Metoprolol 50 mg 1-0-0.", "a": "Entlassungsmedikation: Metoprolol 50 mg 1-0-0.", "d": ["Entlassungsmedikation: Amoxicillin 875/125 mg 1-0-1 für 7 Tage.", "Entlassungsmedikation: Furosemid 40 mg 1-0-0.", "Entlassungsmedikation: Metformin 850 mg 1-0-1."]}, {"p": "Plan: GP review in one week.", "a": "Procedere: Wiedervorstellung beim Hausarzt in einer Woche.", "d": ["Procedere: Fadenzug beim Hausarzt in 10 Tagen.", "Procedere: Kontrolle der Nierenwerte in 2 Wochen.", "Procedere: erneute Blutzuckerkontrolle in 4 Wochen."]}, {"p": "Unfit for work for 2 weeks.", "a": "Arbeitsunfähigkeit besteht für 2 Wochen.", "d": ["Arbeitsunfähigkeit ist nicht erforderlich.", "Arbeitsunfähigkeit besteht bis zur Kontrolluntersuchung.", "Arbeitsunfähigkeit besteht für 4 Wochen."]}, {"p": "Therapeutically, antibiotic therapy was given.", "a": "Therapeutisch erfolgte eine antibiotische Therapie.", "d": ["Therapeutisch wurde eine laparoskopische Appendektomie durchgeführt.", "Therapeutisch wurde die Diuretikatherapie optimiert.", "Therapeutisch erfolgte die Blutzuckereinstellung mit Insulin."]}, {"p": "Plan: suture removal by GP in 10 days.", "a": "Procedere: Fadenzug beim Hausarzt in 10 Tagen.", "d": ["Procedere: Wiedervorstellung beim Hausarzt in einer Woche.", "Procedere: Kontrolle der Nierenwerte in 2 Wochen.", "Procedere: erneute Blutzuckerkontrolle in 4 Wochen."]}];
+var ROUNDS = 12, pool = [], qi = 0, correctN = 0, missedN = 0, missedList = [], qa = null;
+function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
+function startQuiz(){
+  pool = shuffle(QUIZ.slice()); qi = 0; correctN = 0; missedN = 0; missedList = [];
+  document.getElementById("quiz-zone").style.display = "block";
+  document.getElementById("quiz-summary").innerHTML = "";
+  document.getElementById("calc-btn").style.display = "none";
+  showQ();
+}
+function showQ(){
+  qa = pool[qi % pool.length];
+  var opts = shuffle([qa.a].concat(qa.d));
+  document.getElementById("quiz-prompt").textContent = "Which is the exact German sentence?";
+  document.getElementById("quiz-sentence").textContent = qa.p;
+  document.getElementById("qcount").textContent = "Round " + (qi+1) + "/" + ROUNDS;
+  document.getElementById("qbar").style.width = (qi/ROUNDS*100) + "%";
+  var box = document.getElementById("quiz-options"); box.innerHTML = "";
+  var fb = document.getElementById("quiz-feedback"); fb.className = ""; fb.style.display = "none";
+  document.getElementById("quiz-next").style.display = "none";
+  opts.forEach(function(opt){
+    var b = document.createElement("button");
+    b.className = "quiz-btn"; b.textContent = opt;
+    b.addEventListener("click", function(){ answer(opt, b); });
+    box.appendChild(b);
+  });
+}
+function answer(opt, btn){
+  var fb = document.getElementById("quiz-feedback");
+  var btns = document.querySelectorAll("#quiz-options .quiz-btn");
+  btns.forEach(function(x){ x.disabled = true; if(x.textContent === qa.a) x.classList.add("correct"); });
+  if(opt === qa.a){ correctN++; fb.className = "ok"; fb.textContent = "\u2713 Correct!"; }
+  else { missedN++; missedList.push(qa); fb.className = "no"; btn.classList.add("wrong");
+    fb.textContent = "\u2717 The sentence is: \u201c" + qa.a + "\u201d."; }
+  document.getElementById("qscore").textContent = "Correct: " + correctN + " \u00b7 Missed: " + missedN;
+  var nb = document.getElementById("quiz-next");
+  nb.style.display = "block";
+  nb.textContent = (qi + 1 < ROUNDS) ? "Next" : "See results";
+}
+function nextQ(){
+  qi++;
+  if(qi < ROUNDS) showQ();
+  else {
+    document.getElementById("quiz-prompt").textContent = "";
+    document.getElementById("quiz-sentence").textContent = "";
+    document.getElementById("quiz-options").innerHTML = "";
+    document.getElementById("quiz-feedback").style.display = "none";
+    document.getElementById("quiz-next").style.display = "none";
+    document.getElementById("qbar").style.width = "100%";
+    var uniq = {}; missedList.forEach(function(m){ uniq[m.a] = m; });
+    var missArr = Object.keys(uniq).map(function(k){ return uniq[k]; });
+    var msg = "<strong>" + correctN + " / " + ROUNDS + " correct.</strong> ";
+    if(missArr.length === 0) msg += "Entlassungsbrief German mastered.";
+    else {
+      msg += "Review these " + missArr.length + ":<ul style='margin:8px 0 0 18px'>";
+      missArr.forEach(function(m){ msg += "<li><strong>" + m.a + "</strong> <span style='color:#64748b'>(" + m.p + ")</span></li>"; });
+      msg += "</ul>";
+    }
+    document.getElementById("quiz-summary").innerHTML = '<div class="note">' + msg + "</div>";
+    document.getElementById("calc-btn").style.display = "block";
+    document.getElementById("calc-btn").textContent = "Play again";
+  }
+}
+renderFrames();
+
+
+</script>
+</body>
+</html>
