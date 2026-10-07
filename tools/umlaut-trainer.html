@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Umlaut Trainer: ä ö ü Minimal Pairs with Audio | Bayzubaan</title>
+<meta name="description" content="Master German umlauts ä, ö, ü with 36 minimal pairs, mouth-shape tips, native-quality audio playback and a 12-round listening quiz.">
+<link rel="canonical" href="https://bayzubaan.com/tools/umlaut-trainer/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Umlaut Trainer: ä ö ü Minimal Pairs with Audio">
+<meta property="og:description" content="Hear the difference between schon and schön, drücken and drucken: 36 umlaut minimal pairs with audio and a listening quiz.">
+<meta property="og:url" content="https://bayzubaan.com/tools/umlaut-trainer/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Umlaut Trainer: ä ö ü Minimal Pairs with Audio">
+<meta name="twitter:description" content="Hear the difference between schon and schön, drücken and drucken: 36 umlaut minimal pairs with audio and a listening quiz.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is ä just a fancier way of writing e?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. ä and e are different phonemes in German, and swapping them changes meaning: der Bär (bear) versus die Bar (pub). In unstressed syllables e often reduces to a neutral schwa sound, which is why learners confuse them — but in stressed syllables the distinction is sharp and native speakers hear it immediately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which umlaut is hardest for English speakers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually ü. English has no rounded front vowel, so the brain files ü under “oo” and ö under “uh”. The lip-rounding trick — lips in the “u” shape, tongue saying “i” — bypasses the English filter because it builds the sound mechanically rather than by imitation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to hear the difference reliably?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With five focused minutes a day on minimal pairs, most learners go from guessing to 80%+ accuracy within two to three weeks. Production (saying them correctly yourself) typically lags perception by one to two weeks, which is normal — the ear leads, the mouth follows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I really need umlauts, or will context save me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Context helps, but it does not save you. Pairs like fühlen/füllen (feel/fill) or Höhle/Hölle (cave/hell) appear in identical sentence frames, and in professional settings — a clinic, a meeting — guessing from context is not acceptable. Clean umlauts are also one of the fastest signals of serious German to native listeners."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does ä sometimes sound like “eh” and sometimes like a longer vowel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because German distinguishes long and short vowels. Short ä is [ɛ] as in Männer; long ä is [eː] as in Bär or spät. The spelling rule of thumb: one following consonant usually means long, two consonants mean short. The trainer's Höhle/Hölle and fühlen/füllen pairs drill exactly this."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>Umlaut Trainer: Hear and Say ä, ö, ü</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">Hear the difference between schon and schön, drücken and drucken: 36 umlaut minimal pairs with audio and a listening quiz.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+<style>
+.rec-btn{background:#fff;border:2px solid #2563eb;color:#1d4ed8;border-radius:8px;padding:12px 18px;font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit}
+.rec-btn.rec-on{border-color:#ef4444;color:#b91c1c}
+.mic-note{font-size:.9rem;color:#64748b;margin-top:8px}
+audio.me-play{display:none;width:100%;margin-top:10px}
+.speak-btn{background:#eff6ff;border:2px solid #bfdbfe;color:#1d4ed8;border-radius:8px;padding:10px 16px;font-size:1rem;font-weight:600;cursor:pointer;font-family:inherit;margin:4px 6px 4px 0}
+.speak-btn:hover{border-color:#2563eb}
+.pair-table td .speak-btn{padding:6px 12px;font-size:.9rem}
+</style>
+<h2>Shape the sound</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:20px">
+<div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:16px">
+<h3 style="color:#1d4ed8;margin-bottom:8px">ä [ɛ] / [eː]</h3>
+<p style="font-size:.95rem">Tongue low and forward, lips spread wide — like English “bed” but opener. Never like English “ay”.</p>
+<button class="speak-btn" onclick="speakDE('Äpfel, Städte, Männer')">&#128266; Hear ä words</button>
+</div>
+<div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:16px">
+<h3 style="color:#1d4ed8;margin-bottom:8px">ö [œ] / [øː]</h3>
+<p style="font-size:.95rem">Round your lips as if to say “o”, then say “e” through the rounded lips.</p>
+<button class="speak-btn" onclick="speakDE('Söhne, schön, Vögel')">&#128266; Hear ö words</button>
+</div>
+<div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:16px">
+<h3 style="color:#1d4ed8;margin-bottom:8px">ü [ʏ] / [yː]</h3>
+<p style="font-size:.95rem">Round your lips as if to say “u”, then say “i” through the rounded lips.</p>
+<button class="speak-btn" onclick="speakDE('Mütter, fühlen, Tür')">&#128266; Hear ü words</button>
+</div>
+</div>
+<h2>Minimal-pair browser</h2>
+<p style="margin-bottom:12px">Tap a word to hear it, then say it back. Train one group at a time.</p>
+<h3>a ↔ ä</h3><table class='pair-table'><tr><th>Pair</th><th>Listen</th><th>Meaning</th></tr><tr><td><strong>Stadt</strong><br><span style='color:#64748b;font-size:.85rem'>[ʃtat]</span></td><td><button class='speak-btn' onclick="speakDE('Stadt')">&#128266; Stadt</button> <button class='speak-btn' onclick="speakDE('Städte')">&#128266; Städte</button></td><td><strong>Stadt</strong> <span style='color:#64748b'>town</span><br><strong>Städte</strong> <span style='color:#64748b'>towns</span></td></tr><tr><td><strong>Mann</strong><br><span style='color:#64748b;font-size:.85rem'>[man]</span></td><td><button class='speak-btn' onclick="speakDE('Mann')">&#128266; Mann</button> <button class='speak-btn' onclick="speakDE('Männer')">&#128266; Männer</button></td><td><strong>Mann</strong> <span style='color:#64748b'>man</span><br><strong>Männer</strong> <span style='color:#64748b'>men</span></td></tr><tr><td><strong>Apfel</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈap͡fl̩]</span></td><td><button class='speak-btn' onclick="speakDE('Apfel')">&#128266; Apfel</button> <button class='speak-btn' onclick="speakDE('Äpfel')">&#128266; Äpfel</button></td><td><strong>Apfel</strong> <span style='color:#64748b'>apple</span><br><strong>Äpfel</strong> <span style='color:#64748b'>apples</span></td></tr><tr><td><strong>warm</strong><br><span style='color:#64748b;font-size:.85rem'>[vaʁm]</span></td><td><button class='speak-btn' onclick="speakDE('warm')">&#128266; warm</button> <button class='speak-btn' onclick="speakDE('wärmer')">&#128266; wärmer</button></td><td><strong>warm</strong> <span style='color:#64748b'>warm</span><br><strong>wärmer</strong> <span style='color:#64748b'>warmer</span></td></tr><tr><td><strong>lang</strong><br><span style='color:#64748b;font-size:.85rem'>[laŋ]</span></td><td><button class='speak-btn' onclick="speakDE('lang')">&#128266; lang</button> <button class='speak-btn' onclick="speakDE('länger')">&#128266; länger</button></td><td><strong>lang</strong> <span style='color:#64748b'>long</span><br><strong>länger</strong> <span style='color:#64748b'>longer</span></td></tr><tr><td><strong>alt</strong><br><span style='color:#64748b;font-size:.85rem'>[alt]</span></td><td><button class='speak-btn' onclick="speakDE('alt')">&#128266; alt</button> <button class='speak-btn' onclick="speakDE('älter')">&#128266; älter</button></td><td><strong>alt</strong> <span style='color:#64748b'>old</span><br><strong>älter</strong> <span style='color:#64748b'>older</span></td></tr><tr><td><strong>Bär</strong><br><span style='color:#64748b;font-size:.85rem'>[bɛːɐ̯]</span></td><td><button class='speak-btn' onclick="speakDE('Bär')">&#128266; Bär</button> <button class='speak-btn' onclick="speakDE('Bar')">&#128266; Bar</button></td><td><strong>Bär</strong> <span style='color:#64748b'>bear</span><br><strong>Bar</strong> <span style='color:#64748b'>bar (pub)</span></td></tr><tr><td><strong>Garten</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈɡaʁtn̩]</span></td><td><button class='speak-btn' onclick="speakDE('Garten')">&#128266; Garten</button> <button class='speak-btn' onclick="speakDE('Gärten')">&#128266; Gärten</button></td><td><strong>Garten</strong> <span style='color:#64748b'>garden</span><br><strong>Gärten</strong> <span style='color:#64748b'>gardens</span></td></tr></table>
+<h3>o ↔ ö</h3><table class='pair-table'><tr><th>Pair</th><th>Listen</th><th>Meaning</th></tr><tr><td><strong>Sohn</strong><br><span style='color:#64748b;font-size:.85rem'>[zoːn]</span></td><td><button class='speak-btn' onclick="speakDE('Sohn')">&#128266; Sohn</button> <button class='speak-btn' onclick="speakDE('Söhne')">&#128266; Söhne</button></td><td><strong>Sohn</strong> <span style='color:#64748b'>son</span><br><strong>Söhne</strong> <span style='color:#64748b'>sons</span></td></tr><tr><td><strong>Vogel</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈfoːɡl̩]</span></td><td><button class='speak-btn' onclick="speakDE('Vogel')">&#128266; Vogel</button> <button class='speak-btn' onclick="speakDE('Vögel')">&#128266; Vögel</button></td><td><strong>Vogel</strong> <span style='color:#64748b'>bird</span><br><strong>Vögel</strong> <span style='color:#64748b'>birds</span></td></tr><tr><td><strong>Wort</strong><br><span style='color:#64748b;font-size:.85rem'>[vɔʁt]</span></td><td><button class='speak-btn' onclick="speakDE('Wort')">&#128266; Wort</button> <button class='speak-btn' onclick="speakDE('Wörter')">&#128266; Wörter</button></td><td><strong>Wort</strong> <span style='color:#64748b'>word</span><br><strong>Wörter</strong> <span style='color:#64748b'>words</span></td></tr><tr><td><strong>groß</strong><br><span style='color:#64748b;font-size:.85rem'>[ɡʁoːs]</span></td><td><button class='speak-btn' onclick="speakDE('groß')">&#128266; groß</button> <button class='speak-btn' onclick="speakDE('größer')">&#128266; größer</button></td><td><strong>groß</strong> <span style='color:#64748b'>big</span><br><strong>größer</strong> <span style='color:#64748b'>bigger</span></td></tr><tr><td><strong>Ofen</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈoːfn̩]</span></td><td><button class='speak-btn' onclick="speakDE('Ofen')">&#128266; Ofen</button> <button class='speak-btn' onclick="speakDE('Öfen')">&#128266; Öfen</button></td><td><strong>Ofen</strong> <span style='color:#64748b'>oven</span><br><strong>Öfen</strong> <span style='color:#64748b'>ovens</span></td></tr><tr><td><strong>Dorf</strong><br><span style='color:#64748b;font-size:.85rem'>[dɔʁf]</span></td><td><button class='speak-btn' onclick="speakDE('Dorf')">&#128266; Dorf</button> <button class='speak-btn' onclick="speakDE('Dörfer')">&#128266; Dörfer</button></td><td><strong>Dorf</strong> <span style='color:#64748b'>village</span><br><strong>Dörfer</strong> <span style='color:#64748b'>villages</span></td></tr><tr><td><strong>Schloss</strong><br><span style='color:#64748b;font-size:.85rem'>[ʃlɔs]</span></td><td><button class='speak-btn' onclick="speakDE('Schloss')">&#128266; Schloss</button> <button class='speak-btn' onclick="speakDE('Schlösser')">&#128266; Schlösser</button></td><td><strong>Schloss</strong> <span style='color:#64748b'>castle</span><br><strong>Schlösser</strong> <span style='color:#64748b'>castles</span></td></tr><tr><td><strong>Tochter</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈtɔxtɐ]</span></td><td><button class='speak-btn' onclick="speakDE('Tochter')">&#128266; Tochter</button> <button class='speak-btn' onclick="speakDE('Töchter')">&#128266; Töchter</button></td><td><strong>Tochter</strong> <span style='color:#64748b'>daughter</span><br><strong>Töchter</strong> <span style='color:#64748b'>daughters</span></td></tr><tr><td><strong>schon</strong><br><span style='color:#64748b;font-size:.85rem'>[ʃoːn]</span></td><td><button class='speak-btn' onclick="speakDE('schon')">&#128266; schon</button> <button class='speak-btn' onclick="speakDE('schön')">&#128266; schön</button></td><td><strong>schon</strong> <span style='color:#64748b'>already</span><br><strong>schön</strong> <span style='color:#64748b'>beautiful</span></td></tr><tr><td><strong>Flotte</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈflɔtə]</span></td><td><button class='speak-btn' onclick="speakDE('Flotte')">&#128266; Flotte</button> <button class='speak-btn' onclick="speakDE('Flöte')">&#128266; Flöte</button></td><td><strong>Flotte</strong> <span style='color:#64748b'>fleet</span><br><strong>Flöte</strong> <span style='color:#64748b'>flute</span></td></tr><tr><td><strong>Höhle</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈhøːlə]</span></td><td><button class='speak-btn' onclick="speakDE('Höhle')">&#128266; Höhle</button> <button class='speak-btn' onclick="speakDE('Hölle')">&#128266; Hölle</button></td><td><strong>Höhle</strong> <span style='color:#64748b'>cave</span><br><strong>Hölle</strong> <span style='color:#64748b'>hell</span></td></tr><tr><td><strong>Loch</strong><br><span style='color:#64748b;font-size:.85rem'>[lɔx]</span></td><td><button class='speak-btn' onclick="speakDE('Loch')">&#128266; Loch</button> <button class='speak-btn' onclick="speakDE('Löcher')">&#128266; Löcher</button></td><td><strong>Loch</strong> <span style='color:#64748b'>hole</span><br><strong>Löcher</strong> <span style='color:#64748b'>holes</span></td></tr></table>
+<h3>u ↔ ü</h3><table class='pair-table'><tr><th>Pair</th><th>Listen</th><th>Meaning</th></tr><tr><td><strong>Mutter</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈmʊtɐ]</span></td><td><button class='speak-btn' onclick="speakDE('Mutter')">&#128266; Mutter</button> <button class='speak-btn' onclick="speakDE('Mütter')">&#128266; Mütter</button></td><td><strong>Mutter</strong> <span style='color:#64748b'>mother</span><br><strong>Mütter</strong> <span style='color:#64748b'>mothers</span></td></tr><tr><td><strong>Bruder</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈbʁuːdɐ]</span></td><td><button class='speak-btn' onclick="speakDE('Bruder')">&#128266; Bruder</button> <button class='speak-btn' onclick="speakDE('Brüder')">&#128266; Brüder</button></td><td><strong>Bruder</strong> <span style='color:#64748b'>brother</span><br><strong>Brüder</strong> <span style='color:#64748b'>brothers</span></td></tr><tr><td><strong>Buch</strong><br><span style='color:#64748b;font-size:.85rem'>[buːx]</span></td><td><button class='speak-btn' onclick="speakDE('Buch')">&#128266; Buch</button> <button class='speak-btn' onclick="speakDE('Bücher')">&#128266; Bücher</button></td><td><strong>Buch</strong> <span style='color:#64748b'>book</span><br><strong>Bücher</strong> <span style='color:#64748b'>books</span></td></tr><tr><td><strong>Haus</strong><br><span style='color:#64748b;font-size:.85rem'>[haʊ̯s]</span></td><td><button class='speak-btn' onclick="speakDE('Haus')">&#128266; Haus</button> <button class='speak-btn' onclick="speakDE('Häuser')">&#128266; Häuser</button></td><td><strong>Haus</strong> <span style='color:#64748b'>house</span><br><strong>Häuser</strong> <span style='color:#64748b'>houses</span></td></tr><tr><td><strong>Fuß</strong><br><span style='color:#64748b;font-size:.85rem'>[fuːs]</span></td><td><button class='speak-btn' onclick="speakDE('Fuß')">&#128266; Fuß</button> <button class='speak-btn' onclick="speakDE('Füße')">&#128266; Füße</button></td><td><strong>Fuß</strong> <span style='color:#64748b'>foot</span><br><strong>Füße</strong> <span style='color:#64748b'>feet</span></td></tr><tr><td><strong>Stuhl</strong><br><span style='color:#64748b;font-size:.85rem'>[ʃtuːl]</span></td><td><button class='speak-btn' onclick="speakDE('Stuhl')">&#128266; Stuhl</button> <button class='speak-btn' onclick="speakDE('Stühle')">&#128266; Stühle</button></td><td><strong>Stuhl</strong> <span style='color:#64748b'>chair</span><br><strong>Stühle</strong> <span style='color:#64748b'>chairs</span></td></tr><tr><td><strong>Zug</strong><br><span style='color:#64748b;font-size:.85rem'>[t͡suːk]</span></td><td><button class='speak-btn' onclick="speakDE('Zug')">&#128266; Zug</button> <button class='speak-btn' onclick="speakDE('Züge')">&#128266; Züge</button></td><td><strong>Zug</strong> <span style='color:#64748b'>train</span><br><strong>Züge</strong> <span style='color:#64748b'>trains</span></td></tr><tr><td><strong>jung</strong><br><span style='color:#64748b;font-size:.85rem'>[jʊŋ]</span></td><td><button class='speak-btn' onclick="speakDE('jung')">&#128266; jung</button> <button class='speak-btn' onclick="speakDE('jünger')">&#128266; jünger</button></td><td><strong>jung</strong> <span style='color:#64748b'>young</span><br><strong>jünger</strong> <span style='color:#64748b'>younger</span></td></tr><tr><td><strong>kurz</strong><br><span style='color:#64748b;font-size:.85rem'>[kʊʁt͡s]</span></td><td><button class='speak-btn' onclick="speakDE('kurz')">&#128266; kurz</button> <button class='speak-btn' onclick="speakDE('kürzer')">&#128266; kürzer</button></td><td><strong>kurz</strong> <span style='color:#64748b'>short</span><br><strong>kürzer</strong> <span style='color:#64748b'>shorter</span></td></tr><tr><td><strong>Kuss</strong><br><span style='color:#64748b;font-size:.85rem'>[kʊs]</span></td><td><button class='speak-btn' onclick="speakDE('Kuss')">&#128266; Kuss</button> <button class='speak-btn' onclick="speakDE('Küsse')">&#128266; Küsse</button></td><td><strong>Kuss</strong> <span style='color:#64748b'>kiss</span><br><strong>Küsse</strong> <span style='color:#64748b'>kisses</span></td></tr><tr><td><strong>drücken</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈdʁʏkn̩]</span></td><td><button class='speak-btn' onclick="speakDE('drücken')">&#128266; drücken</button> <button class='speak-btn' onclick="speakDE('drucken')">&#128266; drucken</button></td><td><strong>drücken</strong> <span style='color:#64748b'>to press</span><br><strong>drucken</strong> <span style='color:#64748b'>to print</span></td></tr><tr><td><strong>Stück</strong><br><span style='color:#64748b;font-size:.85rem'>[ʃtʏk]</span></td><td><button class='speak-btn' onclick="speakDE('Stück')">&#128266; Stück</button> <button class='speak-btn' onclick="speakDE('Stuck')">&#128266; Stuck</button></td><td><strong>Stück</strong> <span style='color:#64748b'>piece</span><br><strong>Stuck</strong> <span style='color:#64748b'>ornamental plaster</span></td></tr><tr><td><strong>lügen</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈlyːɡn̩]</span></td><td><button class='speak-btn' onclick="speakDE('lügen')">&#128266; lügen</button> <button class='speak-btn' onclick="speakDE('lugen')">&#128266; lugen</button></td><td><strong>lügen</strong> <span style='color:#64748b'>to lie (untruth)</span><br><strong>lugen</strong> <span style='color:#64748b'>to peer</span></td></tr><tr><td><strong>fühlen</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈfyːlən]</span></td><td><button class='speak-btn' onclick="speakDE('fühlen')">&#128266; fühlen</button> <button class='speak-btn' onclick="speakDE('füllen')">&#128266; füllen</button></td><td><strong>fühlen</strong> <span style='color:#64748b'>to feel</span><br><strong>füllen</strong> <span style='color:#64748b'>to fill</span></td></tr><tr><td><strong>Hüte</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈhyːtə]</span></td><td><button class='speak-btn' onclick="speakDE('Hüte')">&#128266; Hüte</button> <button class='speak-btn' onclick="speakDE('Hütte')">&#128266; Hütte</button></td><td><strong>Hüte</strong> <span style='color:#64748b'>hats</span><br><strong>Hütte</strong> <span style='color:#64748b'>hut</span></td></tr><tr><td><strong>Tür</strong><br><span style='color:#64748b;font-size:.85rem'>[tyːɐ̯]</span></td><td><button class='speak-btn' onclick="speakDE('Tür')">&#128266; Tür</button> <button class='speak-btn' onclick="speakDE('Tour')">&#128266; Tour</button></td><td><strong>Tür</strong> <span style='color:#64748b'>door</span><br><strong>Tour</strong> <span style='color:#64748b'>tour</span></td></tr></table>
+<hr style="margin:24px 0;border:none;border-top:1px solid #e2e8f0">
+
+<h3>Listening quiz: which word did you hear?</h3>
+<div class="progress"><div id="PQ-bar"></div></div>
+<div class="quiz-meta"><span id="PQ-meta"></span></div>
+<div id="PQ-prompt" style="margin-bottom:14px"></div>
+<div id="PQ-options"></div>
+<div id="PQ-fb"></div>
+<p class="mic-note" id="speak-note" style="display:none">If you hear nothing, your device may not have a German voice installed.</p>
+<p class="mic-note">Tip: use headphones. Words are spoken by your device's German voice.</p>
+<script>document.addEventListener('DOMContentLoaded',function(){PQ_start(12);});</script>
+
+
+</div>
+
+<article class="prose">
+
+<h2>Why umlauts decide meaning in German</h2>
+<p>German has three umlauted vowels — <strong>ä, ö, ü</strong> — and they are not decorations. Swap one vowel and the meaning of the word changes completely: <span class="hl">schon</span> (already) versus <span class="hl">schön</span> (beautiful), <span class="hl">drücken</span> (to press) versus <span class="hl">drucken</span> (to print), <span class="hl">Höhle</span> (cave) versus <span class="hl">Hölle</span> (hell). A doctor who mixes up <span class="hl">fühlen</span> (to feel) and <span class="hl">füllen</span> (to fill) will confuse every patient in the room. Umlauts are therefore not a pronunciation garnish; they carry meaning, and native speakers hear the difference instantly.</p>
+<p>The good news is that umlauts are completely regular. Each one is a fronted, rounded or unrounded partner of a plain vowel, and each can be built from sounds you already know with a simple tongue-and-lip recipe. This trainer gives you 36 minimal pairs — word pairs that differ in exactly one vowel — plus a listening quiz that forces your ear to tell them apart. Work through one vowel group per day and the distinction becomes automatic.</p>
+<h2>The three umlauts, precisely described</h2>
+<p><strong>ä</strong> is the open front vowel [ɛ] (short, as in <em>Männer</em>) or the long [eː] (as in <em>Bär</em>). Think of English “bed”, but slightly opener and tenser. The single most common English-speaker mistake is pronouncing ä like the “ay” in “day” — that diphthong does not exist in standard German, and “Städte” said as “stay-tuh” is immediately foreign.</p>
+<p><strong>ö</strong> is the rounded front vowel [œ] (short, as in <em>Wörter</em>) or [øː] (long, as in <em>Söhne</em>). There is no English equivalent, which is exactly why the lip-rounding trick works: freeze your lips in the “o” position and say “e” through them. What comes out is ö.</p>
+<p><strong>ü</strong> is the close rounded front vowel [ʏ] (short, as in <em>Mütter</em>) or [yː] (long, as in <em>fühlen</em>). Same trick one step higher: lips in the “u” position, say “i” through them. French speakers already know this sound from <em>lune</em>; English speakers usually find ü the hardest of the three, and it repays the most practice.</p>
+<h2>How to shape each sound: the mirror exercise</h2>
+<p>Stand in front of a mirror and work through this sequence slowly. First, say the plain vowel and watch your mouth: <em>a</em> (jaw dropped, lips neutral), <em>o</em> (lips rounded, pushed slightly forward), <em>u</em> (lips tightly rounded). Now, without moving your lips at all, slide the tongue forward: for <em>a → ä</em> the tongue moves forward and the sound brightens; for <em>o → ö</em> keep the round lips and let the tongue rise toward the “e” position; for <em>u → ü</em> keep the tight rounding and raise the tongue toward “i”. If your lips move, start over — the lips belong to the old vowel, the tongue does the new work.</p>
+<p>Two checks tell you the sound is right. The <strong>finger check</strong>: place a finger horizontally between your teeth for ä — the jaw should be open about one finger-width, no more. The <strong>whisper check</strong>: whisper the vowel; if ö and ü still sound distinct from “e” and “i” when whispered, your tongue position is correct, because whispering removes voicing and leaves only the mouth shape.</p>
+<h2>Long versus short: the pairs that trap everyone</h2>
+<p>German vowels come in long and short versions, and the umlauts are no exception. The trainer includes three classic long-short traps. <span class="hl">Höhle</span> [høːlə] (cave) has a long ö; <span class="hl">Hölle</span> [hœlə] (hell) has a short one — same spelling pattern, different vowel length, wildly different meaning. <span class="hl">fühlen</span> (to feel) is long; <span class="hl">füllen</span> (to fill) is short. <span class="hl">Hüte</span> (hats) is long; <span class="hl">Hütte</span> (hut) is short. The rule of thumb: a single consonant after the vowel usually means long, a doubled consonant means short. Listen to these three pairs on loop until the length difference feels as obvious as the vowel difference.</p>
+<h2>Where umlauts come from: plurals, comparatives, verbs</h2>
+<p>Most umlauts you meet are not random vocabulary — they are grammar made audible. A huge share of German plurals are formed by umlauting the stem vowel: <em>Stadt → Städte, Mann → Männer, Buch → Bücher, Sohn → Söhne</em>. Comparatives do the same: <em>warm → wärmer, groß → größer, jung → jünger</em>. Even verb forms umlaut: <em>fahren → er fährt</em>. This is why the trainer leans on morphological pairs — learning the sound and the grammar rule in the same breath doubles the payoff. When you can hear <em>Mütter</em> versus <em>Mutter</em> reliably, you are also hearing singular versus plural reliably.</p>
+<h2>Spelling traps to unlearn</h2>
+<p>First trap: in unstressed syllables, the letter <strong>e</strong> is often pronounced [ə] (schwa), which can sound close to a short ä — but they are different phonemes, and minimal pairs like <em>Bar/Bär</em> prove it. Second trap: the digraph <strong>äu</strong> is pronounced [ɔʏ̯], exactly like <strong>eu</strong> (<em>Häuser</em> sounds like <em>Heuser</em> would). Third trap: English speakers tend to hear German ü as “oo” and German ö as “uh”; both mishearings collapse the pairs in this trainer, so every quiz round is also ear training against your native-language filter.</p>
+<h2>A five-minute daily routine</h2>
+<p>Day structure that works: one minute of the mirror exercise for the day's vowel, two minutes in the pair browser saying each word aloud after the audio, two minutes of the quiz. Do not train all three umlauts in one session until each is solid alone — interference between ö and ü is the main reason learners plateau. Record yourself on your phone once a week reading ten pairs aloud, and compare with week one; the progress is usually dramatic and audible. Within two to three weeks of daily five-minute sessions, most learners move from guessing to reliably distinguishing all 36 pairs, which is the foundation for being understood in real conversation — and, for medical learners, for being trusted with the words that matter.</p>
+<h2>Regional notes</h2>
+<p>The standard pronunciation taught here (ä [ɛ], ö [øː]/[œ], ü [yː]/[ʏ]) is what you will hear on national news and in the Fachsprachenprüfung. Swiss German keeps all three umlauts clearly — some Swiss dialects even distinguish more vowel shades than the standard. Austrian standard German matches the German standard for these sounds. You do not need regional variants; you need the standard forms clean and automatic, which is exactly what the pairs above drill.</p>
+
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>Is ä just a fancier way of writing e?</h3><p>No. ä and e are different phonemes in German, and swapping them changes meaning: der Bär (bear) versus die Bar (pub). In unstressed syllables e often reduces to a neutral schwa sound, which is why learners confuse them — but in stressed syllables the distinction is sharp and native speakers hear it immediately.</p></div><div class="faq-item"><h3>Which umlaut is hardest for English speakers?</h3><p>Usually ü. English has no rounded front vowel, so the brain files ü under “oo” and ö under “uh”. The lip-rounding trick — lips in the “u” shape, tongue saying “i” — bypasses the English filter because it builds the sound mechanically rather than by imitation.</p></div><div class="faq-item"><h3>How long does it take to hear the difference reliably?</h3><p>With five focused minutes a day on minimal pairs, most learners go from guessing to 80%+ accuracy within two to three weeks. Production (saying them correctly yourself) typically lags perception by one to two weeks, which is normal — the ear leads, the mouth follows.</p></div><div class="faq-item"><h3>Do I really need umlauts, or will context save me?</h3><p>Context helps, but it does not save you. Pairs like fühlen/füllen (feel/fill) or Höhle/Hölle (cave/hell) appear in identical sentence frames, and in professional settings — a clinic, a meeting — guessing from context is not acceptable. Clean umlauts are also one of the fastest signals of serious German to native listeners.</p></div><div class="faq-item"><h3>Why does ä sometimes sound like “eh” and sometimes like a longer vowel?</h3><p>Because German distinguishes long and short vowels. Short ä is [ɛ] as in Männer; long ä is [eː] as in Bär or spät. The spelling rule of thumb: one following consonant usually means long, two consonants mean short. The trainer&#x27;s Höhle/Hölle and fühlen/füllen pairs drill exactly this.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+var _deVoice=null;
+function pickDeVoice(){
+  try{
+    var vs=speechSynthesis.getVoices();
+    for(var i=0;i<vs.length;i++){
+      if(vs[i].lang && vs[i].lang.toLowerCase().indexOf('de')===0){_deVoice=vs[i];break;}
+    }
+  }catch(e){}
+}
+try{
+  pickDeVoice();
+  if(typeof speechSynthesis!=='undefined'&&speechSynthesis.onvoiceschanged!==undefined){
+    speechSynthesis.onvoiceschanged=pickDeVoice;
+  }
+}catch(e){}
+function speakDE(t,rate){
+  try{
+    speechSynthesis.cancel();
+    var u=new SpeechSynthesisUtterance(t);
+    u.lang='de-DE';
+    if(_deVoice){u.voice=_deVoice;}
+    u.rate=rate||0.85;
+    speechSynthesis.speak(u);
+  }catch(e){
+    var el=document.getElementById('speak-note');
+    if(el){el.style.display='block';}
+  }
+}
+
+var PQ_ITEMS=[{"a": "Stadt", "b": "Städte", "ipaA": "[ʃtat]", "ipaB": "[ˈʃtɛːtə]", "enA": "town", "enB": "towns", "grp": "a-ä"}, {"a": "Mann", "b": "Männer", "ipaA": "[man]", "ipaB": "[ˈmɛnɐ]", "enA": "man", "enB": "men", "grp": "a-ä"}, {"a": "Apfel", "b": "Äpfel", "ipaA": "[ˈap͡fl̩]", "ipaB": "[ˈɛpf͡l̩]", "enA": "apple", "enB": "apples", "grp": "a-ä"}, {"a": "warm", "b": "wärmer", "ipaA": "[vaʁm]", "ipaB": "[ˈvɛʁmɐ]", "enA": "warm", "enB": "warmer", "grp": "a-ä"}, {"a": "lang", "b": "länger", "ipaA": "[laŋ]", "ipaB": "[ˈlɛŋɐ]", "enA": "long", "enB": "longer", "grp": "a-ä"}, {"a": "alt", "b": "älter", "ipaA": "[alt]", "ipaB": "[ˈɛltɐ]", "enA": "old", "enB": "older", "grp": "a-ä"}, {"a": "Bär", "b": "Bar", "ipaA": "[bɛːɐ̯]", "ipaB": "[baːɐ̯]", "enA": "bear", "enB": "bar (pub)", "grp": "a-ä"}, {"a": "Garten", "b": "Gärten", "ipaA": "[ˈɡaʁtn̩]", "ipaB": "[ˈɡɛʁtn̩]", "enA": "garden", "enB": "gardens", "grp": "a-ä"}, {"a": "Sohn", "b": "Söhne", "ipaA": "[zoːn]", "ipaB": "[ˈzøːnə]", "enA": "son", "enB": "sons", "grp": "o-ö"}, {"a": "Vogel", "b": "Vögel", "ipaA": "[ˈfoːɡl̩]", "ipaB": "[ˈføːɡl̩]", "enA": "bird", "enB": "birds", "grp": "o-ö"}, {"a": "Wort", "b": "Wörter", "ipaA": "[vɔʁt]", "ipaB": "[ˈvœʁtɐ]", "enA": "word", "enB": "words", "grp": "o-ö"}, {"a": "groß", "b": "größer", "ipaA": "[ɡʁoːs]", "ipaB": "[ˈɡʁøːsɐ]", "enA": "big", "enB": "bigger", "grp": "o-ö"}, {"a": "Ofen", "b": "Öfen", "ipaA": "[ˈoːfn̩]", "ipaB": "[ˈøːfn̩]", "enA": "oven", "enB": "ovens", "grp": "o-ö"}, {"a": "Dorf", "b": "Dörfer", "ipaA": "[dɔʁf]", "ipaB": "[ˈdœʁfɐ]", "enA": "village", "enB": "villages", "grp": "o-ö"}, {"a": "Schloss", "b": "Schlösser", "ipaA": "[ʃlɔs]", "ipaB": "[ˈʃlœsɐ]", "enA": "castle", "enB": "castles", "grp": "o-ö"}, {"a": "Tochter", "b": "Töchter", "ipaA": "[ˈtɔxtɐ]", "ipaB": "[ˈtœçtɐ]", "enA": "daughter", "enB": "daughters", "grp": "o-ö"}, {"a": "schon", "b": "schön", "ipaA": "[ʃoːn]", "ipaB": "[ʃøːn]", "enA": "already", "enB": "beautiful", "grp": "o-ö"}, {"a": "Flotte", "b": "Flöte", "ipaA": "[ˈflɔtə]", "ipaB": "[ˈfløːtə]", "enA": "fleet", "enB": "flute", "grp": "o-ö"}, {"a": "Höhle", "b": "Hölle", "ipaA": "[ˈhøːlə]", "ipaB": "[ˈhœlə]", "enA": "cave", "enB": "hell", "grp": "o-ö"}, {"a": "Loch", "b": "Löcher", "ipaA": "[lɔx]", "ipaB": "[ˈlœçɐ]", "enA": "hole", "enB": "holes", "grp": "o-ö"}, {"a": "Mutter", "b": "Mütter", "ipaA": "[ˈmʊtɐ]", "ipaB": "[ˈmʏtɐ]", "enA": "mother", "enB": "mothers", "grp": "u-ü"}, {"a": "Bruder", "b": "Brüder", "ipaA": "[ˈbʁuːdɐ]", "ipaB": "[ˈbʁyːdɐ]", "enA": "brother", "enB": "brothers", "grp": "u-ü"}, {"a": "Buch", "b": "Bücher", "ipaA": "[buːx]", "ipaB": "[ˈbyːçɐ]", "enA": "book", "enB": "books", "grp": "u-ü"}, {"a": "Haus", "b": "Häuser", "ipaA": "[haʊ̯s]", "ipaB": "[ˈhɔʏ̯zɐ]", "enA": "house", "enB": "houses", "grp": "u-ü"}, {"a": "Fuß", "b": "Füße", "ipaA": "[fuːs]", "ipaB": "[ˈfyːsə]", "enA": "foot", "enB": "feet", "grp": "u-ü"}, {"a": "Stuhl", "b": "Stühle", "ipaA": "[ʃtuːl]", "ipaB": "[ˈʃtyːlə]", "enA": "chair", "enB": "chairs", "grp": "u-ü"}, {"a": "Zug", "b": "Züge", "ipaA": "[t͡suːk]", "ipaB": "[ˈt͡syːɡə]", "enA": "train", "enB": "trains", "grp": "u-ü"}, {"a": "jung", "b": "jünger", "ipaA": "[jʊŋ]", "ipaB": "[ˈjʏŋɐ]", "enA": "young", "enB": "younger", "grp": "u-ü"}, {"a": "kurz", "b": "kürzer", "ipaA": "[kʊʁt͡s]", "ipaB": "[ˈkʏʁt͡sɐ]", "enA": "short", "enB": "shorter", "grp": "u-ü"}, {"a": "Kuss", "b": "Küsse", "ipaA": "[kʊs]", "ipaB": "[ˈkʏsə]", "enA": "kiss", "enB": "kisses", "grp": "u-ü"}, {"a": "drücken", "b": "drucken", "ipaA": "[ˈdʁʏkn̩]", "ipaB": "[ˈdʁʊkn̩]", "enA": "to press", "enB": "to print", "grp": "u-ü"}, {"a": "Stück", "b": "Stuck", "ipaA": "[ʃtʏk]", "ipaB": "[ʃtʊk]", "enA": "piece", "enB": "ornamental plaster", "grp": "u-ü"}, {"a": "lügen", "b": "lugen", "ipaA": "[ˈlyːɡn̩]", "ipaB": "[ˈluːɡn̩]", "enA": "to lie (untruth)", "enB": "to peer", "grp": "u-ü"}, {"a": "fühlen", "b": "füllen", "ipaA": "[ˈfyːlən]", "ipaB": "[ˈfʏlən]", "enA": "to feel", "enB": "to fill", "grp": "u-ü"}, {"a": "Hüte", "b": "Hütte", "ipaA": "[ˈhyːtə]", "ipaB": "[ˈhʏtə]", "enA": "hats", "enB": "hut", "grp": "u-ü"}, {"a": "Tür", "b": "Tour", "ipaA": "[tyːɐ̯]", "ipaB": "[tuːɐ̯]", "enA": "door", "enB": "tour", "grp": "u-ü"}];
+function PQ_buildRound(items,idx,side){
+  var it=items[idx % items.length];
+  var s=(side===1)?1:0;
+  return {it:it,side:s,options:[it.a,it.b],answer:s};
+}
+function PQ_sayIt(){
+  if(!PQ.cur)return;
+  var w=PQ.cur.side===0?PQ.cur.it.a:PQ.cur.it.b;
+  speakDE(w,0.8);
+}
+function PQ_promptHTML(round){
+  return '<p><strong>Listen:</strong> which word did you hear?</p>'
+    +'<button class="speak-btn" onclick="PQ_sayIt()">&#128266; Play word</button> '
+    +'<button class="speak-btn" onclick="PQ_sayIt()">&#128266; Replay</button>';
+}
+function PQ_feedbackHTML(round,ok){
+  var it=round.it;
+  var heard=round.side===0?it.a:it.b;
+  return 'You heard <strong>'+heard+'</strong> — '+it.a+' '+it.ipaA+' ('+it.enA+') vs '+it.b+' '+it.ipaB+' ('+it.enB+').';
+}
+
+var PQ={i:0,score:0,streak:0,order:[],sides:[],cur:null,done:false};
+function PQ_start(n){
+  PQ.i=0;PQ.score=0;PQ.streak=0;PQ.done=false;PQ.order=[];PQ.sides=[];
+  var pool=PQ_ITEMS.map(function(_,i){return i;});
+  for(var k=pool.length-1;k>0;k--){var j=Math.floor(Math.random()*(k+1));var t=pool[k];pool[k]=pool[j];pool[j]=t;}
+  PQ.order=pool.slice(0,Math.min(n,pool.length));
+  for(var s=0;s<PQ.order.length;s++){PQ.sides.push(Math.random()<0.5?0:1);}
+  PQ_next();
+}
+function PQ_next(){
+  if(PQ.i>=PQ.order.length){PQ_finish();return;}
+  var round=PQ_buildRound(PQ_ITEMS,PQ.order[PQ.i],PQ.sides[PQ.i]);
+  PQ.cur=round;
+  document.getElementById('PQ-prompt').innerHTML=PQ_promptHTML(round);
+  var box=document.getElementById('PQ-options');box.innerHTML='';
+  round.options.forEach(function(label,oi){
+    var b=document.createElement('button');b.className='quiz-btn';b.textContent=label;
+    b.onclick=function(){PQ_answer(oi,b);};box.appendChild(b);
+  });
+  var fb=document.getElementById('PQ-fb');fb.className='';fb.style.display='none';fb.innerHTML='';
+  document.getElementById('PQ-bar').style.width=(100*PQ.i/PQ.order.length)+'%';
+  document.getElementById('PQ-meta').textContent='Question '+(PQ.i+1)+' of '+PQ.order.length+' \u00B7 Score '+PQ.score+' \u00B7 Streak '+PQ.streak;
+}
+function PQ_answer(oi,btn){
+  if(PQ.done||!PQ.cur)return;
+  var ok=(oi===PQ.cur.answer);
+  var btns=document.getElementById('PQ-options').children;
+  for(var i=0;i<btns.length;i++){btns[i].disabled=true;if(i===PQ.cur.answer){btns[i].classList.add('correct');}}
+  var fb=document.getElementById('PQ-fb');
+  if(ok){PQ.score++;PQ.streak++;fb.className='ok';fb.innerHTML='\u2713 Correct. '+PQ_feedbackHTML(PQ.cur,true);}
+  else{PQ.streak=0;btn.classList.add('wrong');fb.className='no';fb.innerHTML='\u2717 Not quite. '+PQ_feedbackHTML(PQ.cur,false);}
+  fb.style.display='block';
+  PQ.i++;
+  setTimeout(PQ_next,2800);
+}
+function PQ_finish(){
+  PQ.done=true;
+  document.getElementById('PQ-bar').style.width='100%';
+  var n=PQ.order.length;
+  var msg='You scored '+PQ.score+' out of '+n+'. ';
+  msg+= PQ.score===n ? 'Perfect \u2014 your ear is ready for real conversations.'
+    : PQ.score>=Math.ceil(n*0.7) ? 'Strong. Replay the tricky pairs slowly before your next round.'
+    : 'Keep training \u2014 use the pair browser above at slow speed, then try again.';
+  document.getElementById('PQ-prompt').innerHTML='<p style="font-size:1.1rem">'+msg+'</p><button class="quiz-btn" style="margin-top:12px" onclick="PQ_start('+n+')">\u21BB Try again</button>';
+  document.getElementById('PQ-options').innerHTML='';
+  document.getElementById('PQ-meta').textContent='Finished \u00B7 Score '+PQ.score+'/'+n;
+  document.getElementById('PQ-fb').style.display='none';
+}
+
+
+</script>
+</body>
+</html>
