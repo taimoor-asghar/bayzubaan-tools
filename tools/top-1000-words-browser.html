@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top 100 German Words with Example Sentences — Frequency Browser + Flashcards | Bayzubaan</title>
+<meta name="description" content="Master the 120 most frequent German words: searchable browser with example sentences, category filters, and a flashcard test with spaced repetition.">
+<link rel="canonical" href="https://bayzubaan.com/tools/top-1000-words-browser/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Top 100 German Words with Example Sentences — Frequency Browser + Flashcards">
+<meta property="og:description" content="The 120 most frequent German words, each with an example sentence — browse, filter, and test yourself with flashcards.">
+<meta property="og:url" content="https://bayzubaan.com/tools/top-1000-words-browser/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Top 100 German Words with Example Sentences — Frequency Browser + Flashcards">
+<meta name="twitter:description" content="The 120 most frequent German words, each with an example sentence — browse, filter, and test yourself with flashcards.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why learn the most frequent words first?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The top 1,000 German words cover roughly 85% of everyday texts. Learning by frequency gives you the best return on every minute you study — the first 100 words unlock far more understanding than the next 1,000 rare ones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I really learn every noun with its article?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — always. A noun without der/die/das is only half learned: the article determines adjective endings, pronouns and prepositions throughout the sentence. The plural ending matters too, which is why every noun card here shows both."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the flashcard test work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It shows the German word first. Say the English meaning out loud, tap to reveal the answer, then mark it known or missed. Missed words are re-queued automatically, so you see them twice — a simple spaced-repetition loop."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many new words should I learn per day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Five to ten, with daily review of yesterday's batch. Spaced, repeated retrieval beats cramming: ten minutes a day outperforms an hour once a week. Come back tomorrow and run the deck again."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between wissen and kennen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wissen is knowing facts ('Ich weiß die Antwort'); kennen is knowing people or places through familiarity ('Ich kenne Berlin'). Both rank in the top 1,000 and both are tested constantly in exams."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do example sentences really help vocabulary stick?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — context fixes the meaning and shows you the word's real grammar: its preposition, its case, its word order. A word learned in a sentence is remembered far longer than a word learned from a list."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>The 120 Most Frequent German Words</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">The 120 most frequent German words, each with an example sentence — browse, filter, and test yourself with flashcards.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+
+<h2>Browse the top 120 German words</h2>
+<p style="margin-bottom:16px">Every entry shows the English meaning and a real example sentence. Search, filter by word type, then switch to flashcard mode to test yourself.</p>
+<div class="field">
+<label for="w-search">Search (German or English):</label>
+<input id="w-search" type="text" placeholder="e.g. sprechen or speak" aria-label="Search words">
+</div>
+<div class="try-row" id="w-filters" style="margin-bottom:16px">
+<button type="button" data-f="all" class="on">All</button>
+<button type="button" data-f="verb">Verbs</button>
+<button type="button" data-f="noun">Nouns</button>
+<button type="button" data-f="adjective">Adjectives</button>
+<button type="button" data-f="adverb">Adverbs</button>
+<button type="button" data-f="func">Function words</button>
+</div>
+<div style="display:flex;gap:8px;margin-bottom:16px">
+<button type="button" id="fc-start" style="background:#2563eb;color:#fff;border:none;border-radius:8px;padding:12px 20px;font-size:1rem;font-weight:700;cursor:pointer">Flashcard test</button>
+</div>
+<div id="w-list"></div>
+<div id="w-count" style="color:#64748b;font-size:.9rem;margin-top:8px"></div>
+<div id="fc" style="display:none;margin-top:16px">
+<div class="progress"><div id="fc-bar"></div></div>
+<div class="quiz-meta"><span id="fc-count">Card 1/120</span><span id="fc-score">Known: 0 · Missed: 0</span></div>
+<div id="fc-card" style="background:#f8fafc;border:2px solid #e2e8f0;border-radius:12px;padding:32px;text-align:center;cursor:pointer;min-height:200px;display:flex;flex-direction:column;justify-content:center" onclick="fcFlip()" role="button" tabindex="0" aria-label="Flashcard, activate to reveal"></div>
+<div style="display:flex;gap:8px;margin-top:12px">
+<button type="button" id="fc-known" style="flex:1;background:#10b981;color:#fff;border:none;border-radius:8px;padding:12px;font-weight:700;cursor:pointer;display:none" onclick="fcMark(true)">I knew it</button>
+<button type="button" id="fc-missed" style="flex:1;background:#ef4444;color:#fff;border:none;border-radius:8px;padding:12px;font-weight:700;cursor:pointer;display:none" onclick="fcMark(false)">Missed it</button>
+</div>
+<button type="button" id="fc-exit" style="display:none;margin-top:12px;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:8px;padding:8px 16px;cursor:pointer" onclick="fcExit()">Back to list</button>
+</div>
+
+</div>
+
+<article class="prose">
+
+<h2>Why the most frequent words matter most</h2>
+<p>Vocabulary is the single biggest predictor of how well you understand real German. But not all words are equal: the 1,000 most frequent German words cover roughly 85% of everyday texts, from newspaper articles to conversations with colleagues. That means the first hundred words you learn do far more work than the next thousand. This tool focuses on the highest-frequency core — the words you will meet on day one and keep meeting for years.</p>
+<p>Frequency lists are built by counting words across large text corpora (millions of words from newspapers, books and spoken language). The ranking below follows standard German frequency data: articles, pronouns, prepositions and the core modal and auxiliary verbs sit at the top, because they hold every sentence together. Content words — nouns, main verbs, adjectives — follow in order of their real-world frequency, not in textbook-chapter order.</p>
+<h2>How to use this word browser</h2>
+<p>Use the search box to look up any word in German or English — type "speak" to find <em>sprechen</em>, or "Hund" to check whether it is <em>der Hund</em>. The category filters narrow the list to verbs, nouns, adjectives, adverbs or function words (articles, pronouns, prepositions and conjunctions). Each card shows the frequency rank, the part of speech, the English meaning and a full example sentence with translation, so you always see the word in context rather than in isolation.</p>
+<p>For nouns, the headword includes the article and the plural ending: <em>der Mann, "-er</em> means <em>der Mann</em>, plural <em>die Männer</em>. This matters enormously — a noun without its article is only half learned, because the article determines every adjective ending and pronoun in the sentence. When you add a noun to your own flashcards later, always copy the article and plural from here.</p>
+<h2>From browsing to remembering: the flashcard test</h2>
+<p>Recognition is not recall. You may recognise <em>bleiben</em> when you read it, but can you produce its meaning when you see it cold? Tap <strong>Flashcard test</strong> to cycle through the whole deck: each card shows the German word first. Say the English meaning out loud, then tap the card to reveal the answer and the example sentence. Mark <strong>I knew it</strong> or <strong>Missed it</strong>. Words you miss are automatically re-queued, so you see them twice in one session — a simple form of spaced repetition.</p>
+<p>For real long-term retention, come back tomorrow and run the deck again. Words you get right twice in a row are moving into long-term memory; words you keep missing deserve a dedicated flashcard of their own. Ten minutes a day of this beats an hour of cramming once a week — memory research consistently shows that spaced, repeated retrieval wins.</p>
+<h2>Smart learning tips for German vocabulary</h2>
+<p>First, learn verbs with their prepositions and cases: not just <em>denken</em>, but <em>denken an + Akkusativ</em> (to think of). The example sentences here model the most common patterns, but a good habit is to note the case after each preposition you meet. Second, learn adjectives with their opposites: <em>teuer/billig</em>, <em>leicht/schwer</em>, <em>groß/klein</em> — pairs stick together in memory and double your coverage for free.</p>
+<p>Third, pay special attention to the "false friends" trap hiding in plain sight: <em>werden</em> looks like "were" but means "to become"; <em>bald</em> means "soon", not "bald"; <em>Gift</em> (not in this list, but coming) means "poison". When a word feels suspiciously familiar, double-check it. Fourth, notice the verbs with stem changes — <em>sprechen</em> (du sprichst), <em>nehmen</em> (du nimmst), <em>sehen</em> (du siehst) — and learn the <em>du</em> and <em>er/sie/es</em> forms from the start, not as an afterthought.</p>
+<h2>Notice the word order in every example sentence</h2>
+<p>Every example sentence in this tool is also a quiet grammar lesson. Look at the main clauses first: the conjugated verb sits in second position, no matter what comes first. <em>Ich weiß die Antwort.</em> starts with the subject, but <em>Morgen komme ich.</em> (the same pattern) starts with a time expression and the verb still comes second — <em>komme</em> follows <em>morgen</em> immediately. Get used to this now: in German, position two belongs to the verb.</p>
+<p>Now compare the two "because" sentences in the bank. <em>Ich bleibe, denn ich bin müde</em> keeps normal word order after <em>denn</em>, because <em>denn</em> is a coordinating conjunction joining two main clauses. But <em>Ich bleibe, weil ich müde bin</em> sends the verb <em>bin</em> to the very end — <em>weil</em> is subordinating and pushes the conjugated verb last. This denn/weil contrast is one of the most tested distinctions in German exams, and it appears here in minimal, memorable pairs. Read both sentences aloud until the pattern feels automatic.</p>
+<p>Separable verbs give you a third pattern for free: <em>Bring bitte Brot mit</em> splits <em>mitbringen</em>, parking the prefix at the end. And modal verbs park the infinitive at the end: <em>Ich kann Deutsch sprechen</em>, <em>Du sollst mehr Wasser trinken</em>. Once you see these frames — verb second, verb last after <em>weil/wenn/dass</em>, prefix or infinitive at the end — hundreds of sentences become predictable. That is why every card here shows a full sentence: you are learning the word and its frame together.</p>
+<h2>What "the top 1,000" really means</h2>
+<p>This tool ships with the top 120 words — the absolute core that unlocks basic conversations. The full top 1,000 extends this list with the next most frequent nouns (professions, food, travel), verbs (everyday actions) and adjectives (descriptions). If you master these 120 first, you already recognise a large share of the words in simple German texts. Each later vocabulary tool in this series builds on this foundation: the verb trainer, the noun drills and the Fachsprachenprüfung flashcards all assume you know this core list.</p>
+<p>A practical target: learn 10 new words a day from the list, reviewing yesterday's ten first. At that pace you will own the core 120 in under two weeks — and you will feel the difference the next time you read a German headline. Track your flashcard score; when you consistently score above 90% on the full deck, you are ready for the next batch of vocabulary tools.</p>
+
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>Why learn the most frequent words first?</h3><p>The top 1,000 German words cover roughly 85% of everyday texts. Learning by frequency gives you the best return on every minute you study — the first 100 words unlock far more understanding than the next 1,000 rare ones.</p></div><div class="faq-item"><h3>Should I really learn every noun with its article?</h3><p>Yes — always. A noun without der/die/das is only half learned: the article determines adjective endings, pronouns and prepositions throughout the sentence. The plural ending matters too, which is why every noun card here shows both.</p></div><div class="faq-item"><h3>How does the flashcard test work?</h3><p>It shows the German word first. Say the English meaning out loud, tap to reveal the answer, then mark it known or missed. Missed words are re-queued automatically, so you see them twice — a simple spaced-repetition loop.</p></div><div class="faq-item"><h3>How many new words should I learn per day?</h3><p>Five to ten, with daily review of yesterday&#x27;s batch. Spaced, repeated retrieval beats cramming: ten minutes a day outperforms an hour once a week. Come back tomorrow and run the deck again.</p></div><div class="faq-item"><h3>What is the difference between wissen and kennen?</h3><p>Wissen is knowing facts (&#x27;Ich weiß die Antwort&#x27;); kennen is knowing people or places through familiarity (&#x27;Ich kenne Berlin&#x27;). Both rank in the top 1,000 and both are tested constantly in exams.</p></div><div class="faq-item"><h3>Do example sentences really help vocabulary stick?</h3><p>Yes — context fixes the meaning and shows you the word&#x27;s real grammar: its preposition, its case, its word order. A word learned in a sentence is remembered far longer than a word learned from a list.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+var WORDS = [{"rank": 1, "w": "der / die / das", "pos": "article", "en": "the", "ex": "Der Mann kommt. Die Frau lacht. Das Kind spielt.", "exen": "The man is coming. The woman is laughing. The child is playing."}, {"rank": 2, "w": "und", "pos": "conjunction", "en": "and", "ex": "Brot und Butter.", "exen": "Bread and butter."}, {"rank": 3, "w": "sein", "pos": "verb", "en": "to be", "ex": "Ich bin müde.", "exen": "I am tired."}, {"rank": 4, "w": "in", "pos": "preposition", "en": "in / into", "ex": "Ich wohne in Aarhus.", "exen": "I live in Aarhus."}, {"rank": 5, "w": "ein / eine", "pos": "article", "en": "a / an", "ex": "Das ist ein Buch.", "exen": "That is a book."}, {"rank": 6, "w": "zu", "pos": "preposition", "en": "to", "ex": "Wir gehen zu Anna.", "exen": "We are going to Anna's."}, {"rank": 7, "w": "haben", "pos": "verb", "en": "to have", "ex": "Ich habe keine Zeit.", "exen": "I have no time."}, {"rank": 8, "w": "ich", "pos": "pronoun", "en": "I", "ex": "Ich heiße Anna.", "exen": "My name is Anna."}, {"rank": 9, "w": "werden", "pos": "verb", "en": "to become / will", "ex": "Es wird kalt. Ich werde anrufen.", "exen": "It is getting cold. I will call."}, {"rank": 10, "w": "sie", "pos": "pronoun", "en": "she / they", "ex": "Sie kommt morgen.", "exen": "She is coming tomorrow."}, {"rank": 11, "w": "von", "pos": "preposition", "en": "from / of", "ex": "Ein Freund von mir.", "exen": "A friend of mine."}, {"rank": 12, "w": "nicht", "pos": "adverb", "en": "not", "ex": "Das ist nicht wahr.", "exen": "That is not true."}, {"rank": 13, "w": "mit", "pos": "preposition", "en": "with", "ex": "Ich fahre mit dem Zug.", "exen": "I travel by train."}, {"rank": 14, "w": "es", "pos": "pronoun", "en": "it", "ex": "Es regnet.", "exen": "It is raining."}, {"rank": 15, "w": "sich", "pos": "pronoun", "en": "oneself (reflexive)", "ex": "Er freut sich.", "exen": "He is happy."}, {"rank": 16, "w": "auch", "pos": "adverb", "en": "also / too", "ex": "Ich komme auch.", "exen": "I am coming too."}, {"rank": 17, "w": "auf", "pos": "preposition", "en": "on / upon", "ex": "Das Buch liegt auf dem Tisch.", "exen": "The book is lying on the table."}, {"rank": 18, "w": "für", "pos": "preposition", "en": "for", "ex": "Das Geschenk ist für dich.", "exen": "The gift is for you."}, {"rank": 19, "w": "an", "pos": "preposition", "en": "at / on", "ex": "Am Montag.", "exen": "On Monday."}, {"rank": 20, "w": "er", "pos": "pronoun", "en": "he", "ex": "Er ist Arzt.", "exen": "He is a doctor."}, {"rank": 21, "w": "so", "pos": "adverb", "en": "so / such", "ex": "Das ist so schön!", "exen": "That is so beautiful!"}, {"rank": 22, "w": "dass", "pos": "conjunction", "en": "that", "ex": "Ich weiß, dass du kommst.", "exen": "I know that you are coming."}, {"rank": 23, "w": "können", "pos": "modal", "en": "can / to be able to", "ex": "Ich kann Deutsch sprechen.", "exen": "I can speak German."}, {"rank": 24, "w": "dieser / diese / dieses", "pos": "determiner", "en": "this", "ex": "Dieses Jahr ist gut.", "exen": "This year is good."}, {"rank": 25, "w": "als", "pos": "conjunction", "en": "as / than / when", "ex": "Größer als ich. Als ich jung war.", "exen": "Taller than me. When I was young."}, {"rank": 26, "w": "ihr", "pos": "pronoun", "en": "her / their / you (plural)", "ex": "Das ist ihr Buch.", "exen": "That is her book."}, {"rank": 27, "w": "noch", "pos": "adverb", "en": "still / yet", "ex": "Bist du noch da?", "exen": "Are you still there?"}, {"rank": 28, "w": "wie", "pos": "adverb", "en": "how / like", "ex": "Wie geht es dir?", "exen": "How are you?"}, {"rank": 29, "w": "bei", "pos": "preposition", "en": "at / near / with", "ex": "Ich bin bei Anna.", "exen": "I am at Anna's."}, {"rank": 30, "w": "man", "pos": "pronoun", "en": "one (impersonal)", "ex": "Man sagt das so.", "exen": "That's what people say."}, {"rank": 31, "w": "machen", "pos": "verb", "en": "to do / to make", "ex": "Ich mache meine Hausaufgaben.", "exen": "I do my homework."}, {"rank": 32, "w": "geben", "pos": "verb", "en": "to give", "ex": "Er gibt mir das Buch.", "exen": "He gives me the book."}, {"rank": 33, "w": "kommen", "pos": "verb", "en": "to come", "ex": "Sie kommt morgen.", "exen": "She is coming tomorrow."}, {"rank": 34, "w": "sollen", "pos": "modal", "en": "should / to be supposed to", "ex": "Du sollst mehr Wasser trinken.", "exen": "You should drink more water."}, {"rank": 35, "w": "wollen", "pos": "modal", "en": "to want", "ex": "Ich will nach Berlin fahren.", "exen": "I want to travel to Berlin."}, {"rank": 36, "w": "gehen", "pos": "verb", "en": "to go / to walk", "ex": "Wir gehen ins Kino.", "exen": "We are going to the cinema."}, {"rank": 37, "w": "wissen", "pos": "verb", "en": "to know (a fact)", "ex": "Ich weiß die Antwort.", "exen": "I know the answer."}, {"rank": 38, "w": "sehen", "pos": "verb", "en": "to see", "ex": "Siehst du den Turm?", "exen": "Do you see the tower?"}, {"rank": 39, "w": "lassen", "pos": "verb", "en": "to let / to leave", "ex": "Lass mich in Ruhe!", "exen": "Leave me alone!"}, {"rank": 40, "w": "stehen", "pos": "verb", "en": "to stand", "ex": "Er steht vor der Tür.", "exen": "He is standing in front of the door."}, {"rank": 41, "w": "finden", "pos": "verb", "en": "to find / to think", "ex": "Ich finde das Buch gut.", "exen": "I find the book good."}, {"rank": 42, "w": "bleiben", "pos": "verb", "en": "to stay / to remain", "ex": "Bleib bitte hier.", "exen": "Please stay here."}, {"rank": 43, "w": "liegen", "pos": "verb", "en": "to lie (be lying)", "ex": "Das Buch liegt auf dem Tisch.", "exen": "The book is lying on the table."}, {"rank": 44, "w": "heißen", "pos": "verb", "en": "to be called", "ex": "Ich heiße Anna.", "exen": "My name is Anna."}, {"rank": 45, "w": "denken", "pos": "verb", "en": "to think", "ex": "Ich denke an dich.", "exen": "I am thinking of you."}, {"rank": 46, "w": "nehmen", "pos": "verb", "en": "to take", "ex": "Nimm einen Apfel.", "exen": "Take an apple."}, {"rank": 47, "w": "tun", "pos": "verb", "en": "to do", "ex": "Was tust du heute?", "exen": "What are you doing today?"}, {"rank": 48, "w": "glauben", "pos": "verb", "en": "to believe", "ex": "Ich glaube dir.", "exen": "I believe you."}, {"rank": 49, "w": "halten", "pos": "verb", "en": "to hold / to stop", "ex": "Der Zug hält in Aarhus.", "exen": "The train stops in Aarhus."}, {"rank": 50, "w": "nennen", "pos": "verb", "en": "to name / to call", "ex": "Man nennt ihn Doktor.", "exen": "They call him Doctor."}, {"rank": 51, "w": "zeigen", "pos": "verb", "en": "to show", "ex": "Zeig mir das Foto.", "exen": "Show me the photo."}, {"rank": 52, "w": "führen", "pos": "verb", "en": "to lead", "ex": "Die Straße führt nach Norden.", "exen": "The road leads north."}, {"rank": 53, "w": "sprechen", "pos": "verb", "en": "to speak", "ex": "Sprichst du Deutsch?", "exen": "Do you speak German?"}, {"rank": 54, "w": "bringen", "pos": "verb", "en": "to bring", "ex": "Bring bitte Brot mit.", "exen": "Please bring bread."}, {"rank": 55, "w": "leben", "pos": "verb", "en": "to live", "ex": "Sie lebt in Dänemark.", "exen": "She lives in Denmark."}, {"rank": 56, "w": "fahren", "pos": "verb", "en": "to drive / to travel", "ex": "Wir fahren mit dem Zug.", "exen": "We travel by train."}, {"rank": 57, "w": "müssen", "pos": "modal", "en": "must / to have to", "ex": "Ich muss arbeiten.", "exen": "I have to work."}, {"rank": 58, "w": "dürfen", "pos": "modal", "en": "may / to be allowed to", "ex": "Du darfst hier nicht rauchen.", "exen": "You may not smoke here."}, {"rank": 59, "w": "mögen", "pos": "modal", "en": "to like", "ex": "Ich mag Kaffee.", "exen": "I like coffee."}, {"rank": 60, "w": "sagen", "pos": "verb", "en": "to say / to tell", "ex": "Sag die Wahrheit.", "exen": "Tell the truth."}, {"rank": 61, "w": "der Mann, \"-er", "pos": "noun", "en": "the man", "ex": "Der Mann arbeitet.", "exen": "The man is working."}, {"rank": 62, "w": "das Jahr, -e", "pos": "noun", "en": "the year", "ex": "Dieses Jahr ist gut.", "exen": "This year is good."}, {"rank": 63, "w": "die Frau, -en", "pos": "noun", "en": "the woman", "ex": "Die Frau lacht.", "exen": "The woman is laughing."}, {"rank": 64, "w": "das Leben", "pos": "noun", "en": "life", "ex": "Das Leben ist schön.", "exen": "Life is beautiful."}, {"rank": 65, "w": "die Zeit, -en", "pos": "noun", "en": "time", "ex": "Ich habe keine Zeit.", "exen": "I have no time."}, {"rank": 66, "w": "der Tag, -e", "pos": "noun", "en": "the day", "ex": "Heute ist ein schöner Tag.", "exen": "Today is a beautiful day."}, {"rank": 67, "w": "die Hand, \"-e", "pos": "noun", "en": "the hand", "ex": "Gib mir deine Hand.", "exen": "Give me your hand."}, {"rank": 68, "w": "das Kind, -er", "pos": "noun", "en": "the child", "ex": "Das Kind spielt.", "exen": "The child is playing."}, {"rank": 69, "w": "die Stadt, \"-e", "pos": "noun", "en": "the city / town", "ex": "Aarhus ist eine schöne Stadt.", "exen": "Aarhus is a beautiful city."}, {"rank": 70, "w": "das Haus, \"-er", "pos": "noun", "en": "the house", "ex": "Das Haus ist groß.", "exen": "The house is big."}, {"rank": 71, "w": "die Welt, -en", "pos": "noun", "en": "the world", "ex": "Die Welt ist rund.", "exen": "The world is round."}, {"rank": 72, "w": "das Wasser", "pos": "noun", "en": "water", "ex": "Ich trinke Wasser.", "exen": "I drink water."}, {"rank": 73, "w": "die Arbeit, -en", "pos": "noun", "en": "work", "ex": "Die Arbeit beginnt um acht.", "exen": "Work starts at eight."}, {"rank": 74, "w": "der Vater, \"-", "pos": "noun", "en": "the father", "ex": "Mein Vater ist Arzt.", "exen": "My father is a doctor."}, {"rank": 75, "w": "die Mutter, \"-", "pos": "noun", "en": "the mother", "ex": "Meine Mutter kocht.", "exen": "My mother is cooking."}, {"rank": 76, "w": "der Freund, -e", "pos": "noun", "en": "the friend", "ex": "Er ist mein bester Freund.", "exen": "He is my best friend."}, {"rank": 77, "w": "das Geld", "pos": "noun", "en": "money", "ex": "Geld ist nicht alles.", "exen": "Money is not everything."}, {"rank": 78, "w": "das Brot, -e", "pos": "noun", "en": "bread", "ex": "Ich kaufe Brot.", "exen": "I am buying bread."}, {"rank": 79, "w": "die Schule, -n", "pos": "noun", "en": "school", "ex": "Die Kinder gehen zur Schule.", "exen": "The children go to school."}, {"rank": 80, "w": "der Name, -n", "pos": "noun", "en": "name", "ex": "Wie ist dein Name?", "exen": "What is your name?"}, {"rank": 81, "w": "die Nacht, \"-e", "pos": "noun", "en": "night", "ex": "Gute Nacht!", "exen": "Good night!"}, {"rank": 82, "w": "der Abend, -e", "pos": "noun", "en": "evening", "ex": "Am Abend lesen wir.", "exen": "In the evening we read."}, {"rank": 83, "w": "der Morgen, -", "pos": "noun", "en": "morning", "ex": "Guten Morgen!", "exen": "Good morning!"}, {"rank": 84, "w": "die Woche, -n", "pos": "noun", "en": "week", "ex": "Nächste Woche reise ich.", "exen": "Next week I am travelling."}, {"rank": 85, "w": "der Monat, -e", "pos": "noun", "en": "month", "ex": "Ein Monat hat 30 Tage.", "exen": "A month has 30 days."}, {"rank": 86, "w": "gut", "pos": "adjective", "en": "good", "ex": "Das ist eine gute Idee.", "exen": "That is a good idea."}, {"rank": 87, "w": "neu", "pos": "adjective", "en": "new", "ex": "Ich habe ein neues Auto.", "exen": "I have a new car."}, {"rank": 88, "w": "groß", "pos": "adjective", "en": "big / tall", "ex": "Berlin ist eine große Stadt.", "exen": "Berlin is a big city."}, {"rank": 89, "w": "klein", "pos": "adjective", "en": "small", "ex": "Das Kind ist noch klein.", "exen": "The child is still small."}, {"rank": 90, "w": "alt", "pos": "adjective", "en": "old", "ex": "Das Haus ist sehr alt.", "exen": "The house is very old."}, {"rank": 91, "w": "lang", "pos": "adjective", "en": "long", "ex": "Der Weg ist lang.", "exen": "The way is long."}, {"rank": 92, "w": "hoch", "pos": "adjective", "en": "high", "ex": "Der Berg ist hoch.", "exen": "The mountain is high."}, {"rank": 93, "w": "schnell", "pos": "adjective", "en": "fast", "ex": "Der Zug ist schnell.", "exen": "The train is fast."}, {"rank": 94, "w": "wichtig", "pos": "adjective", "en": "important", "ex": "Das ist sehr wichtig.", "exen": "That is very important."}, {"rank": 95, "w": "schön", "pos": "adjective", "en": "beautiful / nice", "ex": "Der Garten ist schön.", "exen": "The garden is beautiful."}, {"rank": 96, "w": "leicht", "pos": "adjective", "en": "easy / light", "ex": "Die Aufgabe ist leicht.", "exen": "The task is easy."}, {"rank": 97, "w": "schwer", "pos": "adjective", "en": "difficult / heavy", "ex": "Die Prüfung war schwer.", "exen": "The exam was difficult."}, {"rank": 98, "w": "jung", "pos": "adjective", "en": "young", "ex": "Sie ist noch jung.", "exen": "She is still young."}, {"rank": 99, "w": "teuer", "pos": "adjective", "en": "expensive", "ex": "Das Auto ist zu teuer.", "exen": "The car is too expensive."}, {"rank": 100, "w": "billig", "pos": "adjective", "en": "cheap", "ex": "Das Brot ist billig.", "exen": "The bread is cheap."}, {"rank": 101, "w": "sehr", "pos": "adverb", "en": "very", "ex": "Das ist sehr gut.", "exen": "That is very good."}, {"rank": 102, "w": "wieder", "pos": "adverb", "en": "again", "ex": "Kommst du wieder?", "exen": "Are you coming again?"}, {"rank": 103, "w": "schon", "pos": "adverb", "en": "already", "ex": "Bist du schon da?", "exen": "Are you already there?"}, {"rank": 104, "w": "nur", "pos": "adverb", "en": "only", "ex": "Nur ein Kaffee, bitte.", "exen": "Only one coffee, please."}, {"rank": 105, "w": "immer", "pos": "adverb", "en": "always", "ex": "Er kommt immer pünktlich.", "exen": "He always comes on time."}, {"rank": 106, "w": "nie", "pos": "adverb", "en": "never", "ex": "Ich war nie in Berlin.", "exen": "I have never been to Berlin."}, {"rank": 107, "w": "heute", "pos": "adverb", "en": "today", "ex": "Heute ist Montag.", "exen": "Today is Monday."}, {"rank": 108, "w": "morgen", "pos": "adverb", "en": "tomorrow", "ex": "Bis morgen!", "exen": "See you tomorrow!"}, {"rank": 109, "w": "gestern", "pos": "adverb", "en": "yesterday", "ex": "Gestern war Sonntag.", "exen": "Yesterday was Sunday."}, {"rank": 110, "w": "hier", "pos": "adverb", "en": "here", "ex": "Warte hier.", "exen": "Wait here."}, {"rank": 111, "w": "dort", "pos": "adverb", "en": "there", "ex": "Das Buch liegt dort.", "exen": "The book is lying there."}, {"rank": 112, "w": "jetzt", "pos": "adverb", "en": "now", "ex": "Komm jetzt!", "exen": "Come now!"}, {"rank": 113, "w": "bald", "pos": "adverb", "en": "soon", "ex": "Bis bald!", "exen": "See you soon!"}, {"rank": 114, "w": "vielleicht", "pos": "adverb", "en": "maybe", "ex": "Vielleicht komme ich.", "exen": "Maybe I will come."}, {"rank": 115, "w": "aber", "pos": "conjunction", "en": "but", "ex": "Es regnet, aber wir gehen.", "exen": "It is raining, but we are going."}, {"rank": 116, "w": "oder", "pos": "conjunction", "en": "or", "ex": "Kaffee oder Tee?", "exen": "Coffee or tea?"}, {"rank": 117, "w": "denn", "pos": "conjunction", "en": "because (main clause)", "ex": "Ich bleibe, denn ich bin müde.", "exen": "I am staying because I am tired."}, {"rank": 118, "w": "weil", "pos": "conjunction", "en": "because (subordinate)", "ex": "Ich bleibe, weil ich müde bin.", "exen": "I am staying because I am tired."}, {"rank": 119, "w": "wenn", "pos": "conjunction", "en": "if / when", "ex": "Wenn es regnet, bleibe ich.", "exen": "If it rains, I will stay."}, {"rank": 120, "w": "dann", "pos": "adverb", "en": "then", "ex": "Zuerst essen wir, dann gehen wir.", "exen": "First we eat, then we go."}];
+var wFilt = "all";
+var FUNC = {"article":1,"conjunction":1,"preposition":1,"pronoun":1,"determiner":1,"modal":1};
+function wCat(pos){ return FUNC[pos] ? "func" : pos; }
+function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;"); }
+function renderList(){
+  var q = document.getElementById("w-search").value.toLowerCase();
+  var box = document.getElementById("w-list"); box.innerHTML = "";
+  var n = 0;
+  WORDS.forEach(function(e){
+    if(wFilt !== "all" && wCat(e.pos) !== wFilt) return;
+    if(q && (e.w.toLowerCase().indexOf(q)<0 && e.en.toLowerCase().indexOf(q)<0 && e.ex.toLowerCase().indexOf(q)<0)) return;
+    n++;
+    var d = document.createElement("div");
+    d.style.cssText = "background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:12px 16px;margin-bottom:8px";
+    d.innerHTML = '<div style="display:flex;gap:10px;align-items:baseline"><span style="background:#eff6ff;color:#1e3a8a;font-weight:700;font-size:.8rem;border-radius:999px;padding:2px 10px">#' + e.rank + '</span>' +
+      '<strong style="font-size:1.1rem">' + esc(e.w) + '</strong>' +
+      '<span style="color:#64748b;font-size:.85rem">' + esc(e.pos) + '</span></div>' +
+      '<div style="margin-top:4px"><span class="hl">' + esc(e.en) + '</span></div>' +
+      '<div style="margin-top:6px;color:#334155">' + esc(e.ex) + '<br><span style="color:#64748b;font-size:.9rem">' + esc(e.exen) + '</span></div>';
+    box.appendChild(d);
+  });
+  document.getElementById("w-count").textContent = n + " of 120 words shown";
+}
+document.getElementById("w-search").addEventListener("input", renderList);
+document.getElementById("w-filters").querySelectorAll("button").forEach(function(b){
+  b.addEventListener("click", function(){
+    document.getElementById("w-filters").querySelectorAll("button").forEach(function(x){ x.classList.remove("on"); });
+    b.classList.add("on"); wFilt = b.getAttribute("data-f"); renderList();
+  });
+});
+var fcQ = [], fcI = 0, fcKnown = 0, fcMissed = 0, fcRevealed = false;
+function fcStart(){
+  fcQ = WORDS.slice(); fcI = 0; fcKnown = 0; fcMissed = 0;
+  document.getElementById("w-list").style.display = "none";
+  document.getElementById("w-count").style.display = "none";
+  document.getElementById("fc").style.display = "block";
+  document.getElementById("fc-exit").style.display = "inline-block";
+  fcShow();
+}
+function fcShow(){
+  fcRevealed = false;
+  var e = fcQ[fcI];
+  document.getElementById("fc-count").textContent = "Card " + (fcI+1) + "/" + fcQ.length;
+  document.getElementById("fc-bar").style.width = (fcI/fcQ.length*100) + "%";
+  document.getElementById("fc-score").textContent = "Known: " + fcKnown + " · Missed: " + fcMissed;
+  document.getElementById("fc-known").style.display = "none";
+  document.getElementById("fc-missed").style.display = "none";
+  document.getElementById("fc-card").innerHTML =
+    '<div style="font-size:.85rem;color:#64748b">#' + e.rank + ' · ' + esc(e.pos) + ' — tap to reveal</div>' +
+    '<div style="font-size:1.8rem;font-weight:700;margin:12px 0">' + esc(e.w) + '</div>' +
+    '<div style="color:#64748b;font-size:.95rem">Say the English meaning out loud, then tap.</div>';
+}
+function fcFlip(){
+  if(fcRevealed) return;
+  fcRevealed = true;
+  var e = fcQ[fcI];
+  document.getElementById("fc-card").innerHTML =
+    '<div style="font-size:.85rem;color:#64748b">#' + e.rank + ' · ' + esc(e.pos) + '</div>' +
+    '<div style="font-size:1.6rem;font-weight:700;margin:12px 0">' + esc(e.w) + '</div>' +
+    '<div style="font-size:1.25rem;color:#065f46;font-weight:600">' + esc(e.en) + '</div>' +
+    '<div style="margin-top:10px;color:#334155">' + esc(e.ex) + '<br><span style="color:#64748b;font-size:.9rem">' + esc(e.exen) + '</span></div>';
+  document.getElementById("fc-known").style.display = "block";
+  document.getElementById("fc-missed").style.display = "block";
+}
+function fcMark(knew){
+  if(knew) fcKnown++; else { fcMissed++; fcQ.push(fcQ[fcI]); }
+  fcI++;
+  if(fcI < fcQ.length) fcShow();
+  else {
+    document.getElementById("fc-count").textContent = "Done!";
+    document.getElementById("fc-bar").style.width = "100%";
+    document.getElementById("fc-card").innerHTML =
+      '<div style="font-size:1.5rem;font-weight:700">Session complete</div>' +
+      '<div style="margin-top:10px;font-size:1.1rem">Known: ' + fcKnown + ' · Missed: ' + fcMissed + '</div>' +
+      '<div style="margin-top:8px;color:#64748b">Missed words were re-queued so you saw them twice. Run the deck again tomorrow for spaced repetition.</div>';
+    document.getElementById("fc-known").style.display = "none";
+    document.getElementById("fc-missed").style.display = "none";
+  }
+}
+function fcExit(){
+  document.getElementById("w-list").style.display = "block";
+  document.getElementById("w-count").style.display = "block";
+  document.getElementById("fc").style.display = "none";
+  document.getElementById("fc-exit").style.display = "none";
+}
+document.getElementById("fc-start").addEventListener("click", fcStart);
+renderList();
+
+
+</script>
+</body>
+</html>
