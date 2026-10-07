@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Passive Voice Builder — werden + Partizip II Tables | Bayzubaan</title>
+<meta name="description" content="Build the German passive for any verb: present and past tables, the worden rule, Vorgangspassiv vs Zustandspassiv, von/durch agents, medical examples.">
+<link rel="canonical" href="https://bayzubaan.com/tools/passive-voice-builder/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="German Passive Voice Builder — werden + Partizip II Tables">
+<meta property="og:description" content="Type any verb and get the full passive paradigm: present, past, perfect with worden, and the stative passive.">
+<meta property="og:url" content="https://bayzubaan.com/tools/passive-voice-builder/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="German Passive Voice Builder — werden + Partizip II Tables">
+<meta name="twitter:description" content="Type any verb and get the full passive paradigm: present, past, perfect with worden, and the stative passive.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you form the German passive voice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Conjugate werden and add the Partizip II: Das Haus wird gebaut (present), das Haus wurde gebaut (past). The participle never changes; only werden conjugates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is it 'ist gebaut worden' and not 'geworden'?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The perfect passive uses the special form worden instead of geworden: Das Haus ist gebaut worden. This is the most commonly tested passive detail in German exams."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between 'wird geöffnet' and 'ist geöffnet'?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wird geöffnet is the Vorgangspassiv (process): the door is being opened right now. Ist geöffnet is the Zustandspassiv (stative): the door is open, describing the resulting state."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When do you use 'von' vs 'durch' in the passive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Von introduces a human agent (von einem Architekten gebaut); durch introduces the means or instrument (durch einen Boten überbracht). The agent is usually omitted entirely."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can every German verb form a passive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — only transitive verbs with an accusative object form a personal passive. Intransitive verbs (gehen, schlafen) and dative-object verbs (helfen: Dem Mann wird geholfen, never Der Mann wird geholfen) cannot."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>German Passive Voice Builder</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">Type any verb and get the full passive paradigm: present, past, perfect with worden, and the stative passive.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+<div class="field">
+<label for="verb">German verb (infinitive, transitive)</label>
+<input type="text" id="verb" placeholder="e.g. machen, bauen, untersuchen" autocomplete="off">
+<div class="try-row">
+<button type="button" data-v="machen">machen</button>
+<button type="button" data-v="bauen">bauen</button>
+<button type="button" data-v="untersuchen">untersuchen</button>
+<button type="button" data-v="schreiben">schreiben</button>
+<button type="button" data-v="reparieren">reparieren</button>
+</div>
+</div>
+<button id="calc-btn" type="button">Build the passive</button>
+<div id="result"></div>
+</div>
+
+<article class="prose">
+<h2>The German passive: werden + Partizip II</h2>
+<p>The German passive (Passiv) is built exactly like the English one: a form of <strong>werden</strong> plus the <strong>Partizip II</strong>. <span class="hl">Das Haus wird gebaut.</span> (The house is being built.) <span class="hl">Der Brief wurde geschrieben.</span> (The letter was written.) The active subject disappears or demotes to a von/durch phrase, and the object of the action becomes the grammatical subject. If you can form the Partizip II — the perfect-tense builder and irregular verb trainer in this series cover that — the passive is nearly free.</p>
+<p>Werden conjugates like this in the tenses you need: Präsens <span class="hl">ich werde, du wirst, er wird, wir werden, ihr werdet, sie werden</span>; Präteritum <span class="hl">ich wurde, du wurdest, er wurde, wir wurden, ihr wurdet, sie wurden</span>. The participle never changes: wird gebaut, wurde gebaut, werden gebaut. Type any transitive verb into the tool above and you get the full present and past passive tables.</p>
+<h2>The perfect passive: worden, not geworden</h2>
+<p>The one form that surprises learners: the perfect passive uses <strong>worden</strong> — the passive participle of werden — instead of geworden. <span class="hl">Das Haus ist gebaut worden.</span> (The house has been built.) <span class="hl">Der Patient ist untersucht worden.</span> (The patient has been examined.) Saying <em>ist gebaut geworden</em> is wrong, full stop. This is the single most-tested passive detail in German exams, so burn it in: passive perfect = ist + Partizip II + worden.</p>
+<h2>Vorgangspassiv vs. Zustandspassiv: action vs. state</h2>
+<p>German distinguishes two passives where English uses one. The <strong>Vorgangspassiv</strong> (process passive) with werden describes an ongoing action: <span class="hl">Die Tür wird geöffnet.</span> (The door is being opened — someone is opening it.) The <strong>Zustandspassiv</strong> (stative passive) with sein describes the resulting state: <span class="hl">Die Tür ist geöffnet.</span> (The door is open — the state after opening.) The difference is real and consequential: <span class="hl">Der Patient wird operiert</span> (he is being operated on right now) vs. <span class="hl">Der Patient ist operiert</span> (he is in the post-operative state). In medical documentation this distinction carries clinical meaning.</p>
+<h2>The agent: von vs. durch</h2>
+<p>When the doer is named, German uses <strong>von</strong> for people and <strong>durch</strong> for means or instruments: <span class="hl">Das Haus wird von einem Architekten gebaut.</span> <span class="hl">Die Nachricht wurde durch einen Boten überbracht.</span> But the agent is omitted more often than not — the whole point of the passive is to foreground the action, not the actor. <span class="hl">Es wurde beschlossen, dass …</span> (It was decided that …) names nobody, which is exactly why bureaucracies love it.</p>
+<h2>When Germans actually use the passive</h2>
+<p>Here is the honest sociolinguistic fact: the passive is <strong>far more common in writing than in speech</strong>. News reports, academic papers, official notices, medical documentation — passive-heavy. Everyday conversation prefers the active voice or the <strong>man</strong> construction: instead of <span class="hl">Hier wird Deutsch gesprochen</span>, people say <span class="hl">Man spricht hier Deutsch</span>. Instead of <span class="hl">Das wird gemacht</span>, <span class="hl">Das macht man so</span>. The man + active construction does the same job (agentless generalisation) and sounds natural in speech.</p>
+<p>For the Fachsprachenprüfung this register split is directly relevant. The spoken patient conversation should stay largely active with man-constructions (<span class="hl">Man muss die Tabletten täglich nehmen</span>). The written documentation (Arztbrief, documentation trainer later in this series) should use the passive properly: <span class="hl">Der Patient wurde untersucht. Es wurde ein EKG geschrieben. Die Wunde wurde versorgt.</span> Examiners read your documentation — correct passives there signal professional register.</p>
+<h2>Verbs that cannot form a passive</h2>
+<p>Only transitive verbs (verbs with an accusative object) form a true personal passive. Intransitive verbs — gehen, schlafen, bleiben — have no passive: <em>Es wird gegangen</em> exists only as an impersonal joke form. Reflexive verbs cannot be passivised either. And verbs with dative objects form no personal passive: <em>Dem Patienten wird geholfen</em> is correct (impersonal, dative retained), but <em>Der Patient wird geholfen</em> is wrong — the dative object cannot become the subject. The test: if the active verb takes an accusative object, you can passivise it.</p>
+<h2>Common mistakes</h2>
+<ul>
+<li><em>ist gebaut geworden</em> — wrong; the perfect passive needs <strong>worden</strong>.</li>
+<li>Confusing the two passives: <em>Die Tür wird geöffnet</em> (action) vs. <span class="hl">Die Tür ist geöffnet</span> (state) mean different things.</li>
+<li>Passivising dative verbs: <em>Der Mann wird geholfen</em> — wrong; dative objects stay dative: <span class="hl">Dem Mann wird geholfen.</span></li>
+<li>Overusing the passive in speech where <span class="hl">man</span> + active sounds natural.</li>
+<li>Forgetting that modal + passive stacks the infinitive at the end: <span class="hl">Das muss gemacht werden.</span></li>
+</ul>
+<h2>Passive with modal verbs</h2>
+<p>Modals stack onto the passive with the infinitive at the end: <span class="hl">Das Haus muss gebaut werden.</span> (The house must be built.) <span class="hl">Der Patient sollte untersucht werden.</span> In the perfect tense the Ersatzinfinitiv applies: <span class="hl">Das Haus hat gebaut werden müssen.</span> These triple-verb clusters look intimidating but follow the same bracket logic as every other German verb chain — conjugated verb second, everything else at the end.</p>
+<h2>Practice: the active-to-passive conversion drill</h2>
+<p>Take ten active sentences from a newspaper and convert each: <span class="hl">Die Polizei sucht den Täter</span> → <span class="hl">Der Täter wird (von der Polizei) gesucht.</span> <span class="hl">Der Arzt untersucht den Patienten</span> → <span class="hl">Der Patient wird untersucht.</span> Then convert five into the stative passive and say what changed in meaning. This drill trains the two skills the passive demands: promoting the object and choosing werden vs. sein. Do it with the verbs you type into the tool above, and the paradigm becomes production-ready, not just recognition-ready.</p>
+<p>Type a verb above to see its complete passive paradigm, then practise converting active sentences: find the accusative object, promote it to subject, demote the actor to a von-phrase or drop it entirely.</p>
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>How do you form the German passive voice?</h3><p>Conjugate werden and add the Partizip II: Das Haus wird gebaut (present), das Haus wurde gebaut (past). The participle never changes; only werden conjugates.</p></div><div class="faq-item"><h3>Why is it &#x27;ist gebaut worden&#x27; and not &#x27;geworden&#x27;?</h3><p>The perfect passive uses the special form worden instead of geworden: Das Haus ist gebaut worden. This is the most commonly tested passive detail in German exams.</p></div><div class="faq-item"><h3>What is the difference between &#x27;wird geöffnet&#x27; and &#x27;ist geöffnet&#x27;?</h3><p>Wird geöffnet is the Vorgangspassiv (process): the door is being opened right now. Ist geöffnet is the Zustandspassiv (stative): the door is open, describing the resulting state.</p></div><div class="faq-item"><h3>When do you use &#x27;von&#x27; vs &#x27;durch&#x27; in the passive?</h3><p>Von introduces a human agent (von einem Architekten gebaut); durch introduces the means or instrument (durch einen Boten überbracht). The agent is usually omitted entirely.</p></div><div class="faq-item"><h3>Can every German verb form a passive?</h3><p>No — only transitive verbs with an accusative object form a personal passive. Intransitive verbs (gehen, schlafen) and dative-object verbs (helfen: Dem Mann wird geholfen, never Der Mann wird geholfen) cannot.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+/* participle builder (subset of perfect-tense logic) */
+const IRREG = {
+  "sein":"gewesen","werden":"geworden","essen":"gegessen","trinken":"getrunken",
+  "lesen":"gelesen","schreiben":"geschrieben","geben":"gegeben","nehmen":"genommen",
+  "sprechen":"gesprochen","sehen":"gesehen","finden":"gefunden","singen":"gesungen",
+  "schlafen":"geschlafen","fangen":"gefangen","waschen":"gewaschen","vergessen":"vergessen",
+  "tragen":"getragen","fahren":"gefahren","beginnen":"begonnen","gewinnen":"gewonnen",
+  "beschreiben":"beschrieben","verstehen":"verstanden","verlieren":"verloren",
+  "bekommen":"bekommen","erzählen":"erzählt","besuchen":"besucht","untersuchen":"untersucht"
+};
+const SEP = ["ab","an","auf","aus","bei","ein","mit","nach","vor","zu","zurück","zusammen","weg","weiter","fern","heim","her","hin","los"];
+const INSEP = ["be","ge","er","ver","zer","ent","emp","miss"];
+function weakPP(stem){
+  if (/[dt]$/.test(stem)) return "ge" + stem + "et";
+  if (/[bcdfghjklmnpqrstvwxyz][mn]$/.test(stem)) return "ge" + stem + "et";
+  return "ge" + stem + "t";
+}
+function participle(inf){
+  inf = inf.trim().toLowerCase();
+  if (IRREG[inf]) return IRREG[inf];
+  for (const p of SEP.sort((a,b)=>b.length-a.length)){
+    if (inf.startsWith(p) && inf.length > p.length + 2){
+      const core = inf.slice(p.length);
+      if (IRREG[core]) return p + IRREG[core];
+      const stem = core.replace(/en$/,"");
+      return p + weakPP(stem).slice(2);
+    }
+  }
+  for (const p of INSEP){
+    if (inf.startsWith(p) && inf.length > p.length + 2){
+      const core = inf.slice(p.length);
+      if (IRREG[core]) return p + IRREG[core];
+      return p + core.replace(/en$/,"") + "t";
+    }
+  }
+  if (/ieren$/.test(inf)) return inf.slice(0,-5) + "iert";
+  return weakPP(inf.replace(/en$/,""));
+}
+const WERDEN_PR = ["werde","wirst","wird","werden","werdet","werden"];
+const WERDEN_PA = ["wurde","wurdest","wurde","wurden","wurdet","wurden"];
+const PERSONS = ["ich","du","er/sie/es","wir","ihr","sie/Sie"];
+function render(){
+  const box = document.getElementById("result");
+  const inf = document.getElementById("verb").value.trim().toLowerCase();
+  if (!inf){ box.style.display = "none"; return; }
+  const pp = participle(inf);
+  let h = "<h3 style='margin-bottom:10px'>Passive of <span class='hl'>" + inf + "</span> — Partizip II: <span class='hl'>" + pp + "</span></h3>";
+  h += "<table><tr><th></th><th>Präsens (werden)</th><th>Präteritum (wurde)</th></tr>";
+  for (let i = 0; i < 6; i++)
+    h += "<tr><td><strong>" + PERSONS[i] + "</strong></td><td>" + WERDEN_PR[i] + " <span class='hl'>" + pp + "</span></td><td>" + WERDEN_PA[i] + " <span class='hl'>" + pp + "</span></td></tr>";
+  h += "</table>";
+  h += "<p class='note'><strong>Perfekt:</strong> Das Haus <strong>ist</strong> <span class='hl'>gebaut</span> <strong>worden</strong>. (Note: worden, not geworden, in the passive.)</p>";
+  h += "<p class='note'><strong>Stative passive:</strong> Das Haus <strong>ist</strong> <span class='hl'>" + pp + "</span>. = the house IS built (state, not action).</p>";
+  h += "<p class='note'><strong>With agent:</strong> Das Haus wird <strong>von</strong> einem Architekten <span class='hl'>" + pp + "</span>. (von = by, for people; durch = through, for means.)</p>";
+  box.style.display = "block";
+  box.innerHTML = h;
+}
+document.getElementById("calc-btn").addEventListener("click", render);
+document.getElementById("verb").addEventListener("keydown", e => { if (e.key === "Enter") render(); });
+document.querySelectorAll(".try-row button").forEach(b =>
+  b.addEventListener("click", () => { document.getElementById("verb").value = b.dataset.v; render(); }));
+if (typeof module !== "undefined") module.exports = { participle, WERDEN_PR, WERDEN_PA };
+
+
+</script>
+</body>
+</html>
