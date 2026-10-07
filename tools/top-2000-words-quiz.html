@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Top 200 German Words Quiz — Spaced Repetition Vocabulary Trainer | Bayzubaan</title>
+<meta name="description" content="Quiz the next 100 most frequent German words (ranks 121–220): 20-round DE↔EN quiz with spaced repetition — missed words come back until you know them.">
+<link rel="canonical" href="https://bayzubaan.com/tools/top-2000-words-quiz/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Top 200 German Words Quiz — Spaced Repetition Vocabulary Trainer">
+<meta property="og:description" content="Master German words 121–220 with a 20-round spaced-repetition quiz — both directions, missed words re-queued automatically.">
+<meta property="og:url" content="https://bayzubaan.com/tools/top-2000-words-quiz/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Top 200 German Words Quiz — Spaced Repetition Vocabulary Trainer">
+<meta name="twitter:description" content="Master German words 121–220 with a 20-round spaced-repetition quiz — both directions, missed words re-queued automatically.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is spaced repetition and why does it work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Memory fades on a curve; re-testing a word just before you would forget flattens that curve. This quiz re-queues every word you miss, so you are re-tested exactly where you are weakest — the core mechanic of systems like Leitner boxes and Anki."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why test in both directions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "German-to-English tests recognition (understanding); English-to-German tests production (speaking and writing). Production is harder and usually lags behind — the quiz measures both so the gap becomes visible and trainable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many rounds should I do per day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One 20-round session daily is enough. When you consistently score 18+/20, the batch is learned — move on, and rerun this quiz weekly as maintenance so the words stay active."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I do with words I keep missing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Make a personal flashcard for each: German word on one side, meaning plus your own example sentence on the other. Writing the sentence yourself is a powerful memory event, and personal context sticks better than textbook examples."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are the wrong answers always the same word type?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "So you cannot guess from grammar. If the distractors were random, you could eliminate nouns when asked for a verb. Same-type distractors force you to actually know the meaning — which is the whole point."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I know the top 120 already — is this the right next step?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Ranks 121–220 are the next most useful words by real-world frequency, shifting toward concrete everyday vocabulary (home, food, travel, daily routines). After ~220 words you will recognise a large share of simple German texts."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>German Words 121–220: Spaced-Repetition Quiz</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">Master German words 121–220 with a 20-round spaced-repetition quiz — both directions, missed words re-queued automatically.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+
+<h2>Spaced-repetition quiz: the next 100 words</h2>
+<p style="margin-bottom:16px">You have mastered the top 120 words. Now tackle ranks 121–220 — the next most useful German words. Each session runs 20 rounds in both directions (German → English and English → German). Words you miss come back later in the session, so the quiz keeps testing you exactly where you are weak.</p>
+<button id="calc-btn" type="button" onclick="startQuiz()">Start 20-round quiz</button>
+<div id="quiz-zone" style="display:none;margin-top:20px">
+<div class="progress"><div id="qbar"></div></div>
+<div class="quiz-meta"><span id="qcount">Round 1/20</span><span id="qscore">Correct: 0 · Missed: 0</span></div>
+<div id="quiz-prompt" style="font-size:.85rem;color:#64748b;margin-bottom:6px"></div>
+<div id="quiz-sentence" style="font-size:1.5rem;font-weight:700;margin-bottom:14px"></div>
+<div id="quiz-options"></div>
+<div id="quiz-feedback"></div>
+<button type="button" id="quiz-next" style="display:none;margin-top:12px" onclick="nextQ()">Next</button>
+<div id="quiz-summary"></div>
+</div>
+
+</div>
+
+<article class="prose">
+
+<h2>From the top 120 to the next hundred</h2>
+<p>The first tool in this series covered the 120 most frequent German words — the core that unlocks basic understanding. This quiz moves you into ranks 121 to 220 of the frequency list: still extremely high-value vocabulary, but now the words get more concrete. Where the top 120 was dominated by articles, pronouns and helper verbs, this batch is full of everyday life: <em>der Tisch</em>, <em>die Küche</em>, <em>bezahlen</em>, <em>verstehen</em>, <em>krank</em>, <em>pünktlich</em>. These are the words you need for shopping, small talk, travel and daily routines — the situations where beginners actually use German.</p>
+<p>Notice how the vocabulary shifts by category. The verbs here are almost all separable or prefixed — <em>anfangen</em>, <em>aufhören</em>, <em>aufstehen</em>, <em>ausziehen</em>, <em>einkaufen</em> — which is no coincidence: prefix verbs are the engine of everyday German, and mastering their main-clause splitting (<em>Ich stehe um sieben auf</em>) is what makes you sound natural rather than textbook. The adjectives cluster around states and judgements — <em>müde</em>, <em>hungrig</em>, <em>interessant</em>, <em>gefährlich</em> — exactly the words you reach for when describing your day.</p>
+<h2>How spaced repetition works (and why this quiz uses it)</h2>
+<p>Memory decays on a curve: without review, a new word fades within days. Spaced repetition flattens that curve by re-testing you at increasing intervals, right before you would forget. This quiz implements the core mechanic: any word you miss is pushed back into the question pool, so you meet it again later in the same session — and the end-of-quiz review list tells you exactly which words to carry into tomorrow's session.</p>
+<p>The classic implementation is the Leitner box system: words live in boxes, correct answers promote them to a less-frequent box, mistakes demote them back to daily review. You can run this with paper flashcards or any spaced-repetition app — but the principle is the same as what this quiz does automatically. The single most important rule: never mark a word "known" from recognition alone. If you cannot produce the meaning from the German word cold, it is not learned yet.</p>
+<h2>Two directions, one word</h2>
+<p>This quiz deliberately tests in both directions. German → English checks recognition: can you understand the word when you read or hear it? English → German checks production: can you find the word when you need it? Production is always harder, and it is the skill you need for speaking. Most learners are shocked by the gap — a word you "know" one way can draw a blank the other way. That is normal, and it is exactly what the quiz is measuring.</p>
+<p>Watch for the distractor design too: wrong options are drawn from the same word type, so you cannot guess from grammar. <em>Bezahlt</em> will not save you — you must actually know the meaning. When you miss, read the full example sentence in the feedback, not just the translation: the sentence shows you the word's frame (its preposition, its case, its typical position), which is half of really knowing a word.</p>
+<h2>The 200-word milestone and what comes next</h2>
+<p>After the top-120 browser and this quiz, you own roughly 220 of the most frequent German words — enough to recognise a large share of the vocabulary in simple texts, menus, signs and slow conversation. Research on vocabulary coverage suggests that the first 1,000 word families unlock about 85% of everyday language; you are now more than a fifth of the way there, and every subsequent hundred gets easier because new words attach to contexts you already understand.</p>
+<p>Practical routine: run one 20-round session per day. When you consistently score 18+/20, the batch is yours — move on to the next vocabulary tool in the series (the medical German flashcards, the business German set) while running this quiz once a week as maintenance. Words you keep missing across sessions deserve their own written flashcards with a personal example sentence: the act of writing the sentence is itself a powerful memory event. And keep reading real German — every word in this quiz will start jumping out at you from texts, which is the best reinforcement there is.</p>
+<h2>Small traps in this batch</h2>
+<p>A few words here deserve a warning label. <em>Bekommen</em> is not in this batch, but <em>gefallen</em> is — and English speakers constantly mistranslate it: <em>Das Buch gefällt mir</em> means "I like the book", with the book as the subject and <em>mir</em> in the dative. Similarly <em>fehlen</em> in <em>Du fehlst mir</em> means "I miss you" — literally "you are missing to me". Learn these as whole patterns, not word-by-word.</p>
+<p><em>Schmecken</em> (in <em>Das Essen schmeckt gut</em>) takes a dative experiencer too: <em>Es schmeckt mir</em>. And <em>kosten</em> looks like "cost" and mostly is — but <em>Was kostet das?</em> is the single most useful shopping sentence in German, worth memorising whole. Finally, <em>sicher</em> spans "sure", "safe" and "secure" — <em>Bist du sicher?</em> (are you sure?) versus <em>ein sicherer Ort</em> (a safe place). Context disambiguates; the quiz distractors will train exactly that.</p>
+<p>Two more traps worth naming. <em>Ausziehen</em> means both "to take off" (clothes: <em>Zieh die Schuhe aus</em>) and "to move out" (<em>Wir ziehen nächste Woche aus</em>) — the context decides, and mixing them up produces memorable misunderstandings. And <em>sich erinnern</em> is reflexive with <em>an + Akkusativ</em> (<em>Ich erinnere mich an dich</em>); English speakers often drop the reflexive pronoun or the preposition, producing ungrammatical sentences. Learn it as one chunk: <em>sich erinnern an</em>. The same chunking advice applies to <em>sich entscheiden für</em> and <em>sich anziehen</em> — German reflexive verbs are memorised with their pronouns, never without.</p>
+
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>What is spaced repetition and why does it work?</h3><p>Memory fades on a curve; re-testing a word just before you would forget flattens that curve. This quiz re-queues every word you miss, so you are re-tested exactly where you are weakest — the core mechanic of systems like Leitner boxes and Anki.</p></div><div class="faq-item"><h3>Why test in both directions?</h3><p>German-to-English tests recognition (understanding); English-to-German tests production (speaking and writing). Production is harder and usually lags behind — the quiz measures both so the gap becomes visible and trainable.</p></div><div class="faq-item"><h3>How many rounds should I do per day?</h3><p>One 20-round session daily is enough. When you consistently score 18+/20, the batch is learned — move on, and rerun this quiz weekly as maintenance so the words stay active.</p></div><div class="faq-item"><h3>What should I do with words I keep missing?</h3><p>Make a personal flashcard for each: German word on one side, meaning plus your own example sentence on the other. Writing the sentence yourself is a powerful memory event, and personal context sticks better than textbook examples.</p></div><div class="faq-item"><h3>Why are the wrong answers always the same word type?</h3><p>So you cannot guess from grammar. If the distractors were random, you could eliminate nouns when asked for a verb. Same-type distractors force you to actually know the meaning — which is the whole point.</p></div><div class="faq-item"><h3>I know the top 120 already — is this the right next step?</h3><p>Yes. Ranks 121–220 are the next most useful words by real-world frequency, shifting toward concrete everyday vocabulary (home, food, travel, daily routines). After ~220 words you will recognise a large share of simple German texts.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+var WORDS = [{"rank": 121, "w": "anfangen", "pos": "verb", "en": "to begin / to start", "ex": "Der Film fängt um acht an.", "exen": "The film starts at eight."}, {"rank": 122, "w": "aufhören", "pos": "verb", "en": "to stop", "ex": "Hör auf!", "exen": "Stop it!"}, {"rank": 123, "w": "verstehen", "pos": "verb", "en": "to understand", "ex": "Ich verstehe nicht.", "exen": "I don't understand."}, {"rank": 124, "w": "vergessen", "pos": "verb", "en": "to forget", "ex": "Ich habe es vergessen.", "exen": "I forgot it."}, {"rank": 125, "w": "sich erinnern", "pos": "verb", "en": "to remember", "ex": "Ich erinnere mich an dich.", "exen": "I remember you."}, {"rank": 126, "w": "sich entscheiden", "pos": "verb", "en": "to decide", "ex": "Wir müssen uns entscheiden.", "exen": "We have to decide."}, {"rank": 127, "w": "versuchen", "pos": "verb", "en": "to try", "ex": "Versuch es noch einmal.", "exen": "Try it again."}, {"rank": 128, "w": "brauchen", "pos": "verb", "en": "to need", "ex": "Ich brauche Hilfe.", "exen": "I need help."}, {"rank": 129, "w": "warten", "pos": "verb", "en": "to wait", "ex": "Warte einen Moment.", "exen": "Wait a moment."}, {"rank": 130, "w": "suchen", "pos": "verb", "en": "to look for", "ex": "Ich suche meine Schlüssel.", "exen": "I am looking for my keys."}, {"rank": 131, "w": "fragen", "pos": "verb", "en": "to ask", "ex": "Darf ich etwas fragen?", "exen": "May I ask something?"}, {"rank": 132, "w": "antworten", "pos": "verb", "en": "to answer", "ex": "Antworte bitte.", "exen": "Please answer."}, {"rank": 133, "w": "arbeiten", "pos": "verb", "en": "to work", "ex": "Er arbeitet viel.", "exen": "He works a lot."}, {"rank": 134, "w": "lernen", "pos": "verb", "en": "to learn", "ex": "Ich lerne Deutsch.", "exen": "I am learning German."}, {"rank": 135, "w": "studieren", "pos": "verb", "en": "to study (at university)", "ex": "Sie studiert Medizin.", "exen": "She studies medicine."}, {"rank": 136, "w": "lesen", "pos": "verb", "en": "to read", "ex": "Ich lese gern.", "exen": "I like reading."}, {"rank": 137, "w": "schreiben", "pos": "verb", "en": "to write", "ex": "Schreib mir bald.", "exen": "Write to me soon."}, {"rank": 138, "w": "essen", "pos": "verb", "en": "to eat", "ex": "Wir essen um sechs.", "exen": "We eat at six."}, {"rank": 139, "w": "trinken", "pos": "verb", "en": "to drink", "ex": "Was trinkst du?", "exen": "What are you drinking?"}, {"rank": 140, "w": "schlafen", "pos": "verb", "en": "to sleep", "ex": "Das Baby schläft.", "exen": "The baby is sleeping."}, {"rank": 141, "w": "aufstehen", "pos": "verb", "en": "to get up", "ex": "Ich stehe um sieben auf.", "exen": "I get up at seven."}, {"rank": 142, "w": "sich anziehen", "pos": "verb", "en": "to get dressed", "ex": "Zieh dich warm an.", "exen": "Dress warmly."}, {"rank": 143, "w": "ausziehen", "pos": "verb", "en": "to take off / to move out", "ex": "Zieh die Schuhe aus.", "exen": "Take off your shoes."}, {"rank": 144, "w": "einkaufen", "pos": "verb", "en": "to shop (groceries)", "ex": "Wir kaufen am Samstag ein.", "exen": "We shop on Saturdays."}, {"rank": 145, "w": "bezahlen", "pos": "verb", "en": "to pay", "ex": "Ich bezahle mit Karte.", "exen": "I'll pay by card."}, {"rank": 146, "w": "kosten", "pos": "verb", "en": "to cost", "ex": "Was kostet das?", "exen": "How much does that cost?"}, {"rank": 147, "w": "gefallen", "pos": "verb", "en": "to please / to like", "ex": "Das Buch gefällt mir.", "exen": "I like the book."}, {"rank": 148, "w": "fehlen", "pos": "verb", "en": "to be missing / to miss", "ex": "Du fehlst mir.", "exen": "I miss you."}, {"rank": 149, "w": "passieren", "pos": "verb", "en": "to happen", "ex": "Was ist passiert?", "exen": "What happened?"}, {"rank": 150, "w": "gewinnen", "pos": "verb", "en": "to win", "ex": "Unsere Mannschaft hat gewonnen.", "exen": "Our team won."}, {"rank": 151, "w": "der Tisch, -e", "pos": "noun", "en": "table", "ex": "Der Tisch ist aus Holz.", "exen": "The table is made of wood."}, {"rank": 152, "w": "der Stuhl, \"-e", "pos": "noun", "en": "chair", "ex": "Setz dich auf den Stuhl.", "exen": "Sit down on the chair."}, {"rank": 153, "w": "die Tür, -en", "pos": "noun", "en": "door", "ex": "Mach die Tür zu.", "exen": "Close the door."}, {"rank": 154, "w": "das Fenster, -", "pos": "noun", "en": "window", "ex": "Öffne das Fenster.", "exen": "Open the window."}, {"rank": 155, "w": "das Zimmer, -", "pos": "noun", "en": "room", "ex": "Mein Zimmer ist klein.", "exen": "My room is small."}, {"rank": 156, "w": "die Küche, -n", "pos": "noun", "en": "kitchen", "ex": "Die Küche ist modern.", "exen": "The kitchen is modern."}, {"rank": 157, "w": "das Bad, \"-er", "pos": "noun", "en": "bathroom", "ex": "Wo ist das Bad?", "exen": "Where is the bathroom?"}, {"rank": 158, "w": "die Straße, -n", "pos": "noun", "en": "street", "ex": "Die Straße ist lang.", "exen": "The street is long."}, {"rank": 159, "w": "der Bahnhof, \"-e", "pos": "noun", "en": "train station", "ex": "Der Bahnhof ist nah.", "exen": "The station is near."}, {"rank": 160, "w": "der Flughafen, \"-", "pos": "noun", "en": "airport", "ex": "Der Flughafen ist groß.", "exen": "The airport is big."}, {"rank": 161, "w": "das Auto, -s", "pos": "noun", "en": "car", "ex": "Das Auto ist neu.", "exen": "The car is new."}, {"rank": 162, "w": "der Zug, \"-e", "pos": "noun", "en": "train", "ex": "Der Zug kommt um zehn.", "exen": "The train arrives at ten."}, {"rank": 163, "w": "das Fahrrad, \"-er", "pos": "noun", "en": "bicycle", "ex": "Ich fahre Fahrrad.", "exen": "I ride a bike."}, {"rank": 164, "w": "der Arzt, \"-e", "pos": "noun", "en": "doctor (male)", "ex": "Der Arzt hilft.", "exen": "The doctor helps."}, {"rank": 165, "w": "die Ärztin, -nen", "pos": "noun", "en": "doctor (female)", "ex": "Die Ärztin ist nett.", "exen": "The (female) doctor is nice."}, {"rank": 166, "w": "der Lehrer, -", "pos": "noun", "en": "teacher (male)", "ex": "Der Lehrer erklärt.", "exen": "The teacher explains."}, {"rank": 167, "w": "die Lehrerin, -nen", "pos": "noun", "en": "teacher (female)", "ex": "Die Lehrerin lacht.", "exen": "The (female) teacher is laughing."}, {"rank": 168, "w": "der Kollege, -n", "pos": "noun", "en": "colleague", "ex": "Mein Kollege ist krank.", "exen": "My colleague is ill."}, {"rank": 169, "w": "der Nachbar, -n", "pos": "noun", "en": "neighbour", "ex": "Unser Nachbar ist nett.", "exen": "Our neighbour is nice."}, {"rank": 170, "w": "die Familie, -n", "pos": "noun", "en": "family", "ex": "Meine Familie ist groß.", "exen": "My family is big."}, {"rank": 171, "w": "das Essen", "pos": "noun", "en": "food / meal", "ex": "Das Essen schmeckt gut.", "exen": "The food tastes good."}, {"rank": 172, "w": "das Getränk, -e", "pos": "noun", "en": "drink / beverage", "ex": "Ein kaltes Getränk, bitte.", "exen": "A cold drink, please."}, {"rank": 173, "w": "der Kaffee, -s", "pos": "noun", "en": "coffee", "ex": "Der Kaffee ist heiß.", "exen": "The coffee is hot."}, {"rank": 174, "w": "der Tee, -s", "pos": "noun", "en": "tea", "ex": "Trinkst du Tee?", "exen": "Do you drink tea?"}, {"rank": 175, "w": "das Obst", "pos": "noun", "en": "fruit", "ex": "Obst ist gesund.", "exen": "Fruit is healthy."}, {"rank": 176, "w": "das Gemüse", "pos": "noun", "en": "vegetables", "ex": "Iss mehr Gemüse.", "exen": "Eat more vegetables."}, {"rank": 177, "w": "die Milch", "pos": "noun", "en": "milk", "ex": "Die Milch ist kalt.", "exen": "The milk is cold."}, {"rank": 178, "w": "der Käse", "pos": "noun", "en": "cheese", "ex": "Ich mag Käse.", "exen": "I like cheese."}, {"rank": 179, "w": "die Wurst, \"-e", "pos": "noun", "en": "sausage", "ex": "Eine Wurst, bitte.", "exen": "A sausage, please."}, {"rank": 180, "w": "der Apfel, \"-", "pos": "noun", "en": "apple", "ex": "Der Apfel ist rot.", "exen": "The apple is red."}, {"rank": 181, "w": "interessant", "pos": "adjective", "en": "interesting", "ex": "Das Buch ist interessant.", "exen": "The book is interesting."}, {"rank": 182, "w": "langweilig", "pos": "adjective", "en": "boring", "ex": "Der Film war langweilig.", "exen": "The film was boring."}, {"rank": 183, "w": "müde", "pos": "adjective", "en": "tired", "ex": "Ich bin müde.", "exen": "I am tired."}, {"rank": 184, "w": "hungrig", "pos": "adjective", "en": "hungry", "ex": "Bist du hungrig?", "exen": "Are you hungry?"}, {"rank": 185, "w": "durstig", "pos": "adjective", "en": "thirsty", "ex": "Ich bin durstig.", "exen": "I am thirsty."}, {"rank": 186, "w": "krank", "pos": "adjective", "en": "ill / sick", "ex": "Er ist krank.", "exen": "He is ill."}, {"rank": 187, "w": "gesund", "pos": "adjective", "en": "healthy", "ex": "Sport ist gesund.", "exen": "Exercise is healthy."}, {"rank": 188, "w": "glücklich", "pos": "adjective", "en": "happy", "ex": "Sie ist glücklich.", "exen": "She is happy."}, {"rank": 189, "w": "traurig", "pos": "adjective", "en": "sad", "ex": "Der Film war traurig.", "exen": "The film was sad."}, {"rank": 190, "w": "nervös", "pos": "adjective", "en": "nervous", "ex": "Ich bin nervös.", "exen": "I am nervous."}, {"rank": 191, "w": "ruhig", "pos": "adjective", "en": "calm / quiet", "ex": "Bleib ruhig.", "exen": "Stay calm."}, {"rank": 192, "w": "laut", "pos": "adjective", "en": "loud", "ex": "Die Musik ist zu laut.", "exen": "The music is too loud."}, {"rank": 193, "w": "leise", "pos": "adjective", "en": "quiet / soft", "ex": "Sprich leise.", "exen": "Speak quietly."}, {"rank": 194, "w": "dunkel", "pos": "adjective", "en": "dark", "ex": "Es wird dunkel.", "exen": "It is getting dark."}, {"rank": 195, "w": "hell", "pos": "adjective", "en": "bright / light", "ex": "Das Zimmer ist hell.", "exen": "The room is bright."}, {"rank": 196, "w": "warm", "pos": "adjective", "en": "warm", "ex": "Die Suppe ist warm.", "exen": "The soup is warm."}, {"rank": 197, "w": "kalt", "pos": "adjective", "en": "cold", "ex": "Das Wasser ist kalt.", "exen": "The water is cold."}, {"rank": 198, "w": "trocken", "pos": "adjective", "en": "dry", "ex": "Die Wäsche ist trocken.", "exen": "The laundry is dry."}, {"rank": 199, "w": "nass", "pos": "adjective", "en": "wet", "ex": "Meine Schuhe sind nass.", "exen": "My shoes are wet."}, {"rank": 200, "w": "sauber", "pos": "adjective", "en": "clean", "ex": "Die Küche ist sauber.", "exen": "The kitchen is clean."}, {"rank": 201, "w": "schmutzig", "pos": "adjective", "en": "dirty", "ex": "Deine Hände sind schmutzig.", "exen": "Your hands are dirty."}, {"rank": 202, "w": "voll", "pos": "adjective", "en": "full", "ex": "Das Glas ist voll.", "exen": "The glass is full."}, {"rank": 203, "w": "leer", "pos": "adjective", "en": "empty", "ex": "Die Flasche ist leer.", "exen": "The bottle is empty."}, {"rank": 204, "w": "offen", "pos": "adjective", "en": "open", "ex": "Die Tür ist offen.", "exen": "The door is open."}, {"rank": 205, "w": "geschlossen", "pos": "adjective", "en": "closed", "ex": "Das Geschäft ist geschlossen.", "exen": "The shop is closed."}, {"rank": 206, "w": "richtig", "pos": "adjective", "en": "correct / right", "ex": "Die Antwort ist richtig.", "exen": "The answer is correct."}, {"rank": 207, "w": "falsch", "pos": "adjective", "en": "wrong", "ex": "Das ist falsch.", "exen": "That is wrong."}, {"rank": 208, "w": "möglich", "pos": "adjective", "en": "possible", "ex": "Ist das möglich?", "exen": "Is that possible?"}, {"rank": 209, "w": "unmöglich", "pos": "adjective", "en": "impossible", "ex": "Das ist unmöglich.", "exen": "That is impossible."}, {"rank": 210, "w": "sicher", "pos": "adjective", "en": "sure / safe", "ex": "Bist du sicher?", "exen": "Are you sure?"}, {"rank": 211, "w": "gefährlich", "pos": "adjective", "en": "dangerous", "ex": "Das ist gefährlich.", "exen": "That is dangerous."}, {"rank": 212, "w": "nett", "pos": "adjective", "en": "nice", "ex": "Er ist sehr nett.", "exen": "He is very nice."}, {"rank": 213, "w": "freundlich", "pos": "adjective", "en": "friendly", "ex": "Die Leute sind freundlich.", "exen": "The people are friendly."}, {"rank": 214, "w": "unfreundlich", "pos": "adjective", "en": "unfriendly", "ex": "Der Kellner war unfreundlich.", "exen": "The waiter was unfriendly."}, {"rank": 215, "w": "höflich", "pos": "adjective", "en": "polite", "ex": "Sei höflich.", "exen": "Be polite."}, {"rank": 216, "w": "pünktlich", "pos": "adjective", "en": "punctual / on time", "ex": "Der Zug ist pünktlich.", "exen": "The train is on time."}, {"rank": 217, "w": "spät", "pos": "adverb", "en": "late", "ex": "Es ist schon spät.", "exen": "It is already late."}, {"rank": 218, "w": "früh", "pos": "adverb", "en": "early", "ex": "Ich stehe früh auf.", "exen": "I get up early."}, {"rank": 219, "w": "oft", "pos": "adverb", "en": "often", "ex": "Ich reise oft.", "exen": "I travel often."}, {"rank": 220, "w": "selten", "pos": "adverb", "en": "rarely", "ex": "Wir sehen uns selten.", "exen": "We rarely see each other."}];
+var pool = [], qi = 0, correctN = 0, missedN = 0, missedList = [], qa = null, ROUNDS = 20;
+function samePos(e){ return WORDS.filter(function(x){ return x.pos === e.pos && x.w !== e.w; }); }
+function pickOptions(e){
+  var cands = samePos(e);
+  var opts = [e.en];
+  while(opts.length < 4 && cands.length){
+    var i = Math.floor(Math.random() * cands.length);
+    var v = cands.splice(i, 1)[0].en;
+    if(opts.indexOf(v) < 0) opts.push(v);
+  }
+  while(opts.length < 4){
+    var x = WORDS[Math.floor(Math.random() * WORDS.length)].en;
+    if(opts.indexOf(x) < 0) opts.push(x);
+  }
+  return opts;
+}
+function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
+function startQuiz(){
+  pool = shuffle(WORDS.slice());
+  qi = 0; correctN = 0; missedN = 0; missedList = [];
+  document.getElementById("quiz-zone").style.display = "block";
+  document.getElementById("quiz-summary").innerHTML = "";
+  document.getElementById("calc-btn").style.display = "none";
+  showQ();
+}
+function showQ(){
+  qa = pool[qi % pool.length];
+  var dirDE = Math.random() < 0.5;
+  qa._dir = dirDE;
+  var prompt = dirDE ? "What does this German word mean?" : "Which German word means this?";
+  var head = dirDE ? qa.w : qa.en;
+  var answers = dirDE ? pickOptions(qa) : pickOptionsDE(qa);
+  qa._answers = answers;
+  qa._correct = dirDE ? qa.en : qa.w;
+  document.getElementById("quiz-prompt").textContent = prompt + "  (#" + qa.rank + " · " + qa.pos + ")";
+  document.getElementById("quiz-sentence").textContent = head;
+  document.getElementById("qcount").textContent = "Round " + (qi+1) + "/" + ROUNDS;
+  document.getElementById("qbar").style.width = (qi/ROUNDS*100) + "%";
+  var box = document.getElementById("quiz-options"); box.innerHTML = "";
+  var fb = document.getElementById("quiz-feedback"); fb.className = ""; fb.style.display = "none";
+  document.getElementById("quiz-next").style.display = "none";
+  shuffle(answers.slice()).forEach(function(opt){
+    var b = document.createElement("button");
+    b.className = "quiz-btn"; b.textContent = opt;
+    b.addEventListener("click", function(){ answer(opt, b); });
+    box.appendChild(b);
+  });
+}
+function pickOptionsDE(e){
+  var cands = samePos(e);
+  var opts = [e.w];
+  while(opts.length < 4 && cands.length){
+    var i = Math.floor(Math.random() * cands.length);
+    var v = cands.splice(i, 1)[0].w;
+    if(opts.indexOf(v) < 0) opts.push(v);
+  }
+  while(opts.length < 4){
+    var x = WORDS[Math.floor(Math.random() * WORDS.length)].w;
+    if(opts.indexOf(x) < 0) opts.push(x);
+  }
+  return opts;
+}
+function answer(opt, btn){
+  var fb = document.getElementById("quiz-feedback");
+  var btns = document.querySelectorAll("#quiz-options .quiz-btn");
+  btns.forEach(function(x){ x.disabled = true; if(x.textContent === qa._correct) x.classList.add("correct"); });
+  if(opt === qa._correct){
+    correctN++; fb.className = "ok";
+    fb.textContent = "\u2713 Correct! \"" + qa.w + "\" = \"" + qa.en + "\". " + qa.ex + " (" + qa.exen + ")";
+  } else {
+    missedN++; missedList.push(qa); fb.className = "no";
+    btn.classList.add("wrong");
+    fb.textContent = "\u2717 The answer is \u201c" + qa._correct + "\u201d. \"" + qa.w + "\" = \"" + qa.en + "\". " + qa.ex + " (" + qa.exen + ")";
+  }
+  document.getElementById("qscore").textContent = "Correct: " + correctN + " · Missed: " + missedN;
+  var nb = document.getElementById("quiz-next");
+  nb.style.display = "block";
+  nb.textContent = (qi + 1 < ROUNDS) ? "Next" : "See results";
+}
+function nextQ(){
+  if(qa && qa._missed === undefined && document.querySelectorAll("#quiz-options .quiz-btn.wrong").length){
+    pool.push(qa);
+  }
+  qi++;
+  if(qi < ROUNDS) showQ();
+  else {
+    document.getElementById("quiz-prompt").textContent = "";
+    document.getElementById("quiz-sentence").textContent = "";
+    document.getElementById("quiz-options").innerHTML = "";
+    document.getElementById("quiz-feedback").style.display = "none";
+    document.getElementById("quiz-next").style.display = "none";
+    document.getElementById("qbar").style.width = "100%";
+    var uniq = {};
+    missedList.forEach(function(m){ uniq[m.w] = m; });
+    var missArr = Object.keys(uniq).map(function(k){ return uniq[k]; });
+    var msg = "<strong>" + correctN + " / " + ROUNDS + " correct.</strong> ";
+    if(missArr.length === 0) msg += "Perfect round — these words are yours. Try the next hundred tomorrow.";
+    else {
+      msg += "Review these " + missArr.length + " word" + (missArr.length>1?"s":"") + " — they will come back in your next session:<ul style='margin:8px 0 0 18px'>";
+      missArr.forEach(function(m){ msg += "<li><strong>" + m.w + "</strong> = " + m.en + " <span style='color:#64748b'>(" + m.ex + ")</span></li>"; });
+      msg += "</ul>";
+    }
+    document.getElementById("quiz-summary").innerHTML = '<div class="note">' + msg + '</div>' +
+      '<button type="button" class="try-row" style="margin-top:12px" onclick="startQuiz()">Play again</button>';
+    document.getElementById("calc-btn").style.display = "block";
+    document.getElementById("calc-btn").textContent = "Play again";
+  }
+}
+
+
+</script>
+</body>
+</html>
