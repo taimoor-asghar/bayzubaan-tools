@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Date Formats: DD.MM.YYYY, Written Dates &amp; Quiz | Bayzubaan</title>
+<meta name="description" content="Master German date formats: 07.10.2026, 7. Oktober 2026, am 7. Oktober. Interactive date converter + 15-round quiz with the ordinal-dot rule.">
+<link rel="canonical" href="https://bayzubaan.com/tools/date-format-trainer/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="German Date Formats: DD.MM.YYYY, Written Dates &amp; Quiz">
+<meta property="og:description" content="German dates done right: 07.10.2026, 7. Oktober 2026 — converter + 15-round quiz.">
+<meta property="og:url" content="https://bayzubaan.com/tools/date-format-trainer/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="German Date Formats: DD.MM.YYYY, Written Dates &amp; Quiz">
+<meta name="twitter:description" content="German dates done right: 07.10.2026, 7. Oktober 2026 — converter + 15-round quiz.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is the German date 07.10.2026 and not 10.07.2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "German order is always day.month.year, so 07.10.2026 is 7 October. The American month-first order does not exist in Germany — 10.07.2026 reads as 10 July."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the dot after the day number mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It marks an ordinal: 7. = der siebte (the seventh). Every German date needs it — '7 Oktober' without the dot is a visible learner error."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it 'am 7. Oktober' or 'im 7. Oktober'?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Am 7. Oktober. Specific days and full dates take 'am'; 'im' is only for months, seasons and years (im Oktober, im Herbst, im Jahr 2026)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you write the date on a German letter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Place + 'den' + date: 'Aarhus, den 7. Oktober 2026'. Never use 'am' in a letter heading — 'den' is the accusative form."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do Germans write 'October 7, 2026' ever?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The written form is '7. Oktober 2026' — no leading zero on the day, capitalised month, ordinal dot. Month names are German: Oktober, März, Juni."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>Das Datum: German Date Formats</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">German dates done right: 07.10.2026, 7. Oktober 2026 — converter + 15-round quiz.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+
+<h2>German Date Converter</h2>
+<p style="margin-bottom:16px">Enter any date to see every correct German format — numeric, written, spoken, and letter style.</p>
+<div class="field">
+<label for="date-input">Pick a date:</label>
+<input id="date-input" type="date" value="2026-10-07">
+</div>
+<button id="calc-btn" type="button">Show German formats</button>
+<div id="result"></div>
+<h2 style="margin-top:28px">Quiz: 15 rounds</h2>
+<div class="progress"><div id="qbar"></div></div>
+<div class="quiz-meta"><span id="qcount">Round 1/15</span><span id="qscore">Score: 0</span></div>
+<div id="quiz-sentence" style="font-size:1.15rem;font-weight:600;margin-bottom:14px"></div>
+<div id="quiz-options"></div>
+<div id="quiz-feedback"></div>
+<button type="button" id="quiz-next" style="display:none;margin-top:12px" onclick="nextQ()">Next question</button>
+<div id="quiz-summary"></div>
+
+</div>
+
+<article class="prose">
+
+<h2>The golden rule: day first, dots between</h2>
+<p>German dates run <strong>day → month → year</strong>, always: <em>07.10.2026</em> is 7 October 2026. The dots are not decoration — they separate the fields, and the dot after the day number carries grammatical meaning (see below). English speakers whose home format is MM/DD/YYYY must rebuild the habit from zero, because <em>10.07.2026</em> reads as 10 July in Germany, not 7 October. The numeric form uses leading zeros (<em>07.10.2026</em>, never 7.10.2026 in formal writing), which also helps you: two digits, dot, two digits, dot, four digits is instantly recognisable as German even before you read the values. Enter any date in the converter above and watch the numeric row — the pattern becomes automatic after a few dozen reps.</p>
+<h2>The ordinal dot: 7. means "the seventh"</h2>
+<p>In German, a dot after a number makes it ordinal — <em>der 7.</em> is "the 7th" (<em>der siebte</em>). This is why every German date carries a dot after the day: <em>7. Oktober</em> is short for <em>der siebte Oktober</em>. Dropping the dot ("7 Oktober") is one of the most visible learner mistakes; it reads as broken German the way "October 7" without "th" reads as broken English. The rule extends everywhere: floor numbers (<em>im 3. Stock</em>), centuries (<em>im 21. Jahrhundert</em>), rankings, and kings (<em>Heinrich VIII.</em> takes a dot too). Internalise it once — number + dot = ordinal — and a whole family of German conventions clicks into place.</p>
+<h2>Written dates: no leading zero, capital month</h2>
+<p>In running text the day drops its leading zero: <em>7. Oktober 2026</em>, not "07. Oktober 2026". Months are nouns and always capitalised — <em>März, Juni, Oktober</em> — which trips English speakers only for the spelling (<em>März</em> with umlaut, <em>Juni/Juli</em> not "June/July"). Memorise the twelve month names as a chant; they're needed constantly for appointments, forms, and small talk about birthdays. Note the pronunciation traps: <em>Februar</em> keeps its first r, and <em>November/Dezember</em> stress the second syllable. The converter's "written" row shows the exact form — compare it against the numeric row until the two feel like the same date in different clothes.</p>
+<h2>Am, im, or nothing: the preposition system</h2>
+<p>German assigns every time unit its preposition, and dates are the clearest case. Specific days and full dates take <strong>am</strong> (<em>an + dem</em>): <em>am 7. Oktober</em>, <em>am Montag</em>, <em>am Wochenende</em>. Months, seasons, and years take <strong>im</strong> (<em>in + dem</em>): <em>im Oktober</em>, <em>im Herbst</em>, <em>im Jahr 2026</em>. Bare years take nothing: <em>2026 war ein gutes Jahr</em>. The classic error is carrying English "in" everywhere — "in 7. Oktober" is wrong, and "on Oktober" thinking produces "am Oktober", equally wrong. The trio is small and closed: learn which unit takes which, and the quiz items on this page will feel trivial. Medical German leans on this heavily — <em>am Aufnahmetag</em>, <em>im Verlauf</em> — so it's Fachsprachenprüfung-relevant too.</p>
+<h2>Letter dates: place, then "den"</h2>
+<p>Formal letters and emails open with place + date: <em>Aarhus, den 7. Oktober 2026</em>. The <em>den</em> is accusative — shorthand for "(geschrieben) den 7. Oktober". Two traps: using <em>am</em> here (wrong — letters never take <em>am</em>) and writing the American order. In emails the place is often dropped but <em>den</em> stays: <em>den 7. Oktober 2026</em>. This convention appears in the Bewerbung (job application) tool later in this series — a wrong date line on a German CV cover letter is noticed immediately, so get it right here.</p>
+<h2>Weekdays: Monday first, and the -s adverb</h2>
+<p>German calendars start the week on <strong>Monday</strong> (<em>Montag</em>), and Germans say <em>am Montag</em> for a specific Monday. For repetition, add -s: <em>montags</em> = "on Mondays", always lowercase. Weekend vocabulary matters socially: <em>am Wochenende</em> (on the weekend), <em>unter der Woche</em> (during the week). When weekday and date combine — <em>am Mittwoch, dem 7. Oktober</em> — the date after a weekday takes dative <em>dem</em>, not the letter-style <em>den</em>. That's a fine point the quiz tests; in speech, mixing them up is barely noticed, but in writing it's a clear marker of command.</p>
+<h2>Spoken dates and the year problem</h2>
+<p>Spoken out, <em>7. Oktober 2026</em> becomes <em>der siebte Oktober zweitausendsechsundzwanzig</em>. Years are the hard part: unlike English "twenty twenty-six", German says the full number — <em>zweitausendsechsundzwanzig</em>. (The numbers-to-words tool in this series drills exactly this.) Before 2000 it was <em>neunzehnhundertsechsundachtzig</em> for 1986 — same logic, "nineteen hundred eighty-six" compressed. Decades work like English: <em>in den Neunzigern</em> (in the nineties), capitalised as a noun. Practise saying your birth year and today's date aloud daily; it's the fastest route to automaticity.</p>
+<h2>ISO format and digital contexts</h2>
+<p>You'll meet <em>2026-10-07</em> in databases, file names, and some official online forms — the ISO 8601 format, year first with hyphens. It's unambiguous and universally understood in Germany, but it's a technical format, not everyday style: don't write it in a letter or say it aloud. Related digital habit: German software and forms sometimes show <em>TT.MM.JJJJ</em> as a placeholder (Tag.Monat.Jahr) — now you know exactly what each letter stands for. And when a German form asks for <em>Geburtsdatum</em>, it expects <em>TT.MM.JJJJ</em>: day first, dots, four-digit year.</p>
+<h2>Study strategy</h2>
+<p>Start with the converter: enter your birthday, today's date, and five random dates, and read every row aloud — numeric, written, am-form, letter form. Then quiz yourself: cover the answers and reconstruct each format from the date alone. The quiz distractors target the three classic failures — month/day swap ("10.07.2026"), missing ordinal dot ("7 Oktober"), and wrong preposition ("in 7. Oktober") — so a perfect score means all three traps are closed. Final step: write three real dates this week the German way — an appointment note (<em>am …</em>), a letter heading (<em>den …</em>), and a form field (<em>TT.MM.JJJJ</em>). When each context picks its own format without thinking, this topic is done.</p>
+
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>Why is the German date 07.10.2026 and not 10.07.2026?</h3><p>German order is always day.month.year, so 07.10.2026 is 7 October. The American month-first order does not exist in Germany — 10.07.2026 reads as 10 July.</p></div><div class="faq-item"><h3>What does the dot after the day number mean?</h3><p>It marks an ordinal: 7. = der siebte (the seventh). Every German date needs it — &#x27;7 Oktober&#x27; without the dot is a visible learner error.</p></div><div class="faq-item"><h3>Is it &#x27;am 7. Oktober&#x27; or &#x27;im 7. Oktober&#x27;?</h3><p>Am 7. Oktober. Specific days and full dates take &#x27;am&#x27;; &#x27;im&#x27; is only for months, seasons and years (im Oktober, im Herbst, im Jahr 2026).</p></div><div class="faq-item"><h3>How do you write the date on a German letter?</h3><p>Place + &#x27;den&#x27; + date: &#x27;Aarhus, den 7. Oktober 2026&#x27;. Never use &#x27;am&#x27; in a letter heading — &#x27;den&#x27; is the accusative form.</p></div><div class="faq-item"><h3>Do Germans write &#x27;October 7, 2026&#x27; ever?</h3><p>No. The written form is &#x27;7. Oktober 2026&#x27; — no leading zero on the day, capitalised month, ordinal dot. Month names are German: Oktober, März, Juni.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+const MONATE=["Januar","Februar","M\u00e4rz","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
+const WOCHENTAGE=["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"];
+function fmtNumeric(y,m,d){return String(d).padStart(2,"0")+"."+String(m).padStart(2,"0")+"."+y;}
+function fmtWritten(y,m,d){return d+". "+MONATE[m-1]+" "+y;}
+function fmtAm(y,m,d){return "am "+d+". "+MONATE[m-1];}
+function fmtLetter(y,m,d){return "den "+d+". "+MONATE[m-1]+" "+y;}
+function weekdayOf(y,m,d){return WOCHENTAGE[new Date(y,m-1,d).getDay()];}
+function runBuild(){
+  const v = document.getElementById("date-input").value;
+  const r = document.getElementById("result");
+  r.style.display = "block";
+  if(!v){ r.innerHTML = '<div class="note">Pick a date first.</div>'; return; }
+  const p = v.split("-"), y = +p[0], m = +p[1], d = +p[2];
+  r.innerHTML = '<div class="note"><strong>'+fmtWritten(y,m,d)+'</strong> ('+weekdayOf(y,m,d)+')</div>'+
+    '<table><tr><th>Use</th><th>German</th></tr>'+
+    '<tr><td><strong>Numeric (forms, official)</strong></td><td><strong>'+fmtNumeric(y,m,d)+'</strong></td></tr>'+
+    '<tr><td><strong>Written (running text)</strong></td><td><strong>'+fmtWritten(y,m,d)+'</strong></td></tr>'+
+    '<tr><td><strong>Appointment ("on ...")</strong></td><td><strong>'+fmtAm(y,m,d)+'</strong></td></tr>'+
+    '<tr><td><strong>Letter heading</strong></td><td><strong>'+fmtLetter(y,m,d)+'</strong></td></tr>'+
+    '<tr><td><strong>Month only</strong></td><td><strong>im '+MONATE[m-1]+'</strong></td></tr>'+
+    '<tr><td><strong>Year only</strong></td><td><strong>'+y+' / im Jahr '+y+'</strong></td></tr></table>';
+}
+document.getElementById("calc-btn").addEventListener("click", runBuild);
+const ITEMS = [{"s": "How is 7 October 2026 written in the German numeric format?", "o": ["07.10.2026", "10.07.2026", "2026/10/07"], "c": "07.10.2026", "e": "07.10.2026 — German order is day.month.year with dots, and leading zeros. 10.07.2026 would be 10 July."}, {"s": "How is 7 October 2026 written out in words?", "o": ["7. Oktober 2026", "07. Oktober 2026", "7. october 2026"], "c": "7. Oktober 2026", "e": "7. Oktober 2026 — no leading zero on the written day, the month is capitalised, and the dot makes the day ordinal."}, {"s": "Your appointment is on 7 October. Which preposition is correct?", "o": ["am 7. Oktober", "in 7. Oktober", "an 7. Oktober"], "c": "am 7. Oktober", "e": "am 7. Oktober — specific days take 'am' (an + dem). 'Im' is only for months, seasons, years."}, {"s": "How does the date line at the top of a German letter look?", "o": ["Aarhus, den 7. Oktober 2026", "Aarhus, am 7. Oktober 2026", "Aarhus, 7. Oktober, 2026"], "c": "Aarhus, den 7. Oktober 2026", "e": "Aarhus, den 7. Oktober 2026 — letters use 'den' (accusative) after the place name, no 'am'."}, {"s": "What is the German name for March?", "o": ["März", "Marz", "March"], "c": "März", "e": "März — with the umlaut. Months are always capitalised nouns in German."}, {"s": "What does the dot after the day number mean? (der 7.)", "o": ["It marks an ordinal number (the 7th)", "It marks an abbreviation", "It marks a plural"], "c": "It marks an ordinal number (the 7th)", "e": "The dot turns the cardinal into an ordinal: 7. = der siebte (the seventh). Forgetting it is a classic learner error."}, {"s": "Which is correct for something happening in October (month only)?", "o": ["im Oktober", "am Oktober", "in Oktober"], "c": "im Oktober", "e": "im Oktober — months, seasons and years take 'im' (in + dem). 'Am' is reserved for specific days and dates."}, {"s": "How do you say 'in 2026' (year only)?", "o": ["2026 / im Jahr 2026", "am 2026", "in 2026"], "c": "2026 / im Jahr 2026", "e": "Bare 2026 or 'im Jahr 2026' — years take no preposition at all, or the full 'im Jahr' phrase. Never 'am'."}, {"s": "Which weekday does 7 October 2026 fall on?", "o": ["Mittwoch", "Donnerstag", "Dienstag"], "c": "Mittwoch", "e": "Mittwoch — 7 October 2026 is a Wednesday. (The converter above computes this live from any date you enter.)"}, {"s": "How is the first of May written in German?", "o": ["1. Mai", "01. Mai", "der 1 Mai"], "c": "1. Mai", "e": "1. Mai — no leading zero when the day is written out, and the ordinal dot is mandatory."}, {"s": "A German writes '7.10.26' in a note. What does it mean?", "o": ["7 October 2026 (informal short form)", "10 July 1926", "7 October, 26 AD"], "c": "7 October 2026 (informal short form)", "e": "7 October 2026 — the two-digit year is an informal short form. Day-first order still applies."}, {"s": "Which sentence correctly combines weekday and date?", "o": ["Am Mittwoch, dem 7. Oktober", "Am Mittwoch, den 7. Oktober", "Im Mittwoch, am 7. Oktober"], "c": "Am Mittwoch, dem 7. Oktober", "e": "Am Mittwoch, dem 7. Oktober — after 'am + weekday', the date takes dative 'dem'. (Letters use accusative 'den' instead.)"}, {"s": "What is the ISO-style date 2026-10-07 used for in Germany?", "o": ["Technical/official contexts; understood everywhere", "Never used in Germany", "Only in Austria"], "c": "Technical/official contexts; understood everywhere", "e": "2026-10-07 is the ISO format — used in databases, file names and some official forms. Understood everywhere, but not the everyday style."}, {"s": "How do Germans say 'on Mondays' (repeatedly)?", "o": ["montags", "am Montags", "jeden Montag"], "c": "montags", "e": "montags — the adverbial form with a lowercase 'm' and -s ending means 'on Mondays'. (Jeden Montag also works.)"}, {"s": "Your birthday is 3 March. How do you write it in a German form?", "o": ["03.03.", "3. März", "March 3rd"], "c": "03.03.", "e": "03.03. — official forms use the numeric DD.MM. format. In running text you'd write 'am 3. März'."}];
+let qi = 0, qs = 0, qa = null;
+function showQ(){
+  qa = ITEMS[qi];
+  document.getElementById("quiz-sentence").textContent = qa.s;
+  document.getElementById("qcount").textContent = "Round " + (qi+1) + "/" + ITEMS.length;
+  document.getElementById("qbar").style.width = (qi/ITEMS.length*100) + "%";
+  const box = document.getElementById("quiz-options"); box.innerHTML = "";
+  const fb = document.getElementById("quiz-feedback"); fb.className = ""; fb.style.display = "none";
+  document.getElementById("quiz-next").style.display = "none";
+  qa.o.forEach(function(opt){
+    const b = document.createElement("button");
+    b.className = "quiz-btn"; b.textContent = opt;
+    b.addEventListener("click", function(){ answer(opt, b); });
+    box.appendChild(b);
+  });
+}
+function answer(opt, btn){
+  const fb = document.getElementById("quiz-feedback");
+  const btns = document.querySelectorAll("#quiz-options .quiz-btn");
+  btns.forEach(function(x){ x.disabled = true; if(x.textContent === qa.c) x.classList.add("correct"); });
+  if(opt === qa.c){ qs++; fb.className = "ok"; fb.textContent = "\u2713 Correct! " + qa.e; }
+  else { btn.classList.add("wrong"); fb.className = "no"; fb.textContent = "\u2717 The answer is \u201c" + qa.c + "\u201d. " + qa.e; }
+  document.getElementById("qscore").textContent = "Score: " + qs;
+  document.getElementById("quiz-next").style.display = "block";
+  document.getElementById("quiz-next").textContent = (qi + 1 < ITEMS.length) ? "Next question" : "See results";
+}
+function nextQ(){
+  qi++;
+  if(qi < ITEMS.length) showQ();
+  else {
+    document.getElementById("quiz-sentence").textContent = "";
+    document.getElementById("quiz-options").innerHTML = "";
+    document.getElementById("quiz-feedback").style.display = "none";
+    document.getElementById("quiz-next").style.display = "none";
+    document.getElementById("qbar").style.width = "100%";
+    document.getElementById("qcount").textContent = "Done";
+    document.getElementById("quiz-summary").innerHTML =
+      '<div class="note">You scored <strong>' + qs + "/" + ITEMS.length + "</strong>." +
+      (qs === ITEMS.length ? " Perfect — your German dates are flawless!" :
+       qs >= 11 ? " Strong! Re-read the am/im/den section once." :
+       " Keep practising — day first, dot after the day, am for dates.") + "</div>";
+  }
+}
+showQ();
+
+
+</script>
+</body>
+</html>
