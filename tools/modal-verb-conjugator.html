@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Modal Verbs Conjugator — können, müssen, dürfen, sollen, wollen, mögen | Bayzubaan</title>
+<meta name="description" content="Conjugate all six German modal verbs in present and past tense, with usage notes, the möchten politeness ladder and the Ersatzinfinitiv rule.">
+<link rel="canonical" href="https://bayzubaan.com/tools/modal-verb-conjugator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="German Modal Verbs Conjugator — können, müssen, dürfen, sollen, wollen, mögen">
+<meta property="og:description" content="Pick a modal verb and get full present + Präteritum tables, usage notes and example sentences.">
+<meta property="og:url" content="https://bayzubaan.com/tools/modal-verb-conjugator/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="German Modal Verbs Conjugator — können, müssen, dürfen, sollen, wollen, mögen">
+<meta name="twitter:description" content="Pick a modal verb and get full present + Präteritum tables, usage notes and example sentences.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you conjugate können in the present tense?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ich kann, du kannst, er/sie/es kann, wir können, ihr könnt, sie/Sie können. The singular drops the umlaut and the -e ending; the plural keeps the infinitive stem. All six modals follow this pattern."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between müssen nicht and dürfen nicht?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Du musst das nicht tun = you don't have to do it (no obligation). Du darfst das nicht tun = you must not do it (forbidden). Mixing them up reverses the meaning — one of the classic learner errors."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is it 'ich habe kommen können' and not 'gekonnt'?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With a second verb present, modals use the Ersatzinfinitiv: the infinitive replaces the participle. Ich habe nicht kommen können, er hat arbeiten müssen. Only a lone modal takes a normal participle: ich habe das gewollt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When do you use möchten instead of wollen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Möchten (Konjunktiv II of mögen) is the polite 'would like': Ich möchte einen Kaffee. Wollen states blunt intention: Ich will einen Kaffee. Use möchten for requests, wollen for firm decisions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does the infinitive go with a modal verb?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At the end of the clause: Ich kann gut schwimmen. In questions the modal leads: Kannst du schwimmen? In subordinate clauses both verbs go to the end, modal last: …, weil ich schwimmen kann."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>German Modal Verbs Conjugator</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">Pick a modal verb and get full present + Präteritum tables, usage notes and example sentences.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+<div class="field">
+<label for="modal">Choose a modal verb</label>
+<select id="modal">
+<option value="können">können — can, to be able to</option>
+<option value="müssen">müssen — must, to have to</option>
+<option value="dürfen">dürfen — may, to be allowed to</option>
+<option value="sollen">sollen — should, shall, to be supposed to</option>
+<option value="wollen">wollen — to want to</option>
+<option value="mögen">mögen — to like</option>
+</select>
+</div>
+<div id="result" style="display:block"></div>
+</div>
+
+<article class="prose">
+<h2>The six German modal verbs</h2>
+<p>Modal verbs — <strong>können, müssen, dürfen, sollen, wollen, mögen</strong> — express attitude toward an action: ability, necessity, permission, obligation, desire, liking. They are the most frequently conjugated verbs in spoken German after sein and haben, and they have two quirks that define them: the <strong>singular stem change</strong> and the <strong>infinitive at the end</strong>.</p>
+<p>The pattern: the conjugated modal sits in second position, and the main verb goes to the end as a bare infinitive. <span class="hl">Ich kann gut schwimmen.</span> <span class="hl">Du musst morgen arbeiten.</span> <span class="hl">Wir wollen nach Italien fahren.</span> In subordinate clauses both pile at the end, modal last: <span class="hl">…, weil ich gut schwimmen kann.</span></p>
+<h2>The singular stem change</h2>
+<p>In the present tense, the singular forms (ich, du, er/sie/es) lose the umlaut and often the -n- of the infinitive, while the plural keeps it: <span class="hl">ich kann / wir können</span>, <span class="hl">ich muss / wir müssen</span>, <span class="hl">ich darf / wir dürfen</span>, <span class="hl">ich soll / wir sollen</span>, <span class="hl">ich will / wir wollen</span>, <span class="hl">ich mag / wir mögen</span>. There is no -e ending on ich and er/sie/es: not <em>ich kanne</em>, just <span class="hl">ich kann</span>. This stripped singular is the signature of the modal class — learn it once and all six follow.</p>
+<p>The Präteritum is regular within the class: drop the umlaut, add -te endings. <span class="hl">konnte, musste, durfte, sollte, wollte, mochte</span>. Unlike strong verbs there are no vowel surprises, and modals are one of the few verb groups where the Präteritum is preferred even in speech: <span class="hl">Ich konnte nicht kommen</span> sounds natural; <span class="hl">Ich habe nicht kommen können</span> is reserved for emphasis.</p>
+<h2>Meaning map: which modal when</h2>
+<ul>
+<li><strong>können</strong> — ability/possibility. <span class="hl">Ich kann Deutsch sprechen.</span> Also "to know how to" for languages and skills.</li>
+<li><strong>müssen</strong> — necessity (internal or external). <span class="hl">Ich muss zum Arzt.</span> Negation removes the obligation: <span class="hl">Du musst nicht</span> = you don't have to.</li>
+<li><strong>dürfen</strong> — permission. <span class="hl">Darf ich fragen?</span> Negation forbids: <span class="hl">Du darfst nicht</span> = you must not.</li>
+<li><strong>sollen</strong> — obligation imposed by someone else, advice, reported commands. <span class="hl">Du sollst den Arzt anrufen.</span> Also offers in questions: <span class="hl">Soll ich helfen?</span></li>
+<li><strong>wollen</strong> — raw intention. <span class="hl">Ich will das nicht.</span> Direct, even blunt.</li>
+<li><strong>mögen</strong> — liking, almost always without an infinitive: <span class="hl">Ich mag dich.</span></li>
+</ul>
+<h2>Möchten: the seventh modal you actually need</h2>
+<p>Strictly, <span class="hl">möchten</span> is the Konjunktiv II of mögen — but Germans use it as an independent polite "would like". <span class="hl">Ich möchte einen Kaffee, bitte.</span> Its conjugation (möchte, möchtest, möchte, möchten, möchtet, möchten) is the single most useful verb form for travellers, patients, and anyone making requests. Note the politeness ladder: <span class="hl">Ich will …</span> (demand) → <span class="hl">Ich möchte …</span> (polite request) → <span class="hl">Dürfte ich …?</span> (formal request).</p>
+<h2>The Ersatzinfinitiv: modals in the perfect tense</h2>
+<p>When a modal accompanies another verb in the perfect tense, German uses the <strong>infinitive instead of the participle</strong> — the famous Ersatzinfinitiv (substitute infinitive): <span class="hl">Ich habe nicht kommen können</span> (not <em>gekonnt</em>), <span class="hl">Er hat das machen müssen</span> (not <em>gemusst</em>). The two infinitives stack at the end: auxiliary + main infinitive + modal infinitive. Only when the modal stands alone does it take a normal participle: <span class="hl">Ich habe das nicht gewollt.</span></p>
+<h2>Word order with modals</h2>
+<p>Main clause: modal second, infinitive last. <span class="hl">Kannst du mir helfen?</span> Subordinate clause: everything at the end, modal last. <span class="hl">Ich weiß nicht, ob du mir helfen kannst.</span> With a separable main verb, the prefix stays attached to the infinitive at the end: <span class="hl">Ich muss früh aufstehen.</span> (Not <em>auf … stehen</em> — the verb is unconjugated here, so nothing separates.)</p>
+<h2>Medical German: modals in the clinic</h2>
+<p>Modals carry the politeness register of the consultation. <span class="hl">Dürfte ich Sie kurz untersuchen?</span> opens an examination. <span class="hl">Sie müssen die Tabletten täglich einnehmen</span> gives instructions. <span class="hl">Sie sollten weniger rauchen</span> advises. <span class="hl">Möchten Sie sich setzen?</span> offers comfort. In the Fachsprachenprüfung, reaching for dürfte/möchte/sollten instead of blunt will/muss is one of the clearest markers of professional register — the examiner hears it in your first thirty seconds.</p>
+<p>Select a modal above to see its full present and past tables with usage notes, then practise by building sentences: modal in second position, infinitive at the end, prefix attached. The six modals plus möchten cover nearly every attitude you will ever need to express.</p>
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>How do you conjugate können in the present tense?</h3><p>ich kann, du kannst, er/sie/es kann, wir können, ihr könnt, sie/Sie können. The singular drops the umlaut and the -e ending; the plural keeps the infinitive stem. All six modals follow this pattern.</p></div><div class="faq-item"><h3>What is the difference between müssen nicht and dürfen nicht?</h3><p>Du musst das nicht tun = you don&#x27;t have to do it (no obligation). Du darfst das nicht tun = you must not do it (forbidden). Mixing them up reverses the meaning — one of the classic learner errors.</p></div><div class="faq-item"><h3>Why is it &#x27;ich habe kommen können&#x27; and not &#x27;gekonnt&#x27;?</h3><p>With a second verb present, modals use the Ersatzinfinitiv: the infinitive replaces the participle. Ich habe nicht kommen können, er hat arbeiten müssen. Only a lone modal takes a normal participle: ich habe das gewollt.</p></div><div class="faq-item"><h3>When do you use möchten instead of wollen?</h3><p>Möchten (Konjunktiv II of mögen) is the polite &#x27;would like&#x27;: Ich möchte einen Kaffee. Wollen states blunt intention: Ich will einen Kaffee. Use möchten for requests, wollen for firm decisions.</p></div><div class="faq-item"><h3>Where does the infinitive go with a modal verb?</h3><p>At the end of the clause: Ich kann gut schwimmen. In questions the modal leads: Kannst du schwimmen? In subordinate clauses both verbs go to the end, modal last: …, weil ich schwimmen kann.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+const MODALS = {
+  "können":{"en": "can, to be able to", "pr": ["kann", "kannst", "kann", "können", "könnt", "können"], "pa": ["konnte", "konntest", "konnte", "konnten", "konntet", "konnten"], "use": "Ability and possibility. <span class='hl'>Ich kann schwimmen.</span> (I can swim.) <span class='hl'>Kannst du mir helfen?</span> (Can you help me?)", "note": "For learned skills Germans often use the simple verb instead: <span class='hl'>Ich schwimme gern</span> rather than <span class='hl'>Ich kann schwimmen</span> — können implies the ability is remarkable or in question."},
+  "müssen":{"en": "must, to have to", "pr": ["muss", "musst", "muss", "müssen", "müsst", "müssen"], "pa": ["musste", "musstest", "musste", "mussten", "musstet", "mussten"], "use": "Necessity and obligation. <span class='hl'>Ich muss arbeiten.</span> (I have to work.) <span class='hl'>Du musst nicht kommen.</span> (You don't have to come — no obligation.)", "note": "Watch the negation trap: <span class='hl'>Du musst das nicht tun</span> means 'you don't need to do it', NOT 'you must not do it'. For prohibition use dürfen + nicht: <span class='hl'>Du darfst das nicht tun.</span>"},
+  "dürfen":{"en": "may, to be allowed to", "pr": ["darf", "darfst", "darf", "dürfen", "dürft", "dürfen"], "pa": ["durfte", "durftest", "durfte", "durften", "durftet", "durften"], "use": "Permission. <span class='hl'>Darf ich herein?</span> (May I come in?) <span class='hl'>Hier darf man nicht rauchen.</span> (Smoking is not allowed here.)", "note": "The polite request form <span class='hl'>Dürfte ich …?</span> (Konjunktiv II) is the gold standard for formal requests: <span class='hl'>Dürfte ich Sie um einen Gefallen bitten?</span>"},
+  "sollen":{"en": "should, shall, to be supposed to", "pr": ["soll", "sollst", "soll", "sollen", "sollt", "sollen"], "pa": ["sollte", "solltest", "sollte", "sollten", "solltet", "sollten"], "use": "Obligation from outside, advice, reported instruction. <span class='hl'>Du sollst mehr schlafen.</span> (You should sleep more.) <span class='hl'>Der Arzt sagt, ich soll das Medikament nehmen.</span>", "note": "Sollen reports what someone else wants: <span class='hl'>Was soll das heißen?</span> (What is that supposed to mean?) In questions it offers: <span class='hl'>Soll ich dir helfen?</span> (Shall I help you?)"},
+  "wollen":{"en": "to want to", "pr": ["will", "willst", "will", "wollen", "wollt", "wollen"], "pa": ["wollte", "wolltest", "wollte", "wollten", "wolltet", "wollten"], "use": "Intention and desire. <span class='hl'>Ich will nach Berlin.</span> (I want to go to Berlin — note: no infinitive needed with places.) <span class='hl'>Willst du mitkommen?</span>", "note": "Wollen is blunt — it states raw will. In polite requests prefer <span class='hl'>möchten</span>: <span class='hl'>Ich möchte einen Kaffee</span> sounds polite; <span class='hl'>Ich will einen Kaffee</span> sounds like a demand."},
+  "mögen":{"en": "to like", "pr": ["mag", "magst", "mag", "mögen", "mögt", "mögen"], "pa": ["mochte", "mochtest", "mochte", "mochten", "mochtet", "mochten"], "use": "Liking. <span class='hl'>Ich mag Schokolade.</span> (I like chocolate.) Rarely used with an infinitive in modern German.", "note": "The real star is its Konjunktiv II form <strong>möchten</strong> (möchte, möchtest, möchte …): the standard polite 'would like'. <span class='hl'>Ich möchte bitte zahlen.</span> (I would like to pay, please.)"}
+};
+const PERSONS = ["ich", "du", "er/sie/es", "wir", "ihr", "sie/Sie"];
+function render(){
+  const key = document.getElementById("modal").value;
+  const m = MODALS[key];
+  const box = document.getElementById("result");
+  let h = "<h2 style='margin-bottom:4px'>" + key + " <span style='color:#64748b;font-weight:400;font-size:1rem'>— " + m.en + "</span></h2>";
+  h += "<table><tr><th>Person</th><th>Präsens</th><th>Präteritum</th></tr>";
+  for (let i = 0; i < 6; i++)
+    h += "<tr><td><strong>" + PERSONS[i] + "</strong></td><td><span class='hl'>" + m.pr[i] + "</span></td><td>" + m.pa[i] + "</td></tr>";
+  h += "</table>";
+  h += "<p class='note'><strong>Usage:</strong> " + m.use + "</p>";
+  h += "<p class='note'><strong>Note:</strong> " + m.note + "</p>";
+  h += "<p class='note'><strong>Sentence pattern:</strong> modal in 2nd position + infinitive at the end — <span class='hl'>Ich " + m.pr[0] + " morgen schwimmen.</span></p>";
+  box.innerHTML = h;
+}
+document.getElementById("modal").addEventListener("change", render);
+render();
+if (typeof module !== "undefined") module.exports = { MODALS };
+
+
+</script>
+</body>
+</html>
