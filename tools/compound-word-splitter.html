@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Compound Word Splitter — Break Down Komposita | Bayzubaan</title>
+<meta name="description" content="Split any German compound word into its parts with meanings: Fugenlaute handled automatically. 40 famous compounds + 15-round breakdown quiz.">
+<link rel="canonical" href="https://bayzubaan.com/tools/compound-word-splitter/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="German Compound Word Splitter — Break Down Komposita">
+<meta property="og:description" content="Type any German compound — Krankenhaus, Geschwindigkeit, even the 42-letter monster — and watch it split into roots.">
+<meta property="og:url" content="https://bayzubaan.com/tools/compound-word-splitter/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="German Compound Word Splitter — Break Down Komposita">
+<meta name="twitter:description" content="Type any German compound — Krankenhaus, Geschwindigkeit, even the 42-letter monster — and watch it split into roots.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you split a German compound word?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Read it backwards: the LAST part (the head) sets the gender and core meaning. Then peel off parts right-to-left, stripping linking sounds (Fugenlaute) like -s-, -n-, -en- until each piece is a word you know. This tool's splitter automates it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a Fugenlaut in German?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A linking sound between compound parts: -s- (Arbeitszeit), -n- (Wochenende), -en- (Krankenhaus), -er- (Kindergarten). There is no fully reliable rule for which one appears — recognise and strip them when splitting rather than trying to predict them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which part of a German compound decides the gender?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Always the last part (the head). Der Handschuh is masculine because der Schuh is masculine; die Kaffeemaschine is feminine because die Maschine is."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the longest German word?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Famous record-holders include Donaudampfschifffahrtsgesellschaftskapitän (42 letters, Danube steamship company captain) and the 63-letter Rindfleischetikettierungsüberwachungsaufgabenübertragungsgesetz (a repealed beef-labelling law)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does Handschuh literally mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hand-shoe — a glove. German compounds are often delightfully literal: Kühlschrank (cool-cupboard) = fridge, Fernseher (far-seer) = TV, Staubsauger (dust-sucker) = vacuum cleaner."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are all long German words compounds?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mostly, but watch for traps: separable-prefix verbs (anfangen) follow verb rules, some compounds are not compositional (Kummerspeck = grief-bacon, i.e. emotional-eating weight), and loanwords can just be long. Split first, verify second."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>Compound Splitter: Take German's Long Words Apart</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">Type any German compound — Krankenhaus, Geschwindigkeit, even the 42-letter monster — and watch it split into roots.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+
+<h2>Compound splitter</h2>
+<p style="margin-bottom:16px">Type any German compound word and the segmenter breaks it into its roots, showing each part's meaning and the literal translation. It handles <strong>Fugenlaute</strong> (linking sounds like -s-, -n-, -en-) automatically. Try <em>Krankenhaus</em>, <em>Geschwindigkeit</em> — or the famous 42-letter monster below.</p>
+<div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap">
+<input id="cmp-input" type="text" aria-label="German compound word" placeholder="e.g. Kühlschrank" style="flex:1;min-width:200px;padding:10px 14px;border:1px solid #e2e8f0;border-radius:8px;font-size:1rem;font-family:inherit">
+<button id="calc-btn" type="button" onclick="splitWord()" style="margin:0">Split it</button>
+</div>
+<div id="split-out"></div>
+<h2 style="margin-top:28px">40 famous compounds</h2>
+<p style="margin-bottom:16px">Browse the classics — the literal translations are half the fun (<em>Handschuh</em> = "hand-shoe").</p>
+<div id="vlist"></div>
+<h2 style="margin-top:28px">Quiz: pick the correct breakdown</h2>
+<p style="margin-bottom:16px">15 rounds. See the compound, choose the right split from four options.</p>
+<button id="qstart" type="button" onclick="startQuiz()">Start 15-round quiz</button>
+<div id="quiz-zone" style="display:none;margin-top:20px">
+<div class="progress"><div id="qbar"></div></div>
+<div class="quiz-meta"><span id="qcount">Round 1/15</span><span id="qscore">Correct: 0 · Missed: 0</span></div>
+<div id="quiz-sentence" style="font-size:1.4rem;font-weight:700;margin-bottom:14px"></div>
+<div id="quiz-options"></div>
+<div id="quiz-feedback"></div>
+<button type="button" id="quiz-next" style="display:none;margin-top:12px" onclick="nextQ()">Next</button>
+<div id="quiz-summary"></div>
+</div>
+
+</div>
+
+<article class="prose">
+
+<h2>Komposita: German's Lego-brick words</h2>
+<p>German builds nouns the way children build with Lego: snap simple words together and you get a new, precise word. <em>Krank</em> (sick) + <em>Haus</em> (house) = <em>Krankenhaus</em> (hospital). <em>Hand</em> + <em>Schuh</em> (shoe) = <em>Handschuh</em> (glove — a "hand-shoe"). <em>Fern</em> (far) + <em>Seher</em> (seer) = <em>Fernseher</em> (television — a "far-seer"). Once you can split compounds, tens of thousands of "unknown" German words become transparent, because most long German words are just short ones in a trench coat. This tool's splitter does the splitting for you, shows each part's meaning, and flags the linking sounds (Fugenlaute) in blue.</p>
+<p>The quiz trains the reverse skill: given a compound, pick its correct split. The distractors are plausible wrong splits built from real parts of other compounds — <em>Hand + Schirm</em> looks almost right for <em>Handschuh</em> until you notice the head is wrong. That is exactly the discrimination your brain needs when meeting new compounds in the wild.</p>
+<h2>The head-last rule: the key to every compound</h2>
+<p>Every German compound has a <strong>head</strong>: the LAST part. The head decides two things — the grammatical gender and the core meaning. <em>Der Handschuh</em> is masculine because <em>der Schuh</em> is masculine; it is fundamentally a kind of shoe (for the hand). <em>Die Kaffeemaschine</em> is feminine because <em>die Maschine</em> is; it is fundamentally a machine. <em>Das Haustier</em> is neuter because <em>das Tier</em> is; it is fundamentally an animal. Everything before the head just modifies it. So when you meet an unknown compound, read it <em>backwards</em>: find the head first, get the category and gender, then work left to narrow it down. <em>…versicherung</em> → some kind of insurance; <em>Kranken…</em> → sick-related; <em>Krankenversicherung</em> → health insurance. Two seconds, no dictionary.</p>
+<h2>Fugenlaute: the glue between the bricks</h2>
+<p>Often the parts do not join cleanly — a linking sound, the <em>Fugenlaut</em>, sits between them. The splitter highlights these in blue. The common ones: <strong>-s-</strong> (<em>Arbeit-s-zeit</em>, <em>Liebling-s-essen</em>, <em>Geburt-s-tag</em> — often after feminine nouns ending in -heit/-keit/-ung/-schaft, and in many fixed compounds), <strong>-n-</strong> (<em>Woche-n-ende</em>, <em>Treppe-n-haus</em> — often after feminine nouns ending in -e), <strong>-en-</strong> (<em>krank-en-Haus</em> — often after weak masculine nouns and plurals), <strong>-e-</strong> (<em>Hund-e-hütte</em>), <strong>-er-</strong> (<em>Kind-er-garten</em> — often after plural -er forms). There is no fully reliable rule for which Fugenlaut a compound takes; native speakers just know. For learners, the practical move is recognition, not production: when splitting a word, strip a candidate Fugenlaut and see if both sides become real words — exactly what the splitter's algorithm does.</p>
+<h2>The famous monsters</h2>
+<p>German compounds have no theoretical length limit, which produces legendary words. The classic: <em>Donaudampfschifffahrtsgesellschaftskapitän</em> (42 letters) — Donau (Danube) + Dampf (steam) + Schiff (ship) + Fahrt (journey) + s + Gesellschaft (company) + s + Kapitän (captain): the Danube steamship company captain. Try it in the splitter — it handles all seven parts. The official record-holders were legal terms like <em>Rindfleischetikettierungsüberwachungsaufgabenübertragungs­gesetz</em> (63 letters, a beef-labelling law, repealed 2013 partly because of its name). These are party tricks, but they prove the point: length is not complexity. Every monster is just familiar bricks.</p>
+<h2>Splitting strategy for unknown words</h2>
+<p>When you meet a long unknown word in a text: <strong>1.</strong> Find the head (last part) — category and gender secured. <strong>2.</strong> Peel off parts from the right, stripping Fugenlaute, until the remainder is a word you know. <strong>3.</strong> Translate literally, then adjust to the idiomatic meaning — the literal gloss is a scaffold, not the answer (<em>Handschuh</em> is a glove, not footwear). <strong>4.</strong> Watch for traps: some compounds are not compositional. <em>Der Kummerspeck</em> ("grief-bacon") means weight gained from emotional eating — no bacon involved. <em>Die Schadenfreude</em> is compositional ("harm-joy") but lexicalised. And separable-prefix verbs (<em>anfangen</em>) look like compounds but follow verb rules instead. When in doubt, split first and check a dictionary second — the split tells you what to look up.</p>
+<h2>Compounds in medical German: where this pays off fastest</h2>
+<p>Nowhere does compound-splitting pay off faster than in medical German — the Fachsprachenprüfung runs on compounds. <em>Die Krankenversicherung</em> (health insurance), <em>die Krankmeldung</em> (sick note), <em>die Überweisung</em> is not a compound but <em>der Überweisungsschein</em> is (referral slip). <em>Die Blutdruckmessung</em> (blood pressure measurement) = Blut + Druck + Messung; <em>die Herzfrequenz</em> is a loanword, but <em>die Herzinsuffizienz</em> splits into Herz + Insuffizienz. <em>Der Behandlungsplan</em> (treatment plan) is masculine because <em>der Plan</em> is; <em>der Entlassungsbrief</em> (discharge letter) because <em>der Brief</em> is. In the Anamnese you will hear <em>Vor-erkrankungen</em> (pre-existing conditions), <em>Begleiterkrankungen</em> (comorbidities), <em>Schmerzmittel</em> (painkillers = Schmerz + Mittel). Splitting these live, mid-conversation, is a genuine clinical skill: patients describe symptoms in compounds (<em>Bauchschmerzen</em>, <em>Kopfschmerzen</em>, <em>Rückenschmerzen</em> — all transparent once you split), and documentation demands the precise full form. Drill the medical compounds in the 40-word browser with special attention, because these are the ones your future colleagues will actually say.</p>
+<h2>Why this beats memorising</h2>
+<p>A learner who memorises <em>Krankenhaus</em>, <em>Haustier</em>, and <em>Kindergarten</em> as three unrelated words knows three words. A learner who can split knows the system that generates thousands: every <em>-haus</em> is a kind of house, every <em>Kinder-</em> is child-related, every <em>-maschine</em> is a machine. Vocabulary growth becomes combinatorial instead of linear. Drill routine: split five compounds a day in the tool above (use the 40 famous ones as your starter set), then run the 15-round breakdown quiz. Target 13+/15 twice. Then take it to real texts: circle every compound in a news paragraph and split it on paper before checking here. Within weeks, long words stop looking long.</p>
+
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>How do you split a German compound word?</h3><p>Read it backwards: the LAST part (the head) sets the gender and core meaning. Then peel off parts right-to-left, stripping linking sounds (Fugenlaute) like -s-, -n-, -en- until each piece is a word you know. This tool&#x27;s splitter automates it.</p></div><div class="faq-item"><h3>What is a Fugenlaut in German?</h3><p>A linking sound between compound parts: -s- (Arbeitszeit), -n- (Wochenende), -en- (Krankenhaus), -er- (Kindergarten). There is no fully reliable rule for which one appears — recognise and strip them when splitting rather than trying to predict them.</p></div><div class="faq-item"><h3>Which part of a German compound decides the gender?</h3><p>Always the last part (the head). Der Handschuh is masculine because der Schuh is masculine; die Kaffeemaschine is feminine because die Maschine is.</p></div><div class="faq-item"><h3>What is the longest German word?</h3><p>Famous record-holders include Donaudampfschifffahrtsgesellschaftskapitän (42 letters, Danube steamship company captain) and the 63-letter Rindfleischetikettierungsüberwachungsaufgabenübertragungsgesetz (a repealed beef-labelling law).</p></div><div class="faq-item"><h3>What does Handschuh literally mean?</h3><p>Hand-shoe — a glove. German compounds are often delightfully literal: Kühlschrank (cool-cupboard) = fridge, Fernseher (far-seer) = TV, Staubsauger (dust-sucker) = vacuum cleaner.</p></div><div class="faq-item"><h3>Are all long German words compounds?</h3><p>Mostly, but watch for traps: separable-prefix verbs (anfangen) follow verb rules, some compounds are not compositional (Kummerspeck = grief-bacon, i.e. emotional-eating weight), and loanwords can just be long. Split first, verify second.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+var ROOTS = {"krank": "sick", "haus": "house", "hand": "hand", "schuh": "shoe", "kühl": "cool", "schrank": "cupboard", "flug": "flight", "zeug": "stuff / gear", "bahn": "rail / track", "hof": "yard / court", "arbeit": "work", "zeit": "time", "wasser": "water", "schirm": "shield / screen", "regen": "rain", "zahn": "tooth", "arzt": "doctor", "tier": "animal", "führer": "leader / driver", "schein": "slip / licence", "leben": "life", "mittel": "means / agent", "dampf": "steam", "schiff": "ship", "fahrt": "journey / ride", "gesellschaft": "company / society", "kapitän": "captain", "donau": "Danube", "brot": "bread", "milch": "milk", "käse": "cheese", "butter": "butter", "apfel": "apple", "baum": "tree", "garten": "garden", "stadt": "city", "dorf": "village", "straße": "street", "platz": "place / square", "auto": "car", "rad": "wheel", "zug": "train", "hafen": "harbour", "schule": "school", "lehrer": "teacher", "schüler": "pupil", "buch": "book", "tisch": "table", "stuhl": "chair", "bett": "bed", "zimmer": "room", "küche": "kitchen", "tür": "door", "fenster": "window", "wand": "wall", "dach": "roof", "keller": "cellar", "brief": "letter", "kasten": "box", "geld": "money", "beutel": "pouch", "tasche": "bag", "sack": "sack", "messer": "knife", "gabel": "fork", "löffel": "spoon", "teller": "plate", "topf": "pot", "pfanne": "pan", "herd": "stove", "spiel": "game / play", "kind": "child", "mann": "man", "frau": "woman", "tag": "day", "nacht": "night", "morgen": "morning", "abend": "evening", "woche": "week", "jahr": "year", "sommer": "summer", "winter": "winter", "frühling": "spring", "herbst": "autumn", "sonne": "sun", "mond": "moon", "stern": "star", "himmel": "sky", "erde": "earth", "feuer": "fire", "luft": "air", "holz": "wood", "stein": "stone", "eisen": "iron", "gold": "gold", "papier": "paper", "glas": "glass", "bild": "picture", "maschine": "machine", "fern": "far", "seher": "seer / viewer", "schreib": "write", "klasse": "class", "aufgabe": "task", "stunde": "hour / lesson", "plan": "plan", "tanne": "fir", "rat": "council / advice", "kinder": "children", "treppe": "stairs", "ende": "end", "geburt": "birth", "hoch": "high", "weich": "soft", "weihnacht": "Christmas", "schwester": "sister", "bruder": "brother", "mutter": "mother", "vater": "father", "kaffee": "coffee", "wasch": "wash", "spül": "rinse", "bürste": "brush", "karte": "card / ticket", "fahr": "drive / ride", "versicherung": "insurance", "meldung": "report", "schaden": "harm / damage", "freude": "joy", "liebling": "darling / favourite", "hunde": "dogs", "hütte": "hut", "geschwind": "speedy / swift", "igkeit": "-ness (noun-forming suffix)"};
+var KNOWN = [{"w": "Krankenhaus", "art": "das", "bd": "krank + en + Haus", "lit": "sick-house", "act": "hospital"}, {"w": "Handschuh", "art": "der", "bd": "Hand + Schuh", "lit": "hand-shoe", "act": "glove"}, {"w": "Kühlschrank", "art": "der", "bd": "kühl + Schrank", "lit": "cool-cupboard", "act": "refrigerator"}, {"w": "Flugzeug", "art": "das", "bd": "Flug + Zeug", "lit": "flight-gear", "act": "aeroplane"}, {"w": "Bahnhof", "art": "der", "bd": "Bahn + Hof", "lit": "rail-yard", "act": "train station"}, {"w": "Geschwindigkeit", "art": "die", "bd": "geschwind + igkeit", "lit": "speed-ness", "act": "speed / velocity"}, {"w": "Regenschirm", "art": "der", "bd": "Regen + Schirm", "lit": "rain-shield", "act": "umbrella"}, {"w": "Zahnarzt", "art": "der", "bd": "Zahn + Arzt", "lit": "tooth-doctor", "act": "dentist"}, {"w": "Haustier", "art": "das", "bd": "Haus + Tier", "lit": "house-animal", "act": "pet"}, {"w": "Führerschein", "art": "der", "bd": "Führer + Schein", "lit": "driver-slip", "act": "driving licence"}, {"w": "Arbeitszeit", "art": "die", "bd": "Arbeit + s + Zeit", "lit": "work-time", "act": "working hours"}, {"w": "Lebensmittel", "art": "das", "bd": "Leben + s + Mittel", "lit": "life-means", "act": "food / groceries"}, {"w": "Krankenschwester", "art": "die", "bd": "kranken + Schwester", "lit": "sick-sister", "act": "nurse"}, {"w": "Briefkasten", "art": "der", "bd": "Brief + Kasten", "lit": "letter-box", "act": "postbox"}, {"w": "Geldbeutel", "art": "der", "bd": "Geld + Beutel", "lit": "money-pouch", "act": "wallet / purse"}, {"w": "Geburtstag", "art": "der", "bd": "Geburt + s + Tag", "lit": "birth-day", "act": "birthday"}, {"w": "Hochzeit", "art": "die", "bd": "hoch + Zeit", "lit": "high-time", "act": "wedding"}, {"w": "Wochenende", "art": "das", "bd": "Woche + n + Ende", "lit": "week-end", "act": "weekend"}, {"w": "Krankenversicherung", "art": "die", "bd": "kranken + Versicherung", "lit": "sick-insurance", "act": "health insurance"}, {"w": "Zahnbürste", "art": "die", "bd": "Zahn + Bürste", "lit": "tooth-brush", "act": "toothbrush"}, {"w": "Kaffeemaschine", "art": "die", "bd": "Kaffee + Maschine", "lit": "coffee-machine", "act": "coffee maker"}, {"w": "Waschmaschine", "art": "die", "bd": "wasch + Maschine", "lit": "wash-machine", "act": "washing machine"}, {"w": "Spülmaschine", "art": "die", "bd": "spül + Maschine", "lit": "rinse-machine", "act": "dishwasher"}, {"w": "Fernseher", "art": "der", "bd": "fern + Seher", "lit": "far-seer", "act": "television"}, {"w": "Bildschirm", "art": "der", "bd": "Bild + Schirm", "lit": "picture-screen", "act": "screen / monitor"}, {"w": "Schreibtisch", "art": "der", "bd": "schreib + Tisch", "lit": "write-table", "act": "desk"}, {"w": "Klassenzimmer", "art": "das", "bd": "Klasse + n + Zimmer", "lit": "class-room", "act": "classroom"}, {"w": "Hausaufgaben", "art": "die", "bd": "Haus + Aufgaben", "lit": "house-tasks", "act": "homework"}, {"w": "Stundenplan", "art": "der", "bd": "Stunde + n + Plan", "lit": "hour-plan", "act": "timetable"}, {"w": "Apfelbaum", "art": "der", "bd": "Apfel + Baum", "lit": "apple-tree", "act": "apple tree"}, {"w": "Tannenbaum", "art": "der", "bd": "Tanne + n + Baum", "lit": "fir-tree", "act": "Christmas tree"}, {"w": "Rathaus", "art": "das", "bd": "Rat + Haus", "lit": "council-house", "act": "town hall"}, {"w": "Kindergarten", "art": "der", "bd": "Kinder + Garten", "lit": "children-garden", "act": "kindergarten"}, {"w": "Spielplatz", "art": "der", "bd": "Spiel + Platz", "lit": "play-place", "act": "playground"}, {"w": "Flughafen", "art": "der", "bd": "Flug + Hafen", "lit": "flight-harbour", "act": "airport"}, {"w": "Fahrkarte", "art": "die", "bd": "fahr + Karte", "lit": "ride-card", "act": "ticket"}, {"w": "Fahrstuhl", "art": "der", "bd": "fahr + Stuhl", "lit": "ride-chair", "act": "lift / elevator"}, {"w": "Treppenhaus", "art": "das", "bd": "Treppe + n + Haus", "lit": "stair-house", "act": "stairwell"}, {"w": "Schadenfreude", "art": "die", "bd": "Schaden + Freude", "lit": "harm-joy", "act": "malicious joy"}, {"w": "Donaudampfschifffahrtsgesellschaftskapitän", "art": "der", "bd": "Donau + Dampf + Schiff + Fahrt + s + Gesellschaft + s + Kapitän", "lit": "Danube-steam-ship-journey-company-captain", "act": "Danube steamship company captain"}];
+var FUGEN = ["en","er","es","e","n","s"];
+function splitCompound(word){
+  var w = word.toLowerCase().replace(/[^a-z\u00e4\u00f6\u00fc\u00df]/g, "");
+  function seg(s){
+    if(ROOTS[s]) return [{p: s, f: ""}];
+    for(var i = s.length - 2; i >= 2; i--){
+      var left = s.slice(0, i), rest = s.slice(i);
+      if(!ROOTS[left]) continue;
+      var r = seg(rest);
+      if(r) return [{p: left, f: ""}].concat(r);
+      for(var k = 0; k < FUGEN.length; k++){
+        var fg = FUGEN[k];
+        if(rest.indexOf(fg) === 0 && rest.length > fg.length){
+          var r2 = seg(rest.slice(fg.length));
+          if(r2) return [{p: left, f: fg}].concat(r2);
+        }
+      }
+    }
+    return null;
+  }
+  return seg(w);
+}
+function buildOptions(answer, distractors, n){
+  var opts = [answer], seen = {};
+  seen[answer] = true;
+  var pool = distractors.slice();
+  while(opts.length < n && pool.length){
+    var i = Math.floor(Math.random() * pool.length);
+    var v = pool.splice(i, 1)[0];
+    if(!seen[v]){ seen[v] = true; opts.push(v); }
+  }
+  for(var i = opts.length - 1; i > 0; i--){
+    var j = Math.floor(Math.random() * (i + 1));
+    var t = opts[i]; opts[i] = opts[j]; opts[j] = t;
+  }
+  return opts;
+}
+function splitWord(){
+  var inp = document.getElementById("cmp-input").value.trim();
+  var out = document.getElementById("split-out");
+  if(!inp){ out.innerHTML = '<div class="note">Type a German compound word first.</div>'; return; }
+  var parts = splitCompound(inp);
+  if(!parts){
+    out.innerHTML = '<div class="note">Could not split <strong>' + inp.replace(/</g,"&lt;") +
+      "</strong> with the built-in root bank (" + Object.keys(ROOTS).length +
+      " roots). Try one of the 40 famous compounds below — or a shorter word.</div>";
+    return;
+  }
+  var literal = parts.map(function(x){ return ROOTS[x.p]; }).join("-");
+  var html = '<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:16px">';
+  html += '<div style="font-size:1.3rem;font-weight:700;color:#0f172a;margin-bottom:10px">' +
+    parts.map(function(x){ return x.p + (x.f ? '<span style="color:#2563eb">(' + x.f + ")</span>" : ""); }).join(" + ") + "</div>";
+  parts.forEach(function(x){
+    html += '<div style="padding:6px 0;border-top:1px solid #e2e8f0"><strong>' + x.p + "</strong>" +
+      (x.f ? ' <span style="color:#2563eb;font-size:.85rem">+ Fugenlaut -' + x.f + "-</span>" : "") +
+      ' <span style="color:#475569">= ' + ROOTS[x.p] + "</span></div>";
+  });
+  html += '<div style="margin-top:10px;font-size:.95rem">Literal: <strong>\u201C' + literal +
+    '\u201D</strong> &nbsp;·&nbsp; <span style="color:#64748b">Remember: the LAST part is the head — it sets the gender and the core meaning.</span></div></div>';
+  out.innerHTML = html;
+}
+(function renderKnown(){
+  var box = document.getElementById("vlist");
+  KNOWN.forEach(function(k){
+    var d = document.createElement("div");
+    d.style.cssText = "background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px";
+    d.innerHTML = '<div style="font-size:1.1rem;font-weight:700;color:#0f172a"></div>' +
+      '<div style="color:#2563eb;font-weight:600;margin-top:2px"></div>' +
+      '<div style="color:#475569;margin-top:4px"></div>' +
+      '<div style="font-size:.9rem;color:#059669;margin-top:2px"></div>';
+    d.children[0].textContent = k.art + " " + k.w;
+    d.children[1].textContent = k.bd;
+    d.children[2].textContent = 'Literal: "' + k.lit + '"';
+    d.children[3].textContent = "Really: " + k.act;
+    box.appendChild(d);
+  });
+})();
+var pool = [], qi = 0, correctN = 0, missedN = 0, missedList = [], qa = null, ROUNDS = 15;
+function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
+function startQuiz(){
+  pool = shuffle(KNOWN.slice());
+  qi = 0; correctN = 0; missedN = 0; missedList = [];
+  document.getElementById("quiz-zone").style.display = "block";
+  document.getElementById("quiz-summary").innerHTML = "";
+  document.getElementById("qstart").style.display = "none";
+  showQ();
+}
+function wrongSplits(k){
+  var out = [], parts = k.bd.split(" + ");
+  var others = KNOWN.filter(function(x){ return x.w !== k.w; });
+  function rnd(a){ return a[Math.floor(Math.random() * a.length)]; }
+  var tries = 0;
+  while(out.length < 3 && tries < 60){
+    tries++;
+    var o = rnd(others), op = o.bd.split(" + ");
+    var variant;
+    var mode = tries % 3;
+    if(mode === 0 && parts.length > 1 && op.length > 1) variant = parts[0] + " + " + op[op.length - 1];
+    else if(mode === 1 && parts.length > 1 && op.length > 1) variant = op[0] + " + " + parts[parts.length - 1];
+    else variant = op.slice(0, Math.min(op.length, parts.length)).join(" + ");
+    if(variant !== k.bd && out.indexOf(variant) < 0) out.push(variant);
+  }
+  return out;
+}
+function showQ(){
+  qa = pool[qi % pool.length];
+  qa._answer = qa.bd;
+  document.getElementById("quiz-sentence").textContent = "Split this compound:  " + qa.art + " " + qa.w + '  ("' + qa.act + '")';
+  document.getElementById("qcount").textContent = "Round " + (qi+1) + "/" + ROUNDS;
+  document.getElementById("qbar").style.width = (qi/ROUNDS*100) + "%";
+  var box = document.getElementById("quiz-options"); box.innerHTML = "";
+  var fb = document.getElementById("quiz-feedback"); fb.className = ""; fb.style.display = "none";
+  document.getElementById("quiz-next").style.display = "none";
+  buildOptions(qa.bd, wrongSplits(qa), 4).forEach(function(opt){
+    var b = document.createElement("button");
+    b.className = "quiz-btn"; b.textContent = opt;
+    b.addEventListener("click", function(){ answerQ(opt, b); });
+    box.appendChild(b);
+  });
+}
+function answerQ(opt, btn){
+  var fb = document.getElementById("quiz-feedback");
+  var btns = document.querySelectorAll("#quiz-options .quiz-btn");
+  btns.forEach(function(x){ x.disabled = true; if(x.textContent === qa._answer) x.classList.add("correct"); });
+  if(opt === qa._answer){
+    correctN++; fb.className = "ok";
+    fb.textContent = "\u2713 Correct! Literal: \u201C" + qa.lit + "\u201D = " + qa.act + ".";
+  } else {
+    missedN++; missedList.push(qa); fb.className = "no";
+    btn.classList.add("wrong");
+    fb.textContent = "\u2717 The split is: " + qa.bd + ' (\u201C' + qa.lit + "\u201D = " + qa.act + ").";
+  }
+  document.getElementById("qscore").textContent = "Correct: " + correctN + " · Missed: " + missedN;
+  var nb = document.getElementById("quiz-next");
+  nb.style.display = "block";
+  nb.textContent = (qi + 1 < ROUNDS) ? "Next" : "See results";
+}
+function nextQ(){
+  qi++;
+  if(qi < ROUNDS) showQ();
+  else {
+    document.getElementById("quiz-sentence").textContent = "";
+    document.getElementById("quiz-options").innerHTML = "";
+    document.getElementById("quiz-feedback").style.display = "none";
+    document.getElementById("quiz-next").style.display = "none";
+    document.getElementById("qbar").style.width = "100%";
+    var uniq = {};
+    missedList.forEach(function(m){ uniq[m.w] = m; });
+    var missArr = Object.keys(uniq).map(function(k){ return uniq[k]; });
+    var msg = "<strong>" + correctN + " / " + ROUNDS + " correct.</strong> ";
+    if(missArr.length === 0) msg += "Komposita-Meister — compounds hold no fear for you.";
+    else {
+      msg += "Re-split these " + missArr.length + ":<ul style='margin:8px 0 0 18px'>";
+      missArr.forEach(function(m){ msg += "<li><strong>" + m.w + "</strong> = " + m.bd + "</li>"; });
+      msg += "</ul>";
+    }
+    document.getElementById("quiz-summary").innerHTML = '<div class="note">' + msg + "</div>";
+    document.getElementById("qstart").style.display = "block";
+    document.getElementById("qstart").textContent = "Play again";
+  }
+}
+document.getElementById("cmp-input").addEventListener("keydown", function(e){ if(e.key === "Enter") splitWord(); });
+
+
+</script>
+</body>
+</html>
