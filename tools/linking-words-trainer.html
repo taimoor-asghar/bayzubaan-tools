@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linking Words Trainer — German Konnektoren | Bayzubaan</title>
+<meta name="description" content="Master German connectors: 40 Konnektoren (weil/denn, obwohl/trotzdem, als/wenn) with word-order patterns, examples, 15-round quiz.">
+<link rel="canonical" href="https://bayzubaan.com/tools/linking-words-trainer/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Linking Words Trainer — German Konnektoren">
+<meta property="og:description" content="German Konnektoren trainer: 40 linking words with patterns and quiz.">
+<meta property="og:url" content="https://bayzubaan.com/tools/linking-words-trainer/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Linking Words Trainer — German Konnektoren">
+<meta name="twitter:description" content="German Konnektoren trainer: 40 linking words with patterns and quiz.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between weil and denn?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Same meaning, different word order: weil is subordinating (verb to the end — weil ich arbeiten möchte), denn is coordinating (verb stays second — denn ich möchte arbeiten). Mixing them — denn ich arbeiten möchte — is the classic B1 error."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When do I use als and when wenn for 'when'?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Als for single completed past events: Als ich jung war … Wenn for repeated or future events: Wenn ich Zeit habe … English 'when' covers both; German splits them, and mixing them is the most audible connector error."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between obwohl, trotzdem and dennoch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Obwohl is a subordinating conjunction (verb last): Obwohl es regnete … Trotzdem and dennoch are adverbs with inversion: Es regnete, trotzdem gingen wir … Dennoch is the formal register's trotzdem — the one examiners want to see."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which connectors trigger inversion in German?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The conjunctive adverbs: deshalb, daher, trotzdem, dennoch, jedoch, außerdem, zudem, ferner, stattdessen, infolgedessen, andernfalls. They occupy position one, so the verb comes second — deshalb blieb ich zu Hause."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I say 'provided that' in formal German?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sofern alle zustimmen … or the explicit Vorausgesetzt, dass das Wetter hält … — both subordinating, verb last. Falls is the weaker alternative (in case), for hypothetical conditions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the zwar … aber construction?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The paired concession: Es ist zwar teuer, aber es lohnt sich (admittedly expensive, but worth it). Both halves must be present — a zwar without its aber is a broken promise, and examiners mark exactly that."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>Linking Words Trainer: German Konnektoren</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">German Konnektoren trainer: 40 linking words with patterns and quiz.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+
+<h2>The 40 connectors of fluent German</h2>
+<p style="margin-bottom:16px">Browse 40 Konnektoren across 5 families — causal, concessive, temporal, adversative/additive, consecutive/conditional — each with its word-order pattern and a German example sentence. Then drill with the 15-round quiz.</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px"><button type="button" class="tab" onclick="setCat(0)">Alle</button><button type="button" class="tab" onclick="setCat(1)">Causal</button><button type="button" class="tab" onclick="setCat(2)">Concessive</button><button type="button" class="tab" onclick="setCat(3)">Temporal</button><button type="button" class="tab" onclick="setCat(4)">Adversative / additive</button><button type="button" class="tab" onclick="setCat(5)">Consecutive / conditional</button></div>
+<div class="field" style="margin-bottom:12px"><input id="vsearch" type="text" placeholder="Search German or English…" aria-label="Search vocabulary" oninput="renderList()"></div>
+<div id="vlist"></div>
+<h2 style="margin-top:28px">Quiz: 15 mixed rounds</h2>
+<p style="margin-bottom:16px">Direction switches randomly: German→English or English→German.</p>
+<button id="calc-btn" type="button" onclick="startQuiz()">Start 15-round quiz</button>
+<div id="quiz-zone" style="display:none;margin-top:20px">
+<div class="progress"><div id="qbar"></div></div>
+<div class="quiz-meta"><span id="qcount">Round 1/15</span><span id="qscore">Correct: 0 · Missed: 0</span></div>
+<div id="quiz-sentence" style="font-size:1.4rem;font-weight:700;margin-bottom:14px"></div>
+<div id="quiz-options"></div>
+<div id="quiz-feedback"></div>
+<button type="button" id="quiz-next" style="display:none;margin-top:12px" onclick="nextQ()">Next</button>
+<div id="quiz-summary"></div>
+</div>
+
+</div>
+
+<article class="prose">
+
+<h2>Konnektoren: the glue of fluent German</h2>
+<p>German examiners have a simple test for fluency: count the <em>Konnektoren</em> — the linking words — and check their grammar. A text that runs <em>und … und … und</em> is A2. A text that moves with <em>weil</em>, <em>obwohl</em>, <em>dennoch</em>, <em>infolgedessen</em> is B2 and above. This tool teaches 40 connectors in five families — causal, concessive, temporal, adversative/additive, consecutive/conditional — each with its word-order pattern and a full example sentence pair. The pattern is part of the entry (<em>weil — Verb ans Ende</em>) because the connector and its word order are one inseparable unit: learn the word without the pattern and you have learned nothing.</p>
+<p>Three word-order regimes govern every connector in German. Regime one: subordinating conjunctions (<em>weil, obwohl, wenn, sodass, bevor</em>) send the finite verb to the end of their clause — <em>weil ich in Deutschland arbeiten möchte</em>. Regime two: coordinating conjunctions (<em>denn, aber</em> — and only these two, plus <em>und/oder</em>) leave the verb in second position — <em>denn ich möchte in Deutschland arbeiten</em>. Regime three: conjunctive adverbs (<em>deshalb, trotzdem, jedoch, außerdem, infolgedessen</em>) occupy position one and trigger inversion — <em>deshalb blieb ich zu Hause</em>. The single most-tested distinction in German exams is <em>weil</em> versus <em>denn</em>: same meaning, different regime, and the quiz below probes it relentlessly.</p>
+<h2>Causal connectors: giving reasons</h2>
+<p>The causal family answers <em>warum</em>. <em>Weil</em> is the default — subordinating, verb last: <em>Ich lerne Deutsch, weil ich in Deutschland arbeiten möchte.</em> <em>Denn</em> means the same but coordinates: <em>Ich lerne Deutsch, denn ich möchte in Deutschland arbeiten</em> — verb second, and no comma-driven verb movement. Learners who write <em>denn ich in Deutschland arbeiten möchte</em> have mixed the regimes; it is the classic B1 error. <em>Da</em> is <em>weil</em> for reasons the listener already knows — <em>Da ich krank war, blieb ich zu Hause</em> — and it prefers the front position, reasoning before result.</p>
+<p>The adverbial causals — <em>deshalb, daher, aus diesem Grund</em> — start a new main clause with inversion: <em>Ich war krank, deshalb blieb ich zu Hause.</em> They are the essay writer's workhorses because they link two full sentences without a subordinate clause. <em>Aufgrund</em> takes the genitive — <em>Aufgrund des schlechten Wetters</em> — and belongs to formal written German; <em>wegen</em> + genitive is its spoken cousin. <em>Dank</em> (thanks to) takes dative or genitive and is always positive — <em>Dank deiner Hilfe habe ich die Prüfung bestanden</em> — never use it for negative causes.</p>
+<h2>Concessive connectors: the although-family</h2>
+<p>The concessive family is where German essays earn their marks, because conceding an objection before rebutting it is the dialectical move. <em>Obwohl</em> subordinates — <em>Obwohl es regnete, gingen wir spazieren</em> — while <em>trotzdem</em> and <em>dennoch</em> are adverbs with inversion: <em>Es regnete, trotzdem gingen wir spazieren.</em> The three are not interchangeable in register: <em>dennoch</em> is the formal sibling, the one examiners want to see. <em>Wenngleich</em> (even though, formal) and <em>auch wenn</em> (even if) complete the subordinating set; <em>trotz</em> + genitive — <em>Trotz des Regens</em> — compresses the whole concession into a noun phrase, the most elegant option when the reason is a thing rather than a clause.</p>
+<p><em>Zwar … aber</em> is the paired concession — <em>Es ist zwar teuer, aber es lohnt sich</em> — and it is a favourite exam trap because both halves must be present: a <em>zwar</em> without its <em>aber</em> is a broken promise. <em>Ungeachtet</em> + genitive (<em>Ungeachtet aller Warnungen</em>) is the formal register's <em>trotz</em>; use it once per essay, in the strongest concession, and the examiner notices.</p>
+<h2>Temporal connectors: als versus wenn</h2>
+<p>The temporal family runs on one great distinction: <em>als</em> for single completed past events — <em>Als ich jung war, spielte ich Fußball</em> — versus <em>wenn</em> for repeated or future events — <em>Wenn ich Zeit habe, lese ich.</em> English <em>when</em> covers both; German splits them, and mixing them is the most audible learner error in the whole connector system. <em>Während</em> (while), <em>bevor</em> (before), <em>nachdem</em> (after — with the past perfect in the subordinate clause: <em>Nachdem er gegessen hatte</em>), <em>sobald</em> (as soon as), <em>bis</em> (until) all subordinate with the verb at the end. <em>Seitdem</em> (since, temporal) mirrors English <em>since</em>'s time-meaning — not to be confused with causal <em>da</em>.</p>
+<h2>Adversative, additive, consecutive, conditional</h2>
+<p><em>Aber</em> coordinates (<em>ich war krank</em> — verb second), <em>jedoch</em> inverts (<em>ich war jedoch krank</em>); the meaning is identical, the register is not — <em>jedoch</em> is the essay word. The additive chain <em>außerdem, zudem, ferner</em> climbs in formality: <em>außerdem</em> is neutral, <em>zudem</em> formal, <em>ferner</em> very formal (use once). <em>Einerseits … andererseits</em> frames the balanced paragraph; <em>im Gegensatz zu</em> + dative contrasts with a noun; <em>stattdessen</em> (instead) inverts and replaces the whole previous action.</p>
+<p>The consecutive pair: <em>sodass</em> subordinates the result — <em>Es regnete stark, sodass das Spiel ausfiel</em> — while <em>infolgedessen</em> inverts as the formal adverb. The conditional set: <em>wenn</em> (if), <em>falls</em> (in case — the weaker, more hypothetical <em>wenn</em>), <em>sofern</em> and <em>vorausgesetzt, dass</em> (provided that — the contract lawyer's <em>wenn</em>). <em>Andernfalls</em> and <em>sonst</em> (otherwise) close the system: <em>Beeil dich, andernfalls verpassen wir den Zug.</em></p>
+<h2>How to drill: from recognition to production</h2>
+<p>Browse the five tabs and read each example pair aloud, stressing the verb position — the pattern note in each entry (<em>Verb ans Ende</em>, <em>Inversion</em>) is what you are memorising, not just the translation. Use the search to compare the confusable pairs: <em>weil/denn</em>, <em>obwohl/trotzdem</em>, <em>als/wenn</em>, <em>aber/jedoch</em>, <em>falls/wenn</em>. Then take the 15-round quiz in both directions. When you can produce the right connector with the right word order without pausing — and when <em>denn ich in Deutschland arbeiten möchte</em> sounds wrong to your ear — the glue has set, and your German texts will hold together.</p>
+
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>What is the difference between weil and denn?</h3><p>Same meaning, different word order: weil is subordinating (verb to the end — weil ich arbeiten möchte), denn is coordinating (verb stays second — denn ich möchte arbeiten). Mixing them — denn ich arbeiten möchte — is the classic B1 error.</p></div><div class="faq-item"><h3>When do I use als and when wenn for &#x27;when&#x27;?</h3><p>Als for single completed past events: Als ich jung war … Wenn for repeated or future events: Wenn ich Zeit habe … English &#x27;when&#x27; covers both; German splits them, and mixing them is the most audible connector error.</p></div><div class="faq-item"><h3>What is the difference between obwohl, trotzdem and dennoch?</h3><p>Obwohl is a subordinating conjunction (verb last): Obwohl es regnete … Trotzdem and dennoch are adverbs with inversion: Es regnete, trotzdem gingen wir … Dennoch is the formal register&#x27;s trotzdem — the one examiners want to see.</p></div><div class="faq-item"><h3>Which connectors trigger inversion in German?</h3><p>The conjunctive adverbs: deshalb, daher, trotzdem, dennoch, jedoch, außerdem, zudem, ferner, stattdessen, infolgedessen, andernfalls. They occupy position one, so the verb comes second — deshalb blieb ich zu Hause.</p></div><div class="faq-item"><h3>How do I say &#x27;provided that&#x27; in formal German?</h3><p>Sofern alle zustimmen … or the explicit Vorausgesetzt, dass das Wetter hält … — both subordinating, verb last. Falls is the weaker alternative (in case), for hypothetical conditions.</p></div><div class="faq-item"><h3>What is the zwar … aber construction?</h3><p>The paired concession: Es ist zwar teuer, aber es lohnt sich (admittedly expensive, but worth it). Both halves must be present — a zwar without its aber is a broken promise, and examiners mark exactly that.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+var ENTRIES = [{"cat": "Causal", "de": "weil — Verb ans Ende", "en": "because (subordinating conjunction)", "ex": "Ich lerne Deutsch, weil ich in Deutschland arbeiten möchte.", "exen": "I am learning German because I want to work in Germany."}, {"cat": "Causal", "de": "denn — Verb an 2. Stelle", "en": "because / for (coordinating conjunction)", "ex": "Ich lerne Deutsch, denn ich möchte in Deutschland arbeiten.", "exen": "I am learning German, for I want to work in Germany."}, {"cat": "Causal", "de": "da — Verb ans Ende", "en": "since / as (subordinating, known reason)", "ex": "Da ich krank war, blieb ich zu Hause.", "exen": "Since I was ill, I stayed at home."}, {"cat": "Causal", "de": "deshalb — Inversion", "en": "therefore (adverb, verb second after it)", "ex": "Ich war krank, deshalb blieb ich zu Hause.", "exen": "I was ill, therefore I stayed at home."}, {"cat": "Causal", "de": "daher — Inversion", "en": "hence (adverb, verb second after it)", "ex": "Es regnete stark, daher fiel das Spiel aus.", "exen": "It rained heavily, hence the match was cancelled."}, {"cat": "Causal", "de": "aus diesem Grund — Inversion", "en": "for this reason", "ex": "Die Kosten stiegen; aus diesem Grund wurde das Projekt gestoppt.", "exen": "Costs rose; for this reason the project was stopped."}, {"cat": "Causal", "de": "aufgrund + Genitiv", "en": "due to + genitive", "ex": "Aufgrund des schlechten Wetters fiel das Spiel aus.", "exen": "Due to the bad weather the match was cancelled."}, {"cat": "Causal", "de": "dank + Dativ/Genitiv", "en": "thanks to", "ex": "Dank deiner Hilfe habe ich die Prüfung bestanden.", "exen": "Thanks to your help I passed the exam."}, {"cat": "Concessive", "de": "obwohl — Verb ans Ende", "en": "although (subordinating)", "ex": "Obwohl es regnete, gingen wir spazieren.", "exen": "Although it was raining, we went for a walk."}, {"cat": "Concessive", "de": "trotzdem — Inversion", "en": "nevertheless (adverb)", "ex": "Es regnete, trotzdem gingen wir spazieren.", "exen": "It was raining; nevertheless we went for a walk."}, {"cat": "Concessive", "de": "dennoch — Inversion", "en": "yet / still (adverb, formal)", "ex": "Die Aufgabe war schwer, dennoch löste er sie.", "exen": "The task was hard, yet he solved it."}, {"cat": "Concessive", "de": "wenngleich — Verb ans Ende", "en": "even though (formal, subordinating)", "ex": "Wenngleich er müde war, arbeitete er weiter.", "exen": "Even though he was tired, he kept working."}, {"cat": "Concessive", "de": "auch wenn — Verb ans Ende", "en": "even if (subordinating)", "ex": "Auch wenn es schwierig ist, gebe ich nicht auf.", "exen": "Even if it is difficult, I won't give up."}, {"cat": "Concessive", "de": "trotz + Genitiv", "en": "despite + genitive", "ex": "Trotz des Regens gingen wir spazieren.", "exen": "Despite the rain we went for a walk."}, {"cat": "Concessive", "de": "ungeachtet + Genitiv", "en": "regardless of (formal)", "ex": "Ungeachtet aller Warnungen fuhr er los.", "exen": "Regardless of all warnings he drove off."}, {"cat": "Concessive", "de": "zwar … aber", "en": "admittedly … but (paired)", "ex": "Es ist zwar teuer, aber es lohnt sich.", "exen": "It is admittedly expensive, but it is worth it."}, {"cat": "Temporal", "de": "während — Verb ans Ende", "en": "while (subordinating)", "ex": "Während ich kochte, hörte ich Musik.", "exen": "While I was cooking, I listened to music."}, {"cat": "Temporal", "de": "bevor — Verb ans Ende", "en": "before (subordinating)", "ex": "Bevor Sie gehen, rufen Sie mich bitte an.", "exen": "Before you go, please call me."}, {"cat": "Temporal", "de": "nachdem — Verb ans Ende", "en": "after (subordinating)", "ex": "Nachdem er gegessen hatte, ging er spazieren.", "exen": "After he had eaten, he went for a walk."}, {"cat": "Temporal", "de": "sobald — Verb ans Ende", "en": "as soon as (subordinating)", "ex": "Rufen Sie mich an, sobald Sie ankommen.", "exen": "Call me as soon as you arrive."}, {"cat": "Temporal", "de": "als — Verb ans Ende (Vergangenheit)", "en": "when (single past event)", "ex": "Als ich jung war, spielte ich Fußball.", "exen": "When I was young, I played football."}, {"cat": "Temporal", "de": "wenn — Verb ans Ende (wiederholt/Zukunft)", "en": "whenever / when (repeated or future)", "ex": "Wenn ich Zeit habe, lese ich.", "exen": "When(ever) I have time, I read."}, {"cat": "Temporal", "de": "bis — Verb ans Ende", "en": "until (subordinating)", "ex": "Warte hier, bis ich zurückkomme.", "exen": "Wait here until I come back."}, {"cat": "Temporal", "de": "seitdem — Verb ans Ende", "en": "since (subordinating, time)", "ex": "Seitdem er in Berlin wohnt, spricht er besser Deutsch.", "exen": "Since he has lived in Berlin, he speaks better German."}, {"cat": "Adversative / additive", "de": "aber — Verb an 2. Stelle", "en": "but (coordinating)", "ex": "Ich wollte kommen, aber ich war krank.", "exen": "I wanted to come, but I was ill."}, {"cat": "Adversative / additive", "de": "jedoch — Inversion", "en": "however (adverb, formal)", "ex": "Ich wollte kommen; ich war jedoch krank.", "exen": "I wanted to come; however, I was ill."}, {"cat": "Adversative / additive", "de": "außerdem — Inversion", "en": "furthermore / besides", "ex": "Er spricht Deutsch; außerdem kann er Französisch.", "exen": "He speaks German; furthermore he knows French."}, {"cat": "Adversative / additive", "de": "zudem — Inversion", "en": "in addition (formal)", "ex": "Das Hotel war teuer; zudem lag es weit draußen.", "exen": "The hotel was expensive; in addition it was far out."}, {"cat": "Adversative / additive", "de": "ferner — Inversion", "en": "further (very formal)", "ex": "Ferner ist zu beachten, dass die Frist abläuft.", "exen": "Further, it should be noted that the deadline expires."}, {"cat": "Adversative / additive", "de": "einerseits … andererseits", "en": "on the one hand … on the other hand", "ex": "Einerseits ist es teuer, andererseits lohnt es sich.", "exen": "On the one hand it is expensive; on the other it is worth it."}, {"cat": "Adversative / additive", "de": "im Gegensatz zu + Dativ", "en": "in contrast to", "ex": "Im Gegensatz zu früher schläft er jetzt gut.", "exen": "In contrast to before, he now sleeps well."}, {"cat": "Adversative / additive", "de": "stattdessen — Inversion", "en": "instead", "ex": "Er ging nicht ins Kino; stattdessen blieb er zu Hause.", "exen": "He didn't go to the cinema; instead he stayed at home."}, {"cat": "Consecutive / conditional", "de": "sodass — Verb ans Ende", "en": "so that (result)", "ex": "Es regnete stark, sodass das Spiel ausfiel.", "exen": "It rained heavily, so that the match was cancelled."}, {"cat": "Consecutive / conditional", "de": "infolgedessen — Inversion", "en": "as a result (formal)", "ex": "Die Kosten stiegen; infolgedessen wurde gespart.", "exen": "Costs rose; as a result, savings were made."}, {"cat": "Consecutive / conditional", "de": "falls — Verb ans Ende", "en": "in case (subordinating)", "ex": "Nimm einen Schirm mit, falls es regnet.", "exen": "Take an umbrella in case it rains."}, {"cat": "Consecutive / conditional", "de": "sofern — Verb ans Ende", "en": "provided that (formal)", "ex": "Sofern alle zustimmen, beginnen wir morgen.", "exen": "Provided everyone agrees, we start tomorrow."}, {"cat": "Consecutive / conditional", "de": "wenn — Verb ans Ende (Bedingung)", "en": "if (condition)", "ex": "Wenn Sie mir helfen, schaffe ich es.", "exen": "If you help me, I'll manage it."}, {"cat": "Consecutive / conditional", "de": "vorausgesetzt, dass — Verb ans Ende", "en": "provided that (explicit)", "ex": "Vorausgesetzt, dass das Wetter hält, grillen wir.", "exen": "Provided the weather holds, we'll barbecue."}, {"cat": "Consecutive / conditional", "de": "andernfalls — Inversion", "en": "otherwise", "ex": "Beeilen Sie sich, andernfalls verpassen wir den Zug.", "exen": "Hurry up, otherwise we'll miss the train."}, {"cat": "Consecutive / conditional", "de": "sonst — Inversion", "en": "otherwise / else (colloquial)", "ex": "Nehmen Sie den Schirm mit, sonst werden Sie nass.", "exen": "Take the umbrella, or you'll get wet."}];
+var CATS = ["Causal", "Concessive", "Temporal", "Adversative / additive", "Consecutive / conditional"];
+var curCat = -1;
+var style = document.createElement("style");
+style.textContent = ".tab{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}.tab.on{background:#2563eb;color:#fff;border-color:#2563eb}";
+document.head.appendChild(style);
+function buildOptions(answer, distractors, n){
+  var opts = [answer], seen = {};
+  seen[answer] = true;
+  var pool = distractors.slice();
+  while(opts.length < n && pool.length){
+    var i = Math.floor(Math.random() * pool.length);
+    var v = pool.splice(i, 1)[0];
+    if(!seen[v]){ seen[v] = true; opts.push(v); }
+  }
+  for(var i = opts.length - 1; i > 0; i--){
+    var j = Math.floor(Math.random() * (i + 1)); var t = opts[i]; opts[i] = opts[j]; opts[j] = t;
+  }
+  return opts;
+}
+function setCat(i){ curCat = i; renderList(); }
+function renderList(){
+  var q = (document.getElementById("vsearch").value || "").toLowerCase();
+  var box = document.getElementById("vlist"); box.innerHTML = "";
+  var tabs = document.querySelectorAll(".tab");
+  tabs.forEach(function(t, i){ t.classList.toggle("on", i - 1 === curCat); });
+  var shown = 0;
+  ENTRIES.forEach(function(e){
+    if(curCat >= 0 && e.cat !== CATS[curCat]) return;
+    if(q && e.de.toLowerCase().indexOf(q) < 0 && e.en.toLowerCase().indexOf(q) < 0) return;
+    shown++;
+    var d = document.createElement("div");
+    d.style.cssText = "background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px";
+    d.innerHTML = '<div style="font-size:1.1rem;font-weight:700;color:#0f172a"></div>' +
+      '<div style="color:#1d4ed8;font-weight:600;margin-top:2px"></div>' +
+      '<div style="font-size:.9rem;color:#475569;margin-top:6px"></div>' +
+      '<div style="font-size:.85rem;color:#64748b"></div>';
+    d.children[0].textContent = e.de;
+    d.children[1].textContent = e.en;
+    d.children[2].textContent = "“" + e.ex + "”";
+    d.children[3].textContent = e.exen;
+    box.appendChild(d);
+  });
+  if(!shown){ box.innerHTML = '<p style="color:#64748b">No terms match your search.</p>'; }
+}
+var pool = [], qi = 0, correctN = 0, missedN = 0, missedList = [], qa = null, qdir = "de-en", ROUNDS = 15;
+function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
+function startQuiz(){
+  pool = shuffle(ENTRIES.slice());
+  qi = 0; correctN = 0; missedN = 0; missedList = [];
+  document.getElementById("quiz-zone").style.display = "block";
+  document.getElementById("quiz-summary").innerHTML = "";
+  document.getElementById("calc-btn").style.display = "none";
+  showQ();
+}
+function showQ(){
+  qa = pool[qi % pool.length];
+  qdir = Math.random() < 0.5 ? "de-en" : "en-de";
+  var answer, distr;
+  if(qdir === "de-en"){
+    answer = qa.en;
+    distr = ENTRIES.filter(function(x){ return x.de !== qa.de; }).map(function(x){ return x.en; });
+  } else {
+    answer = qa.de;
+    distr = ENTRIES.filter(function(x){ return x.de !== qa.de; }).map(function(x){ return x.de; });
+  }
+  qa._answer = answer;
+  document.getElementById("quiz-sentence").textContent =
+    (qdir === "de-en" ? "What does this mean?  " : "How do you say this in German?  ") + (qdir === "de-en" ? qa.de : qa.en);
+  document.getElementById("qcount").textContent = "Round " + (qi+1) + "/" + ROUNDS;
+  document.getElementById("qbar").style.width = (qi/ROUNDS*100) + "%";
+  var box = document.getElementById("quiz-options"); box.innerHTML = "";
+  var fb = document.getElementById("quiz-feedback"); fb.className = ""; fb.style.display = "none";
+  document.getElementById("quiz-next").style.display = "none";
+  buildOptions(answer, distr, 4).forEach(function(opt){
+    var b = document.createElement("button");
+    b.className = "quiz-btn"; b.textContent = opt;
+    b.addEventListener("click", function(){ answerQ(opt, b); });
+    box.appendChild(b);
+  });
+}
+function answerQ(opt, btn){
+  var fb = document.getElementById("quiz-feedback");
+  var btns = document.querySelectorAll("#quiz-options .quiz-btn");
+  btns.forEach(function(x){ x.disabled = true; if(x.textContent === qa._answer) x.classList.add("correct"); });
+  if(opt === qa._answer){
+    correctN++; fb.className = "ok";
+    fb.textContent = "✓ Correct. Example: “" + qa.ex + "”";
+  } else {
+    missedN++; missedList.push(qa); fb.className = "no";
+    btn.classList.add("wrong");
+    fb.textContent = "✗ Correct: “" + qa._answer + "” (" + qa.cat + ")";
+  }
+  document.getElementById("qscore").textContent = "Correct: " + correctN + " · Missed: " + missedN;
+  var nb = document.getElementById("quiz-next");
+  nb.style.display = "block";
+  nb.textContent = (qi + 1 < ROUNDS) ? "Next" : "See results";
+}
+function nextQ(){
+  qi++;
+  if(qi < ROUNDS) showQ();
+  else {
+    document.getElementById("quiz-sentence").textContent = "";
+    document.getElementById("quiz-options").innerHTML = "";
+    document.getElementById("quiz-feedback").style.display = "none";
+    document.getElementById("quiz-next").style.display = "none";
+    document.getElementById("qbar").style.width = "100%";
+    var uniq = {};
+    missedList.forEach(function(m){ uniq[m.de] = m; });
+    var missArr = Object.keys(uniq).map(function(k){ return uniq[k]; });
+    var msg = "<strong>" + correctN + " / " + ROUNDS + " correct.</strong> ";
+    if(missArr.length === 0) msg += "Klinikreif — ward-ready.";
+    else {
+      msg += "Review these " + missArr.length + ":<ul style='margin:8px 0 0 18px'>";
+      missArr.forEach(function(m){ msg += "<li><strong>" + m.de + "</strong> <span style='color:#64748b'>(" + m.en + ")</span></li>"; });
+      msg += "</ul>";
+    }
+    document.getElementById("quiz-summary").innerHTML = '<div class="note">' + msg + "</div>";
+    document.getElementById("calc-btn").style.display = "block";
+    document.getElementById("calc-btn").textContent = "Play again";
+  }
+}
+renderList();
+
+
+</script>
+</body>
+</html>
