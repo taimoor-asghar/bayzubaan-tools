@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Time Telling: Official vs Colloquial + Quiz | Bayzubaan</title>
+<meta name="description" content="Learn to tell time in German: halb drei, viertel nach zwei, vierzehn Uhr dreißig. Interactive translator (official vs colloquial) + 15-round quiz.">
+<link rel="canonical" href="https://bayzubaan.com/tools/time-telling-quiz/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="German Time Telling: Official vs Colloquial + Quiz">
+<meta property="og:description" content="Tell time in German: halb drei, viertel nach sieben — translator + 15-round quiz.">
+<meta property="og:url" content="https://bayzubaan.com/tools/time-telling-quiz/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="German Time Telling: Official vs Colloquial + Quiz">
+<meta name="twitter:description" content="Tell time in German: halb drei, viertel nach sieben — translator + 15-round quiz.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is 2:30 'halb drei' and not 'halb zwei'?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Halb names the hour that is half ARRIVED: at 2:30, half of the third hour has passed, so it's halb drei. Always subtract one from the named hour — halb acht is 7:30, halb eins is 12:30."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I use official vs colloquial time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Official (14:30 → vierzehn Uhr dreißig, 24-hour clock) for announcements, timetables, appointments, and writing. Colloquial (halb drei, viertel nach zwei, 12-hour clock) for everyday conversation. Answering a friend with the official form sounds stiff."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does 'viertel nach sieben' mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "7:15 — 'a quarter past seven'. In the South you may also hear 'viertel acht' for the same time; stick to viertel nach for standard German, and understand the southern form passively."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it 'ein Uhr' or 'eins Uhr'?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ein Uhr. Eins is only the standalone counting word; before Uhr (treated like a feminine noun) the form is ein — the same ein/eins split as in einundzwanzig vs eins."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between 'viertel vor neun' and 'dreiviertel neun'?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both mean 8:45. Viertel vor neun is standard everywhere; dreiviertel neun ('three-quarters nine', naming the coming hour) is used in Bavaria and Austria. Learners should use viertel vor and just recognise the southern form."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>Die Uhrzeit: Telling Time in German</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">Tell time in German: halb drei, viertel nach sieben — translator + 15-round quiz.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+
+<h2>German Time Translator</h2>
+<p style="margin-bottom:16px">Pick a time to see both the <strong>official</strong> version (announcements, timetables) and the <strong>colloquial</strong> version (everyday conversation).</p>
+<div class="field">
+<label for="hour-input">Hour (0&ndash;23):</label>
+<input id="hour-input" type="number" min="0" max="23" value="14">
+</div>
+<div class="field">
+<label for="min-input">Minutes (0&ndash;59):</label>
+<input id="min-input" type="number" min="0" max="59" value="30">
+</div>
+<button id="calc-btn" type="button">Translate the time</button>
+<div id="result"></div>
+<div class="try-row">
+<button type="button" data-try="7,30">7:30</button>
+<button type="button" data-try="14,15">14:15</button>
+<button type="button" data-try="8,45">8:45</button>
+<button type="button" data-try="23,5">23:05</button>
+<button type="button" data-try="12,0">12:00</button>
+</div>
+<h2 style="margin-top:28px">Quiz: 15 rounds</h2>
+<div class="progress"><div id="qbar"></div></div>
+<div class="quiz-meta"><span id="qcount">Round 1/15</span><span id="qscore">Score: 0</span></div>
+<div id="quiz-sentence" style="font-size:1.15rem;font-weight:600;margin-bottom:14px"></div>
+<div id="quiz-options"></div>
+<div id="quiz-feedback"></div>
+<button type="button" id="quiz-next" style="display:none;margin-top:12px" onclick="nextQ()">Next question</button>
+<div id="quiz-summary"></div>
+
+</div>
+
+<article class="prose">
+
+<h2>Two clocks: official vs colloquial</h2>
+<p>German has two parallel systems for telling the time, and mixing them up is the fastest way to confuse a native speaker. The <strong>official style</strong> (<em>offizielle Uhrzeit</em>) uses the 24-hour clock and reads the digits: 14:30 is <em>vierzehn Uhr dreißig</em>, 8:05 is <em>acht Uhr fünf</em>. You'll hear it in train announcements, appointment confirmations, and news broadcasts. The <strong>colloquial style</strong> (<em>umgangssprachlich</em>) uses the 12-hour clock with <em>viertel</em>, <em>halb</em>, <em>nach</em>, and <em>vor</em>: 14:30 in conversation is <em>halb drei</em>. Everyday speech almost always uses the colloquial form — answering "vierzehn Uhr dreißig" when a friend asks the time sounds as stiff as saying "fourteen thirty hours" in English. The translator above shows both, so you can match the register to the situation.</p>
+<h2>The halb trap: half TO the hour</h2>
+<p>This is the single most-missed item in German time vocabulary, and the quiz drills it hard. <em>Halb drei</em> does <strong>not</strong> mean 3:30 — it means <strong>2:30</strong>. <em>Halb</em> names the hour that is half <em>arrived</em>: at halb drei, half of the third hour has passed. English speakers default to "half past three", which maps to the wrong German. The fix: whenever you hear <em>halb X</em>, subtract one hour from X — halb acht is 7:30, halb eins is 12:30, halb vier is 3:30. Drill this until the subtraction is automatic, because in conversation there's no time to compute. (Note: in English the "half past" convention has the same historical logic, but modern speakers think "half past the current hour" — German never moved off the original meaning.)</p>
+<h2>Viertel nach and viertel vor</h2>
+<p>The quarters are straightforward once <em>halb</em> is internalised: <em>viertel nach</em> = quarter past (7:15 → <em>viertel nach sieben</em>), <em>viertel vor</em> = quarter to (8:45 → <em>viertel vor neun</em>). Like <em>halb</em>, <em>viertel vor</em> names the <strong>coming</strong> hour. A southern-German wrinkle: in Bavaria and Austria you'll also hear <em>viertel drei</em> for 2:15 and <em>dreiviertel drei</em> for 2:45 — literally "a quarter (of the way to) three" and "three-quarters three". These are regional, never wrong in the South, but incomprehensible in Hamburg. For learners, stick to <em>viertel nach/vor</em>, understand the southern forms passively, and recognise them when travelling.</p>
+<h2>Nach and vor for the other minutes</h2>
+<p>Between the quarter marks, colloquial German anchors to the nearest half hour. Minutes 1–29 use <strong>nach</strong> the current hour: 11:05 → <em>fünf nach elf</em>, 4:20 → <em>zwanzig nach vier</em>, 10:10 → <em>zehn nach zehn</em>. Minutes 31–59 use <strong>vor</strong> the next hour: 9:50 → <em>zehn vor zehn</em>, 10:40 → <em>zwanzig vor elf</em>, 6:55 → <em>fünf vor sieben</em>. English speakers tend to read "9:50" as "nine fifty" and reach for the official form — but in conversation, <em>zehn vor zehn</em> is what a native would say. Advanced forms like <em>fünf vor halb zehn</em> (9:25) and <em>fünf nach halb drei</em> (2:35) exist and are common, but they're built on the same logic; master the basics first, then absorb these by listening.</p>
+<h2>Ein Uhr, not eins Uhr</h2>
+<p>One o'clock is <em>ein Uhr</em>, never "eins Uhr". This is the same <em>ein/eins</em> split from the numbers drill: <em>eins</em> is the counting word ("eins, zwei, drei"), <em>ein</em> is the article-like form used in compounds and before nouns — and <em>Uhr</em> behaves like a feminine noun here. All other hours take the plain number: <em>zwei Uhr, drei Uhr … zwölf Uhr</em>. For midnight, colloquial German usually says <em>Mitternacht</em> rather than <em>null Uhr</em> (which is strictly official), and midday is <em>mittag</em> in context, though <em>zwölf Uhr</em> is unambiguous.</p>
+<h2>When official time is mandatory</h2>
+<p>Use the 24-hour official form for anything written or scheduled: appointments (<em>Der Termin ist um vierzehn Uhr dreißig</em>), train and flight times, opening hours, medical shift handovers — the Fachsprachenprüfung domain where misreading 14:30 as "halb drei"-casual could genuinely confuse a colleague. Note that Germans write 2:30pm as <em>14:30 Uhr</em> (with Uhr after the digits) and say <em>vierzehn Uhr dreißig</em>. The 12-hour colloquial form is ambiguous by design — <em>halb drei</em> could be 2:30am or 2:30pm — so context carries the disambiguation, exactly as in English. In writing, the 24-hour form removes all doubt.</p>
+<h2>Prepositions of time: um, am, im</h2>
+<p>Telling the time grammatically means attaching the right preposition. Clock times take <strong>um</strong>: <em>um halb acht</em>, <em>um viertel nach zwei</em>. Days take <strong>am</strong>: <em>am Montag</em>, <em>am dritten März</em> (the date drill covers this). Months, seasons, and years take <strong>in</strong> (usually <em>im</em>): <em>im Mai</em>, <em>im Sommer</em>, <em>im Jahr 2026</em> — or bare <em>2026</em> without a preposition. The classic learner error is "in halb acht" or "at halb acht" thinking; the trio <em>um/am/im</em> is a small closed set — memorise which time unit takes which, and clock-time sentences become automatic.</p>
+<h2>Regional and register notes</h2>
+<p>Beyond the southern <em>viertel drei / dreiviertel drei</em>, a few more variants exist. In parts of Austria, <em>halb</em> can combine with quarter logic in ways that surprise northerners — but you'll be understood with standard forms everywhere. Young speakers increasingly use the official form even in speech ("vierzehn Uhr dreißig") under the influence of digital clocks, especially in professional settings. And <em>zwo</em> sometimes replaces <em>zwei</em> in spoken times for clarity on bad phone lines (<em>zwo Uhr zwanzig</em>) — charming, informal, never written.</p>
+<h2>Study strategy</h2>
+<p>Start with the translator: set the time to :30 for each hour 1–12 and read the colloquial form aloud until <em>halb</em> names the coming hour without calculation. Then do the :15/:45 pairs, then random minutes. The quiz's distractors target the two classic failures — halb pointing the wrong way ("halb sieben" for 7:30) and slipping into official form mid-conversation ("sieben Uhr dreißig") — so a perfect score means both traps are closed. Finally, practise in real life: narrate your day in German time ("Ich stehe um halb sieben auf, der Zug fährt um viertel vor acht"), and read German train-station displays as official time while converting them to colloquial in your head. When both directions are instant, this topic is done.</p>
+
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>Why is 2:30 &#x27;halb drei&#x27; and not &#x27;halb zwei&#x27;?</h3><p>Halb names the hour that is half ARRIVED: at 2:30, half of the third hour has passed, so it&#x27;s halb drei. Always subtract one from the named hour — halb acht is 7:30, halb eins is 12:30.</p></div><div class="faq-item"><h3>When should I use official vs colloquial time?</h3><p>Official (14:30 → vierzehn Uhr dreißig, 24-hour clock) for announcements, timetables, appointments, and writing. Colloquial (halb drei, viertel nach zwei, 12-hour clock) for everyday conversation. Answering a friend with the official form sounds stiff.</p></div><div class="faq-item"><h3>What does &#x27;viertel nach sieben&#x27; mean?</h3><p>7:15 — &#x27;a quarter past seven&#x27;. In the South you may also hear &#x27;viertel acht&#x27; for the same time; stick to viertel nach for standard German, and understand the southern form passively.</p></div><div class="faq-item"><h3>Is it &#x27;ein Uhr&#x27; or &#x27;eins Uhr&#x27;?</h3><p>Ein Uhr. Eins is only the standalone counting word; before Uhr (treated like a feminine noun) the form is ein — the same ein/eins split as in einundzwanzig vs eins.</p></div><div class="faq-item"><h3>What&#x27;s the difference between &#x27;viertel vor neun&#x27; and &#x27;dreiviertel neun&#x27;?</h3><p>Both mean 8:45. Viertel vor neun is standard everywhere; dreiviertel neun (&#x27;three-quarters nine&#x27;, naming the coming hour) is used in Bavaria and Austria. Learners should use viertel vor and just recognise the southern form.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+const O=["null","eins","zwei","drei","vier","f\u00fcnf","sechs","sieben","acht","neun"];
+const T={10:"zehn",11:"elf",12:"zw\u00f6lf",13:"dreizehn",14:"vierzehn",15:"f\u00fcnfzehn",16:"sechzehn",17:"siebzehn",18:"achtzehn",19:"neunzehn",20:"zwanzig",30:"drei\u00dfig",40:"vierzig",50:"f\u00fcnfzig"};
+function word(n){
+  if(n<10) return O[n];
+  if(T[n]!==undefined) return T[n];
+  const t=Math.floor(n/10)*10,u=n%10;
+  return (u===1?"ein":O[u])+"und"+T[t];
+}
+function timeToOfficial(h,m){
+  const hs = (h===1) ? "ein" : word(h);
+  if(m===0) return hs+" Uhr";
+  return hs+" Uhr "+word(m);
+}
+function timeToColloquial(h,m){
+  const h12 = (h%12===0)?12:h%12;
+  const h12w = (h12===1)?"ein":word(h12);
+  const nxt = h12%12+1, nxtw = word(nxt);
+  if(m===0) return h12w+" Uhr";
+  if(m===15) return "viertel nach "+h12w;
+  if(m===30) return "halb "+nxtw;
+  if(m===45) return "viertel vor "+nxtw;
+  if(m<30) return word(m)+" nach "+h12w;
+  return word(60-m)+" vor "+nxtw;
+}
+function runBuild(){
+  let h = parseInt(document.getElementById("hour-input").value,10);
+  let m = parseInt(document.getElementById("min-input").value,10);
+  const r = document.getElementById("result");
+  r.style.display = "block";
+  if(isNaN(h)||isNaN(m)||h<0||h>23||m<0||m>59){
+    r.innerHTML = '<div class="note">Enter an hour (0–23) and minutes (0–59).</div>'; return;
+  }
+  const hh = String(h).padStart(2,"0"), mm = String(m).padStart(2,"0");
+  r.innerHTML = '<div class="note"><strong>'+hh+":"+mm+'</strong></div>'+
+    '<table><tr><th>Style</th><th>German</th><th>When to use it</th></tr>'+
+    '<tr><td><strong>Official</strong></td><td><strong>'+timeToOfficial(h,m)+'</strong></td><td>Announcements, timetables, appointments</td></tr>'+
+    '<tr><td><strong>Colloquial</strong></td><td><strong>'+timeToColloquial(h,m)+'</strong></td><td>Everyday conversation</td></tr></table>';
+}
+document.getElementById("calc-btn").addEventListener("click", runBuild);
+document.querySelectorAll(".try-row button").forEach(function(b){
+  b.addEventListener("click", function(){
+    const p = b.getAttribute("data-try").split(",");
+    document.getElementById("hour-input").value = p[0];
+    document.getElementById("min-input").value = p[1];
+    runBuild();
+  });
+});
+const ITEMS = [{\'s\': \'How would a German most likely say 7:30 in conversation?\', \'o\': [\'halb acht\', \'halb sieben\', \'sieben Uhr dreißig\'], \'c\': \'halb acht\', \'e\': "halb acht — \'half to eight\'. The hour named is the one that\'s HALF ARRIVED, not the one you\'re in."}, {\'s\': \'How would a German most likely say 2:15 in conversation?\', \'o\': [\'viertel nach zwei\', \'viertel vor zwei\', \'zwei Uhr fünfzehn\'], \'c\': \'viertel nach zwei\', \'e\': "viertel nach zwei — \'a quarter past two\'. In casual speech, \'nach\' forms beat the official style."}, {\'s\': \'How would a German most likely say 8:45 in conversation?\', \'o\': [\'viertel vor neun\', \'viertel nach acht\', \'dreiviertel neun\'], \'c\': \'viertel vor neun\', \'e\': "viertel vor neun — \'a quarter to nine\'. (dreiviertel neun exists in the South — see the guide.)"}, {\'s\': \'How would a German most likely say 3:00 in conversation?\', \'o\': [\'drei Uhr\', \'drei Uhren\', \'um drei\'], \'c\': \'drei Uhr\', \'e\': "drei Uhr — on the hour, just hour + Uhr. \'Uhren\' is the plural and never used here."}, {\'s\': \'How would a German most likely say 11:05 in conversation?\', \'o\': [\'fünf nach elf\', \'elf Uhr fünf\', \'fünf vor elf\'], \'c\': \'fünf nach elf\', \'e\': "fünf nach elf — \'five past eleven\'. For minutes under 30, colloquial German uses \'nach\'."}, {\'s\': \'How would a German most likely say 4:20 in conversation?\', \'o\': [\'zwanzig nach vier\', \'zwanzig vor vier\', \'vier Uhr zwanzig\'], \'c\': \'zwanzig nach vier\', \'e\': "zwanzig nach vier — minutes 1–29 go with \'nach\' in everyday speech."}, {\'s\': \'How would a German most likely say 9:50 in conversation?\', \'o\': [\'zehn vor zehn\', \'zehn nach zehn\', \'halb zehn\'], \'c\': \'zehn vor zehn\', \'e\': "zehn vor zehn — \'ten to ten\'. For minutes over 30, colloquial German uses \'vor\' the next hour."}, {\'s\': \'How would a German most likely say 12:30 in conversation?\', \'o\': [\'halb eins\', \'halb zwölf\', \'zwölf Uhr dreißig\'], \'c\': \'halb eins\', \'e\': \'halb eins — the classic trap: 12:30 names the COMING hour (1), not the current one.\'}, {\'s\': \'How would a German most likely say 7:15pm in conversation?\', \'o\': [\'viertel nach sieben\', \'viertel nach neunzehn\', \'viertel vor sieben\'], \'c\': \'viertel nach sieben\', \'e\': "Colloquial time uses the 12-hour clock: 19:15 becomes \'viertel nach sieben\'. Never \'viertel nach neunzehn\'."}, {\'s\': \'How would a German most likely say 5:45 in conversation?\', \'o\': [\'viertel vor sechs\', \'viertel nach fünf\', \'fünf Uhr fünfundvierzig\'], \'c\': \'viertel vor sechs\', \'e\': "viertel vor sechs — \'a quarter to six\', naming the approaching hour."}, {\'s\': \'How would a German most likely say 10:10 in conversation?\', \'o\': [\'zehn nach zehn\', \'zehn vor zehn\', \'halb elf\'], \'c\': \'zehn nach zehn\', \'e\': "zehn nach zehn — \'ten past ten\'. Round minutes under 30 always take \'nach\'."}, {\'s\': \'How would a German most likely say 10:40 in conversation?\', \'o\': [\'zwanzig vor elf\', \'zwanzig nach zehn\', \'halb elf\'], \'c\': \'zwanzig vor elf\', \'e\': "zwanzig vor elf — minutes past the half hour point \'vor\' to the next hour in colloquial speech."}, {\'s\': \'How would a German most likely say 1:00 in conversation?\', \'o\': [\'ein Uhr\', \'eins Uhr\', \'eine Uhr\'], \'c\': \'ein Uhr\', \'e\': "ein Uhr — one o\'clock takes \'ein\', never \'eins Uhr\'. (Counting form \'eins\' is only for counting.)"}, {\'s\': \'How would a German most likely say 6:55 in conversation?\', \'o\': [\'fünf vor sieben\', \'fünf nach sechs\', \'sechs Uhr fünfundfünfzig\'], \'c\': \'fünf vor sieben\', \'e\': "fünf vor sieben — \'five to seven\'. Close to the hour, \'vor\' is natural."}, {\'s\': \'How would a German most likely say 3:30pm in conversation?\', \'o\': [\'halb vier\', \'halb drei\', \'fünfzehn Uhr dreißig\'], \'c\': \'halb vier\', \'e\': "halb vier — 15:30 colloquially uses the 12-hour clock, and \'halb\' names the coming hour."}];
+let qi = 0, qs = 0, qa = null;
+function showQ(){
+  qa = ITEMS[qi];
+  document.getElementById("quiz-sentence").textContent = qa.s;
+  document.getElementById("qcount").textContent = "Round " + (qi+1) + "/" + ITEMS.length;
+  document.getElementById("qbar").style.width = (qi/ITEMS.length*100) + "%";
+  const box = document.getElementById("quiz-options"); box.innerHTML = "";
+  const fb = document.getElementById("quiz-feedback"); fb.className = ""; fb.style.display = "none";
+  document.getElementById("quiz-next").style.display = "none";
+  qa.o.forEach(function(opt){
+    const b = document.createElement("button");
+    b.className = "quiz-btn"; b.textContent = opt;
+    b.addEventListener("click", function(){ answer(opt, b); });
+    box.appendChild(b);
+  });
+}
+function answer(opt, btn){
+  const fb = document.getElementById("quiz-feedback");
+  const btns = document.querySelectorAll("#quiz-options .quiz-btn");
+  btns.forEach(function(x){ x.disabled = true; if(x.textContent === qa.c) x.classList.add("correct"); });
+  if(opt === qa.c){ qs++; fb.className = "ok"; fb.textContent = "✓ Correct! " + qa.e; }
+  else { btn.classList.add("wrong"); fb.className = "no"; fb.textContent = "✗ The answer is “" + qa.c + "”. " + qa.e; }
+  document.getElementById("qscore").textContent = "Score: " + qs;
+  document.getElementById("quiz-next").style.display = "block";
+  document.getElementById("quiz-next").textContent = (qi + 1 < ITEMS.length) ? "Next question" : "See results";
+}
+function nextQ(){
+  qi++;
+  if(qi < ITEMS.length) showQ();
+  else {
+    document.getElementById("quiz-sentence").textContent = "";
+    document.getElementById("quiz-options").innerHTML = "";
+    document.getElementById("quiz-feedback").style.display = "none";
+    document.getElementById("quiz-next").style.display = "none";
+    document.getElementById("qbar").style.width = "100%";
+    document.getElementById("qcount").textContent = "Done";
+    document.getElementById("quiz-summary").innerHTML =
+      '<div class="note">You scored <strong>' + qs + "/" + ITEMS.length + "</strong>." +
+      (qs === ITEMS.length ? " Perfect — you tell time like a native!" :
+       qs >= 11 ? " Strong! Drill the halb-direction rule once more." :
+       " Keep practising — 'halb' names the COMING hour, not the current one.") + "</div>";
+  }
+}
+showQ();
+
+
+</script>
+</body>
+</html>
