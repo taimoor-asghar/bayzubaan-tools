@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Diminutive Builder — -chen &amp; -lein Forms | Bayzubaan</title>
+<meta name="description" content="Build German diminutives: type any noun, get das ___chen / ___lein with umlaut rules. 41 verified forms + 15-round quiz.">
+<link rel="canonical" href="https://bayzubaan.com/tools/diminutive-builder/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="German Diminutive Builder — -chen &amp; -lein Forms">
+<meta property="og:description" content="Haus → Häuschen, Blume → Blümchen — build German diminutives with correct umlauts, plus a 15-round quiz.">
+<meta property="og:url" content="https://bayzubaan.com/tools/diminutive-builder/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="German Diminutive Builder — -chen &amp; -lein Forms">
+<meta name="twitter:description" content="Haus → Häuschen, Blume → Blümchen — build German diminutives with correct umlauts, plus a 15-round quiz.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you form the diminutive in German?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Umlaut the stem vowel (if possible), drop a final -e, then add -chen (default) or -lein: Haus → Häuschen, Blume → Blümchen, Tasche → Täschchen. Every diminutive is neuter (das)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between -chen and -lein?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Same meaning, different flavour: -chen is neutral and everyday; -lein is poetic, literary, and southern German. Default to -chen in speech."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What gender are German diminutives?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Always neuter (das) — der Hund → das Hündchen, die Blume → das Blümchen. No exceptions, even das Mädchen for a girl."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does 'Brötchen' literally mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's the lexicalized diminutive of Brot (bread) — but it doesn't mean 'small bread,' it means 'bread roll.' The diminutive became the word."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do all German nouns take an umlaut in the diminutive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — only stems with an umlautable vowel (a, o, u, au). Tisch → Tischchen, Fisch → Fischchen, Zimmer → Zimmerchen have no umlaut."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Bavarian diminutive suffix?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "-erl: Semmerl (bread roll), Zuckerl (sweet), Buserl (little kiss). Essential survival vocabulary in Bavaria and Austria."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>Diminutive Builder: Make It Small</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">Haus → Häuschen, Blume → Blümchen — build German diminutives with correct umlauts, plus a 15-round quiz.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+
+<h2>Diminutive builder</h2>
+<p style="margin-bottom:16px">Type any German noun — the builder applies the diminutive rules (umlaut, dropped <em>-e</em>, <em>-chen</em>/<em>-lein</em>) and shows both forms. Every diminutive is <strong>neuter (das)</strong>, whatever the original gender. If your word is in our verified list of 40, you'll see the standard form confirmed.</p>
+<div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap">
+<input id="dim-input" type="text" aria-label="German noun" placeholder="e.g. Haus, Blume, Tasche" style="flex:1;min-width:200px;padding:10px 14px;border:1px solid #e2e8f0;border-radius:8px;font-size:1rem;font-family:inherit">
+<button id="calc-btn" type="button" onclick="buildDim()" style="margin:0">Build diminutive</button>
+</div>
+<div id="dim-out"></div>
+<h2 style="margin-top:28px">41 verified diminutives</h2>
+<p style="margin-bottom:16px">The standard forms, with umlaut notes and lexicalized specials (<em>Brötchen</em> isn't just "small bread").</p>
+<div id="dimlist"></div>
+<h2 style="margin-top:28px">Quiz: pick the correct diminutive</h2>
+<p style="margin-bottom:16px">15 rounds. Four candidates, one correct diminutive — watch the umlaut.</p>
+<button id="qstart" type="button" onclick="startQuiz()">Start 15-round quiz</button>
+<div id="quiz-zone" style="display:none;margin-top:20px">
+<div class="progress"><div id="qbar"></div></div>
+<div class="quiz-meta"><span id="qcount">Round 1/15</span><span id="qscore">Correct: 0 · Missed: 0</span></div>
+<div id="quiz-sentence" style="font-size:1.3rem;font-weight:700;margin-bottom:14px"></div>
+<div id="quiz-options"></div>
+<div id="quiz-feedback"></div>
+<button type="button" id="quiz-next" style="display:none;margin-top:12px" onclick="nextQ()">Next</button>
+<div id="quiz-summary"></div>
+</div>
+
+</div>
+
+<article class="prose">
+
+<h2>Small words, big grammar: what diminutives do</h2>
+<p>German diminutives — <em>Häuschen</em> (little house), <em>Blümchen</em> (little flower), <em>Brötchen</em> (bread roll) — do three jobs at once. They <strong>shrink</strong> (<em>ein Hündchen</em> = a small dog), they <strong>endear</strong> (<em>Schätzchen</em> = sweetie), and they <strong>fix the gender to neuter</strong>: <em>der</em> Hund → <em>das</em> Hündchen, <em>die</em> Blume → <em>das</em> Blümchen. Always <em>das</em>, no exceptions — even <em>das Mädchen</em> for a girl and <em>das Fräulein</em> for a young woman. The two suffixes are <strong>-chen</strong> (the everyday default) and <strong>-lein</strong> (poetic, literary, southern). This tool's builder applies the formation rules to any noun you type, checks 41 verified standard forms, and the quiz drills the trickiest part: the umlaut.</p>
+<h2>The umlaut rule (and its limits)</h2>
+<p>The core rule: <strong>umlaut the stem vowel, then add -chen</strong>. <em>Haus → Häuschen</em> (au→äu), <em>Blume → Blümchen</em> (u→ü), <em>Tasche → Täschchen</em> (a→ä), <em>Apfel → Äpfelchen</em>. The umlaut hits the <strong>last umlautable vowel</strong> of the stem. But it only applies where umlaut is possible: <em>Tisch → Tischchen</em> (no umlaut possible), <em>Fisch → Fischchen</em>, <em>Zimmer → Zimmerchen</em>. And final <strong>-e drops</strong> before the suffix: <em>Blume → Blümchen</em> (not <em>*Blumechen</em>), <em>Tasche → Täschchen</em>, <em>Kirche → Kirchchen</em>. Words already ending in <em>-el/-er/-en</em> keep them: <em>Löffel → Löffelchen</em>, <em>Messer → Messerchen</em>. The builder above implements exactly these rules — type any noun and watch the transformation.</p>
+<h2>-chen vs -lein: register, not meaning</h2>
+<p>The two suffixes mean the same thing; they differ in <strong>flavour</strong>. <em>-chen</em> is neutral, everyday, pan-German. <em>-lein</em> is poetic, slightly archaic, and southern — <em>Büchlein</em> (little book) sounds literary where <em>*Büchchen</em> sounds wrong. Some words strongly prefer one: <em>Fräulein</em> (never <em>*Fräuchen</em>), <em>Büchlein</em>, <em>Mägdlein</em>. Others take both with a register split: <em>Vögelchen</em> (everyday) vs <em>Vöglein</em> (poetic), <em>Kindchen</em> vs <em>Kindlein</em>. In speech, default to <em>-chen</em> — you'll be right almost everywhere. Reach for <em>-lein</em> in writing when you want a softer, more literary tone, or in the south where it's still alive in dialect.</p>
+<h2>Lexicalized diminutives: when small becomes the word</h2>
+<p>Some diminutives have swallowed their base words whole — the "small" meaning is gone and the diminutive <em>is</em> the word. <em>Brötchen</em> doesn't mean "small bread," it means "bread roll." <em>Hähnchen</em> means roast chicken as food, not a small rooster. <em>Mädchen</em> comes from <em>Magd</em> (maiden) via sound changes — no modern speaker connects them. <em>Fräulein</em> (from <em>Frau</em>) meant "Miss" and is now dated. <em>Sternchen</em> means "asterisk" as well as "little star." These are vocabulary items, not grammar — learn them as words. The explorer marks every lexicalized form so you learn the meaning, not just the rule.</p>
+<h2>Diminutives in daily life: affection, irony, and Bavaria</h2>
+<p>Diminutives are social signals. <em>Ein Bierchen</em> isn't about beer size — it's conviviality ("a cheeky beer"). <em>Käffchen</em> invites coziness. <em>Schätzchen</em> and <em>Mäuschen</em> are terms of endearment; <em>Süßchen</em> can be patronising. Irony loves diminutives: <em>ein Problemchen</em> usually means a big problem. Regionally, Bavaria and Austria prefer <strong>-erl</strong>: <em>Semmerl</em> (bread roll), <em>Zuckerl</em> (sweet), <em>Buserl</em> (little kiss) — if you move to Munich or Vienna, <em>-erl</em> is survival vocabulary. And in child-directed speech, diminutives are everywhere: <em>Bettchen, Händchen, Füßchen</em> — which is why the builder is also a parent's tool.</p>
+<h2>The always-neuter rule in action</h2>
+<p><em>Das</em> for every diminutive isn't trivia — it rewires the whole sentence. Adjective endings follow neuter: <em>das kleine Häuschen</em>, <em>ein süßes Kätzchen</em>. Pronouns switch too: <em>Das Mädchen zog <strong>seine</strong> Jacke an</em> — grammatically neuter (<em>sein</em>), even though the girl is female. (In practice, Germans often switch to <em>ihre</em> mid-sentence once the person is established — <em>das Mädchen … sie</em> — a famous quirk where natural gender overrides grammar. Both occur; exams want <em>sein</em>.) Relative pronouns follow suit: <em>das Hündchen, <strong>das</strong> bellt</em>. The diminutive is thus a gender reset button: whatever the base noun's gender, the output is <em>das</em>. For learners drowning in der/die/das, diminutives are a rare patch of solid ground — which is exactly why the builder prints <em>das</em> on everything it makes.</p>
+<h2>Diminutives you should never build</h2>
+<p>The rules are productive, but not everything <em>should</em> be diminished. Abstract nouns resist it: <em>*Freiheitchen</em>, <em>*Liebelein</em> sound absurd (though poets may try). Diminishing people can insult: <em>*Chefchen</em> (little boss) is contemptuous, <em>*Kollegchen</em> patronising — never use these upward. Names are intimate territory: <em>Hänschen</em> for Hans is affectionate from family, presumptuous from strangers. And some diminutives carry baggage: <em>Fräulein</em> is now dated to the point of offensiveness as an address — use <em>Frau</em>. The social rule: diminutives shrink <em>distance</em> as well as size. Use them where closeness is welcome (friends, children, cozy contexts); avoid them where respect needs space (bosses, strangers, formal writing). When in doubt, the builder's rule-following output is grammatically fine — the question is never grammar, it's pragmatics.</p>
+<h2>Drill routine</h2>
+<p>Day one: type 20 nouns you know into the builder and watch the umlaut rule fire — say each result aloud with <em>das</em>. Day two: browse the 41 verified forms, paying special attention to the <em>-e</em>-droppers (<em>Blume → Blümchen</em>) and the lexicalized specials. Day three: run the 15-round quiz to 13+/15 twice — the distractors are the classic errors (missing umlaut, wrong suffix), so every mistake teaches a rule. Then produce: describe your room using five diminutives (<em>das Tischchen, das Lämpchen…</em>). When <em>das</em> starts feeling automatic for every diminutive, the gender rule has landed — and that's a rule you'll use for the rest of your German life.</p>
+
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>How do you form the diminutive in German?</h3><p>Umlaut the stem vowel (if possible), drop a final -e, then add -chen (default) or -lein: Haus → Häuschen, Blume → Blümchen, Tasche → Täschchen. Every diminutive is neuter (das).</p></div><div class="faq-item"><h3>What is the difference between -chen and -lein?</h3><p>Same meaning, different flavour: -chen is neutral and everyday; -lein is poetic, literary, and southern German. Default to -chen in speech.</p></div><div class="faq-item"><h3>What gender are German diminutives?</h3><p>Always neuter (das) — der Hund → das Hündchen, die Blume → das Blümchen. No exceptions, even das Mädchen for a girl.</p></div><div class="faq-item"><h3>What does &#x27;Brötchen&#x27; literally mean?</h3><p>It&#x27;s the lexicalized diminutive of Brot (bread) — but it doesn&#x27;t mean &#x27;small bread,&#x27; it means &#x27;bread roll.&#x27; The diminutive became the word.</p></div><div class="faq-item"><h3>Do all German nouns take an umlaut in the diminutive?</h3><p>No — only stems with an umlautable vowel (a, o, u, au). Tisch → Tischchen, Fisch → Fischchen, Zimmer → Zimmerchen have no umlaut.</p></div><div class="faq-item"><h3>What is the Bavarian diminutive suffix?</h3><p>-erl: Semmerl (bread roll), Zuckerl (sweet), Buserl (little kiss). Essential survival vocabulary in Bavaria and Austria.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+var NOUNS = [{"n": "Haus", "a": "das", "ch": "Häuschen", "le": null, "std": "chen", "note": "Umlaut au→äu. The classic example."}, {"n": "Brot", "a": "das", "ch": "Brötchen", "le": null, "std": "chen", "note": "Lexicalized: Brötchen = bread roll (not just 'small bread')."}, {"n": "Vogel", "a": "der", "ch": "Vögelchen", "le": "Vöglein", "std": "chen", "note": "Both exist; -chen is more common. Umlaut o→ö."}, {"n": "Buch", "a": "das", "ch": null, "le": "Büchlein", "std": "lein", "note": "-lein is standard here; 'Büchchen' sounds wrong."}, {"n": "Tisch", "a": "der", "ch": "Tischchen", "le": null, "std": "chen", "note": "No umlaut possible — just add -chen."}, {"n": "Kind", "a": "das", "ch": "Kindchen", "le": "Kindlein", "std": "chen", "note": "Both exist; Kindchen is everyday, Kindlein poetic."}, {"n": "Hund", "a": "der", "ch": "Hündchen", "le": null, "std": "chen", "note": "Umlaut u→ü."}, {"n": "Katze", "a": "die", "ch": "Kätzchen", "le": null, "std": "chen", "note": "Umlaut a→ä."}, {"n": "Blume", "a": "die", "ch": "Blümchen", "le": "Blümlein", "std": "chen", "note": "Final -e drops: Blume → Blüm + chen."}, {"n": "Tasche", "a": "die", "ch": "Täschchen", "le": null, "std": "chen", "note": "Final -e drops: Tasche → Täsch + chen."}, {"n": "Glas", "a": "das", "ch": "Gläschen", "le": null, "std": "chen", "note": "Umlaut a→ä. 'Ein Gläschen Wein' = a small glass of wine."}, {"n": "Bier", "a": "das", "ch": "Bierchen", "le": null, "std": "chen", "note": "No umlaut. 'Ein Bierchen' = a (small) beer, convivial."}, {"n": "Stück", "a": "das", "ch": "Stückchen", "le": null, "std": "chen", "note": "No umlaut (ü already). 'Ein Stückchen Kuchen'."}, {"n": "Baum", "a": "der", "ch": "Bäumchen", "le": null, "std": "chen", "note": "Umlaut au→äu."}, {"n": "Blatt", "a": "das", "ch": "Blättchen", "le": null, "std": "chen", "note": "Umlaut a→ä."}, {"n": "Boot", "a": "das", "ch": "Bötchen", "le": null, "std": "chen", "note": "Umlaut o→ö."}, {"n": "Dorf", "a": "das", "ch": "Dörfchen", "le": null, "std": "chen", "note": "Umlaut o→ö."}, {"n": "Garten", "a": "der", "ch": "Gärtchen", "le": null, "std": "chen", "note": "Umlaut a→ä."}, {"n": "Stadt", "a": "die", "ch": "Städtchen", "le": null, "std": "chen", "note": "Umlaut a→ä."}, {"n": "Maus", "a": "die", "ch": "Mäuschen", "le": null, "std": "chen", "note": "Umlaut au→äu."}, {"n": "Hahn", "a": "der", "ch": "Hähnchen", "le": null, "std": "chen", "note": "Lexicalized: Hähnchen = (roast) chicken as food."}, {"n": "Ente", "a": "die", "ch": "Entchen", "le": null, "std": "chen", "note": "Final -e drops; no umlaut."}, {"n": "Bär", "a": "der", "ch": "Bärchen", "le": null, "std": "chen", "note": "No umlaut (ä already)."}, {"n": "Fisch", "a": "der", "ch": "Fischchen", "le": null, "std": "chen", "note": "No umlaut possible."}, {"n": "Teller", "a": "der", "ch": "Tellerchen", "le": null, "std": "chen", "note": "No umlaut; -er stays."}, {"n": "Löffel", "a": "der", "ch": "Löffelchen", "le": null, "std": "chen", "note": "No umlaut (ö already)."}, {"n": "Messer", "a": "das", "ch": "Messerchen", "le": null, "std": "chen", "note": "No umlaut; -er stays."}, {"n": "Zimmer", "a": "das", "ch": "Zimmerchen", "le": null, "std": "chen", "note": "No umlaut."}, {"n": "Bett", "a": "das", "ch": "Bettchen", "le": null, "std": "chen", "note": "No umlaut. 'Ab ins Bettchen!' = off to bed!"}, {"n": "Kissen", "a": "das", "ch": "Kisschen", "le": null, "std": "chen", "note": "No umlaut."}, {"n": "Stern", "a": "der", "ch": "Sternchen", "le": null, "std": "chen", "note": "Also means 'asterisk' — lexicalized second meaning."}, {"n": "Apfel", "a": "der", "ch": "Äpfelchen", "le": null, "std": "chen", "note": "Umlaut a→ä."}, {"n": "Mann", "a": "der", "ch": "Männchen", "le": "Männlein", "std": "chen", "note": "Umlaut a→ä. Männchen also = little man / male animal."}, {"n": "Kaffee", "a": "der", "ch": "Käffchen", "le": null, "std": "chen", "note": "Colloquial: 'ein Käffchen trinken'."}, {"n": "Brücke", "a": "die", "ch": "Brückchen", "le": null, "std": "chen", "note": "Final -e drops; no umlaut (ü already)."}, {"n": "Straße", "a": "die", "ch": "Sträßchen", "le": null, "std": "chen", "note": "Umlaut a→ä; ß stays: Sträßchen."}, {"n": "Kirche", "a": "die", "ch": "Kirchchen", "le": null, "std": "chen", "note": "Final -e drops."}, {"n": "Schule", "a": "die", "ch": "Schülchen", "le": null, "std": "chen", "note": "Final -e drops; umlaut u→ü."}, {"n": "Lampe", "a": "die", "ch": "Lämpchen", "le": null, "std": "chen", "note": "Final -e drops; umlaut a→ä."}, {"n": "Mädchen", "a": "das", "ch": "Mädchen", "le": null, "std": "chen", "note": "Lexicalized: from 'Magd' (maiden) — the diminutive became the word."}, {"n": "Fräulein", "a": "das", "ch": null, "le": "Fräulein", "std": "lein", "note": "Lexicalized: from 'Frau' — old-fashioned 'Miss'; rarely used today."}];
+function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
+function buildOptions(answer, distractors, n){
+  var opts = [answer], seen = {};
+  seen[answer] = true;
+  var pool = distractors.slice();
+  while(opts.length < n && pool.length){
+    var i = Math.floor(Math.random() * pool.length);
+    var v = pool.splice(i, 1)[0];
+    if(!seen[v]){ seen[v] = true; opts.push(v); }
+  }
+  for(var i = opts.length - 1; i > 0; i--){
+    var j = Math.floor(Math.random() * (i + 1));
+    var t = opts[i]; opts[i] = opts[j]; opts[j] = t;
+  }
+  return opts;
+}
+var UML = {"a": "\u00e4", "o": "\u00f6", "u": "\u00fc"};
+function umlautStem(w){
+  var i = w.lastIndexOf("au");
+  var masked = i >= 0 ? w.slice(0, i) + "__" + w.slice(i + 2) : w;
+  var li = -1, key = "";
+  ["a", "o", "u"].forEach(function(ch){
+    var j = masked.lastIndexOf(ch);
+    if(j > li){ li = j; key = ch; }
+  });
+  if(i >= 0 && i >= li){ return w.slice(0, i) + "\u00e4u" + w.slice(i + 2); }
+  if(li < 0) return w;
+  return w.slice(0, li) + UML[key] + w.slice(li + 1);
+}
+function stemOf(w){
+  var s = w.toLowerCase().replace(/[^a-z\u00e4\u00f6\u00fc\u00df]/g, "");
+  if(s.slice(-1) === "e" && s.length > 2) s = s.slice(0, -1);
+  return s;
+}
+function buildDiminutive(word){
+  var s = stemOf(word);
+  var u = umlautStem(s);
+  function cap(x){ return x.charAt(0).toUpperCase() + x.slice(1); }
+  return {chen: "das " + cap(u + "chen"), lein: "das " + cap(u + "lein")};
+}
+function findNoun(w){
+  var s = stemOf(w);
+  for(var i = 0; i < NOUNS.length; i++){
+    if(stemOf(NOUNS[i].n) === s) return NOUNS[i];
+  }
+  return null;
+}
+function buildDim(){
+  var inp = document.getElementById("dim-input").value.trim();
+  var out = document.getElementById("dim-out");
+  if(!inp){ out.innerHTML = '<div class="note">Type a German noun first.</div>'; return; }
+  var b = buildDiminutive(inp);
+  var known = findNoun(inp);
+  var html = '<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:16px;margin-top:4px">';
+  html += '<div style="font-size:1.3rem;font-weight:700;color:#0f172a">' + b.chen + '</div>';
+  html += '<div style="font-size:1.1rem;color:#475569;margin-top:4px">' + b.lein + ' <span style="font-size:.85rem">(poetic / southern)</span></div>';
+  html += '<div style="color:#475569;margin-top:8px;font-size:.92rem">Rule applied: umlaut the stem vowel' +
+    (stemOf(inp).slice(-1) === "e" || /e$/.test(inp.toLowerCase()) ? ", drop final -e" : "") +
+    ", add -chen (default) or -lein. Gender is always <strong>das</strong>.</div>";
+  if(known){
+    var std = known.std === "chen" ? known.ch : known.le;
+    html += '<div style="margin-top:8px;color:#065f46;font-weight:600">\u2713 Verified: the standard form is <strong>das ' + std + "</strong>. " + known.note + "</div>";
+  } else {
+    html += '<div style="margin-top:8px;color:#92400e">Not in the verified list — the form follows the rules, but check irregulars (e.g. Magd → Mädchen).</div>';
+  }
+  html += "</div>";
+  out.innerHTML = html;
+}
+document.getElementById("dim-input").addEventListener("keydown", function(e){ if(e.key === "Enter") buildDim(); });
+(function renderList(){
+  var box = document.getElementById("dimlist");
+  NOUNS.forEach(function(x){
+    var d = document.createElement("div");
+    d.style.cssText = "background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px 16px;margin-bottom:10px";
+    d.innerHTML = '<div style="font-weight:700;color:#0f172a"></div>' +
+      '<div style="color:#2563eb;font-weight:600;margin-top:2px"></div>' +
+      '<div style="color:#475569;font-size:.92rem;margin-top:4px"></div>';
+    d.children[0].textContent = x.a + " " + x.n + " → das " + (x.std === "chen" ? x.ch : x.le);
+    var alt = [];
+    if(x.ch && x.std !== "chen") alt.push("das " + x.ch);
+    if(x.le && x.std !== "lein") alt.push("das " + x.le);
+    d.children[1].textContent = alt.length ? "Also: " + alt.join(", ") : "Standard form";
+    d.children[2].textContent = x.note;
+    box.appendChild(d);
+  });
+})();
+function distractorsFor(x){
+  var out = [], seen = {};
+  var std = x.std === "chen" ? x.ch : x.le;
+  function cap(s){ return s.charAt(0).toUpperCase() + s.slice(1); }
+  var s = stemOf(x.n);
+  var noUml = cap(s + "chen");
+  var leinAlt = cap(umlautStem(s) + "lein");
+  var cands = [noUml];
+  if(!(x.le && x.std !== "lein" && leinAlt === "das " + x.le) && !(x.std === "lein")) cands.push(leinAlt);
+  cands.push(cap(umlautStem(s) + "chenchen"));
+  var others = shuffle(NOUNS.filter(function(y){ return y.n !== x.n; }));
+  others.forEach(function(y){
+    var f = y.std === "chen" ? y.ch : y.le;
+    if(cands.length < 4) cands.push("das " + f);
+  });
+  cands.forEach(function(c){
+    var full = c.indexOf("das ") === 0 ? c : "das " + c;
+    if(full !== "das " + std && !seen[full]){ seen[full] = true; out.push(full); }
+  });
+  return out.slice(0, 3);
+}
+var pool = [], qi = 0, correctN = 0, missedN = 0, missedList = [], qa = null, ROUNDS = 15;
+function startQuiz(){
+  pool = shuffle(NOUNS.slice());
+  qi = 0; correctN = 0; missedN = 0; missedList = [];
+  document.getElementById("quiz-zone").style.display = "block";
+  document.getElementById("quiz-summary").innerHTML = "";
+  document.getElementById("qstart").style.display = "none";
+  showQ();
+}
+function showQ(){
+  qa = pool[qi % pool.length];
+  var std = qa.std === "chen" ? qa.ch : qa.le;
+  qa._answer = "das " + std;
+  var box = document.getElementById("quiz-options"); box.innerHTML = "";
+  var fb = document.getElementById("quiz-feedback"); fb.className = ""; fb.style.display = "none";
+  document.getElementById("quiz-next").style.display = "none";
+  document.getElementById("qcount").textContent = "Round " + (qi+1) + "/" + ROUNDS;
+  document.getElementById("qbar").style.width = (qi/ROUNDS*100) + "%";
+  document.getElementById("quiz-sentence").textContent = "What is the correct diminutive of \u201C" + qa.a + " " + qa.n + "\u201D?";
+  buildOptions(qa._answer, distractorsFor(qa), 4).forEach(function(opt){
+    var b = document.createElement("button");
+    b.className = "quiz-btn"; b.textContent = opt;
+    b.addEventListener("click", function(){ answerQ(opt, b); });
+    box.appendChild(b);
+  });
+}
+function answerQ(opt, btn){
+  var fb = document.getElementById("quiz-feedback");
+  var btns = document.querySelectorAll("#quiz-options .quiz-btn");
+  btns.forEach(function(x){ x.disabled = true; if(x.textContent === qa._answer) x.classList.add("correct"); });
+  if(opt === qa._answer){
+    correctN++; fb.className = "ok";
+    fb.textContent = "\u2713 Correct! " + qa.a + " " + qa.n + " → " + qa._answer + ".";
+  } else {
+    missedN++; missedList.push(qa); fb.className = "no";
+    btn.classList.add("wrong");
+    fb.textContent = "\u2717 It's " + qa._answer + ". " + qa.note;
+  }
+  document.getElementById("qscore").textContent = "Correct: " + correctN + " · Missed: " + missedN;
+  var nb = document.getElementById("quiz-next");
+  nb.style.display = "block";
+  nb.textContent = (qi + 1 < ROUNDS) ? "Next" : "See results";
+}
+function nextQ(){
+  qi++;
+  if(qi < ROUNDS) showQ();
+  else {
+    document.getElementById("quiz-sentence").textContent = "";
+    document.getElementById("quiz-options").innerHTML = "";
+    document.getElementById("quiz-feedback").style.display = "none";
+    document.getElementById("quiz-next").style.display = "none";
+    document.getElementById("qbar").style.width = "100%";
+    var uniq = {};
+    missedList.forEach(function(m){ uniq[m.n] = m; });
+    var missArr = Object.keys(uniq).map(function(k){ return uniq[k]; });
+    var msg = "<strong>" + correctN + " / " + ROUNDS + " correct.</strong> ";
+    if(missArr.length === 0) msg += "Verkleinerungs-Profi — small words, big skill.";
+    else {
+      msg += "Review these:<ul style='margin:10px 0 0 20px'>";
+      missArr.forEach(function(m){
+        var std = m.std === "chen" ? m.ch : m.le;
+        msg += "<li>" + m.a + " " + m.n + " → <strong>das " + std + "</strong></li>";
+      });
+      msg += "</ul>";
+    }
+    document.getElementById("quiz-summary").innerHTML = msg;
+  }
+}
+
+
+</script>
+</body>
+</html>
