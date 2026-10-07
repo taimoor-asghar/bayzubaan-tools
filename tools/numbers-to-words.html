@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Numbers to Words Converter + Quiz | Bayzubaan</title>
+<meta name="description" content="Convert any number 0–999,999 to German words: einundzwanzig, sechzehn, dreißig. Interactive converter + 15-round quiz on the classic spelling traps.">
+<link rel="canonical" href="https://bayzubaan.com/tools/numbers-to-words/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="German Numbers to Words Converter + Quiz">
+<meta property="og:description" content="German numbers to words: converter + 15-round quiz on einundzwanzig, sechzehn, dreißig.">
+<meta property="og:url" content="https://bayzubaan.com/tools/numbers-to-words/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="German Numbers to Words Converter + Quiz">
+<meta name="twitter:description" content="German numbers to words: converter + 15-round quiz on einundzwanzig, sechzehn, dreißig.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you say 16, 17, 60, 70 in German?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "16 is sechzehn and 60 is sechzig — the -s- of sechs drops. 17 is siebzehn and 70 is siebzig — the -en of sieben drops. These are the most misspelled numbers in German; learn them as exceptions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is 21 'einundzwanzig' — why does German reverse the order?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "German puts the unit before the ten: einundzwanzig (one-and-twenty). This matches old English ('four-and-twenty blackbirds'). The reversal applies to all compounds 21–99, joined by und with no spaces."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is 101 'einhunderteins' or 'einhundertundeins'?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Einhunderteins — there is no und between hundred and unit. The und only joins tens compounds (neunundneunzig). Inserting und after hundert or tausend is a classic English-speaker error."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between ein and eins?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Eins is the standalone counting word; ein is used in compounds (einundzwanzig, einhundert, eintausend). Note einhunderteins (101) uses both: ein- for the hundred, -eins for the unit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you say 1,000,000 in German?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Eine Million — from a million upward German uses capitalised nouns: eine Million, zwei Millionen, eine Milliarde (10⁹). Warning: English 'billion' is German Milliarde; German Billion means 10¹²."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>Zahlen auf Deutsch: Numbers to Words Converter and Quiz</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">German numbers to words: converter + 15-round quiz on einundzwanzig, sechzehn, dreißig.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+
+<h2>Number to German Word Converter</h2>
+<div class="field">
+<label for="num-input">Enter a number (0&ndash;999,999):</label>
+<input id="num-input" type="number" min="0" max="999999" placeholder="42">
+</div>
+<button id="calc-btn" type="button">Convert to German</button>
+<div id="result"></div>
+<div class="try-row">
+<button type="button" data-try="16">16</button>
+<button type="button" data-try="21">21</button>
+<button type="button" data-try="60">60</button>
+<button type="button" data-try="101">101</button>
+<button type="button" data-try="1999">1999</button>
+</div>
+<h2 style="margin-top:28px">Quiz: 15 rounds</h2>
+<div class="progress"><div id="qbar"></div></div>
+<div class="quiz-meta"><span id="qcount">Round 1/15</span><span id="qscore">Score: 0</span></div>
+<div id="quiz-sentence" style="font-size:1.15rem;font-weight:600;margin-bottom:14px"></div>
+<div id="quiz-options"></div>
+<div id="quiz-feedback"></div>
+<button type="button" id="quiz-next" style="display:none;margin-top:12px" onclick="nextQ()">Next question</button>
+<div id="quiz-summary"></div>
+
+</div>
+
+<article class="prose">
+
+<h2>The German number system at a glance</h2>
+<p>German numbers 0–12 are unique words you simply memorise (<em>null, eins, zwei … zwölf</em>), 13–19 mostly attach <em>-zehn</em> to the unit (<em>dreizehn, vierzehn</em>), and the tens from 20 to 90 have their own forms. From 21 upward, German flips the order English speakers expect: you say the <strong>unit first, then the ten</strong>, joined by <em>und</em>. So 21 is <em>einundzwanzig</em> — literally "one-and-twenty" — exactly like old-fashioned English "four-and-twenty". Once you accept the reversal, the system is extremely regular.</p>
+<h2>The spelling traps: sech-, sieb-, dreißig</h2>
+<p>Three quirks cause most errors. First, <strong>16 is sechzehn and 60 is sechzig</strong> — the -s- of <em>sechs</em> disappears (never "sechszehn" or "sechszig"). Second, <strong>17 is siebzehn and 70 is siebzig</strong> — the -en of <em>sieben</em> disappears (never "siebenzehn" or "siebenzig"). Third, <strong>30 is dreißig</strong> — the only ten written with ß, and with no -z- (never "dreissig" in standard German orthography, never "dreißzig"). The converter above encodes all three rules, and the quiz drills them hard because they are the words that betray learners in real conversations.</p>
+<h2>Ein vs eins</h2>
+<p>The word for "one" changes shape by context: <strong>eins</strong> is the standalone counting form ("eins, zwei, drei …"), while <strong>ein</strong> is used in compounds — <em>einundzwanzig</em> (21), <em>einhundert</em> (100), <em>eintausend</em> (1,000). And <em>einhunderteins</em> (101) shows both: the hundred takes <em>ein</em>, the final unit takes <em>eins</em>. Before masculine/neuter nouns, <em>ein</em> also carries the article endings you know from adjective declension (<em>einundzwanzig Äpfel</em>, <em>einhundertein Euro</em> — the -n appears before masculine accusative nouns).</p>
+<h2>Hundreds, thousands, and the missing "und"</h2>
+<p>A frequent English-speaker error is inserting <em>und</em> where German has none. 101 is <em>einhunderteins</em> — <strong>no und</strong> between hundred and unit (English "one hundred and one" does not translate). Likewise 250 is <em>zweihundertfünfzig</em> and 1,050 is <em>eintausendfünfzig</em>. The <em>und</em> appears only inside the tens compound: <em>neunundneunzig</em>, <em>fünfundvierzig</em>. Everything else joins directly, producing the famous long words like <em>eintausendneunhundertneunundneunzig</em> — still a single word, still one compound, no spaces, no hyphens.</p>
+<h2>From a million up: numbers become nouns</h2>
+<p>At 1,000,000 the system changes: <em>Million</em>, <em>Milliarde</em> (billion), and <em>Billion</em> (trillion) are <strong>capitalised nouns</strong>, written as separate words and declined — <em>eine Million</em>, <em>zwei Millionen</em>, <em>mit einer Million Euro</em>. This is a genuine false-friend zone: English "billion" (10⁹) is German <em>Milliarde</em>, and German <em>Billion</em> means 10¹². In business and medical contexts, mixing these up is a real error, so learn the scale deliberately.</p>
+<h2>Numbers in real life: years, prices, phone numbers</h2>
+<p><strong>Years</strong> are read as plain numbers: 2026 is <em>zweitausendsechsundzwanzig</em> (older centuries often split: 1999 can be <em>neunzehnhundertneunundneunzig</em> — "nineteen hundred ninety-nine" style — in dates, though the full form is always correct). <strong>Prices</strong>: €4,99 is <em>vier Euro neunundneunzig</em>. <strong>Phone numbers</strong> are usually read digit by digit — and note that many Germans say <em>zwo</em> instead of <em>zwei</em> on the phone for clarity, though <em>zwei</em> is the standard written form. <strong>Times</strong> pair with the time-telling drill: 14:30 is <em>vierzehn Uhr dreißig</em> in official style, <em>halb drei</em> in everyday speech.</p>
+<h2>Ordinal numbers and fractions</h2>
+<p>Cardinal numbers become ordinals (first, second, third) with <strong>-te</strong> for 1–19 and <strong>-ste</strong> from 20 up: <em>der erste</em>, <em>der dritte</em> (note the irregular stem), <em>der achte</em> (one t), <em>der zwanzigste</em>. The irregulars to memorise are <em>erste</em> (1st), <em>dritte</em> (3rd), <em>achte</em> (8th) — everything else is mechanical. Ordinals decline like adjectives (<em>am dritten März</em>, <em>zum ersten Mal</em>), which the date drill covers in depth. Fractions: <em>ein Drittel</em> (a third), <em>ein Viertel</em> (a quarter), <em>die Hälfte</em> (half) — but note that "half past two" is <em>halb drei</em>, not "halb nach zwei", a trap the time-telling quiz drills specifically.</p>
+<h2>Study strategy</h2>
+<p>Start by typing 0–30 into the converter and reading each word aloud — the teens and tens must be automatic before compounds make sense. Then convert your own meaningful numbers: your birth year, your phone number, prices from a German supermarket flyer. Drill the three spelling traps (sechzehn/sechzig, siebzehn/siebzig, dreißig) with the quiz until you stop hesitating — hesitation on numbers in conversation reads as uncertainty about the language itself. Finally, practise the long compounds out loud: <em>eintausendneunhundertneunundneunzig</em> said fluently is one of the most satisfying moments in German learning, and it trains the compound-swallowing rhythm the whole language runs on.</p>
+
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>How do you say 16, 17, 60, 70 in German?</h3><p>16 is sechzehn and 60 is sechzig — the -s- of sechs drops. 17 is siebzehn and 70 is siebzig — the -en of sieben drops. These are the most misspelled numbers in German; learn them as exceptions.</p></div><div class="faq-item"><h3>Why is 21 &#x27;einundzwanzig&#x27; — why does German reverse the order?</h3><p>German puts the unit before the ten: einundzwanzig (one-and-twenty). This matches old English (&#x27;four-and-twenty blackbirds&#x27;). The reversal applies to all compounds 21–99, joined by und with no spaces.</p></div><div class="faq-item"><h3>Is 101 &#x27;einhunderteins&#x27; or &#x27;einhundertundeins&#x27;?</h3><p>Einhunderteins — there is no und between hundred and unit. The und only joins tens compounds (neunundneunzig). Inserting und after hundert or tausend is a classic English-speaker error.</p></div><div class="faq-item"><h3>What&#x27;s the difference between ein and eins?</h3><p>Eins is the standalone counting word; ein is used in compounds (einundzwanzig, einhundert, eintausend). Note einhunderteins (101) uses both: ein- for the hundred, -eins for the unit.</p></div><div class="faq-item"><h3>How do you say 1,000,000 in German?</h3><p>Eine Million — from a million upward German uses capitalised nouns: eine Million, zwei Millionen, eine Milliarde (10⁹). Warning: English &#x27;billion&#x27; is German Milliarde; German Billion means 10¹².</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+const ONES = ["null","eins","zwei","drei","vier","f\u00fcnf","sechs","sieben","acht","neun"];
+const TEENS = {10:"zehn",11:"elf",12:"zw\u00f6lf",13:"dreizehn",14:"vierzehn",15:"f\u00fcnfzehn",16:"sechzehn",17:"siebzehn",18:"achtzehn",19:"neunzehn"};
+const TENS = {20:"zwanzig",30:"drei\u00dfig",40:"vierzig",50:"f\u00fcnfzig",60:"sechzig",70:"siebzig",80:"achtzig",90:"neunzig"};
+function under100(n){
+  if(n < 10) return ONES[n];
+  if(n < 20) return TEENS[n];
+  const t = Math.floor(n/10)*10, u = n%10;
+  if(u === 0) return TENS[t];
+  return (u===1 ? "ein" : ONES[u]) + "und" + TENS[t];
+}
+function under1000(n){
+  if(n < 100) return under100(n);
+  const h = Math.floor(n/100), r = n%100;
+  return (h===1 ? "einhundert" : ONES[h] + "hundert") + (r ? under100(r) : "");
+}
+function numToWord(n){
+  n = Math.floor(Number(n));
+  if(isNaN(n) || n < 0 || n > 999999) return null;
+  if(n < 1000) return under1000(n);
+  const th = Math.floor(n/1000), r = n%1000;
+  return (th===1 ? "eintausend" : (th<1000 ? under1000(th) + "tausend" : "")) + (r ? under1000(r) : "");
+}
+function runBuild(){
+  const inp = document.getElementById("num-input").value;
+  const w = numToWord(inp);
+  const r = document.getElementById("result");
+  r.style.display = "block";
+  if(w === null){ r.innerHTML = '<div class="note">Enter a whole number between 0 and 999,999.</div>'; return; }
+  r.innerHTML = '<div class="note" style="font-size:1.3rem;font-weight:700;color:#0f172a">' + inp + " = " + w + "</div>";
+}
+document.getElementById("calc-btn").addEventListener("click", runBuild);
+document.querySelectorAll(".try-row button").forEach(function(b){
+  b.addEventListener("click", function(){ document.getElementById("num-input").value = b.getAttribute("data-try"); runBuild(); });
+});
+const ITEMS = [{\'s\': \'How do you say 16 in German?\', \'o\': [\'sechzehn\', \'sechszehn\', \'sechszehnig\'], \'c\': \'sechzehn\', \'e\': \'16 drops the -s-: sechzehn (not sechszehn). Same for 60: sechzig.\'}, {\'s\': \'How do you say 17 in German?\', \'o\': [\'siebzehn\', \'siebenzehn\', \'siebzehnig\'], \'c\': \'siebzehn\', \'e\': \'17 drops the -en-: siebzehn (not siebenzehn). Same for 70: siebzig.\'}, {\'s\': \'How do you say 21 in German?\', \'o\': [\'einundzwanzig\', \'zwanzigeins\', \'einsundzwanzig\'], \'c\': \'einundzwanzig\', \'e\': \'Units come first: einundzwanzig. Note ein (not eins) before -und-.\'}, {\'s\': \'How do you say 30 in German?\', \'o\': [\'dreißig\', \'dreissig\', \'dreißzig\'], \'c\': \'dreißig\', \'e\': \'30 is irregular: dreißig (ß, and no -z-). The only ten with ß.\'}, {\'s\': \'How do you say 60 in German?\', \'o\': [\'sechzig\', \'sechszig\', \'sechsundsechzig\'], \'c\': \'sechzig\', \'e\': \'60 drops the -s- like 16: sechzig (not sechszig).\'}, {\'s\': \'How do you say 70 in German?\', \'o\': [\'siebzig\', \'siebenzig\', \'siebzehnig\'], \'c\': \'siebzig\', \'e\': \'70 drops the -en- like 17: siebzig (not siebenzig).\'}, {\'s\': \'How do you say 45 in German?\', \'o\': [\'fünfundvierzig\', \'vierzigfünf\', \'fünfvierzig\'], \'c\': \'fünfundvierzig\', \'e\': \'Units + und + tens: fünfundvierzig — say the 5 before the 40.\'}, {\'s\': \'How do you say 99 in German?\', \'o\': [\'neunundneunzig\', \'neunzigneun\', \'neunundneunzigste\'], \'c\': \'neunundneunzig\', \'e\': \'neun + und + neunzig = neunundneunzig.\'}, {\'s\': \'How do you say 100 in German?\', \'o\': [\'einhundert\', \'einhunderte\', \'hunderteins\'], \'c\': \'einhundert\', \'e\': \'100 is einhundert (hundert alone also works in casual speech).\'}, {\'s\': \'How do you say 101 in German?\', \'o\': [\'einhunderteins\', \'einhundertundeins\', \'hunderteinsund\'], \'c\': \'einhunderteins\', \'e\': \'No -und- after hundert: einhunderteins. The und only joins tens, not hundreds.\'}, {\'s\': \'How do you say 250 in German?\', \'o\': [\'zweihundertfünfzig\', \'zweihundertundfünfzig\', \'zweifünfzighundert\'], \'c\': \'zweihundertfünfzig\', \'e\': \'zweihundert + fünfzig, joined directly: zweihundertfünfzig.\'}, {\'s\': \'How do you say 1,000 in German?\', \'o\': [\'eintausend\', \'eintausende\', \'tausendundeins\'], \'c\': \'eintausend\', \'e\': \'1,000 is eintausend (tausend alone also works).\'}, {\'s\': \'How do you say 2,000 in German?\', \'o\': [\'zweitausend\', \'zweitausende\', \'zweitausendunde\'], \'c\': \'zweitausend\', \'e\': \'zweitausend — note zwei (not zwo) in compounds.\'}, {\'s\': \'How do you say 1,999 in German?\', \'o\': [\'eintausendneunhundertneunundneunzig\', \'eintausendneunhundertundneunundneunzig\', \'neunzehnhundertneunundneunzig\'], \'c\': \'eintausendneunhundertneunundneunzig\', \'e\': \'eintausend + neunhundert + neunundneunzig — one long compound, single word.\'}, {\'s\': \'How do you say 1,000,000 in German?\', \'o\': [\'eine Million\', \'ein Million\', \'einemillion\'], \'c\': \'eine Million\', \'e\': \'From a million up, German uses nouns: eine Million — capitalised, separate word, feminine (die Million).\'}];
+let qi = 0, qs = 0, qa = null;
+function showQ(){
+  qa = ITEMS[qi];
+  document.getElementById("quiz-sentence").textContent = qa.s;
+  document.getElementById("qcount").textContent = "Round " + (qi+1) + "/" + ITEMS.length;
+  document.getElementById("qbar").style.width = (qi/ITEMS.length*100) + "%";
+  const box = document.getElementById("quiz-options"); box.innerHTML = "";
+  const fb = document.getElementById("quiz-feedback"); fb.className = ""; fb.style.display = "none";
+  document.getElementById("quiz-next").style.display = "none";
+  qa.o.forEach(function(opt){
+    const b = document.createElement("button");
+    b.className = "quiz-btn"; b.textContent = opt;
+    b.addEventListener("click", function(){ answer(opt, b); });
+    box.appendChild(b);
+  });
+}
+function answer(opt, btn){
+  const fb = document.getElementById("quiz-feedback");
+  const btns = document.querySelectorAll("#quiz-options .quiz-btn");
+  btns.forEach(function(x){ x.disabled = true; if(x.textContent === qa.c) x.classList.add("correct"); });
+  if(opt === qa.c){ qs++; fb.className = "ok"; fb.textContent = "✓ Correct! " + qa.e; }
+  else { btn.classList.add("wrong"); fb.className = "no"; fb.textContent = "✗ The answer is “" + qa.c + "”. " + qa.e; }
+  document.getElementById("qscore").textContent = "Score: " + qs;
+  document.getElementById("quiz-next").style.display = "block";
+  document.getElementById("quiz-next").textContent = (qi + 1 < ITEMS.length) ? "Next question" : "See results";
+}
+function nextQ(){
+  qi++;
+  if(qi < ITEMS.length) showQ();
+  else {
+    document.getElementById("quiz-sentence").textContent = "";
+    document.getElementById("quiz-options").innerHTML = "";
+    document.getElementById("quiz-feedback").style.display = "none";
+    document.getElementById("quiz-next").style.display = "none";
+    document.getElementById("qbar").style.width = "100%";
+    document.getElementById("qcount").textContent = "Done";
+    document.getElementById("quiz-summary").innerHTML =
+      '<div class="note">You scored <strong>' + qs + "/" + ITEMS.length + "</strong>." +
+      (qs === ITEMS.length ? " Perfect — German numbers nailed!" :
+       qs >= 11 ? " Strong! Revisit the sech-/sieb- spellings and the und-compounds." :
+       " Keep practising — the und-compounds and spelling drops are the usual traps.") + "</div>";
+  }
+}
+showQ();
+
+
+</script>
+</body>
+</html>
