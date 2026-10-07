@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emergency Phrases — German Notfall Communication | Bayzubaan</title>
+<meta name="description" content="German emergency phrases: 112 call, patient commands, consciousness and breathing handover, assessment questions — builder + 12-round quiz.">
+<link rel="canonical" href="https://bayzubaan.com/tools/emergency-phrases/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Emergency Phrases — German Notfall Communication">
+<meta property="og:description" content="Emergency German: 10 Notfall frames with slots, the 112 structure, and a one-slot-precision quiz.">
+<meta property="og:url" content="https://bayzubaan.com/tools/emergency-phrases/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Emergency Phrases — German Notfall Communication">
+<meta name="twitter:description" content="Emergency German: 10 Notfall frames with slots, the 112 structure, and a one-slot-precision quiz.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What number do I call for an emergency in Germany?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "112 — Europe-wide. The German dispatcher expects the five Ws: Wer, Wo, Was, Wie viele, Warten (who is calling, where, what happened, how many are injured, wait for questions before hanging up)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I hand over a patient's state in German?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Der Patient ist bewusstlos / bei Bewusstsein / nicht ansprechbar / verletzt — then the breathing state: Er atmet nicht / flach / normal / unregelmäßig. These two sentences are the ABCDE opening of every emergency handover."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I give a command to a patient in German?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use short Sie-form imperatives: Bleiben Sie bitte ruhig liegen. Atmen Sie bitte ruhig weiter. Bewegen Sie den Kopf nicht. Keep the bitte particle — a frightened patient cooperates better with a polite command."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between bewusstlos and nicht ansprechbar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bewusstlos means unconscious (loss of consciousness); nicht ansprechbar means unresponsive (cannot be roused to respond). They are different clinical states — the handover must use the right one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which assessment questions matter most in an emergency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Haben Sie [symptom]? (current symptom), Seit wann haben Sie [symptom]? (onset), Nehmen Sie regelmäßig [medication]? (regular drugs, especially blood thinners). Onset and medication questions are the ones learners most often forget."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I reassure a patient while treating them?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Name what you are doing and what it helps against: Wir geben Ihnen jetzt Sauerstoff, das hilft gegen Atemnot. Patients tolerate procedures they understand."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>Emergency Phrases: German Notfall Communication</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">Emergency German: 10 Notfall frames with slots, the 112 structure, and a one-slot-precision quiz.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+
+<h2>Build the emergency conversation: call, commands, assessment</h2>
+<p style="margin-bottom:16px">10 Notfall frames with swappable slots — fill them to build a complete emergency exchange in German with its English translation. Add sentences to your script, copy it, then drill with the 12-round quiz.</p>
+<div id="frame-list"></div>
+<h2 style="margin-top:24px">Your emergency script</h2>
+<p style="margin-bottom:12px;color:#64748b">Sentences you add appear here in order. Copy the script and practise delivering it fast — in an emergency there is no time to search for words.</p>
+<ol id="script-list" style="margin:0 0 12px 22px"></ol>
+<div style="display:flex;gap:10px;flex-wrap:wrap">
+<button type="button" style="background:#2563eb;color:#fff;border:none;border-radius:8px;padding:12px 24px;font-size:1rem;font-weight:700;cursor:pointer" onclick="copyScript()">Copy script (German)</button>
+<button type="button" style="background:#fff;color:#2563eb;border:2px solid #2563eb;border-radius:8px;padding:12px 24px;font-size:1rem;font-weight:700;cursor:pointer" onclick="clearScript()">Clear</button>
+</div>
+<div id="copy-msg" style="margin-top:8px;color:#065f46;font-weight:600"></div>
+<h2 style="margin-top:28px">Quiz: emergency English → exact German</h2>
+<p style="margin-bottom:16px">12 rounds. Read the English sentence and pick the exact German wording.</p>
+<button id="calc-btn" type="button" onclick="startQuiz()">Start 12-round quiz</button>
+<div id="quiz-zone" style="display:none;margin-top:20px">
+<div class="progress"><div id="qbar"></div></div>
+<div class="quiz-meta"><span id="qcount">Round 1/12</span><span id="qscore">Correct: 0 · Missed: 0</span></div>
+<div id="quiz-prompt" style="font-size:.85rem;color:#64748b;margin-bottom:6px"></div>
+<div id="quiz-sentence" style="font-size:1.4rem;font-weight:700;margin-bottom:14px"></div>
+<div id="quiz-options"></div>
+<div id="quiz-feedback"></div>
+<button type="button" id="quiz-next" style="display:none;margin-top:12px" onclick="nextQ()">Next</button>
+<div id="quiz-summary"></div>
+</div>
+
+</div>
+
+<article class="prose">
+
+<h2>When seconds count, German must come first</h2>
+<p>Emergency communication is the one corner of medical German where hesitation is not an option. In the <em>Notaufnahme</em> (emergency department) or at the bedside of a deteriorating patient, nobody waits while you conjugate. The examiner knows this, and the FSP scenario that drops you into an emergency tests one thing above all: can you produce the right sentence instantly, in the Sie-form, without translating through English first? This tool gives you 10 emergency frames — the 112 call, patient commands, and assessment questions — with swappable slots, plus a builder and a 12-round quiz that punishes the one-slot errors that cost time.</p>
+<p>The frames follow the order a real emergency follows. First the call: <em>Hier ist ein Notfall! Kommen Sie bitte sofort hierher.</em> The German emergency call is famously structured — the dispatcher wants <strong>Wer, Wo, Was, Wie viele, Warten</strong> (who is calling, where, what happened, how many injured, wait for questions) — and the number is <strong>112</strong>, Europe-wide. Note <em>sofort hierher</em>: in German emergency language you name the urgency and the destination in one breath. The slot options give you the four destinations you will actually name: <em>sofort hierher, in die Notaufnahme, zum Unfallort, in Zimmer 4</em>.</p>
+<h2>The handover sentence: consciousness and breathing</h2>
+<p>The first clinical sentence of any emergency is the handover state: <em>Der Patient ist {state}. Er atmet {resp}.</em> These two frames cover the ABCDE opening — airway and breathing plus the disability letter. <em>Bewusstlos</em> (unconscious) vs. <em>bei Bewusstsein</em> (conscious) vs. <em>nicht ansprechbar</em> (unresponsive) are three different states with three different clinical meanings; mixing them up in the handover misleads the team. <em>Er atmet nicht / flach / normal / unregelmäßig</em> — four breathing states, one word each, drilled until they come out without thought.</p>
+<p>Why drill this? Because the examiners test exactly this sentence pair in the shock-room scenario, and because in real life the team acts on what you say. The quiz distractor sets force the distinction: <em>Der Patient ist bewusstlos</em> vs. <em>nicht ansprechbar</em> differ by one slot — and in the exam, one slot is the whole difference between pass and fail on that item.</p>
+<h2>Commands: short imperatives, Sie-form, no jargon</h2>
+<p>Emergency commands to the patient are imperatives in the Sie-form — short, unambiguous, repeated if needed. <em>Bleiben Sie bitte ruhig liegen.</em> <em>Atmen Sie bitte ruhig weiter.</em> <em>Bewegen Sie den Kopf nicht.</em> Three properties every command needs: the correct pronoun (Sie, never du — professionalism under pressure is still professionalism), one verb of action, and a politeness particle (<em>bitte</em>) that keeps the frightened patient cooperating. Note <em>Bewegen Sie sich nicht</em> — the reflexive command for "do not move" — vs. the targeted <em>Bewegen Sie den Kopf nicht</em>; the exam tests whether you can command the body part, not just the body.</p>
+<p><em>Atmen Sie bitte ruhig weiter</em> deserves special attention: it is the single most-spoken sentence in any respiratory emergency, and its three slot options (<em>ruhig weiter, tief ein und aus, nicht so schnell</em>) map to the three breathing problems you coach through. Drill it until it is muscle memory — patients in respiratory distress cannot parse complex sentences, and neither can a candidate who has not rehearsed.</p>
+<h2>Assessment questions: the four that buy time</h2>
+<p>While the team assembles, you assess — and the four assessment frames are your German toolkit: <em>Haben Sie {sym}?</em> (do you have…), <em>Seit wann haben Sie {sym}?</em> (since when…), <em>Nehmen Sie regelmäßig {med}?</em> (do you regularly take…), and the therapeutic promise <em>Wir geben Ihnen jetzt {tx}, das hilft gegen {sym}.</em> The symptom slot covers the four red flags that recur in every emergency scenario: <em>Schmerzen in der Brust</em> (chest pain), <em>Atemnot</em> (breathlessness), <em>Schwindel</em> (dizziness), <em>Übelkeit</em> (nausea).</p>
+<p><em>Seit wann</em> — since when — is the onset question every emergency history needs, and learners systematically underuse it; the frame puts it first-class. <em>Nehmen Sie regelmäßig Blutverdünner?</em> is the medication question with the highest stakes in an emergency (bleeding risk, thrombolysis decisions), which is why <em>Blutverdünner</em> sits among the slot options alongside <em>Insulin</em> and <em>Blutdrucktabletten</em>. And <em>Wir geben Ihnen jetzt Sauerstoff, das hilft gegen Atemnot</em> is the reassurance frame: name what you are doing and what it helps against — patients tolerate procedures they understand.</p>
+<h2>How to drill: the 60-second round</h2>
+<p>Build a full emergency script: the 112 call, the handover pair, two commands, one assessment question, the therapeutic promise. Copy it and deliver it aloud in under 60 seconds — that is the time budget a real shock-room handover gets. Then swap every slot and run it again: different patient, different state, different symptoms. The frames stay; the emergencies change.</p>
+<p>Drill the whole chain daily until the sequence is automatic — call, handover, commands, assessment, treatment promise — because in a real emergency the order is fixed and the words must be too. Then take the quiz: every distractor differs by exactly one slot — <em>bewusstlos</em> vs. <em>nicht ansprechbar</em>, <em>flach</em> vs. <em>unregelmäßig</em>, <em>ruhig weiter</em> vs. <em>tief ein und aus</em> — so it tests the one-slot precision emergencies demand. When you score 12/12, run the script from memory at full speed: that is emergency German, rehearsed.</p>
+
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>What number do I call for an emergency in Germany?</h3><p>112 — Europe-wide. The German dispatcher expects the five Ws: Wer, Wo, Was, Wie viele, Warten (who is calling, where, what happened, how many are injured, wait for questions before hanging up).</p></div><div class="faq-item"><h3>How do I hand over a patient&#x27;s state in German?</h3><p>Der Patient ist bewusstlos / bei Bewusstsein / nicht ansprechbar / verletzt — then the breathing state: Er atmet nicht / flach / normal / unregelmäßig. These two sentences are the ABCDE opening of every emergency handover.</p></div><div class="faq-item"><h3>How do I give a command to a patient in German?</h3><p>Use short Sie-form imperatives: Bleiben Sie bitte ruhig liegen. Atmen Sie bitte ruhig weiter. Bewegen Sie den Kopf nicht. Keep the bitte particle — a frightened patient cooperates better with a polite command.</p></div><div class="faq-item"><h3>What is the difference between bewusstlos and nicht ansprechbar?</h3><p>Bewusstlos means unconscious (loss of consciousness); nicht ansprechbar means unresponsive (cannot be roused to respond). They are different clinical states — the handover must use the right one.</p></div><div class="faq-item"><h3>Which assessment questions matter most in an emergency?</h3><p>Haben Sie [symptom]? (current symptom), Seit wann haben Sie [symptom]? (onset), Nehmen Sie regelmäßig [medication]? (regular drugs, especially blood thinners). Onset and medication questions are the ones learners most often forget.</p></div><div class="faq-item"><h3>How do I reassure a patient while treating them?</h3><p>Name what you are doing and what it helps against: Wir geben Ihnen jetzt Sauerstoff, das hilft gegen Atemnot. Patients tolerate procedures they understand.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+var FRAMES = [{"de": "Hier ist ein Notfall! Kommen Sie bitte {where}.", "en": "This is an emergency! Please come {where}.", "slots": {"where": [{"de": "sofort hierher", "en": "here immediately"}, {"de": "in die Notaufnahme", "en": "to the emergency department"}, {"de": "zum Unfallort", "en": "to the accident scene"}, {"de": "in Zimmer 4", "en": "to room 4"}]}}, {"de": "Der Patient ist {state}.", "en": "The patient is {state}.", "slots": {"state": [{"de": "bewusstlos", "en": "unconscious"}, {"de": "bei Bewusstsein", "en": "conscious"}, {"de": "nicht ansprechbar", "en": "unresponsive"}, {"de": "verletzt", "en": "injured"}]}}, {"de": "Er atmet {resp}.", "en": "He is breathing {resp}.", "slots": {"resp": [{"de": "nicht", "en": "not at all"}, {"de": "flach", "en": "shallowly"}, {"de": "normal", "en": "normally"}, {"de": "unregelmäßig", "en": "irregularly"}]}}, {"de": "Bleiben Sie bitte {pos} liegen.", "en": "Please stay lying {pos}.", "slots": {"pos": [{"de": "ruhig", "en": "still"}, {"de": "auf dem Rücken", "en": "on your back"}, {"de": "auf der Seite", "en": "on your side"}]}}, {"de": "Atmen Sie bitte {breath}.", "en": "Please breathe {breath}.", "slots": {"breath": [{"de": "ruhig weiter", "en": "calmly on"}, {"de": "tief ein und aus", "en": "deeply in and out"}, {"de": "nicht so schnell", "en": "not so fast"}]}}, {"de": "Bewegen Sie {part} nicht.", "en": "Do not move your {part}.", "slots": {"part": [{"de": "den Kopf", "en": "your head"}, {"de": "den Arm", "en": "your arm"}, {"de": "das Bein", "en": "your leg"}]}}, {"de": "Haben Sie {sym}?", "en": "Do you have {sym}?", "slots": {"sym": [{"de": "Schmerzen in der Brust", "en": "chest pain"}, {"de": "Atemnot", "en": "breathlessness"}, {"de": "Schwindel", "en": "dizziness"}, {"de": "Übelkeit", "en": "nausea"}]}}, {"de": "Seit wann haben Sie {sym}?", "en": "Since when have you had {sym}?", "slots": {"sym": [{"de": "Schmerzen in der Brust", "en": "chest pain"}, {"de": "Atemnot", "en": "breathlessness"}, {"de": "Schwindel", "en": "dizziness"}, {"de": "Übelkeit", "en": "nausea"}]}}, {"de": "Nehmen Sie regelmäßig {med}?", "en": "Do you regularly take {med}?", "slots": {"med": [{"de": "Medikamente", "en": "medication"}, {"de": "Blutverdünner", "en": "blood thinners"}, {"de": "Insulin", "en": "insulin"}, {"de": "Blutdrucktabletten", "en": "blood pressure tablets"}]}}, {"de": "Wir geben Ihnen jetzt {tx}, das hilft gegen {sym}.", "en": "We are giving you {tx} now, that helps against {sym}.", "slots": {"tx": [{"de": "ein Schmerzmittel", "en": "a painkiller"}, {"de": "Sauerstoff", "en": "oxygen"}, {"de": "einen Tropf", "en": "an IV drip"}, {"de": "ein Beruhigungsmittel", "en": "a sedative"}], "sym": [{"de": "Schmerzen in der Brust", "en": "chest pain"}, {"de": "Atemnot", "en": "breathlessness"}, {"de": "Schwindel", "en": "dizziness"}, {"de": "Übelkeit", "en": "nausea"}]}}];
+var script = [];
+function composeDe(f, picks){ var s = f.de; for(var k in picks){ s = s.split("{"+k+"}").join(picks[k].de); } return s; }
+function composeEn(f, picks){ var s = f.en; for(var k in picks){ s = s.split("{"+k+"}").join(picks[k].en); } return s; }
+function renderFrames(){
+  var box = document.getElementById("frame-list"); box.innerHTML = "";
+  FRAMES.forEach(function(f){
+    var d = document.createElement("div");
+    d.style.cssText = "background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px";
+    var head = document.createElement("div");
+    head.style.cssText = "font-size:1.1rem;font-weight:700;color:#0f172a;margin-bottom:10px";
+    head.textContent = f.de.replace(/\{(\w+)\}/g, "[___]");
+    d.appendChild(head);
+    var picks = {};
+    Object.keys(f.slots).forEach(function(sn){
+      picks[sn] = f.slots[sn][0];
+      var lab = document.createElement("label");
+      lab.style.cssText = "display:block;font-size:.85rem;font-weight:600;color:#475569;margin:8px 0 4px";
+      lab.textContent = sn;
+      var sel = document.createElement("select");
+      sel.style.cssText = "width:100%;padding:10px 12px;border:2px solid #e2e8f0;border-radius:8px;font-size:1rem;font-family:inherit;background:#fff";
+      sel.setAttribute("aria-label", sn);
+      f.slots[sn].forEach(function(opt){
+        var o = document.createElement("option");
+        o.value = opt.de; o.textContent = opt.de + "  (" + opt.en + ")";
+        sel.appendChild(o);
+      });
+      sel.addEventListener("change", function(){
+        var found = f.slots[sn].filter(function(o){ return o.de === sel.value; })[0];
+        picks[sn] = found;
+        preview.textContent = composeDe(f, picks);
+        prevEn.textContent = composeEn(f, picks);
+      });
+      d.appendChild(lab); d.appendChild(sel);
+    });
+    var preview = document.createElement("div");
+    preview.style.cssText = "margin-top:12px;font-size:1.15rem;font-weight:700;color:#1d4ed8";
+    var prevEn = document.createElement("div");
+    prevEn.style.cssText = "color:#475569;margin-top:2px";
+    preview.textContent = composeDe(f, picks);
+    prevEn.textContent = composeEn(f, picks);
+    d.appendChild(preview); d.appendChild(prevEn);
+    var b = document.createElement("button");
+    b.type = "button"; b.textContent = "+ Script";
+    b.style.cssText = "margin-top:10px;background:#eff6ff;border:1px solid #2563eb;color:#1d4ed8;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit";
+    b.addEventListener("click", function(){ addToScript(composeDe(f, picks)); });
+    d.appendChild(b);
+    box.appendChild(d);
+  });
+}
+function addToScript(de){ script.push(de); renderScript(); }
+function removeFromScript(i){ script.splice(i, 1); renderScript(); }
+function renderScript(){
+  var ol = document.getElementById("script-list"); ol.innerHTML = "";
+  script.forEach(function(de, i){
+    var li = document.createElement("li"); li.style.marginBottom = "6px";
+    var s = document.createElement("span"); s.textContent = de + " ";
+    var b = document.createElement("button");
+    b.type = "button"; b.textContent = "\u2715"; b.setAttribute("aria-label", "Remove sentence");
+    b.style.cssText = "background:none;border:none;color:#ef4444;cursor:pointer;font-size:1rem";
+    b.addEventListener("click", function(){ removeFromScript(i); });
+    li.appendChild(s); li.appendChild(b); ol.appendChild(li);
+  });
+}
+function clearScript(){ script = []; renderScript(); document.getElementById("copy-msg").textContent = ""; }
+function copyScript(){
+  var txt = script.join("\n");
+  var msg = document.getElementById("copy-msg");
+  if(!txt){ msg.textContent = "Add some sentences first."; return; }
+  function done(){ msg.textContent = "Copied " + script.length + " sentences!"; }
+  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(done, function(){ fallback(); }); }
+  else { fallback(); }
+  function fallback(){
+    var ta = document.createElement("textarea"); ta.value = txt;
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); } catch(e){}
+    document.body.removeChild(ta); done();
+  }
+}
+// ---- quiz ----
+var QUIZ = [{"p": "This is an emergency! Please come here immediately.", "a": "Hier ist ein Notfall! Kommen Sie bitte sofort hierher.", "d": ["Hier ist ein Notfall! Kommen Sie bitte in die Notaufnahme.", "Hier ist ein Notfall! Kommen Sie bitte zum Unfallort.", "Hier ist ein Notfall! Kommen Sie bitte in Zimmer 4."]}, {"p": "The patient is unconscious.", "a": "Der Patient ist bewusstlos.", "d": ["Der Patient ist bei Bewusstsein.", "Der Patient ist nicht ansprechbar.", "Der Patient ist verletzt."]}, {"p": "He is breathing shallowly.", "a": "Er atmet flach.", "d": ["Er atmet nicht.", "Er atmet normal.", "Er atmet unregelmäßig."]}, {"p": "Please stay lying still.", "a": "Bleiben Sie bitte ruhig liegen.", "d": ["Bleiben Sie bitte auf dem Rücken liegen.", "Bleiben Sie bitte auf der Seite liegen.", "Bewegen Sie sich nicht."]}, {"p": "Please breathe calmly on.", "a": "Atmen Sie bitte ruhig weiter.", "d": ["Atmen Sie bitte tief ein und aus.", "Atmen Sie bitte nicht so schnell.", "Atmen Sie bitte flach weiter."]}, {"p": "Do not move your head.", "a": "Bewegen Sie den Kopf nicht.", "d": ["Bewegen Sie den Arm nicht.", "Bewegen Sie das Bein nicht.", "Bewegen Sie sich nicht."]}, {"p": "Do you have chest pain?", "a": "Haben Sie Schmerzen in der Brust?", "d": ["Haben Sie Atemnot?", "Haben Sie Schwindel?", "Haben Sie Übelkeit?"]}, {"p": "Since when have you had breathlessness?", "a": "Seit wann haben Sie Atemnot?", "d": ["Seit wann haben Sie Schmerzen in der Brust?", "Seit wann haben Sie Schwindel?", "Seit wann haben Sie Übelkeit?"]}, {"p": "Do you regularly take blood thinners?", "a": "Nehmen Sie regelmäßig Blutverdünner?", "d": ["Nehmen Sie regelmäßig Medikamente?", "Nehmen Sie regelmäßig Insulin?", "Nehmen Sie regelmäßig Blutdrucktabletten?"]}, {"p": "We are giving you oxygen now, that helps against breathlessness.", "a": "Wir geben Ihnen jetzt Sauerstoff, das hilft gegen Atemnot.", "d": ["Wir geben Ihnen jetzt ein Schmerzmittel, das hilft gegen Atemnot.", "Wir geben Ihnen jetzt einen Tropf, das hilft gegen Atemnot.", "Wir geben Ihnen jetzt Sauerstoff, das hilft gegen Schmerzen in der Brust."]}, {"p": "Do you have dizziness?", "a": "Haben Sie Schwindel?", "d": ["Haben Sie Schmerzen in der Brust?", "Haben Sie Atemnot?", "Haben Sie Übelkeit?"]}, {"p": "Do not move.", "a": "Bewegen Sie sich nicht.", "d": ["Bewegen Sie den Kopf nicht.", "Bewegen Sie den Arm nicht.", "Bewegen Sie das Bein nicht."]}];
+var ROUNDS = 12, pool = [], qi = 0, correctN = 0, missedN = 0, missedList = [], qa = null;
+function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
+function startQuiz(){
+  pool = shuffle(QUIZ.slice()); qi = 0; correctN = 0; missedN = 0; missedList = [];
+  document.getElementById("quiz-zone").style.display = "block";
+  document.getElementById("quiz-summary").innerHTML = "";
+  document.getElementById("calc-btn").style.display = "none";
+  showQ();
+}
+function showQ(){
+  qa = pool[qi % pool.length];
+  var opts = shuffle([qa.a].concat(qa.d));
+  document.getElementById("quiz-prompt").textContent = "Which is the exact German sentence?";
+  document.getElementById("quiz-sentence").textContent = qa.p;
+  document.getElementById("qcount").textContent = "Round " + (qi+1) + "/" + ROUNDS;
+  document.getElementById("qbar").style.width = (qi/ROUNDS*100) + "%";
+  var box = document.getElementById("quiz-options"); box.innerHTML = "";
+  var fb = document.getElementById("quiz-feedback"); fb.className = ""; fb.style.display = "none";
+  document.getElementById("quiz-next").style.display = "none";
+  opts.forEach(function(opt){
+    var b = document.createElement("button");
+    b.className = "quiz-btn"; b.textContent = opt;
+    b.addEventListener("click", function(){ answer(opt, b); });
+    box.appendChild(b);
+  });
+}
+function answer(opt, btn){
+  var fb = document.getElementById("quiz-feedback");
+  var btns = document.querySelectorAll("#quiz-options .quiz-btn");
+  btns.forEach(function(x){ x.disabled = true; if(x.textContent === qa.a) x.classList.add("correct"); });
+  if(opt === qa.a){ correctN++; fb.className = "ok"; fb.textContent = "\u2713 Correct!"; }
+  else { missedN++; missedList.push(qa); fb.className = "no"; btn.classList.add("wrong");
+    fb.textContent = "\u2717 The sentence is: \u201c" + qa.a + "\u201d."; }
+  document.getElementById("qscore").textContent = "Correct: " + correctN + " \u00b7 Missed: " + missedN;
+  var nb = document.getElementById("quiz-next");
+  nb.style.display = "block";
+  nb.textContent = (qi + 1 < ROUNDS) ? "Next" : "See results";
+}
+function nextQ(){
+  qi++;
+  if(qi < ROUNDS) showQ();
+  else {
+    document.getElementById("quiz-prompt").textContent = "";
+    document.getElementById("quiz-sentence").textContent = "";
+    document.getElementById("quiz-options").innerHTML = "";
+    document.getElementById("quiz-feedback").style.display = "none";
+    document.getElementById("quiz-next").style.display = "none";
+    document.getElementById("qbar").style.width = "100%";
+    var uniq = {}; missedList.forEach(function(m){ uniq[m.a] = m; });
+    var missArr = Object.keys(uniq).map(function(k){ return uniq[k]; });
+    var msg = "<strong>" + correctN + " / " + ROUNDS + " correct.</strong> ";
+    if(missArr.length === 0) msg += "Emergency German mastered.";
+    else {
+      msg += "Review these " + missArr.length + ":<ul style='margin:8px 0 0 18px'>";
+      missArr.forEach(function(m){ msg += "<li><strong>" + m.a + "</strong> <span style='color:#64748b'>(" + m.p + ")</span></li>"; });
+      msg += "</ul>";
+    }
+    document.getElementById("quiz-summary").innerHTML = '<div class="note">' + msg + "</div>";
+    document.getElementById("calc-btn").style.display = "block";
+    document.getElementById("calc-btn").textContent = "Play again";
+  }
+}
+renderFrames();
+
+
+</script>
+</body>
+</html>
