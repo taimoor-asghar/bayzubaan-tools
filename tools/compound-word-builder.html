@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Compound Word Builder — Assemble Komposita | Bayzubaan</title>
+<meta name="description" content="Build German compound words from roots: pick modifier + linking sound + head, get the article and meaning. 40 verified recipes + 15-round quiz.">
+<link rel="canonical" href="https://bayzubaan.com/tools/compound-word-builder/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="German Compound Word Builder — Assemble Komposita">
+<meta property="og:description" content="Krank + en + Haus = Krankenhaus. Build German compounds from parts — the builder picks the article from the head.">
+<meta property="og:url" content="https://bayzubaan.com/tools/compound-word-builder/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="German Compound Word Builder — Assemble Komposita">
+<meta name="twitter:description" content="Krank + en + Haus = Krankenhaus. Build German compounds from parts — the builder picks the article from the head.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you build a German compound word?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Combine modifier + linking sound (Fugenlaut) + head: krank + en + Haus = Krankenhaus. The modifier narrows the meaning; the head (last part) sets the article and the core meaning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which part of a German compound decides the article?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Always the last part — the head. Das Haustier is neuter because das Tier is neuter; der Handschuh is masculine because der Schuh is. The builder above picks the article from your chosen head automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do German compounds always need a linking sound?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — (nothing) is the most common choice (Handschuh, Apfelbaum). When one is needed, -s-, -n-, -en-, -e-, or -er- are the options; the builder's dropdown shows which contexts favour each."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know if a compound I built is a real word?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The builder checks your creation against 40 verified recipes and tells you. A grammatically perfect combination can still be non-existent — always verify an invented compound in a dictionary before using it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is Krankenhaus neuter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because its head is das Haus. The head decides the gender: Krankenhaus = a kind of Haus. The same rule gives der Handschuh (head: der Schuh) and die Arbeitszeit (head: die Zeit)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the most common Fugenlaute (linking sounds)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "-s- (Arbeitszeit, Geburtstag), -n- (Wochenende), -en- (Krankenhaus), -e- (Hundehütte), -er- (Kindergarten). Natives choose by feel; learners should mimic known parallels rather than deriving rules."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>Compound Builder: Snap German Words Together</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">Krank + en + Haus = Krankenhaus. Build German compounds from parts — the builder picks the article from the head.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+
+<h2>Compound builder</h2>
+<p style="margin-bottom:16px">Pick a <strong>modifier</strong>, a <strong>linking sound</strong>, and a <strong>head</strong> — the builder assembles the compound, takes the article from the head, and shows the literal meaning. Load a verified recipe below, or experiment freely (the builder tells you whether your creation matches a real, verified word).</p>
+<div style="display:grid;gap:12px;margin-bottom:16px">
+<div class="field"><label for="b-mod">1 · Modifier (describes the head)</label><select id="b-mod"></select></div>
+<div class="field"><label for="b-fugen">2 · Linking sound (Fugenlaut)</label><select id="b-fugen"></select></div>
+<div class="field"><label for="b-head">3 · Head (decides article + core meaning)</label><select id="b-head"></select></div>
+</div>
+<button id="calc-btn" type="button" onclick="buildWord()">Build it</button>
+<div id="build-out"></div>
+<h2 style="margin-top:28px">40 verified recipes</h2>
+<p style="margin-bottom:16px">Click any recipe to load it into the builder — then split it in our <a href="https://bayzubaan.com/tools/compound-word-splitter/">compound splitter</a> to see the round trip.</p>
+<div id="rlist"></div>
+<h2 style="margin-top:28px">Quiz: build the compound</h2>
+<p style="margin-bottom:16px">15 rounds. Two skills alternate: <strong>assemble</strong> the compound from its parts, and <strong>pick the article</strong> (remember — the head decides).</p>
+<button id="qstart" type="button" onclick="startQuiz()">Start 15-round quiz</button>
+<div id="quiz-zone" style="display:none;margin-top:20px">
+<div class="progress"><div id="qbar"></div></div>
+<div class="quiz-meta"><span id="qcount">Round 1/15</span><span id="qscore">Correct: 0 · Missed: 0</span></div>
+<div id="quiz-sentence" style="font-size:1.3rem;font-weight:700;margin-bottom:14px"></div>
+<div id="quiz-options"></div>
+<div id="quiz-feedback"></div>
+<button type="button" id="quiz-next" style="display:none;margin-top:12px" onclick="nextQ()">Next</button>
+<div id="quiz-summary"></div>
+</div>
+
+</div>
+
+<article class="prose">
+
+<h2>Building compounds: the forward skill</h2>
+<p>Our <a href="https://bayzubaan.com/tools/compound-word-splitter/">compound splitter</a> takes long German words apart. This tool does the reverse: it puts them together. Given two simple roots and a linking sound, you assemble a real German compound — choosing the article from the head and checking the result against 40 verified recipes. Splitting is the reading skill; building is the writing skill. Together they make compounds stop being the scary part of German vocabulary and start being the fun part.</p>
+<p>Every compound is a three-part recipe: <strong>modifier + linking sound + head</strong>. <em>Krank</em> (modifier) + <em>en</em> (linking sound) + <em>Haus</em> (head) = <em>Krankenhaus</em>. <em>Arbeit</em> + <em>s</em> + <em>Zeit</em> = <em>Arbeitszeit</em>. <em>Hand</em> + (nothing) + <em>Schuh</em> = <em>Handschuh</em>. The modifier narrows the meaning; the head sets the category, the gender, and the article. Try the builder above with the defaults first — <em>krank + en + Haus</em> — then click any of the 40 recipes to load it.</p>
+<h2>The head decides everything</h2>
+<p>The single most important rule of building compounds: <strong>the head (last part) decides the article</strong>. <em>Das Haustier</em> is neuter because <em>das Tier</em> is neuter — a pet is fundamentally an animal that lives in a house. <em>Der Handschuh</em> is masculine because <em>der Schuh</em> is — a glove is a kind of shoe. <em>Die Arbeitszeit</em> is feminine because <em>die Zeit</em> is. The builder shows this explicitly: pick any head and the article follows automatically. In the quiz, every third round tests exactly this — <em>which article?</em> — with the head named as a hint. Internalise it and compound gender becomes free: you never memorise a compound's gender, you just know the head's.</p>
+<h2>Which linking sound? A practical guide</h2>
+<p>The <em>Fugenlaut</em> (linking sound) sits between the parts, and learners agonise over choosing it. The honest news: there is no perfect rule — natives just know. But there are strong tendencies worth learning: <strong>(no sound)</strong> is the most common choice overall (<em>Handschuh</em>, <em>Flugzeug</em>, <em>Apfelbaum</em>); <strong>-s-</strong> follows nouns ending in -heit, -keit, -ung, -schaft (<em>Arbeitszeit</em>, <em>Lebensmittel</em>) and appears in many fixed compounds (<em>Geburtstag</em>); <strong>-n-</strong> follows feminine nouns ending in -e (<em>Wochenende</em>, <em>Treppenhaus</em>); <strong>-en-</strong> follows weak masculine nouns and plurals (<em>Krankenhaus</em>, <em>Krankenschwester</em>); <strong>-er-</strong> follows -er plurals (<em>Kindergarten</em>). The builder's dropdown shows these hints as you pick. When you are unsure in real writing, mimic a known parallel: if <em>Arbeitszeit</em> takes -s-, <em>Arbeitsplatz</em> probably does too.</p>
+<h2>From building to guessing: why this trains reading</h2>
+<p>Building compounds backwards-trains the skill you need when reading. Once you have assembled <em>Wasser + Bett</em> yourself, you will never again stare blankly at <em>Wasserbett</em> in a text — your brain pattern-matches it to the recipe. The quiz's assemble rounds exploit this: the distractors are the exact mistakes learners make, <em>Krankhaus</em> (dropped Fugenlaut), <em>Hauskranken</em> (reversed order), and the uncapitalised-head trap <em>Krankenhaus</em> with a lowercase h — German nouns are always capitalised, and the lowercase version is simply not a word. Getting these wrong in the quiz is cheap; getting them wrong on a Fachsprachenprüfung form is not.</p>
+<h2>Building medical German: the clinical payoff</h2>
+<p>Medical German is compound-dense, and the builder is a rehearsal space for the vocabulary of the Fachsprachenprüfung. Load <em>Krankenversicherung</em> and note the recipe: <em>krank + en + Versicherung</em>, feminine because <em>die Versicherung</em> is. The same pattern generates <em>Krankmeldung</em> (sick note), <em>Krankengymnastik</em> (physiotherapy), <em>Krankenakte</em> (patient file). <em>Blut + Druck + Messung</em> (blood pressure measurement) shows three-part building: Blutdruck is itself a compound that becomes the modifier. <em>Schmerz + Mittel</em> (painkiller), <em>Fieber + Thermometer</em>, <em>Herz + Rhythmus</em> — the clinic runs on these. Practice building ten medical compounds in the tool, then verify each in the splitter: the round trip (build → split → build) locks the pattern in.</p>
+<h2>When the literal meaning lies</h2>
+<p>The builder shows a literal gloss for every creation — but the literal gloss is a scaffold, not the definition. <em>Handschuh</em> is a glove, not footwear; <em>Kindergarten</em> is a preschool, not a garden; <em>Schadenfreude</em> is malicious joy, not damage-happiness; <em>Milchstraße</em> is the Milky Way, not a street made of milk. The builder flags this honestly: a grammatically perfect combination may not be a real word at all, and a real word may not mean what its parts suggest. That is why every recipe carries its <em>actual</em> meaning alongside the recipe — build the form, then check the meaning. This two-step habit (form first, meaning second) is exactly how professionals handle unfamiliar compounds in patient documents.</p>
+<h2>Drill routine</h2>
+<p>Day one: load all 40 recipes into the builder one by one and read each recipe aloud — modifier, linking sound, head, article. Day two: use free-build mode to invent ten compounds, then check which of them are real words (the builder tells you when a creation matches the verified list). Day three: run the 15-round quiz until you score 13+/15 twice, paying special attention to the article rounds — the head-decides rule must become automatic. Then take it to the wild: whenever you meet a new compound in a text, mentally build it before you split it. Within weeks you will start <em>producing</em> compounds in speech — the moment German stops feeling like a foreign language and starts feeling like Lego.</p>
+
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>How do you build a German compound word?</h3><p>Combine modifier + linking sound (Fugenlaut) + head: krank + en + Haus = Krankenhaus. The modifier narrows the meaning; the head (last part) sets the article and the core meaning.</p></div><div class="faq-item"><h3>Which part of a German compound decides the article?</h3><p>Always the last part — the head. Das Haustier is neuter because das Tier is neuter; der Handschuh is masculine because der Schuh is. The builder above picks the article from your chosen head automatically.</p></div><div class="faq-item"><h3>Do German compounds always need a linking sound?</h3><p>No — (nothing) is the most common choice (Handschuh, Apfelbaum). When one is needed, -s-, -n-, -en-, -e-, or -er- are the options; the builder&#x27;s dropdown shows which contexts favour each.</p></div><div class="faq-item"><h3>How do I know if a compound I built is a real word?</h3><p>The builder checks your creation against 40 verified recipes and tells you. A grammatically perfect combination can still be non-existent — always verify an invented compound in a dictionary before using it.</p></div><div class="faq-item"><h3>Why is Krankenhaus neuter?</h3><p>Because its head is das Haus. The head decides the gender: Krankenhaus = a kind of Haus. The same rule gives der Handschuh (head: der Schuh) and die Arbeitszeit (head: die Zeit).</p></div><div class="faq-item"><h3>What are the most common Fugenlaute (linking sounds)?</h3><p>-s- (Arbeitszeit, Geburtstag), -n- (Wochenende), -en- (Krankenhaus), -e- (Hundehütte), -er- (Kindergarten). Natives choose by feel; learners should mimic known parallels rather than deriving rules.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+var ROOTS = {"krank": "sick", "haus": "house", "hand": "hand", "schuh": "shoe", "kühl": "cool", "schrank": "cupboard", "flug": "flight", "zeug": "stuff / gear", "bahn": "rail / track", "hof": "yard / court", "arbeit": "work", "zeit": "time", "wasser": "water", "schirm": "shield / screen", "regen": "rain", "zahn": "tooth", "arzt": "doctor", "tier": "animal", "führer": "leader / driver", "schein": "slip / licence", "leben": "life", "mittel": "means / agent", "dampf": "steam", "schiff": "ship", "fahrt": "journey / ride", "gesellschaft": "company / society", "kapitän": "captain", "donau": "Danube", "brot": "bread", "milch": "milk", "käse": "cheese", "butter": "butter", "apfel": "apple", "baum": "tree", "garten": "garden", "stadt": "city", "dorf": "village", "straße": "street", "platz": "place / square", "auto": "car", "rad": "wheel", "zug": "train", "hafen": "harbour", "schule": "school", "lehrer": "teacher", "schüler": "pupil", "buch": "book", "tisch": "table", "stuhl": "chair", "bett": "bed", "zimmer": "room", "küche": "kitchen", "tür": "door", "fenster": "window", "wand": "wall", "dach": "roof", "keller": "cellar", "brief": "letter", "kasten": "box", "geld": "money", "beutel": "pouch", "tasche": "bag", "sack": "sack", "messer": "knife", "gabel": "fork", "löffel": "spoon", "teller": "plate", "topf": "pot", "pfanne": "pan", "herd": "stove", "spiel": "game / play", "kind": "child", "mann": "man", "frau": "woman", "tag": "day", "nacht": "night", "morgen": "morning", "abend": "evening", "woche": "week", "jahr": "year", "sommer": "summer", "winter": "winter", "frühling": "spring", "herbst": "autumn", "sonne": "sun", "mond": "moon", "stern": "star", "himmel": "sky", "erde": "earth", "feuer": "fire", "luft": "air", "holz": "wood", "stein": "stone", "eisen": "iron", "gold": "gold", "papier": "paper", "glas": "glass", "bild": "picture", "maschine": "machine", "fern": "far", "seher": "seer / viewer", "schreib": "write", "klasse": "class", "aufgabe": "task", "stunde": "hour / lesson", "plan": "plan", "tanne": "fir", "rat": "council / advice", "kinder": "children", "treppe": "stairs", "ende": "end", "geburt": "birth", "hoch": "high", "weich": "soft", "weihnacht": "Christmas", "schwester": "sister", "bruder": "brother", "mutter": "mother", "vater": "father", "kaffee": "coffee", "wasch": "wash", "spül": "rinse", "bürste": "brush", "karte": "card / ticket", "fahr": "drive / ride", "versicherung": "insurance", "meldung": "report", "schaden": "harm / damage", "freude": "joy", "liebling": "darling / favourite", "hunde": "dogs", "hütte": "hut", "geschwind": "speedy / swift", "igkeit": "-ness (noun-forming suffix)"};
+var RECIPES = [{"m": "krank", "f": "en", "h": "haus", "art": "das", "act": "hospital"}, {"m": "hand", "f": "", "h": "schuh", "art": "der", "act": "glove"}, {"m": "kühl", "f": "", "h": "schrank", "art": "der", "act": "refrigerator"}, {"m": "flug", "f": "", "h": "zeug", "art": "das", "act": "aeroplane"}, {"m": "bahn", "f": "", "h": "hof", "art": "der", "act": "train station"}, {"m": "regen", "f": "", "h": "schirm", "art": "der", "act": "umbrella"}, {"m": "zahn", "f": "", "h": "arzt", "art": "der", "act": "dentist"}, {"m": "haus", "f": "", "h": "tier", "art": "das", "act": "pet"}, {"m": "führer", "f": "", "h": "schein", "art": "der", "act": "driving licence"}, {"m": "arbeit", "f": "s", "h": "zeit", "art": "die", "act": "working hours"}, {"m": "leben", "f": "s", "h": "mittel", "art": "das", "act": "groceries / food"}, {"m": "brief", "f": "", "h": "kasten", "art": "der", "act": "postbox"}, {"m": "geld", "f": "", "h": "beutel", "art": "der", "act": "wallet / purse"}, {"m": "geburt", "f": "s", "h": "tag", "art": "der", "act": "birthday"}, {"m": "woche", "f": "n", "h": "ende", "art": "das", "act": "weekend"}, {"m": "zahn", "f": "", "h": "bürste", "art": "die", "act": "toothbrush"}, {"m": "kaffee", "f": "", "h": "maschine", "art": "die", "act": "coffee maker"}, {"m": "wasch", "f": "", "h": "maschine", "art": "die", "act": "washing machine"}, {"m": "fern", "f": "", "h": "seher", "art": "der", "act": "television"}, {"m": "bild", "f": "", "h": "schirm", "art": "der", "act": "screen / monitor"}, {"m": "schreib", "f": "", "h": "tisch", "art": "der", "act": "desk"}, {"m": "apfel", "f": "", "h": "baum", "art": "der", "act": "apple tree"}, {"m": "spiel", "f": "", "h": "platz", "art": "der", "act": "playground"}, {"m": "flug", "f": "", "h": "hafen", "art": "der", "act": "airport"}, {"m": "fahr", "f": "", "h": "karte", "art": "die", "act": "ticket"}, {"m": "straße", "f": "n", "h": "bahn", "art": "die", "act": "tram / streetcar"}, {"m": "auto", "f": "", "h": "bahn", "art": "die", "act": "motorway"}, {"m": "eisen", "f": "", "h": "bahn", "art": "die", "act": "railway"}, {"m": "milch", "f": "", "h": "straße", "art": "die", "act": "Milky Way"}, {"m": "butter", "f": "", "h": "brot", "art": "das", "act": "bread and butter"}, {"m": "weihnacht", "f": "s", "h": "mann", "art": "der", "act": "Father Christmas"}, {"m": "tanne", "f": "n", "h": "baum", "art": "der", "act": "Christmas tree"}, {"m": "rat", "f": "", "h": "haus", "art": "das", "act": "town hall"}, {"m": "kind", "f": "er", "h": "garten", "art": "der", "act": "kindergarten"}, {"m": "schaden", "f": "", "h": "freude", "art": "die", "act": "malicious joy"}, {"m": "treppe", "f": "n", "h": "haus", "art": "das", "act": "stairwell"}, {"m": "sommer", "f": "", "h": "haus", "art": "das", "act": "summer house"}, {"m": "nacht", "f": "", "h": "zug", "art": "der", "act": "night train"}, {"m": "wasser", "f": "", "h": "bett", "art": "das", "act": "waterbed"}, {"m": "hoch", "f": "", "h": "zeit", "art": "die", "act": "wedding"}];
+var HEADS = {"haus": "das", "schuh": "der", "schrank": "der", "zeug": "das", "hof": "der", "schirm": "der", "arzt": "der", "tier": "das", "schein": "der", "zeit": "die", "mittel": "das", "kasten": "der", "beutel": "der", "tag": "der", "ende": "das", "bürste": "die", "maschine": "die", "seher": "der", "tisch": "der", "baum": "der", "platz": "der", "hafen": "der", "karte": "die", "bahn": "die", "straße": "die", "brot": "das", "mann": "der", "garten": "der", "freude": "die", "zug": "der", "bett": "das"};
+var FUGEN_HINTS = {"": "no linking sound — the most common choice", "s": "-s- · common after -heit, -keit, -ung, -schaft and many fixed compounds", "n": "-n- · common after feminine nouns ending in -e (Woche→Wochen-)", "en": "-en- · common after weak masculine nouns and plurals (krank→kranken-)", "e": "-e- · rarer, e.g. Hundehütte", "er": "-er- · common after -er plurals (Kind→Kinder-)"};
+function cap(s){ var c = s.charAt(0); c = (c === "ß") ? "ẞ" : c.toUpperCase(); return c + s.slice(1); }
+function buildCompound(mod, fugen, head){ return cap(mod + fugen + head); }
+function articleOf(head){ return HEADS[head]; }
+function recipeKey(m, f, h){ return m + "|" + f + "|" + h; }
+var REALKEYS = {};
+RECIPES.forEach(function(r){ REALKEYS[recipeKey(r.m, r.f, r.h)] = r; });
+(function initBuilder(){
+  var ms = document.getElementById("b-mod"), fs = document.getElementById("b-fugen"), hs = document.getElementById("b-head");
+  Object.keys(ROOTS).sort().forEach(function(k){
+    var o = document.createElement("option"); o.value = k; o.textContent = k + " (" + ROOTS[k] + ")"; ms.appendChild(o);
+  });
+  Object.keys(FUGEN_HINTS).forEach(function(k){
+    var o = document.createElement("option"); o.value = k;
+    o.textContent = k === "" ? "(none)" : "-" + k + "-"; fs.appendChild(o);
+  });
+  Object.keys(HEADS).sort().forEach(function(k){
+    var o = document.createElement("option"); o.value = k;
+    o.textContent = HEADS[k] + " " + cap(k) + " (" + (ROOTS[k] || k) + ")"; hs.appendChild(o);
+  });
+  ms.value = "krank"; fs.value = "en"; hs.value = "haus";
+})();
+function buildWord(){
+  var m = document.getElementById("b-mod").value;
+  var f = document.getElementById("b-fugen").value;
+  var h = document.getElementById("b-head").value;
+  var out = document.getElementById("build-out");
+  var word = buildCompound(m, f, h);
+  var art = articleOf(h);
+  var literal = "\u201C" + ROOTS[m] + "-" + (ROOTS[h] || h) + "\u201D";
+  var real = REALKEYS[recipeKey(m, f, h)];
+  var html = '<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:16px;margin-top:16px">';
+  html += '<div style="font-size:1.4rem;font-weight:700;color:#0f172a">' + art + " " + word + "</div>";
+  html += '<div style="margin-top:8px"><strong>Recipe:</strong> ' + m + (f ? ' <span style="color:#2563eb">+' + f + "</span> + " : " + ") + h + "</div>";
+  html += '<div><strong>Literal:</strong> ' + literal + '</div>';
+  html += '<div style="color:#475569;margin-top:4px">The head <strong>' + h + "</strong> sets the article (<strong>" + art + "</strong>) and the core meaning: a kind of " + (ROOTS[h] || h) + ".</div>";
+  if(real) html += '<div style="margin-top:8px;color:#065f46;font-weight:600">\u2713 Verified real word — it means \u201C' + real.act + "\u201D.</div>";
+  else html += '<div style="margin-top:8px;color:#92400e">The form is grammatically correct, but this combination is not in our verified list — check a dictionary before using it as a real word.</div>';
+  html += "</div>";
+  out.innerHTML = html;
+}
+function loadRecipe(i){
+  var r = RECIPES[i];
+  document.getElementById("b-mod").value = r.m;
+  document.getElementById("b-fugen").value = r.f;
+  document.getElementById("b-head").value = r.h;
+  buildWord();
+  document.getElementById("build-out").scrollIntoView({behavior:"smooth", block:"center"});
+}
+(function renderRecipes(){
+  var box = document.getElementById("rlist");
+  RECIPES.forEach(function(r, i){
+    var d = document.createElement("div");
+    d.style.cssText = "background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px 16px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap";
+    var left = document.createElement("div");
+    left.innerHTML = '<div style="font-weight:700;color:#0f172a"></div><div style="color:#2563eb;font-size:.9rem"></div><div style="color:#059669;font-size:.9rem"></div>';
+    left.children[0].textContent = r.art + " " + buildCompound(r.m, r.f, r.h);
+    left.children[1].textContent = r.m + (r.f ? " + " + r.f + " + " : " + ") + r.h;
+    left.children[2].textContent = "Really: " + r.act;
+    var b = document.createElement("button");
+    b.type = "button"; b.textContent = "Load into builder";
+    b.style.cssText = "background:#eff6ff;border:1px solid #bfdbfe;color:#1d4ed8;border-radius:8px;padding:8px 14px;cursor:pointer;font-family:inherit;font-weight:600";
+    b.addEventListener("click", function(){ loadRecipe(i); });
+    d.appendChild(left); d.appendChild(b);
+    box.appendChild(d);
+  });
+})();
+function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
+function buildOptions(answer, distractors, n){
+  var opts = [answer], seen = {};
+  seen[answer] = true;
+  var pool = distractors.slice();
+  while(opts.length < n && pool.length){
+    var i = Math.floor(Math.random() * pool.length);
+    var v = pool.splice(i, 1)[0];
+    if(!seen[v]){ seen[v] = true; opts.push(v); }
+  }
+  for(var i = opts.length - 1; i > 0; i--){
+    var j = Math.floor(Math.random() * (i + 1));
+    var t = opts[i]; opts[i] = opts[j]; opts[j] = t;
+  }
+  return opts;
+}
+function makeDistractors(r){
+  var out = [], seen = {};
+  var ans = buildCompound(r.m, r.f, r.h);
+  var cands = [];
+  var fgs = ["", "s", "n", "en", "e", "er"];
+  fgs.forEach(function(fg){
+    if(fg !== r.f) cands.push(buildCompound(r.m, fg, r.h));
+  });
+  cands.push(cap(r.h + r.f + r.m));
+  cands.push(ans.charAt(0).toLowerCase() + ans.slice(1));
+  cands = shuffle(cands);
+  cands.forEach(function(c){
+    if(c !== ans && !seen[c]){ seen[c] = true; out.push(c); }
+  });
+  return out.slice(0, 3);
+}
+var pool = [], qi = 0, correctN = 0, missedN = 0, missedList = [], qa = null, qmode = "", ROUNDS = 15;
+function startQuiz(){
+  pool = shuffle(RECIPES.slice());
+  qi = 0; correctN = 0; missedN = 0; missedList = [];
+  document.getElementById("quiz-zone").style.display = "block";
+  document.getElementById("quiz-summary").innerHTML = "";
+  document.getElementById("qstart").style.display = "none";
+  showQ();
+}
+function showQ(){
+  qa = pool[qi % pool.length];
+  qmode = (qi % 3 === 2) ? "article" : "assemble";
+  var box = document.getElementById("quiz-options"); box.innerHTML = "";
+  var fb = document.getElementById("quiz-feedback"); fb.className = ""; fb.style.display = "none";
+  document.getElementById("quiz-next").style.display = "none";
+  document.getElementById("qcount").textContent = "Round " + (qi+1) + "/" + ROUNDS;
+  document.getElementById("qbar").style.width = (qi/ROUNDS*100) + "%";
+  if(qmode === "assemble"){
+    var parts = qa.m + (qa.f ? " + " + qa.f + " + " : " + ") + qa.h;
+    document.getElementById("quiz-sentence").textContent = "Build it:  " + parts + '  ("' + qa.act + '")';
+    qa._answer = buildCompound(qa.m, qa.f, qa.h);
+    buildOptions(qa._answer, makeDistractors(qa), 4).forEach(function(opt){
+      var b = document.createElement("button");
+      b.className = "quiz-btn"; b.textContent = opt;
+      b.addEventListener("click", function(){ answerQ(opt, b); });
+      box.appendChild(b);
+    });
+  } else {
+    var w = buildCompound(qa.m, qa.f, qa.h);
+    document.getElementById("quiz-sentence").textContent = "Which article?  " + w + "   (head: " + qa.h + ")";
+    qa._answer = qa.art;
+    ["der","die","das"].forEach(function(opt){
+      var b = document.createElement("button");
+      b.className = "quiz-btn"; b.textContent = opt + " " + w;
+      b.addEventListener("click", function(){ answerQ(opt, b); });
+      box.appendChild(b);
+    });
+  }
+}
+function answerQ(opt, btn){
+  var fb = document.getElementById("quiz-feedback");
+  var btns = document.querySelectorAll("#quiz-options .quiz-btn");
+  btns.forEach(function(x){ x.disabled = true; if(x.textContent === qa._answer || x.textContent === qa._answer + " " + buildCompound(qa.m, qa.f, qa.h)) x.classList.add("correct"); });
+  var good = (opt === qa._answer);
+  var w = buildCompound(qa.m, qa.f, qa.h);
+  if(good){
+    correctN++; fb.className = "ok";
+    fb.textContent = "\u2713 Correct! " + qa.art + " " + w + " = \u201C" + qa.act + "\u201D.";
+  } else {
+    missedN++; missedList.push(qa); fb.className = "no";
+    btn.classList.add("wrong");
+    fb.textContent = "\u2717 It is " + qa.art + " " + w + " (" + qa.m + (qa.f ? " + " + qa.f : "") + " + " + qa.h + ") = \u201C" + qa.act + "\u201D.";
+  }
+  document.getElementById("qscore").textContent = "Correct: " + correctN + " · Missed: " + missedN;
+  var nb = document.getElementById("quiz-next");
+  nb.style.display = "block";
+  nb.textContent = (qi + 1 < ROUNDS) ? "Next" : "See results";
+}
+function nextQ(){
+  qi++;
+  if(qi < ROUNDS) showQ();
+  else {
+    document.getElementById("quiz-sentence").textContent = "";
+    document.getElementById("quiz-options").innerHTML = "";
+    document.getElementById("quiz-feedback").style.display = "none";
+    document.getElementById("quiz-next").style.display = "none";
+    document.getElementById("qbar").style.width = "100%";
+    var uniq = {};
+    missedList.forEach(function(m){ uniq[m.m + "|" + m.h] = m; });
+    var missArr = Object.keys(uniq).map(function(k){ return uniq[k]; });
+    var msg = "<strong>" + correctN + " / " + ROUNDS + " correct.</strong> ";
+    if(missArr.length === 0) msg += "Komposita-Baumeister — you build compounds like a native.";
+    else {
+      msg += "Review these:<ul style='margin:10px 0 0 20px'>";
+      missArr.forEach(function(m){ msg += "<li>" + m.art + " " + buildCompound(m.m, m.f, m.h) + " (" + m.act + ")</li>"; });
+      msg += "</ul>";
+    }
+    document.getElementById("quiz-summary").innerHTML = msg;
+  }
+}
+
+
+</script>
+</body>
+</html>
