@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Word Order Trainer — V2, TeKaMoLo &amp; Sentence Bracket | Bayzubaan</title>
+<meta name="description" content="Master German word order: 15-question trainer on the V2 rule, inversion, TeKaMoLo adverbial order, the sentence bracket, verb-final subordinate clauses and pronoun placement.">
+<link rel="canonical" href="https://bayzubaan.com/tools/word-order-trainer/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="German Word Order Trainer — V2, TeKaMoLo &amp; Sentence Bracket">
+<meta property="og:description" content="15 word-order puzzles: V2, inversion, TeKaMoLo, verb-final clauses and the sentence bracket — with full explanations.">
+<meta property="og:url" content="https://bayzubaan.com/tools/word-order-trainer/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="German Word Order Trainer — V2, TeKaMoLo &amp; Sentence Bracket">
+<meta name="twitter:description" content="15 word-order puzzles: V2, inversion, TeKaMoLo, verb-final clauses and the sentence bracket — with full explanations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the V2 rule in German?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In main clauses the conjugated verb is always in second position: Ich gehe heute ins Kino. If an adverb comes first, the subject inverts to third position: Heute gehe ich ins Kino."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is TeKaMoLo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The adverbial order: Temporal (time) → Kausal (cause) → Modal (manner) → Lokal (place). Example: Er kommt morgen (time) mit dem Zug (manner). Ich bleibe heute wegen des Regens zu Hause."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does the verb go in a subordinate clause?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At the very end: Weil er krank ist, …; …, dass er kommt. If the subordinate clause opens the sentence, the main clause still keeps V2: Weil er krank ist, bleibt er zu Hause."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the German sentence bracket (Satzklammer)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The conjugated verb sits in second position while participles, infinitives and separable prefixes go to the end: Ich habe das Buch gelesen. Sie ruft mich morgen an. Er will nach Berlin fahren."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the dative or accusative object come first?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dative before accusative for nouns (Ich gebe dem Kind das Buch), but pronouns come before nouns and accusative pronouns before dative ones: Ich gebe es ihm."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>German Word Order Trainer</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">15 word-order puzzles: V2, inversion, TeKaMoLo, verb-final clauses and the sentence bracket — with full explanations.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+<div class="quiz-meta"><span id="qcount">Question 1/15</span><span id="qscore">Score: 0</span></div>
+<div class="progress"><div id="pbar"></div></div>
+<div id="quiz-box">
+<p style="margin-bottom:14px;font-size:1.15rem">Put the words in the correct German order: <strong id="q-sent"></strong></p>
+<p style="color:#64748b;font-size:.9rem;margin-bottom:10px">Pattern: <span id="q-verb"></span></p>
+<div id="q-opts"></div>
+<div id="quiz-feedback"></div>
+</div>
+<div id="quiz-summary" style="display:none"></div>
+</div>
+
+<article class="prose">
+<h2>The V2 rule: German's one non-negotiable</h2>
+<p>German main clauses obey one iron law: the <strong>conjugated verb is in second position</strong> (V2). <span class="hl">Ich gehe heute ins Kino.</span> <span class="hl">Heute gehe ich ins Kino.</span> <span class="hl">Ins Kino gehe ich heute.</span> All three are correct — the first element can be the subject, a time adverb, or a place phrase — but the verb never moves from position two. English speakers instinctively want <em>Heute ich gehe</em>; German demands <strong>inversion</strong>: when anything other than the subject comes first, the subject moves to third position. <span class="hl">Gestern habe ich ihn gesehen.</span> This single rule fixes half of all learner word-order errors.</p>
+<h2>The sentence bracket (Satzklammer)</h2>
+<p>German verbs frame the sentence: the conjugated part sits in second position while participles, infinitives, and separable prefixes pile up at the <strong>end</strong>. <span class="hl">Ich habe das Buch gelesen.</span> <span class="hl">Er will nach Berlin fahren.</span> <span class="hl">Sie ruft mich morgen an.</span> <span class="hl">Das muss gemacht werden.</span> Everything between the two halves — objects, adverbials, subordinate clauses — sits inside the bracket. Long German sentences feel tangled to learners precisely because the bracket can stretch for lines before the closing verb arrives; train yourself to hold the opening verb in mind and wait for the bracket to close.</p>
+<h2>TeKaMoLo: time, manner, place</h2>
+<p>When several adverbials share a clause, German orders them <strong>temporal → causal → modal → local</strong> — remembered as <strong>TeKaMoLo</strong> (Temporal, Kausal, Modal, Lokal). <span class="hl">Er kommt morgen (time) mit dem Zug (manner).</span> <span class="hl">Sie fährt mit dem Auto (manner) nach Hamburg (place).</span> <span class="hl">Er ist gestern (time) spät (manner) gekommen.</span> <span class="hl">Ich bleibe heute (time) wegen des Regens (cause) zu Hause (place).</span> Definite time expressions also precede indefinite ones: <span class="hl">Ich gehe heute Abend ins Kino</span> flows better than the reverse. TeKaMoLo is a strong tendency rather than an absolute law, but following it makes your German sound instantly more native.</p>
+<h2>Verb-final in subordinate clauses</h2>
+<p>Every subordinate clause — dass, weil, wenn, ob, relative clauses — sends the conjugated verb to the <strong>end</strong>: <span class="hl">Weil er krank ist, bleibt er zu Hause.</span> <span class="hl">Ich denke, dass er kommt.</span> <span class="hl">Der Mann, der dort steht, lacht.</span> With compound tenses the whole verb cluster stacks at the end in a fixed order: <span class="hl">…, weil er das Buch gelesen hat.</span> <span class="hl">…, dass sie nach Berlin fahren will.</span> <span class="hl">…, wenn du Zeit hast.</span> When a subordinate clause opens the sentence, the main clause still obeys V2 — counting the whole subordinate clause as position one: <span class="hl">Weil er krank ist, bleibt er zu Hause.</span> (bleibt is second.)</p>
+<h2>Questions and imperatives</h2>
+<p>Yes/no questions put the verb <strong>first</strong> (V1): <span class="hl">Kannst du mir helfen?</span> <span class="hl">Hast du Zeit?</span> W-questions put the question word first and the verb second: <span class="hl">Wo wohnst du?</span> <span class="hl">Warum lernst du Deutsch?</span> Imperatives are verb-first too, keeping the bracket: <span class="hl">Ruf mich an!</span> <span class="hl">Gehen Sie bitte zum Arzt.</span> <span class="hl">Leg das Buch auf den Tisch.</span> Note how the separable prefix still goes last even in commands — the bracket survives every sentence type.</p>
+<h2>Position of objects and pronouns</h2>
+<p>Pronoun objects hug the verb: <span class="hl">Ich gebe es ihm.</span> <span class="hl">Gestern habe ich ihn gesehen.</span> The order among objects is <strong>dative before accusative</strong> for nouns (<span class="hl">Ich gebe dem Kind das Buch</span>), but <strong>accusative before dative</strong> for pronouns (<span class="hl">Ich gebe es ihm</span>). Mixed: pronoun before noun regardless of case (<span class="hl">Ich gebe es dem Kind / Ich gebe ihm das Buch</span>). This is the detail that separates fluent B2 from C1 production — get the pronoun order automatic and your sentences gain a native rhythm.</p>
+<h2>Common mistakes</h2>
+<ul>
+<li><em>Heute ich gehe ins Kino</em> — wrong; fronted adverb needs inversion: <span class="hl">Heute gehe ich ins Kino.</span></li>
+<li><em>Ich habe gelesen das Buch</em> — wrong; the participle closes the bracket: <span class="hl">Ich habe das Buch gelesen.</span></li>
+<li><em>Weil er ist krank</em> — wrong; subordinate verb-final: <span class="hl">Weil er krank ist.</span></li>
+<li><em>Er kommt mit dem Zug morgen</em> — unnatural; TeKaMoLo: <span class="hl">Er kommt morgen mit dem Zug.</span></li>
+<li><em>Ich gebe dem Kind es</em> — wrong; pronoun before noun: <span class="hl">Ich gebe es dem Kind.</span></li>
+<li><em>Sie anruft mich morgen</em> — wrong; separable prefix last: <span class="hl">Sie ruft mich morgen an.</span></li>
+<li><em>Wenn du hast Zeit, ruf mich an</em> — wrong; wenn-clause verb-final: <span class="hl">Wenn du Zeit hast</span>.</li>
+</ul>
+<h2>Practice method</h2>
+<p>Take any English paragraph and translate it sentence by sentence, marking each verb's position with a number as you write: ② for the V2 verb, Ⓔ for the bracket-closer. Do this for twenty sentences and the positions become visual. Then practise inversion deliberately: write ten sentences starting with the subject, then rewrite each starting with a time adverb — <span class="hl">Ich gehe heute ins Kino → Heute gehe ich ins Kino.</span> Finally, read German news aloud and pause before each clause-final verb, predicting it before you read it — this trains the bracket-holding skill that fluent reading requires.</p>
+<p>Run the quiz above, then write a ten-sentence diary entry using at least three fronted adverbs, two subordinate clauses, and one separable verb.</p>
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>What is the V2 rule in German?</h3><p>In main clauses the conjugated verb is always in second position: Ich gehe heute ins Kino. If an adverb comes first, the subject inverts to third position: Heute gehe ich ins Kino.</p></div><div class="faq-item"><h3>What is TeKaMoLo?</h3><p>The adverbial order: Temporal (time) → Kausal (cause) → Modal (manner) → Lokal (place). Example: Er kommt morgen (time) mit dem Zug (manner). Ich bleibe heute wegen des Regens zu Hause.</p></div><div class="faq-item"><h3>Where does the verb go in a subordinate clause?</h3><p>At the very end: Weil er krank ist, …; …, dass er kommt. If the subordinate clause opens the sentence, the main clause still keeps V2: Weil er krank ist, bleibt er zu Hause.</p></div><div class="faq-item"><h3>What is the German sentence bracket (Satzklammer)?</h3><p>The conjugated verb sits in second position while participles, infinitives and separable prefixes go to the end: Ich habe das Buch gelesen. Sie ruft mich morgen an. Er will nach Berlin fahren.</p></div><div class="faq-item"><h3>Does the dative or accusative object come first?</h3><p>Dative before accusative for nouns (Ich gebe dem Kind das Buch), but pronouns come before nouns and accusative pronouns before dative ones: Ich gebe es ihm.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+const ITEMS = [
+  {"s": "ich / gehe / heute / ins Kino", "v": "main clause", "o": ["Ich gehe heute ins Kino.", "Ich heute gehe ins Kino.", "Gehe ich heute ins Kino."], "c": "Ich gehe heute ins Kino.", "e": "V2 rule: the conjugated verb (gehe) is in second position; the subject (ich) is first."},
+  {"s": "heute / gehe / ich / ins Kino", "v": "fronted adverb", "o": ["Heute gehe ich ins Kino.", "Heute ich gehe ins Kino.", "Heute gehe ins Kino ich."], "c": "Heute gehe ich ins Kino.", "e": "Fronted time adverb triggers inversion: verb second, subject third — Heute gehe ich …"},
+  {"s": "er / kommt / morgen / mit dem Zug", "v": "TeKaMoLo", "o": ["Er kommt morgen mit dem Zug.", "Er kommt mit dem Zug morgen.", "Er morgen kommt mit dem Zug."], "c": "Er kommt morgen mit dem Zug.", "e": "Time before place: morgen (time) comes before mit dem Zug (place)."},
+  {"s": "weil / er / krank / ist", "v": "subordinate clause", "o": ["Weil er krank ist.", "Weil er ist krank.", "Weil ist er krank."], "c": "Weil er krank ist.", "e": "Subordinate clause: conjugated verb goes last — weil er krank IST."},
+  {"s": "ich / habe / das Buch / gelesen", "v": "Perfekt bracket", "o": ["Ich habe das Buch gelesen.", "Ich habe gelesen das Buch.", "Ich das Buch habe gelesen."], "c": "Ich habe das Buch gelesen.", "e": "Sentence bracket: habe (V2) … gelesen (end). The participle closes the bracket."},
+  {"s": "sie / ruft / mich / morgen / an", "v": "separable verb", "o": ["Sie ruft mich morgen an.", "Sie ruft an mich morgen.", "Sie anruft mich morgen."], "c": "Sie ruft mich morgen an.", "e": "Separable prefix goes last: ruft (V2) … an (end)."},
+  {"s": "er / will / nach Berlin / fahren", "v": "modal + infinitive", "o": ["Er will nach Berlin fahren.", "Er will fahren nach Berlin.", "Er nach Berlin will fahren."], "c": "Er will nach Berlin fahren.", "e": "Modal verb second; main infinitive at the end: will … fahren."},
+  {"s": "gestern / habe / ich / ihn / gesehen", "v": "fronted + Perfekt", "o": ["Gestern habe ich ihn gesehen.", "Gestern ich habe ihn gesehen.", "Gestern habe ihn ich gesehen."], "c": "Gestern habe ich ihn gesehen.", "e": "Fronted adverb + inversion + bracket: Gestern habe (V2) ich ihn gesehen (end)."},
+  {"s": "der Mann / der / dort / steht", "v": "relative clause", "o": ["Der Mann, der dort steht.", "Der Mann, der steht dort.", "Der Mann, steht der dort."], "c": "Der Mann, der dort steht.", "e": "Relative clause is verb-final: der dort STEHT."},
+  {"s": "kannst / du / mir / helfen", "v": "yes/no question", "o": ["Kannst du mir helfen?", "Du kannst mir helfen?", "Kannst mir du helfen?"], "c": "Kannst du mir helfen?", "e": "Yes/no questions put the verb first (V1): Kannst du …?"},
+  {"s": "er / ist / gestern / spät / gekommen", "v": "TeKaMoLo", "o": ["Er ist gestern spät gekommen.", "Er ist spät gestern gekommen.", "Er gestern ist spät gekommen."], "c": "Er ist gestern spät gekommen.", "e": "Time (gestern) before manner (spät): TeKaMoLo order."},
+  {"s": "sie / fährt / mit dem Auto / nach Hamburg", "v": "TeKaMoLo", "o": ["Sie fährt mit dem Auto nach Hamburg.", "Sie fährt nach Hamburg mit dem Auto.", "Sie mit dem Auto fährt nach Hamburg."], "c": "Sie fährt mit dem Auto nach Hamburg.", "e": "Manner (mit dem Auto) before place (nach Hamburg)."},
+  {"s": "ich denke / dass / er / kommt", "v": "dass-clause", "o": ["Ich denke, dass er kommt.", "Ich denke, dass er kommt nicht.", "Ich denke, dass kommt er."], "c": "Ich denke, dass er kommt.", "e": "Dass-clause is verb-final: dass er KOMMT. Main clause stays V2."},
+  {"s": "morgen / wird / es / regnen", "v": "fronted + future", "o": ["Morgen wird es regnen.", "Morgen es wird regnen.", "Morgen wird regnen es."], "c": "Morgen wird es regnen.", "e": "Fronted adverb, inversion, infinitive at end: Morgen wird (V2) es regnen."},
+  {"s": "wenn / du / Zeit / hast / ruf / mich / an", "v": "conditional + imperative", "o": ["Wenn du Zeit hast, ruf mich an.", "Wenn du hast Zeit, ruf mich an.", "Wenn du Zeit hast, du ruf mich an."], "c": "Wenn du Zeit hast, ruf mich an.", "e": "Wenn-clause verb-final (hast last); imperative verb-first (ruf … an) in the main clause."}
+];
+let idx = 0, score = 0;
+function next(){
+  document.getElementById("quiz-summary").style.display = "none";
+  document.getElementById("quiz-box").style.display = "block";
+  if (idx >= ITEMS.length){ summary(); return; }
+  const it = ITEMS[idx];
+  document.getElementById("q-sent").innerHTML = it.s.split(" / ").map(w => "<span class='hl'>" + w + "</span>").join(" · ");
+  document.getElementById("q-verb").textContent = it.v;
+  document.getElementById("qcount").textContent = "Question " + (idx+1) + "/" + ITEMS.length;
+  document.getElementById("qscore").textContent = "Score: " + score;
+  document.getElementById("pbar").style.width = (idx/ITEMS.length*100) + "%";
+  const box = document.getElementById("q-opts");
+  box.innerHTML = "";
+  const fb = document.getElementById("quiz-feedback");
+  fb.className = ""; fb.style.display = "none";
+  const opts = [...it.o].sort(() => Math.random() - 0.5);
+  for (const o of opts){
+    const b = document.createElement("button");
+    b.className = "quiz-btn"; b.textContent = o;
+    b.addEventListener("click", () => answer(b, o === it.c));
+    box.appendChild(b);
+  }
+}
+function answer(btn, ok){
+  const it = ITEMS[idx];
+  const btns = document.querySelectorAll("#q-opts .quiz-btn");
+  btns.forEach(b => { b.disabled = true; if (b.textContent === it.c) b.classList.add("correct"); });
+  const fb = document.getElementById("quiz-feedback");
+  fb.style.display = "block";
+  if (ok){ score++; fb.className = "ok"; fb.textContent = "✓ Correct! " + it.v; }
+  else { btn.classList.add("wrong"); fb.className = "no"; fb.innerHTML = "✗ The answer is <strong>" + it.c + "</strong>. " + it.e; }
+  document.getElementById("qscore").textContent = "Score: " + score;
+  setTimeout(() => { idx++; next(); }, ok ? 900 : 3000);
+}
+function summary(){
+  document.getElementById("quiz-box").style.display = "none";
+  const s = document.getElementById("quiz-summary");
+  s.style.display = "block";
+  document.getElementById("pbar").style.width = "100%";
+  s.innerHTML = "<h2 style='margin-bottom:12px'>Results: " + score + "/15</h2>" +
+    "<p>" + (score >= 13 ? "Excellent — German word order under control!" : score >= 9 ? "Good — review the explanations and try again." : "Keep practising — V2, brackets and verb-final reward repetition.") + "</p>" +
+    "<button id='calc-btn' type='button' style='margin-top:16px' onclick='idx=0;score=0;next()'>Restart quiz</button>";
+}
+next();
+
+
+</script>
+</body>
+</html>
