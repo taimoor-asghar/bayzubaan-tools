@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Dictation Practice: Type What You Hear, Graded Word by Word | Bayzubaan</title>
+<meta name="description" content="German dictation practice with graded feedback: listen, type what you hear, get word-level scoring. 24 sentences across A1, B1, B2 plus challenge mode.">
+<link rel="canonical" href="https://bayzubaan.com/tools/dictation-practice/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="German Dictation Practice: Type What You Hear, Graded Word by Word">
+<meta property="og:description" content="Listen, type, get graded. 24 German dictation sentences from A1 to B2 with word-level feedback on every missed ending.">
+<meta property="og:url" content="https://bayzubaan.com/tools/dictation-practice/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="German Dictation Practice: Type What You Hear, Graded Word by Word">
+<meta name="twitter:description" content="Listen, type, get graded. 24 German dictation sentences from A1 to B2 with word-level feedback on every missed ending.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a dictation exercise?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You listen to a German sentence and type exactly what you hear. It trains listening, spelling, and grammar at once: you must catch every article, ending, and preposition. This tool plays sentences via your device's German voice and grades your answer word by word."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my dictation score low even though I understood the sentence?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Understanding is easier than reproducing. Most low scores come from missed endings (dem vs den, -en vs -e) and dropped small words — exactly the sounds learners filter out. The word-level feedback shows you precisely which words your ear is skipping."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does capitalisation affect my grade?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Grading is case-insensitive and ignores punctuation, so 'der hund' scores the same as 'Der Hund'. But you should still train yourself to capitalise nouns — in real German writing it is mandatory."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I start at A1 or B2?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start at A1 regardless of your level and move up when your average passes 90%. A1 sentences drill the core patterns (articles, verb endings, capitalisation) that every higher-level error is built on."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the Challenge mode work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Challenge mode mixes all 24 sentences across A1–B2 and hides the English translation, so you cannot use it as a crutch. It is the closest simulation of a real exam dictation in this trainer."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>German Dictation Practice: Type What You Hear</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">Listen, type, get graded. 24 German dictation sentences from A1 to B2 with word-level feedback on every missed ending.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+
+<style>
+.dic-card{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:20px;margin-bottom:14px}
+.dic-card textarea{width:100%;border:2px solid #e2e8f0;border-radius:8px;padding:10px;font-size:1rem;font-family:inherit;box-sizing:border-box}
+.dic-words{margin:12px 0;display:flex;flex-wrap:wrap;gap:6px}
+.dic-w{padding:4px 10px;border-radius:6px;font-size:.95rem}
+.dic-w.ok{background:#ecfdf5;border:1px solid #a7f3d0;color:#065f46}
+.dic-w.bad{background:#fef2f2;border:1px solid #fecaca;color:#991b1b}
+.fb{padding:12px 16px;border-radius:8px;margin:12px 0;font-size:1rem}
+.fb.ok{background:#ecfdf5;border:1px solid #10b981}
+.fb.no{background:#fef2f2;border:1px solid #ef4444}
+.dic-stat-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #f1f5f9}
+</style>
+
+<div style="margin-bottom:14px">
+<label for="dic-level" style="font-weight:600">Level:</label>
+<select id="dic-level" onchange="DIC_pickLevel()" style="padding:8px 12px;border:2px solid #e2e8f0;border-radius:8px;font-size:1rem">
+<option value="A1">A1 — short sentences</option>
+<option value="B1">B1 — with subordinate clauses</option>
+<option value="B2">B2 — full complexity</option>
+<option value="CH">Challenge — mixed, no translation</option>
+</select>
+</div>
+<div id="dic-card" class="dic-card"></div>
+<div id="dic-fb"></div>
+<div class="dic-stats" style="margin-top:16px">
+<strong>Session stats</strong>
+<div id="dic-stats">No sentences attempted yet.</div>
+</div>
+
+</div>
+
+<article class="prose">
+
+<p>Dictation — typing exactly what you hear — is one of the oldest and most effective exercises in language learning, and German is the perfect language for it. German spelling is far more regular than English: once you train your ear to hear the difference between "den" and "dem", between a long vowel and a short one, between "ß" and "ss", you can write almost anything you hear. But the reverse is also true: if you cannot hear those differences, your spoken German will always sound approximate. This dictation tool closes that loop: listen, type, get graded word by word.</p>
+
+<h2>How dictation trains three skills at once</h2>
+<p>First, listening: real speech runs words together, swallows endings, and drops the pitch at the end of statements. A dictation forces you to catch every article, every verb ending, every preposition — the small words that carry the grammar. Second, spelling: German capitalises all nouns, doubles consonants after short vowels ("kommen", "Wasser"), and uses ä, ö, ü where English would write plain vowels. You only learn these by producing them. Third, grammar: when you mishear "dem Mann" as "den Mann", the grader shows you exactly which case ending you missed, turning an ear problem into a grammar lesson. The tool's word-level feedback makes this visible after every sentence.</p>
+
+<h2>How to use this trainer</h2>
+<p>Start at A1 even if you are not a beginner. Pick a sentence, press play, and type exactly what you hear. You can replay the sentence as many times as you like — in the early rounds, slow playback (the turtle button) helps you catch the endings. After checking, study the words marked red: read the correct sentence out loud, then dictate the same sentence to yourself again. Move up to B1 when your A1 scores are consistently above 90%, and to B2 when B1 feels easy. The Challenge mode mixes all levels with no translation shown — the closest thing to a real German exam dictation.</p>
+
+<h2>How grading works</h2>
+<p>Each sentence is graded word by word, case-insensitively, ignoring punctuation: capitalisation and commas do not affect your score, because the point of the exercise is what you <em>heard</em>. A fully correct word earns a full point; a completely wrong or missing word earns nothing. The most common error pattern is dropped endings — "der" heard as "die", "-en" heard as "-e". The feedback panel lists every word you missed with the correct form, so you can see whether your errors are spelling errors, ear errors, or grammar errors. Track your average per level with the progress bars; a 90% average means you are ready to move up.</p>
+
+<h2>Typical German dictation traps</h2>
+<p>Five things catch almost every learner. <strong>1. Noun capitalisation:</strong> in your typed answer it does not affect the grade, but in real writing every noun takes a capital — train yourself to notice which words are nouns as you listen. <strong>2. ß vs ss:</strong> "Straße" (street) has a long vowel, "Fluss" (river) a short one; the spelling tells you the vowel length if you know the rule. <strong>3. Silent h (Dehnungs-h):</strong> "gehen", "sehen", "fahren" — you cannot hear the h, you must know it is there. <strong>4. ie vs i:</strong> "sie" (she/they) vs "sie" is fine, but "Biene" vs "Binne" is not — the ie is a long i:. <strong>5. Word-final devoicing:</strong> "Tag" sounds like "Tak", "lieb" like "liep"; write the g and b anyway. The B2 sentences above are chosen to contain all five traps.</p>
+
+<h2>What your score is actually telling you</h2>
+<p>A score is only useful if you know how to read it. Below 60%, the problem is usually vocabulary: you cannot type words you have never met, so the right move is more reading and word-bank work before more dictation. Between 60% and 85%, the errors shift to the ear — missed articles, swallowed endings, confused prepositions. This is the sweet spot where dictation helps the most, because every red word marks a sound your brain is filtering out. Above 90% on the first listen, your ear is genuinely ahead of your level and you should move up; hovering at 95% on A1 for weeks teaches you nothing new. One pattern to watch for: if your misses are always the same <em>kind</em> of word (articles, say, or verb prefixes), that is a grammar signal, not an ear signal — review the case drills or separable-verb quizzes for that specific topic, then return to dictation and watch the score jump.</p>
+
+<h2>From dictation to fluency</h2>
+<p>Dictation is a means, not an end. Use it for ten minutes a day alongside the other Batch 6 tools: the intonation trainer teaches you the melody you will hear in these sentences, the minimal-pairs quiz sharpens the sound contrasts that dictation exposes, and the number-listening drill covers the fastest, hardest part of real speech. When you can dictate B2 sentences at 90%+ on the first listen, your ear is genuinely exam-ready — for the Goethe B2 Hören section, for lectures, and for conversations where nobody slows down for you.</p>
+
+<p style="color:#64748b;font-size:.9rem">Created by Dr Taimoor Asghar, reviewed 2026-10-07. Sentences are original, levelled to CEFR descriptors; audio is your device's German speech-synthesis voice. Grading is case-insensitive and punctuation-insensitive; spelling rules follow Duden Rechtschreibung.</p>
+
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>What is a dictation exercise?</h3><p>You listen to a German sentence and type exactly what you hear. It trains listening, spelling, and grammar at once: you must catch every article, ending, and preposition. This tool plays sentences via your device&#x27;s German voice and grades your answer word by word.</p></div><div class="faq-item"><h3>Why is my dictation score low even though I understood the sentence?</h3><p>Understanding is easier than reproducing. Most low scores come from missed endings (dem vs den, -en vs -e) and dropped small words — exactly the sounds learners filter out. The word-level feedback shows you precisely which words your ear is skipping.</p></div><div class="faq-item"><h3>Does capitalisation affect my grade?</h3><p>No. Grading is case-insensitive and ignores punctuation, so &#x27;der hund&#x27; scores the same as &#x27;Der Hund&#x27;. But you should still train yourself to capitalise nouns — in real German writing it is mandatory.</p></div><div class="faq-item"><h3>Should I start at A1 or B2?</h3><p>Start at A1 regardless of your level and move up when your average passes 90%. A1 sentences drill the core patterns (articles, verb endings, capitalisation) that every higher-level error is built on.</p></div><div class="faq-item"><h3>How does the Challenge mode work?</h3><p>Challenge mode mixes all 24 sentences across A1–B2 and hides the English translation, so you cannot use it as a crutch. It is the closest simulation of a real exam dictation in this trainer.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+var _deVoice=null;
+function pickDeVoice(){
+  try{
+    var vs=speechSynthesis.getVoices();
+    for(var i=0;i<vs.length;i++){
+      if(vs[i].lang && vs[i].lang.toLowerCase().indexOf('de')===0){_deVoice=vs[i];break;}
+    }
+  }catch(e){}
+}
+try{
+  pickDeVoice();
+  if(typeof speechSynthesis!=='undefined'&&speechSynthesis.onvoiceschanged!==undefined){
+    speechSynthesis.onvoiceschanged=pickDeVoice;
+  }
+}catch(e){}
+function speakDE(t,rate){
+  try{
+    speechSynthesis.cancel();
+    var u=new SpeechSynthesisUtterance(t);
+    u.lang='de-DE';
+    if(_deVoice){u.voice=_deVoice;}
+    u.rate=rate||0.85;
+    speechSynthesis.speak(u);
+  }catch(e){
+    var el=document.getElementById('speak-note');
+    if(el){el.style.display='block';}
+  }
+}
+
+var DIC_SENTS=[{"de": "Ich wohne in Berlin.", "en": "I live in Berlin.", "lvl": "A1"}, {"de": "Der Hund spielt im Garten.", "en": "The dog is playing in the garden.", "lvl": "A1"}, {"de": "Heute ist das Wetter schön.", "en": "The weather is nice today.", "lvl": "A1"}, {"de": "Meine Schwester trinkt Kaffee.", "en": "My sister drinks coffee.", "lvl": "A1"}, {"de": "Der Zug fährt um acht Uhr ab.", "en": "The train leaves at eight o'clock.", "lvl": "A1"}, {"de": "Wir essen zusammen zu Abend.", "en": "We are having dinner together.", "lvl": "A1"}, {"de": "Das Kind liest ein Buch.", "en": "The child is reading a book.", "lvl": "A1"}, {"de": "Mein Vater arbeitet in der Stadt.", "en": "My father works in the city.", "lvl": "A1"}, {"de": "Obwohl es regnet, gehen wir spazieren.", "en": "Although it is raining, we are going for a walk.", "lvl": "B1"}, {"de": "Ich habe gestern einen interessanten Film gesehen.", "en": "I saw an interesting film yesterday.", "lvl": "B1"}, {"de": "Kannst du mir bitte das Salz geben?", "en": "Can you please pass me the salt?", "lvl": "B1"}, {"de": "Wir müssen uns beeilen, sonst verpassen wir den Bus.", "en": "We have to hurry, otherwise we will miss the bus.", "lvl": "B1"}, {"de": "Sie lernt Deutsch, weil sie in Hamburg studieren möchte.", "en": "She is learning German because she wants to study in Hamburg.", "lvl": "B1"}, {"de": "Der Arzt hat mir geraten, mehr Sport zu treiben.", "en": "The doctor advised me to do more sport.", "lvl": "B1"}, {"de": "Leider ist die Bäckerei am Sonntag geschlossen.", "en": "Unfortunately the bakery is closed on Sunday.", "lvl": "B1"}, {"de": "Ich freue mich schon auf den Urlaub am Meer.", "en": "I am already looking forward to the holiday by the sea.", "lvl": "B1"}, {"de": "Die Regierung hat beschlossen, die Steuern zu senken.", "en": "The government has decided to lower taxes.", "lvl": "B2"}, {"de": "Trotz der hohen Kosten lohnt sich die Investition langfristig.", "en": "Despite the high costs, the investment pays off in the long term.", "lvl": "B2"}, {"de": "Er behauptet, er habe von dem Betrug nichts gewusst.", "en": "He claims he knew nothing about the fraud.", "lvl": "B2"}, {"de": "Die Veranstaltung wurde wegen des Unwetters abgesagt.", "en": "The event was cancelled because of the storm.", "lvl": "B2"}, {"de": "Viele Experten warnen vor den Folgen des Klimawandels.", "en": "Many experts warn about the consequences of climate change.", "lvl": "B2"}, {"de": "Sie hat sich bei ihrem Chef für die Verspätung entschuldigt.", "en": "She apologised to her boss for being late.", "lvl": "B2"}, {"de": "Der Bericht enthält wichtige Hinweise für die Prüfung.", "en": "The report contains important hints for the exam.", "lvl": "B2"}, {"de": "Ohne Fleiß erreicht man in diesem Beruf nichts.", "en": "Without diligence you achieve nothing in this profession.", "lvl": "B2"}];
+var DIC={idx:0,stats:{},lvl:'A1'};
+function normWord(w){return w.toLowerCase().replace(/[.,!?;:"«»„“”()]/g,'');}
+function gradeDictation(expected,typed){
+  function nw(w){return w.toLowerCase().replace(/[.,!?;:"«»„“”()]/g,'');}
+  var ew=expected.trim().split(/\s+/).filter(function(x){return x.length;});
+  var tw=typed.trim().split(/\s+/).filter(function(x){return x.length;});
+  var res=[],correct=0;
+  for(var i=0;i<ew.length;i++){
+    var exp=nw(ew[i]);
+    var got=(i<tw.length)?nw(tw[i]):'';
+    var okm=(exp===got&&got.length>0);
+    if(okm)correct++;
+    res.push({exp:ew[i],got:(i<tw.length?tw[i]:'—'),ok:okm});
+  }
+  return {words:res,correct:correct,total:ew.length,score:ew.length?Math.round(100*correct/ew.length):0};
+}
+function DIC_pool(){
+  return DIC_SENTS.map(function(s,i){return i;}).filter(function(i){
+    return DIC.lvl==='CH'||DIC_SENTS[i].lvl===DIC.lvl;
+  });
+}
+function DIC_pickLevel(){
+  DIC.lvl=document.getElementById('dic-level').value;
+  DIC_next();
+}
+function DIC_next(){
+  var pool=DIC_pool();
+  DIC.idx=pool[Math.floor(Math.random()*pool.length)];
+  DIC_render();
+}
+function DIC_render(){
+  var s=DIC_SENTS[DIC.idx];
+  var html='<div class="quiz-meta"><span>'+s.lvl+(DIC.lvl==='CH'?' · Challenge':'')+'</span></div>'
+    +'<p style="font-size:1.05rem;margin:10px 0">Listen and type exactly what you hear.</p>'
+    +'<div><button class="speak-btn" onclick="speakDE(DIC_SENTS[DIC.idx].de,0.8)">&#128266; Play (normal)</button>'
+    +'<button class="speak-btn" onclick="speakDE(DIC_SENTS[DIC.idx].de,0.55)">&#128034; Play (slow)</button></div>';
+  if(DIC.lvl!=='CH'){html+='<p class="mic-note" style="margin-top:8px">Meaning: '+s.en+'</p>';}
+  html+='<div class="field" style="margin-top:12px"><label for="dic-input">Your dictation</label>'
+    +'<textarea id="dic-input" rows="3" placeholder="Type the German sentence you hear…"></textarea></div>'
+    +'<button id="calc-btn" onclick="DIC_check()">Check my dictation</button>';
+  document.getElementById('dic-card').innerHTML=html;
+  document.getElementById('dic-fb').innerHTML='';
+  var ta=document.getElementById('dic-input');
+  ta.addEventListener('keydown',function(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();DIC_check();}});
+}
+function DIC_check(){
+  var s=DIC_SENTS[DIC.idx];
+  var typed=document.getElementById('dic-input').value;
+  if(!typed.trim()){document.getElementById('dic-fb').innerHTML='<div class="fb no">Type the sentence first, then check.</div>';return;}
+  var g=gradeDictation(s.de,typed);
+  var key=DIC.lvl==='CH'?'CH':s.lvl;
+  if(!DIC.stats[key])DIC.stats[key]={n:0,sum:0};
+  DIC.stats[key].n++;DIC.stats[key].sum+=g.score;
+  var fb='<div class="fb '+(g.score===100?'ok':g.score>=70?'':'no')+'">'
+    +'<strong>'+g.score+'%</strong> · '+g.correct+' of '+g.total+' words correct.</div>'
+    +'<div class="dic-words">';
+  g.words.forEach(function(w){
+    fb+='<span class="dic-w '+(w.ok?'ok':'bad')+'">'+w.got+(w.ok?'':' → '+w.exp)+'</span>';
+  });
+  fb+='</div><p class="mic-note">Correct sentence: <strong>'+s.de+'</strong></p>'
+    +'<button class="speak-btn" onclick="DIC_next()">Next sentence →</button> '
+    +'<button class="speak-btn" onclick="speakDE(DIC_SENTS[DIC.idx].de,0.55)">&#128034; Hear it again (slow)</button>';
+  document.getElementById('dic-fb').innerHTML=fb;
+  var st='';
+  ['A1','B1','B2','CH'].forEach(function(l){
+    if(DIC.stats[l]){st+='<div class="dic-stat-row"><span>'+l+'</span><span>'+DIC.stats[l].n+' sentences · avg '+Math.round(DIC.stats[l].sum/DIC.stats[l].n)+'%</span></div>';}
+  });
+  document.getElementById('dic-stats').innerHTML=st;
+}
+document.addEventListener('DOMContentLoaded',function(){DIC_next();});
+
+
+</script>
+</body>
+</html>
