@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medication Vocabulary — German Dosage Instructions | Bayzubaan</title>
+<meta name="description" content="German dosage instructions builder: forms, frequencies, food timing, durations — plus prescription abbreviations and a 12-round quiz.">
+<link rel="canonical" href="https://bayzubaan.com/tools/medication-vocabulary/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Medication Vocabulary — German Dosage Instructions">
+<meta property="og:description" content="Dose in German: 10 instruction frames with slots, the 1-0-1 system, prescription abbreviations, and a precision quiz.">
+<meta property="og:url" content="https://bayzubaan.com/tools/medication-vocabulary/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Medication Vocabulary — German Dosage Instructions">
+<meta name="twitter:description" content="Dose in German: 10 instruction frames with slots, the 1-0-1 system, prescription abbreviations, and a precision quiz.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does 1-0-1 mean on a German prescription?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Morning–noon–evening dosing: 1-0-1 means one tablet in the morning, none at midday, one in the evening. 1-0-0 is once daily in the morning; 0-0-1 once in the evening. This notation is universal in German prescribing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between zweimal täglich and morgens und abends?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zweimal täglich means twice daily at roughly 12-hour intervals; morgens und abends names clock times (morning and evening). They are different instructions — use the one that matches the drug's required interval."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do p.c. and a.c. mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Latin abbreviations still used on German prescriptions: p.c. (post cibum) = after meals, a.c. (ante cibum) = before meals. P.o. means by mouth, s.c./i.m./i.v. are the injection routes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between nüchtern and vor dem Essen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nüchtern means on a completely empty stomach (nothing for hours); vor dem Essen means about 30 minutes before a meal. They are different instructions with different pharmacological reasons — never collapse them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why must a bei Bedarf instruction always include a maximum?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because a PRN (as-needed) order without a ceiling is incomplete and unsafe: Bei Bedarf nehmen Sie eine Tablette, höchstens vier pro Tag. Examiners mark a missing maximum as a real error."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I tell a patient not to stop a drug abruptly in German?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Setzen Sie das Medikament nicht plötzlich ab — for critical drugs. Softer variants: nicht eigenmächtig (not on your own) or nicht ohne Rücksprache (not without consulting us) for less critical ones."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>Medication Vocabulary: German Dosage Instructions</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">Dose in German: 10 instruction frames with slots, the 1-0-1 system, prescription abbreviations, and a precision quiz.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+
+<h2>Build the instruction: pick form, dose, timing</h2>
+<p style="margin-bottom:16px">10 dosage frames with swappable slots — fill them to produce a complete German medication instruction with its English translation. Add instructions to your script, copy it, then test yourself with the 12-round quiz.</p>
+<div id="frame-list"></div>
+<h2 style="margin-top:24px">Your instruction script</h2>
+<p style="margin-bottom:12px;color:#64748b">Instructions you add appear here in order. Copy the script and practise saying it like a discharge consultation.</p>
+<ol id="script-list" style="margin:0 0 12px 22px"></ol>
+<div style="display:flex;gap:10px;flex-wrap:wrap">
+<button type="button" style="background:#2563eb;color:#fff;border:none;border-radius:8px;padding:12px 24px;font-size:1rem;font-weight:700;cursor:pointer" onclick="copyScript()">Copy script (German)</button>
+<button type="button" style="background:#fff;color:#2563eb;border:2px solid #2563eb;border-radius:8px;padding:12px 24px;font-size:1rem;font-weight:700;cursor:pointer" onclick="clearScript()">Clear</button>
+</div>
+<div id="copy-msg" style="margin-top:8px;color:#065f46;font-weight:600"></div>
+<h2 style="margin-top:28px">Abbreviations on German prescriptions</h2>
+<p style="margin-bottom:12px;color:#64748b">The shorthand you will see on every German prescription and medication plan:</p>
+<table><tr><th>Abkürzung</th><th>Bedeutung</th><th>English</th></tr><tr><td><strong>1-0-1</strong></td><td>morgens–mittags–abends</td><td>morning–noon–evening dosing: 1 tablet morning, none at noon, 1 in the evening</td></tr><tr><td><strong>1-0-0</strong></td><td>morgens</td><td>once daily in the morning</td></tr><tr><td><strong>0-0-1</strong></td><td>abends</td><td>once daily in the evening</td></tr><tr><td><strong>tgl.</strong></td><td>täglich</td><td>daily</td></tr><tr><td><strong>b.B.</strong></td><td>bei Bedarf</td><td>if needed / as required</td></tr><tr><td><strong>p.c.</strong></td><td>post cibum (nach dem Essen)</td><td>after meals</td></tr><tr><td><strong>a.c.</strong></td><td>ante cibum (vor dem Essen)</td><td>before meals</td></tr><tr><td><strong>p.o.</strong></td><td>per os (durch den Mund)</td><td>by mouth / orally</td></tr><tr><td><strong>s.c.</strong></td><td>subkutan</td><td>subcutaneous (injection)</td></tr><tr><td><strong>i.m.</strong></td><td>intramuskulär</td><td>intramuscular (injection)</td></tr><tr><td><strong>i.v.</strong></td><td>intravenös</td><td>intravenous</td></tr><tr><td><strong>Tbl.</strong></td><td>Tablette</td><td>tablet</td></tr><tr><td><strong>Kps.</strong></td><td>Kapsel</td><td>capsule</td></tr><tr><td><strong>Trpf.</strong></td><td>Tropfen</td><td>drops</td></tr><tr><td><strong>Supp.</strong></td><td>Suppositorium</td><td>suppository</td></tr><tr><td><strong>max.</strong></td><td>maximal</td><td>at most (maximum dose)</td></tr></table>
+<h2 style="margin-top:28px">Quiz: instruction → correct German</h2>
+<p style="margin-bottom:16px">12 rounds. Read the English instruction and pick the exact German wording.</p>
+<button id="calc-btn" type="button" onclick="startQuiz()">Start 12-round quiz</button>
+<div id="quiz-zone" style="display:none;margin-top:20px">
+<div class="progress"><div id="qbar"></div></div>
+<div class="quiz-meta"><span id="qcount">Round 1/12</span><span id="qscore">Correct: 0 · Missed: 0</span></div>
+<div id="quiz-prompt" style="font-size:.85rem;color:#64748b;margin-bottom:6px"></div>
+<div id="quiz-sentence" style="font-size:1.4rem;font-weight:700;margin-bottom:14px"></div>
+<div id="quiz-options"></div>
+<div id="quiz-feedback"></div>
+<button type="button" id="quiz-next" style="display:none;margin-top:12px" onclick="nextQ()">Next</button>
+<div id="quiz-summary"></div>
+</div>
+
+</div>
+
+<article class="prose">
+
+<h2>Why dosage German is its own language</h2>
+<p>Medication instructions look simple — <em>Nehmen Sie eine Tablette zweimal täglich</em> — until you realise that every word is doing precise work and there is no room for approximation. <em>Zweimal täglich</em> is not <em>morgens und abends</em>: the first means roughly every twelve hours, the second names clock times. <em>Vor dem Essen</em> is not <em>nüchtern</em>: the first means thirty minutes before, the second means on a completely empty stomach. Patients act on these distinctions, and the FSP examiners test whether you can produce them exactly. This tool gives you 10 dosage frames with swappable slots — form, amount, frequency, timing, duration — plus the 16 abbreviations that cover every German prescription, and a quiz that punishes imprecision the way real dosing does.</p>
+<p>The builder works the way discharge counselling works: pick the form (<em>Tablette, Kapsel, Tropfen, Saft, Salbe</em>), the amount, the frequency, the timing, the duration — and watch the complete instruction compose itself. <em>Nehmen Sie eine Tablette zweimal täglich.</em> <em>Bei Bedarf nehmen Sie eine Tablette, höchstens vier pro Tag.</em> <em>Tragen Sie die Salbe zweimal täglich auf die betroffene Stelle auf.</em> Each frame is a sentence a German doctor actually says at discharge, and the slots let you generate the hundreds of variants you will need across patients. Add the ones you fumble to your script and drill them aloud: dosage instructions are spoken, not just written, and they must come out fluently while the patient is already reaching for their bag.</p>
+<h2>The frequency system: täglich, 1-0-1, and the clock</h2>
+<p>German dosing has three frequency languages and you must speak all three. <strong>Words:</strong> <em>einmal/zweimal/dreimal täglich</em> — the spoken standard. <strong>Notation:</strong> <em>1-0-1</em> — the written standard, morning-noon-evening, universal on prescriptions and medication plans. <strong>Clock times:</strong> <em>morgens und abends</em> — used when the timing matters relative to the day rather than the interval. The quiz tests the boundaries between them: <em>zweimal täglich</em> vs. <em>morgens und abends</em> are different instructions, and picking the wrong one is a real error, not a style choice.</p>
+<p>The abbreviation table is the Rosetta Stone: <em>b.B.</em> (bei Bedarf — if needed), <em>tgl.</em> (täglich), <em>p.c.</em>/<em>a.c.</em> (after/before meals, from the Latin every prescription still uses), <em>p.o.</em> (by mouth), <em>s.c.</em>/<em>i.m.</em>/<em>i.v.</em> (the three injection routes). Note <em>max.</em> — <em>höchstens vier pro Tag</em> is the safety ceiling that must accompany every <em>bei Bedarf</em> instruction; a PRN order without a maximum is an incomplete order, and examiners mark it as one.</p>
+<h2>Timing relative to food: the four-way distinction</h2>
+<p><em>Vor dem Essen, nach dem Essen, zum Essen, nüchtern</em> — four timings, four different pharmacological meanings. <em>Nüchtern</em> (on an empty stomach) is the strictest: nothing for hours before. <em>Vor dem Essen</em> means about thirty minutes before; <em>zum Essen</em> means with the meal; <em>nach dem Essen</em> means after. Patients routinely collapse these into "with food", which is why the instruction must be explicit and why the frame <em>Nehmen Sie die Tablette {timing}</em> exists as a drill: the slot forces you to choose, and choosing is the clinical act.</p>
+<p>Two more frames carry safety weight. <em>Setzen Sie das Medikament nicht plötzlich ab</em> — abrupt discontinuation is dangerous for beta-blockers, steroids, antidepressants and more; <em>eigenmächtig</em> (on your own) and <em>ohne Rücksprache</em> (without consulting us) are the softer variants for less critical drugs. <em>Die Behandlung dauert zwei Wochen</em> — stating the duration prevents the two classic patient errors: stopping when feeling better, and continuing forever. And <em>bis die Packung aufgebraucht ist</em> (until the pack is finished) is the natural endpoint for antibiotics, worth memorising whole.</p>
+<h2>Forms and their verbs</h2>
+<p>Each dosage form has its verb: tablets and capsules are <em>genommen</em> (taken), ointment is <em>aufgetragen</em> (applied), syrup is <em>genommen</em> but measured in millilitres. <em>Tragen Sie die Salbe zweimal täglich auf die betroffene Stelle auf</em> shows the separable <em>auftragen</em> splitting around the whole instruction — <em>Tragen Sie … auf</em> — which is why learners mangle it; the frame lets you drill it until the split is automatic. <em>Nehmen Sie 5 ml Saft zweimal täglich</em> teaches the millilitre dosing patients get wrong most often — always name the measuring device in real counselling (<em>mit dem Messbecher</em>), even though the frame keeps it short.</p>
+<p>Storage is part of the instruction too: <em>Bewahren Sie das Medikament kühl und trocken auf</em>, <em>im Kühlschrank</em>, <em>außerhalb der Reichweite von Kindern</em> — the last one is legally expected for every household with children. These sound like afterthoughts; in the FSP they are scored as completeness. The candidate who counsels storage counsels like a German doctor.</p>
+<h2>How to drill: the discharge round</h2>
+<p>Build a five-instruction discharge script: one scheduled tablet, one PRN tablet with maximum, one ointment, one syrup, one duration sentence. Copy it and deliver it aloud as if the patient is leaving — briskly, clearly, checking understanding after each (<em>Haben Sie noch Fragen dazu?</em>). Change the slots each round: different drug, different timing, different maximum. The frames stay; the prescriptions change.</p>
+<p>Then take the quiz: every distractor differs from the answer by exactly one slot — <em>eine</em> vs. <em>zwei</em>, <em>Tablette</em> vs. <em>Kapsel</em>, <em>zweimal</em> vs. <em>dreimal</em> — so it tests the precision dosing requires. The two abbreviation questions test the written register. When you score 12/12, counsel a full medication plan from memory: that is the discharge conversation, rehearsed.</p>
+
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>What does 1-0-1 mean on a German prescription?</h3><p>Morning–noon–evening dosing: 1-0-1 means one tablet in the morning, none at midday, one in the evening. 1-0-0 is once daily in the morning; 0-0-1 once in the evening. This notation is universal in German prescribing.</p></div><div class="faq-item"><h3>What is the difference between zweimal täglich and morgens und abends?</h3><p>Zweimal täglich means twice daily at roughly 12-hour intervals; morgens und abends names clock times (morning and evening). They are different instructions — use the one that matches the drug&#x27;s required interval.</p></div><div class="faq-item"><h3>What do p.c. and a.c. mean?</h3><p>Latin abbreviations still used on German prescriptions: p.c. (post cibum) = after meals, a.c. (ante cibum) = before meals. P.o. means by mouth, s.c./i.m./i.v. are the injection routes.</p></div><div class="faq-item"><h3>What is the difference between nüchtern and vor dem Essen?</h3><p>Nüchtern means on a completely empty stomach (nothing for hours); vor dem Essen means about 30 minutes before a meal. They are different instructions with different pharmacological reasons — never collapse them.</p></div><div class="faq-item"><h3>Why must a bei Bedarf instruction always include a maximum?</h3><p>Because a PRN (as-needed) order without a ceiling is incomplete and unsafe: Bei Bedarf nehmen Sie eine Tablette, höchstens vier pro Tag. Examiners mark a missing maximum as a real error.</p></div><div class="faq-item"><h3>How do I tell a patient not to stop a drug abruptly in German?</h3><p>Setzen Sie das Medikament nicht plötzlich ab — for critical drugs. Softer variants: nicht eigenmächtig (not on your own) or nicht ohne Rücksprache (not without consulting us) for less critical ones.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+var FRAMES = [{"de": "Nehmen Sie {dose} {freq}.", "en": "Take {dose} {freq}.", "slots": {"dose": [{"de": "eine Tablette", "en": "one tablet"}, {"de": "zwei Tabletten", "en": "two tablets"}, {"de": "eine Kapsel", "en": "one capsule"}, {"de": "zwei Kapseln", "en": "two capsules"}, {"de": "eine halbe Tablette", "en": "half a tablet"}], "freq": [{"de": "einmal täglich", "en": "once daily"}, {"de": "zweimal täglich", "en": "twice daily"}, {"de": "dreimal täglich", "en": "three times daily"}]}}, {"de": "Nehmen Sie {dose} {zeit}.", "en": "Take {dose} {zeit}.", "slots": {"dose": [{"de": "eine Tablette", "en": "one tablet"}, {"de": "zwei Tabletten", "en": "two tablets"}, {"de": "eine Kapsel", "en": "one capsule"}, {"de": "zwei Kapseln", "en": "two capsules"}], "zeit": [{"de": "morgens", "en": "in the morning"}, {"de": "mittags", "en": "at midday"}, {"de": "abends", "en": "in the evening"}, {"de": "morgens und abends", "en": "morning and evening"}]}}, {"de": "Nehmen Sie die {form} {timing}.", "en": "Take the {form} {timing}.", "slots": {"form": [{"de": "Tablette", "en": "tablet"}, {"de": "Kapsel", "en": "capsule"}, {"de": "Tropfen", "en": "drops"}], "timing": [{"de": "vor dem Essen", "en": "before meals"}, {"de": "nach dem Essen", "en": "after meals"}, {"de": "zum Essen", "en": "with meals"}, {"de": "nüchtern", "en": "on an empty stomach"}]}}, {"de": "Bei {symp} nehmen Sie {dose}.", "en": "For {symp}, take {dose}.", "slots": {"symp": [{"de": "Schmerzen", "en": "pain"}, {"de": "Fieber", "en": "fever"}, {"de": "Übelkeit", "en": "nausea"}], "dose": [{"de": "eine Tablette", "en": "one tablet"}, {"de": "zwei Tabletten", "en": "two tablets"}, {"de": "eine Kapsel", "en": "one capsule"}, {"de": "zwei Kapseln", "en": "two capsules"}]}}, {"de": "Bei Bedarf nehmen Sie {dose}, höchstens {max} pro Tag.", "en": "If needed, take {dose}, at most {max} per day.", "slots": {"dose": [{"de": "eine Tablette", "en": "one tablet"}, {"de": "zwei Tabletten", "en": "two tablets"}, {"de": "eine Kapsel", "en": "one capsule"}, {"de": "zwei Kapseln", "en": "two capsules"}], "max": [{"de": "drei", "en": "three"}, {"de": "vier", "en": "four"}, {"de": "sechs", "en": "six"}]}}, {"de": "Tragen Sie die Salbe {freq} {area} auf.", "en": "Apply the ointment {freq} {area}.", "slots": {"freq": [{"de": "zweimal täglich", "en": "twice daily"}, {"de": "dreimal täglich", "en": "three times daily"}], "area": [{"de": "auf die betroffene Stelle", "en": "to the affected area"}, {"de": "dünn auf die Haut", "en": "thinly to the skin"}]}}, {"de": "Nehmen Sie {n} ml Saft {freq}.", "en": "Take {n} ml of syrup {freq}.", "slots": {"n": [{"de": "5", "en": "5"}, {"de": "10", "en": "10"}], "freq": [{"de": "zweimal täglich", "en": "twice daily"}, {"de": "dreimal täglich", "en": "three times daily"}]}}, {"de": "Die Behandlung dauert {dur}.", "en": "The treatment lasts {dur}.", "slots": {"dur": [{"de": "eine Woche", "en": "one week"}, {"de": "zwei Wochen", "en": "two weeks"}, {"de": "zehn Tage", "en": "ten days"}, {"de": "bis die Packung aufgebraucht ist", "en": "until the pack is finished"}]}}, {"de": "Setzen Sie das Medikament nicht {warn} ab.", "en": "Do not stop the medication {warn}.", "slots": {"warn": [{"de": "eigenmächtig", "en": "on your own"}, {"de": "plötzlich", "en": "abruptly"}, {"de": "ohne Rücksprache", "en": "without consulting us"}]}}, {"de": "Bewahren Sie das Medikament {store} auf.", "en": "Store the medication {store}.", "slots": {"store": [{"de": "kühl und trocken", "en": "in a cool, dry place"}, {"de": "im Kühlschrank", "en": "in the refrigerator"}, {"de": "außerhalb der Reichweite von Kindern", "en": "out of reach of children"}]}}];
+var script = [];
+function composeDe(f, picks){ var s = f.de; for(var k in picks){ s = s.split("{"+k+"}").join(picks[k].de); } return s; }
+function composeEn(f, picks){ var s = f.en; for(var k in picks){ s = s.split("{"+k+"}").join(picks[k].en); } return s; }
+function renderFrames(){
+  var box = document.getElementById("frame-list"); box.innerHTML = "";
+  FRAMES.forEach(function(f){
+    var d = document.createElement("div");
+    d.style.cssText = "background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px";
+    var head = document.createElement("div");
+    head.style.cssText = "font-size:1.1rem;font-weight:700;color:#0f172a;margin-bottom:10px";
+    head.textContent = f.de.replace(/\{(\w+)\}/g, "[___]");
+    d.appendChild(head);
+    var picks = {};
+    Object.keys(f.slots).forEach(function(sn){
+      picks[sn] = f.slots[sn][0];
+      var lab = document.createElement("label");
+      lab.style.cssText = "display:block;font-size:.85rem;font-weight:600;color:#475569;margin:8px 0 4px";
+      lab.textContent = sn;
+      var sel = document.createElement("select");
+      sel.style.cssText = "width:100%;padding:10px 12px;border:2px solid #e2e8f0;border-radius:8px;font-size:1rem;font-family:inherit;background:#fff";
+      sel.setAttribute("aria-label", sn);
+      f.slots[sn].forEach(function(opt){
+        var o = document.createElement("option");
+        o.value = opt.de; o.textContent = opt.de + "  (" + opt.en + ")";
+        sel.appendChild(o);
+      });
+      sel.addEventListener("change", function(){
+        var found = f.slots[sn].filter(function(o){ return o.de === sel.value; })[0];
+        picks[sn] = found;
+        preview.textContent = composeDe(f, picks);
+        prevEn.textContent = composeEn(f, picks);
+      });
+      d.appendChild(lab); d.appendChild(sel);
+    });
+    var preview = document.createElement("div");
+    preview.style.cssText = "margin-top:12px;font-size:1.15rem;font-weight:700;color:#1d4ed8";
+    var prevEn = document.createElement("div");
+    prevEn.style.cssText = "color:#475569;margin-top:2px";
+    preview.textContent = composeDe(f, picks);
+    prevEn.textContent = composeEn(f, picks);
+    d.appendChild(preview); d.appendChild(prevEn);
+    var b = document.createElement("button");
+    b.type = "button"; b.textContent = "+ Script";
+    b.style.cssText = "margin-top:10px;background:#eff6ff;border:1px solid #2563eb;color:#1d4ed8;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit";
+    b.addEventListener("click", function(){ addToScript(composeDe(f, picks)); });
+    d.appendChild(b);
+    box.appendChild(d);
+  });
+}
+function addToScript(de){ script.push(de); renderScript(); }
+function removeFromScript(i){ script.splice(i, 1); renderScript(); }
+function renderScript(){
+  var ol = document.getElementById("script-list"); ol.innerHTML = "";
+  script.forEach(function(de, i){
+    var li = document.createElement("li"); li.style.marginBottom = "6px";
+    var s = document.createElement("span"); s.textContent = de + " ";
+    var b = document.createElement("button");
+    b.type = "button"; b.textContent = "\u2715"; b.setAttribute("aria-label", "Remove instruction");
+    b.style.cssText = "background:none;border:none;color:#ef4444;cursor:pointer;font-size:1rem";
+    b.addEventListener("click", function(){ removeFromScript(i); });
+    li.appendChild(s); li.appendChild(b); ol.appendChild(li);
+  });
+}
+function clearScript(){ script = []; renderScript(); document.getElementById("copy-msg").textContent = ""; }
+function copyScript(){
+  var txt = script.join("\n");
+  var msg = document.getElementById("copy-msg");
+  if(!txt){ msg.textContent = "Add some instructions first."; return; }
+  function done(){ msg.textContent = "Copied " + script.length + " instructions!"; }
+  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(done, function(){ fallback(); }); }
+  else { fallback(); }
+  function fallback(){
+    var ta = document.createElement("textarea"); ta.value = txt;
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); } catch(e){}
+    document.body.removeChild(ta); done();
+  }
+}
+// ---- quiz ----
+var QUIZ = [{"p": "Take one tablet twice daily.", "a": "Nehmen Sie eine Tablette zweimal täglich.", "d": ["Nehmen Sie zwei Tabletten zweimal täglich.", "Nehmen Sie eine Kapsel zweimal täglich.", "Nehmen Sie eine Tablette einmal täglich."]}, {"p": "Take two capsules morning and evening.", "a": "Nehmen Sie zwei Kapseln morgens und abends.", "d": ["Nehmen Sie zwei Tabletten morgens und abends.", "Nehmen Sie eine Kapsel morgens und abends.", "Nehmen Sie zwei Kapseln morgens."]}, {"p": "Take the tablet on an empty stomach.", "a": "Nehmen Sie die Tablette nüchtern.", "d": ["Nehmen Sie die Tablette nach dem Essen.", "Nehmen Sie die Kapsel nüchtern.", "Nehmen Sie die Tablette zum Essen."]}, {"p": "For pain, take one tablet.", "a": "Bei Schmerzen nehmen Sie eine Tablette.", "d": ["Bei Fieber nehmen Sie eine Tablette.", "Bei Schmerzen nehmen Sie zwei Tabletten.", "Bei Schmerzen nehmen Sie eine Kapsel."]}, {"p": "If needed, take one tablet, at most four per day.", "a": "Bei Bedarf nehmen Sie eine Tablette, höchstens vier pro Tag.", "d": ["Bei Bedarf nehmen Sie zwei Tabletten, höchstens vier pro Tag.", "Bei Bedarf nehmen Sie eine Tablette, höchstens drei pro Tag.", "Bei Bedarf nehmen Sie eine Kapsel, höchstens vier pro Tag."]}, {"p": "Apply the ointment twice daily to the affected area.", "a": "Tragen Sie die Salbe zweimal täglich auf die betroffene Stelle auf.", "d": ["Tragen Sie die Salbe dreimal täglich auf die betroffene Stelle auf.", "Tragen Sie die Salbe zweimal täglich dünn auf die Haut auf.", "Tragen Sie die Salbe dreimal täglich dünn auf die Haut auf."]}, {"p": "Take 5 ml of syrup twice daily.", "a": "Nehmen Sie 5 ml Saft zweimal täglich.", "d": ["Nehmen Sie 10 ml Saft zweimal täglich.", "Nehmen Sie 5 ml Saft dreimal täglich.", "Nehmen Sie 10 ml Saft dreimal täglich."]}, {"p": "The treatment lasts two weeks.", "a": "Die Behandlung dauert zwei Wochen.", "d": ["Die Behandlung dauert eine Woche.", "Die Behandlung dauert zehn Tage.", "Die Behandlung dauert bis die Packung aufgebraucht ist."]}, {"p": "Do not stop the medication abruptly.", "a": "Setzen Sie das Medikament nicht plötzlich ab.", "d": ["Setzen Sie das Medikament nicht eigenmächtig ab.", "Setzen Sie das Medikament nicht ohne Rücksprache ab.", "Bewahren Sie das Medikament kühl und trocken auf."]}, {"p": "Store the medication in the refrigerator.", "a": "Bewahren Sie das Medikament im Kühlschrank auf.", "d": ["Bewahren Sie das Medikament kühl und trocken auf.", "Bewahren Sie das Medikament außerhalb der Reichweite von Kindern auf.", "Tragen Sie die Salbe zweimal täglich auf die betroffene Stelle auf."]}, {"p": "What does 1-0-1 mean?", "a": "morgens–mittags–abends: 1 tablette morgens, keine mittags, 1 abends", "d": ["einmal täglich morgens", "dreimal täglich", "bei Bedarf"]}, {"p": "What does b.B. mean?", "a": "bei Bedarf — if needed", "d": ["täglich", "vor dem Essen", "maximal"]}];
+var ROUNDS = 12, pool = [], qi = 0, correctN = 0, missedN = 0, missedList = [], qa = null;
+function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
+function startQuiz(){
+  pool = shuffle(QUIZ.slice()); qi = 0; correctN = 0; missedN = 0; missedList = [];
+  document.getElementById("quiz-zone").style.display = "block";
+  document.getElementById("quiz-summary").innerHTML = "";
+  document.getElementById("calc-btn").style.display = "none";
+  showQ();
+}
+function showQ(){
+  qa = pool[qi % pool.length];
+  var opts = shuffle([qa.a].concat(qa.d));
+  document.getElementById("quiz-prompt").textContent = "Which is the exact German instruction?";
+  document.getElementById("quiz-sentence").textContent = qa.p;
+  document.getElementById("qcount").textContent = "Round " + (qi+1) + "/" + ROUNDS;
+  document.getElementById("qbar").style.width = (qi/ROUNDS*100) + "%";
+  var box = document.getElementById("quiz-options"); box.innerHTML = "";
+  var fb = document.getElementById("quiz-feedback"); fb.className = ""; fb.style.display = "none";
+  document.getElementById("quiz-next").style.display = "none";
+  opts.forEach(function(opt){
+    var b = document.createElement("button");
+    b.className = "quiz-btn"; b.textContent = opt;
+    b.addEventListener("click", function(){ answer(opt, b); });
+    box.appendChild(b);
+  });
+}
+function answer(opt, btn){
+  var fb = document.getElementById("quiz-feedback");
+  var btns = document.querySelectorAll("#quiz-options .quiz-btn");
+  btns.forEach(function(x){ x.disabled = true; if(x.textContent === qa.a) x.classList.add("correct"); });
+  if(opt === qa.a){ correctN++; fb.className = "ok"; fb.textContent = "\u2713 Correct!"; }
+  else { missedN++; missedList.push(qa); fb.className = "no"; btn.classList.add("wrong");
+    fb.textContent = "\u2717 The instruction is: \u201c" + qa.a + "\u201d."; }
+  document.getElementById("qscore").textContent = "Correct: " + correctN + " · Missed: " + missedN;
+  var nb = document.getElementById("quiz-next");
+  nb.style.display = "block";
+  nb.textContent = (qi + 1 < ROUNDS) ? "Next" : "See results";
+}
+function nextQ(){
+  qi++;
+  if(qi < ROUNDS) showQ();
+  else {
+    document.getElementById("quiz-prompt").textContent = "";
+    document.getElementById("quiz-sentence").textContent = "";
+    document.getElementById("quiz-options").innerHTML = "";
+    document.getElementById("quiz-feedback").style.display = "none";
+    document.getElementById("quiz-next").style.display = "none";
+    document.getElementById("qbar").style.width = "100%";
+    var uniq = {}; missedList.forEach(function(m){ uniq[m.a] = m; });
+    var missArr = Object.keys(uniq).map(function(k){ return uniq[k]; });
+    var msg = "<strong>" + correctN + " / " + ROUNDS + " correct.</strong> ";
+    if(missArr.length === 0) msg += "Dosage German mastered.";
+    else {
+      msg += "Review these " + missArr.length + ":<ul style='margin:8px 0 0 18px'>";
+      missArr.forEach(function(m){ msg += "<li><strong>" + m.a + "</strong> <span style='color:#64748b'>(" + m.p + ")</span></li>"; });
+      msg += "</ul>";
+    }
+    document.getElementById("quiz-summary").innerHTML = '<div class="note">' + msg + '</div>';
+    document.getElementById("calc-btn").style.display = "block";
+    document.getElementById("calc-btn").textContent = "Play again";
+  }
+}
+renderFrames();
+
+
+</script>
+</body>
+</html>
