@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complaint Letter Builder — German Beschwerde | Bayzubaan</title>
+<meta name="description" content="Write a German complaint letter: 10 Beschwerde frames (Sachverhalt, Forderung, Frist, Eskalation), letter builder, 12-round quiz.">
+<link rel="canonical" href="https://bayzubaan.com/tools/complaint-letter-builder/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Complaint Letter Builder — German Beschwerde">
+<meta property="og:description" content="German Beschwerde builder: 10 complaint frames, escalation ladder, precision quiz.">
+<meta property="og:url" content="https://bayzubaan.com/tools/complaint-letter-builder/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Complaint Letter Builder — German Beschwerde">
+<meta name="twitter:description" content="German Beschwerde builder: 10 complaint frames, escalation ladder, precision quiz.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What must a German complaint letter (Beschwerde) contain?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Six parts: the facts with dates (Sachverhalt), the damage with a number (Schaden), one clear demand (Forderung), a real deadline (Frist), the named escalation step (Eskalation), and your customer or order number. One demand, one deadline, one escalation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I phrase the escalation in a complaint?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With the calm conditional: Sollte bis dahin keine Reaktion erfolgt sein, wende ich mich an die Verbraucherzentrale. Name the rung that fits — Verbraucherzentrale, Aufsichtsbehörde, or rechtliche Schritte as the final step."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Beschwerde and Reklamation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Reklamation is the narrower term: a complaint about defective goods under warranty (Gewährleistung). Beschwerde is broader — any formal complaint about service, billing, or conduct. Use Reklamation for faulty products, Beschwerde for everything else."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What deadline should I set in a German complaint?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A real date, not bald-möglichst: Ich bitte Sie, mir bis zum 25. Oktober zu antworten. Two weeks is the conventional reasonable period (angemessene Frist); ten days for urgent defects. A real date starts the escalation clock."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Hochachtungsvoll still used in German letters?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — the complaint letter is its last natural home, where it underlines seriousness. For normal business mail use Mit freundlichen Grüßen; for a Beschwerde either works, with Hochachtungsvoll the sharper choice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a customer number in the complaint?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — name plus Kundennummer or Auftragsnummer in the signature. A complaint without it goes into the slow pile; the number is the difference between a two-day and a two-month answer."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>Complaint Letter Builder: German Beschwerde</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">German Beschwerde builder: 10 complaint frames, escalation ladder, precision quiz.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+
+<h2>Compose the complaint: from Betreff to Eskalation</h2>
+<p style="margin-bottom:16px">10 Beschwerde frames with swappable slots — fill them to compose a complete German complaint letter with its English translation. Add sentences to your letter, copy it, then drill with the 12-round quiz.</p>
+<div id="frame-list"></div>
+<h2 style="margin-top:24px">Your Beschwerde</h2>
+<p style="margin-bottom:12px;color:#64748b">Sentences you add appear here in order. Copy the letter and check it against the five-error list below.</p>
+<ol id="script-list" style="margin:0 0 12px 22px"></ol>
+<div style="display:flex;gap:10px;flex-wrap:wrap">
+<button type="button" style="background:#2563eb;color:#fff;border:none;border-radius:8px;padding:12px 24px;font-size:1rem;font-weight:700;cursor:pointer" onclick="copyScript()">Copy letter (German)</button>
+<button type="button" style="background:#fff;color:#2563eb;border:2px solid #2563eb;border-radius:8px;padding:12px 24px;font-size:1rem;font-weight:700;cursor:pointer" onclick="clearScript()">Clear</button>
+</div>
+<div id="copy-msg" style="margin-top:8px;color:#065f46;font-weight:600"></div>
+<h2 style="margin-top:28px">Quiz: English → exact German</h2>
+<p style="margin-bottom:16px">12 rounds. Read the English sentence and pick the exact German complaint wording.</p>
+<button id="calc-btn" type="button" onclick="startQuiz()">Start 12-round quiz</button>
+<div id="quiz-zone" style="display:none;margin-top:20px">
+<div class="progress"><div id="qbar"></div></div>
+<div class="quiz-meta"><span id="qcount">Round 1/12</span><span id="qscore">Correct: 0 · Missed: 0</span></div>
+<div id="quiz-prompt" style="font-size:.85rem;color:#64748b;margin-bottom:6px"></div>
+<div id="quiz-sentence" style="font-size:1.4rem;font-weight:700;margin-bottom:14px"></div>
+<div id="quiz-options"></div>
+<div id="quiz-feedback"></div>
+<button type="button" id="quiz-next" style="display:none;margin-top:12px" onclick="nextQ()">Next</button>
+<div id="quiz-summary"></div>
+</div>
+
+</div>
+
+<article class="prose">
+
+<h2>The Beschwerde: Germany's culture of the written complaint</h2>
+<p>Germany runs on written complaints. Faulty delivery, unauthorised charge, botched handiwork, a wrongly billed phone contract — the response is not a phone call but a <em>Beschwerde</em> or <em>Reklamation</em>, written, formal, and structured. German consumer law gives you strong rights (<em>Gewährleistung</em> — the two-year statutory warranty, <em>Widerrufsrecht</em> — the right of withdrawal), but those rights only bite when you assert them in writing with a clear deadline. This tool builds the complete complaint letter from ten frames: subject, salutation, the complaint itself, the facts, the damage, your demand, your deadline, the escalation, the sign-off, and the signature with customer number. The German complaint is a machine with moving parts — miss one part and the machine stalls.</p>
+<p>The register is the opposite of anger. An effective German Beschwerde is cold, precise, and escalating: it names the facts, states the damage, sets the demand, fixes a deadline, and calmly announces the next step. <em>Sollte bis dahin keine Reaktion erfolgt sein, wende ich mich an die Verbraucherzentrale.</em> The threat is not shouting; it is the subjunctive <em>sollte</em> plus a named institution. German companies are calibrated to respond to exactly this register, because a complaint written this way signals a writer who knows the escalation ladder.</p>
+<h2>Betreff and Sachverhalt: precision is power</h2>
+<p>The <em>Betreff</em> makes the complaint searchable in the company's system: <em>Betreff: Beschwerde über mangelhafte Lieferung — Auftrag 4521</em>. Include the word <em>Beschwerde</em> or <em>Reklamation</em> itself, the object of the complaint, and the order or customer number — the reader should be able to route the letter before reading it. The facts frame pins everything to dates: <em>Am 3. Oktober wurde mir eine beschädigte Ware geliefert.</em> The passive <em>wurde … geliefert</em> is the standard complaint voice — it describes what happened without accusing a named person, and the dative <em>mir</em> marks you as the affected party. Note the quiz trap: <em>wurde mich</em> is wrong; the recipient of a delivery is dative, <em>wurde mir</em>.</p>
+<p><em>Dadurch entstand mir ein Schaden in Höhe von 250 Euro.</em> The damage frame quantifies the loss — a complaint without a number is a story; a complaint with a number is a claim. <em>in Höhe von</em> (to the amount of) is the fixed formula, and <em>Euro</em> stays <em>Euro</em> in the plural (never <em>Euros</em> — the quiz tests this). If there is no financial loss, state the consequence anyway: <em>Dadurch ist das Gerät nicht mehr benutzbar</em> or <em>verzögerte sich mein Umzug um zwei Wochen</em>. A consequence is what turns an annoyance into a claim the company must answer.</p>
+<h2>Die Forderung: what you want, stated once</h2>
+<p><em>Ich erwarte, dass Sie die Ware innerhalb von 14 Tagen umtauschen.</em> The demand frame is the letter's centre of gravity, and German complaint culture expects exactly one clear demand. <em>erwarten</em> (to expect) is stronger than <em>bitten</em> here — you are asserting a right, not asking a favour — and the <em>dass</em>-clause pushes the verb to the end (<em>umtauschen</em>). The alternatives cover the three standard remedies: <em>Umtausch</em> (replacement), <em>Rückerstattung des Kaufpreises</em> (refund — note the genitive <em>des Kaufpreises</em>), <em>Behebung des Schadens</em> (remedy), or <em>eine schriftliche Stellungnahme</em> (a written statement, when you want the company's position on record). Do not list three demands — one demand, one deadline, one escalation. The letter that asks for everything gets nothing.</p>
+<p>The deadline frame is separate because it has a different grammar: <em>Ich bitte Sie, mir bis zum 25. Oktober zu antworten.</em> Here <em>bitten</em> is correct — you are asking for a specific action by a specific date. The formula <em>bis zum</em> + date is fixed; <em>bis zu 25. Oktober</em> is wrong, and the quiz tests exactly that preposition. Give a real date, not <em>baldmöglichst</em> (as soon as possible) — a real date starts the escalation clock, a vague wish does not. Two weeks is the conventional reasonable period (<em>angemessene Frist</em>) for consumer complaints; for urgent defects, ten days.</p>
+<h2>Die Eskalation: the ladder, named</h2>
+<p><em>Sollte bis dahin keine Reaktion erfolgt sein, wende ich mich an die Verbraucherzentrale.</em> The escalation frame is the complaint's engine, and its grammar is the Konjunktiv II of <em>sollen</em> — <em>sollte … erfolgt sein</em>, a condition stated as a calm hypothetical, not a threat. The ladder, from soft to hard: the <em>Verbraucherzentrale</em> (consumer advice centre — free, feared by companies), the <em>Aufsichtsbehörde</em> (supervisory authority, for regulated sectors), and <em>rechtliche Schritte</em> (legal action — the final rung). Name the rung that fits: invoking a lawyer over a 20-euro dispute is not credible; invoking the Verbraucherzentrale over a systematic overcharge is. The frame also covers the two intermediate conditions — defects not remedied in time, no agreement reached — because the escalation must follow logically from what you demanded and when.</p>
+<p>One grammar note the quiz drills hard: <em>Sollte die Mängel nicht fristgerecht behoben werden</em> — <em>die Mängel</em> is plural, and the distractor <em>Sollten die Mängel</em> (plural verb) is the trap. In German <em>sollte</em> as a conditional conjunction stays singular even with a plural subject — a fossilised form, and exactly the kind of detail that marks a written complaint as competent.</p>
+<h2>Sign-off, signature, and the five errors that sink a Beschwerde</h2>
+<p>The sign-off in a complaint may be <em>Hochachtungsvoll</em> — the one place this archaic closing is still at home, because it underlines the letter's seriousness — though <em>Mit freundlichen Grüßen</em> is never wrong. The signature frame carries the identification the company needs to find you: name plus <em>Kundennummer</em> (customer number) or <em>Auftragsnummer</em> (order number). A complaint without a customer number goes into the slow pile; the number is the difference between a two-day and a two-month answer.</p>
+<p>The five classic errors: one, <em>von 28. September</em> instead of <em>vom 28. September</em> — dates take <em>am/vom</em>, never bare <em>von</em>. Two, <em>Euros</em> instead of <em>Euro</em>. Three, <em>wurde mich</em> instead of <em>wurde mir</em> in the passive. Four, <em>bis zu 25. Oktober</em> instead of <em>bis zum 25. Oktober</em>. Five, the wrong escalation rung — a lawyer threatened over a triviality, or no escalation at all, which reads as a complaint the writer does not intend to pursue. The quiz distractors are built entirely from these five, so a green round means your Beschwerde German is ready for a real letter.</p>
+<h2>How to drill: build a real complaint</h2>
+<p>Take a real annoyance — a late delivery, a wrong bill, a defective device — and build the letter with the tool: Betreff with the order number, the facts with real dates, the damage with a real number, one demand, one deadline, the escalation that fits. Read it aloud in the cold formal register: no exclamation marks, no insults, no <em>du</em> anywhere — the gate checks the whole composed corpus for leaks. Then take the 12-round quiz. When the distractors stop fooling you, send the letter (as a real email or an <em>Einschreiben</em> for important cases — the registered letter is itself part of German complaint culture). The Beschwerde that follows this structure gets answered; the angry email does not.</p>
+
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>What must a German complaint letter (Beschwerde) contain?</h3><p>Six parts: the facts with dates (Sachverhalt), the damage with a number (Schaden), one clear demand (Forderung), a real deadline (Frist), the named escalation step (Eskalation), and your customer or order number. One demand, one deadline, one escalation.</p></div><div class="faq-item"><h3>How do I phrase the escalation in a complaint?</h3><p>With the calm conditional: Sollte bis dahin keine Reaktion erfolgt sein, wende ich mich an die Verbraucherzentrale. Name the rung that fits — Verbraucherzentrale, Aufsichtsbehörde, or rechtliche Schritte as the final step.</p></div><div class="faq-item"><h3>What is the difference between Beschwerde and Reklamation?</h3><p>Reklamation is the narrower term: a complaint about defective goods under warranty (Gewährleistung). Beschwerde is broader — any formal complaint about service, billing, or conduct. Use Reklamation for faulty products, Beschwerde for everything else.</p></div><div class="faq-item"><h3>What deadline should I set in a German complaint?</h3><p>A real date, not bald-möglichst: Ich bitte Sie, mir bis zum 25. Oktober zu antworten. Two weeks is the conventional reasonable period (angemessene Frist); ten days for urgent defects. A real date starts the escalation clock.</p></div><div class="faq-item"><h3>Is Hochachtungsvoll still used in German letters?</h3><p>Yes — the complaint letter is its last natural home, where it underlines seriousness. For normal business mail use Mit freundlichen Grüßen; for a Beschwerde either works, with Hochachtungsvoll the sharper choice.</p></div><div class="faq-item"><h3>Do I need a customer number in the complaint?</h3><p>Yes — name plus Kundennummer or Auftragsnummer in the signature. A complaint without it goes into the slow pile; the number is the difference between a two-day and a two-month answer.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+var FRAMES = [{"de": "Betreff: {subject}", "en": "Subject: {subject}", "slots": {"subject": [{"de": "Beschwerde über mangelhafte Lieferung — Auftrag 4521", "en": "Complaint about defective delivery — order 4521"}, {"de": "Reklamation vom 3. Oktober — defektes Gerät", "en": "Complaint of 3 October — defective device"}, {"de": "Beschwerde über unberechtigte Abbuchung", "en": "Complaint about unauthorised charge"}, {"de": "Mängelrüge — Handwerkerleistung vom 20. September", "en": "Notice of defects — work of 20 September"}]}}, {"de": "Sehr {salut},", "en": "Dear {salut},", "slots": {"salut": [{"de": "geehrte Damen und Herren", "en": "Ladies and Gentlemen"}, {"de": "geehrter Herr Schneider", "en": "Mr Schneider"}, {"de": "geehrte Frau Becker", "en": "Mrs Becker"}]}}, {"de": "ich beschwere mich über {issue}.", "en": "I am complaining about {issue}.", "slots": {"issue": [{"de": "die mangelhafte Lieferung vom 28. September", "en": "the defective delivery of 28 September"}, {"de": "das defekte Gerät (Modell X-200)", "en": "the defective device (model X-200)"}, {"de": "die unberechtigte Abbuchung in Höhe von 89 Euro", "en": "the unauthorised charge of 89 euros"}, {"de": "den mangelhaften Zustand der gelieferten Ware", "en": "the defective condition of the delivered goods"}]}}, {"de": "Am {date} {fact}.", "en": "On {date} {fact}.", "slots": {"date": [{"de": "3. Oktober", "en": "3 October"}, {"de": "28. September", "en": "28 September"}, {"de": "15. Oktober", "en": "15 October"}], "fact": [{"de": "wurde mir eine beschädigte Ware geliefert", "en": "I received damaged goods"}, {"de": "stellte ich den Fehler zum ersten Mal fest", "en": "I first noticed the fault"}, {"de": "wurde der Betrag von meinem Konto abgebucht", "en": "the amount was debited from my account"}, {"de": "erfolgte die Montage durch Ihre Mitarbeiter", "en": "your employees carried out the installation"}]}}, {"de": "Dadurch {damage}.", "en": "As a result, {damage}.", "slots": {"damage": [{"de": "entstand mir ein Schaden in Höhe von 250 Euro", "en": "I suffered damage of 250 euros"}, {"de": "musste ich den Termin absagen", "en": "I had to cancel the appointment"}, {"de": "ist das Gerät nicht mehr benutzbar", "en": "the device is no longer usable"}, {"de": "verzögerte sich mein Umzug um zwei Wochen", "en": "my move was delayed by two weeks"}]}}, {"de": "Ich erwarte, {expect}.", "en": "I expect {expect}.", "slots": {"expect": [{"de": "dass Sie die Ware innerhalb von 14 Tagen umtauschen", "en": "you to replace the goods within 14 days"}, {"de": "eine vollständige Rückerstattung des Kaufpreises", "en": "a full refund of the purchase price"}, {"de": "dass Sie den Schaden bis Ende des Monats beheben", "en": "you to remedy the damage by the end of the month"}, {"de": "eine schriftliche Stellungnahme Ihrerseits", "en": "a written statement from you"}]}}, {"de": "Ich bitte Sie, {deadline}.", "en": "I ask you {deadline}.", "slots": {"deadline": [{"de": "mir bis zum 25. Oktober zu antworten", "en": "to reply to me by 25 October"}, {"de": "die Angelegenheit bis Ende der Woche zu klären", "en": "to resolve the matter by the end of the week"}, {"de": "mir einen Rücksendeschein zuzusenden", "en": "to send me a return label"}, {"de": "einen Techniker innerhalb von zehn Tagen zu schicken", "en": "to send a technician within ten days"}]}}, {"de": "Sollte {cond}, {cons}.", "en": "Should {cond}, {cons}.", "slots": {"cond": [{"de": "bis dahin keine Reaktion erfolgt sein", "en": "no response have been received by then"}, {"de": "die Mängel nicht fristgerecht behoben werden", "en": "the defects not be remedied in time"}, {"de": "eine Einigung nicht zustande kommen", "en": "no agreement be reached"}], "cons": [{"de": "wende ich mich an die Verbraucherzentrale", "en": "I will contact the consumer advice centre"}, {"de": "sehe ich mich gezwungen, rechtliche Schritte einzuleiten", "en": "I will feel compelled to take legal action"}, {"de": "melde ich den Vorfall der zuständigen Aufsichtsbehörde", "en": "I will report the incident to the responsible supervisory authority"}]}}, {"de": "{closing}", "en": "{closing}", "slots": {"closing": [{"de": "Mit freundlichen Grüßen", "en": "Kind regards"}, {"de": "Hochachtungsvoll", "en": "Yours faithfully"}, {"de": "Mit bestem Dank im Voraus", "en": "With thanks in advance"}]}}, {"de": "{name}, Kundennummer {knr}", "en": "{name}, customer number {knr}", "slots": {"name": [{"de": "Max Mustermann", "en": "Max Mustermann"}, {"de": "Anna Schmidt", "en": "Anna Schmidt"}], "knr": [{"de": "452189", "en": "452189"}, {"de": "770234", "en": "770234"}]}}];
+var script = [];
+function composeDe(f, picks){ var s = f.de; for(var k in picks){ s = s.split("{"+k+"}").join(picks[k].de); } return s; }
+function composeEn(f, picks){ var s = f.en; for(var k in picks){ s = s.split("{"+k+"}").join(picks[k].en); } return s; }
+function renderFrames(){
+  var box = document.getElementById("frame-list"); box.innerHTML = "";
+  FRAMES.forEach(function(f){
+    var d = document.createElement("div");
+    d.style.cssText = "background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px";
+    var head = document.createElement("div");
+    head.style.cssText = "font-size:1.1rem;font-weight:700;color:#0f172a;margin-bottom:10px";
+    head.textContent = f.de.replace(/\{(\w+)\}/g, "[___]");
+    d.appendChild(head);
+    var picks = {};
+    Object.keys(f.slots).forEach(function(sn){
+      picks[sn] = f.slots[sn][0];
+      var lab = document.createElement("label");
+      lab.style.cssText = "display:block;font-size:.85rem;font-weight:600;color:#475569;margin:8px 0 4px";
+      lab.textContent = sn;
+      var sel = document.createElement("select");
+      sel.style.cssText = "width:100%;padding:10px 12px;border:2px solid #e2e8f0;border-radius:8px;font-size:1rem;font-family:inherit;background:#fff";
+      sel.setAttribute("aria-label", sn);
+      f.slots[sn].forEach(function(opt){
+        var o = document.createElement("option");
+        o.value = opt.de; o.textContent = opt.de + "  (" + opt.en + ")";
+        sel.appendChild(o);
+      });
+      sel.addEventListener("change", function(){
+        var found = f.slots[sn].filter(function(o){ return o.de === sel.value; })[0];
+        picks[sn] = found;
+        preview.textContent = composeDe(f, picks);
+        prevEn.textContent = composeEn(f, picks);
+      });
+      d.appendChild(lab); d.appendChild(sel);
+    });
+    var preview = document.createElement("div");
+    preview.style.cssText = "margin-top:12px;font-size:1.15rem;font-weight:700;color:#1d4ed8";
+    var prevEn = document.createElement("div");
+    prevEn.style.cssText = "color:#475569;margin-top:2px";
+    preview.textContent = composeDe(f, picks);
+    prevEn.textContent = composeEn(f, picks);
+    d.appendChild(preview); d.appendChild(prevEn);
+    var b = document.createElement("button");
+    b.type = "button"; b.textContent = "+ Letter";
+    b.style.cssText = "margin-top:10px;background:#eff6ff;border:1px solid #2563eb;color:#1d4ed8;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit";
+    b.addEventListener("click", function(){ addToScript(composeDe(f, picks)); });
+    d.appendChild(b);
+    box.appendChild(d);
+  });
+}
+function addToScript(de){ script.push(de); renderScript(); }
+function removeFromScript(i){ script.splice(i, 1); renderScript(); }
+function renderScript(){
+  var ol = document.getElementById("script-list"); ol.innerHTML = "";
+  script.forEach(function(de, i){
+    var li = document.createElement("li"); li.style.marginBottom = "6px";
+    var s = document.createElement("span"); s.textContent = de + " ";
+    var b = document.createElement("button");
+    b.type = "button"; b.textContent = "\u2715"; b.setAttribute("aria-label", "Remove sentence");
+    b.style.cssText = "background:none;border:none;color:#ef4444;cursor:pointer;font-size:1rem";
+    b.addEventListener("click", function(){ removeFromScript(i); });
+    li.appendChild(s); li.appendChild(b); ol.appendChild(li);
+  });
+}
+function clearScript(){ script = []; renderScript(); document.getElementById("copy-msg").textContent = ""; }
+function copyScript(){
+  var txt = script.join("\n");
+  var msg = document.getElementById("copy-msg");
+  if(!txt){ msg.textContent = "Add some sentences first."; return; }
+  function done(){ msg.textContent = "Copied " + script.length + " sentences!"; }
+  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(done, function(){ fallback(); }); }
+  else { fallback(); }
+  function fallback(){
+    var ta = document.createElement("textarea"); ta.value = txt;
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); } catch(e){}
+    document.body.removeChild(ta); done();
+  }
+}
+var QUIZ = [{"p": "I am complaining about the defective delivery of 28 September.", "a": "ich beschwere mich über die mangelhafte Lieferung vom 28. September.", "d": ["ich beschwere mich über die mangelhafte Lieferung von 28. September.", "ich beschwere mich über den mangelhaften Lieferung vom 28. September.", "ich beschwere mich an die mangelhafte Lieferung vom 28. September."]}, {"p": "As a result, I suffered damage of 250 euros.", "a": "Dadurch entstand mir ein Schaden in Höhe von 250 Euro.", "d": ["Dadurch entstand mich ein Schaden in Höhe von 250 Euro.", "Dadurch entstand mir ein Schaden in Höhe von 250 Euros.", "Dadurch entstand mir einen Schaden in Höhe von 250 Euro."]}, {"p": "I expect you to replace the goods within 14 days.", "a": "Ich erwarte, dass Sie die Ware innerhalb von 14 Tagen umtauschen.", "d": ["Ich erwarte, dass Sie die Ware innerhalb von 14 Tage umtauschen.", "Ich erwarte, dass Sie der Ware innerhalb von 14 Tagen umtauschen.", "Ich erwarte, dass Sie die Ware innerhalb 14 Tagen umtauschen."]}, {"p": "I ask you to reply to me by 25 October.", "a": "Ich bitte Sie, mir bis zum 25. Oktober zu antworten.", "d": ["Ich bitte Sie, mich bis zum 25. Oktober zu antworten.", "Ich bitte Sie, mir bis zu 25. Oktober zu antworten.", "Ich bitte Sie, mir bis zum 25. Oktober antworten."]}, {"p": "On 3 October I received damaged goods.", "a": "Am 3. Oktober wurde mir eine beschädigte Ware geliefert.", "d": ["Am 3. Oktober wurde mich eine beschädigte Ware geliefert.", "Am 3. Oktober wurde mir eine beschädigten Ware geliefert.", "Am 3. Oktober hat mir eine beschädigte Ware geliefert."]}, {"p": "Should no response have been received by then, I will contact the consumer advice centre.", "a": "Sollte bis dahin keine Reaktion erfolgt sein, wende ich mich an die Verbraucherzentrale.", "d": ["Sollte bis dahin keine Reaktion erfolgt sein, wende ich mich an der Verbraucherzentrale.", "Sollte bis dahin kein Reaktion erfolgt sein, wende ich mich an die Verbraucherzentrale.", "Sollte bis dahin keine Reaktion erfolgt sein, wende ich mich an den Ombudsmann."]}, {"p": "I expect a full refund of the purchase price.", "a": "Ich erwarte eine vollständige Rückerstattung des Kaufpreises.", "d": ["Ich erwarte eine vollständige Rückerstattung den Kaufpreises.", "Ich erwarte eine vollständigen Rückerstattung des Kaufpreises.", "Ich erwarte eine vollständige Rückerstattung des Kaufpreis."]}, {"p": "Subject: Complaint about defective delivery — order 4521", "a": "Betreff: Beschwerde über mangelhafte Lieferung — Auftrag 4521", "d": ["Betreff: Beschwerde über mangelhafte Lieferung — Auftrag 4522", "Betreff: Beschwerde an mangelhafte Lieferung — Auftrag 4521", "Betreff: Beschwerden über mangelhafte Lieferung — Auftrag 4521"]}, {"p": "As a result, the device is no longer usable.", "a": "Dadurch ist das Gerät nicht mehr benutzbar.", "d": ["Dadurch ist der Gerät nicht mehr benutzbar.", "Dadurch ist das Gerät nicht mehr einsatzfähig.", "Dadurch ist das Gerät nicht mehr benutzbares."]}, {"p": "Yours faithfully", "a": "Hochachtungsvoll", "d": ["Hochachtungsvoll.", "Hochachtungsvoll!", "Hochachtungsvoll,"]}, {"p": "Max Mustermann, customer number 452189", "a": "Max Mustermann, Kundennummer 452189", "d": ["Max Mustermann, Kundennummer 452198", "Max Mustermann, Kundennummern 452189", "Max Mustermann, Kunde Nummer 452189"]}, {"p": "Should the defects not be remedied in time, I will feel compelled to take legal action.", "a": "Sollte die Mängel nicht fristgerecht behoben werden, sehe ich mich gezwungen, rechtliche Schritte einzuleiten.", "d": ["Sollten die Mängel nicht fristgerecht behoben werden, sehe ich mich gezwungen, rechtliche Schritte einzuleiten.", "Sollte die Mängel nicht fristgerecht behoben werden, sehe ich mich gezwungen, rechtlichen Schritte einzuleiten.", "Sollte die Mängel nicht fristgerecht behoben werden, sehe ich mich gezwungen, rechtliche Schritte einleiten."]}];
+var ROUNDS = 12, pool = [], qi = 0, correctN = 0, missedN = 0, missedList = [], qa = null;
+function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
+function startQuiz(){
+  pool = shuffle(QUIZ.slice()); qi = 0; correctN = 0; missedN = 0; missedList = [];
+  document.getElementById("quiz-zone").style.display = "block";
+  document.getElementById("quiz-summary").innerHTML = "";
+  document.getElementById("calc-btn").style.display = "none";
+  showQ();
+}
+function showQ(){
+  qa = pool[qi % pool.length];
+  var opts = shuffle([qa.a].concat(qa.d));
+  document.getElementById("quiz-prompt").textContent = "Which is the exact German sentence?";
+  document.getElementById("quiz-sentence").textContent = qa.p;
+  document.getElementById("qcount").textContent = "Round " + (qi+1) + "/" + ROUNDS;
+  document.getElementById("qbar").style.width = (qi/ROUNDS*100) + "%";
+  var box = document.getElementById("quiz-options"); box.innerHTML = "";
+  var fb = document.getElementById("quiz-feedback"); fb.className = ""; fb.style.display = "none";
+  document.getElementById("quiz-next").style.display = "none";
+  opts.forEach(function(opt){
+    var b = document.createElement("button");
+    b.className = "quiz-btn"; b.textContent = opt;
+    b.addEventListener("click", function(){ answer(opt, b); });
+    box.appendChild(b);
+  });
+}
+function answer(opt, btn){
+  var fb = document.getElementById("quiz-feedback");
+  var btns = document.querySelectorAll("#quiz-options .quiz-btn");
+  btns.forEach(function(x){ x.disabled = true; if(x.textContent === qa.a) x.classList.add("correct"); });
+  if(opt === qa.a){ correctN++; fb.className = "ok"; fb.textContent = "\u2713 Correct!"; }
+  else { missedN++; missedList.push(qa); fb.className = "no"; btn.classList.add("wrong");
+    fb.textContent = "\u2717 The sentence is: \u201c" + qa.a + "\u201d."; }
+  document.getElementById("qscore").textContent = "Correct: " + correctN + " \u00b7 Missed: " + missedN;
+  var nb = document.getElementById("quiz-next");
+  nb.style.display = "block";
+  nb.textContent = (qi + 1 < ROUNDS) ? "Next" : "See results";
+}
+function nextQ(){
+  qi++;
+  if(qi < ROUNDS) showQ();
+  else {
+    document.getElementById("quiz-prompt").textContent = "";
+    document.getElementById("quiz-sentence").textContent = "";
+    document.getElementById("quiz-options").innerHTML = "";
+    document.getElementById("quiz-feedback").style.display = "none";
+    document.getElementById("quiz-next").style.display = "none";
+    document.getElementById("qbar").style.width = "100%";
+    var uniq = {}; missedList.forEach(function(m){ uniq[m.a] = m; });
+    var missArr = Object.keys(uniq).map(function(k){ return uniq[k]; });
+    var msg = "<strong>" + correctN + " / " + ROUNDS + " correct.</strong> ";
+    if(missArr.length === 0) msg += "Beschwerde German mastered.";
+    else {
+      msg += "Review these " + missArr.length + ":<ul style='margin:8px 0 0 18px'>";
+      missArr.forEach(function(m){ msg += "<li><strong>" + m.a + "</strong> <span style='color:#64748b'>(" + m.p + ")</span></li>"; });
+      msg += "</ul>";
+    }
+    document.getElementById("quiz-summary").innerHTML = '<div class="note">' + msg + "</div>";
+    document.getElementById("calc-btn").style.display = "block";
+    document.getElementById("calc-btn").textContent = "Play again";
+  }
+}
+renderFrames();
+
+
+</script>
+</body>
+</html>
