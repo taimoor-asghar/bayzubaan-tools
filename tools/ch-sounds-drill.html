@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CH Sounds Drill: ich-Laut vs ach-Laut vs [k] | Bayzubaan</title>
+<meta name="description" content="Master the three German ch sounds: ich-Laut [ç], ach-Laut [x] and [k]. Interactive predictor, 42-word audio bank and a 12-round quiz.">
+<link rel="canonical" href="https://bayzubaan.com/tools/ch-sounds-drill/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CH Sounds Drill: ich-Laut vs ach-Laut vs [k]">
+<meta property="og:description" content="ich or ach? Predict the German ch sound with one rule, then drill 42 words with audio and a quiz.">
+<meta property="og:url" content="https://bayzubaan.com/tools/ch-sounds-drill/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CH Sounds Drill: ich-Laut vs ach-Laut vs [k]">
+<meta name="twitter:description" content="ich or ach? Predict the German ch sound with one rule, then drill 42 words with audio and a quiz.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the ich-Laut the same as English “sh”?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, and this is the most common mistake. English “sh” [ʃ] is made with the tongue tip near the ridge behind the teeth; the ich-Laut [ç] is made with the middle of the tongue near the hard palate, like the breathy “h” in “huge”. They sound clearly different to native ears — “misht” for “nicht” is immediately recognisable as a learner error."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do some Germans say “Könik” instead of “Könich”?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "That is the southern German and Austrian pronunciation of the -ig ending. The standard (northern) pronunciation taught in textbooks and expected in exams is [ç]: Köni[ç]. Both are correct German; learners should default to the standard form."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is 'ch' pronounced in Chemie?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With the ich-Laut: [çeˈmiː]. Chemie is not a Greek-ch word despite the spelling — the ch follows the word-initial rule and takes [ç]. The same goes for China ([ˈçiːna] in standard German)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does ch sound different after 'a' than after 'i'?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is coarticulation: the tongue anticipates the neighbouring vowel. After the open back vowel 'a', the tongue is already low and back, so the fricative comes out throaty ([x]); after the close front vowel 'i', the tongue is high and forward, so it comes out palatal ([ç]). The spelling rule simply records what the mouth does naturally."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My ach-Laut sounds like coughing. How do I soften it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use less air and less constriction: think of fogging a mirror with warm breath rather than clearing your throat. Start from a whispered “haaa”, slowly raise the back of the tongue until you hear friction, and stop the moment the sound appears. The real [x] in normal speech is quiet — the harsh version only appears when learners push too hard."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>CH Sounds Drill: ich-Laut, ach-Laut and [k]</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">ich or ach? Predict the German ch sound with one rule, then drill 42 words with audio and a quiz.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+<style>
+.rec-btn{background:#fff;border:2px solid #2563eb;color:#1d4ed8;border-radius:8px;padding:12px 18px;font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit}
+.rec-btn.rec-on{border-color:#ef4444;color:#b91c1c}
+.mic-note{font-size:.9rem;color:#64748b;margin-top:8px}
+audio.me-play{display:none;width:100%;margin-top:10px}
+.speak-btn{background:#eff6ff;border:2px solid #bfdbfe;color:#1d4ed8;border-radius:8px;padding:10px 16px;font-size:1rem;font-weight:600;cursor:pointer;font-family:inherit;margin:4px 6px 4px 0}
+.speak-btn:hover{border-color:#2563eb}
+.pair-table td .speak-btn{padding:6px 12px;font-size:.9rem}
+</style>
+<h2>The CH predictor</h2>
+<p style="margin-bottom:12px">Type any German word with <strong>ch</strong> and the tool applies the rule, step by step.</p>
+<div class="field">
+<label for="ch-input">Word with ch</label>
+<input id="ch-input" type="text" value="Milch" autocomplete="off" autocapitalize="off" spellcheck="false">
+</div>
+<button id="calc-btn" onclick="chPredict()">Predict the sound</button>
+<div id="ch-out" style="margin-top:16px"></div>
+<div class="try-row">
+<button onclick="chTry('Buch')">Buch</button>
+<button onclick="chTry('nicht')">nicht</button>
+<button onclick="chTry('Chor')">Chor</button>
+<button onclick="chTry('König')">König</button>
+<button onclick="chTry('Orchester')">Orchester</button>
+<button onclick="chTry('rauchen')">rauchen</button>
+</div>
+<hr style="margin:24px 0;border:none;border-top:1px solid #e2e8f0">
+<h2>Word bank</h2>
+<p style="margin-bottom:12px">Listen to each group. Feel where your tongue is for [ç] versus [x].</p>
+<h3>ich-Laut [ç] — 20 words</h3><table class='pair-table'><tr><th>Word</th><th>Hear</th><th>Meaning</th><th>Rule</th></tr><tr><td><strong>ich</strong><br><span style='color:#64748b;font-size:.85rem'>[ɪç]</span></td><td><button class='speak-btn' onclick="speakDE('ich')">&#128266;</button></td><td>I</td><td style='color:#64748b;font-size:.9rem'>word-initial ch → [ç]</td></tr><tr><td><strong>mich</strong><br><span style='color:#64748b;font-size:.85rem'>[mɪç]</span></td><td><button class='speak-btn' onclick="speakDE('mich')">&#128266;</button></td><td>me</td><td style='color:#64748b;font-size:.9rem'>after i → [ç]</td></tr><tr><td><strong>dich</strong><br><span style='color:#64748b;font-size:.85rem'>[dɪç]</span></td><td><button class='speak-btn' onclick="speakDE('dich')">&#128266;</button></td><td>you (acc.)</td><td style='color:#64748b;font-size:.9rem'>after i → [ç]</td></tr><tr><td><strong>nicht</strong><br><span style='color:#64748b;font-size:.85rem'>[nɪçt]</span></td><td><button class='speak-btn' onclick="speakDE('nicht')">&#128266;</button></td><td>not</td><td style='color:#64748b;font-size:.9rem'>after i → [ç]</td></tr><tr><td><strong>echt</strong><br><span style='color:#64748b;font-size:.85rem'>[ɛçt]</span></td><td><button class='speak-btn' onclick="speakDE('echt')">&#128266;</button></td><td>real</td><td style='color:#64748b;font-size:.9rem'>after e → [ç]</td></tr><tr><td><strong>schlecht</strong><br><span style='color:#64748b;font-size:.85rem'>[ʃlɛçt]</span></td><td><button class='speak-btn' onclick="speakDE('schlecht')">&#128266;</button></td><td>bad</td><td style='color:#64748b;font-size:.9rem'>after e → [ç]</td></tr><tr><td><strong>Milch</strong><br><span style='color:#64748b;font-size:.85rem'>[mɪlç]</span></td><td><button class='speak-btn' onclick="speakDE('Milch')">&#128266;</button></td><td>milk</td><td style='color:#64748b;font-size:.9rem'>after consonant l → [ç]</td></tr><tr><td><strong>durch</strong><br><span style='color:#64748b;font-size:.85rem'>[dʊʁç]</span></td><td><button class='speak-btn' onclick="speakDE('durch')">&#128266;</button></td><td>through</td><td style='color:#64748b;font-size:.9rem'>after consonant r → [ç]</td></tr><tr><td><strong>welche</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈvɛlçə]</span></td><td><button class='speak-btn' onclick="speakDE('welche')">&#128266;</button></td><td>which</td><td style='color:#64748b;font-size:.9rem'>after e → [ç]</td></tr><tr><td><strong>Mädchen</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈmɛːtçən]</span></td><td><button class='speak-btn' onclick="speakDE('Mädchen')">&#128266;</button></td><td>girl</td><td style='color:#64748b;font-size:.9rem'>after e → [ç]</td></tr><tr><td><strong>Bücher</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈbyːçɐ]</span></td><td><button class='speak-btn' onclick="speakDE('Bücher')">&#128266;</button></td><td>books</td><td style='color:#64748b;font-size:.9rem'>after ü → [ç]</td></tr><tr><td><strong>Köche</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈkœçə]</span></td><td><button class='speak-btn' onclick="speakDE('Köche')">&#128266;</button></td><td>cooks</td><td style='color:#64748b;font-size:.9rem'>after ö → [ç]</td></tr><tr><td><strong>lächeln</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈlɛçl̩n]</span></td><td><button class='speak-btn' onclick="speakDE('lächeln')">&#128266;</button></td><td>to smile</td><td style='color:#64748b;font-size:.9rem'>after ä → [ç]</td></tr><tr><td><strong>feucht</strong><br><span style='color:#64748b;font-size:.85rem'>[fɔʏ̯çt]</span></td><td><button class='speak-btn' onclick="speakDE('feucht')">&#128266;</button></td><td>damp</td><td style='color:#64748b;font-size:.9rem'>after diphthong eu → [ç]</td></tr><tr><td><strong>König</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈkøːnɪç]</span></td><td><button class='speak-btn' onclick="speakDE('König')">&#128266;</button></td><td>king</td><td style='color:#64748b;font-size:.9rem'>-ig ending → [ç] (standard)</td></tr><tr><td><strong>ruhig</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈʁuːɪç]</span></td><td><button class='speak-btn' onclick="speakDE('ruhig')">&#128266;</button></td><td>calm</td><td style='color:#64748b;font-size:.9rem'>-ig ending → [ç] (standard)</td></tr><tr><td><strong>zwanzig</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈt͡svant͡sɪç]</span></td><td><button class='speak-btn' onclick="speakDE('zwanzig')">&#128266;</button></td><td>twenty</td><td style='color:#64748b;font-size:.9rem'>-ig ending → [ç] (standard)</td></tr><tr><td><strong>dreißig</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈdʁaɪ̯sɪç]</span></td><td><button class='speak-btn' onclick="speakDE('dreißig')">&#128266;</button></td><td>thirty</td><td style='color:#64748b;font-size:.9rem'>-ig ending → [ç] (standard)</td></tr><tr><td><strong>lustig</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈlʊstɪç]</span></td><td><button class='speak-btn' onclick="speakDE('lustig')">&#128266;</button></td><td>funny</td><td style='color:#64748b;font-size:.9rem'>-ig ending → [ç] (standard)</td></tr><tr><td><strong>schwierig</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈʃviːʁɪç]</span></td><td><button class='speak-btn' onclick="speakDE('schwierig')">&#128266;</button></td><td>difficult</td><td style='color:#64748b;font-size:.9rem'>-ig ending → [ç] (standard)</td></tr></table>
+<h3>ach-Laut [x] — 14 words</h3><table class='pair-table'><tr><th>Word</th><th>Hear</th><th>Meaning</th><th>Rule</th></tr><tr><td><strong>ach</strong><br><span style='color:#64748b;font-size:.85rem'>[ax]</span></td><td><button class='speak-btn' onclick="speakDE('ach')">&#128266;</button></td><td>oh!</td><td style='color:#64748b;font-size:.9rem'>word-initial after a → [x]</td></tr><tr><td><strong>Bach</strong><br><span style='color:#64748b;font-size:.85rem'>[bax]</span></td><td><button class='speak-btn' onclick="speakDE('Bach')">&#128266;</button></td><td>stream</td><td style='color:#64748b;font-size:.9rem'>after a → [x]</td></tr><tr><td><strong>Buch</strong><br><span style='color:#64748b;font-size:.85rem'>[buːx]</span></td><td><button class='speak-btn' onclick="speakDE('Buch')">&#128266;</button></td><td>book</td><td style='color:#64748b;font-size:.9rem'>after u → [x]</td></tr><tr><td><strong>Tuch</strong><br><span style='color:#64748b;font-size:.85rem'>[tuːx]</span></td><td><button class='speak-btn' onclick="speakDE('Tuch')">&#128266;</button></td><td>cloth</td><td style='color:#64748b;font-size:.9rem'>after u → [x]</td></tr><tr><td><strong>Kuchen</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈkuːxn̩]</span></td><td><button class='speak-btn' onclick="speakDE('Kuchen')">&#128266;</button></td><td>cake</td><td style='color:#64748b;font-size:.9rem'>after u → [x]</td></tr><tr><td><strong>machen</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈmaxn̩]</span></td><td><button class='speak-btn' onclick="speakDE('machen')">&#128266;</button></td><td>to make</td><td style='color:#64748b;font-size:.9rem'>after a → [x]</td></tr><tr><td><strong>lachen</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈlaxn̩]</span></td><td><button class='speak-btn' onclick="speakDE('lachen')">&#128266;</button></td><td>to laugh</td><td style='color:#64748b;font-size:.9rem'>after a → [x]</td></tr><tr><td><strong>noch</strong><br><span style='color:#64748b;font-size:.85rem'>[nɔx]</span></td><td><button class='speak-btn' onclick="speakDE('noch')">&#128266;</button></td><td>still</td><td style='color:#64748b;font-size:.9rem'>after o → [x]</td></tr><tr><td><strong>doch</strong><br><span style='color:#64748b;font-size:.85rem'>[dɔx]</span></td><td><button class='speak-btn' onclick="speakDE('doch')">&#128266;</button></td><td>but/though</td><td style='color:#64748b;font-size:.9rem'>after o → [x]</td></tr><tr><td><strong>hoch</strong><br><span style='color:#64748b;font-size:.85rem'>[hoːx]</span></td><td><button class='speak-btn' onclick="speakDE('hoch')">&#128266;</button></td><td>high</td><td style='color:#64748b;font-size:.9rem'>after o → [x]</td></tr><tr><td><strong>auch</strong><br><span style='color:#64748b;font-size:.85rem'>[aʊ̯x]</span></td><td><button class='speak-btn' onclick="speakDE('auch')">&#128266;</button></td><td>also</td><td style='color:#64748b;font-size:.9rem'>after diphthong au → [x]</td></tr><tr><td><strong>Bauch</strong><br><span style='color:#64748b;font-size:.85rem'>[baʊ̯x]</span></td><td><button class='speak-btn' onclick="speakDE('Bauch')">&#128266;</button></td><td>belly</td><td style='color:#64748b;font-size:.9rem'>after au → [x]</td></tr><tr><td><strong>rauchen</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈʁaʊ̯xn̩]</span></td><td><button class='speak-btn' onclick="speakDE('rauchen')">&#128266;</button></td><td>to smoke</td><td style='color:#64748b;font-size:.9rem'>after au → [x]</td></tr><tr><td><strong>suchen</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈzuːxn̩]</span></td><td><button class='speak-btn' onclick="speakDE('suchen')">&#128266;</button></td><td>to search</td><td style='color:#64748b;font-size:.9rem'>after u → [x]</td></tr></table>
+<h3>[k] Greek words — 8 words</h3><table class='pair-table'><tr><th>Word</th><th>Hear</th><th>Meaning</th><th>Rule</th></tr><tr><td><strong>Chor</strong><br><span style='color:#64748b;font-size:.85rem'>[koːɐ̯]</span></td><td><button class='speak-btn' onclick="speakDE('Chor')">&#128266;</button></td><td>choir</td><td style='color:#64748b;font-size:.9rem'>Greek root → [k]</td></tr><tr><td><strong>Charakter</strong><br><span style='color:#64748b;font-size:.85rem'>[kaˈʁaktɐ]</span></td><td><button class='speak-btn' onclick="speakDE('Charakter')">&#128266;</button></td><td>character</td><td style='color:#64748b;font-size:.9rem'>Greek root → [k]</td></tr><tr><td><strong>Chaos</strong><br><span style='color:#64748b;font-size:.85rem'>[ˈkaːɔs]</span></td><td><button class='speak-btn' onclick="speakDE('Chaos')">&#128266;</button></td><td>chaos</td><td style='color:#64748b;font-size:.9rem'>Greek root → [k]</td></tr><tr><td><strong>Christ</strong><br><span style='color:#64748b;font-size:.85rem'>[kʁɪst]</span></td><td><button class='speak-btn' onclick="speakDE('Christ')">&#128266;</button></td><td>Christian</td><td style='color:#64748b;font-size:.9rem'>Greek root → [k]</td></tr><tr><td><strong>Chlor</strong><br><span style='color:#64748b;font-size:.85rem'>[kloːɐ̯]</span></td><td><button class='speak-btn' onclick="speakDE('Chlor')">&#128266;</button></td><td>chlorine</td><td style='color:#64748b;font-size:.9rem'>Greek root → [k]</td></tr><tr><td><strong>Chrom</strong><br><span style='color:#64748b;font-size:.85rem'>[kʁoːm]</span></td><td><button class='speak-btn' onclick="speakDE('Chrom')">&#128266;</button></td><td>chrome</td><td style='color:#64748b;font-size:.9rem'>Greek root → [k]</td></tr><tr><td><strong>Orchester</strong><br><span style='color:#64748b;font-size:.85rem'>[ɔʁˈkɛstɐ]</span></td><td><button class='speak-btn' onclick="speakDE('Orchester')">&#128266;</button></td><td>orchestra</td><td style='color:#64748b;font-size:.9rem'>Greek root → [k]</td></tr><tr><td><strong>Architekt</strong><br><span style='color:#64748b;font-size:.85rem'>[aʁçiˈtɛkt]</span></td><td><button class='speak-btn' onclick="speakDE('Architekt')">&#128266;</button></td><td>architect</td><td style='color:#64748b;font-size:.9rem'>Greek root → [k] (note: second ch is [ç]!)</td></tr></table>
+<hr style="margin:24px 0;border:none;border-top:1px solid #e2e8f0">
+
+<h3>Quiz: which sound does 'ch' make?</h3>
+<div class="progress"><div id="PQ-bar"></div></div>
+<div class="quiz-meta"><span id="PQ-meta"></span></div>
+<div id="PQ-prompt" style="margin-bottom:14px"></div>
+<div id="PQ-options"></div>
+<div id="PQ-fb"></div>
+<p class="mic-note" id="speak-note" style="display:none">If you hear nothing, your device may not have a German voice installed.</p>
+<p class="mic-note">Tip: use headphones. Words are spoken by your device's German voice.</p>
+<script>document.addEventListener('DOMContentLoaded',function(){PQ_start(12);});</script>
+
+
+</div>
+
+<article class="prose">
+
+<h2>One spelling, three sounds</h2>
+<p>The letters <strong>ch</strong> in German stand for three completely different sounds, and using the wrong one is one of the most audible learner mistakes: <span class="hl">ich</span> said with a hard [k] (“ick”) or <span class="hl">Buch</span> said with [ç] (“Büch”) marks you instantly. The three sounds are the <strong>ich-Laut</strong> [ç] (a breathy palatal hiss, as in <em>ich, mich, nicht</em>), the <strong>ach-Laut</strong> [x] (a throaty fricative, as in <em>ach, Bach, Buch</em>), and a plain <strong>[k]</strong> in words of Greek origin (as in <em>Chor, Charakter, Chaos</em>). The good news: which sound appears is almost entirely predictable from a single rule.</p>
+<h2>The one-letter rule: look left of the ch</h2>
+<p>Find the <strong>ch</strong> in the word and look at the letter immediately before it. If that letter is <strong>a, o, u</strong> or the diphthong <strong>au</strong>, the sound is the ach-Laut [x]: <em>Bach, noch, Buch, auch, rauchen</em>. In every other position — after <strong>e, i, ä, ö, ü</strong>, after diphthongs like <strong>ei, eu</strong>, after a consonant (<strong>l, n, r</strong>), or at the start of the word — the sound is the ich-Laut [ç]: <em>ich, echt, Milch, durch, Bücher, feucht</em>. Try it on the predictor above: it applies exactly this rule, and it is right for the overwhelming majority of German words.</p>
+<h2>Shaping the ich-Laut [ç]</h2>
+<p>The ich-Laut is <strong>not</strong> the English “sh” — that is the single most common substitution and it sounds wrong to every native ear. Instead, think of the breathy “h” at the start of English “huge” or “human”: the tongue rises close to the hard palate and air hisses through a narrow channel. Now hold that tongue position and voice it into a word: <em>huuuuge → ich</em>. The sound is soft, high, and forward in the mouth. Practice chain: <em>huge – ich – mich – nicht – Milch</em>, feeling the tongue stay in the same forward position for all of them.</p>
+<h2>Shaping the ach-Laut [x]</h2>
+<p>The ach-Laut lives further back: the back of the tongue approaches the soft palate (the velum) and air scrapes through. English has no exact equivalent, but three anchors get you there: the <strong>ch</strong> in Scottish “loch”, the <strong>j</strong> in Spanish <em>Juan</em>, and the feeling of <strong>clearing your throat very gently</strong>. Start from a soft throat-clear (“ahem” without the voice), then shape it into <em>ach – Bach – Buch – noch – auch</em>. The classic learner error is overdoing it into a harsh cough; the real [x] is quiet and controlled, more like warm breath on a cold window than a throat infection.</p>
+<h2>The [k] words: Greek roots</h2>
+<p>A small, closed set of words pronounces <strong>ch</strong> as a plain [k]: <em>Chor, Charakter, Chaos, Christ, Chlor, Chrom, Orchester, Architekt</em>. Almost all come from Greek, and almost all start with <em>ch</em> or <em>chr</em>. There is no rule to derive — just learn the list, and note the trap inside <em>Architekt</em>: the first ch is [k] (Greek root) but the second ch follows an <strong>i</strong> and is therefore [ç] ([aʁçiˈtɛkt]). When in doubt about an unfamiliar ch-word, the one-letter rule is still your best first guess; only memorised Greek words override it.</p>
+<h2>The -ig ending: north says [ç], south says [k]</h2>
+<p>Words ending in <strong>-ig</strong> — <em>König, ruhig, zwanzig, lustig, schwierig</em> — are pronounced with [ç] in standard (northern) German: <em>Köni[ç]</em>. In southern Germany and Austria you will commonly hear [k] (<em>Könik</em>), which is an accepted regional variant, not a mistake. For learners aiming at the standard — and for the Fachsprachenprüfung — the [ç] version is the safe choice. Note the spelling trap: <strong>-lich</strong> (<em>freundlich</em>) is always [ç] too, following the same “after i” logic.</p>
+<h2>Bonus rule: chs → [ks]</h2>
+<p>When <strong>ch</strong> is followed by <strong>s</strong>, the combination collapses to [ks]: <em>sechs</em> [zɛks] (six), <em>wachsen</em> [ˈvaksn̩] (to grow), <em>der Wechsel</em> (change). Do not try to pronounce the [x] and the [s] separately — it is simply “ks” as in English “box”. This one rule fixes a whole family of number and verb words at once.</p>
+<h2>Mistakes to unlearn</h2>
+<p>Four substitutions cover nearly every learner error. <strong>“sh” for [ç]</strong> (<em>misht</em> for <em>nicht</em>) — fix with the “huge” anchor. <strong>[k] for [ç]</strong> (“ick” for <em>ich</em>) — this is actually the Berlin dialect, charming in Berlin, wrong in an exam. <strong>[ç] for [x]</strong> (“Büch” for <em>Buch</em>) — fix with the throat-clear anchor. <strong>English “ch” as in “church”</strong> for any German ch — German ch is never [ʧ]. Run the word bank above group by group, exaggerate the tongue positions for a week, and the three sounds separate permanently.</p>
+<h2>A five-minute daily routine</h2>
+<p>One minute: alternate <em>ich – ach – ich – ach</em> slowly, feeling the tongue slide forward and back. Two minutes: take five words from the bank, predict the sound with the rule before tapping the audio, and check yourself. Two minutes: the quiz. After a week, add the -ig words and the Greek list. Most learners find the rule clicks within days; the muscle memory for [ç] versus [x] takes two to three weeks of daily short sessions. Test yourself the honest way: record ten words, wait a day, then listen and label each ch without looking.</p>
+
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>Is the ich-Laut the same as English “sh”?</h3><p>No, and this is the most common mistake. English “sh” [ʃ] is made with the tongue tip near the ridge behind the teeth; the ich-Laut [ç] is made with the middle of the tongue near the hard palate, like the breathy “h” in “huge”. They sound clearly different to native ears — “misht” for “nicht” is immediately recognisable as a learner error.</p></div><div class="faq-item"><h3>Why do some Germans say “Könik” instead of “Könich”?</h3><p>That is the southern German and Austrian pronunciation of the -ig ending. The standard (northern) pronunciation taught in textbooks and expected in exams is [ç]: Köni[ç]. Both are correct German; learners should default to the standard form.</p></div><div class="faq-item"><h3>How is &#x27;ch&#x27; pronounced in Chemie?</h3><p>With the ich-Laut: [çeˈmiː]. Chemie is not a Greek-ch word despite the spelling — the ch follows the word-initial rule and takes [ç]. The same goes for China ([ˈçiːna] in standard German).</p></div><div class="faq-item"><h3>Why does ch sound different after &#x27;a&#x27; than after &#x27;i&#x27;?</h3><p>It is coarticulation: the tongue anticipates the neighbouring vowel. After the open back vowel &#x27;a&#x27;, the tongue is already low and back, so the fricative comes out throaty ([x]); after the close front vowel &#x27;i&#x27;, the tongue is high and forward, so it comes out palatal ([ç]). The spelling rule simply records what the mouth does naturally.</p></div><div class="faq-item"><h3>My ach-Laut sounds like coughing. How do I soften it?</h3><p>Use less air and less constriction: think of fogging a mirror with warm breath rather than clearing your throat. Start from a whispered “haaa”, slowly raise the back of the tongue until you hear friction, and stop the moment the sound appears. The real [x] in normal speech is quiet — the harsh version only appears when learners push too hard.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+var _deVoice=null;
+function pickDeVoice(){
+  try{
+    var vs=speechSynthesis.getVoices();
+    for(var i=0;i<vs.length;i++){
+      if(vs[i].lang && vs[i].lang.toLowerCase().indexOf('de')===0){_deVoice=vs[i];break;}
+    }
+  }catch(e){}
+}
+try{
+  pickDeVoice();
+  if(typeof speechSynthesis!=='undefined'&&speechSynthesis.onvoiceschanged!==undefined){
+    speechSynthesis.onvoiceschanged=pickDeVoice;
+  }
+}catch(e){}
+function speakDE(t,rate){
+  try{
+    speechSynthesis.cancel();
+    var u=new SpeechSynthesisUtterance(t);
+    u.lang='de-DE';
+    if(_deVoice){u.voice=_deVoice;}
+    u.rate=rate||0.85;
+    speechSynthesis.speak(u);
+  }catch(e){
+    var el=document.getElementById('speak-note');
+    if(el){el.style.display='block';}
+  }
+}
+
+var GREEK_K=["chor","charakter","chaos","christ","chlor","chrom","orchester","architekt","cholesterin","chronisch"];
+function chSound(w){
+  var low=String(w).toLowerCase().trim();
+  if(low.indexOf("chs")>=0){return {s:"ks",why:"chs → [ks], as in English “box”"};}
+  if(GREEK_K.indexOf(low)>=0){return {s:"k",why:"Greek root word — ch is a plain [k]" };}
+  if(/ig$/.test(low)){return {s:"ich",why:"-ig ending → ich-Laut [ç] in standard German"};}
+  var i=low.indexOf("ch");
+  if(i<0){return {s:"?",why:"no ch found"};}
+  var prev2=low.slice(Math.max(0,i-2),i);
+  if(prev2==="au"){return {s:"ach",why:"ch after 'au' \u2192 ach-Laut [x]"};}
+  if(prev2==="eu"||prev2==="\u00e4u"){return {s:"ich",why:"ch after '"+prev2+"' \u2192 ich-Laut [\u00e7]"};}
+  var prev=low.charAt(i-1);
+  if(prev&&"aou".indexOf(prev)>=0){return {s:"ach",why:"ch after '"+prev+"' (a/o/u) \u2192 ach-Laut [x]"};}
+  return {s:"ich",why:"ch after '"+(prev||"word start")+"' \u2192 ich-Laut [\u00e7]"};
+}
+var CH_LABEL={"ich":"ich-Laut [ç]","ach":"ach-Laut [x]","k":"[k] as in “k”","ks":"[ks] as in “box”"};
+function chTry(w){document.getElementById('ch-input').value=w;chPredict();}
+function chPredict(){
+  var w=document.getElementById('ch-input').value;
+  var r=chSound(w);
+  var out=document.getElementById('ch-out');
+  if(r.s==="?"){out.innerHTML='<p>Enter a word containing <strong>ch</strong>.</p>';return;}
+  out.innerHTML='<div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:16px">'
+    +'<p style="font-size:1.15rem"><strong>'+w+'</strong> → <strong>'+CH_LABEL[r.s]+'</strong></p>'
+    +'<p style="color:#1e3a8a">'+r.why+'</p>'
+    +'<button class="speak-btn" onclick="speakDE(\''+w.replace(/'/g,"")+'\')">&#128266; Hear it</button></div>';
+}
+var PQ_ITEMS=[{"w": "ich", "s": "ich", "ipa": "[ɪç]", "en": "I", "rule": "word-initial ch → [ç]"}, {"w": "mich", "s": "ich", "ipa": "[mɪç]", "en": "me", "rule": "after i → [ç]"}, {"w": "dich", "s": "ich", "ipa": "[dɪç]", "en": "you (acc.)", "rule": "after i → [ç]"}, {"w": "nicht", "s": "ich", "ipa": "[nɪçt]", "en": "not", "rule": "after i → [ç]"}, {"w": "echt", "s": "ich", "ipa": "[ɛçt]", "en": "real", "rule": "after e → [ç]"}, {"w": "schlecht", "s": "ich", "ipa": "[ʃlɛçt]", "en": "bad", "rule": "after e → [ç]"}, {"w": "Milch", "s": "ich", "ipa": "[mɪlç]", "en": "milk", "rule": "after consonant l → [ç]"}, {"w": "durch", "s": "ich", "ipa": "[dʊʁç]", "en": "through", "rule": "after consonant r → [ç]"}, {"w": "welche", "s": "ich", "ipa": "[ˈvɛlçə]", "en": "which", "rule": "after e → [ç]"}, {"w": "Mädchen", "s": "ich", "ipa": "[ˈmɛːtçən]", "en": "girl", "rule": "after e → [ç]"}, {"w": "Bücher", "s": "ich", "ipa": "[ˈbyːçɐ]", "en": "books", "rule": "after ü → [ç]"}, {"w": "Köche", "s": "ich", "ipa": "[ˈkœçə]", "en": "cooks", "rule": "after ö → [ç]"}, {"w": "lächeln", "s": "ich", "ipa": "[ˈlɛçl̩n]", "en": "to smile", "rule": "after ä → [ç]"}, {"w": "feucht", "s": "ich", "ipa": "[fɔʏ̯çt]", "en": "damp", "rule": "after diphthong eu → [ç]"}, {"w": "ach", "s": "ach", "ipa": "[ax]", "en": "oh!", "rule": "word-initial after a → [x]"}, {"w": "Bach", "s": "ach", "ipa": "[bax]", "en": "stream", "rule": "after a → [x]"}, {"w": "Buch", "s": "ach", "ipa": "[buːx]", "en": "book", "rule": "after u → [x]"}, {"w": "Tuch", "s": "ach", "ipa": "[tuːx]", "en": "cloth", "rule": "after u → [x]"}, {"w": "Kuchen", "s": "ach", "ipa": "[ˈkuːxn̩]", "en": "cake", "rule": "after u → [x]"}, {"w": "machen", "s": "ach", "ipa": "[ˈmaxn̩]", "en": "to make", "rule": "after a → [x]"}, {"w": "lachen", "s": "ach", "ipa": "[ˈlaxn̩]", "en": "to laugh", "rule": "after a → [x]"}, {"w": "noch", "s": "ach", "ipa": "[nɔx]", "en": "still", "rule": "after o → [x]"}, {"w": "doch", "s": "ach", "ipa": "[dɔx]", "en": "but/though", "rule": "after o → [x]"}, {"w": "hoch", "s": "ach", "ipa": "[hoːx]", "en": "high", "rule": "after o → [x]"}, {"w": "auch", "s": "ach", "ipa": "[aʊ̯x]", "en": "also", "rule": "after diphthong au → [x]"}, {"w": "Bauch", "s": "ach", "ipa": "[baʊ̯x]", "en": "belly", "rule": "after au → [x]"}, {"w": "rauchen", "s": "ach", "ipa": "[ˈʁaʊ̯xn̩]", "en": "to smoke", "rule": "after au → [x]"}, {"w": "suchen", "s": "ach", "ipa": "[ˈzuːxn̩]", "en": "to search", "rule": "after u → [x]"}, {"w": "Chor", "s": "k", "ipa": "[koːɐ̯]", "en": "choir", "rule": "Greek root → [k]"}, {"w": "Charakter", "s": "k", "ipa": "[kaˈʁaktɐ]", "en": "character", "rule": "Greek root → [k]"}, {"w": "Chaos", "s": "k", "ipa": "[ˈkaːɔs]", "en": "chaos", "rule": "Greek root → [k]"}, {"w": "Christ", "s": "k", "ipa": "[kʁɪst]", "en": "Christian", "rule": "Greek root → [k]"}, {"w": "Chlor", "s": "k", "ipa": "[kloːɐ̯]", "en": "chlorine", "rule": "Greek root → [k]"}, {"w": "Chrom", "s": "k", "ipa": "[kʁoːm]", "en": "chrome", "rule": "Greek root → [k]"}, {"w": "Orchester", "s": "k", "ipa": "[ɔʁˈkɛstɐ]", "en": "orchestra", "rule": "Greek root → [k]"}, {"w": "Architekt", "s": "k", "ipa": "[aʁçiˈtɛkt]", "en": "architect", "rule": "Greek root → [k] (note: second ch is [ç]!)"}, {"w": "König", "s": "ich", "ipa": "[ˈkøːnɪç]", "en": "king", "rule": "-ig ending → [ç] (standard)"}, {"w": "ruhig", "s": "ich", "ipa": "[ˈʁuːɪç]", "en": "calm", "rule": "-ig ending → [ç] (standard)"}, {"w": "zwanzig", "s": "ich", "ipa": "[ˈt͡svant͡sɪç]", "en": "twenty", "rule": "-ig ending → [ç] (standard)"}, {"w": "dreißig", "s": "ich", "ipa": "[ˈdʁaɪ̯sɪç]", "en": "thirty", "rule": "-ig ending → [ç] (standard)"}, {"w": "lustig", "s": "ich", "ipa": "[ˈlʊstɪç]", "en": "funny", "rule": "-ig ending → [ç] (standard)"}, {"w": "schwierig", "s": "ich", "ipa": "[ˈʃviːʁɪç]", "en": "difficult", "rule": "-ig ending → [ç] (standard)"}];
+function PQ_buildRound(items,idx,side){
+  var it=items[idx % items.length];
+  return {it:it,options:["ich-Laut [ç]","ach-Laut [x]","[k] like in “k”"],
+    answer:it.s==="ich"?0:(it.s==="ach"?1:2)};
+}
+function PQ_sayIt(){if(PQ.cur){speakDE(PQ.cur.it.w,0.8);}}
+function PQ_promptHTML(round){
+  return '<p>Pronounce <strong>'+round.it.w+'</strong> in your head, then decide:</p>'
+    +'<button class="speak-btn" onclick="PQ_sayIt()">&#128266; Hear '+round.it.w+'</button>'
+    +'<p style="color:#64748b;font-size:.95rem">Which sound does the <strong>ch</strong> make?</p>';
+}
+function PQ_feedbackHTML(round,ok){
+  var it=round.it;
+  return '<strong>'+it.w+'</strong> '+it.ipa+' ('+it.en+') → <strong>'+CH_LABEL[it.s]+'</strong>. '+it.rule+'.';
+}
+
+var PQ={i:0,score:0,streak:0,order:[],sides:[],cur:null,done:false};
+function PQ_start(n){
+  PQ.i=0;PQ.score=0;PQ.streak=0;PQ.done=false;PQ.order=[];PQ.sides=[];
+  var pool=PQ_ITEMS.map(function(_,i){return i;});
+  for(var k=pool.length-1;k>0;k--){var j=Math.floor(Math.random()*(k+1));var t=pool[k];pool[k]=pool[j];pool[j]=t;}
+  PQ.order=pool.slice(0,Math.min(n,pool.length));
+  for(var s=0;s<PQ.order.length;s++){PQ.sides.push(Math.random()<0.5?0:1);}
+  PQ_next();
+}
+function PQ_next(){
+  if(PQ.i>=PQ.order.length){PQ_finish();return;}
+  var round=PQ_buildRound(PQ_ITEMS,PQ.order[PQ.i],PQ.sides[PQ.i]);
+  PQ.cur=round;
+  document.getElementById('PQ-prompt').innerHTML=PQ_promptHTML(round);
+  var box=document.getElementById('PQ-options');box.innerHTML='';
+  round.options.forEach(function(label,oi){
+    var b=document.createElement('button');b.className='quiz-btn';b.textContent=label;
+    b.onclick=function(){PQ_answer(oi,b);};box.appendChild(b);
+  });
+  var fb=document.getElementById('PQ-fb');fb.className='';fb.style.display='none';fb.innerHTML='';
+  document.getElementById('PQ-bar').style.width=(100*PQ.i/PQ.order.length)+'%';
+  document.getElementById('PQ-meta').textContent='Question '+(PQ.i+1)+' of '+PQ.order.length+' \u00B7 Score '+PQ.score+' \u00B7 Streak '+PQ.streak;
+}
+function PQ_answer(oi,btn){
+  if(PQ.done||!PQ.cur)return;
+  var ok=(oi===PQ.cur.answer);
+  var btns=document.getElementById('PQ-options').children;
+  for(var i=0;i<btns.length;i++){btns[i].disabled=true;if(i===PQ.cur.answer){btns[i].classList.add('correct');}}
+  var fb=document.getElementById('PQ-fb');
+  if(ok){PQ.score++;PQ.streak++;fb.className='ok';fb.innerHTML='\u2713 Correct. '+PQ_feedbackHTML(PQ.cur,true);}
+  else{PQ.streak=0;btn.classList.add('wrong');fb.className='no';fb.innerHTML='\u2717 Not quite. '+PQ_feedbackHTML(PQ.cur,false);}
+  fb.style.display='block';
+  PQ.i++;
+  setTimeout(PQ_next,2800);
+}
+function PQ_finish(){
+  PQ.done=true;
+  document.getElementById('PQ-bar').style.width='100%';
+  var n=PQ.order.length;
+  var msg='You scored '+PQ.score+' out of '+n+'. ';
+  msg+= PQ.score===n ? 'Perfect \u2014 your ear is ready for real conversations.'
+    : PQ.score>=Math.ceil(n*0.7) ? 'Strong. Replay the tricky pairs slowly before your next round.'
+    : 'Keep training \u2014 use the pair browser above at slow speed, then try again.';
+  document.getElementById('PQ-prompt').innerHTML='<p style="font-size:1.1rem">'+msg+'</p><button class="quiz-btn" style="margin-top:12px" onclick="PQ_start('+n+')">\u21BB Try again</button>';
+  document.getElementById('PQ-options').innerHTML='';
+  document.getElementById('PQ-meta').textContent='Finished \u00B7 Score '+PQ.score+'/'+n;
+  document.getElementById('PQ-fb').style.display='none';
+}
+
+
+</script>
+</body>
+</html>
