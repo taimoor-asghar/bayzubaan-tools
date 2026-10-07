@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Word Stress Quiz: Where Does the Stress Fall? | Bayzubaan</title>
+<meta name="description" content="Master German word stress: first-syllable rule, unstressed prefixes, separable prefixes, foreign endings. Syllable predictor, 43-word audio bank, 12-round quiz.">
+<link rel="canonical" href="https://bayzubaan.com/tools/word-stress-quiz/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="German Word Stress Quiz: Where Does the Stress Fall?">
+<meta property="og:description" content="verSTEHen or VERstehen? Predict German word stress with four rules, then drill 43 words with audio and a tap-the-stress quiz.">
+<meta property="og:url" content="https://bayzubaan.com/tools/word-stress-quiz/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="German Word Stress Quiz: Where Does the Stress Fall?">
+<meta name="twitter:description" content="verSTEHen or VERstehen? Predict German word stress with four rules, then drill 43 words with audio and a tap-the-stress quiz.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is German word stress always on the first syllable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For native Germanic words, yes — Wasser, Arbeit, fahren all stress the first syllable, and that covers most everyday vocabulary. But unstressed prefixes (be-, ver-, ent-), separable prefixes (an-, auf-, mit-) and foreign endings (-tion, -ieren, -tät) all override the default, which is why a predictor beats a single rule."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I tell whether a prefix is separable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three tests. The meaning test: separable prefixes add a concrete directional meaning (an-kommen = come + toward). The sentence test: in a main clause the prefix goes to the end — Er kommt morgen an. And the dictionary test: separable verbs are marked 'trennbar'. When in doubt, assume common prefixes like an-, auf-, aus-, ein-, mit-, vor-, zu- are separable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do “umfahren” and “umarmen” stress different syllables?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because um- can be separable or inseparable, and the stress tells you which. UM-fahren (separable, stress on um) means to run something over; um-ARM-en (inseparable, stress on the root) means to embrace. The famous pair is ÜBER-set-zen (ferry across) versus über-SETZ-en (translate) — stress alone changes the meaning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will people still understand me if my stress is wrong?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually, but at a cost. Wrong stress forces the listener to decode the word consciously instead of recognising it instantly, which is tiring over a whole conversation — and in professional settings like the clinic it reads as unprepared. The good news: four rules cover the vast majority of words, so the fix is cheap."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is it “stuDIEren” but “STUdium”?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because they followed different paths into German. Studieren kept its French verb ending -ieren, which always stresses the -ie-. Studium was fully nativised as a Latin neuter noun centuries ago and took normal first-syllable stress. The pair is a perfect demo of Rule 4 versus Rule 1 — same root, different history, different stress."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>German Word Stress Quiz: Where Does the Stress Fall?</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">verSTEHen or VERstehen? Predict German word stress with four rules, then drill 43 words with audio and a tap-the-stress quiz.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+<style>
+.rec-btn{background:#fff;border:2px solid #2563eb;color:#1d4ed8;border-radius:8px;padding:12px 18px;font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit}
+.rec-btn.rec-on{border-color:#ef4444;color:#b91c1c}
+.mic-note{font-size:.9rem;color:#64748b;margin-top:8px}
+audio.me-play{display:none;width:100%;margin-top:10px}
+.speak-btn{background:#eff6ff;border:2px solid #bfdbfe;color:#1d4ed8;border-radius:8px;padding:10px 16px;font-size:1rem;font-weight:600;cursor:pointer;font-family:inherit;margin:4px 6px 4px 0}
+.speak-btn:hover{border-color:#2563eb}
+.pair-table td .speak-btn{padding:6px 12px;font-size:.9rem}
+
+.st{color:#1d4ed8}
+.syl-row{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:12px 0}
+.syl-btn{background:#fff;border:2px solid #bfdbfe;color:#1e3a8a;border-radius:8px;padding:10px 18px;font-size:1.15rem;font-weight:600;cursor:pointer;font-family:inherit}
+.syl-btn:hover{border-color:#2563eb}
+.syl-btn.picked{border-color:#2563eb;background:#eff6ff}
+.syl-btn.correct{border-color:#10b981;background:#ecfdf5;color:#065f46}
+.syl-btn.wrong{border-color:#ef4444;background:#fef2f2;color:#991b1b}
+.stress-out{background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:16px;margin-top:12px}
+</style>
+
+<h2>The stress predictor</h2>
+<p style="margin-bottom:12px">Type any German word and the tool splits it into syllables and applies the stress rules, step by step.</p>
+<div class="field">
+<label for="stress-input">German word</label>
+<input id="stress-input" type="text" value="verstehen" autocomplete="off" autocapitalize="off" spellcheck="false">
+</div>
+<button id="calc-btn" onclick="stressPredictUI()">Predict the stress</button>
+<div id="stress-out" style="margin-top:16px"></div>
+<div class="try-row">
+<button onclick="stressTry('Wasser')">Wasser</button>
+<button onclick="stressTry('bekommen')">bekommen</button>
+<button onclick="stressTry('ankommen')">ankommen</button>
+<button onclick="stressTry('Information')">Information</button>
+<button onclick="stressTry('studieren')">studieren</button>
+<button onclick="stressTry('umfahren')">umfahren</button>
+<button onclick="stressTry('unternehmen')">unternehmen</button>
+<button onclick="stressTry('Musik')">Musik</button>
+</div>
+<hr style="margin:24px 0;border:none;border-top:1px solid #e2e8f0">
+<h2>Word bank</h2>
+<p style="margin-bottom:12px">The stressed syllable is <strong class='st'>bold and blue</strong>. Listen, then say each word aloud with the same stress.</p>
+<h3>First-syllable stress — 12 words</h3><table class='pair-table'><tr><th>Word (stress in bold)</th><th>Hear</th><th>Meaning</th><th>Rule</th></tr><tr><td><strong class='st'>Was</strong>·ser<br><span style='color:#64748b;font-size:.85rem'>[ˈvasɐ]</span></td><td><button class='speak-btn' onclick="speakDE('Wasser')">&#128266;</button></td><td>water</td><td style='color:#64748b;font-size:.9rem'>native word → first syllable</td></tr><tr><td><strong class='st'>Ar</strong>·beit<br><span style='color:#64748b;font-size:.85rem'>[ˈaʁbaɪ̯t]</span></td><td><button class='speak-btn' onclick="speakDE('Arbeit')">&#128266;</button></td><td>work</td><td style='color:#64748b;font-size:.9rem'>native word → first syllable</td></tr><tr><td><strong class='st'>Va</strong>·ter<br><span style='color:#64748b;font-size:.85rem'>[ˈfaːtɐ]</span></td><td><button class='speak-btn' onclick="speakDE('Vater')">&#128266;</button></td><td>father</td><td style='color:#64748b;font-size:.9rem'>native word → first syllable</td></tr><tr><td><strong class='st'>Mut</strong>·ter<br><span style='color:#64748b;font-size:.85rem'>[ˈmʊtɐ]</span></td><td><button class='speak-btn' onclick="speakDE('Mutter')">&#128266;</button></td><td>mother</td><td style='color:#64748b;font-size:.9rem'>native word → first syllable</td></tr><tr><td><strong class='st'>fah</strong>·ren<br><span style='color:#64748b;font-size:.85rem'>[ˈfaːʁən]</span></td><td><button class='speak-btn' onclick="speakDE('fahren')">&#128266;</button></td><td>to drive</td><td style='color:#64748b;font-size:.9rem'>native word → first syllable</td></tr><tr><td><strong class='st'>le</strong>·sen<br><span style='color:#64748b;font-size:.85rem'>[ˈleːzn̩]</span></td><td><button class='speak-btn' onclick="speakDE('lesen')">&#128266;</button></td><td>to read</td><td style='color:#64748b;font-size:.9rem'>native word → first syllable</td></tr><tr><td><strong class='st'>A</strong>·pfel<br><span style='color:#64748b;font-size:.85rem'>[ˈap͡fl̩]</span></td><td><button class='speak-btn' onclick="speakDE('Apfel')">&#128266;</button></td><td>apple</td><td style='color:#64748b;font-size:.9rem'>native word → first syllable</td></tr><tr><td><strong class='st'>Fen</strong>·ster<br><span style='color:#64748b;font-size:.85rem'>[ˈfɛnstɐ]</span></td><td><button class='speak-btn' onclick="speakDE('Fenster')">&#128266;</button></td><td>window</td><td style='color:#64748b;font-size:.9rem'>native word → first syllable</td></tr><tr><td><strong class='st'>Gar</strong>·ten<br><span style='color:#64748b;font-size:.85rem'>[ˈɡaʁtn̩]</span></td><td><button class='speak-btn' onclick="speakDE('Garten')">&#128266;</button></td><td>garden</td><td style='color:#64748b;font-size:.9rem'>native word → first syllable</td></tr><tr><td><strong class='st'>A</strong>·bend<br><span style='color:#64748b;font-size:.85rem'>[ˈaːbn̩t]</span></td><td><button class='speak-btn' onclick="speakDE('Abend')">&#128266;</button></td><td>evening</td><td style='color:#64748b;font-size:.9rem'>native word → first syllable</td></tr><tr><td><strong class='st'>ge</strong>·hen<br><span style='color:#64748b;font-size:.85rem'>[ˈɡeːən]</span></td><td><button class='speak-btn' onclick="speakDE('gehen')">&#128266;</button></td><td>to go</td><td style='color:#64748b;font-size:.9rem'>'ge' is part of the root here, not a prefix</td></tr><tr><td><strong class='st'>ma</strong>·chen<br><span style='color:#64748b;font-size:.85rem'>[ˈmaxn̩]</span></td><td><button class='speak-btn' onclick="speakDE('machen')">&#128266;</button></td><td>to make</td><td style='color:#64748b;font-size:.9rem'>native word → first syllable</td></tr></table>
+<h3>Unstressed prefixes — 11 words</h3><table class='pair-table'><tr><th>Word (stress in bold)</th><th>Hear</th><th>Meaning</th><th>Rule</th></tr><tr><td>be·<strong class='st'>kom</strong>·men<br><span style='color:#64748b;font-size:.85rem'>[bəˈkɔmən]</span></td><td><button class='speak-btn' onclick="speakDE('bekommen')">&#128266;</button></td><td>to receive</td><td style='color:#64748b;font-size:.9rem'>'be-' is never stressed → stress the root</td></tr><tr><td>ver·<strong class='st'>ste</strong>·hen<br><span style='color:#64748b;font-size:.85rem'>[fɛɐ̯ˈʃteːən]</span></td><td><button class='speak-btn' onclick="speakDE('verstehen')">&#128266;</button></td><td>to understand</td><td style='color:#64748b;font-size:.9rem'>'ver-' is never stressed → stress the root</td></tr><tr><td>ent·<strong class='st'>schei</strong>·den<br><span style='color:#64748b;font-size:.85rem'>[ɛntˈʃaɪ̯dn̩]</span></td><td><button class='speak-btn' onclick="speakDE('entscheiden')">&#128266;</button></td><td>to decide</td><td style='color:#64748b;font-size:.9rem'>'ent-' is never stressed → stress the root</td></tr><tr><td>er·<strong class='st'>zäh</strong>·len<br><span style='color:#64748b;font-size:.85rem'>[ɛɐ̯ˈt͡sɛːlən]</span></td><td><button class='speak-btn' onclick="speakDE('erzählen')">&#128266;</button></td><td>to tell</td><td style='color:#64748b;font-size:.9rem'>'er-' is never stressed → stress the root</td></tr><tr><td>be·<strong class='st'>gin</strong>·nen<br><span style='color:#64748b;font-size:.85rem'>[bəˈɪ nən]</span></td><td><button class='speak-btn' onclick="speakDE('beginnen')">&#128266;</button></td><td>to begin</td><td style='color:#64748b;font-size:.9rem'>'be-' is never stressed → stress the root</td></tr><tr><td>ge·<strong class='st'>win</strong>·nen<br><span style='color:#64748b;font-size:.85rem'>[ɡəˈvɪnən]</span></td><td><button class='speak-btn' onclick="speakDE('gewinnen')">&#128266;</button></td><td>to win</td><td style='color:#64748b;font-size:.9rem'>'ge-' is never stressed → stress the root</td></tr><tr><td>emp·<strong class='st'>feh</strong>·len<br><span style='color:#64748b;font-size:.85rem'>[ɛmˈp͡feːlən]</span></td><td><button class='speak-btn' onclick="speakDE('empfehlen')">&#128266;</button></td><td>to recommend</td><td style='color:#64748b;font-size:.9rem'>'emp-' is never stressed → stress the root</td></tr><tr><td>zer·<strong class='st'>bre</strong>·chen<br><span style='color:#64748b;font-size:.85rem'>[t͡sɛɐ̯ˈbʁɛçn̩]</span></td><td><button class='speak-btn' onclick="speakDE('zerbrechen')">&#128266;</button></td><td>to break apart</td><td style='color:#64748b;font-size:.9rem'>'zer-' is never stressed → stress the root</td></tr><tr><td>Ge·<strong class='st'>bäu</strong>·de<br><span style='color:#64748b;font-size:.85rem'>[ɡəˈbɔʏ̯də]</span></td><td><button class='speak-btn' onclick="speakDE('Gebäude')">&#128266;</button></td><td>building</td><td style='color:#64748b;font-size:.9rem'>'ge-' is never stressed → stress the root</td></tr><tr><td>Ver·<strong class='st'>bot</strong><br><span style='color:#64748b;font-size:.85rem'>[fɛɐ̯ˈboːt]</span></td><td><button class='speak-btn' onclick="speakDE('Verbot')">&#128266;</button></td><td>ban, prohibition</td><td style='color:#64748b;font-size:.9rem'>'ver-' is never stressed → stress the root</td></tr><tr><td>Be·<strong class='st'>such</strong><br><span style='color:#64748b;font-size:.85rem'>[bəˈzuːx]</span></td><td><button class='speak-btn' onclick="speakDE('Besuch')">&#128266;</button></td><td>visit</td><td style='color:#64748b;font-size:.9rem'>'be-' is never stressed → stress the root</td></tr></table>
+<h3>Stressed separable prefixes — 10 words</h3><table class='pair-table'><tr><th>Word (stress in bold)</th><th>Hear</th><th>Meaning</th><th>Rule</th></tr><tr><td><strong class='st'>an</strong>·kom·men<br><span style='color:#64748b;font-size:.85rem'>[ˈankɔmən]</span></td><td><button class='speak-btn' onclick="speakDE('ankommen')">&#128266;</button></td><td>to arrive</td><td style='color:#64748b;font-size:.9rem'>separable 'an-' IS stressed</td></tr><tr><td><strong class='st'>auf</strong>·ste·hen<br><span style='color:#64748b;font-size:.85rem'>[ˈaʊ̯fʃteːən]</span></td><td><button class='speak-btn' onclick="speakDE('aufstehen')">&#128266;</button></td><td>to get up</td><td style='color:#64748b;font-size:.9rem'>separable 'auf-' IS stressed</td></tr><tr><td><strong class='st'>mit</strong>·brin·gen<br><span style='color:#64748b;font-size:.85rem'>[ˈmɪtbʁɪŋən]</span></td><td><button class='speak-btn' onclick="speakDE('mitbringen')">&#128266;</button></td><td>to bring along</td><td style='color:#64748b;font-size:.9rem'>separable 'mit-' IS stressed</td></tr><tr><td><strong class='st'>vor</strong>·le·sen<br><span style='color:#64748b;font-size:.85rem'>[ˈfoːɐ̯leːzn̩]</span></td><td><button class='speak-btn' onclick="speakDE('vorlesen')">&#128266;</button></td><td>to read aloud</td><td style='color:#64748b;font-size:.9rem'>separable 'vor-' IS stressed</td></tr><tr><td><strong class='st'>zu</strong>·ma·chen<br><span style='color:#64748b;font-size:.85rem'>[ˈt͡suːmaxn̩]</span></td><td><button class='speak-btn' onclick="speakDE('zumachen')">&#128266;</button></td><td>to close</td><td style='color:#64748b;font-size:.9rem'>separable 'zu-' IS stressed</td></tr><tr><td><strong class='st'>ab</strong>·fah·ren<br><span style='color:#64748b;font-size:.85rem'>[ˈap͡faːʁən]</span></td><td><button class='speak-btn' onclick="speakDE('abfahren')">&#128266;</button></td><td>to depart</td><td style='color:#64748b;font-size:.9rem'>separable 'ab-' IS stressed</td></tr><tr><td><strong class='st'>ein</strong>·la·den<br><span style='color:#64748b;font-size:.85rem'>[ˈaɪ̯nlaːdn̩]</span></td><td><button class='speak-btn' onclick="speakDE('einladen')">&#128266;</button></td><td>to invite</td><td style='color:#64748b;font-size:.9rem'>separable 'ein-' IS stressed</td></tr><tr><td><strong class='st'>nach</strong>·den·ken<br><span style='color:#64748b;font-size:.85rem'>[ˈnaːxdɛŋkən]</span></td><td><button class='speak-btn' onclick="speakDE('nachdenken')">&#128266;</button></td><td>to think about</td><td style='color:#64748b;font-size:.9rem'>separable 'nach-' IS stressed</td></tr><tr><td><strong class='st'>fern</strong>·se·hen<br><span style='color:#64748b;font-size:.85rem'>[ˈfɛɐ̯nzeːən]</span></td><td><button class='speak-btn' onclick="speakDE('fernsehen')">&#128266;</button></td><td>to watch TV</td><td style='color:#64748b;font-size:.9rem'>separable 'fern-' IS stressed</td></tr><tr><td>zur·<strong class='st'>ück</strong>·ge·ben<br><span style='color:#64748b;font-size:.85rem'>[t͡suˈʁʏkɡeːbn̩]</span></td><td><button class='speak-btn' onclick="speakDE('zurückgeben')">&#128266;</button></td><td>to give back</td><td style='color:#64748b;font-size:.9rem'>separable 'zurück-' stressed on 'rück'</td></tr></table>
+<h3>Foreign endings — 10 words</h3><table class='pair-table'><tr><th>Word (stress in bold)</th><th>Hear</th><th>Meaning</th><th>Rule</th></tr><tr><td>In·for·ma·<strong class='st'>ti</strong>·on<br><span style='color:#64748b;font-size:.85rem'>[ɪnfɔʁmaˈt͡sjoːn]</span></td><td><button class='speak-btn' onclick="speakDE('Information')">&#128266;</button></td><td>information</td><td style='color:#64748b;font-size:.9rem'>-tion → stress the French ending</td></tr><tr><td>U·ni·ver·si·<strong class='st'>tät</strong><br><span style='color:#64748b;font-size:.85rem'>[univɛʁziˈtɛːt]</span></td><td><button class='speak-btn' onclick="speakDE('Universität')">&#128266;</button></td><td>university</td><td style='color:#64748b;font-size:.9rem'>-tät → stress the Latin ending</td></tr><tr><td>Mu·<strong class='st'>sik</strong><br><span style='color:#64748b;font-size:.85rem'>[muˈziːk]</span></td><td><button class='speak-btn' onclick="speakDE('Musik')">&#128266;</button></td><td>music</td><td style='color:#64748b;font-size:.9rem'>-ik → stress the Greek ending</td></tr><tr><td>stu·<strong class='st'>die</strong>·ren<br><span style='color:#64748b;font-size:.85rem'>[ʃtuˈdiːʁən]</span></td><td><button class='speak-btn' onclick="speakDE('studieren')">&#128266;</button></td><td>to study</td><td style='color:#64748b;font-size:.9rem'>-ieren verbs → stress '-ie-'</td></tr><tr><td>te·le·fo·<strong class='st'>nie</strong>·ren<br><span style='color:#64748b;font-size:.85rem'>[telefoˈniːʁən]</span></td><td><button class='speak-btn' onclick="speakDE('telefonieren')">&#128266;</button></td><td>to phone</td><td style='color:#64748b;font-size:.9rem'>-ieren verbs → stress '-ie-'</td></tr><tr><td>Bi·o·lo·<strong class='st'>gie</strong><br><span style='color:#64748b;font-size:.85rem'>[bioloˈɡiː]</span></td><td><button class='speak-btn' onclick="speakDE('Biologie')">&#128266;</button></td><td>biology</td><td style='color:#64748b;font-size:.9rem'>-ie (long i:) → stress the ending</td></tr><tr><td>Jour·na·<strong class='st'>list</strong><br><span style='color:#64748b;font-size:.85rem'>[ʃʊɐ̯naˈlɪst]</span></td><td><button class='speak-btn' onclick="speakDE('Journalist')">&#128266;</button></td><td>journalist</td><td style='color:#64748b;font-size:.9rem'>-ist → stress the French ending</td></tr><tr><td>Qua·li·<strong class='st'>tät</strong><br><span style='color:#64748b;font-size:.85rem'>[kvaliˈtɛːt]</span></td><td><button class='speak-btn' onclick="speakDE('Qualität')">&#128266;</button></td><td>quality</td><td style='color:#64748b;font-size:.9rem'>-tät → stress the Latin ending</td></tr><tr><td>Dis·kus·<strong class='st'>si</strong>·on<br><span style='color:#64748b;font-size:.85rem'>[dɪskʊˈsjoːn]</span></td><td><button class='speak-btn' onclick="speakDE('Diskussion')">&#128266;</button></td><td>discussion</td><td style='color:#64748b;font-size:.9rem'>-sion → stress the French ending</td></tr><tr><td>mar·<strong class='st'>schie</strong>·ren<br><span style='color:#64748b;font-size:.85rem'>[maʁˈʃiːʁən]</span></td><td><button class='speak-btn' onclick="speakDE('marschieren')">&#128266;</button></td><td>to march</td><td style='color:#64748b;font-size:.9rem'>-ieren verbs → stress '-ie-'</td></tr></table>
+<hr style="margin:24px 0;border:none;border-top:1px solid #e2e8f0">
+
+<h3>Quiz: tap the stressed syllable</h3>
+<div class="progress"><div id="PQ-bar"></div></div>
+<div class="quiz-meta"><span id="PQ-meta"></span></div>
+<div id="PQ-prompt" style="margin-bottom:14px"></div>
+<div id="PQ-options"></div>
+<div id="PQ-fb"></div>
+<p class="mic-note" id="speak-note" style="display:none">If you hear nothing, your device may not have a German voice installed.</p>
+<p class="mic-note">Tip: use headphones. Words are spoken by your device's German voice.</p>
+<script>document.addEventListener('DOMContentLoaded',function(){PQ_start(12);});</script>
+
+
+</div>
+
+<article class="prose">
+
+<h2>Stress is the skeleton of German rhythm</h2>
+<p>German is a <strong>stress-timed</strong> language: stressed syllables land at roughly even intervals and unstressed syllables get squeezed between them, which is what gives German its characteristic driving rhythm. Put the stress on the wrong syllable and the effect is dramatic — <span class="hl">verSTEHen</span> with the stress on <em>ver</em> does not sound like a charming accent, it sounds like a different word that the listener has to decode. English speakers have an advantage here: English is stress-timed too, so the rhythm feels natural. The challenge is purely <em>where</em> the stress falls, and in German that is governed by a small set of rules that cover the overwhelming majority of words. This tool teaches the four rules, gives you a predictor that applies them to any word, and drills 43 words until the patterns are automatic.</p>
+<h2>Rule 1: native words stress the first syllable</h2>
+<p>The default is beautifully simple: in words of Germanic origin, the stress falls on the <strong>first syllable</strong>. <em>WAS-ser, AR-beit, VA-ter, MUT-ter, FAH-ren, LE-sen, AP-fel, FENS-ter, GAR-ten</em> — the pattern never varies. This covers most everyday vocabulary, and it is why German learners should always assume first-syllable stress until a rule says otherwise. The trap is applying it blindly: the moment a word carries one of the prefixes in Rule 2 or one of the foreign endings in Rule 4, the default no longer applies. Try the predictor above on <em>Wasser</em> and <em>verstehen</em> back to back and watch the reasoning change.</p>
+<h2>Rule 2: be-, ge-, er-, ver-, zer-, ent-, emp- are never stressed</h2>
+<p>Seven prefixes are <strong>always unstressed</strong>: <em>be-, ge-, er-, ver-, zer-, ent-, emp-</em>. The stress skips them and lands on the root: <em>be-KOM-men, ver-STEH-en, ent-SCHEI-den, er-ZÄHL-en, ge-WINN-en, emp-FEHL-en, zer-BRECH-en</em>. This single rule fixes the stress of thousands of verbs and nouns, and it is the one English speakers violate most, because English has no equivalent habit — the instinct is to stress the first syllable of <em>verstehen</em> and produce <em>VER-steh-en</em>, which no German would recognise without effort. Note the edge case the predictor handles: in two-syllable words like <em>GEH-en</em> or <em>BE-ten</em>, the <em>ge-/be-</em> is part of the root, not a prefix, so first-syllable stress applies — while <em>ver-BOT, be-SUCH, ge-RÄT</em> keep the prefix unstressed. When in doubt, the dictionary marks stress; the predictor covers the common cases.</p>
+<h2>Rule 3: separable prefixes ARE stressed</h2>
+<p>The mirror image of Rule 2: <strong>separable prefixes carry the stress</strong>. <em>AN-kom-men, AUF-steh-en, MIT-bring-en, VOR-le-sen, ZU-ma-chen, AB-fah-ren, EIN-la-den, NACH-den-ken, FERN-seh-en</em> — the prefix is stressed because it carries the distinctive meaning of the verb. This is the rule that makes stress genuinely meaningful in German, because some verbs exist in both forms with different meanings: <span class="hl">UM-fahren</span> (to run something over — separable, stress on <em>um</em>) versus <span class="hl">um-ARM-en</span> (to embrace — inseparable, stress on the root). The most famous pair is <span class="hl">ÜBER-set-zen</span> (to ferry across) versus <span class="hl">über-SETZ-en</span> (to translate). Stress is not decoration here — it is grammar you can hear.</p>
+<h2>Rule 4: foreign words stress the foreign part</h2>
+<p>Words borrowed from French, Latin and Greek keep their foreign stress, which usually falls on or near the <strong>ending</strong>. The patterns are completely regular once you know the endings: <strong>-tion/-sion</strong> (<em>in-for-ma-TI-on, dis-kus-si-ON</em>), <strong>-tät</strong> (<em>u-ni-ver-si-TÄT, qua-li-TÄT</em>), <strong>-ik</strong> (<em>mu-SIK, Lo-GIK</em>), <strong>-ieren</strong> verbs (<em>stu-DIE-ren, te-le-fo-NIE-ren, mar-SCHIE-ren</em> — always the <em>-ie-</em>), <strong>-ie</strong> with a long i: (<em>bi-o-lo-GIE, Me-lo-DIE</em>), <strong>-ist, -eur, -är, -age</strong> (<em>Jour-na-LIST, Fri-SEUR, Se-kre-TÄR, Ga-RA-ge</em>). English speakers often drag these toward English stress patterns — <em>IN-for-ma-tion</em> on the English model — but German keeps the French stress on the ending. One useful contrast: the verb <em>stu-DIE-ren</em> stresses <em>-ie-</em>, while the noun <em>STU-di-um</em> is fully nativised with first-syllable stress.</p>
+<h2>What the predictor cannot do</h2>
+<p>Honesty about limits is part of learning. The predictor applies the four rules mechanically, and three cases defeat it. First, <strong>ambiguous prefixes</strong>: <em>um-</em> and <em>durch-</em> can be separable or inseparable (<em>UM-fahren</em> vs <em>um-ARM-en</em>), and only meaning — or a dictionary — decides. Second, <strong>compounds</strong>: <em>Donaudampfschifffahrtsgesellschaftskapitän</em> stresses the first element (<em>DO-nau-…</em>), but each element follows its own rules internally, which the simple engine does not model. Third, <strong>family words</strong> like <em>Fa-MI-lie</em>: the <em>-ilie</em> ending has its own stress that the general <em>-ie</em> rule would miss (the predictor special-cases it, but there are cousins). Use the predictor as a first guess and the word bank as ground truth — and when a word matters, check the dictionary's stress mark.</p>
+<h2>Mistakes to unlearn</h2>
+<p>Four habits cover nearly every error. <strong>English stress on foreign words</strong> (<em>IN-for-ma-tion</em>) — fix by learning the ending patterns in Rule 4. <strong>First-syllable stress on prefixed verbs</strong> (<em>VER-steh-en, BE-komm-en</em>) — fix with Rule 2; say the prefix quietly and punch the root. <strong>Unstressed separable prefixes</strong> (<em>an-KOM-men</em>) — fix with Rule 3; the prefix carries the meaning, so it carries the stress. <strong>Flat, even stress</strong> — some learners, afraid of choosing wrong, stress every syllable equally; German needs the contrast between the stressed syllable and the squashed unstressed ones, so commit to the stress even when guessing. Record yourself reading <em>Der Lehrer versteht die Information</em> and check each word against the bank: <em>LEH-rer, ver-STEHT, in-for-ma-TI-on</em>.</p>
+<h2>A five-minute daily routine</h2>
+<p>One minute: clap the stress of ten bank words — one loud clap on the stressed syllable, silent taps on the rest. Physicalising the rhythm locks it in faster than thinking about it. Two minutes: take six words from the bank, two from each rule group, predict the stress with the rules <em>before</em> tapping the audio, and correct yourself aloud. Two minutes: the quiz — listen, then tap the stressed syllable without looking at the spelling. After a week, add the minimal-pair sentences (<em>Er fährt das Kind um</em> vs <em>Er umarmt das Kind</em>) and feel how stress alone carries the meaning. Within two to three weeks the four rules become reflex, and your German gains the rhythm that makes listeners relax — the surest sign of comprehensible pronunciation.</p>
+<h2>Regional notes</h2>
+<p>Word stress is one of the most uniform features of German — the four rules hold across Germany, Austria and Switzerland with barely any variation. You will occasionally hear Austrian speakers stress French loans slightly differently (<em>Ka-FEE</em> for <em>Kaffee</em> is standard everywhere, but some Austrian <em>-ik</em> words vary), and Swiss German keeps the same stress patterns with its own vowel colours. For learners this is good news: unlike the r or the ch sounds, stress has no regional minefield. Learn the standard patterns and they work everywhere German is spoken.</p>
+
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>Is German word stress always on the first syllable?</h3><p>For native Germanic words, yes — Wasser, Arbeit, fahren all stress the first syllable, and that covers most everyday vocabulary. But unstressed prefixes (be-, ver-, ent-), separable prefixes (an-, auf-, mit-) and foreign endings (-tion, -ieren, -tät) all override the default, which is why a predictor beats a single rule.</p></div><div class="faq-item"><h3>How can I tell whether a prefix is separable?</h3><p>Three tests. The meaning test: separable prefixes add a concrete directional meaning (an-kommen = come + toward). The sentence test: in a main clause the prefix goes to the end — Er kommt morgen an. And the dictionary test: separable verbs are marked &#x27;trennbar&#x27;. When in doubt, assume common prefixes like an-, auf-, aus-, ein-, mit-, vor-, zu- are separable.</p></div><div class="faq-item"><h3>Why do “umfahren” and “umarmen” stress different syllables?</h3><p>Because um- can be separable or inseparable, and the stress tells you which. UM-fahren (separable, stress on um) means to run something over; um-ARM-en (inseparable, stress on the root) means to embrace. The famous pair is ÜBER-set-zen (ferry across) versus über-SETZ-en (translate) — stress alone changes the meaning.</p></div><div class="faq-item"><h3>Will people still understand me if my stress is wrong?</h3><p>Usually, but at a cost. Wrong stress forces the listener to decode the word consciously instead of recognising it instantly, which is tiring over a whole conversation — and in professional settings like the clinic it reads as unprepared. The good news: four rules cover the vast majority of words, so the fix is cheap.</p></div><div class="faq-item"><h3>Why is it “stuDIEren” but “STUdium”?</h3><p>Because they followed different paths into German. Studieren kept its French verb ending -ieren, which always stresses the -ie-. Studium was fully nativised as a Latin neuter noun centuries ago and took normal first-syllable stress. The pair is a perfect demo of Rule 4 versus Rule 1 — same root, different history, different stress.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+var _deVoice=null;
+function pickDeVoice(){
+  try{
+    var vs=speechSynthesis.getVoices();
+    for(var i=0;i<vs.length;i++){
+      if(vs[i].lang && vs[i].lang.toLowerCase().indexOf('de')===0){_deVoice=vs[i];break;}
+    }
+  }catch(e){}
+}
+try{
+  pickDeVoice();
+  if(typeof speechSynthesis!=='undefined'&&speechSynthesis.onvoiceschanged!==undefined){
+    speechSynthesis.onvoiceschanged=pickDeVoice;
+  }
+}catch(e){}
+function speakDE(t,rate){
+  try{
+    speechSynthesis.cancel();
+    var u=new SpeechSynthesisUtterance(t);
+    u.lang='de-DE';
+    if(_deVoice){u.voice=_deVoice;}
+    u.rate=rate||0.85;
+    speechSynthesis.speak(u);
+  }catch(e){
+    var el=document.getElementById('speak-note');
+    if(el){el.style.display='block';}
+  }
+}
+
+var _DIPH=["ai","au","\u00e4u","eu","ei","oi","ou","ui","ie"];
+var _VOW="aeiou\u00e4\u00f6\u00fcy";
+var _KEEP=["schr","str","spr","spl","sch","chr","thr","ch","ck","qu","th","ph","st","sp","br","dr","tr","gr","fr","kr","pr","bl","cl","dl","fl","gl","kl","pl"];
+function _isV(c){return c.length===1&&_VOW.indexOf(c)>=0;}
+function syllabify(w){
+  var low=String(w).toLowerCase();
+  var toks=[],i=0;
+  while(i<low.length){
+    var two=low.substr(i,2);
+    if(two==="qu"){toks.push({t:"c",s:"qu"});i+=2;continue;}
+    if(_DIPH.indexOf(two)>=0){toks.push({t:"v",s:two,d:1});i+=2;continue;}
+    var c=low.charAt(i);
+    toks.push({t:_isV(c)?"v":"c",s:c});i+=1;
+  }
+  // single merge pass: diphthongs stay whole; identical double vowels merge;
+  // other adjacent vowels ("io","ea") stay separate nuclei
+  var m=[];
+  toks.forEach(function(tk){
+    var prev=m[m.length-1];
+    if(tk.t==="v"&&tk.d){m.push({t:"v",s:tk.s});}
+    else if(tk.t==="v"&&prev&&prev.t==="v"&&!prev.d&&prev.s===tk.s){prev.s+=tk.s;}
+    else if(tk.t==="v"){m.push({t:"v",s:tk.s});}
+    else if(prev&&prev.t==="c"){prev.s+=tk.s;}
+    else{m.push({t:"c",s:tk.s});}
+  });
+  var ni=[];
+  m.forEach(function(tk,ix){if(tk.t==="v")ni.push(ix);});
+  if(ni.length<=1)return [low];
+  function splitRun(run,prevNuc){
+    // single "r": coda after a short single vowel (Ar-beit, er-zählen),
+    // onset after a long vowel/diphthong (stu-die-ren)
+    if(run==="r"){return (prevNuc.length===1?["r",""]:["","r"]);}
+    if(run.length===1)return ["",run];
+    if(run==="pf")return ["",run];
+    for(var k=0;k<_KEEP.length;k++){
+      var cl=_KEEP[k];
+      if(run.length>cl.length&&run.slice(-cl.length)===cl)return [run.slice(0,run.length-cl.length),cl];
+      if(run===cl)return ["",run];
+    }
+    return [run.slice(0,-1),run.slice(-1)];
+  }
+  var syls=[];
+  for(var k=0;k<ni.length;k++){
+    var n=ni[k];
+    var runStart=(k===0)?0:(ni[k-1]+1);
+    var run="";
+    for(var q=runStart;q<n;q++)run+=m[q].s;
+    var syl;
+    if(k===0){syl=run+m[n].s;syls.push(syl);}
+    else{
+      var sp=splitRun(run,m[ni[k-1]].s);
+      syls[syls.length-1]+=sp[0];
+      syls.push(sp[1]+m[n].s);
+    }
+  }
+  var tail="";
+  for(var q=ni[ni.length-1]+1;q<m.length;q++)tail+=m[q].s;
+  syls[syls.length-1]+=tail;
+  return syls;
+}
+var _SEP_MULTI={"zur\u00fcck":1,"zusammen":0,"wieder":0,"weiter":0};
+var _SEP1=["ab","an","auf","aus","bei","ein","mit","nach","vor","zu","los","weg","fern","fest","frei","heim","hoch","her","hin","dar","fort","um"];
+var _INSEP=["be","ge","er","ver","zer","ent","emp"];
+var _INSEP2=["verbot","verlust","besuch","gewinn","bericht","befehl","beginn","bereich","beruf","bedarf","bezirk","bestand","betrag","bezug","genuss","ger\u00e4t","gesuch","gestalt","entwurf","empfang","erfolg","ertrag","erlass","verstand","verkehr","versuch","vertrag","verband","gebot","gebrauch","zerfall"];
+var _UM_INSEP=["umarmen","umgeben"];
+function stressPredict(w){
+  var low=String(w).toLowerCase().trim();
+  var syls=syllabify(low),n=syls.length;
+  if(n<=1)return {syls:syls,stress:0,why:"Single syllable \u2014 nothing to choose."};
+  for(var k in _SEP_MULTI){
+    if(low.indexOf(k)===0)return {syls:syls,stress:_SEP_MULTI[k],why:"Separable prefix \u2018"+k+"\u2019 carries the stress."};
+  }
+  if(/ilie$/.test(low))return {syls:syls,stress:Math.max(0,n-2),why:"-ilie ending \u2192 stress before the ending (Fa-MI-lie)."};
+  if(/ieren$/.test(low))return {syls:syls,stress:n-2,why:"-ieren verbs always stress the \u2018-ie-\u2019."};
+  if(/ier$/.test(low))return {syls:syls,stress:n-1,why:"-ier is a French ending \u2192 stressed (pa-PIER)."};
+  if(/(tion|sion)$/.test(low))return {syls:syls,stress:Math.max(0,n-2),why:"-tion/-sion keeps its French stress (in-for-ma-TI-on)."};
+  if(/t\u00e4t$/.test(low))return {syls:syls,stress:n-1,why:"-t\u00e4t keeps its Latin stress on the ending."};
+  if(/ik$/.test(low))return {syls:syls,stress:n-1,why:"-ik keeps its Greek stress on the ending."};
+  if(/ist$/.test(low))return {syls:syls,stress:n-1,why:"-ist keeps its French stress on the ending (Jour-na-LIST)."};
+  if(/ismus$/.test(low))return {syls:syls,stress:Math.max(0,n-2),why:"-ismus \u2192 stress before the ending."};
+  if(/(eur|\u00e4r|age)$/.test(low))return {syls:syls,stress:n-1,why:"French ending \u2192 stressed."};
+  if(/ie$/.test(low)&&syls[n-1].slice(-2)==="ie")return {syls:syls,stress:n-1,why:"-ie with a long i: \u2192 stressed (bi-o-lo-GIE)."};
+  if(syls[0]==="un"&&syls[1]==="ter"&&n>=4)return {syls:syls,stress:2,why:"unter- verbs stress the root (un-ter-NEHM-en)."};
+  if(low.indexOf("um")===0&&_UM_INSEP.indexOf(low)>=0)return {syls:syls,stress:1,why:"\u2018um-\u2019 is inseparable here \u2014 the root takes the stress (um-ARM-en)."};
+  for(var a=0;a<_SEP1.length;a++){
+    if(syls[0]===_SEP1[a]){
+      if(_SEP1[a]==="um"&&_UM_INSEP.indexOf(low)>=0)return {syls:syls,stress:1,why:"\u2018um-\u2019 is inseparable here \u2014 the root takes the stress."};
+      return {syls:syls,stress:0,why:"Separable prefix \u2018"+_SEP1[a]+"\u2019 is stressed."};
+    }
+  }
+  for(var b=0;b<_INSEP.length;b++){
+    if(syls[0]===_INSEP[b]){
+      if(_INSEP[b]==="emp"&&low==="empore")return {syls:syls,stress:1,why:"Exception: em-PO-re."};
+      if(n>=3||_INSEP2.indexOf(low)>=0)return {syls:syls,stress:1,why:"\u2018"+_INSEP[b]+"-\u2019 is never stressed \u2014 the root takes it."};
+      return {syls:syls,stress:0,why:"\u2018"+_INSEP[b]+"\u2019 is part of the root here, not a prefix."};
+    }
+  }
+  return {syls:syls,stress:0,why:"Native Germanic words stress the first syllable."};
+}
+function stressTry(w){document.getElementById('stress-input').value=w;stressPredictUI();}
+function stressPredictUI(){
+  var w=document.getElementById('stress-input').value;
+  var r=stressPredict(w);
+  var out=document.getElementById('stress-out');
+  var sylHtml=r.syls.map(function(s,i){
+    return '<button class="syl-btn'+(i===r.stress?' picked':'')+'" onclick="speakDE(\''+w.replace(/'/g,"")+'\')">'+s+'</button>';
+  }).join('');
+  out.innerHTML='<div class="stress-out"><div class="syl-row">'+sylHtml+'</div>'
+    +'<p style="color:#1e3a8a">'+r.why+'</p>'
+    +'<button class="speak-btn" onclick="speakDE(\''+w.replace(/'/g,"")+'\')">&#128266; Hear it</button></div>';
+}
+var PQ_ITEMS=[{"w": "Wasser", "syls": ["was", "ser"], "stress": 0, "ipa": "[ˈvasɐ]", "en": "water", "rule": "native word → first syllable", "cat": "native"}, {"w": "Arbeit", "syls": ["ar", "beit"], "stress": 0, "ipa": "[ˈaʁbaɪ̯t]", "en": "work", "rule": "native word → first syllable", "cat": "native"}, {"w": "Vater", "syls": ["va", "ter"], "stress": 0, "ipa": "[ˈfaːtɐ]", "en": "father", "rule": "native word → first syllable", "cat": "native"}, {"w": "Mutter", "syls": ["mut", "ter"], "stress": 0, "ipa": "[ˈmʊtɐ]", "en": "mother", "rule": "native word → first syllable", "cat": "native"}, {"w": "fahren", "syls": ["fah", "ren"], "stress": 0, "ipa": "[ˈfaːʁən]", "en": "to drive", "rule": "native word → first syllable", "cat": "native"}, {"w": "lesen", "syls": ["le", "sen"], "stress": 0, "ipa": "[ˈleːzn̩]", "en": "to read", "rule": "native word → first syllable", "cat": "native"}, {"w": "Apfel", "syls": ["a", "pfel"], "stress": 0, "ipa": "[ˈap͡fl̩]", "en": "apple", "rule": "native word → first syllable", "cat": "native"}, {"w": "Fenster", "syls": ["fen", "ster"], "stress": 0, "ipa": "[ˈfɛnstɐ]", "en": "window", "rule": "native word → first syllable", "cat": "native"}, {"w": "Garten", "syls": ["gar", "ten"], "stress": 0, "ipa": "[ˈɡaʁtn̩]", "en": "garden", "rule": "native word → first syllable", "cat": "native"}, {"w": "Abend", "syls": ["a", "bend"], "stress": 0, "ipa": "[ˈaːbn̩t]", "en": "evening", "rule": "native word → first syllable", "cat": "native"}, {"w": "gehen", "syls": ["ge", "hen"], "stress": 0, "ipa": "[ˈɡeːən]", "en": "to go", "rule": "'ge' is part of the root here, not a prefix", "cat": "native"}, {"w": "machen", "syls": ["ma", "chen"], "stress": 0, "ipa": "[ˈmaxn̩]", "en": "to make", "rule": "native word → first syllable", "cat": "native"}, {"w": "bekommen", "syls": ["be", "kom", "men"], "stress": 1, "ipa": "[bəˈkɔmən]", "en": "to receive", "rule": "'be-' is never stressed → stress the root", "cat": "prefix"}, {"w": "verstehen", "syls": ["ver", "ste", "hen"], "stress": 1, "ipa": "[fɛɐ̯ˈʃteːən]", "en": "to understand", "rule": "'ver-' is never stressed → stress the root", "cat": "prefix"}, {"w": "entscheiden", "syls": ["ent", "schei", "den"], "stress": 1, "ipa": "[ɛntˈʃaɪ̯dn̩]", "en": "to decide", "rule": "'ent-' is never stressed → stress the root", "cat": "prefix"}, {"w": "erzählen", "syls": ["er", "zäh", "len"], "stress": 1, "ipa": "[ɛɐ̯ˈt͡sɛːlən]", "en": "to tell", "rule": "'er-' is never stressed → stress the root", "cat": "prefix"}, {"w": "beginnen", "syls": ["be", "gin", "nen"], "stress": 1, "ipa": "[bəˈɪ nən]", "en": "to begin", "rule": "'be-' is never stressed → stress the root", "cat": "prefix"}, {"w": "gewinnen", "syls": ["ge", "win", "nen"], "stress": 1, "ipa": "[ɡəˈvɪnən]", "en": "to win", "rule": "'ge-' is never stressed → stress the root", "cat": "prefix"}, {"w": "empfehlen", "syls": ["emp", "feh", "len"], "stress": 1, "ipa": "[ɛmˈp͡feːlən]", "en": "to recommend", "rule": "'emp-' is never stressed → stress the root", "cat": "prefix"}, {"w": "zerbrechen", "syls": ["zer", "bre", "chen"], "stress": 1, "ipa": "[t͡sɛɐ̯ˈbʁɛçn̩]", "en": "to break apart", "rule": "'zer-' is never stressed → stress the root", "cat": "prefix"}, {"w": "Gebäude", "syls": ["ge", "bäu", "de"], "stress": 1, "ipa": "[ɡəˈbɔʏ̯də]", "en": "building", "rule": "'ge-' is never stressed → stress the root", "cat": "prefix"}, {"w": "Verbot", "syls": ["ver", "bot"], "stress": 1, "ipa": "[fɛɐ̯ˈboːt]", "en": "ban, prohibition", "rule": "'ver-' is never stressed → stress the root", "cat": "prefix"}, {"w": "Besuch", "syls": ["be", "such"], "stress": 1, "ipa": "[bəˈzuːx]", "en": "visit", "rule": "'be-' is never stressed → stress the root", "cat": "prefix"}, {"w": "ankommen", "syls": ["an", "kom", "men"], "stress": 0, "ipa": "[ˈankɔmən]", "en": "to arrive", "rule": "separable 'an-' IS stressed", "cat": "separable"}, {"w": "aufstehen", "syls": ["auf", "ste", "hen"], "stress": 0, "ipa": "[ˈaʊ̯fʃteːən]", "en": "to get up", "rule": "separable 'auf-' IS stressed", "cat": "separable"}, {"w": "mitbringen", "syls": ["mit", "brin", "gen"], "stress": 0, "ipa": "[ˈmɪtbʁɪŋən]", "en": "to bring along", "rule": "separable 'mit-' IS stressed", "cat": "separable"}, {"w": "vorlesen", "syls": ["vor", "le", "sen"], "stress": 0, "ipa": "[ˈfoːɐ̯leːzn̩]", "en": "to read aloud", "rule": "separable 'vor-' IS stressed", "cat": "separable"}, {"w": "zumachen", "syls": ["zu", "ma", "chen"], "stress": 0, "ipa": "[ˈt͡suːmaxn̩]", "en": "to close", "rule": "separable 'zu-' IS stressed", "cat": "separable"}, {"w": "abfahren", "syls": ["ab", "fah", "ren"], "stress": 0, "ipa": "[ˈap͡faːʁən]", "en": "to depart", "rule": "separable 'ab-' IS stressed", "cat": "separable"}, {"w": "einladen", "syls": ["ein", "la", "den"], "stress": 0, "ipa": "[ˈaɪ̯nlaːdn̩]", "en": "to invite", "rule": "separable 'ein-' IS stressed", "cat": "separable"}, {"w": "nachdenken", "syls": ["nach", "den", "ken"], "stress": 0, "ipa": "[ˈnaːxdɛŋkən]", "en": "to think about", "rule": "separable 'nach-' IS stressed", "cat": "separable"}, {"w": "fernsehen", "syls": ["fern", "se", "hen"], "stress": 0, "ipa": "[ˈfɛɐ̯nzeːən]", "en": "to watch TV", "rule": "separable 'fern-' IS stressed", "cat": "separable"}, {"w": "zurückgeben", "syls": ["zur", "ück", "ge", "ben"], "stress": 1, "ipa": "[t͡suˈʁʏkɡeːbn̩]", "en": "to give back", "rule": "separable 'zurück-' stressed on 'rück'", "cat": "separable"}, {"w": "Information", "syls": ["in", "for", "ma", "ti", "on"], "stress": 3, "ipa": "[ɪnfɔʁmaˈt͡sjoːn]", "en": "information", "rule": "-tion → stress the French ending", "cat": "foreign"}, {"w": "Universität", "syls": ["u", "ni", "ver", "si", "tät"], "stress": 4, "ipa": "[univɛʁziˈtɛːt]", "en": "university", "rule": "-tät → stress the Latin ending", "cat": "foreign"}, {"w": "Musik", "syls": ["mu", "sik"], "stress": 1, "ipa": "[muˈziːk]", "en": "music", "rule": "-ik → stress the Greek ending", "cat": "foreign"}, {"w": "studieren", "syls": ["stu", "die", "ren"], "stress": 1, "ipa": "[ʃtuˈdiːʁən]", "en": "to study", "rule": "-ieren verbs → stress '-ie-'", "cat": "foreign"}, {"w": "telefonieren", "syls": ["te", "le", "fo", "nie", "ren"], "stress": 3, "ipa": "[telefoˈniːʁən]", "en": "to phone", "rule": "-ieren verbs → stress '-ie-'", "cat": "foreign"}, {"w": "Biologie", "syls": ["bi", "o", "lo", "gie"], "stress": 3, "ipa": "[bioloˈɡiː]", "en": "biology", "rule": "-ie (long i:) → stress the ending", "cat": "foreign"}, {"w": "Journalist", "syls": ["jour", "na", "list"], "stress": 2, "ipa": "[ʃʊɐ̯naˈlɪst]", "en": "journalist", "rule": "-ist → stress the French ending", "cat": "foreign"}, {"w": "Qualität", "syls": ["qua", "li", "tät"], "stress": 2, "ipa": "[kvaliˈtɛːt]", "en": "quality", "rule": "-tät → stress the Latin ending", "cat": "foreign"}, {"w": "Diskussion", "syls": ["dis", "kus", "si", "on"], "stress": 2, "ipa": "[dɪskʊˈsjoːn]", "en": "discussion", "rule": "-sion → stress the French ending", "cat": "foreign"}, {"w": "marschieren", "syls": ["mar", "schie", "ren"], "stress": 1, "ipa": "[maʁˈʃiːʁən]", "en": "to march", "rule": "-ieren verbs → stress '-ie-'", "cat": "foreign"}];
+function PQ_buildRound(items,idx,side){
+  var it=items[idx % items.length];
+  return {it:it,options:it.syls.slice(),answer:it.stress};
+}
+function PQ_sayIt(){if(PQ.cur){speakDE(PQ.cur.it.w,0.8);}}
+function PQ_promptHTML(round){
+  return '<p><strong>Listen</strong> to <strong>'+round.it.w+'</strong> — which syllable is stressed?</p>'
+    +'<button class="speak-btn" onclick="PQ_sayIt()">&#128266; Hear '+round.it.w+'</button>';
+}
+function PQ_feedbackHTML(round,ok){
+  var it=round.it;
+  var marked=it.syls.map(function(s,i){return i===it.stress?s.toUpperCase():s;}).join("-");
+  return '<strong>'+it.w+'</strong> '+it.ipa+' ('+it.en+') → <strong>'+marked+'</strong>. '+it.rule+'.';
+}
+
+var PQ={i:0,score:0,streak:0,order:[],sides:[],cur:null,done:false};
+function PQ_start(n){
+  PQ.i=0;PQ.score=0;PQ.streak=0;PQ.done=false;PQ.order=[];PQ.sides=[];
+  var pool=PQ_ITEMS.map(function(_,i){return i;});
+  for(var k=pool.length-1;k>0;k--){var j=Math.floor(Math.random()*(k+1));var t=pool[k];pool[k]=pool[j];pool[j]=t;}
+  PQ.order=pool.slice(0,Math.min(n,pool.length));
+  for(var s=0;s<PQ.order.length;s++){PQ.sides.push(Math.random()<0.5?0:1);}
+  PQ_next();
+}
+function PQ_next(){
+  if(PQ.i>=PQ.order.length){PQ_finish();return;}
+  var round=PQ_buildRound(PQ_ITEMS,PQ.order[PQ.i],PQ.sides[PQ.i]);
+  PQ.cur=round;
+  document.getElementById('PQ-prompt').innerHTML=PQ_promptHTML(round);
+  var box=document.getElementById('PQ-options');box.innerHTML='';
+  round.options.forEach(function(label,oi){
+    var b=document.createElement('button');b.className='syl-btn';b.textContent=label;
+    b.onclick=function(){PQ_answer(oi,b);};box.appendChild(b);
+  });
+  var fb=document.getElementById('PQ-fb');fb.className='';fb.style.display='none';fb.innerHTML='';
+  document.getElementById('PQ-bar').style.width=(100*PQ.i/PQ.order.length)+'%';
+  document.getElementById('PQ-meta').textContent='Question '+(PQ.i+1)+' of '+PQ.order.length+' \u00B7 Score '+PQ.score+' \u00B7 Streak '+PQ.streak;
+}
+function PQ_answer(oi,btn){
+  if(PQ.done||!PQ.cur)return;
+  var ok=(oi===PQ.cur.answer);
+  var btns=document.getElementById('PQ-options').children;
+  for(var i=0;i<btns.length;i++){btns[i].disabled=true;if(i===PQ.cur.answer){btns[i].classList.add('correct');}}
+  var fb=document.getElementById('PQ-fb');
+  if(ok){PQ.score++;PQ.streak++;fb.className='ok';fb.innerHTML='\u2713 Correct. '+PQ_feedbackHTML(PQ.cur,true);}
+  else{PQ.streak=0;btn.classList.add('wrong');fb.className='no';fb.innerHTML='\u2717 Not quite. '+PQ_feedbackHTML(PQ.cur,false);}
+  fb.style.display='block';
+  PQ.i++;
+  setTimeout(PQ_next,2800);
+}
+function PQ_finish(){
+  PQ.done=true;
+  document.getElementById('PQ-bar').style.width='100%';
+  var n=PQ.order.length;
+  var msg='You scored '+PQ.score+' out of '+n+'. ';
+  msg+= PQ.score===n ? 'Perfect \u2014 your ear is ready for real conversations.'
+    : PQ.score>=Math.ceil(n*0.7) ? 'Strong. Replay the tricky pairs slowly before your next round.'
+    : 'Keep training \u2014 use the pair browser above at slow speed, then try again.';
+  document.getElementById('PQ-prompt').innerHTML='<p style="font-size:1.1rem">'+msg+'</p><button class="quiz-btn" style="margin-top:12px" onclick="PQ_start('+n+')">\u21BB Try again</button>';
+  document.getElementById('PQ-options').innerHTML='';
+  document.getElementById('PQ-meta').textContent='Finished \u00B7 Score '+PQ.score+'/'+n;
+  document.getElementById('PQ-fb').style.display='none';
+}
+
+
+</script>
+</body>
+</html>
