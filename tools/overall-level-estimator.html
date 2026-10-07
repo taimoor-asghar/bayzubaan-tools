@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Level Estimator — Combined CEFR Snapshot (All Skills) | Bayzubaan</title>
+<meta name="description" content="Free German level estimator: 20 questions across reading, vocabulary, grammar, listening, pragmatics. Combined CEFR snapshot + skill gap report.">
+<link rel="canonical" href="https://bayzubaan.com/tools/overall-level-estimator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="German Level Estimator — Combined CEFR Snapshot (All Skills)">
+<meta property="og:description" content="What&#x27;s your REAL German level? 20 questions, 5 skills, one honest snapshot.">
+<meta property="og:url" content="https://bayzubaan.com/tools/overall-level-estimator/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="German Level Estimator — Combined CEFR Snapshot (All Skills)">
+<meta name="twitter:description" content="What&#x27;s your REAL German level? 20 questions, 5 skills, one honest snapshot.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is this different from the placement tests?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This estimator is wide and shallow: 20 questions across all five skills giving a combined snapshot. The placement tests (A1–C1) are narrow and deep: 25 questions on one level. Use the estimator monthly to find your band and weakest skill, then the placement test for a deep diagnosis of that level."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My skills are very uneven. Which level am I?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your weakest skill caps your real-world level: B2 grammar with A2 listening means you function at A2 in conversation. The snapshot shows the average, but the skill bars show the truth — spend half your study time on the weakest skill until it stops being the weakest."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is a 20-question estimate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's a triangulation, not an exam — treat borderline scores as borderline and confirm with the placement test. It's designed to answer 'which level/test/skill next?', which it does reliably, not to certify a level."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I trust this over a real exam?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. These tools tell you when you're ready to book a real exam (Goethe, telc, ÖSD) — they don't replace one. When the estimator, the placement test, and the writing/speaking checks all agree on a level, that's a strong signal you're exam-ready."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I take the estimator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Monthly, as part of a 30-minute ritual: estimator + your level's placement test + the writing checklist. Log the three numbers — three months of rising numbers proves your method works; three months flat means change the method."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My listening is much weaker than my reading. Is that normal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Completely — it's the most common pattern. Reading is recognition at your own pace; listening is recognition at 160 wpm with reduced forms. Fix it with the listening readiness quiz, the wpm speed ladder, and shadowing — an hour of listening beats an hour of grammar when the ear is the bottleneck."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>Overall Level Estimator: Your Combined CEFR Snapshot</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">What&#x27;s your REAL German level? 20 questions, 5 skills, one honest snapshot.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+
+<h2>The snapshot</h2>
+<p style="margin-bottom:16px"><strong>20 questions</strong> sampling every skill — <strong>Reading, Vocabulary, Grammar, Listening, Pragmatics</strong>. One sitting gives you a <strong>combined CEFR snapshot</strong> plus per-skill bars showing exactly which skill drags your average down.</p>
+<button id="qstart" type="button" onclick="startQuiz()">Start the estimator</button>
+<div id="quiz-zone" style="display:none;margin-top:20px">
+<div class="progress"><div id="qbar"></div></div>
+<div class="quiz-meta"><span id="qcount">Question 1/20</span><span id="qscore">Correct: 0</span></div>
+<div id="quiz-topic" style="color:#64748b;font-size:.9rem;margin-bottom:6px"></div>
+<div id="quiz-sentence" style="font-size:1.25rem;font-weight:700;margin-bottom:14px"></div>
+<div id="quiz-options"></div>
+<div id="quiz-feedback"></div>
+<button type="button" id="quiz-next" style="display:none;margin-top:12px" onclick="nextQ()">Next</button>
+<div id="quiz-summary"></div>
+</div>
+
+</div>
+
+<article class="prose">
+
+<h2>Why one number beats five guesses</h2>
+<p>Learners usually know their skills unevenly: "my reading is okay, my speaking is terrible, grammar… no idea." Vague self-knowledge produces vague study plans. The overall level estimator compresses all five skills into one 10-minute sitting and returns two things: a <strong>combined CEFR snapshot</strong> (the level your German actually functions at, averaged across skills) and <strong>per-skill bars</strong> (which skill is pulling the average down). The second output is the valuable one. A B1 snapshot with A2 listening and B2 reading is a completely different study plan from a flat B1 — and most learners are spikier than they think.</p>
+<h2>How the 20 questions are built</h2>
+<p>Four questions per skill, arranged easy → hard within each skill, so the test probes the full A1–C1 range. <strong>Reading (1–2):</strong> case government in context (<em>trotz</em> + genitive) and recognising the passive infinitive — the two structures that separate intermediate readers from advanced ones. <strong>Vocabulary (3–5, 19):</strong> false friends (<em>Kaution</em>), reflexive verb frames (<em>sich bewerben um</em>), and the B2 connector <em>allerdings</em>. <strong>Grammar (6–12, 20):</strong> the greatest-hits ladder — question words, reflexive accusative, relative pronouns, Konjunktiv II, Konjunktiv I, genitive prepositions, comparatives, strong verbs. <strong>Listening (13–15):</strong> reduced forms (<em>haste</em>), spoken idioms, announcement vocabulary — the ear-skills written tests miss. <strong>Pragmatics (16–18):</strong> formal register, restaurant German, polite requests — the social software. Twenty questions can't certify a level, but they triangulate it surprisingly well: each skill's 4 questions act as an independent mini-probe.</p>
+<h2>Reading your snapshot</h2>
+<p>The headline band is your <strong>functional average</strong> — roughly the level of material and conversation you can handle across the board. Then read the skill bars (the result screen ranks missed topics by skill). The golden rule: <strong>your weakest skill caps your real-world level</strong>. B2 grammar with A2 listening means you <em>are</em> A2 in any conversation — the ear is the bottleneck, and an hour of listening practice beats an hour of grammar at that point. Common patterns: <strong>reading leads, listening lags</strong> (the classic — fix with the listening readiness quiz and the wpm ladder); <strong>grammar leads, pragmatics lags</strong> (textbook learners — fix with the etiquette and small-talk tools); <strong>everything flat</strong> (take the placement test for your band and climb normally). Re-take monthly: the headline should creep up, but watch for a <em>skill</em> jumping a full colour — that's the real victory.</p>
+<h2>Snapshot vs placement tests: use both</h2>
+<p>This estimator is a <strong>wide, shallow</strong> probe — 4 questions per skill. The placement tests (tools 56–60) are <strong>narrow, deep</strong> probes — 25 questions on one level's grammar and vocabulary. Use the estimator first: it tells you <em>which</em> placement test to take and which skill needs work. Then take that level's placement test for the deep diagnosis. Example: estimator says B1 with weak grammar → take the B1 placement test, which pinpoints the exact grammar topics. Estimator every month (the weather report), placement test after each study block (the medical check-up). Together they replace every "what level am I?" anxiety with data.</p>
+<h2>The skill-balancing study method</h2>
+<p>Once you know your weakest skill, <strong>spend half your study time on it</strong> until it stops being the weakest. This feels wrong — working on strengths is more fun — but the weakest skill has the highest marginal return: moving listening from A2 to B1 transforms your real-world German more than moving reading from B1 to B2. Rotate in 2-week blocks: <strong>weeks 1–2:</strong> weakest skill gets 50% of time; <strong>weeks 3–4:</strong> re-test, re-balance. Concrete pairings: weak listening → slow news + shadowing + the listening quiz; weak speaking → daily aloud narration + Tandem + the speaking quiz; weak writing → 200 words/week + the writing checklist; weak grammar → the specific drill tools the placement test names; weak vocabulary → top-1000/2000 with spaced repetition. Balanced profiles climb fastest because no single bottleneck wastes the other skills' potential.</p>
+<h2>What the snapshot can't tell you</h2>
+<p>Four questions per skill is a probe, not an exam — a lucky guess moves a skill bar. Treat close calls (e.g. 10 vs 11, the A2/B1 border) as "borderline" and confirm with the placement test. The estimator also can't measure <strong>production under pressure</strong>: recognising <em>würde</em> in a multiple-choice question is not the same as producing it mid-sentence at speed. That's what the writing checklist and speaking quiz are for — they test what you can <em>do</em>, while this tests what you <em>know</em>. The honest level is the lowest of the three. And none of these replace a real exam when it counts (visa, university, job) — they tell you <em>when you're ready</em> to book one, which is exactly their job.</p>
+<h2>Your monthly measurement ritual</h2>
+<p>First Sunday of the month, 30 minutes: <strong>1.</strong> this estimator (the snapshot), <strong>2.</strong> your current level's placement test (the deep check), <strong>3.</strong> the writing checklist (production honesty). Log three numbers: snapshot band, placement score, writing level. Three months of rising numbers is proof your method works; three months flat means the <em>method</em> needs changing, not your effort — usually it means too much passive study and too little production. Learners who measure monthly improve roughly twice as fast as learners who don't, not because measuring teaches, but because it forces the re-balancing that measuring reveals. The tools are the instruments; you're still the musician.</p>
+
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>How is this different from the placement tests?</h3><p>This estimator is wide and shallow: 20 questions across all five skills giving a combined snapshot. The placement tests (A1–C1) are narrow and deep: 25 questions on one level. Use the estimator monthly to find your band and weakest skill, then the placement test for a deep diagnosis of that level.</p></div><div class="faq-item"><h3>My skills are very uneven. Which level am I?</h3><p>Your weakest skill caps your real-world level: B2 grammar with A2 listening means you function at A2 in conversation. The snapshot shows the average, but the skill bars show the truth — spend half your study time on the weakest skill until it stops being the weakest.</p></div><div class="faq-item"><h3>How accurate is a 20-question estimate?</h3><p>It&#x27;s a triangulation, not an exam — treat borderline scores as borderline and confirm with the placement test. It&#x27;s designed to answer &#x27;which level/test/skill next?&#x27;, which it does reliably, not to certify a level.</p></div><div class="faq-item"><h3>Should I trust this over a real exam?</h3><p>No. These tools tell you when you&#x27;re ready to book a real exam (Goethe, telc, ÖSD) — they don&#x27;t replace one. When the estimator, the placement test, and the writing/speaking checks all agree on a level, that&#x27;s a strong signal you&#x27;re exam-ready.</p></div><div class="faq-item"><h3>How often should I take the estimator?</h3><p>Monthly, as part of a 30-minute ritual: estimator + your level&#x27;s placement test + the writing checklist. Log the three numbers — three months of rising numbers proves your method works; three months flat means change the method.</p></div><div class="faq-item"><h3>My listening is much weaker than my reading. Is that normal?</h3><p>Completely — it&#x27;s the most common pattern. Reading is recognition at your own pace; listening is recognition at 160 wpm with reduced forms. Fix it with the listening readiness quiz, the wpm speed ladder, and shadowing — an hour of listening beats an hour of grammar when the ear is the bottleneck.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+var QUESTIONS = [{"q": "In: „Trotz des Regens gingen sie spazieren.“ — „trotz“ takes which case?", "o": ["Genitiv", "Dativ", "Akkusativ", "Nominativ"], "a": 0, "e": "trotz + genitive: trotz des Regens.", "t": "Reading"}, {"q": "„Die Bewerbung muss bis Freitag eingereicht werden.“ — „eingereicht werden“ is?", "o": ["passive infinitive", "perfect tense", "subjunctive", "imperative"], "a": 0, "e": "muss + eingereicht werden = modal + passive infinitive.", "t": "Reading"}, {"q": "„die Kaution“ in a rental ad means?", "o": ["rental deposit", "caution sign", "insurance", "monthly rent"], "a": 0, "e": "die Kaution = the (rental) deposit — classic false friend.", "t": "Vocabulary"}, {"q": "„sich bewerben um“ means?", "o": ["to apply for", "to advertise", "to complain about", "to promote"], "a": 0, "e": "sich bewerben um + acc. = to apply for (a job).", "t": "Vocabulary"}, {"q": "„der Vorschlag“ means?", "o": ["suggestion / proposal", "the interrogation", "the foreskin (no!)", "the preamble"], "a": 0, "e": "der Vorschlag = suggestion. (Vorschlagen = to suggest.)", "t": "Vocabulary"}, {"q": "„___ hast du das gemacht?“ (asking for the reason)", "o": ["Warum", "Wieso nicht", "Was", "Wie"], "a": 0, "e": "Warum = why (reason). Was = what.", "t": "Grammar"}, {"q": "„Ich freue ___ auf das Wochenende.“", "o": ["mich", "mir", "dich", "sich"], "a": 0, "e": "sich freuen auf + acc.: ich freue mich.", "t": "Grammar"}, {"q": "„Das ist der Mann, ___ ich gestern getroffen habe.“", "o": ["den", "der", "dem", "dessen"], "a": 0, "e": "Accusative masculine relative pronoun: den.", "t": "Grammar"}, {"q": "„Wenn ich mehr Zeit ___, würde ich reisen.“", "o": ["hätte", "habe", "hatte", "haben"], "a": 0, "e": "Konjunktiv II of haben: hätte.", "t": "Grammar"}, {"q": "„Er sagt, er ___ krank.“ (reported speech)", "o": ["sei", "ist", "wäre", "seie"], "a": 0, "e": "Konjunktiv I: er sei — indirect speech marker.", "t": "Grammar"}, {"q": "„___ des schlechten Wetters blieben wir zu Hause.“", "o": ["Wegen", "Trotz", "Während", "Statt"], "a": 0, "e": "wegen + genitive = because of.", "t": "Grammar"}, {"q": "The comparative of „gut“ is?", "o": ["besser", "guter", "am besten", "mehr gut"], "a": 0, "e": "gut → besser → am besten (irregular).", "t": "Grammar"}, {"q": "You hear „haste“ in fast speech. It means?", "o": ["hast du", "hat sie", "hast es", "haben sie"], "a": 0, "e": "haste = hast du (du cliticised).", "t": "Listening"}, {"q": "„Ich versteh nur Bahnhof.“ means?", "o": ["I don't understand a thing", "I only like stations", "I need directions", "I love trains"], "a": 0, "e": "nur Bahnhof verstehen = to be completely lost.", "t": "Listening"}, {"q": "Station: „Der Zug hat 10 Minuten Verspätung.“", "o": ["10-minute delay", "the train is cancelled", "platform 10", "10 minutes early"], "a": 0, "e": "Verspätung = delay. (Ausfall = cancellation.)", "t": "Listening"}, {"q": "Formal email opening to an unknown recipient:", "o": ["Sehr geehrte Damen und Herren,", "Hallo zusammen,", "Liebe Leute,", "Hi,"], "a": 0, "e": "The standard formal salutation.", "t": "Pragmatics"}, {"q": "You want the bill in a restaurant:", "o": ["„Die Rechnung, bitte.“", "„Zahlen, schnell!“", "„Ich will zahlen.“", "„Geld her!“"], "a": 0, "e": "Die Rechnung, bitte — polite and universal.", "t": "Pragmatics"}, {"q": "Polite request to a stranger:", "o": ["„Könnten Sie mir bitte helfen?“", "„Hilf mir!“", "„Du, Hilfe!“", "„Helfen Sie!“ (barked)"], "a": 0, "e": "Konjunktiv II + bitte = the polite request formula.", "t": "Pragmatics"}, {"q": "„Allerdings“ is closest to?", "o": ["however", "always", "already", "alone"], "a": 0, "e": "allerdings = however/admittedly (B2 connector).", "t": "Vocabulary"}, {"q": "„Die Zahl der Bewerber ist gestiegen.“ — „gestiegen“ comes from?", "o": ["steigen", "steigern", "stellen", "stiegen"], "a": 0, "e": "steigen – stieg – gestiegen (strong verb).", "t": "Grammar"}];
+var BANDS = [{"lo": 0, "hi": 6, "label": "A1 snapshot — foundations", "desc": "Your overall picture is beginner level. The skill bars below show where to start — usually vocabulary + present tense + articles. Confirm with the A1 placement test.", "links": [{"s": "a1-placement-test", "t": "A1 placement test"}, {"s": "german-article-trainer", "t": "Article trainer"}, {"s": "top-1000-words-browser", "t": "Top 1000 words"}]}, {"lo": 7, "hi": 10, "label": "A2 snapshot — elementary", "desc": "Elementary across the board. Push past-tense narration, connectors, and everyday fluency, then verify with the A2 test.", "links": [{"s": "a2-placement-test", "t": "A2 placement test"}, {"s": "prateritum-conjugator", "t": "Präteritum"}, {"s": "filler-words-trainer", "t": "Filler words"}]}, {"lo": 11, "hi": 14, "label": "B1 snapshot — intermediate", "desc": "Solid intermediate. The gaps are usually subordination, passive, and formal register — check the skill bars, then take the B1 test.", "links": [{"s": "b1-placement-test", "t": "B1 placement test"}, {"s": "relative-clause-builder", "t": "Relative clauses"}, {"s": "linking-words-trainer", "t": "Linking words"}]}, {"lo": 15, "hi": 17, "label": "B2 snapshot — upper-intermediate", "desc": "Upper-intermediate: you handle complex German. Polish subjunctive, advanced connectors, and fast speech, then prove it on the B2 test.", "links": [{"s": "b2-placement-test", "t": "B2 placement test"}, {"s": "konjunktiv-2-practice", "t": "Konjunktiv II"}, {"s": "listening-readiness-quiz", "t": "Listening quiz"}]}, {"lo": 18, "hi": 20, "label": "C1 snapshot — advanced", "desc": "Advanced across skills — an excellent, balanced profile. Take the C1 placement test to confirm, and keep all five skills warm.", "links": [{"s": "c1-placement-test", "t": "C1 placement test"}, {"s": "reading-difficulty-analyzer", "t": "Reading analyzer"}, {"s": "writing-self-assessment", "t": "Writing check"}]}];
+function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
+var qi = 0, correctN = 0, missedList = [], qa = null;
+var TOTAL = QUESTIONS.length;
+function startQuiz(){
+  qi = 0; correctN = 0; missedList = [];
+  document.getElementById("quiz-zone").style.display = "block";
+  document.getElementById("quiz-summary").innerHTML = "";
+  document.getElementById("qstart").style.display = "none";
+  showQ();
+}
+function showQ(){
+  qa = QUESTIONS[qi];
+  var box = document.getElementById("quiz-options"); box.innerHTML = "";
+  var fb = document.getElementById("quiz-feedback"); fb.className = ""; fb.style.display = "none";
+  document.getElementById("quiz-next").style.display = "none";
+  document.getElementById("qcount").textContent = "Question " + (qi+1) + "/" + TOTAL;
+  document.getElementById("qbar").style.width = (qi/TOTAL*100) + "%";
+  document.getElementById("quiz-topic").textContent = "Topic: " + qa.t;
+  document.getElementById("quiz-sentence").textContent = qa.q;
+  qa.o.forEach(function(opt, idx){
+    var b = document.createElement("button");
+    b.className = "quiz-btn"; b.textContent = opt;
+    b.addEventListener("click", function(){ answerQ(idx, b); });
+    box.appendChild(b);
+  });
+}
+function answerQ(idx, btn){
+  var fb = document.getElementById("quiz-feedback");
+  var btns = document.querySelectorAll("#quiz-options .quiz-btn");
+  btns.forEach(function(x, i){ x.disabled = true; if(i === qa.a) x.classList.add("correct"); });
+  if(idx === qa.a){
+    correctN++; fb.className = "ok";
+    fb.textContent = "\u2713 Correct. " + qa.e;
+  } else {
+    missedList.push(qa); fb.className = "no";
+    btn.classList.add("wrong");
+    fb.textContent = "\u2717 The answer is \u201C" + qa.o[qa.a] + "\u201D. " + qa.e;
+  }
+  document.getElementById("qscore").textContent = "Correct: " + correctN;
+  var nb = document.getElementById("quiz-next");
+  nb.style.display = "block";
+  nb.textContent = (qi + 1 < TOTAL) ? "Next" : "See my result";
+}
+function bandFor(score){
+  for(var i = 0; i < BANDS.length; i++){
+    if(score >= BANDS[i].lo && score <= BANDS[i].hi) return BANDS[i];
+  }
+  return BANDS[0];
+}
+function nextQ(){
+  qi++;
+  if(qi < TOTAL) showQ();
+  else {
+    document.getElementById("quiz-topic").textContent = "";
+    document.getElementById("quiz-sentence").textContent = "";
+    document.getElementById("quiz-options").innerHTML = "";
+    document.getElementById("quiz-feedback").style.display = "none";
+    document.getElementById("quiz-next").style.display = "none";
+    document.getElementById("qbar").style.width = "100%";
+    document.getElementById("qcount").textContent = "Done!";
+    var band = bandFor(correctN);
+    var uniq = {};
+    missedList.forEach(function(m){ uniq[m.t] = (uniq[m.t] || 0) + 1; });
+    var topics = Object.keys(uniq).sort(function(a, b){ return uniq[b] - uniq[a]; });
+    var msg = '<div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:12px;padding:20px;margin-bottom:16px">';
+    msg += '<div style="font-size:1.6rem;font-weight:800;color:#1e3a8a">' + correctN + " / " + TOTAL + "</div>";
+    msg += '<div style="font-size:1.2rem;font-weight:700;margin-top:4px">' + band.label + "</div>";
+    msg += '<div style="color:#475569;margin-top:8px">' + band.desc + "</div></div>";
+    msg += '<h3 style="margin-bottom:10px">Your study plan</h3><div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px">';
+    band.links.forEach(function(l){
+      msg += '<a href="https://bayzubaan.com/tools/' + l.s + '/" style="background:#fff;border:1px solid #bfdbfe;color:#1d4ed8;border-radius:999px;padding:8px 16px;text-decoration:none;font-weight:600">' + l.t + "\u2192</a>";
+    });
+    msg += "</div>";
+    if(topics.length){
+      msg += '<h3 style="margin-bottom:8px">Topics to review</h3><ul style="margin:0 0 0 20px;color:#475569">';
+      topics.slice(0, 5).forEach(function(t){ msg += "<li>" + t + " (" + uniq[t] + " missed)</li>"; });
+      msg += "</ul>";
+    }
+    msg += '<div style="margin-top:16px"><button type="button" onclick="startQuiz()" style="background:#f1f5f9;border:1px solid #e2e8f0;border-radius:8px;padding:10px 20px;cursor:pointer;font-family:inherit;font-weight:600">Retake the test</button></div>';
+    document.getElementById("quiz-summary").innerHTML = msg;
+  }
+}
+
+
+</script>
+</body>
+</html>
