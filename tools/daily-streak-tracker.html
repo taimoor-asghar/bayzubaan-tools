@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Streak Tracker — German Learning Habit | Bayzubaan</title>
+<meta name="description" content="Build a German learning habit: daily streak tracker with 28-day chain calendar, milestones, levels — your data stays in your browser.">
+<link rel="canonical" href="https://bayzubaan.com/tools/daily-streak-tracker/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Daily Streak Tracker — German Learning Habit">
+<meta property="og:description" content="German learning streak tracker: don&#x27;t break the chain. 28-day calendar, milestones, levels.">
+<meta property="og:url" content="https://bayzubaan.com/tools/daily-streak-tracker/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Daily Streak Tracker — German Learning Habit">
+<meta name="twitter:description" content="German learning streak tracker: don&#x27;t break the chain. 28-day calendar, milestones, levels.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does the streak tracker store my data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In your browser's localStorage — nothing is uploaded anywhere. Your streak, best streak, total days and 28-day history live only on this device. Clearing browser data will reset it, so treat this browser as your habit home."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What counts as a learning day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Any German learning: a lesson, flashcards, any tool on this site, a podcast, a conversation. Be honest — the chain is a mirror. Ten minutes counts; the habit research says consistency beats intensity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I backdate a missed day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — check-in works for today only. This is deliberate: the chain rewards the daily decision, and backdating would turn it into a diary. Missed a day? The protocol is 'never miss twice' — start the new chain today."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when I break my streak?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only the current streak resets to zero. Your total learning days and best streak are permanent, and your level (Starter → Dranbleiber → Routinier → Profi → Meister) can never be lost. The reset stings — that is loss aversion doing its job."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the milestones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "7 days (the habit is forming), 30 days (you're a learner now), 100 days (cases start feeling natural), 365 days (about B2 study time — legend), 1000 days (unstoppable). Levels run on total days: Starter 0, Dranbleiber 7, Routinier 30, Profi 100, Meister 365."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I actually build the daily habit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use an implementation intention: 'When [existing routine], I learn German' — e.g. with morning coffee or on the train. Shrink the minimum (at least one quiz round), keep the same cue daily, and never miss twice."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>Daily Streak Tracker: Don't Break the Chain</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">German learning streak tracker: don&#x27;t break the chain. 28-day calendar, milestones, levels.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+
+<p style="margin-bottom:12px">Motivation folgt der Gewohnheit — nicht umgekehrt. Diese Seite verwandelt dein Deutschlernen in eine Kette, die du nicht reißen willst: ein Klick pro Lerntag, gespeichert in deinem Browser.</p>
+<div style="text-align:center;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:28px;margin-bottom:20px">
+<div id="st-flame" style="font-size:2.5rem;margin-bottom:4px">\u26AA</div>
+<div style="font-size:3rem;font-weight:800;color:#0f172a"><span id="st-num">0</span> <span style="font-size:1.2rem;color:#64748b">Tage</span></div>
+<div id="st-milestone" style="display:none;margin-top:8px;font-weight:700;color:#b45309"></div>
+<p id="st-hint" style="color:#64748b;margin:10px 0 16px"></p>
+<button id="st-checkin" class="quiz-btn" style="text-align:center;font-weight:700;max-width:420px;margin:0 auto" onclick="ST_doCheckin()">Ich habe heute gelernt \u2713</button>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px">
+<div style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:14px;text-align:center"><div style="font-size:1.4rem;font-weight:800" id="st-best">0</div><div style="font-size:.85rem;color:#64748b">Beste Serie</div></div>
+<div style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:14px;text-align:center"><div style="font-size:1.4rem;font-weight:800" id="st-total">0</div><div style="font-size:.85rem;color:#64748b">Lerntage gesamt</div></div>
+<div style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:14px;text-align:center"><div style="font-size:1.4rem;font-weight:800" id="st-level">Starter</div><div style="font-size:.85rem;color:#64748b">Level</div></div>
+</div>
+<h3>Die letzten 28 Tage</h3>
+<div id="st-cal" style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:12px 0 20px"></div>
+<p style="color:#64748b;font-size:.9rem">Deine Daten bleiben in diesem Browser (localStorage) — nichts wird hochgeladen. Levels: Starter (0), Dranbleiber (7), Routinier (30), Profi (100), Meister (365).</p>
+
+</div>
+
+<article class="prose">
+
+<h2>Don't break the chain: why streaks work</h2>
+<p>The most reliable motivation technology ever discovered for language learning is embarrassingly low-tech: a calendar and a red X. Comedian Jerry Seinfeld reportedly used it for writing jokes — mark each day you practise, and after a few days you have a chain; your only job becomes not breaking it. Behavioural science backs him up: the chain works through <strong>loss aversion</strong> (losing a 47-day streak hurts more than gaining day 48 pleases), <strong>identity</strong> ('I am someone who learns German every day' is stickier than any goal), and <strong>reduced decision friction</strong> — the question is never 'should I learn today?' but only 'when do I tap the button?'. This tracker implements the chain for your German: one tap per learning day, a 28-day calendar, milestones, and levels. Your data never leaves your browser.</p>
+<p>The chain has one design subtlety worth understanding: it rewards <strong>showing up</strong>, not performance. A day counts when you tap 'Ich habe heute gelernt' — whether you studied for two hours or did ten minutes of flashcards on the train. This is deliberate. Research on habit formation (Lally et al., 2010) found that consistency of context beats intensity: the people who built lasting habits were the ones who never missed the cue, not the ones who had heroic sessions. Ten minutes daily beats five hours on Sunday — for German especially, where the grammar needs daily contact to stick. If you only have ten minutes, do ten minutes and tap the button. The chain does not judge; it only counts.</p>
+<h2>The rules of the chain</h2>
+<p><strong>Rule 1: the day counts if you learned.</strong> Any German counts — a lesson, flashcards, this site's quizzes, a podcast episode, a conversation. Be honest with yourself; the chain is a mirror, not a judge. <strong>Rule 2: check in the same day.</strong> The tracker compares calendar days, so an entry for yesterday cannot be backdated — this is the feature, not a bug. Backdating would turn the chain into a diary; the point is the daily decision. <strong>Rule 3: a missed day resets the streak, not the total.</strong> Your <em>Lerntage gesamt</em> (total days) and <em>beste Serie</em> (best streak) survive forever — only the current flame goes back to zero. This matters psychologically: the reset stings (loss aversion doing its job), but the totals prove the habit is real even when the chain breaks. <strong>Rule 4: restart immediately.</strong> The data on broken streaks is clear — the danger is not the missed day, it is the second missed day. 'Never miss twice' is the whole recovery protocol: tap the button today and the new chain is already day one.</p>
+<h2>Milestones and levels: the gamification layer</h2>
+<p>Raw counting gets boring around week three, which is exactly when most habits die — so the tracker adds two progression systems. <strong>Milestones</strong> fire at 7 days ('Eine Woche! Die Gewohnheit bildet sich' — the habit is forming; research suggests automaticity starts building around 2–3 weeks of daily repetition), 30 days (a month — you are now 'ein Lernender', a learner, as identity), 100 days (exceptional discipline — roughly the point where German cases start feeling natural), 365 days (a year — legend status, and approximately the study time for B2), and 1000 days (unstoppable). <strong>Levels</strong> run on total days rather than the current streak, so they can never be lost: Starter, Dranbleiber (sticker-with-it, 7), Routinier (30), Profi (100), Meister (365). The level is your permanent rank; the streak is today's flame. Together they give you something to protect (the streak) and something that protects you (the level) on the bad days.</p>
+<h2>Making the chain stick: implementation intentions</h2>
+<p>The chain tracks the habit; <strong>implementation intentions</strong> build it. The technique (Gollwitzer, 1999) is a single sentence: 'Wenn <em>Situation X</em>, dann lerne ich Deutsch.' — 'When X happens, I learn German.' The more specific X, the better: 'When I sit down with my morning coffee, I do one quiz on this site.' 'When my train leaves the station, I open the flashcards.' Attach the learning to an existing anchor and the decision disappears — which is precisely what the chain then rewards. Two more evidence-based tweaks: <strong>shrink the minimum</strong> ('at least one quiz round' — you will usually do more, but the floor is sacred), and <strong>protect the cue, not the duration</strong> (same time, same place, even if the session is short). Learners who optimise for never-missing beat learners who optimise for session length, every time.</p>
+<h2>What counts as 'learning German'?</h2>
+<p>Anything from this 100-tool series counts, and the series is designed as a daily menu: a placement-test round, five minimal-pair rounds, one dictation, ten small-talk phrases, a holiday quiz — each tool is a 5–15 minute session. Rotate by weakness: grammar on Mondays (the case drills), vocabulary midweek (the flashcards and phrase tools), pronunciation on Fridays (your mouth is tired, train the ear instead), culture on Sundays (holidays, etiquette, small talk — the fun stuff). The 28-day calendar shows your pattern at a glance: gaps on weekends mean the habit is work-anchored (add a Sunday ritual); gaps midweek mean the cue needs moving. Use the calendar diagnostically, not punitively.</p>
+<p>A final note on honesty and rest: planned rest is not a broken chain. If you take Sundays off deliberately, that is a six-day chain design, not a failure — decide the rule in advance ('I learn Monday to Saturday') and judge yourself against your own rule. What kills habits is not rest but ambiguity: 'I'll learn when I feel like it' is how chains die quietly. Set the rule, tap the button, don't break the chain — <em>viel Erfolg!</em></p>
+<p style="color:#64748b;font-size:.9rem">Created by Dr Taimoor Asghar, reviewed 2026-10-07. Habit-science summary for orientation: Lally et al. (2010, European Journal of Social Psychology) on habit formation; Gollwitzer (1999) on implementation intentions.</p>
+
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>How does the streak tracker store my data?</h3><p>In your browser&#x27;s localStorage — nothing is uploaded anywhere. Your streak, best streak, total days and 28-day history live only on this device. Clearing browser data will reset it, so treat this browser as your habit home.</p></div><div class="faq-item"><h3>What counts as a learning day?</h3><p>Any German learning: a lesson, flashcards, any tool on this site, a podcast, a conversation. Be honest — the chain is a mirror. Ten minutes counts; the habit research says consistency beats intensity.</p></div><div class="faq-item"><h3>Can I backdate a missed day?</h3><p>No — check-in works for today only. This is deliberate: the chain rewards the daily decision, and backdating would turn it into a diary. Missed a day? The protocol is &#x27;never miss twice&#x27; — start the new chain today.</p></div><div class="faq-item"><h3>What happens when I break my streak?</h3><p>Only the current streak resets to zero. Your total learning days and best streak are permanent, and your level (Starter → Dranbleiber → Routinier → Profi → Meister) can never be lost. The reset stings — that is loss aversion doing its job.</p></div><div class="faq-item"><h3>What are the milestones?</h3><p>7 days (the habit is forming), 30 days (you&#x27;re a learner now), 100 days (cases start feeling natural), 365 days (about B2 study time — legend), 1000 days (unstoppable). Levels run on total days: Starter 0, Dranbleiber 7, Routinier 30, Profi 100, Meister 365.</p></div><div class="faq-item"><h3>How do I actually build the daily habit?</h3><p>Use an implementation intention: &#x27;When [existing routine], I learn German&#x27; — e.g. with morning coffee or on the train. Shrink the minimum (at least one quiz round), keep the same cue daily, and never miss twice.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+/*ST_PURE_START*/
+function ST_dateKey(d){
+  var m=d.getMonth()+1,day=d.getDate();
+  return d.getFullYear()+"-"+(m<10?"0"+m:m)+"-"+(day<10?"0"+day:day);
+}
+function ST_daysBetween(aKey,bKey){
+  function p(k){var t=k.split("-");return Date.UTC(+t[0],+t[1]-1,+t[2]);}
+  return Math.round((p(bKey)-p(aKey))/86400000);
+}
+function ST_blank(){return {last:null,streak:0,best:0,total:0,days:{}};}
+function ST_checkIn(st,todayKey){
+  var s={last:st.last,streak:st.streak,best:st.best,total:st.total,days:{}};
+  for(var k in st.days)s.days[k]=st.days[k];
+  if(s.last===todayKey)return {state:s,gained:false};
+  var gap=s.last?ST_daysBetween(s.last,todayKey):null;
+  s.streak=(gap===1)?s.streak+1:1;
+  s.total+=1;
+  if(s.streak>s.best)s.best=s.streak;
+  s.last=todayKey;
+  s.days[todayKey]=1;
+  return {state:s,gained:true};
+}
+function ST_milestone(streak){
+  var M={7:"Eine Woche! Die Gewohnheit bildet sich.",30:"Ein Monat! Du bist ein Lernender.",100:"100 Tage! Außergewöhnliche Disziplin.",365:"Ein Jahr! Legende.",1000:"1000 Tage. Unaufhaltsam."};
+  return M[streak]||null;
+}
+function ST_level(total){
+  var L=[[0,"Starter"],[7,"Dranbleiber"],[30,"Routinier"],[100,"Profi"],[365,"Meister"]];
+  var name=L[0][1];
+  for(var i=0;i<L.length;i++){if(total>=L[i][0])name=L[i][1];}
+  var next=null;
+  for(var j=0;j<L.length;j++){if(L[j][0]>total){next=L[j];break;}}
+  return {name:name,nextAt:next?next[0]:null,nextName:next?next[1]:null};
+}
+/*ST_PURE_END*/
+var ST_KEY="bz_streak_v1";
+function ST_load(){try{var s=JSON.parse(localStorage.getItem(ST_KEY));if(s&&typeof s==="object")return s;}catch(e){}return ST_blank();}
+function ST_save(s){try{localStorage.setItem(ST_KEY,JSON.stringify(s));}catch(e){}}
+function ST_render(){
+  var s=ST_load();
+  var today=ST_dateKey(new Date());
+  var doneToday=s.last===today;
+  var flame=document.getElementById("st-flame");
+  flame.textContent=s.streak>0?("\U0001F525 ".repeat(Math.min(s.streak,5)).trim()):"\u26AA";
+  document.getElementById("st-num").textContent=s.streak;
+  document.getElementById("st-best").textContent=s.best;
+  document.getElementById("st-total").textContent=s.total;
+  var lv=ST_level(s.total);
+  document.getElementById("st-level").textContent=lv.name;
+  var ms=ST_milestone(s.streak);
+  var mb=document.getElementById("st-milestone");
+  if(ms){mb.style.display="block";mb.textContent="\U0001F3C6 "+ms;}else{mb.style.display="none";}
+  var btn=document.getElementById("st-checkin");
+  if(doneToday){btn.disabled=true;btn.textContent="Heute schon gelernt \u2713 — morgen geht's weiter!";btn.style.background="#10b981";btn.style.borderColor="#10b981";}
+  else{btn.disabled=false;btn.textContent="Ich habe heute gelernt \u2713";btn.style.background="#2563eb";btn.style.borderColor="#2563eb";}
+  var cal=document.getElementById("st-cal");cal.innerHTML="";
+  var now=new Date();
+  for(var i=27;i>=0;i--){
+    var d=new Date(now.getFullYear(),now.getMonth(),now.getDate()-i);
+    var k=ST_dateKey(d);
+    var cell=document.createElement("div");
+    var isToday=k===today,hit=!!s.days[k];
+    cell.style.cssText="aspect-ratio:1;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;"+
+      (hit?"background:#2563eb;color:#fff;":(isToday?"background:#fef9c3;border:2px solid #eab308;color:#854d0e;":"background:#f1f5f9;color:#94a3b8;"));
+    cell.textContent=d.getDate();
+    cell.title=k+(hit?" — gelernt ✓":"");
+    cal.appendChild(cell);
+  }
+  var hint=document.getElementById("st-hint");
+  if(s.streak>0&&!doneToday){var y=ST_daysBetween(s.last,today);hint.textContent=y===1?"Noch heute einchecken — sonst reißt die Kette!":"Achtung: die Kette ist gerissen. Heute neu anfangen!";}
+  else if(doneToday){hint.textContent="Kette intakt. Morgen wieder!";}
+  else{hint.textContent="Fange heute deine Kette an — ein Tag, ein Häkchen.";}
+}
+function ST_doCheckin(){
+  var s=ST_load();
+  var r=ST_checkIn(s,ST_dateKey(new Date()));
+  if(r.gained){ST_save(r.state);ST_render();}
+}
+document.addEventListener("DOMContentLoaded",ST_render);
+
+
+</script>
+</body>
+</html>
