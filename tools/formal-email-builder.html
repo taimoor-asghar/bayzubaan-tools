@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formal Email Builder — German Business Emails | Bayzubaan</title>
+<meta name="description" content="Write a correct formal German email: 10 E-Mail frames (Betreff, Anrede, Bitte, Grußformel), letter builder, 12-round quiz.">
+<link rel="canonical" href="https://bayzubaan.com/tools/formal-email-builder/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Formal Email Builder — German Business Emails">
+<meta property="og:description" content="Formal German email builder: 10 frames, letter composer, and a politeness quiz.">
+<meta property="og:url" content="https://bayzubaan.com/tools/formal-email-builder/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Formal Email Builder — German Business Emails">
+<meta name="twitter:description" content="Formal German email builder: 10 frames, letter composer, and a politeness quiz.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the correct order of a formal German email?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Betreff (subject), Anrede (salutation with comma), Einleitung (reason for writing), Anliegen (the specific matter), Bitte (the polite request), Dank (thanks), Grußformel (sign-off), Signatur (name, position, contact)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I capitalise the first word after the salutation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — the salutation ends with a comma, and the email continues lowercase: Sehr geehrte Frau Schmidt, — ich wende mich an Sie … The salutation is the start of the sentence."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I ask for something politely in a German email?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use double softening: Ich möchte Sie bitten, … (I would like to ask you) or the conditional gratitude formula Ich wäre Ihnen dankbar, wenn Sie … könnten (I would be grateful if you could). Never use wollen or the imperative with a stranger."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mit freundlichen Grüßen or Hochachtungsvoll — which sign-off?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mit freundlichen Grüßen is the neutral standard for all business mail. Hochachtungsvoll is reserved for complaints and the highest formality; for a normal enquiry it sounds archaic."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I mention an attachment in German?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Announce it explicitly: Im Anhang finden Sie meinen Lebenslauf. Note the accusative — meinen Lebenslauf (masculine) is the most common article error in German business emails."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should the Betreff (subject) contain?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The matter in two to five words — Betreff: Terminanfrage — Dr. Müller — plus a reference number for applications (Kennziffer 24/2026) and the date of the earlier mail for replies. Never leave it empty."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>Formal Email Builder: German Business Emails</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">Formal German email builder: 10 frames, letter composer, and a politeness quiz.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+
+<h2>Compose the email: from Betreff to Grußformel</h2>
+<p style="margin-bottom:16px">10 formal-email frames with swappable slots — fill them to compose a complete German business email with its English translation. Add sentences to your email, copy it, then drill with the 12-round quiz.</p>
+<div id="frame-list"></div>
+<h2 style="margin-top:24px">Your email</h2>
+<p style="margin-bottom:12px;color:#64748b">Sentences you add appear here in order. Copy the email and check it against the seven-trap list below.</p>
+<ol id="script-list" style="margin:0 0 12px 22px"></ol>
+<div style="display:flex;gap:10px;flex-wrap:wrap">
+<button type="button" style="background:#2563eb;color:#fff;border:none;border-radius:8px;padding:12px 24px;font-size:1rem;font-weight:700;cursor:pointer" onclick="copyScript()">Copy letter (German)</button>
+<button type="button" style="background:#fff;color:#2563eb;border:2px solid #2563eb;border-radius:8px;padding:12px 24px;font-size:1rem;font-weight:700;cursor:pointer" onclick="clearScript()">Clear</button>
+</div>
+<div id="copy-msg" style="margin-top:8px;color:#065f46;font-weight:600"></div>
+<h2 style="margin-top:28px">Quiz: English → exact German</h2>
+<p style="margin-bottom:16px">12 rounds. Read the English sentence and pick the exact German email wording — distractors are the classic politeness errors.</p>
+<button id="calc-btn" type="button" onclick="startQuiz()">Start 12-round quiz</button>
+<div id="quiz-zone" style="display:none;margin-top:20px">
+<div class="progress"><div id="qbar"></div></div>
+<div class="quiz-meta"><span id="qcount">Round 1/12</span><span id="qscore">Correct: 0 · Missed: 0</span></div>
+<div id="quiz-prompt" style="font-size:.85rem;color:#64748b;margin-bottom:6px"></div>
+<div id="quiz-sentence" style="font-size:1.4rem;font-weight:700;margin-bottom:14px"></div>
+<div id="quiz-options"></div>
+<div id="quiz-feedback"></div>
+<button type="button" id="quiz-next" style="display:none;margin-top:12px" onclick="nextQ()">Next</button>
+<div id="quiz-summary"></div>
+</div>
+
+</div>
+
+<article class="prose">
+
+<h2>The anatomy of a German business email</h2>
+<p>A formal German email follows a fixed skeleton that examiners, employers, and officials all expect: <em>Betreff</em> (subject), <em>Anrede</em> (salutation), <em>Einleitung</em> (opening), <em>Anliegen</em> (the matter itself), <em>Bitte</em> (the request), <em>Dank</em> (thanks), <em>Grußformel</em> (sign-off), <em>Signatur</em> (signature block). This tool gives you ten frames — one per section — that compose into a complete email. Fill the slots, add the sentences to your letter, copy it, and the structure is handled. What the tool cannot do is choose your words: the prose below teaches the register rules behind every slot, so the email sounds written by you, not assembled by a machine.</p>
+<p>The governing principle is <em>Höflichkeit durch Distanz</em> — politeness through distance. German formality is not warmth; it is respectful distance kept through the Sie-form, the Konjunktiv II, and fixed formulas. <em>Ich möchte Sie bitten, …</em> (I would like to ask you) instead of <em>Bitte tun Sie …</em> (Please do …). <em>Ich wäre Ihnen dankbar, wenn Sie … könnten</em> (I would be grateful if you could) instead of <em>Können Sie …?</em> The grammar is doing social work: every Konjunktiv II puts a layer of optionality between you and the reader, which is exactly what a German office expects from a stranger.</p>
+<h2>Betreff and Anrede: the two most-scrutinised lines</h2>
+<p>The <em>Betreff</em> is the email's title and, in German offices, part of the record: <em>Betreff: Terminanfrage — Dr. Müller</em>. State the matter in two to five words, add a reference number for applications (<em>Bewerbung als Assistenzarzt — Kennziffer 24/2026</em>), and for replies reference the earlier mail (<em>Rückfrage zu Ihrer E-Mail vom 12. Oktober</em>). Never leave the subject empty — an empty Betreff reads as either spam or carelessness, and many offices sort mail by it.</p>
+<p>The <em>Anrede</em> decides the grammar of everything after it: <em>Sehr geehrte Frau Schmidt,</em> — with the comma — means the email continues in lowercase (<em>ich wende mich an Sie …</em>), because the salutation is the start of the sentence, not a standalone line. This is the rule most learners miss: a comma after the salutation, then lowercase. Get the endings right — <em>geehrte Frau</em> (feminine accusative), <em>geehrter Herr</em> (masculine nominative-as-address), <em>geehrte Damen und Herren</em> (the safe plural when no name is known). The quiz tests exactly these endings, because a wrong ending in the Anrede is visible before a single content word is read.</p>
+<h2>Einleitung and Anliegen: state who you are, say why you write</h2>
+<p>After the salutation, German emails waste no time: <em>ich wende mich an Sie, mit einer Frage zu Ihrem Angebot.</em> The opening names the reason in one clause — <em>mit einer Frage zu …</em>, <em>in der Angelegenheit meiner Bewerbung</em>, <em>da ich mich für den Kurs anmelden möchte</em>. Introductions follow only if the reader cannot know you: <em>Mein Name ist Anna Schmidt und ich studiere Medizin im vierten Semester.</em> Note the verb-second order in <em>ich studiere Medizin im vierten Semester</em> — the dative <em>im vierten Semester</em> sits after the verb, never before it. A common error is fronting the time phrase and forgetting the inversion (<em>und im vierten Semester studiere ich Medizin</em> — the correct inverted form, if you do front it).</p>
+<p><em>Konkret geht es um …</em> — the Anliegen frame — narrows the general reason to the specific point: <em>die Anmeldefrist bis zum 15. November</em>, <em>die beigefügte Bescheinigung</em>. This sentence is where vagueness dies. A German official reading your email wants the actionable noun in the first paragraph: the deadline, the document, the appointment. Bury it in paragraph three and the reply will ask what you wanted — costing you a week.</p>
+<h2>The Bitte: asking without commanding</h2>
+<p>The request frame carries the heaviest politeness machinery: <em>Ich möchte Sie bitten, mir einen Termin in der kommenden Woche zu geben.</em> Three devices work together. First, <em>möchte</em> — Konjunktiv II of <em>mögen</em>, softening the verb itself. Second, the infinitive-with-zu chain <em>mir … zu geben</em>, which keeps the request grammatical rather than imperative. Third, the dative <em>mir</em> before the accusative object — <em>mir einen Termin geben</em>, never <em>mich einen Termin</em> or the dropped-<em>mir</em> variant. Learners who say <em>Ich will Sie bitten</em> have changed the register entirely: <em>wollen</em> is a demand, <em>möchten</em> a wish, and German offices hear the difference.</p>
+<p>The strongest single formula is the conditional gratitude frame: <em>Ich wäre Ihnen dankbar, wenn Sie mir bis Ende der Woche antworten könnten.</em> The grammar is <em>wäre</em> (Konjunktiv II of <em>sein</em>) plus <em>könnten</em> (Konjunktiv II of <em>können</em>) — double softening, and it sets a deadline without giving an order. Compare it with <em>Antworten Sie mir bitte bis Ende der Woche</em>, which is what a superior writes to a subordinate, not what a stranger writes to an office. The distractor in the quiz that changes <em>könnten</em> to <em>können</em> tests exactly this: one vowel of politeness.</p>
+<h2>Attachments, thanks, and the sign-off</h2>
+<p><em>Im Anhang finden Sie meinen Lebenslauf.</em> German emails announce attachments explicitly — the reader should never have to discover them. Note the accusative <em>meinen Lebenslauf</em> (masculine): the most common article error in the whole email happens right here, in the sentence people write fastest. <em>Vielen Dank im Voraus für Ihre schnelle Rückmeldung</em> — the thanks frame — keeps <em>Vielen Dank</em> plural (<em>viel Dank</em> is a different, thinner phrase) and matches the adjective ending to the feminine noun: <em>Ihre schnelle Rückmeldung</em>.</p>
+<p>The <em>Grußformel</em> has a strict hierarchy: <em>Mit freundlichen Grüßen</em> is the neutral standard for all business; <em>Mit besten Grüßen</em> is slightly warmer but still formal; <em>Hochachtungsvoll</em> is reserved for complaints and the highest formality — using it for a normal enquiry sounds archaic. And never translate English closings literally: there is no German <em>mit lieben Grüßen</em> in business mail. The signature block — name, position, phone, address — sits below the sign-off as plain text; offices print emails, and a signature that only exists as a logo image is lost.</p>
+<h2>Common traps: the seven errors that mark a learner</h2>
+<p>One: capitalising after the salutation's comma — the email must continue lowercase (<em>ich wende mich …</em>, not <em>Ich wende …</em>). Two: <em>du</em> leaking into a formal mail — every pronoun is <em>Sie</em>, every possessive <em>Ihr</em>; the gate below checks the entire composed corpus for leaks. Three: <em>Hi</em> or <em>Hallo</em> as the salutation — <em>Hallo Frau Schmidt</em> is colloquial; in a first contact it reads as disrespectful. Four: ending with <em>LG</em> or <em>VG</em> — abbreviations of the sign-off belong in chats, never in a first formal email. Five: the wrong <em>geehrte/geehrter</em> ending. Six: <em>Ich will</em> instead of <em>Ich möchte</em>. Seven: forgetting the Betreff entirely. Run through this list before sending any real email — and drill the quiz until the distractors, which are all built from these seven errors, stop fooling you.</p>
+<h2>How to drill: build and send</h2>
+<p>Compose a real email with the tool: pick a purpose — a term request, an enquiry, a thank-you — fill all ten frames, add them to the letter, and copy it. Read it aloud: the Sie-register should feel consistent from <em>Betreff</em> to <em>Grußformel</em>, with no du-form anywhere and the Konjunktiv II in every request. Then change every slot and build a second email of a different type. Finally take the 12-round quiz: each prompt is English, each correct answer the exact German sentence, and every distractor is one of the seven classic errors above. When you can score 12/12 without hesitation, your formal email German is office-ready.</p>
+
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>What is the correct order of a formal German email?</h3><p>Betreff (subject), Anrede (salutation with comma), Einleitung (reason for writing), Anliegen (the specific matter), Bitte (the polite request), Dank (thanks), Grußformel (sign-off), Signatur (name, position, contact).</p></div><div class="faq-item"><h3>Do I capitalise the first word after the salutation?</h3><p>No — the salutation ends with a comma, and the email continues lowercase: Sehr geehrte Frau Schmidt, — ich wende mich an Sie … The salutation is the start of the sentence.</p></div><div class="faq-item"><h3>How do I ask for something politely in a German email?</h3><p>Use double softening: Ich möchte Sie bitten, … (I would like to ask you) or the conditional gratitude formula Ich wäre Ihnen dankbar, wenn Sie … könnten (I would be grateful if you could). Never use wollen or the imperative with a stranger.</p></div><div class="faq-item"><h3>Mit freundlichen Grüßen or Hochachtungsvoll — which sign-off?</h3><p>Mit freundlichen Grüßen is the neutral standard for all business mail. Hochachtungsvoll is reserved for complaints and the highest formality; for a normal enquiry it sounds archaic.</p></div><div class="faq-item"><h3>How do I mention an attachment in German?</h3><p>Announce it explicitly: Im Anhang finden Sie meinen Lebenslauf. Note the accusative — meinen Lebenslauf (masculine) is the most common article error in German business emails.</p></div><div class="faq-item"><h3>What should the Betreff (subject) contain?</h3><p>The matter in two to five words — Betreff: Terminanfrage — Dr. Müller — plus a reference number for applications (Kennziffer 24/2026) and the date of the earlier mail for replies. Never leave it empty.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+var FRAMES = [{"de": "Betreff: {subject}", "en": "Subject: {subject}", "slots": {"subject": [{"de": "Terminanfrage — Dr. Müller", "en": "Request for appointment — Dr. Müller"}, {"de": "Bewerbung als Assistenzarzt — Kennziffer 24/2026", "en": "Application for junior doctor post — ref 24/2026"}, {"de": "Rückfrage zu Ihrer E-Mail vom 12. Oktober", "en": "Question about your email of 12 October"}, {"de": "Anfrage bezüglich des Kurses B2 Medizin", "en": "Enquiry regarding the B2 Medicine course"}]}}, {"de": "Sehr {salut},", "en": "Dear {salut},", "slots": {"salut": [{"de": "geehrte Frau Schmidt", "en": "Mrs Schmidt"}, {"de": "geehrter Herr Weber", "en": "Mr Weber"}, {"de": "geehrte Damen und Herren", "en": "Ladies and Gentlemen"}, {"de": "geehrte Frau Dr. Hoffmann", "en": "Dr Hoffmann"}]}}, {"de": "ich wende mich an Sie, {reason}.", "en": "I am writing to you {reason}.", "slots": {"reason": [{"de": "mit einer Frage zu Ihrem Angebot", "en": "with a question about your offer"}, {"de": "in der Angelegenheit meiner Bewerbung", "en": "regarding my application"}, {"de": "da ich mich für den Kurs anmelden möchte", "en": "as I would like to register for the course"}, {"de": "um mich für das Gespräch zu bedanken", "en": "to thank you for the interview"}]}}, {"de": "Mein Name ist {name} und ich {role}.", "en": "My name is {name} and I {role}.", "slots": {"name": [{"de": "Anna Schmidt", "en": "Anna Schmidt"}, {"de": "David Weber", "en": "David Weber"}], "role": [{"de": "studiere Medizin im vierten Semester", "en": "am studying medicine in my fourth semester"}, {"de": "arbeite als Assistenzarzt in der Inneren Medizin", "en": "work as a junior doctor in internal medicine"}, {"de": "interessiere mich für die ausgeschriebene Stelle", "en": "am interested in the advertised position"}]}}, {"de": "Ich möchte Sie bitten, {ask}.", "en": "I would like to ask you {ask}.", "slots": {"ask": [{"de": "mir einen Termin in der kommenden Woche zu geben", "en": "to give me an appointment next week"}, {"de": "mir die Unterlagen per E-Mail zuzusenden", "en": "to send me the documents by email"}, {"de": "meine Bewerbung zu prüfen", "en": "to consider my application"}, {"de": "mir den Ansprechpartner zu nennen", "en": "to tell me the person to contact"}]}}, {"de": "Konkret geht es um {detail}.", "en": "Specifically, it concerns {detail}.", "slots": {"detail": [{"de": "die Terminvergabe am Nachmittag", "en": "appointments in the afternoon"}, {"de": "die Anmeldefrist bis zum 15. November", "en": "the registration deadline of 15 November"}, {"de": "die beigefügte Bescheinigung", "en": "the attached certificate"}, {"de": "die Überweisung der Gebühren", "en": "the transfer of the fees"}]}}, {"de": "Im Anhang finden Sie {attach}.", "en": "Attached you will find {attach}.", "slots": {"attach": [{"de": "meinen Lebenslauf", "en": "my CV"}, {"de": "das ausgefüllte Formular", "en": "the completed form"}, {"de": "die Kopie meines Reisepasses", "en": "the copy of my passport"}, {"de": "mein Motivationsschreiben", "en": "my cover letter"}]}}, {"de": "Ich wäre Ihnen dankbar, wenn Sie {reply}.", "en": "I would be grateful if you {reply}.", "slots": {"reply": [{"de": "mir bis Ende der Woche antworten könnten", "en": "could reply by the end of the week"}, {"de": "mich telefonisch kontaktieren könnten", "en": "could contact me by phone"}, {"de": "mir einen alternativen Termin vorschlagen könnten", "en": "could suggest an alternative date"}, {"de": "meine Anfrage an die zuständige Stelle weiterleiten könnten", "en": "could forward my request to the responsible office"}]}}, {"de": "Vielen Dank im Voraus für {thanks}.", "en": "Thank you in advance for {thanks}.", "slots": {"thanks": [{"de": "Ihre Mühe", "en": "your trouble"}, {"de": "Ihre schnelle Rückmeldung", "en": "your quick reply"}, {"de": "Ihre Unterstützung", "en": "your support"}, {"de": "die Prüfung meiner Unterlagen", "en": "reviewing my documents"}]}}, {"de": "{closing}", "en": "{closing}", "slots": {"closing": [{"de": "Mit freundlichen Grüßen", "en": "Kind regards"}, {"de": "Mit besten Grüßen", "en": "Best regards"}, {"de": "Hochachtungsvoll", "en": "Yours faithfully"}]}}];
+var script = [];
+function composeDe(f, picks){ var s = f.de; for(var k in picks){ s = s.split("{"+k+"}").join(picks[k].de); } return s; }
+function composeEn(f, picks){ var s = f.en; for(var k in picks){ s = s.split("{"+k+"}").join(picks[k].en); } return s; }
+function renderFrames(){
+  var box = document.getElementById("frame-list"); box.innerHTML = "";
+  FRAMES.forEach(function(f){
+    var d = document.createElement("div");
+    d.style.cssText = "background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px";
+    var head = document.createElement("div");
+    head.style.cssText = "font-size:1.1rem;font-weight:700;color:#0f172a;margin-bottom:10px";
+    head.textContent = f.de.replace(/\{(\w+)\}/g, "[___]");
+    d.appendChild(head);
+    var picks = {};
+    Object.keys(f.slots).forEach(function(sn){
+      picks[sn] = f.slots[sn][0];
+      var lab = document.createElement("label");
+      lab.style.cssText = "display:block;font-size:.85rem;font-weight:600;color:#475569;margin:8px 0 4px";
+      lab.textContent = sn;
+      var sel = document.createElement("select");
+      sel.style.cssText = "width:100%;padding:10px 12px;border:2px solid #e2e8f0;border-radius:8px;font-size:1rem;font-family:inherit;background:#fff";
+      sel.setAttribute("aria-label", sn);
+      f.slots[sn].forEach(function(opt){
+        var o = document.createElement("option");
+        o.value = opt.de; o.textContent = opt.de + "  (" + opt.en + ")";
+        sel.appendChild(o);
+      });
+      sel.addEventListener("change", function(){
+        var found = f.slots[sn].filter(function(o){ return o.de === sel.value; })[0];
+        picks[sn] = found;
+        preview.textContent = composeDe(f, picks);
+        prevEn.textContent = composeEn(f, picks);
+      });
+      d.appendChild(lab); d.appendChild(sel);
+    });
+    var preview = document.createElement("div");
+    preview.style.cssText = "margin-top:12px;font-size:1.15rem;font-weight:700;color:#1d4ed8";
+    var prevEn = document.createElement("div");
+    prevEn.style.cssText = "color:#475569;margin-top:2px";
+    preview.textContent = composeDe(f, picks);
+    prevEn.textContent = composeEn(f, picks);
+    d.appendChild(preview); d.appendChild(prevEn);
+    var b = document.createElement("button");
+    b.type = "button"; b.textContent = "+ Letter";
+    b.style.cssText = "margin-top:10px;background:#eff6ff;border:1px solid #2563eb;color:#1d4ed8;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit";
+    b.addEventListener("click", function(){ addToScript(composeDe(f, picks)); });
+    d.appendChild(b);
+    box.appendChild(d);
+  });
+}
+function addToScript(de){ script.push(de); renderScript(); }
+function removeFromScript(i){ script.splice(i, 1); renderScript(); }
+function renderScript(){
+  var ol = document.getElementById("script-list"); ol.innerHTML = "";
+  script.forEach(function(de, i){
+    var li = document.createElement("li"); li.style.marginBottom = "6px";
+    var s = document.createElement("span"); s.textContent = de + " ";
+    var b = document.createElement("button");
+    b.type = "button"; b.textContent = "\u2715"; b.setAttribute("aria-label", "Remove sentence");
+    b.style.cssText = "background:none;border:none;color:#ef4444;cursor:pointer;font-size:1rem";
+    b.addEventListener("click", function(){ removeFromScript(i); });
+    li.appendChild(s); li.appendChild(b); ol.appendChild(li);
+  });
+}
+function clearScript(){ script = []; renderScript(); document.getElementById("copy-msg").textContent = ""; }
+function copyScript(){
+  var txt = script.join("\n");
+  var msg = document.getElementById("copy-msg");
+  if(!txt){ msg.textContent = "Add some sentences first."; return; }
+  function done(){ msg.textContent = "Copied " + script.length + " sentences!"; }
+  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(done, function(){ fallback(); }); }
+  else { fallback(); }
+  function fallback(){
+    var ta = document.createElement("textarea"); ta.value = txt;
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); } catch(e){}
+    document.body.removeChild(ta); done();
+  }
+}
+var QUIZ = [{"p": "Subject: Request for appointment — Dr. Müller", "a": "Betreff: Terminanfrage — Dr. Müller", "d": ["Betreff: Terminvereinbarung — Dr. Müller", "Betreff: Terminanfrage — Dr. Weber", "Betreff: Anfrage zum Termin — Dr. Müller"]}, {"p": "Dear Ladies and Gentlemen,", "a": "Sehr geehrte Damen und Herren,", "d": ["Sehr geehrten Damen und Herren,", "Sehr geehrte Damen und Herren.", "Sehr liebe Damen und Herren,"]}, {"p": "I am writing to you with a question about your offer.", "a": "ich wende mich an Sie, mit einer Frage zu Ihrem Angebot.", "d": ["ich wende mich an Sie, mit einem Frage zu Ihrem Angebot.", "ich wende mich an Sie, mit einer Frage über Ihrem Angebot.", "ich wende mich zu Sie, mit einer Frage zu Ihrem Angebot."]}, {"p": "My name is Anna Schmidt and I am studying medicine in my fourth semester.", "a": "Mein Name ist Anna Schmidt und ich studiere Medizin im vierten Semester.", "d": ["Mein Name ist Anna Schmidt und ich studiere Medizin im viertem Semester.", "Mein Name ist Anna Schmidt und ich studiert Medizin im vierten Semester.", "Mein Name ist Anna Schmidt und ich studieren Medizin im vierten Semester."]}, {"p": "I would like to ask you to give me an appointment next week.", "a": "Ich möchte Sie bitten, mir einen Termin in der kommenden Woche zu geben.", "d": ["Ich möchte Sie bitten, mir einen Termin in der kommende Woche zu geben.", "Ich möchte Sie bitten, mich einen Termin in der kommenden Woche zu geben.", "Ich will Sie bitten, mir einen Termin in der kommenden Woche zu geben."]}, {"p": "Specifically, it concerns the registration deadline of 15 November.", "a": "Konkret geht es um die Anmeldefrist bis zum 15. November.", "d": ["Konkret geht es um der Anmeldefrist bis zum 15. November.", "Konkret geht es an die Anmeldefrist bis zum 15. November.", "Konkret geht es um die Anmeldefrist bis zum 15. Dezember."]}, {"p": "Attached you will find my CV.", "a": "Im Anhang finden Sie meinen Lebenslauf.", "d": ["Im Anhang finden Sie meinem Lebenslauf.", "Im Anhang finden Sie meine Lebenslauf.", "Im Anhang findet Sie meinen Lebenslauf."]}, {"p": "I would be grateful if you could reply by the end of the week.", "a": "Ich wäre Ihnen dankbar, wenn Sie mir bis Ende der Woche antworten könnten.", "d": ["Ich wäre Ihnen dankbar, wenn Sie mir bis Ende der Woche antworten können.", "Ich wäre Ihnen dankbar, wenn Sie mir bis Ende der Woche antworten könnte.", "Ich bin Ihnen dankbar, wenn Sie mir bis Ende der Woche antworten könnten."]}, {"p": "Thank you in advance for your quick reply.", "a": "Vielen Dank im Voraus für Ihre schnelle Rückmeldung.", "d": ["Vielen Dank im Voraus für Ihre schnellen Rückmeldung.", "Viel Dank im Voraus für Ihre schnelle Rückmeldung.", "Vielen Dank im Voraus für Ihrem schnelle Rückmeldung."]}, {"p": "Kind regards", "a": "Mit freundlichen Grüßen", "d": ["Mit freundlichem Grüßen", "Mit freundlichen Grüße", "Mit freundlichen Grussen"]}, {"p": "Dear Mr Weber,", "a": "Sehr geehrter Herr Weber,", "d": ["Sehr geehrte Herr Weber,", "Sehr geehrten Herr Weber,", "Sehr geehrter Herrn Weber,"]}, {"p": "Dear Dr Hoffmann,", "a": "Sehr geehrte Frau Dr. Hoffmann,", "d": ["Sehr geehrter Frau Dr. Hoffmann,", "Sehr geehrte Frau Dr. Hoffman,", "Sehr geehrte Frau Dr. Hoffmann."]}];
+var ROUNDS = 12, pool = [], qi = 0, correctN = 0, missedN = 0, missedList = [], qa = null;
+function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
+function startQuiz(){
+  pool = shuffle(QUIZ.slice()); qi = 0; correctN = 0; missedN = 0; missedList = [];
+  document.getElementById("quiz-zone").style.display = "block";
+  document.getElementById("quiz-summary").innerHTML = "";
+  document.getElementById("calc-btn").style.display = "none";
+  showQ();
+}
+function showQ(){
+  qa = pool[qi % pool.length];
+  var opts = shuffle([qa.a].concat(qa.d));
+  document.getElementById("quiz-prompt").textContent = "Which is the exact German sentence?";
+  document.getElementById("quiz-sentence").textContent = qa.p;
+  document.getElementById("qcount").textContent = "Round " + (qi+1) + "/" + ROUNDS;
+  document.getElementById("qbar").style.width = (qi/ROUNDS*100) + "%";
+  var box = document.getElementById("quiz-options"); box.innerHTML = "";
+  var fb = document.getElementById("quiz-feedback"); fb.className = ""; fb.style.display = "none";
+  document.getElementById("quiz-next").style.display = "none";
+  opts.forEach(function(opt){
+    var b = document.createElement("button");
+    b.className = "quiz-btn"; b.textContent = opt;
+    b.addEventListener("click", function(){ answer(opt, b); });
+    box.appendChild(b);
+  });
+}
+function answer(opt, btn){
+  var fb = document.getElementById("quiz-feedback");
+  var btns = document.querySelectorAll("#quiz-options .quiz-btn");
+  btns.forEach(function(x){ x.disabled = true; if(x.textContent === qa.a) x.classList.add("correct"); });
+  if(opt === qa.a){ correctN++; fb.className = "ok"; fb.textContent = "\u2713 Correct!"; }
+  else { missedN++; missedList.push(qa); fb.className = "no"; btn.classList.add("wrong");
+    fb.textContent = "\u2717 The sentence is: \u201c" + qa.a + "\u201d."; }
+  document.getElementById("qscore").textContent = "Correct: " + correctN + " \u00b7 Missed: " + missedN;
+  var nb = document.getElementById("quiz-next");
+  nb.style.display = "block";
+  nb.textContent = (qi + 1 < ROUNDS) ? "Next" : "See results";
+}
+function nextQ(){
+  qi++;
+  if(qi < ROUNDS) showQ();
+  else {
+    document.getElementById("quiz-prompt").textContent = "";
+    document.getElementById("quiz-sentence").textContent = "";
+    document.getElementById("quiz-options").innerHTML = "";
+    document.getElementById("quiz-feedback").style.display = "none";
+    document.getElementById("quiz-next").style.display = "none";
+    document.getElementById("qbar").style.width = "100%";
+    var uniq = {}; missedList.forEach(function(m){ uniq[m.a] = m; });
+    var missArr = Object.keys(uniq).map(function(k){ return uniq[k]; });
+    var msg = "<strong>" + correctN + " / " + ROUNDS + " correct.</strong> ";
+    if(missArr.length === 0) msg += "Formal email German mastered.";
+    else {
+      msg += "Review these " + missArr.length + ":<ul style='margin:8px 0 0 18px'>";
+      missArr.forEach(function(m){ msg += "<li><strong>" + m.a + "</strong> <span style='color:#64748b'>(" + m.p + ")</span></li>"; });
+      msg += "</ul>";
+    }
+    document.getElementById("quiz-summary").innerHTML = '<div class="note">' + msg + "</div>";
+    document.getElementById("calc-btn").style.display = "block";
+    document.getElementById("calc-btn").textContent = "Play again";
+  }
+}
+renderFrames();
+
+
+</script>
+</body>
+</html>
