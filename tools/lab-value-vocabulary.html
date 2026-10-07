@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab Value Vocabulary — German Blutwerte Explained | Bayzubaan</title>
+<meta name="description" content="40 German lab values with reference-range examples: blood count, liver, kidney, electrolytes, metabolic, clotting — browser + 15-round quiz.">
+<link rel="canonical" href="https://bayzubaan.com/tools/lab-value-vocabulary/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lab Value Vocabulary — German Blutwerte Explained">
+<meta property="og:description" content="Blutwerte in German: 40 lab values with real reference-range sentences and a mixed-direction quiz.">
+<meta property="og:url" content="https://bayzubaan.com/tools/lab-value-vocabulary/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lab Value Vocabulary — German Blutwerte Explained">
+<meta name="twitter:description" content="Blutwerte in German: 40 lab values with real reference-range sentences and a mixed-direction quiz.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I report a lab value in German?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use one of three skeletons: Das Kreatinin liegt bei 1,4 mg/dl / Die GFR beträgt 55 ml/min / Das Kalium ist erhöht. Then add the judgment: im Referenzbereich, leicht erhöht, deutlich erhöht, erniedrigt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between ALT and GPT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "None — they are the same enzyme. German labs use both names; say das ALT (GPT) the first time so nobody doubts you. Same for AST (GOT)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I say a value is in the normal range?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Im Referenzbereich or in der Norm. For deviations, calibrate with leicht (slightly) or deutlich (clearly): Das CRP ist deutlich erhöht."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which lab interpretation do examiners probe most?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The low-TSH trap (low TSH means suspected hyperthyroidism, not hypo-), the HbA1c vs. Blutzucker distinction, and reading the GFR as a kidney-failure stage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does 'im therapeutischen Bereich' mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the therapeutic range — the standard verdict for an INR under anticoagulation: Der INR liegt bei 2,5 — im therapeutischen Bereich."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do Germans say 'under heparin'?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unter Heparin — the fixed preposition for being on a medication: Die aPTT ist unter Heparin verlängert. Same with unter Marcumar."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.quiz-btn{display:block;width:100%;text-align:left;background:#f8fafc;border:2px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px;font-size:1.05rem;cursor:pointer;font-family:inherit;color:#1e293b}
+.quiz-btn:hover{border-color:#2563eb}
+.quiz-btn.correct{background:#dcfce7;border-color:#10b981;color:#065f46}
+.quiz-btn.wrong{background:#fee2e2;border-color:#ef4444;color:#991b1b}
+.quiz-btn:disabled{cursor:default;opacity:.95}
+.progress{height:10px;background:#e2e8f0;border-radius:999px;margin-bottom:18px;overflow:hidden}
+.progress>div{height:100%;background:#2563eb;width:0;transition:width .3s}
+.quiz-meta{display:flex;justify-content:space-between;color:#64748b;font-size:.9rem;margin-bottom:14px}
+#quiz-feedback{margin-top:14px;padding:12px 16px;border-radius:8px;display:none}
+#quiz-feedback.ok{display:block;background:#dcfce7;color:#065f46}
+#quiz-feedback.no{display:block;background:#fee2e2;color:#991b1b}
+.answer-inputs .field input.correct{border-color:#10b981;background:#f0fdf4}
+.answer-inputs .field input.wrong{border-color:#ef4444;background:#fef2f2}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>Lab Value Vocabulary: German Blutwerte Explained</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Linguistically reviewed · Reviewed 2026-10-07</p>
+<p class="lead">Blutwerte in German: 40 lab values with real reference-range sentences and a mixed-direction quiz.</p>
+</header>
+
+<div class="calc-card">
+<h2>Try the tool</h2>
+
+<h2>Lab values: browse & drill</h2>
+<p style="margin-bottom:16px">40 lab values (Blutwerte) in six groups — blood count, liver, kidney, electrolytes, metabolic, clotting. <strong>Browse</strong> by category, search, study the reference-range examples, then run the 15-round quiz.</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px"><button type="button" class="tab" onclick="setCat(0)">Alle</button><button type="button" class="tab" onclick="setCat(1)">Blutbild</button><button type="button" class="tab" onclick="setCat(2)">Leberwerte</button><button type="button" class="tab" onclick="setCat(3)">Nierenwerte</button><button type="button" class="tab" onclick="setCat(4)">Elektrolyte</button><button type="button" class="tab" onclick="setCat(5)">Stoffwechsel</button><button type="button" class="tab" onclick="setCat(6)">Gerinnung</button></div>
+<div class="field" style="margin-bottom:12px"><input id="vsearch" type="text" placeholder="Search German or English…" aria-label="Search lab vocabulary" oninput="renderList()"></div>
+<div id="vlist"></div>
+<h2 style="margin-top:28px">Quiz: 15 mixed rounds</h2>
+<p style="margin-bottom:16px">Direction switches randomly: German→English or English→German.</p>
+<button id="calc-btn" type="button" onclick="startQuiz()">Start 15-round quiz</button>
+<div id="quiz-zone" style="display:none;margin-top:20px">
+<div class="progress"><div id="qbar"></div></div>
+<div class="quiz-meta"><span id="qcount">Round 1/15</span><span id="qscore">Correct: 0 · Missed: 0</span></div>
+<div id="quiz-sentence" style="font-size:1.4rem;font-weight:700;margin-bottom:14px"></div>
+<div id="quiz-options"></div>
+<div id="quiz-feedback"></div>
+<button type="button" id="quiz-next" style="display:none;margin-top:12px" onclick="nextQ()">Next</button>
+<div id="quiz-summary"></div>
+</div>
+
+</div>
+
+<article class="prose">
+
+<h2>Why lab values are Fachsprachenprüfung gold</h2>
+<p>Few things separate a convincing Arzt-Arzt-Gespräch from a shaky one like lab values. The examiners hand you blood results and expect you to present them — <em>Das Kreatinin liegt bei 1,4 mg/dl, leicht erhöht; die GFR beträgt 55 ml/min</em> — with the right German term, the right article, and a clinical interpretation in the same breath. Textbook German teaches you <em>der Arzt</em>; the exam tests whether you can say <em>die Thrombozyten liegen bei 220.000 pro Mikroliter</em> without hesitating. This tool gives you the 40 values that appear most often, organised the way a Befund is organised, each with a real reference-range sentence you can steal for your presentations.</p>
+<p>The six groups mirror the panels on a German lab slip: Blutbild (blood count), Leberwerte (liver), Nierenwerte (kidney), Elektrolyte (electrolytes), Stoffwechsel (metabolic), and Gerinnung (clotting). Learn them group by group — your brain stores words best in the context where they occur, and a German lab report is exactly the context where these words live. Every card carries the article: drill them as <em>das-Kreatinin</em> single units, never the bare noun.</p>
+<h2>Das Blutbild: the opening of every lab presentation</h2>
+<p>The blood count opens almost every case presentation, so these seven are your bread and butter: <em>das Hämoglobin (Hb)</em>, <em>der Hämatokrit</em>, <em>die roten Blutkörperchen (Erythrozyten)</em>, <em>die weißen Blutkörperchen (Leukozyten)</em>, <em>die Thrombozyten</em>, <em>das MCV</em>, and <em>die Blutsenkung (BSG)</em>. Learn the three reporting verbs: <em>liegt bei</em> (is at), <em>beträgt</em> (amounts to), and <em>ist erhöht / erniedrigt</em> (is raised / lowered). <em>Das Hämoglobin liegt bei 14,2 g/dl — im Referenzbereich.</em> Three clauses, and you have reported one value completely: the number, the unit, the judgment. Repeat that skeleton for every value and the examiner hears a doctor, not a student.</p>
+<p>Note the clinical reading each example carries, because examiners reward interpretation, not recitation: elevated <em>Leukozyten</em> → infection (<em>Hinweis auf eine Infektion</em>); low red cells → anaemia (<em>Verdacht auf Blutarmut</em>); raised <em>MCV</em> → macrocytosis (<em>die roten Blutkörperchen sind zu groß</em>). The pattern <em>X ist erhöht — Hinweis auf Y</em> is the single most useful sentence template in the whole tool.</p>
+<h2>Leber- und Nierenwerte: the organ panels</h2>
+<p>Liver values: <em>das Bilirubin</em>, <em>das ALT (GPT)</em>, <em>das AST (GOT)</em>, <em>die Gamma-GT</em>, <em>die alkalische Phosphatase (AP)</em>, <em>das Albumin</em>. Two notes for the exam. First, German labs use both names — <em>ALT</em> and <em>GPT</em> are the same enzyme; say both the first time (<em>das ALT (GPT)</em>) so nobody doubts you. Second, the Gamma-GT reading: <em>Hinweis auf Gallenstau oder Alkohol</em> — this is the value examiners probe when a case smells of liver, and the one you must interpret, not just name. Low <em>Albumin</em> means synthetic failure (<em>Hinweis auf Leberschwäche</em>), the liver panel's real red flag.</p>
+<p>Kidney values: <em>das Kreatinin</em>, <em>der Harnstoff</em>, <em>die GFR</em>, <em>das Cystatin C</em>. The modern presentation leads with the GFR, not the creatinine: <em>Die GFR beträgt 55 ml/min — Stadium 3 der Niereninsuffizienz.</em> Knowing the staging sentence turns a number into a diagnosis. <em>Das Cystatin C ist ein empfindlicher Nierenmarker</em> — drop this in an Arzt-Arzt-Gespräch and you sound like someone who reads current guidelines.</p>
+<h2>Elektrolyte: where precision is safety</h2>
+<p>Electrolytes are the values where wrong German becomes dangerous German, so learn them cold: <em>das Natrium</em>, <em>das Kalium</em>, <em>das Kalzium</em>, <em>das Magnesium</em>, <em>das Phosphat</em>. The critical sentence is the potassium one: <em>Das Kalium ist mit 5,8 mmol/l zu hoch — EKG-Kontrolle!</em> Note the construction <em>ist mit X zu hoch</em> — value first, judgment second, action third. That is the rhythm of ward German: number, verdict, consequence. <em>Magnesium wird bei Herzrhythmusstörungen substituiert</em> — <em>substituieren</em> is the ward verb for replacing an electrolyte; <em>geben</em> works, but <em>substituieren</em> marks you as an insider.</p>
+<h2>Stoffwechsel und Entzündung: the metabolic story</h2>
+<p>The metabolic group is the longest because it is the most conversational — these are the values you explain to patients, not just colleagues: <em>der Blutzucker</em>, <em>der HbA1c</em>, <em>das Cholesterin</em>, <em>das LDL-Cholesterin</em>, <em>das HDL-Cholesterin</em>, <em>die Triglyceride</em>, <em>das CRP</em>, <em>das TSH</em>, <em>das Vitamin D</em>, <em>das Eisen</em>, <em>das Ferritin</em>, <em>die Harnsäure</em>, <em>der PSA-Wert</em>. Two patient-explanation patterns to master. First, the good/bad framing: <em>HDL ist das „gute“ Cholesterin — je höher, desto besser.</em> The <em>je … desto</em> construction is pure B2 grammar doing real clinical work. Second, the consequence sentence: <em>Die Triglyceride sind erhöht — weniger Alkohol und Zucker.</em> Value, verdict, advice — the patient hears what to do, not just what is wrong.</p>
+<p>Three interpretation pairs examiners love: <em>Blutzucker</em> and <em>HbA1c</em> (moment vs. three-month average — <em>der Zucker war zu hoch eingestellt</em>), <em>Eisen</em> and <em>Ferritin</em> (level vs. stores — <em>bitte Ferritin mitbestimmen</em>), <em>TSH</em> direction (low TSH → <em>Verdacht auf Überfunktion</em> — the inverse catches everyone the first time). And <em>das CRP ist mit 45 mg/l deutlich erhöht</em> — <em>deutlich</em> (clearly) calibrates the severity in one adverb; <em>leicht</em> and <em>deutlich</em> are the two adverbs that do most of the interpretive work in German lab presentations.</p>
+<h2>Gerinnung: the clotting five</h2>
+<p><em>Der INR-Wert</em>, <em>der Quick-Wert</em>, <em>die aPTT</em>, <em>das D-Dimer</em>, <em>das Fibrinogen</em>. The INR sentence every anticoagulated patient needs: <em>Der INR liegt bei 2,5 — im therapeutischen Bereich.</em> <em>Im therapeutischen Bereich</em> (in the therapeutic range) is the phrase that closes the question "is it right?" — learn it as a unit. The D-Dimer logic is the classic rule-out: <em>Das D-Dimer ist negativ — Thrombose unwahrscheinlich.</em> And <em>die aPTT ist unter Heparin verlängert</em> — note <em>unter</em> with medication: <em>unter Heparin</em>, <em>unter Marcumar</em>. That preposition is small, fixed, and examined.</p>
+<h2>How to drill: from cards to case presentation</h2>
+<p>Browse each group and read the example sentences aloud — they are built from the three reporting skeletons (<em>liegt bei / beträgt / ist erhöht–erniedrigt</em>) plus a judgment clause, and every one is stealable. Use the search as a self-test: type the English, cover the German, say it aloud. Then run the quiz: it flips direction, testing recognition (German→English) and production (English→German) — production is the harder skill and the one the examiners hear.</p>
+<p>Final drill for FSP candidates: pick any five values and present them as a mini-Befund, out loud, with interpretation — <em>Das Hämoglobin liegt bei 14,2 im Referenzbereich, die Leukozyten sind erhöht — Hinweis auf eine Infektion, das Kreatinin liegt bei 1,4, leicht erhöht, die GFR beträgt 55 — Stadium 3.</em> When you can chain five values into one flowing paragraph, the lab section of your Arzt-Arzt-Gespräch is done.</p>
+
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>How do I report a lab value in German?</h3><p>Use one of three skeletons: Das Kreatinin liegt bei 1,4 mg/dl / Die GFR beträgt 55 ml/min / Das Kalium ist erhöht. Then add the judgment: im Referenzbereich, leicht erhöht, deutlich erhöht, erniedrigt.</p></div><div class="faq-item"><h3>What is the difference between ALT and GPT?</h3><p>None — they are the same enzyme. German labs use both names; say das ALT (GPT) the first time so nobody doubts you. Same for AST (GOT).</p></div><div class="faq-item"><h3>How do I say a value is in the normal range?</h3><p>Im Referenzbereich or in der Norm. For deviations, calibrate with leicht (slightly) or deutlich (clearly): Das CRP ist deutlich erhöht.</p></div><div class="faq-item"><h3>Which lab interpretation do examiners probe most?</h3><p>The low-TSH trap (low TSH means suspected hyperthyroidism, not hypo-), the HbA1c vs. Blutzucker distinction, and reading the GFR as a kidney-failure stage.</p></div><div class="faq-item"><h3>What does &#x27;im therapeutischen Bereich&#x27; mean?</h3><p>In the therapeutic range — the standard verdict for an INR under anticoagulation: Der INR liegt bei 2,5 — im therapeutischen Bereich.</p></div><div class="faq-item"><h3>How do Germans say &#x27;under heparin&#x27;?</h3><p>Unter Heparin — the fixed preposition for being on a medication: Die aPTT ist unter Heparin verlängert. Same with unter Marcumar.</p></div>
+</section>
+
+<footer class="credit">
+Built for learners · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-07 · Part of the <a href="https://bayzubaan.com/tools/">Bayzubaan German tools</a> series
+</footer>
+</div>
+
+<script>
+
+var ENTRIES = [{"cat": "Blutbild", "de": "das Hämoglobin (Hb)", "en": "haemoglobin", "ex": "Das Hämoglobin liegt bei 14,2 g/dl — im Referenzbereich.", "exen": "Haemoglobin is 14.2 g/dl — within the reference range."}, {"cat": "Blutbild", "de": "der Hämatokrit", "en": "haematocrit", "ex": "Der Hämatokrit beträgt 42 Prozent.", "exen": "The haematocrit is 42 percent."}, {"cat": "Blutbild", "de": "die roten Blutkörperchen (Erythrozyten)", "en": "red blood cells (erythrocytes)", "ex": "Die roten Blutkörperchen sind erniedrigt — Verdacht auf Blutarmut.", "exen": "Red blood cells are low — suspected anaemia."}, {"cat": "Blutbild", "de": "die weißen Blutkörperchen (Leukozyten)", "en": "white blood cells (leukocytes)", "ex": "Die weißen Blutkörperchen sind erhöht — Hinweis auf eine Infektion.", "exen": "White blood cells are elevated — a sign of infection."}, {"cat": "Blutbild", "de": "die Thrombozyten", "en": "platelets", "ex": "Die Thrombozyten liegen bei 220.000 pro Mikroliter.", "exen": "Platelets are at 220,000 per microlitre."}, {"cat": "Blutbild", "de": "das MCV", "en": "mean corpuscular volume (MCV)", "ex": "Das MCV ist erhöht — die roten Blutkörperchen sind zu groß.", "exen": "The MCV is raised — the red blood cells are too large."}, {"cat": "Blutbild", "de": "die Blutsenkung (BSG)", "en": "erythrocyte sedimentation rate (ESR)", "ex": "Die Blutsenkung ist mit 28 mm/h leicht beschleunigt.", "exen": "The ESR is slightly raised at 28 mm/h."}, {"cat": "Leberwerte", "de": "das Bilirubin", "en": "bilirubin", "ex": "Das Bilirubin ist erhöht — der Patient ist gelb (ikterisch).", "exen": "Bilirubin is elevated — the patient is jaundiced."}, {"cat": "Leberwerte", "de": "das ALT (GPT)", "en": "ALT (alanine aminotransferase)", "ex": "Das ALT liegt bei 120 U/l — deutlich über der Norm.", "exen": "ALT is at 120 U/l — well above normal."}, {"cat": "Leberwerte", "de": "das AST (GOT)", "en": "AST (aspartate aminotransferase)", "ex": "AST und ALT sind beide erhöht.", "exen": "AST and ALT are both elevated."}, {"cat": "Leberwerte", "de": "die Gamma-GT", "en": "gamma-GT", "ex": "Die Gamma-GT ist erhöht — Hinweis auf Gallenstau oder Alkohol.", "exen": "Gamma-GT is raised — a sign of bile stasis or alcohol use."}, {"cat": "Leberwerte", "de": "die alkalische Phosphatase (AP)", "en": "alkaline phosphatase", "ex": "Die alkalische Phosphatase steigt bei Gallengangsverschluss.", "exen": "Alkaline phosphatase rises with bile duct obstruction."}, {"cat": "Leberwerte", "de": "das Albumin", "en": "albumin", "ex": "Das Albumin ist erniedrigt — Hinweis auf Leberschwäche.", "exen": "Albumin is low — a sign of liver insufficiency."}, {"cat": "Nierenwerte", "de": "das Kreatinin", "en": "creatinine", "ex": "Das Kreatinin liegt bei 1,4 mg/dl — leicht erhöht.", "exen": "Creatinine is at 1.4 mg/dl — slightly elevated."}, {"cat": "Nierenwerte", "de": "der Harnstoff", "en": "urea", "ex": "Der Harnstoff ist erhöht — bitte die Flüssigkeitszufuhr prüfen.", "exen": "Urea is elevated — please check fluid intake."}, {"cat": "Nierenwerte", "de": "die GFR", "en": "GFR (glomerular filtration rate)", "ex": "Die GFR beträgt 55 ml/min — Stadium 3 der Niereninsuffizienz.", "exen": "The GFR is 55 ml/min — stage 3 kidney failure."}, {"cat": "Nierenwerte", "de": "das Cystatin C", "en": "cystatin C", "ex": "Cystatin C ist ein empfindlicher Nierenmarker.", "exen": "Cystatin C is a sensitive kidney marker."}, {"cat": "Elektrolyte", "de": "das Natrium", "en": "sodium", "ex": "Das Natrium liegt bei 138 mmol/l — normal.", "exen": "Sodium is 138 mmol/l — normal."}, {"cat": "Elektrolyte", "de": "das Kalium", "en": "potassium", "ex": "Das Kalium ist mit 5,8 mmol/l zu hoch — EKG-Kontrolle!", "exen": "Potassium is too high at 5.8 mmol/l — check the ECG!"}, {"cat": "Elektrolyte", "de": "das Kalzium", "en": "calcium", "ex": "Das Kalzium ist erniedrigt — Krampfneigung möglich.", "exen": "Calcium is low — cramp tendency possible."}, {"cat": "Elektrolyte", "de": "das Magnesium", "en": "magnesium", "ex": "Magnesium wird bei Herzrhythmusstörungen substituiert.", "exen": "Magnesium is supplemented for cardiac arrhythmias."}, {"cat": "Elektrolyte", "de": "das Phosphat", "en": "phosphate", "ex": "Das Phosphat ist bei Niereninsuffizienz oft erhöht.", "exen": "Phosphate is often elevated in kidney failure."}, {"cat": "Stoffwechsel", "de": "der Blutzucker", "en": "blood glucose", "ex": "Der Nüchternblutzucker liegt bei 126 mg/dl.", "exen": "Fasting blood glucose is 126 mg/dl."}, {"cat": "Stoffwechsel", "de": "der HbA1c", "en": "HbA1c", "ex": "Der HbA1c beträgt 7,2 Prozent — der Zucker war zu hoch eingestellt.", "exen": "HbA1c is 7.2 percent — blood sugar was running too high."}, {"cat": "Stoffwechsel", "de": "das Cholesterin", "en": "cholesterol", "ex": "Das Gesamtcholesterin sollte unter 200 mg/dl liegen.", "exen": "Total cholesterol should be below 200 mg/dl."}, {"cat": "Stoffwechsel", "de": "das LDL-Cholesterin", "en": "LDL cholesterol", "ex": "Das LDL ist mit 160 mg/dl zu hoch.", "exen": "LDL is too high at 160 mg/dl."}, {"cat": "Stoffwechsel", "de": "das HDL-Cholesterin", "en": "HDL cholesterol", "ex": "HDL ist das „gute“ Cholesterin — je höher, desto besser.", "exen": "HDL is the 'good' cholesterol — the higher, the better."}, {"cat": "Stoffwechsel", "de": "die Triglyceride", "en": "triglycerides", "ex": "Die Triglyceride sind erhöht — weniger Alkohol und Zucker.", "exen": "Triglycerides are elevated — less alcohol and sugar."}, {"cat": "Stoffwechsel", "de": "das CRP", "en": "CRP (C-reactive protein)", "ex": "Das CRP ist mit 45 mg/l deutlich erhöht.", "exen": "CRP is clearly elevated at 45 mg/l."}, {"cat": "Stoffwechsel", "de": "das TSH", "en": "TSH (thyroid-stimulating hormone)", "ex": "Das TSH ist erniedrigt — Verdacht auf Überfunktion.", "exen": "TSH is low — suspected hyperthyroidism."}, {"cat": "Stoffwechsel", "de": "das Vitamin D", "en": "vitamin D", "ex": "Der Vitamin-D-Spiegel ist im Winter oft zu niedrig.", "exen": "Vitamin D levels are often too low in winter."}, {"cat": "Stoffwechsel", "de": "das Eisen", "en": "iron", "ex": "Das Eisen ist erniedrigt — bitte Ferritin mitbestimmen.", "exen": "Iron is low — please also order ferritin."}, {"cat": "Stoffwechsel", "de": "das Ferritin", "en": "ferritin", "ex": "Ferritin zeigt die Eisenspeicher an.", "exen": "Ferritin shows the iron stores."}, {"cat": "Stoffwechsel", "de": "die Harnsäure", "en": "uric acid", "ex": "Die Harnsäure ist erhöht — Gichtrisiko.", "exen": "Uric acid is elevated — gout risk."}, {"cat": "Stoffwechsel", "de": "der PSA-Wert", "en": "PSA", "ex": "Der PSA-Wert dient der Prostatakrebs-Früherkennung.", "exen": "PSA is used for prostate cancer screening."}, {"cat": "Gerinnung", "de": "der INR-Wert", "en": "INR", "ex": "Der INR liegt bei 2,5 — im therapeutischen Bereich.", "exen": "The INR is 2.5 — in the therapeutic range."}, {"cat": "Gerinnung", "de": "der Quick-Wert", "en": "prothrombin time (Quick)", "ex": "Der Quick-Wert beträgt 85 Prozent.", "exen": "The Quick value is 85 percent."}, {"cat": "Gerinnung", "de": "die aPTT", "en": "aPTT", "ex": "Die aPTT ist unter Heparin verlängert.", "exen": "The aPTT is prolonged under heparin."}, {"cat": "Gerinnung", "de": "das D-Dimer", "en": "D-dimer", "ex": "Das D-Dimer ist negativ — Thrombose unwahrscheinlich.", "exen": "D-dimer is negative — thrombosis unlikely."}, {"cat": "Gerinnung", "de": "das Fibrinogen", "en": "fibrinogen", "ex": "Fibrinogen steigt bei Entzündungen an.", "exen": "Fibrinogen rises with inflammation."}];
+var CATS = ["Blutbild","Leberwerte","Nierenwerte","Elektrolyte","Stoffwechsel","Gerinnung"];
+var curCat = -1;
+var style = document.createElement("style");
+style.textContent = ".tab{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}.tab.on{background:#2563eb;color:#fff;border-color:#2563eb}";
+document.head.appendChild(style);
+function buildOptions(answer, distractors, n){
+  var opts = [answer], seen = {};
+  seen[answer] = true;
+  var pool = distractors.slice();
+  while(opts.length < n && pool.length){
+    var i = Math.floor(Math.random() * pool.length);
+    var v = pool.splice(i, 1)[0];
+    if(!seen[v]){ seen[v] = true; opts.push(v); }
+  }
+  for(var i = opts.length - 1; i > 0; i--){
+    var j = Math.floor(Math.random() * (i + 1)); var t = opts[i]; opts[i] = opts[j]; opts[j] = t;
+  }
+  return opts;
+}
+function setCat(i){ curCat = i; renderList(); }
+function renderList(){
+  var q = (document.getElementById("vsearch").value || "").toLowerCase();
+  var box = document.getElementById("vlist"); box.innerHTML = "";
+  var tabs = document.querySelectorAll(".tab");
+  tabs.forEach(function(t, i){ t.classList.toggle("on", i - 1 === curCat); });
+  var shown = 0;
+  ENTRIES.forEach(function(e){
+    if(curCat >= 0 && e.cat !== CATS[curCat]) return;
+    if(q && e.de.toLowerCase().indexOf(q) < 0 && e.en.toLowerCase().indexOf(q) < 0) return;
+    shown++;
+    var d = document.createElement("div");
+    d.style.cssText = "background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:14px 16px;margin-bottom:10px";
+    d.innerHTML = '<div style="font-size:1.1rem;font-weight:700;color:#0f172a"></div>' +
+      '<div style="color:#1d4ed8;font-weight:600;margin-top:2px"></div>' +
+      '<div style="font-size:.9rem;color:#475569;margin-top:6px"></div>' +
+      '<div style="font-size:.85rem;color:#64748b"></div>';
+    d.children[0].textContent = e.de;
+    d.children[1].textContent = e.en;
+    d.children[2].textContent = "“" + e.ex + "”";
+    d.children[3].textContent = e.exen;
+    box.appendChild(d);
+  });
+  if(!shown){ box.innerHTML = '<p style="color:#64748b">No terms match your search.</p>'; }
+}
+var pool = [], qi = 0, correctN = 0, missedN = 0, missedList = [], qa = null, qdir = "de-en", ROUNDS = 15;
+function shuffle(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
+function startQuiz(){
+  pool = shuffle(ENTRIES.slice());
+  qi = 0; correctN = 0; missedN = 0; missedList = [];
+  document.getElementById("quiz-zone").style.display = "block";
+  document.getElementById("quiz-summary").innerHTML = "";
+  document.getElementById("calc-btn").style.display = "none";
+  showQ();
+}
+function showQ(){
+  qa = pool[qi % pool.length];
+  qdir = Math.random() < 0.5 ? "de-en" : "en-de";
+  var answer, distr;
+  if(qdir === "de-en"){
+    answer = qa.en;
+    distr = ENTRIES.filter(function(x){ return x.de !== qa.de; }).map(function(x){ return x.en; });
+  } else {
+    answer = qa.de;
+    distr = ENTRIES.filter(function(x){ return x.de !== qa.de; }).map(function(x){ return x.de; });
+  }
+  qa._answer = answer;
+  document.getElementById("quiz-sentence").textContent =
+    (qdir === "de-en" ? "What does this mean?  " : "How do you say this in German?  ") + (qdir === "de-en" ? qa.de : qa.en);
+  document.getElementById("qcount").textContent = "Round " + (qi+1) + "/" + ROUNDS;
+  document.getElementById("qbar").style.width = (qi/ROUNDS*100) + "%";
+  var box = document.getElementById("quiz-options"); box.innerHTML = "";
+  var fb = document.getElementById("quiz-feedback"); fb.className = ""; fb.style.display = "none";
+  document.getElementById("quiz-next").style.display = "none";
+  buildOptions(answer, distr, 4).forEach(function(opt){
+    var b = document.createElement("button");
+    b.className = "quiz-btn"; b.textContent = opt;
+    b.addEventListener("click", function(){ answerQ(opt, b); });
+    box.appendChild(b);
+  });
+}
+function answerQ(opt, btn){
+  var fb = document.getElementById("quiz-feedback");
+  var btns = document.querySelectorAll("#quiz-options .quiz-btn");
+  btns.forEach(function(x){ x.disabled = true; if(x.textContent === qa._answer) x.classList.add("correct"); });
+  if(opt === qa._answer){
+    correctN++; fb.className = "ok";
+    fb.textContent = "✓ Correct. Example: “" + qa.ex + "”";
+  } else {
+    missedN++; missedList.push(qa); fb.className = "no";
+    btn.classList.add("wrong");
+    fb.textContent = "✗ Correct: “" + qa._answer + "” (" + qa.cat + ")";
+  }
+  document.getElementById("qscore").textContent = "Correct: " + correctN + " · Missed: " + missedN;
+  var nb = document.getElementById("quiz-next");
+  nb.style.display = "block";
+  nb.textContent = (qi + 1 < ROUNDS) ? "Next" : "See results";
+}
+function nextQ(){
+  qi++;
+  if(qi < ROUNDS) showQ();
+  else {
+    document.getElementById("quiz-sentence").textContent = "";
+    document.getElementById("quiz-options").innerHTML = "";
+    document.getElementById("quiz-feedback").style.display = "none";
+    document.getElementById("quiz-next").style.display = "none";
+    document.getElementById("qbar").style.width = "100%";
+    var uniq = {};
+    missedList.forEach(function(m){ uniq[m.de] = m; });
+    var missArr = Object.keys(uniq).map(function(k){ return uniq[k]; });
+    var msg = "<strong>" + correctN + " / " + ROUNDS + " correct.</strong> ";
+    if(missArr.length === 0) msg += "Laborreif — lab-ready.";
+    else {
+      msg += "Review these " + missArr.length + ":<ul style='margin:8px 0 0 18px'>";
+      missArr.forEach(function(m){ msg += "<li><strong>" + m.de + "</strong> <span style='color:#64748b'>(" + m.en + ")</span></li>"; });
+      msg += "</ul>";
+    }
+    document.getElementById("quiz-summary").innerHTML = '<div class="note">' + msg + "</div>";
+    document.getElementById("calc-btn").style.display = "block";
+    document.getElementById("calc-btn").textContent = "Play again";
+  }
+}
+renderList();
+
+
+</script>
+</body>
+</html>
