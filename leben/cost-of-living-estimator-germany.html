@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cost of Living in Germany 2026: City-by-City Monthly Budget Estimator | Bayzubaan</title>
+<meta name="description" content="Free estimator: pick a German city and lifestyle to see a realistic monthly budget — rent, groceries, transport, health insurance, Rundfunkbeitrag. Built on 2026 sources, for newcomers of every background.">
+<link rel="canonical" href="https://bayzubaan.com/leben/cost-of-living-estimator-germany/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cost of Living in Germany 2026: Monthly Budget Estimator">
+<meta property="og:description" content="Pick a city and lifestyle — Berlin to Munich — and get a monthly budget breakdown with real 2026 figures. Rent, groceries, transport, insurance, Rundfunkbeitrag.">
+<meta property="og:url" content="https://bayzubaan.com/leben/cost-of-living-estimator-germany/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cost of Living in Germany 2026: Monthly Budget Estimator">
+<meta name="twitter:description" content="Pick a city and lifestyle — Berlin to Munich — and get a monthly budget breakdown with real 2026 figures.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How accurate is this cost of living estimator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a planning estimate, not a quote. Rent medians come from the Moses Mendelssohn Institut's wg-gesucht.de analysis and InterNations (2026); transport uses the official Deutschlandticket (€63/month) and Deutschlandsemesterticket (€34.80/month) 2026 prices; student health insurance uses TK's published 2026 student tariff (€141–€146/month); the Rundfunkbeitrag is the statutory €18.36/month. Groceries, utilities and leisure are estimate ranges from 2026 expat guides. Prices move — treat every figure as a starting point for your own research."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is Munich so much more expensive than Leipzig?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Housing drives almost the entire gap. Numbeo's 2026 rent index puts Munich at roughly double Leipzig's level, and advertised WG-room medians are about €850 in Munich versus €450–€600 in Leipzig. Groceries, transport and insurance cost nearly the same everywhere in Germany — only rent changes the total dramatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I really have to pay the Rundfunkbeitrag as a newcomer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every household in Germany pays €18.36 per month to fund public broadcasting (ARD, ZDF, Deutschlandradio), whether you watch or not. In a shared flat only one person registers and pays — flatmates usually split it. After your Anmeldung (address registration), the Beitragsservice will write to you automatically. Exemptions exist for BAföG and Bürgergeld recipients."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is health insurance really mandatory in Germany?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — you cannot enrol at a university or start most jobs without proof of health insurance. Students under 30 pay a reduced statutory tariff: about €141–€146/month with TK in 2026 (health + long-term care insurance combined). Employees pay roughly half of 14.6% of gross salary plus the fund's supplementary rate, split with the employer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which costs surprise newcomers most?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three stand out. First, the rental deposit (Kaution): up to 3 months of cold rent, due before you move in — on a €900 flat that's €2,700 locked away. Second, German flats often come without a kitchen or light fixtures, so furnishing costs hit in month one. Third, the Rundfunkbeitrag letter arrives a few weeks after registration and confuses everyone the first time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the 2026 blocked-account (Sperrkonto) amount relate to this budget?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non-EU students must prove about €11,904 for 2026 (around €992/month) in a blocked account for the visa. That is a visa requirement, not a budget — in Munich or Frankfurt your real spending will run higher, while in Leipzig it can run lower. Use this estimator to see whether the blocked amount actually covers your chosen city and lifestyle."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result table{margin:0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.bar{height:12px;background:#e2e8f0;border-radius:999px;overflow:hidden;margin-top:6px}
+.bar>div{height:100%;background:#2563eb;border-radius:999px}
+.cmp{margin-top:8px}
+.cmp-row{display:grid;grid-template-columns:110px 1fr 90px;gap:10px;align-items:center;margin-bottom:10px;font-size:.95rem}
+.cmp-row .city{font-weight:600;color:#0f172a}
+.cmp-row .amt{text-align:right;font-weight:700;color:#1e3a8a;font-variant-numeric:tabular-nums}
+.cmp-row.hi .city{color:#1d4ed8}
+.src{font-size:.82rem;color:#64748b}
+.est-tag{display:inline-block;background:#fef9c3;color:#854d0e;font-size:.72rem;font-weight:700;border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:middle}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}.cmp-row{grid-template-columns:88px 1fr 76px}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>Cost of Living in Germany 2026: Monthly Budget Estimator</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Figures checked against 2026 sources · Reviewed 2026-10-15</p>
+<p class="lead">Moving to Germany? Pick a city and a lifestyle — student, professional, or couple — and get a realistic monthly budget: rent, groceries, transport, insurance, Rundfunkbeitrag. Built for newcomers of every background, on real 2026 figures.</p>
+</header>
+
+<div class="calc-card">
+<h2>Estimate your monthly budget</h2>
+<div class="field">
+<label for="city">City</label>
+<select id="city">
+<option value="berlin">Berlin</option>
+<option value="munich">Munich (München)</option>
+<option value="hamburg">Hamburg</option>
+<option value="cologne">Cologne (Köln)</option>
+<option value="frankfurt">Frankfurt am Main</option>
+<option value="leipzig">Leipzig</option>
+</select>
+</div>
+<div class="field">
+<label for="lifestyle">Lifestyle</label>
+<select id="lifestyle">
+<option value="student">Student</option>
+<option value="professional">Single professional</option>
+<option value="couple">Couple</option>
+</select>
+</div>
+<div class="field">
+<label for="housing">Housing</label>
+<select id="housing">
+<option value="wg">Room in a shared flat (WG)</option>
+<option value="one">1-room apartment of your own</option>
+<option value="two">2-room apartment</option>
+</select>
+</div>
+<button id="calc-btn" type="button" onclick="compute()">Calculate my budget</button>
+<div id="result"></div>
+</div>
+<article class="prose">
+
+<h2>How this estimator works</h2>
+<p>Germany's cost of living is not one number — it is a housing market with six different price levels and a set of fixed costs that barely move between cities. This estimator separates the two. <strong>Rent</strong> is city-specific and sourced: WG-room medians come from the Moses Mendelssohn Institut's analysis of wg-gesucht.de listings (autumn 2026), and 1-room rents from InterNations' city data. <strong>Transport</strong> uses the official 2026 prices: the <strong>Deutschlandticket at €63/month</strong> and the <strong>Deutschlandsemesterticket at €34.80/month</strong> for students. <strong>Student health insurance</strong> uses TK's published 2026 student tariff (about <strong>€141–€146/month</strong> including long-term care insurance). The <strong>Rundfunkbeitrag is the statutory €18.36/month</strong> per household. Groceries, utilities and leisure are estimate ranges drawn from 2026 expat guides (entri.app, allaboutberlin.com, proforg.com) — they are marked <span class="est-tag">est.</span> in the results. Everything is framed as a planning estimate: prices move, and your actual spending will differ.</p>
+
+<h2>The six cities at a glance</h2>
+<p><strong>Berlin (€650 WG room):</strong> still the cheapest million-city for renters, with the deepest WG market in the country. Groceries around €255/month for one person cooking at home. The trade-off is competition — finding that €650 room takes persistence.</p>
+<p><strong>Munich (€850 WG room):</strong> Germany's most expensive city by a clear margin. Numbeo's 2026 rent index puts Munich at roughly double Leipzig. A 1-room flat of your own runs about €1,070 outside the centre. Budget at least €1,450/month as a student in a WG — and treat the visa blocked amount (€11,904 for 2026) as a floor, not a plan.</p>
+<p><strong>Hamburg (€650 WG room):</strong> priced like Berlin for rooms, with strong wages in trade and media. Note the housing market is tight enough that tenant associations flagged extreme cases in 2026 — always check a listing against the Mietpreisbremse (rent cap) before signing.</p>
+<p><strong>Cologne (€640 WG room):</strong> the most affordable of the western million-cities, popular with students and media workers. A 1-room flat averages about €830 outside the centre.</p>
+<p><strong>Frankfurt (€700 WG room, est.):</strong> banking salaries pull rents up — a 1-room flat averages about €960 outside the centre. If your job is in finance, the higher pay usually covers the difference; if not, consider nearby cities with S-Bahn connections.</p>
+<p><strong>Leipzig (€525 WG room, est.):</strong> the budget champion. Rents run 30–40% below Berlin, groceries about €225/month, and the cultural life punches far above the price. The classic choice for students and anyone whose work is remote.</p>
+
+<h2>The fixed costs every newcomer meets</h2>
+<p>Four costs surprise almost everyone. <strong>Health insurance is mandatory</strong> — you cannot enrol at a university or start most jobs without proof. Students under 30 pay the reduced tariff (about €141–€146/month); employees pay roughly half of 14.6% of gross salary plus the fund's supplementary rate, with the employer covering the other half. <strong>The Rundfunkbeitrag (€18.36/month)</strong> funds public broadcasting and applies to every household, whether you watch or not — in a WG, only one person registers and flatmates normally split it, which is why the student preset shows €6. <strong>The rental deposit (Kaution)</strong> can be up to 3 months of cold rent, payable before you move in — budget for it separately, because this estimator covers monthly costs only. And <strong>transport</strong>: the €63 Deutschlandticket covers all regional public transport nationwide, which for most newcomers replaces a car entirely.</p>
+
+<h2>Reading the lifestyle presets</h2>
+<p><strong>Student</strong> assumes a WG room, the €34.80 Semesterticket, the €144 student insurance tariff, a split Rundfunkbeitrag, and modest leisure spending (€80). <strong>Single professional</strong> uses the full €63 Deutschlandticket, an estimated €310/month statutory insurance share, and higher leisure spending (€150). <strong>Couple</strong> doubles transport and insurance, multiplies groceries by 1.8 (couples don't eat twice as much), and keeps one Rundfunkbeitrag per household. Families can start from the couple preset and add roughly €200–€300 per child for food and activities — a deliberately rough rule of thumb, marked as such.</p>
+
+<h2>What the estimator leaves out</h2>
+<p>Honest framing matters, so here are the gaps. <strong>One-time costs are excluded:</strong> the Kaution deposit, furniture (German flats often come without a kitchen or even light fixtures), the €75 visa fee, and document translations. <strong>Rent figures are medians of advertised listings</strong> — actual offers in central districts run higher, and furnished short-term flats (Wunderflats, HousingAnywhere) run much higher. <strong>Income tax, church tax, and pension contributions</strong> are not modelled; the professional preset shows the employee's insurance share only. And <strong>prices move</strong>: the Deutschlandticket rose from €49 to €58 to €63 within three years, and a Rundfunkbeitrag increase to €18.64 from 2027 has been recommended. Re-check the fixed figures yearly.</p>
+
+<h2>Sources and method</h2>
+<ul>
+<li><strong>WG rents:</strong> Moses Mendelssohn Institut analysis of wg-gesucht.de listings, reported September 2026 (Munich €850, Berlin €650, Hamburg €650, Cologne €640 medians; national average ~€510). Frankfurt and Leipzig from entri.app's 2026 city estimates, marked as estimates.</li>
+<li><strong>1-room rents:</strong> InterNations Germany housing guide (Berlin €920, Hamburg €850, Frankfurt €960, Cologne €830 — 1-bedroom outside centre). Munich and Leipzig marked as estimates derived from Numbeo city-centre figures.</li>
+<li><strong>2-room rents:</strong> estimates at ~1.45× the 1-room figure, clearly labelled.</li>
+<li><strong>Transport:</strong> Deutschlandticket €63/month from 1 January 2026 (Wikipedia, VVS, Clean Energy Wire); Deutschlandsemesterticket €34.80/month, summer semester 2026 (grandroyaltravel.com).</li>
+<li><strong>Student health insurance:</strong> TK 2026 student tariff — €110.38 health + long-term care = €141.16 (under 23) to €146.29 (23+, childless) (germany-visa.org, RWU, BARMER).</li>
+<li><strong>Rundfunkbeitrag:</strong> €18.36/month per household, unchanged since August 2021 (Wikipedia, grandroyaltravel.com, hamboorg.city).</li>
+<li><strong>Groceries/utilities/leisure ranges:</strong> entri.app 2026 city breakdown, allaboutberlin.com 2026 real-expenses example, proforg.com 2026 expat budget planner, Expatica 2026 cost-of-living guide.</li>
+</ul>
+<p>Method: the estimator adds the seven categories for your city + lifestyle + housing choice. The comparison strip re-runs the same lifestyle and housing across all six cities. No tracking, no cookies, no data leaves your browser — the maths runs entirely on this page.</p>
+
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>How accurate is this cost of living estimator?</h3><p>It is a planning estimate, not a quote. Rent medians come from the Moses Mendelssohn Institut's wg-gesucht.de analysis and InterNations (2026); transport uses the official 2026 prices (€63 Deutschlandticket, €34.80 Semesterticket); student health insurance uses TK's published 2026 tariff (€141–€146/month); the Rundfunkbeitrag is the statutory €18.36/month. Groceries, utilities and leisure are estimate ranges. Prices move — treat every figure as a starting point.</p></div>
+<div class="faq-item"><h3>Why is Munich so much more expensive than Leipzig?</h3><p>Housing drives almost the entire gap. Numbeo's 2026 rent index puts Munich at roughly double Leipzig, and advertised WG-room medians are about €850 in Munich versus €450–€600 in Leipzig. Groceries, transport and insurance cost nearly the same everywhere — only rent changes the total dramatically.</p></div>
+<div class="faq-item"><h3>Do I really have to pay the Rundfunkbeitrag as a newcomer?</h3><p>Yes. Every household pays €18.36 per month for public broadcasting (ARD, ZDF, Deutschlandradio), whether you watch or not. In a shared flat only one person registers and pays — flatmates usually split it. After your Anmeldung, the Beitragsservice writes to you automatically. BAföG and Bürgergeld recipients can apply for exemption.</p></div>
+<div class="faq-item"><h3>Is health insurance really mandatory in Germany?</h3><p>Yes — no enrolment or most jobs without proof of insurance. Students under 30 pay a reduced tariff of about €141–€146/month with TK in 2026 (health + long-term care combined). Employees pay roughly half of 14.6% of gross salary plus the fund's supplementary rate, split with the employer.</p></div>
+<div class="faq-item"><h3>Which costs surprise newcomers most?</h3><p>Three stand out. First, the rental deposit (Kaution): up to 3 months of cold rent, due before you move in. Second, German flats often come without a kitchen or light fixtures, so furnishing costs hit in month one. Third, the Rundfunkbeitrag letter arrives a few weeks after registration and confuses everyone the first time.</p></div>
+<div class="faq-item"><h3>How does the 2026 blocked-account (Sperrkonto) amount relate to this budget?</h3><p>Non-EU students must prove about €11,904 for 2026 (around €992/month) in a blocked account for the visa. That is a visa requirement, not a budget — in Munich or Frankfurt real spending runs higher, while in Leipzig it can run lower. Use this estimator to check whether the blocked amount covers your chosen city and lifestyle.</p></div>
+</section>
+
+<footer class="credit">
+Built for newcomers · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-15 · Part of the <a href="https://bayzubaan.com/leben/">Bayzubaan Germany-life tools</a> series
+</footer>
+</div>
+<script>
+var CITIES = {
+  berlin:    { name: "Berlin",    wg: {v:650, est:false}, one: {v:920, est:false},  two: {v:1330, est:true},  groceries: 255 },
+  munich:    { name: "Munich",    wg: {v:850, est:false}, one: {v:1070, est:true},  two: {v:1550, est:true},  groceries: 275 },
+  hamburg:   { name: "Hamburg",   wg: {v:650, est:false}, one: {v:850, est:false},  two: {v:1230, est:true},  groceries: 255 },
+  cologne:   { name: "Cologne",   wg: {v:640, est:false}, one: {v:830, est:false},  two: {v:1200, est:true},  groceries: 245 },
+  frankfurt: { name: "Frankfurt", wg: {v:700, est:true},  one: {v:960, est:false},  two: {v:1390, est:true},  groceries: 265 },
+  leipzig:   { name: "Leipzig",   wg: {v:525, est:true},  one: {v:650, est:true},   two: {v:940, est:true},   groceries: 225 }
+};
+var LIFESTYLES = {
+  student:      { label: "Student",            transport: 34.80, tEst: false, insurance: 144, iEst: false, rundfunk: 6,     leisure: 80,  lEst: true,  gMult: 1   },
+  professional: { label: "Single professional", transport: 63,  tEst: false, insurance: 310, iEst: true,  rundfunk: 18.36, leisure: 150, lEst: true,  gMult: 1   },
+  couple:       { label: "Couple",             transport: 126,   tEst: false, insurance: 620, iEst: true,  rundfunk: 18.36, leisure: 220, lEst: true,  gMult: 1.8 }
+};
+var UTIL = { wg: 70, one: 160, two: 200 };
+var HOUSING_LABEL = { wg: "Room in a shared flat (WG)", one: "1-room apartment", two: "2-room apartment" };
+
+function fmt(n){ return "\u20AC" + Math.round(n).toLocaleString("en-US"); }
+function esc(s){ return s; }
+function tag(est){ return est ? '<span class="est-tag">est.</span>' : ""; }
+
+function breakdown(cityKey, lsKey, housing){
+  var c = CITIES[cityKey], L = LIFESTYLES[lsKey];
+  var rows = [
+    { label: "Rent — " + HOUSING_LABEL[housing], value: c[housing].v, est: c[housing].est },
+    { label: "Groceries", value: c.groceries * L.gMult, est: true },
+    { label: "Public transport", value: L.transport, est: L.tEst },
+    { label: "Health insurance", value: L.insurance, est: L.iEst },
+    { label: "Rundfunkbeitrag (TV tax)", value: L.rundfunk, est: false },
+    { label: "Utilities + internet", value: UTIL[housing], est: true },
+    { label: "Leisure", value: L.leisure, est: L.lEst }
+  ];
+  var total = 0, i;
+  for(i = 0; i < rows.length; i++){ total += rows[i].value; }
+  return { rows: rows, total: total };
+}
+
+function compute(){
+  var cityKey = document.getElementById("city").value;
+  var lsKey = document.getElementById("lifestyle").value;
+  var housing = document.getElementById("housing").value;
+  var b = breakdown(cityKey, lsKey, housing);
+  var L = LIFESTYLES[lsKey], c = CITIES[cityKey];
+  var html = "";
+  html += '<h3 style="margin-bottom:12px">' + esc(c.name) + " · " + esc(L.label) + " · " + esc(HOUSING_LABEL[housing]) + "</h3>";
+  html += '<table><tr><th>Category</th><th style="width:34%">Share</th><th style="text-align:right">Per month</th></tr>';
+  var i, r;
+  for(i = 0; i < b.rows.length; i++){
+    r = b.rows[i];
+    var pct = Math.round(r.value / b.total * 100);
+    html += "<tr><td>" + esc(r.label) + tag(r.est) + "</td>";
+    html += '<td><div class="bar"><div style="width:' + pct + '%"></div></div></td>';
+    html += '<td style="text-align:right;font-weight:700;font-variant-numeric:tabular-nums">' + fmt(r.value) + "</td></tr>";
+  }
+  html += '<tr><td><strong>Estimated total</strong></td><td></td><td style="text-align:right;font-size:1.25rem;font-weight:800;color:#1d4ed8;font-variant-numeric:tabular-nums">' + fmt(b.total) + "/mo</td></tr>";
+  html += "</table>";
+  html += '<div class="note"><strong>Same lifestyle, all six cities</strong> — ' + esc(HOUSING_LABEL[housing]).toLowerCase() + ", " + esc(L.label).toLowerCase() + ":</div>";
+  html += '<div class="cmp">';
+  var totals = [], k, max = 0;
+  for(k in CITIES){ if(CITIES.hasOwnProperty(k)){ var t = breakdown(k, lsKey, housing).total; totals.push({key:k, total:t}); if(t > max) max = t; } }
+  totals.sort(function(a, b2){ return a.total - b2.total; });
+  for(i = 0; i < totals.length; i++){
+    var pctw = Math.round(totals[i].total / max * 100);
+    var hi = totals[i].key === cityKey ? " hi" : "";
+    html += '<div class="cmp-row' + hi + '"><span class="city">' + esc(CITIES[totals[i].key].name) + '</span><span><span class="bar" style="margin-top:0"><span style="display:block;height:100%;background:' + (hi ? "#1d4ed8" : "#2563eb") + ';border-radius:999px;width:' + pctw + '%"></span></span></span><span class="amt">' + fmt(totals[i].total) + "</span></div>";
+  }
+  html += "</div>";
+  html += '<div class="note" style="margin-top:14px">Planning estimates from 2026 sources — rent medians (Moses Mendelssohn Institut / InterNations), €63 Deutschlandticket, €34.80 Semesterticket, TK student tariff ~€141–€146, €18.36 Rundfunkbeitrag. Rows marked <span class="est-tag">est.</span> are estimate ranges. Prices move; one-time costs (deposit, furniture, visa fees) are not included.</div>';
+  html += '<p class="src" style="margin-top:10px">No data leaves your browser — every figure is computed on this page.</p>';
+  var res = document.getElementById("result");
+  res.innerHTML = html;
+  res.style.display = "block";
+  res.scrollIntoView({behavior: "smooth", block: "nearest"});
+}
+</script>
+</body>
+</html>
