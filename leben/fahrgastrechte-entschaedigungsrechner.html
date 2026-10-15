@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fahrgastrechte-Rechner: Bahn-Entschädigung berechnen</title>
+<meta name="description" content="Zug verspätet? Berechne deine Entschädigung nach EU-Fahrgastrechten: 25 % ab 60 Minuten, 50 % ab 120 Minuten — für Tickets, Deutschlandticket und Zeitkarten.">
+<link rel="canonical" href="https://bayzubaan.com/leben/fahrgastrechte-entschaedigungsrechner/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fahrgastrechte-Rechner: Bahn-Entschädigung berechnen">
+<meta property="og:description" content="Zug verspätet? Berechne deine Entschädigung nach EU-Fahrgastrechten: 25 % ab 60 Minuten, 50 % ab 120 Minuten — für Tickets, Deutschlandticket und Zeitkarten.">
+<meta property="og:url" content="https://bayzubaan.com/leben/fahrgastrechte-entschaedigungsrechner/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fahrgastrechte-Rechner: Bahn-Entschädigung berechnen">
+<meta name="twitter:description" content="Zug verspätet? Berechne deine Entschädigung nach EU-Fahrgastrechten: 25 % ab 60 Minuten, 50 % ab 120 Minuten — für Tickets, Deutschlandticket und Zeitkarten.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ab wie viel Verspätung bekomme ich bei der Bahn eine Entschädigung?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ab 60 Minuten Verspätung am Zielbahnhof erhältst du 25 % des Fahrpreises zurück, ab 120 Minuten 50 % (Art. 19 VO (EU) 2021/782). Maßgeblich ist die tatsächliche Ankunft am Ziel — also der Moment der Türöffnung — nicht die Verspätung einzelner Zwischenhalte."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wird die Entschädigung vom vollen Ticketpreis berechnet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, Grundlage ist der tatsächlich gezahlte Fahrpreis. Bei einem Hin- und Rückfahrt-Ticket wird der halbe Fahrpreis als Bezugsgröße genommen. Pro Fahrkarte gibt es einen Mindestbetrag von 4 Euro — darunter darf das Verkehrsunternehmen die Auszahlung ablehnen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was bekomme ich mit dem Deutschlandticket bei Verspätung?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Für das Deutschlandticket gilt eine Pauschale von 1,50 Euro pro Verspätung ab 60 Minuten (auch bei Zugausfall), höchstens jedoch 25 % des Monatspreises. Bei einem Monatspreis von 63 Euro (Stand 2026) sind das maximal 15,75 Euro pro Monat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was gilt für Monatskarten und andere Zeitkarten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bei Zeitkarten wird die Entschädigung zeitanteilig berechnet: Der Kartenpreis wird durch die Gültigkeitstage geteilt, davon 25 % bzw. 50 %. Wiederholte Verspätungen dürfen gebündelt in einem Antrag geltend gemacht werden — so lässt sich auch die 4-Euro-Schwelle erreichen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ich hatte nur 30 Minuten Verspätung — habe ich trotzdem Rechte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Einen Entschädigungsanspruch gibt es erst ab 60 Minuten. Trotzdem hast du Rechte: Bei Sparpreisen ist die Zugbindung ab 20 Minuten erwarteter Verspätung aufgehoben. Bei Zugausfall oder mindestens 60 Minuten Verspätung hast du die Wahl zwischen Erstattung und Weiterreise; ab 60 Minuten stehen dir außerdem Verpflegung und bei Bedarf eine Unterkunft zu."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie und wo stelle ich den Entschädigungsantrag?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Den Antrag stellst du beim Servicecenter Fahrgastrechte der Deutschen Bahn — am schnellsten über das Online-Formular auf bahn.de. Halte Ticketnummer, Reisedaten und Verspätungsnachweis bereit. Die Entschädigung muss binnen eines Monats bearbeitet werden; der Anspruch verjährt nach 3 Jahren."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field input,.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus,.field select:focus{outline:none;border-color:#2563eb}
+.field .hint{font-size:.85rem;color:#64748b;margin-top:6px}
+.cond{display:none}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+@media(max-width:600px){.result-grid{grid-template-columns:1fr}}
+.result-item{background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:14px 16px}
+.result-item .k{font-size:.85rem;color:#475569;margin-bottom:4px}
+.result-item .v{font-size:1.3rem;font-weight:800;color:#1e3a8a}
+.verdict{border-radius:8px;padding:14px 18px;margin-bottom:16px;font-weight:600}
+.verdict.ok{background:#dcfce7;color:#065f46;border:1px solid #a7f3d0}
+.verdict.late{background:#fef9c3;color:#92400e;border:1px solid #fde68a}
+.verdict.none{background:#f1f5f9;color:#475569;border:1px solid #e2e8f0}
+.note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+.warn{margin-top:14px;background:#fef9c3;border:1px solid #fde68a;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#92400e}
+#letter-box{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:24px;white-space:pre-wrap;font-family:Georgia,'Times New Roman',serif;font-size:.95rem;line-height:1.9;margin-top:12px}
+#copy-btn{background:#0f172a;color:#fff;border:none;border-radius:8px;padding:12px 24px;font-size:1rem;font-weight:700;cursor:pointer;margin-top:12px;font-family:inherit}
+#copy-btn:hover{background:#1e293b}
+#copy-ok{display:none;color:#065f46;font-weight:600;margin-top:8px}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+.en-block{background:#fffdf5;border:1px solid #fde68a}
+.en-block h2{color:#92400e}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>Fahrgastrechte-Rechner: Bahn-Entschädigung bei Verspätung</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Zur Orientierung — keine Rechtsberatung · Reviewed 2026-10-15</p>
+<p class="lead">Zug zu spät gekommen? Berechne, wie viel Entschädigung dir nach den EU-Fahrgastrechten zusteht — 25&nbsp;% ab 60 Minuten, 50&nbsp;% ab 120 Minuten Verspätung am Zielbahnhof. Für Einzelfahrscheine, Hin- und Rückfahrt, Deutschlandticket, Zeitkarten und BahnCard&nbsp;100 — inklusive fertigem Antragsschreiben.</p>
+</header>
+
+<div class="calc-card">
+<h2>Entschädigung berechnen</h2>
+<div class="field">
+<label for="ticket-type">Ticketart</label>
+<select id="ticket-type">
+<option value="single">Einzelfahrt (Flexpreis, Sparpreis, Super Sparpreis)</option>
+<option value="return">Hin- und Rückfahrt (ein Ticket für beide Strecken)</option>
+<option value="dticket">Deutschlandticket</option>
+<option value="season">Zeitkarte (Wochen-/Monatskarte)</option>
+<option value="bc100">BahnCard 100</option>
+</select>
+</div>
+<div class="field cond" id="f-price">
+<label for="price">Fahrpreis in Euro</label>
+<input type="number" id="price" min="0" step="0.01" placeholder="z. B. 79,00">
+<p class="hint" id="price-hint">Der tatsächlich gezahlte Preis — inklusive BahnCard-Rabatt, falls du einen hattest.</p>
+</div>
+<div class="field cond" id="f-days">
+<label for="valid-days">Gültigkeitstage der Zeitkarte</label>
+<input type="number" id="valid-days" min="1" value="30" step="1">
+<p class="hint">Monatskarte: 30 Tage. Wochenkarte: 7 Tage. Der Tagespreis wird aus Kartenpreis ÷ Tage berechnet.</p>
+</div>
+<div class="field cond" id="f-cases">
+<label for="cases">Anzahl der Verspätungen in diesem Monat</label>
+<input type="number" id="cases" min="1" value="1" step="1">
+<p class="hint">Zähle nur Fälle mit mindestens 60 Minuten Verspätung am Ziel (oder Zugausfall mit dieser Wirkung). Die Pauschale beträgt 1,50&nbsp;€ pro Fall, gedeckelt bei 25&nbsp;% des Monatspreises (15,75&nbsp;€ bei 63&nbsp;€).</p>
+</div>
+<div class="field">
+<label for="delay">Verspätung am Zielbahnhof in Minuten</label>
+<input type="number" id="delay" min="0" step="1" placeholder="z. B. 90">
+<p class="hint">Maßgeblich ist die tatsächliche Ankunft am Ziel (Türöffnung) minus planmäßige Ankunft — nicht die Verspätung an Zwischenhalten.</p>
+</div>
+<div class="field cond" id="f-pax">
+<label for="passengers">Anzahl Reisende</label>
+<input type="number" id="passengers" min="1" value="1" step="1">
+<p class="hint">Der Anspruch ist persönlich: Jede Person mit eigenem Ticket hat einen eigenen Anspruch.</p>
+</div>
+<button id="calc-btn" type="button">Entschädigung berechnen &amp; Antrag erstellen</button>
+<div id="result">
+<div id="verdict" class="verdict"></div>
+<div class="result-grid">
+<div class="result-item"><div class="k">Entschädigungsstufe</div><div class="v" id="r-stage">–</div></div>
+<div class="result-item"><div class="k">Entschädigung gesamt</div><div class="v" id="r-amount">–</div></div>
+</div>
+<div id="r-note"></div>
+<div class="warn"><strong>Wichtig:</strong> Dieser Rechner dient der Orientierung und ist keine Rechtsberatung. Die Beträge basieren auf den 2026 geltenden EU-Fahrgastrechten (VO (EU) 2021/782) und der DB-Tarifpauschale für das Deutschlandticket.</div>
+<h2 style="font-size:1.35rem;margin:24px 0 8px;color:#0f172a">Dein Entschädigungsantrag</h2>
+<p style="color:#64748b;font-size:.95rem;margin-bottom:8px">Angaben für den Antrag (optional — leere Felder werden als Platzhalter eingefügt):</p>
+<div class="field"><label for="f-name">Dein Name</label><input type="text" id="f-name" placeholder="z. B. Aisha Khan"></div>
+<div class="field"><label for="f-addr">Deine Adresse</label><input type="text" id="f-addr" placeholder="z. B. Musterstraße 12, 10115 Berlin"></div>
+<div class="field"><label for="f-date">Reisedatum</label><input type="date" id="f-date"></div>
+<div class="field"><label for="f-from">Von</label><input type="text" id="f-from" placeholder="z. B. Berlin Hbf"></div>
+<div class="field"><label for="f-to">Nach</label><input type="text" id="f-to" placeholder="z. B. München Hbf"></div>
+<div class="field"><label for="f-train">Zugnummer</label><input type="text" id="f-train" placeholder="z. B. ICE 583"></div>
+<div class="field"><label for="f-ticketno">Ticketnummer</label><input type="text" id="f-ticketno" placeholder="z. B. aus der DB-App"></div>
+<div class="field"><label for="f-iban">IBAN für die Auszahlung (optional)</label><input type="text" id="f-iban" placeholder="DE00 0000 0000 0000 0000 00"></div>
+<div id="letter-box"></div>
+<button id="copy-btn" type="button">Antrag kopieren</button>
+<div id="copy-ok">✓ In die Zwischenablage kopiert.</div>
+</div>
+</div>
+
+<article class="prose">
+<h2>Deine Rechte bei Verspätung: die EU-Verordnung 2021/782</h2>
+<p>Seit dem 7. Juni 2023 gilt europaweit die <strong>Verordnung (EU) 2021/782</strong> über die Rechte von Fahrgästen im Eisenbahnverkehr. Ihr Artikel&nbsp;19 legt die Entschädigung bei Verspätung fest — und zwar in zwei klaren Stufen: <strong>60 bis 119 Minuten Verspätung am Zielbahnhof → 25&nbsp;% des Fahrpreises</strong>, <strong>120 Minuten oder mehr → 50&nbsp;% des Fahrpreises</strong>. Die Verspätung wird dabei am gebuchten Endziel gemessen: Entscheidend ist der Moment der Türöffnung am Bahnsteig, nicht die Verspätung einzelner Zwischenhalte.</p>
+<p>Zwei Details sind wichtig. Erstens der <strong>Mindestbetrag von 4&nbsp;Euro pro Fahrkarte</strong> (Art.&nbsp;19 Abs.&nbsp;8): Fällt deine errechnete Entschädigung darunter — etwa bei einem günstigen Ticket mit 70 Minuten Verspätung — darf das Verkehrsunternehmen die Auszahlung ablehnen. Zweitens die <strong>Bezugsgröße</strong>: Maßgeblich ist der tatsächlich gezahlte Fahrpreis. Bei einem Hin- und Rückfahrt-Ticket wird der halbe Fahrpreis zugrunde gelegt; bei einer Verspätung auf nur einer Teilstrecke der anteilige Preis.</p>
+<table>
+<tr><th>Ticketart</th><th>Berechnungsgrundlage</th><th>Besonderheit</th></tr>
+<tr><td>Einzelfahrt (Flex, Spar, Super Spar)</td><td>gezahlter Preis</td><td>volle Fahrgastrechte auf allen Preisen</td></tr>
+<tr><td>Hin- und Rückfahrt (ein Ticket)</td><td>halber Fahrpreis</td><td>nur die verspätete Strecke zählt</td></tr>
+<tr><td>Deutschlandticket</td><td>Pauschale 1,50&nbsp;€ pro Fall</td><td>Deckel: 25&nbsp;% des Monatspreises</td></tr>
+<tr><td>Wochen-/Monatskarte (Zeitkarte)</td><td>zeitanteilig: Kartenpreis ÷ Gültigkeitstage</td><td>wiederholte Fälle dürfen gebündelt werden</td></tr>
+<tr><td>BahnCard&nbsp;100</td><td>DB-Tarifpauschale</td><td>10&nbsp;€ ab 60 Min., 20&nbsp;€ ab 120 Min.</td></tr>
+</table>
+<h2>Deutschlandticket und Zeitkarten: Pauschalen statt Prozent</h2>
+<p>Beim <strong>Deutschlandticket</strong> wäre eine prozentuale Berechnung wenig sinnvoll — deshalb gilt eine <strong>Pauschale von 1,50&nbsp;Euro pro Verspätungsfall</strong> ab 60 Minuten Verspätung am Ziel (bei Zugausfall mit derselben Wirkung ebenfalls). Gedeckelt ist das Ganze bei <strong>25&nbsp;% des Monatspreises</strong>: Bei 63&nbsp;Euro Monatspreis (Stand 2026) sind das maximal <strong>15,75&nbsp;Euro pro Monat</strong>. Praktischer Hinweis: Einzelne kleinere Verspätungen ab 20 Minuten können je volle 60 Minuten zu einem Fall gebündelt werden — der Rechner geht davon aus, dass du nur anrechenbare Fälle zählst.</p>
+<p>Bei <strong>Zeitkarten</strong> (Wochen-, Monatskarten) rechnet die Bahn zeitanteilig: Der Kartenpreis wird durch die Gültigkeitstage geteilt, davon werden 25&nbsp;% bzw. 50&nbsp;% erstattet. Weil dabei oft Kleinstbeträge herauskommen, erlaubt Art.&nbsp;19 Abs.&nbsp;2 ausdrücklich, <strong>wiederholte Verspätungen in einem Antrag zu bündeln</strong> — so lässt sich die 4-Euro-Schwelle erreichen. Bei der <strong>BahnCard&nbsp;100</strong> gelten feste Pauschalen: 10&nbsp;Euro ab 60 Minuten, 20&nbsp;Euro ab 120 Minuten Verspätung.</p>
+<h2>Was bei kürzeren Verspätungen trotzdem gilt</h2>
+<p>Einen Entschädigungsanspruch gibt es erst ab 60 Minuten — aber auch darunter hast du Rechte, die sich lohnen:</p>
+<ul>
+<li><strong>Zugbindung aufgehoben ab 20 Minuten:</strong> Ist bei einem Spar- oder Super-Sparpreis-Ticket eine Verspätung von mehr als 20 Minuten zu erwarten, darfst du einen anderen, auch höherwertigen Zug zum Ziel nehmen — ohne Aufpreis.</li>
+<li><strong>Bei Zugausfall oder ≥ 60 Minuten:</strong> Du hast die Wahl zwischen <strong>voller Erstattung</strong> des Fahrpreises (ggf. mit Rückbeförderung), <strong>Weiterreise mit nächster Gelegenheit</strong> oder <strong>Weiterreise zu einem späteren Zeitpunkt</strong> (Art.&nbsp;18).</li>
+<li><strong>100-Minuten-Regel:</strong> Teilt dir die Bahn nicht binnen 100 Minuten nach planmäßiger Abfahrt mit, wie du weiterreisen kannst, darfst du dich selbst organisieren (Taxi, Bus, anderer Anbieter) — die notwendigen Kosten werden erstattet.</li>
+<li><strong>Verpflegung und Unterkunft:</strong> Ab 60 Minuten Verspätung stehen dir angemessene Verpflegung und — wenn die Weiterreise erst am Folgetag möglich ist — eine Hotelübernachtung zu.</li>
+</ul>
+<h2>Antrag stellen: so geht's</h2>
+<p>Den Antrag stellst du beim <strong>Servicecenter Fahrgastrechte</strong> der Deutschen Bahn — am schnellsten über das Online-Formular auf bahn.de. Halte bereit: Ticketnummer (Auftragsnummer), Reisedatum, Start und Ziel, Zugnummer und die tatsächliche Verspätung. Der obige Antragstext ist eine <strong>Vorlage zur Orientierung</strong>: Passe die Platzhalter an und unterschreibe bei schriftlicher Einreichung handschriftlich.</p>
+<p>Die Entschädigung muss <strong>binnen eines Monats</strong> bearbeitet werden (Art.&nbsp;19 Abs.&nbsp;7). Kommt keine Reaktion, lohnt sich eine schriftliche Nachfrage — und notfalls eine Beschwerde bei der <strong>Schlichtungsstelle für den öffentlichen Personenverkehr (söp)</strong>. Der Anspruch verjährt nach <strong>3 Jahren</strong> zum Jahresende. Tipp: Reiche den Antrag bald nach der Reise ein, solange Ticket und Belege griffbereit sind.</p>
+</article>
+
+<article class="prose en-block">
+<h2>English explainer: how this calculator works</h2>
+<p>This tool estimates your compensation when a train in Germany arrives late at its final destination. Under EU Regulation 2021/782, a delay of <strong>60–119 minutes</strong> entitles you to <strong>25 % of the ticket price</strong>; <strong>120 minutes or more</strong> entitles you to <strong>50 %</strong>. The delay is measured at your booked destination (moment the doors open), not at intermediate stops. Compensation is based on the price you actually paid; for a return ticket, half the price. There is a <strong>€4 minimum per ticket</strong> — the operator may refuse smaller amounts.</p>
+<p>Flat rates apply to passes: the <strong>Deutschlandticket</strong> pays a flat <strong>€1.50 per qualifying delay</strong> (60+ minutes), capped at 25 % of the monthly price (€15.75 at the 2026 price of €63); <strong>season tickets</strong> are compensated pro rata (ticket price ÷ validity days), and repeated delays may be pooled in one claim; <strong>BahnCard 100</strong> pays a flat €10 (60+ min) or €20 (120+ min). Even below 60 minutes you have rights: with a saver ticket, the train-binding is lifted once a delay of more than 20 minutes is expected. The tool also drafts a German-language compensation claim letter you can copy and send to Deutsche Bahn's passenger-rights service centre. For orientation only — not legal advice.</p>
+</article>
+
+<section class="faq">
+<h2>Häufige Fragen</h2>
+<div class="faq-item"><h3>Ab wie viel Verspätung bekomme ich eine Entschädigung?</h3><p>Ab 60 Minuten Verspätung am Zielbahnhof: 25 % des Fahrpreises bei 60–119 Minuten, 50 % ab 120 Minuten (Art. 19 VO (EU) 2021/782). Maßgeblich ist die tatsächliche Ankunft am Ziel — der Moment der Türöffnung.</p></div>
+<div class="faq-item"><h3>Wird die Entschädigung vom vollen Ticketpreis berechnet?</h3><p>Grundlage ist der tatsächlich gezahlte Fahrpreis — inklusive BahnCard-Rabatt, falls du einen genutzt hast. Bei einem Hin- und Rückfahrt-Ticket wird der halbe Fahrpreis zugrunde gelegt. Pro Fahrkarte gilt ein Mindestbetrag von 4 Euro.</p></div>
+<div class="faq-item"><h3>Was bekomme ich mit dem Deutschlandticket?</h3><p>1,50 Euro pro Verspätung ab 60 Minuten — auch bei Zugausfall mit derselben Wirkung. Gedeckelt bei 25 % des Monatspreises, also maximal 15,75 Euro pro Monat bei 63 Euro Monatspreis (Stand 2026).</p></div>
+<div class="faq-item"><h3>Was gilt für Monatskarten und andere Zeitkarten?</h3><p>Die Entschädigung wird zeitanteilig berechnet: Kartenpreis geteilt durch Gültigkeitstage, davon 25 % bzw. 50 %. Wiederholte Verspätungen dürfen in einem Antrag gebündelt werden, damit auch die 4-Euro-Schwelle erreicht wird.</p></div>
+<div class="faq-item"><h3>Ich hatte nur 30 Minuten Verspätung — habe ich trotzdem Rechte?</h3><p>Einen Entschädigungsanspruch gibt es erst ab 60 Minuten. Aber: Bei Sparpreisen ist die Zugbindung ab 20 Minuten erwarteter Verspätung aufgehoben; bei Zugausfall hast du die Wahl zwischen Erstattung und Weiterreise; ab 60 Minuten stehen dir Verpflegung und ggf. eine Unterkunft zu.</p></div>
+<div class="faq-item"><h3>Wie stelle ich den Antrag?</h3><p>Beim Servicecenter Fahrgastrechte der Deutschen Bahn — am schnellsten über das Online-Formular auf bahn.de. Halte Ticketnummer, Reisedaten und den Verspätungsnachweis bereit. Die Bearbeitung muss binnen eines Monats erfolgen; der Anspruch verjährt nach 3 Jahren.</p></div>
+</section>
+
+<footer class="credit">
+Built for everyone in Germany · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-15 · For orientation only — not legal advice · Part of the <a href="https://bayzubaan.com/leben/">Bayzubaan Leben in Deutschland</a> series
+</footer>
+</div>
+<script>
+/* Fahrgastrechte-Entschädigungsrechner — Art. 19 VO (EU) 2021/782.
+   Stufe 1: 60-119 Min -> 25 %; Stufe 2: >= 120 Min -> 50 % des Fahrpreises.
+   Mindestbetrag 4 EUR (Art. 19 Abs. 8). Deutschlandticket: 1,50 EUR pro
+   Fall ab 60 Min., gedeckelt bei 25 % des Monatspreises (63 EUR -> 15,75 EUR, Stand 2026).
+   BahnCard 100: 10 EUR (60 Min) / 20 EUR (120 Min) DB-Tarifpauschale. */
+
+var DTICKET_CASE = 1.50;
+var DTICKET_CAP = 15.75;   /* 25 % von 63,00 EUR Monatspreis (2026) */
+var MIN_PAYOUT = 4.00;
+var BC100_60 = 10.00, BC100_120 = 20.00;
+
+function rateFor(min){
+  if(min >= 120) return 0.50;
+  if(min >= 60) return 0.25;
+  return 0;
+}
+
+/* Pure logic — also exercised by node tests against known answers. */
+function calculateComp(o){
+  var rate = rateFor(o.delay);
+  var r = {rate: rate, perPerson: 0, total: 0, capped: false, note: ''};
+  if(rate === 0){ r.note = 'kein_anspruch'; return r; }
+  if(o.type === 'single' || o.type === 'return'){
+    var ref = (o.type === 'return') ? o.price / 2 : o.price;
+    r.perPerson = ref * rate;
+  } else if(o.type === 'dticket'){
+    var n = Math.max(0, Math.floor(o.cases || 0));
+    var raw = n * DTICKET_CASE;
+    r.perPerson = Math.min(raw, DTICKET_CAP);
+    r.capped = raw > DTICKET_CAP;
+  } else if(o.type === 'season'){
+    var days = Math.max(1, Math.floor(o.validDays || 30));
+    r.perPerson = (o.price / days) * rate;
+  } else if(o.type === 'bc100'){
+    r.perPerson = (o.delay >= 120) ? BC100_120 : BC100_60;
+  }
+  r.total = r.perPerson * Math.max(1, Math.floor(o.passengers || 1));
+  if((o.type === 'single' || o.type === 'return' || o.type === 'season') &&
+     r.perPerson > 0 && r.perPerson < MIN_PAYOUT){
+    r.note = 'mindestbetrag';
+  }
+  return r;
+}
+
+function fmtEUR(v){
+  return v.toFixed(2).replace('.', ',') + ' \u20AC';
+}
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function parseLocal(s){ var p = s.split('-'); return new Date(parseInt(p[0],10), parseInt(p[1],10)-1, parseInt(p[2],10)); }
+function fmtShortDE(d){ return d.toLocaleDateString('de-DE', {day:'2-digit', month:'2-digit', year:'numeric'}); }
+
+function updateFields(){
+  var t = document.getElementById('ticket-type').value;
+  document.getElementById('f-price').style.display = (t === 'single' || t === 'return' || t === 'season') ? 'block' : 'none';
+  document.getElementById('f-days').style.display = (t === 'season') ? 'block' : 'none';
+  document.getElementById('f-cases').style.display = (t === 'dticket') ? 'block' : 'none';
+  document.getElementById('f-pax').style.display = (t === 'single' || t === 'return' || t === 'season') ? 'block' : 'none';
+  var hints = {
+    single: 'Der tatsächlich gezahlte Preis — inklusive BahnCard-Rabatt, falls du einen hattest.',
+    return: 'Der Gesamtpreis für Hin- und Rückfahrt. Als Bezugsgröße zählt der halbe Preis (Art. 19 Abs. 3 VO).',
+    season: 'Der Preis deiner Zeitkarte, z. B. 80 € für die Monatskarte.'
+  };
+  if(hints[t]) document.getElementById('price-hint').textContent = hints[t];
+}
+
+function buildLetter(o){
+  var L = [];
+  L.push(o.name || '[Dein Name]');
+  L.push(o.addr || '[Deine Straße und Hausnummer, PLZ Ort]');
+  L.push('');
+  L.push((o.city || '[Ort]') + ', den ' + fmtShortDE(new Date()));
+  L.push('');
+  L.push('Servicecenter Fahrgastrechte');
+  L.push('der Deutschen Bahn');
+  L.push('');
+  L.push('Antrag auf Entschädigung nach Art. 19 VO (EU) 2021/782');
+  L.push('');
+  L.push('Sehr geehrte Damen und Herren,');
+  L.push('');
+  L.push('am ' + (o.travelDate || '[Reisedatum]') + ' reiste ich mit dem Zug ' + (o.train || '[Zugnummer]') +
+         ' von ' + (o.from || '[Abfahrt]') + ' nach ' + (o.to || '[Ziel]') + '.');
+  L.push('Meine planmäßige Ankunft wurde um ' + o.delay + ' Minuten überschritten.');
+  L.push('');
+  L.push('Ticketart: ' + o.ticketLabel + ' · Fahrpreis: ' + o.priceLabel +
+         (o.ticketNo ? ' · Ticketnummer: ' + o.ticketNo : ''));
+  L.push('');
+  L.push('Nach Art. 19 Abs. 1 VO (EU) 2021/782 steht mir bei einer Verspätung ' +
+         (o.rate === 0.5 ? 'von mindestens 120 Minuten' : 'von 60 bis 119 Minuten') +
+         ' eine Entschädigung von ' + (o.rate === 0.5 ? '50 %' : '25 %') + ' zu, also ' + o.amount + '.');
+  L.push('');
+  L.push('Ich bitte um Auszahlung des Betrags' + (o.iban ? ' auf folgendes Konto:\nIBAN: ' + o.iban : ' auf das bekannte Konto') + '.');
+  L.push('');
+  L.push('Mit freundlichen Grüßen');
+  L.push('');
+  L.push('');
+  L.push('___________________________');
+  L.push(o.name || '[Dein Name]');
+  L.push('(handschriftliche Unterschrift bei postalischer Einreichung)');
+  return L.join('\n');
+}
+
+var TICKET_LABELS = {
+  single: 'Einzelfahrt', return: 'Hin- und Rückfahrt', dticket: 'Deutschlandticket',
+  season: 'Zeitkarte (Monatskarte)', bc100: 'BahnCard 100'
+};
+
+function computeF(){
+  var t = document.getElementById('ticket-type').value;
+  var price = parseFloat(document.getElementById('price').value) || 0;
+  var delay = parseInt(document.getElementById('delay').value, 10);
+  var pax = parseInt(document.getElementById('passengers').value, 10) || 1;
+  var validDays = parseInt(document.getElementById('valid-days').value, 10) || 30;
+  var cases = parseInt(document.getElementById('cases').value, 10) || 0;
+
+  if(isNaN(delay) || delay < 0){ alert('Bitte gib eine gültige Verspätung in Minuten ein.'); return; }
+  if((t === 'single' || t === 'return' || t === 'season') && !(price > 0)){
+    alert('Bitte gib den Fahrpreis ein.'); return;
+  }
+
+  var r = calculateComp({type: t, price: price, delay: delay, passengers: pax, validDays: validDays, cases: cases});
+  var verdict = document.getElementById('verdict');
+  var stageEl = document.getElementById('r-stage');
+  var amountEl = document.getElementById('r-amount');
+  var noteEl = document.getElementById('r-note');
+  noteEl.innerHTML = '';
+  var notes = '';
+
+  if(r.note === 'kein_anspruch'){
+    verdict.className = 'verdict none';
+    verdict.textContent = 'Kein Entschädigungsanspruch: Unter 60 Minuten Verspätung sieht Art. 19 VO (EU) 2021/782 keine Entschädigung vor.';
+    stageEl.textContent = '–';
+    amountEl.textContent = fmtEUR(0);
+    notes += '<div class="note">Trotzdem deine Rechte kennen: Bei Sparpreisen ist die <strong>Zugbindung ab 20 Minuten</strong> erwarteter Verspätung aufgehoben. Bei Zugausfall oder ab 60 Minuten hast du die Wahl zwischen <strong>Erstattung und Weiterreise</strong>; teilt dir die Bahn binnen 100 Minuten keine Weiterreise-Option mit, darfst du dich selbst organisieren und die Kosten erstatten lassen.</div>';
+  } else {
+    verdict.className = 'verdict ok';
+    var stageTxt = (r.rate === 0.5) ? 'Stufe 2 · 50 %' : 'Stufe 1 · 25 %';
+    verdict.textContent = 'Anspruch bestätigt: Bei ' + delay + ' Minuten Verspätung stehen dir ' +
+      (r.rate === 0.5 ? '50 %' : '25 %') + ' zu — ' + fmtEUR(r.total) +
+      (pax > 1 ? ' für ' + pax + ' Reisende' : '') + '.';
+    stageEl.textContent = stageTxt;
+    amountEl.textContent = fmtEUR(r.total);
+    if(t === 'dticket'){
+      notes += '<div class="note">Deutschlandticket-Pauschale: 1,50 € pro Fall. ' +
+        (r.capped ? 'Der <strong>Monatsdeckel von 15,75 €</strong> (25 % von 63 €) greift — mehr gibt es in diesem Monat nicht.' :
+          'Noch nicht am Monatsdeckel von 15,75 € — weitere Verspätungen in diesem Monat erhöhen den Betrag weiter.') + '</div>';
+    }
+    if(r.note === 'mindestbetrag'){
+      notes += '<div class="warn"><strong>4-Euro-Schwelle:</strong> Deine errechnete Entschädigung liegt unter 4 € — die Bahn darf die Auszahlung ablehnen. Bei Zeitkarten: <strong>wiederholte Verspätungen gebündelt beantragen</strong> (Art. 19 Abs. 2 VO erlaubt das ausdrücklich).</div>';
+    }
+    if(t === 'bc100'){
+      notes += '<div class="note">BahnCard-100-Pauschale nach DB-Tarif: ' + (delay >= 120 ? '20 €' : '10 €') + ' pro Verspätungsfall ab ' + (delay >= 120 ? '120' : '60') + ' Minuten.</div>';
+    }
+    if(t === 'return'){
+      notes += '<div class="note">Hin- und Rückfahrt: Als Bezugsgröße zählt der <strong>halbe Fahrpreis</strong> (' + fmtEUR(price/2) + '), weil nur eine Strecke verspätet war.</div>';
+    }
+  }
+  noteEl.innerHTML = notes;
+
+  var dateVal = document.getElementById('f-date').value;
+  var letter = buildLetter({
+    name: document.getElementById('f-name').value.trim(),
+    addr: document.getElementById('f-addr').value.trim(),
+    travelDate: dateVal ? fmtShortDE(parseLocal(dateVal)) : '',
+    from: document.getElementById('f-from').value.trim(),
+    to: document.getElementById('f-to').value.trim(),
+    train: document.getElementById('f-train').value.trim(),
+    ticketNo: document.getElementById('f-ticketno').value.trim(),
+    iban: document.getElementById('f-iban').value.trim(),
+    delay: delay,
+    rate: r.rate,
+    amount: fmtEUR(r.total),
+    ticketLabel: TICKET_LABELS[t],
+    priceLabel: (t === 'dticket') ? '63,00 € (Monatspreis 2026)' :
+                (t === 'bc100') ? 'BahnCard 100' : fmtEUR(price)
+  });
+  document.getElementById('letter-box').textContent = letter;
+  document.getElementById('copy-ok').style.display = 'none';
+  document.getElementById('result').style.display = 'block';
+  document.getElementById('result').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function copyLetter(){
+  var text = document.getElementById('letter-box').textContent;
+  function done(){ document.getElementById('copy-ok').style.display = 'block'; }
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(done, function(){ fallbackCopy(text); done(); });
+  } else { fallbackCopy(text); done(); }
+}
+function fallbackCopy(text){
+  var ta = document.createElement('textarea');
+  ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand('copy'); } catch(e){}
+  document.body.removeChild(ta);
+}
+
+document.getElementById('ticket-type').addEventListener('change', updateFields);
+document.getElementById('calc-btn').addEventListener('click', computeF);
+document.getElementById('copy-btn').addEventListener('click', copyLetter);
+updateFields();
+</script>
+</body>
+</html>
