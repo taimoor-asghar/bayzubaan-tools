@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mietpreisbremse-Check: Ist meine Miete zu hoch? | Bayzubaan</title>
+<meta name="description" content="Kostenloser Mietpreisbremse-Check: Kaltmiete, Wohnfläche und Vergleichsmiete eingeben — das Tool berechnet die maximal zulässige Miete (Vergleichsmiete + 10 %) und Ihre mögliche Überzahlung. Mit englischer Zusammenfassung.">
+<link rel="canonical" href="https://bayzubaan.com/leben/mietpreisbremse-check/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mietpreisbremse-Check: Ist meine Miete zu hoch?">
+<meta property="og:description" content="Kaltmiete, Fläche und Vergleichsmiete eingeben — wir berechnen die zulässige Höchstmiete und Ihre mögliche monatliche Überzahlung. Kostenlos, ohne Anmeldung, mit englischer Zusammenfassung.">
+<meta property="og:url" content="https://bayzubaan.com/leben/mietpreisbremse-check/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mietpreisbremse-Check: Ist meine Miete zu hoch?">
+<meta name="twitter:description" content="Kaltmiete, Fläche und Vergleichsmiete eingeben — wir berechnen die zulässige Höchstmiete und Ihre mögliche monatliche Überzahlung. Kostenlos, ohne Anmeldung.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Was ist die Mietpreisbremse?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Die Mietpreisbremse begrenzt die Miete bei Neuvermietung auf die ortsübliche Vergleichsmiete plus zehn Prozent (§§ 556d bis 556g BGB). Sie gilt nur in Städten und Gemeinden, die als Gebiete mit angespanntem Wohnungsmarkt ausgewiesen sind."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gilt die Mietpreisbremse in meiner Stadt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nur wenn Ihre Stadt oder Gemeinde als angespannter Wohnungsmarkt ausgewiesen ist — darunter Berlin, München, Hamburg, Köln und viele weitere. Ob Ihre Stadt dazugehört, erfahren Sie bei der Stadtverwaltung oder beim örtlichen Mieterverein. Dieses Tool fragt es bewusst ab, statt eine Liste zu behaupten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Woher bekomme ich die ortsübliche Vergleichsmiete?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Aus dem Mietspiegel Ihrer Stadt oder Gemeinde — viele Städte veröffentlichen ihn online auf der städtischen Website. Alternativ helfen Mietspiegel-Portale und der örtliche Mieterverein. Vergleichen Sie Wohnungen ähnlicher Lage, Größe, Ausstattung und Baujahr."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was bedeutet „umfassend modernisiert“?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mehr als eine Renovierung: Die Wohnung wurde so aufgewertet, dass sie quasi neuwertig ist (zum Beispiel neue Elektrik, neues Bad, neue Heizung, neue Fenster zusammen). Ein frischer Anstrich allein reicht nicht. Im Zweifel prüft der Mieterverein, ob die Ausnahme wirklich zutrifft."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was kann ich tun, wenn meine Miete zu hoch ist?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Drei Schritte: 1. Lassen Sie sich beim örtlichen Mieterverein beraten — er prüft Ihren Vertrag und berechnet die zulässige Miete exakt. 2. Rügen Sie die überhöhte Miete schriftlich beim Vermieter (Textform genügt). 3. Verlangen Sie die Senkung auf die zulässige Höhe und die Rückzahlung zu viel gezahlter Beträge. Warten Sie nicht monatelang — Fristen laufen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ist das Ergebnis dieses Tools rechtsverbindlich?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Das Tool liefert eine Schätzung auf Basis Ihrer Angaben — keine Rechtsberatung. Verbindliche Auskunft zu Ihrem Einzelfall geben Mietervereine und Anwälte."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field .en-hint{display:block;font-weight:400;font-size:.85rem;color:#64748b;margin-top:2px}
+.field input[type="number"],.field input[type="text"]{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.1rem;font-family:inherit}
+.field input:focus{outline:none;border-color:#2563eb}
+.field .help{font-size:.88rem;color:#64748b;margin-top:6px}
+.radio-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:6px}
+.radio-row label{display:flex;align-items:center;gap:8px;font-weight:500;cursor:pointer}
+.check-row{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;cursor:pointer}
+.check-row input{margin-top:6px;transform:scale(1.25)}
+.check-row span{font-weight:500}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+.verdict{border-radius:12px;padding:20px;margin-bottom:16px}
+.verdict.over{background:#fee2e2;border:1px solid #fca5a5}
+.verdict.ok{background:#dcfce7;border:1px solid #86efac}
+.verdict.info{background:#eff6ff;border:1px solid #bfdbfe}
+.verdict h3{font-size:1.25rem;margin-bottom:8px}
+.verdict.over h3{color:#991b1b}
+.verdict.ok h3{color:#065f46}
+.verdict.info h3{color:#1e3a8a}
+.verdict .en{margin-top:12px;padding-top:12px;border-top:1px dashed #cbd5e1;font-size:.95rem;color:#475569}
+#result table{margin:0 0 4px 0}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+#result .steps{margin-top:14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:16px 18px}
+#result .steps h4{margin-bottom:8px;color:#0f172a}
+#result .steps ol{margin-left:20px}
+#result .steps li{margin-bottom:6px}
+#calc-error{display:none;margin-top:14px;background:#fee2e2;border:1px solid #fca5a5;color:#991b1b;border-radius:8px;padding:12px 16px}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>Mietpreisbremse-Check: Ist meine Miete zu hoch?</h1>
+<p class="byline">Von <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr. Taimoor Asghar</a> · Redaktionell geprüft · Geprüft 2026-10-15</p>
+<p class="lead">Für alle, die in Deutschland mieten — egal ob hier geboren oder neu angekommen. Geben Sie Kaltmiete, Wohnfläche und die ortsübliche Vergleichsmiete ein: Das Tool berechnet die zulässige Höchstmiete (Vergleichsmiete&nbsp;+&nbsp;10&nbsp;%) und Ihre mögliche Überzahlung — kostenlos, ohne Anmeldung, mit englischer Zusammenfassung des Ergebnisses.</p>
+</header>
+
+<div class="calc-card">
+<h2>Der Check</h2>
+
+<div class="field">
+<label for="kaltmiete">Monatliche Kaltmiete (€)
+<span class="en-hint">Your monthly cold rent (without utilities), in euros</span></label>
+<input type="number" id="kaltmiete" min="0" step="0.01" inputmode="decimal" placeholder="z. B. 950">
+</div>
+
+<div class="field">
+<label for="flaeche">Wohnfläche (m²)
+<span class="en-hint">Flat size in square metres</span></label>
+<input type="number" id="flaeche" min="0" step="0.1" inputmode="decimal" placeholder="z. B. 65">
+</div>
+
+<div class="field">
+<label for="vergleich">Ortsübliche Vergleichsmiete (€/m²)
+<span class="en-hint">Local comparative rent per m² from your city's Mietspiegel</span></label>
+<input type="number" id="vergleich" min="0" step="0.01" inputmode="decimal" placeholder="z. B. 10,20">
+<p class="help">Finden Sie im <strong>Mietspiegel</strong> Ihrer Stadt oder Gemeinde (oft online auf der städtischen Website), über Mietspiegel-Portale oder beim örtlichen Mieterverein. Vergleichen Sie Wohnungen ähnlicher Lage, Größe, Ausstattung und Baujahr.</p>
+</div>
+
+<div class="field">
+<label>Ist Ihre Stadt als Gebiet mit angespanntem Wohnungsmarkt ausgewiesen?
+<span class="en-hint">Is your city designated as a tight housing market? (Berlin, Munich, Hamburg, Cologne and many others are — check with your city administration or tenants' association if unsure.)</span></label>
+<div class="radio-row">
+<label><input type="radio" name="stadt" value="ja"> Ja / Yes</label>
+<label><input type="radio" name="stadt" value="nein"> Nein / No</label>
+<label><input type="radio" name="stadt" value="unsicher"> Unsicher / Not sure</label>
+</div>
+</div>
+
+<div class="field">
+<label>Gesetzliche Ausnahmen <span class="en-hint" style="display:block;font-weight:400;font-size:.85rem;color:#64748b;margin-top:2px">Statutory exemptions — tick if either applies</span></label>
+<label class="check-row"><input type="checkbox" id="ex-neubau"><span>Erstvermietung nach Neubau <span style="color:#64748b;font-weight:400">(first letting of a newly built flat)</span></span></label>
+<label class="check-row"><input type="checkbox" id="ex-modern"><span>Umfassend modernisierte Wohnung <span style="color:#64748b;font-weight:400">(comprehensively modernised — quasi as good as new, not just renovated)</span></span></label>
+</div>
+
+<button id="calc-btn" type="button" onclick="checkRent()">Miete prüfen · Check my rent</button>
+<div class="try-row">
+<button type="button" onclick="loadExample()">Berliner Rechenbeispiel laden (Beispielwerte)</button>
+<button type="button" onclick="resetForm()">Zurücksetzen · Reset</button>
+</div>
+<div id="calc-error"></div>
+<div id="result"></div>
+</div>
+
+<article class="prose">
+
+<h2>Was ist die Mietpreisbremse?</h2>
+<p>Die <strong>Mietpreisbremse</strong> begrenzt, wie viel Vermieter bei einer <strong>Neuvermietung</strong> verlangen dürfen: höchstens die <span class="hl">ortsübliche Vergleichsmiete plus zehn Prozent</span> (§§ 556d bis 556g BGB). Sie gilt nur in Städten und Gemeinden, die als <strong>Gebiete mit angespanntem Wohnungsmarkt</strong> ausgewiesen sind — darunter Berlin, München, Hamburg, Köln und viele weitere Kommunen. Ob Ihre Stadt dazugehört, erfahren Sie bei der Stadtverwaltung oder beim örtlichen Mieterverein.</p>
+<p>Der Gedanke dahinter: In gefragten Lagen sollen Neuvertragsmieten nicht völlig vom ortsüblichen Niveau abheben. Gerade <strong>neu Angekommene</strong> — ob aus dem Ausland oder aus einer anderen Stadt — kennen den lokalen Markt nicht und zahlen überdurchschnittlich oft deutlich zu viel. Dieses Tool ist für alle da: deutsche Mieterinnen und Mieter genauso wie Zugezogene aller Nationalitäten.</p>
+
+<h2>So rechnet dieses Tool</h2>
+<p>Sie geben drei Zahlen ein: Ihre monatliche <strong>Kaltmiete</strong> (ohne Nebenkosten), die <strong>Wohnfläche</strong> in Quadratmetern und die <strong>ortsübliche Vergleichsmiete pro Quadratmeter</strong> aus dem örtlichen Mietspiegel. Das Tool multipliziert Vergleichsmiete × Fläche und schlägt zehn Prozent auf — das Ergebnis ist die höchste Miete, die bei Neuvermietung zulässig wäre. Liegt Ihre tatsächliche Kaltmiete darüber, zeigt das Tool die <strong>monatliche und jährliche Überzahlung</strong>. Die beiden Häkchen zu den gesetzlichen Ausnahmen fließen in die Bewertung ein.</p>
+<p>Ein ehrlicher Hinweis vorab: Das Tool kennt Ihren örtlichen Mietspiegel nicht — niemand außer Ihnen (und Ihrem Mieterverein) kennt ihn. Die Qualität des Ergebnisses steht und fällt mit der Vergleichsmiete, die Sie eintragen. Nehmen Sie sich für diesen einen Wert Zeit.</p>
+
+<h2>Wo finde ich die ortsübliche Vergleichsmiete?</h2>
+<p>Die verlässlichste Quelle ist der <strong>Mietspiegel Ihrer Stadt oder Gemeinde</strong> — viele Kommunen veröffentlichen ihn kostenlos online auf der städtischen Website. Alternativ helfen Mietspiegel-Portale im Netz und der örtliche <strong>Mieterverein</strong>, der die Einordnung oft schon im Erstgespräch vornimmt. Wichtig dabei: Der Mietspiegel staffelt nach <strong>Lage, Größe, Ausstattung und Baujahr</strong> — vergleichen Sie also nur Wohnungen, die Ihrer tatsächlich ähneln. Eine 30-m²-Neubauwohnung in Bestlage mit einer 90-m²-Altbauwohnung am Stadtrand zu vergleichen, ergibt keine brauchbare Zahl.</p>
+
+<h2>Wann die Bremse nicht greift</h2>
+<p>Drei Fälle nimmt das Gesetz aus — das Tool fragt zwei davon direkt ab:</p>
+<ul>
+<li><strong>Erstvermietung nach Neubau:</strong> Wird eine neu gebaute Wohnung zum ersten Mal vermietet, gilt die Bremse nicht.</li>
+<li><strong>Umfassend modernisierte Wohnung:</strong> Wurde die Wohnung so aufgewertet, dass sie quasi neuwertig ist (zum Beispiel Elektrik, Bad, Heizung und Fenster gemeinsam erneuert), greift die Bremse ebenfalls nicht. Ein frischer Anstrich oder ein neuer Bodenbelag allein genügen dafür nicht.</li>
+<li><strong>Stadt nicht ausgewiesen:</strong> Liegt Ihre Wohnung nicht in einem als angespannt ausgewiesenen Gebiet, findet die Bremse keine Anwendung.</li>
+</ul>
+<p>Im Zweifel klärt der Mieterverein, ob eine Ausnahme wirklich zutrifft — Vermieter berufen sich erfahrungsgemäß gern darauf, auch wenn die Voraussetzungen nicht erfüllt sind.</p>
+
+<h2>Zu hohe Miete? Ihre nächsten Schritte</h2>
+<ol>
+<li><strong>Beratung holen:</strong> Der örtliche Mieterverein (oft im Deutschen Mieterbund organisiert) prüft Ihren Mietvertrag und berechnet die zulässige Miete exakt — häufig schon im ersten Gespräch.</li>
+<li><strong>Schriftlich rügen:</strong> Teilen Sie dem Vermieter in Textform (Brief oder E-Mail genügt) mit, dass Sie die Miete für überhöht halten — die sogenannte <strong>Rüge</strong>.</li>
+<li><strong>Senkung und Rückzahlung verlangen:</strong> Fordern Sie die Anpassung der Miete auf die zulässige Höhe und die Rückzahlung zu viel gezahlter Beträge.</li>
+</ol>
+<p>Warten Sie mit diesen Schritten nicht monatelang — Fristen laufen, und je früher Sie handeln, desto mehr können Sie zurückholen.</p>
+
+<h2>Rechenbeispiel: Berlin (Beispielwerte!)</h2>
+<p>Das folgende Beispiel nutzt <strong>erfundene, gerundete Werte</strong> — es zeigt nur die Rechenweise, keine echten Berliner Zahlen:</p>
+<table>
+<tr><th>Schritt</th><th>Rechnung</th><th>Ergebnis</th></tr>
+<tr><td>Vergleichsmiete gesamt</td><td>10,20&nbsp;€/m² × 65&nbsp;m²</td><td>663,00&nbsp;€</td></tr>
+<tr><td>Zulässige Höchstmiete (+&nbsp;10&nbsp;%)</td><td>663,00&nbsp;€ × 1,10</td><td>729,30&nbsp;€</td></tr>
+<tr><td>Tatsächliche Kaltmiete</td><td>—</td><td>950,00&nbsp;€</td></tr>
+<tr><td><strong>Überzahlung pro Monat</strong></td><td>950,00&nbsp;€ − 729,30&nbsp;€</td><td><strong>220,70&nbsp;€</strong></td></tr>
+<tr><td><strong>Überzahlung pro Jahr</strong></td><td>220,70&nbsp;€ × 12</td><td><strong>2.648,40&nbsp;€</strong></td></tr>
+</table>
+<p>Klicken Sie oben auf <strong>„Berliner Rechenbeispiel laden“</strong>, um diese Werte direkt ins Tool zu übernehmen und das Ergebnis live zu sehen.</p>
+
+<h2>English summary — how this check works</h2>
+<p><strong>The Mietpreisbremse (rent cap)</strong> limits new-contract cold rent to the <strong>local comparative rent</strong> (<em>ortsübliche Vergleichsmiete</em>, taken from your city's <em>Mietspiegel</em> rent index) <strong>plus 10%</strong>. It applies only in cities and municipalities officially designated as tight housing markets. <strong>How to use this tool:</strong> enter your monthly cold rent (excluding utilities), your flat's size in m², and the comparative rent per m² from the local Mietspiegel. The tool computes the maximum legal rent and your estimated monthly and yearly overpayment. Two exemptions switch off the cap: first letting of a newly built flat, and comprehensively modernised flats. <strong>Honest framing:</strong> this is an estimate based on the numbers you enter — not legal advice. For binding advice on your individual case, contact a local tenants' association (<em>Mieterverein</em>). <strong>Built for everyone:</strong> German tenants and newcomers of every nationality — newcomers are hit hardest by overpriced rents, so the verdict below always comes with a full English summary.</p>
+
+</article>
+
+<section class="faq">
+<h2>Häufige Fragen · FAQ</h2>
+<div class="faq-item"><h3>Was ist die Mietpreisbremse?</h3><p>Die Mietpreisbremse begrenzt die Miete bei Neuvermietung auf die ortsübliche Vergleichsmiete plus zehn Prozent (§§ 556d bis 556g BGB). Sie gilt nur in Städten und Gemeinden, die als Gebiete mit angespanntem Wohnungsmarkt ausgewiesen sind.</p></div>
+<div class="faq-item"><h3>Gilt die Mietpreisbremse in meiner Stadt?</h3><p>Nur wenn Ihre Stadt oder Gemeinde als angespannter Wohnungsmarkt ausgewiesen ist — darunter Berlin, München, Hamburg, Köln und viele weitere. Ob Ihre Stadt dazugehört, erfahren Sie bei der Stadtverwaltung oder beim örtlichen Mieterverein. Dieses Tool fragt es bewusst ab, statt eine Liste zu behaupten.</p></div>
+<div class="faq-item"><h3>Woher bekomme ich die ortsübliche Vergleichsmiete?</h3><p>Aus dem Mietspiegel Ihrer Stadt oder Gemeinde — viele Städte veröffentlichen ihn online auf der städtischen Website. Alternativ helfen Mietspiegel-Portale und der örtliche Mieterverein. Vergleichen Sie Wohnungen ähnlicher Lage, Größe, Ausstattung und Baujahr.</p></div>
+<div class="faq-item"><h3>Was bedeutet „umfassend modernisiert“?</h3><p>Mehr als eine Renovierung: Die Wohnung wurde so aufgewertet, dass sie quasi neuwertig ist (zum Beispiel neue Elektrik, neues Bad, neue Heizung, neue Fenster zusammen). Ein frischer Anstrich allein reicht nicht. Im Zweifel prüft der Mieterverein, ob die Ausnahme wirklich zutrifft.</p></div>
+<div class="faq-item"><h3>Was kann ich tun, wenn meine Miete zu hoch ist?</h3><p>Drei Schritte: 1. Lassen Sie sich beim örtlichen Mieterverein beraten — er prüft Ihren Vertrag und berechnet die zulässige Miete exakt. 2. Rügen Sie die überhöhte Miete schriftlich beim Vermieter (Textform genügt). 3. Verlangen Sie die Senkung auf die zulässige Höhe und die Rückzahlung zu viel gezahlter Beträge. Warten Sie nicht monatelang — Fristen laufen.</p></div>
+<div class="faq-item"><h3>Ist das Ergebnis rechtsverbindlich?</h3><p>Nein. Das Tool liefert eine Schätzung auf Basis Ihrer Angaben — keine Rechtsberatung. Verbindliche Auskunft zu Ihrem Einzelfall geben Mietervereine und Anwälte.</p></div>
+</section>
+
+<footer class="credit">
+Für Mieterinnen, Mieter und neu Angekommene · Inhalt von <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr. Taimoor Asghar</a> · Geprüft 2026-10-15 · Teil der <a href="https://bayzubaan.com/leben/">Bayzubaan Leben-in-Deutschland-Reihe</a>
+</footer>
+</div>
+
+<script>
+function fmtEUR(n){
+  return n.toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2}) + ' \u20AC';
+}
+function getNum(id){
+  var el = document.getElementById(id);
+  var v = parseFloat(String(el.value).replace(',', '.'));
+  return isNaN(v) ? 0 : v;
+}
+function showError(msg){
+  var e = document.getElementById('calc-error');
+  e.textContent = msg;
+  e.style.display = 'block';
+  document.getElementById('result').style.display = 'none';
+}
+function checkRent(){
+  var rent = getNum('kaltmiete');
+  var size = getNum('flaeche');
+  var vgl = getNum('vergleich');
+  var cityEl = document.querySelector('input[name="stadt"]:checked');
+  var neubau = document.getElementById('ex-neubau').checked;
+  var modern = document.getElementById('ex-modern').checked;
+
+  if(!(rent > 0) || !(size > 0) || !(vgl > 0)){
+    showError('Bitte geben Sie Kaltmiete, Wohnfläche und Vergleichsmiete als positive Zahlen ein. / Please enter cold rent, size and comparative rent as positive numbers.');
+    return;
+  }
+  if(!cityEl){
+    showError('Bitte geben Sie an, ob Ihre Stadt als angespannter Wohnungsmarkt ausgewiesen ist. / Please tell us whether your city is a designated tight housing market.');
+    return;
+  }
+  document.getElementById('calc-error').style.display = 'none';
+
+  var vglTotal = vgl * size;
+  var maxLegal = vglTotal * 1.10;
+  var over = rent - maxLegal;
+  var overYear = over * 12;
+  var city = cityEl.value;
+
+  var html = '';
+  var verdictClass, verdictDE, verdictEN;
+
+  if(city === 'nein'){
+    verdictClass = 'info';
+    verdictDE = '<h3>Die Mietpreisbremse gilt hier nicht</h3><p>Ihrer Angabe nach ist Ihre Stadt <strong>nicht</strong> als Gebiet mit angespanntem Wohnungsmarkt ausgewiesen. Dann findet die Mietpreisbremse keine Anwendung — unabhängig von der Miethöhe. Im Zweifel lassen Sie die Einstufung beim Mieterverein oder der Stadtverwaltung prüfen.</p>';
+    verdictEN = '<strong>English summary:</strong> Based on your answer, your city is <strong>not</strong> designated as a tight housing market, so the rent cap does not apply here — regardless of the rent level. If unsure, have the designation confirmed by a tenants\u2019 association or the city administration.';
+    html = '<div class="verdict ' + verdictClass + '">' + verdictDE + '<div class="en">' + verdictEN + '</div></div>';
+  } else if(neubau || modern){
+    var reasonDE = neubau && modern
+      ? 'Erstvermietung nach Neubau und umfassender Modernisierung'
+      : (neubau ? 'Erstvermietung nach Neubau' : 'umfassender Modernisierung');
+    var reasonEN = neubau && modern
+      ? 'first letting of a new build and comprehensive modernisation'
+      : (neubau ? 'first letting of a new build' : 'comprehensive modernisation');
+    verdictClass = 'info';
+    verdictDE = '<h3>Wahrscheinlich von der Bremse ausgenommen</h3><p>Wegen <strong>' + reasonDE + '</strong> greift die Mietpreisbremse für Ihre Wohnung voraussichtlich <strong>nicht</strong> — in diesen Fällen darf die Miete über Vergleichsmiete + 10&nbsp;% liegen. Ob die Ausnahme wirklich zutrifft (gerade bei „umfassend modernisiert“ wird oft zu großzügig argumentiert), prüft im Zweifel der Mieterverein.</p>';
+    verdictEN = '<strong>English summary:</strong> Due to <strong>' + reasonEN + '</strong>, the rent cap most likely does <strong>not</strong> apply to your flat — the rent may legally exceed comparative rent + 10%. A tenants\u2019 association can verify whether the exemption genuinely applies.';
+    html = '<div class="verdict ' + verdictClass + '">' + verdictDE + '<div class="en">' + verdictEN + '</div></div>';
+  } else {
+    var hypo = (city === 'unsicher')
+      ? '<p><strong>Hinweis:</strong> Sie sind unsicher, ob Ihre Stadt ausgewiesen ist — die folgende Rechnung gilt <strong>nur, falls</strong> die Mietpreisbremse dort Anwendung findet. Klären Sie das beim Mieterverein oder der Stadtverwaltung.</p>'
+      : '';
+    var hypoEN = (city === 'unsicher')
+      ? ' <strong>Note:</strong> you were unsure about your city\u2019s designation — the calculation below only holds <strong>if</strong> the rent cap applies there. Please confirm with a tenants\u2019 association or the city administration.'
+      : '';
+    html = hypo;
+    html += '<table><tr><th>Kennzahl · Figure</th><th>Betrag · Amount</th></tr>';
+    html += '<tr><td>Vergleichsmiete gesamt <span style="color:#64748b">(comparative rent, total)</span></td><td>' + fmtEUR(vglTotal) + '</td></tr>';
+    html += '<tr><td>Zulässige Höchstmiete (+&nbsp;10&nbsp;%) <span style="color:#64748b">(max. legal rent)</span></td><td><strong>' + fmtEUR(maxLegal) + '</strong></td></tr>';
+    html += '<tr><td>Ihre Kaltmiete <span style="color:#64748b">(your cold rent)</span></td><td>' + fmtEUR(rent) + '</td></tr>';
+    if(over > 0.005){
+      html += '<tr><td><strong>Überzahlung pro Monat</strong> <span style="color:#64748b">(overpayment / month)</span></td><td><strong>' + fmtEUR(over) + '</strong></td></tr>';
+      html += '<tr><td><strong>Überzahlung pro Jahr</strong> <span style="color:#64748b">(overpayment / year)</span></td><td><strong>' + fmtEUR(overYear) + '</strong></td></tr>';
+    }
+    html += '</table>';
+
+    if(over > 0.005){
+      verdictClass = 'over';
+      verdictDE = '<h3>Wahrscheinlich zu hohe Miete</h3><p>Ihre Kaltmiete liegt <strong>' + fmtEUR(over) + ' pro Monat</strong> über der zulässigen Höchstmiete — das sind <strong>' + fmtEUR(overYear) + ' im Jahr</strong>. Das spricht dafür, dass die Mietpreisbremse verletzt ist.</p>';
+      verdictEN = '<strong>English summary:</strong> Your cold rent is likely <strong>too high</strong> — about <strong>' + fmtEUR(over) + ' per month</strong> (' + fmtEUR(overYear) + ' per year) above the legal maximum. This suggests a breach of the rent cap.';
+    } else {
+      verdictClass = 'ok';
+      verdictDE = '<h3>Miete im Rahmen der Bremse</h3><p>Ihre Kaltmiete liegt <strong>innerhalb</strong> der zulässigen Höchstmiete von ' + fmtEUR(maxLegal) + '. Nach dieser Schätzung verletzt Ihr Vertrag die Mietpreisbremse nicht.</p>';
+      verdictEN = '<strong>English summary:</strong> Your cold rent appears to be <strong>within</strong> the legal maximum of ' + fmtEUR(maxLegal) + '. Based on this estimate, your contract does not breach the rent cap.';
+    }
+    html += '<div class="verdict ' + verdictClass + '" style="margin-top:16px">' + verdictDE + '<div class="en">' + verdictEN + hypoEN + '</div></div>';
+
+    if(over > 0.005){
+      html += '<div class="steps"><h4>Nächste Schritte · Next steps</h4><ol>'
+        + '<li><strong>Beratung holen · Get advice:</strong> Der örtliche Mieterverein prüft Ihren Vertrag und berechnet die zulässige Miete exakt. <span style="color:#64748b">Your local tenants\u2019 association (Mieterverein) will check your contract and compute the exact legal rent — often in the first appointment.</span></li>'
+        + '<li><strong>Schriftlich rügen · Object in writing:</strong> Teilen Sie dem Vermieter in Textform mit, dass Sie die Miete für überhöht halten. <span style="color:#64748b">Tell your landlord in writing (letter or email is enough) that you consider the rent excessive — this formal objection is called a <em>Rüge</em>.</span></li>'
+        + '<li><strong>Senkung verlangen · Demand reduction:</strong> Fordern Sie die Anpassung auf die zulässige Höhe und die Rückzahlung zu viel gezahlter Beträge. <span style="color:#64748b">Demand the rent be lowered to the legal maximum and overpaid amounts refunded. Don\u2019t wait months — deadlines apply.</span></li>'
+        + '</ol></div>';
+    }
+    html += '<div class="note"><strong> Ehrliche Einordnung · Honest framing:</strong> Schätzung auf Basis Ihrer Angaben — keine Rechtsberatung. Verbindliche Auskunft zu Ihrem Einzelfall geben Mietervereine und Anwälte. / <em>Estimate based on your inputs — not legal advice. Tenant associations and lawyers give binding advice for individual cases.</em></div>';
+  }
+
+  var r = document.getElementById('result');
+  r.innerHTML = html;
+  r.style.display = 'block';
+  r.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+}
+function loadExample(){
+  document.getElementById('kaltmiete').value = '950';
+  document.getElementById('flaeche').value = '65';
+  document.getElementById('vergleich').value = '10.20';
+  document.querySelector('input[name="stadt"][value="ja"]').checked = true;
+  document.getElementById('ex-neubau').checked = false;
+  document.getElementById('ex-modern').checked = false;
+  checkRent();
+}
+function resetForm(){
+  document.getElementById('kaltmiete').value = '';
+  document.getElementById('flaeche').value = '';
+  document.getElementById('vergleich').value = '';
+  var c = document.querySelector('input[name="stadt"]:checked');
+  if(c) c.checked = false;
+  document.getElementById('ex-neubau').checked = false;
+  document.getElementById('ex-modern').checked = false;
+  document.getElementById('result').style.display = 'none';
+  document.getElementById('calc-error').style.display = 'none';
+}
+</script>
+</body>
+</html>
