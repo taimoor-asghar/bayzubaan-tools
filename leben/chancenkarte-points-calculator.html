@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chancenkarte Points Calculator — Check Your Germany Opportunity Card Score | Bayzubaan</title>
+<meta name="description" content="Free Chancenkarte points calculator: enter your qualification, experience, languages, age and more to see if you reach the 6 points needed for Germany's Opportunity Card — plus a planner showing how to close the gap.">
+<link rel="canonical" href="https://bayzubaan.com/leben/chancenkarte-points-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chancenkarte Points Calculator — Do You Reach 6 Points?">
+<meta property="og:description" content="Interactive self-check for Germany's Opportunity Card: live points total, per-item breakdown, verdict, and a planner for the points you're missing.">
+<meta property="og:url" content="https://bayzubaan.com/leben/chancenkarte-points-calculator/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Chancenkarte Points Calculator — Do You Reach 6 Points?">
+<meta name="twitter:description" content="Interactive self-check for Germany's Opportunity Card: live points total, per-item breakdown, verdict, and a planner for the points you're missing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Chancenkarte (Opportunity Card)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Chancenkarte is Germany's points-based residence permit for job seekers from outside the EU, introduced in June 2024 under sections 20a and 20b of the Residence Act (AufenthG). It lets you live in Germany for up to one year while you look for qualified work, without needing a job offer first."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many points do I need for the Chancenkarte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You need at least 6 points from the official grid: partial recognition of your qualification (4), shortage occupation (1), work experience (2 or 3), German language level (1 to 3), English C1 (1 extra point), age (2 or 1), a previous legal stay in Germany (1), and a qualifying spouse or partner (1). If your foreign qualification is fully recognised in Germany, you are eligible automatically and do not need any points."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does my nationality affect my Chancenkarte points?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The points system is nationality-blind by design: the same grid applies to every applicant from every country. What counts is your qualification, experience, languages, age and the other listed criteria — never your passport."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I combine German and English points?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Partly. For German, only your highest level counts: A2 gives 1 point, B1 gives 2, B2 or higher gives 3 — they are not cumulative. On top of that, certified English at C1 level adds 1 extra point, so strong English plus strong German is genuinely rewarded."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the baseline requirements besides points?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Points alone are not enough. You must also have a recognised (or partially recognised) professional qualification, at least German A1 or English B2 language skills, and proof you can support yourself — roughly 1,091 euros per month, for example through a blocked account."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this calculator official or legal advice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Neither. This is a self-assessment aid built from the publicly documented points grid — it is not legal advice and it is not the official decision. Always confirm your result with the official self-check on make-it-in-germany.com and, for borderline cases, a qualified immigration adviser."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#f8fafc;color:#1e293b;line-height:1.7}
+.container{max-width:820px;margin:0 auto;padding:24px 16px}
+header.hero{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+h1{font-size:1.9rem;line-height:1.25;margin-bottom:12px;color:#0f172a}
+.byline{color:#64748b;font-size:.9rem;margin-bottom:8px}
+.byline a{color:#2563eb}
+.lead{font-size:1.05rem;color:#334155}
+.prose{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.prose h2{font-size:1.35rem;color:#0f172a;margin:28px 0 12px}
+.prose h2:first-child{margin-top:0}
+.prose p{margin-bottom:14px}
+.prose ul,.prose ol{margin:0 0 14px 22px}
+.prose li{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left}
+th{background:#eff6ff;color:#1e3a8a}
+tr:nth-child(even) td{background:#f8fafc}
+.hl{background:#fef9c3;padding:1px 6px;border-radius:4px;font-weight:600}
+.calc-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.calc-card h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.field{margin-bottom:18px}
+.field>label{display:block;font-weight:600;margin-bottom:8px;color:#0f172a}
+.field select{width:100%;padding:12px 14px;border:2px solid #e2e8f0;border-radius:8px;font-size:1.05rem;font-family:inherit;background:#fff}
+.field select:focus{outline:none;border-color:#2563eb}
+.radio-row{display:flex;gap:8px;flex-wrap:wrap}
+.radio-pill{border:2px solid #e2e8f0;border-radius:999px;padding:8px 16px;cursor:pointer;font-size:.95rem;background:#f8fafc;color:#334155}
+.radio-pill input{margin-right:6px;accent-color:#2563eb}
+.radio-pill:has(input:checked){border-color:#2563eb;background:#eff6ff;color:#1e3a8a;font-weight:600}
+.check-row{display:flex;gap:10px;align-items:flex-start;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;margin-bottom:10px;cursor:pointer}
+.check-row input{margin-top:5px;accent-color:#2563eb;transform:scale(1.2)}
+.check-row span{font-size:.98rem}
+.check-row small{display:block;color:#64748b;font-size:.85rem}
+#calc-btn{background:#2563eb;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:1.05rem;font-weight:700;cursor:pointer;width:100%}
+#calc-btn:hover{background:#1d4ed8}
+#result{display:none;margin-top:20px}
+#result .note{margin-top:14px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#1e3a8a}
+#result .warn{margin-top:14px;background:#fef9c3;border:1px solid #fde047;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#713f12}
+#result .okbox{margin-top:14px;background:#dcfce7;border:1px solid #86efac;border-radius:8px;padding:12px 16px;font-size:.95rem;color:#065f46}
+.score-big{font-size:2.4rem;font-weight:800;color:#1e3a8a}
+.verdict{font-size:1.15rem;font-weight:700;margin:6px 0 4px}
+.try-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.try-row button{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:999px;padding:6px 14px;font-size:.9rem;cursor:pointer;font-family:inherit;color:#334155}
+.try-row button:hover{border-color:#2563eb;color:#1d4ed8}
+.faq{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:32px 28px;margin-bottom:24px}
+.faq h2{font-size:1.35rem;margin-bottom:16px;color:#0f172a}
+.faq-item{margin-bottom:16px}
+.faq-item h3{font-size:1.05rem;color:#1e3a8a;margin-bottom:6px}
+footer.credit{text-align:center;color:#64748b;font-size:.85rem;padding:24px 0}
+footer.credit a{color:#2563eb}
+@media(max-width:600px){.container{padding:16px 12px}header.hero,.prose,.calc-card,.faq{padding:22px 18px}h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="hero">
+<h1>Chancenkarte Points Calculator</h1>
+<p class="byline">By <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-15</p>
+<p class="lead">Germany&#x27;s Opportunity Card runs on points — you need at least 6. Enter your profile below for a live score, a per-item breakdown, and a planner that shows the cheapest way to close any gap. Works for every nationality: the grid is the same for everyone.</p>
+</header>
+<div class="calc-card">
+<h2>The calculator</h2>
+<p style="margin-bottom:16px">Answer honestly — this is a self-check, and inflated answers only mislead you. Your score updates live as you change anything.</p>
+
+<h3 style="font-size:1.05rem;margin-bottom:10px;color:#0f172a">Step 1 — baseline requirements</h3>
+<p style="font-size:.95rem;color:#64748b;margin-bottom:10px">Points only matter if these three hold. Tick what applies to you.</p>
+<label class="check-row"><input type="checkbox" id="b-qual" onchange="calc()"><span>My professional qualification is recognised or partially recognised in Germany<small>Full recognition = automatic eligibility, no points needed. Partial recognition = 4 points below.</small></span></label>
+<label class="check-row"><input type="checkbox" id="b-lang" onchange="calc()"><span>I have at least German A1 or English B2<small>Certified level, e.g. Goethe/telc for German, IELTS/TOEFL for English.</small></span></label>
+<label class="check-row"><input type="checkbox" id="b-funds" onchange="calc()"><span>I can prove funds of roughly &#8364;1,091 per month<small>For example through a blocked account (Sperrkonto) or a formal obligation letter.</small></span></label>
+
+<h3 style="font-size:1.05rem;margin:20px 0 10px;color:#0f172a">Step 2 — your points</h3>
+
+<div class="field">
+<label>Qualification recognition</label>
+<div class="radio-row">
+<label class="radio-pill"><input type="radio" name="qual" value="full" onchange="calc()">Fully recognised</label>
+<label class="radio-pill"><input type="radio" name="qual" value="partial" onchange="calc()" checked>Partially recognised</label>
+<label class="radio-pill"><input type="radio" name="qual" value="none" onchange="calc()">Not recognised</label>
+</div>
+</div>
+
+<div class="field">
+<label class="check-row" style="margin-bottom:0"><input type="checkbox" id="f-shortage" onchange="calc()"><span>My occupation is on Germany&#x27;s shortage-occupation list (Engpassberufe)<small>+1 point. The official list is published by the Federal Employment Agency.</small></span></label>
+</div>
+
+<div class="field">
+<label for="f-exp">Relevant work experience</label>
+<select id="f-exp" onchange="calc()">
+<option value="none">Less than 2 years in the last 5</option>
+<option value="y2">At least 2 years in the last 5 years (+2)</option>
+<option value="y5">At least 5 years in the last 7 years (+3)</option>
+</select>
+</div>
+
+<div class="field">
+<label for="f-german">German language level (highest certified level)</label>
+<select id="f-german" onchange="calc()">
+<option value="none">Below A2 / none</option>
+<option value="a2">A2 (+1)</option>
+<option value="b1">B1 (+2)</option>
+<option value="b2">B2 or higher (+3)</option>
+</select>
+</div>
+
+<div class="field">
+<label class="check-row" style="margin-bottom:0"><input type="checkbox" id="f-english" onchange="calc()"><span>Certified English at C1 level or higher<small>+1 extra point, on top of any German points.</small></span></label>
+</div>
+
+<div class="field">
+<label for="f-age">Age</label>
+<select id="f-age" onchange="calc()">
+<option value="u35">35 or younger (+2)</option>
+<option value="3640">36 to 40 (+1)</option>
+<option value="o40">Over 40 (+0)</option>
+</select>
+</div>
+
+<div class="field">
+<label class="check-row" style="margin-bottom:0"><input type="checkbox" id="f-stay" onchange="calc()"><span>Previous legal stay in Germany of 6+ months in the last 5 years<small>+1 point. Tourism does not count.</small></span></label>
+</div>
+
+<div class="field">
+<label class="check-row" style="margin-bottom:0"><input type="checkbox" id="f-spouse" onchange="calc()"><span>My spouse/partner also meets the Chancenkarte requirements<small>+1 point.</small></span></label>
+</div>
+
+<button id="calc-btn" type="button" onclick="calc()">Calculate my points</button>
+
+<div class="try-row">
+<span style="font-size:.9rem;color:#64748b;align-self:center">Try a sample profile:</span>
+<button type="button" onclick="loadProfile('nurse')">Nurse, 32</button>
+<button type="button" onclick="loadProfile('engineer')">Software engineer, 29</button>
+<button type="button" onclick="loadProfile('electrician')">Electrician, 39</button>
+</div>
+
+<div id="result"></div>
+</div>
+
+<article class="prose">
+<h2>What the Chancenkarte is</h2>
+<p>The <strong>Chancenkarte (Opportunity Card)</strong> is Germany&#x27;s points-based residence permit for skilled workers from outside the EU, introduced in June 2024 under sections 20a and 20b of the Residence Act (AufenthG). It lets you live in Germany for up to one year while you look for qualified employment — <strong>without needing a job offer first</strong>. While searching, you may work in trial jobs and part-time work to support yourself.</p>
+<p>The core idea is simple: instead of proving a job offer up front, you prove <strong>potential</strong> through a transparent points grid. Reach <span class="hl">6 points</span>, meet the three baseline requirements, and you qualify. If your foreign professional qualification is <strong>fully recognised</strong> in Germany, you skip the grid entirely — recognition alone makes you eligible.</p>
+
+<h2>The baseline requirements (non-negotiable)</h2>
+<p>Before counting a single point, three things must hold:</p>
+<ol>
+<li><strong>A recognised qualification.</strong> Your vocational or academic qualification must be recognised in Germany, or at least partially recognised (partial recognition itself earns 4 points, which is why it carries the most weight).</li>
+<li><strong>Minimum language skills.</strong> At least German A1 <em>or</em> English B2, certified. Without one of these, the points do not help you.</li>
+<li><strong>Proof of funds.</strong> You must show you can support yourself during the job search — roughly <strong>&#8364;1,091 per month</strong>, typically through a blocked account (Sperrkonto).</li>
+</ol>
+
+<h2>The points grid, explained</h2>
+<table>
+<tr><th>Criterion</th><th>Points</th></tr>
+<tr><td>Partial recognition of foreign qualification</td><td><strong>4</strong></td></tr>
+<tr><td>Occupation on the shortage list (Engpassberuf)</td><td><strong>1</strong></td></tr>
+<tr><td>2 years&#x27; experience in the last 5 years</td><td><strong>2</strong></td></tr>
+<tr><td>5 years&#x27; experience in the last 7 years</td><td><strong>3</strong> (highest only)</td></tr>
+<tr><td>German A2</td><td><strong>1</strong></td></tr>
+<tr><td>German B1</td><td><strong>2</strong></td></tr>
+<tr><td>German B2 or higher</td><td><strong>3</strong> (highest German level only)</td></tr>
+<tr><td>English C1 or higher (extra point)</td><td><strong>1</strong></td></tr>
+<tr><td>Age 35 or younger</td><td><strong>2</strong></td></tr>
+<tr><td>Age 36 to 40</td><td><strong>1</strong></td></tr>
+<tr><td>Previous legal stay in Germany (6+ months, last 5 years, not tourism)</td><td><strong>1</strong></td></tr>
+<tr><td>Spouse/partner also meets the requirements</td><td><strong>1</strong></td></tr>
+</table>
+<p>Two rules catch people out. <strong>First, German levels don&#x27;t stack</strong> — B2 gives 3 points total, not 1+2+3. <strong>Second, experience doesn&#x27;t stack either</strong> — five years gives 3, not 2+3. The calculator above applies both rules automatically.</p>
+
+<h2>How to read your result</h2>
+<p><strong>6 or more points</strong> with all three baselines ticked means you meet the published criteria — the realistic next step is the official self-check on make-it-in-germany.com and then the actual application at the German mission in your country. <strong>Below 6</strong>, the planner lists the points you haven&#x27;t claimed yet, ordered from easiest to hardest, so you can see the cheapest route across the line. Common closers: a certified English C1 (+1), moving German from A2 to B1 (+1), or checking whether your occupation is actually on the shortage list (+1).</p>
+
+<h2>Worked examples</h2>
+<p><strong>A nurse, 32, from the Philippines.</strong> Partial recognition (+4), nursing is a shortage occupation (+1), 3 years&#x27; experience (+2), German B1 (+2), English C1 (+1), age 32 (+2). Total: <strong>12 points</strong> — qualifies comfortably.</p>
+<p><strong>A software engineer, 29, from India.</strong> Partial recognition (+4), IT on the shortage list (+1), 2 years&#x27; experience (+2), German A2 (+1), English C1 (+1), age 29 (+2). Total: <strong>11 points</strong> — qualifies.</p>
+<p><strong>An electrician, 39, from Brazil.</strong> Qualification not yet recognised (+0), electrical work on the shortage list (+1), 2 years&#x27; experience (+2), German A2 (+1), English B2 (+0), age 39 (+1). Total: <strong>5 points</strong> — one short. The cheapest fixes: certify English C1 (+1), reach German B1 (+1), or start the recognition process (+4).</p>
+<p>Notice what the examples share: the grid treats every nationality identically. Points come from what you can document — qualification, experience, languages — never from where you were born.</p>
+
+<h2>Official sources and honest limits</h2>
+<p>This tool is a <strong>self-assessment aid, not legal advice</strong> and not an official decision. The authoritative references are the official portal <strong>https://www.make-it-in-germany.com</strong> (which runs its own Chancenkarte self-check), the Federal Employment Agency&#x27;s shortage-occupation list, and the text of sections 20a/20b AufenthG. Rules and amounts change — for example, the monthly proof-of-funds figure is updated periodically — so always verify against the official sources before applying. For borderline cases, a qualified immigration adviser is worth the fee.</p>
+</article>
+
+<section class="faq">
+<h2>Frequently asked questions</h2>
+<div class="faq-item"><h3>What is the Chancenkarte (Opportunity Card)?</h3><p>Germany&#x27;s points-based residence permit for non-EU skilled workers, introduced in June 2024 under sections 20a/20b of the Residence Act. It lets you live in Germany for up to a year to find qualified work, without a job offer in hand.</p></div>
+<div class="faq-item"><h3>How many points do I need for the Chancenkarte?</h3><p>At least 6, from the official grid: partial recognition (4), shortage occupation (1), experience (2 or 3), German level (1–3), English C1 (1 extra), age (2 or 1), previous stay (1), qualifying spouse (1). Full recognition of your qualification means automatic eligibility with no points needed.</p></div>
+<div class="faq-item"><h3>Does my nationality affect my points?</h3><p>No. The system is nationality-blind by design — the same grid applies to applicants from every country. Points come from your qualification, experience and languages, never your passport.</p></div>
+<div class="faq-item"><h3>Can I combine German and English points?</h3><p>Partly. Only your highest German level counts (A2 = 1, B1 = 2, B2+ = 3 — not cumulative), and certified English at C1 adds 1 point on top. Strong English plus strong German is genuinely rewarded.</p></div>
+<div class="faq-item"><h3>What are the baseline requirements besides points?</h3><p>A recognised or partially recognised qualification, at least German A1 or English B2, and proof of funds of roughly &#8364;1,091 per month. Points alone are not enough.</p></div>
+<div class="faq-item"><h3>Is this calculator official or legal advice?</h3><p>Neither. It is a self-assessment aid built from the publicly documented points grid. Confirm your result with the official self-check on make-it-in-germany.com and consider a qualified immigration adviser for borderline cases.</p></div>
+</section>
+
+<footer class="credit">
+Built for everyone · Content by <a href="https://bayzubaan.com/dr-taimoor-asghar/" rel="author">Dr Taimoor Asghar</a> · Reviewed 2026-10-15 · Part of the <a href="https://bayzubaan.com/leben/">Bayzubaan life-in-Germany tools</a> series
+</footer>
+</div>
+<script>
+function $(id){ return document.getElementById(id); }
+
+function calc(){
+  var pts = 0, rows = [];
+  function add(label, p){ rows.push({label: label, pts: p}); if(p > 0) pts += p; }
+
+  var qualEl = document.querySelector('input[name="qual"]:checked');
+  var qual = qualEl ? qualEl.value : 'partial';
+  var fastPath = (qual === 'full');
+  if(qual === 'partial') add('Partial recognition of qualification', 4);
+  else if(qual === 'full') add('Qualification fully recognised (fast path — no points needed)', 0);
+  else add('Qualification not recognised', 0);
+
+  var shortage = $('f-shortage').checked;
+  add('Shortage occupation (Engpassberuf)', shortage ? 1 : 0);
+
+  var exp = $('f-exp').value;
+  var expPts = exp === 'y5' ? 3 : (exp === 'y2' ? 2 : 0);
+  var expLabel = exp === 'y5' ? '5+ years in last 7' : (exp === 'y2' ? '2+ years in last 5' : 'under 2 years');
+  add('Work experience (' + expLabel + ')', expPts);
+
+  var german = $('f-german').value;
+  var gPts = german === 'b2' ? 3 : (german === 'b1' ? 2 : (german === 'a2' ? 1 : 0));
+  var gLabel = german === 'none' ? 'below A2' : german.toUpperCase();
+  add('German level (' + gLabel + ')', gPts);
+
+  var eng = $('f-english').checked;
+  add('English C1 or higher', eng ? 1 : 0);
+
+  var age = $('f-age').value;
+  var aPts = age === 'u35' ? 2 : (age === '3640' ? 1 : 0);
+  var aLabel = age === 'u35' ? '35 or younger' : (age === '3640' ? '36\u201340' : 'over 40');
+  add('Age (' + aLabel + ')', aPts);
+
+  var stay = $('f-stay').checked;
+  add('Previous legal stay in Germany (6+ months)', stay ? 1 : 0);
+
+  var spouse = $('f-spouse').checked;
+  add('Spouse/partner also qualifies', spouse ? 1 : 0);
+
+  var bq = $('b-qual').checked, bl = $('b-lang').checked, bf = $('b-funds').checked;
+  var baseMissing = [];
+  if(!bq) baseMissing.push('recognised/partially recognised qualification');
+  if(!bl) baseMissing.push('German A1 or English B2 minimum');
+  if(!bf) baseMissing.push('proof of funds (~\u20AC1,091/month)');
+  var baseOk = baseMissing.length === 0;
+
+  var html = '<table><tr><th>Criterion</th><th style="width:90px">Points</th></tr>';
+  rows.forEach(function(r){
+    html += '<tr><td>' + r.label + '</td><td><strong>' + r.pts + '</strong></td></tr>';
+  });
+  html += '</table>';
+  html += '<div style="margin:16px 0 4px"><span class="score-big">' + pts + '</span> <span style="font-size:1.1rem;color:#64748b">/ 6 points needed</span></div>';
+
+  if(fastPath){
+    html += '<div class="okbox"><span class="verdict">Automatic eligibility.</span><br>Your qualification is fully recognised in Germany, so the points grid does not apply to you — that alone makes you eligible for the Chancenkarte. You still need the language minimum and proof of funds.</div>';
+  } else if(pts >= 6 && baseOk){
+    html += '<div class="okbox"><span class="verdict">You qualify on points.</span><br>You reach <strong>' + pts + ' points</strong> and meet the baseline requirements. Next step: confirm with the official self-check on make-it-in-germany.com, then apply at the German mission in your country.</div>';
+  } else if(pts >= 6 && !baseOk){
+    html += '<div class="warn"><span class="verdict">Points reached, baseline missing.</span><br>You have <strong>' + pts + ' points</strong>, but the baseline is incomplete: <strong>' + baseMissing.join('; ') + '</strong>. Points only count once all three hold.</div>';
+  } else {
+    var short = 6 - pts;
+    html += '<div class="warn"><span class="verdict">' + pts + ' points \u2014 ' + short + ' short of 6.</span>' + (baseOk ? '' : '<br>Also missing baseline: <strong>' + baseMissing.join('; ') + '</strong>.') + '</div>';
+    html += '<h3 style="font-size:1.05rem;margin:18px 0 10px;color:#0f172a">How to reach 6 — cheapest first</h3>';
+    var sugg = buildPlanner(qual, shortage, exp, german, eng, stay, spouse);
+    if(sugg.length){
+      html += '<ul style="margin:0 0 0 20px">';
+      sugg.forEach(function(s){
+        html += '<li style="margin-bottom:8px"><strong>+' + s.p + ' point' + (s.p > 1 ? 's' : '') + ':</strong> ' + s.t + ' <span style="color:#64748b;font-size:.9rem">(' + s.e + ')</span><br><span style="color:#475569;font-size:.95rem">' + s.d + '</span></li>';
+      });
+      html += '</ul>';
+    } else {
+      html += '<p style="color:#64748b">No further point sources available in your answers — review them, or consider the full-recognition route.</p>';
+    }
+  }
+
+  html += '<div class="note">Self-assessment only — not legal advice and not an official decision. Confirm with the official calculator on <strong>make-it-in-germany.com</strong>.</div>';
+  var res = $('result');
+  res.innerHTML = html;
+  res.style.display = 'block';
+}
+
+function buildPlanner(qual, shortage, exp, german, eng, stay, spouse){
+  var s = [];
+  if(!spouse) s.push({o:1, p:1, t:'Qualifying partner', e:'easy, if applicable', d:'If your spouse or partner also meets the baseline requirements, that is +1 point.'});
+  if(!eng) s.push({o:2, p:1, t:'Certified English at C1', e:'medium effort', d:'A certified C1 English exam adds +1 point on top of any German points.'});
+  if(german === 'none' || german === 'a1') s.push({o:3, p:1, t:'Certify German A2', e:'medium effort', d:'Your first German point — an A2 certificate from Goethe or telc.'});
+  else if(german === 'a2') s.push({o:3, p:1, t:'Move German from A2 to B1', e:'medium effort', d:'One level up doubles your German points from 1 to 2.'});
+  else if(german === 'b1') s.push({o:3, p:1, t:'Move German from B1 to B2', e:'medium effort', d:'One level up takes your German points from 2 to 3.'});
+  if(!shortage) s.push({o:4, p:1, t:'Check the shortage-occupation list', e:'easy', d:'Many applicants do not realise their trade is listed by the Federal Employment Agency. +1 point if yours is.'});
+  if(qual === 'none') s.push({o:5, p:4, t:'Apply for recognition of your qualification', e:'involved, biggest lever', d:'Partial recognition alone is worth +4 points — usually the fastest route across the line.'});
+  if(exp === 'none') s.push({o:6, p:2, t:'Reach 2 years of relevant experience', e:'takes time', d:'Experience accrues with time: +2 points at the 2-year mark.'});
+  else if(exp === 'y2') s.push({o:6, p:1, t:'Reach 5 years of experience in the last 7', e:'takes time', d:'One more point on top of the 2 you already have.'});
+  if(!stay) s.push({o:7, p:1, t:'Previous stay in Germany', e:'not plannable', d:'Only counts if you have already lived in Germany 6+ months (not tourism) — not something to plan for.'});
+  s.sort(function(a,b){ return a.o - b.o; });
+  return s;
+}
+
+var PROFILES = {
+  nurse:      {qual:'partial', shortage:true,  exp:'y2',   german:'b1', english:true,  age:'u35',  stay:false, spouse:false, bq:true,  bl:true, bf:true},
+  engineer:   {qual:'partial', shortage:true,  exp:'y2',   german:'a2', english:true,  age:'u35',  stay:false, spouse:false, bq:true,  bl:true, bf:true},
+  electrician:{qual:'none',    shortage:true,  exp:'y2',   german:'a2', english:false, age:'3640', stay:false, spouse:false, bq:false, bl:true, bf:true}
+};
+
+function loadProfile(name){
+  var p = PROFILES[name];
+  if(!p) return;
+  document.querySelector('input[name="qual"][value="' + p.qual + '"]').checked = true;
+  $('f-shortage').checked = p.shortage;
+  $('f-exp').value = p.exp;
+  $('f-german').value = p.german;
+  $('f-english').checked = p.english;
+  $('f-age').value = p.age;
+  $('f-stay').checked = p.stay;
+  $('f-spouse').checked = p.spouse;
+  $('b-qual').checked = p.bq;
+  $('b-lang').checked = p.bl;
+  $('b-funds').checked = p.bf;
+  calc();
+  $('result').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+calc();
+</script>
+</body>
+</html>
