@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UAE VAT Calculator — Add or Remove 5% VAT | Bayzubaan</title>
+<meta name="description" content="Add or remove UAE VAT at the 5% standard rate, with presets for Australia 10%, New Zealand 15%, Saudi Arabia 15% and India 0%, 5%, 18% and 40%. Worked FTA-style examples included.">
+<meta property="og:title" content="UAE VAT Calculator — Add or Remove 5% VAT">
+<meta property="og:description" content="Add VAT to a net price or extract VAT from a gross price, at UAE 5% or another preset rate.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://bayzubaan.com/uae/vat-calculator-uae/">
+<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:860px;margin:0 auto;padding:20px;line-height:1.65;color:#1c2733}h1{font-size:1.9em;line-height:1.25}h2{margin-top:1.8em}.card{border:1px solid #d5dde5;border-radius:12px;padding:20px;background:#f7fafc}label{display:block;margin:12px 0 4px;font-weight:600}input,select{width:100%;padding:10px;font-size:16px;border:1px solid #b9c4cf;border-radius:8px;box-sizing:border-box}button{background:#0b5e4b;color:#fff;border:0;padding:12px 22px;font-size:17px;border-radius:8px;cursor:pointer;margin-top:16px}button:hover{background:#084a3c}.result{font-size:1.3em;font-weight:700;margin-top:16px}.small{font-size:.92em;color:#44546a}table{border-collapse:collapse;width:100%;margin:12px 0}th,td{border:1px solid #d5dde5;padding:8px;text-align:left}.note{background:#eef6ff;border:1px solid #bcd6f5;border-radius:10px;padding:14px}</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is the UAE VAT rate?","acceptedAnswer":{"@type":"Answer","text":"The UAE standard VAT rate is 5%, introduced on 1 January 2018 and administered by the Federal Tax Authority (FTA). Some supplies are zero-rated at 0% or exempt."}},
+{"@type":"Question","name":"How do I add 5% VAT to a price?","acceptedAnswer":{"@type":"Answer","text":"Multiply the net price by 1.05. For example, AED 1,000 net plus 5% VAT is AED 1,050, with AED 50 of VAT."}},
+{"@type":"Question","name":"How do I remove VAT from a price that already includes it?","acceptedAnswer":{"@type":"Answer","text":"Divide the gross price by 1.05. For example, AED 1,050 including 5% VAT is AED 1,000 net with AED 50 of VAT. Do not simply take 5% off the gross price."}},
+{"@type":"Question","name":"When must a UAE business register for VAT?","acceptedAnswer":{"@type":"Answer","text":"Registration is mandatory when taxable supplies exceed AED 375,000 in a consecutive 12-month period, and voluntary registration is available from AED 187,500."}},
+{"@type":"Question","name":"What is the difference between zero-rated and exempt?","acceptedAnswer":{"@type":"Answer","text":"A zero-rated supply is taxed at 0% and the supplier can generally still recover input VAT; an exempt supply is outside VAT and input VAT on related costs is generally not recoverable."}},
+{"@type":"Question","name":"How is VAT rounded on a UAE invoice?","acceptedAnswer":{"@type":"Answer","text":"FTA tax-invoice guidance states rounding is carried out on a line-item basis to the nearest fils."}}]}</script>
+</head><body>
+<p><a href="https://bayzubaan.com/">Bayzubaan</a> &rsaquo; UAE tools</p>
+<h1>UAE VAT Calculator: Add or Remove VAT</h1>
+<p class="small">General information only — not tax advice. Confirm the treatment of a specific supply with the UAE Federal Tax Authority (FTA) guidance or a registered tax agent.</p>
+<div class="card">
+<label for="mode">Calculation</label>
+<select id="mode"><option value="add">Add VAT (price excludes VAT)</option><option value="remove">Remove VAT (price includes VAT)</option></select>
+<label for="amount">Amount</label>
+<input id="amount" type="number" min="0" step="any" value="1000">
+<label for="preset">Rate preset</label>
+<select id="preset" onchange="syncRate()">
+<option value="5" data-cur="AED">UAE VAT — 5% (standard)</option>
+<option value="10" data-cur="AUD">Australia GST — 10%</option>
+<option value="15" data-cur="NZD">New Zealand GST — 15%</option>
+<option value="15" data-cur="SAR">Saudi Arabia VAT — 15%</option>
+<option value="0" data-cur="INR">India GST — 0% (nil-rated)</option>
+<option value="5" data-cur="INR">India GST — 5%</option>
+<option value="18" data-cur="INR">India GST — 18% (standard)</option>
+<option value="40" data-cur="INR">India GST — 40% (luxury / sin goods)</option>
+<option value="custom" data-cur="">Custom rate…</option>
+</select>
+<label for="rate">Rate (%)</label>
+<input id="rate" type="number" min="0" max="100" step="any" value="5">
+<button onclick="calc()">Calculate</button>
+<div class="result" id="out"></div>
+<div id="detail"></div>
+</div>
+<script>
+function syncRate(){var s=document.getElementById("preset");if(s.value!=="custom"){document.getElementById("rate").value=s.value;}calc();}
+function money(n,cur){return cur+" "+n.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});}
+function round2(n){return Math.round((n+Number.EPSILON)*100)/100;}
+function calc(){
+  var mode=document.getElementById("mode").value;
+  var amt=parseFloat(document.getElementById("amount").value)||0;
+  var rate=parseFloat(document.getElementById("rate").value)||0;
+  var cur=document.getElementById("preset").selectedOptions[0].dataset.cur||"";
+  if(!cur)cur="AED";
+  var r=rate/100, net, tax, gross;
+  if(mode==="add"){net=round2(amt);tax=round2(net*r);gross=round2(net+tax);}
+  else{gross=round2(amt);net=round2(gross/(1+r));tax=round2(gross-net);}
+  document.getElementById("out").textContent="VAT: "+money(tax,cur)+"  ·  Total: "+money(gross,cur);
+  document.getElementById("detail").innerHTML="<p>Net (excluding tax): <strong>"+money(net,cur)+"</strong><br>Tax at "+rate+"%: <strong>"+money(tax,cur)+"</strong><br>Gross (including tax): <strong>"+money(gross,cur)+"</strong><br>"+(mode==="add"?"Formula: "+money(net,cur)+" × "+(1+r).toFixed(2)+" = "+money(gross,cur):"Formula: "+money(gross,cur)+" ÷ "+(1+r).toFixed(2)+" = "+money(net,cur)+" (VAT is "+money(tax,cur)+", not "+rate+"% of the gross price)")+"</p>";
+}
+calc();
+</script>
+<h2>How VAT works in the UAE</h2>
+<p>Value Added Tax in the United Arab Emirates is a consumption tax charged at each stage of a supply chain, with registered businesses collecting it from customers and offsetting the tax they paid on their own business purchases. The UAE introduced VAT on 1 January 2018 at a standard rate of 5 percent, administered by the Federal Tax Authority, and that standard rate has not changed since. It applies uniformly across all seven Emirates, so a price in Dubai and a price in Abu Dhabi carry the same standard rate, and there is no emirate-level variation to adjust for. What does vary is the treatment of particular supplies: most goods and services are standard-rated at 5 percent, a defined set is zero-rated at 0 percent, and another set is exempt. Getting that classification right matters far more than the arithmetic, because the arithmetic is only two formulas, while the classification decides whether any tax is due at all.</p>
+<p>The two formulas are worth stating plainly because one of them is routinely done wrong. To add VAT to a price that excludes it, multiply the net price by the rate: a net price of AED 1,000 at 5 percent carries AED 50 of VAT and a gross total of AED 1,050. To remove VAT from a price that already includes it, divide the gross price by one plus the rate: AED 1,050 divided by 1.05 gives a net price of AED 1,000 and VAT of AED 50. The common mistake is to take 5 percent off the gross price instead, which gives AED 997.50 and overstates the VAT by AED 2.50; the VAT inside a gross price is 5 divided by 105 of that price, or about 4.76 percent of it, not 5 percent. The same logic scales to every other rate on this page: at 15 percent you divide by 1.15, and at 10 percent you divide by 1.10, which is also why the GST inside an Australian inclusive price is exactly one eleventh of that price.</p>
+<p>Zero-rated and exempt supplies are often confused, and the distinction has real cash consequences. A zero-rated supply, such as exports of goods outside the GCC, international transport, and certain healthcare and education supplies, is still a taxable supply but at 0 percent, so the supplier can generally recover the input VAT paid on related costs. An exempt supply, such as the sale of bare land, local passenger transport, and residential property after its first sale, sits outside VAT altogether, and input VAT on directly related costs is generally not recoverable. A business that treats an exempt supply as zero-rated will over-claim input tax, and one that treats a zero-rated supply as exempt will leave recoverable tax on the table. If you are unsure which category a supply falls into, that is the question to put to a tax agent, not something a calculator can decide from a price alone.</p>
+<p>Registration follows thresholds that every freelancer and small business in the UAE should know. Registration becomes mandatory when taxable supplies exceed AED 375,000 in any consecutive twelve-month period, and voluntary registration is available once supplies reach AED 187,500. Registration must be completed within thirty days of crossing the mandatory threshold, and returns are generally filed for a tax period assigned by the FTA, most commonly three calendar months, within twenty-eight days after the period ends. The net VAT payable on a return is output VAT collected on sales minus recoverable input VAT paid on purchases: a business that collected AED 20,000 and paid AED 10,000 of recoverable input VAT owes AED 10,000, not AED 20,000. Rounding, under current FTA tax-invoice guidance, is carried out on a line-item basis to the nearest fils, which is why this calculator rounds each result to two decimal places rather than rounding only a grand total.</p>
+<h2>Using the other rate presets honestly</h2>
+<p>This page defaults to the UAE because that is its home use, but the same add-and-remove arithmetic serves anyone pricing across borders, and the presets exist so that a single tool covers the rates people actually compare. Australia charges Goods and Services Tax at 10 percent, unchanged since GST began on 1 July 2000, with basic food, many health and education services, childcare and exports generally GST-free. New Zealand charges GST at a single broad rate of 15 percent on almost all goods and services, with very few exemptions, which is why its inclusive-price shortcut is to multiply by 3 and divide by 23. Saudi Arabia also charges 15 percent as its standard rate, raised from 5 percent on 1 July 2020 and administered by ZATCA, the Zakat, Tax and Customs Authority. India is the preset that changed most recently and therefore the one to handle with care: under the GST 2.0 reform effective 22 September 2025, the old 12 percent and 28 percent slabs were abolished, leaving 0 percent nil-rated, 5 percent, 18 percent as the standard rate, and a new 40 percent rate for a narrow list of luxury and sin goods, alongside special rates such as 3 percent for gold and jewellery. Older guides that still list 12 percent and 28 percent as live Indian slabs are out of date, and this calculator deliberately omits them as presets; the custom-rate box remains for any special rate a particular item requires.</p>
+<p>Canada is covered on the companion Australian GST page, where the federal 5 percent rate combines with provincial rates into HST totals that differ by province, and it is worth remembering here that no single Canada-wide preset is honest without naming the province. The practical lesson across all of these systems is the same: the rate is a fact about a place and a category, not a property of the calculator, and the calculator's job is to apply the rate you have verified for your supply, in the right direction, with the right rounding. Check the rate against the issuing authority before you invoice, keep the invoice showing the tax separately where the rules require it, and treat any figure this tool produces as arithmetic on your inputs rather than a ruling on your liability.</p>
+<h2>Worked examples</h2>
+<table><tr><th>Case</th><th>Working</th><th>Result</th></tr>
+<tr><td>UAE, add 5% to AED 1,000</td><td>1,000 × 0.05</td><td>VAT AED 50; total AED 1,050</td></tr>
+<tr><td>UAE, remove 5% from AED 1,050</td><td>1,050 ÷ 1.05</td><td>Net AED 1,000; VAT AED 50</td></tr>
+<tr><td>UAE, add 5% to AED 10,000</td><td>10,000 × 0.05</td><td>VAT AED 500; total AED 10,500</td></tr>
+<tr><td>New Zealand, add 15% to NZD 100</td><td>100 × 0.15</td><td>VAT NZD 15; total NZD 115</td></tr>
+<tr><td>Saudi Arabia, remove 15% from SAR 1,150</td><td>1,150 ÷ 1.15</td><td>Net SAR 1,000; VAT SAR 150</td></tr>
+<tr><td>India, add 18% to INR 1,000</td><td>1,000 × 0.18</td><td>GST INR 180; total INR 1,180</td></tr></table>
+<h2>Frequently asked questions</h2>
+<p><strong>What is the UAE VAT rate?</strong> The standard rate is 5 percent, introduced on 1 January 2018 and administered by the FTA. Some supplies are zero-rated at 0 percent or exempt.</p>
+<p><strong>How do I add 5% VAT to a price?</strong> Multiply the net price by 1.05. AED 1,000 net becomes AED 1,050 including AED 50 of VAT.</p>
+<p><strong>How do I remove VAT from a price that already includes it?</strong> Divide by 1.05 for the UAE rate. AED 1,050 including VAT is AED 1,000 net with AED 50 of VAT.</p>
+<p><strong>When must a UAE business register for VAT?</strong> Mandatory registration applies above AED 375,000 of taxable supplies in a consecutive twelve months; voluntary registration is available from AED 187,500.</p>
+<p><strong>What is the difference between zero-rated and exempt?</strong> Zero-rated supplies are taxed at 0 percent with input VAT generally recoverable; exempt supplies are outside VAT and related input VAT is generally not recoverable.</p>
+<p><strong>How is VAT rounded on a UAE invoice?</strong> FTA tax-invoice guidance states rounding is carried out on a line-item basis to the nearest fils.</p>
+<h2>Sources</h2>
+<ul>
+<li>UAE Federal Tax Authority VAT framework: standard rate 5 percent; registration thresholds AED 375,000 mandatory and AED 187,500 voluntary.</li>
+<li><a href="https://theaccountant.ae/how-to-calculate-vat-in-uae/">theaccountant.ae — How to calculate VAT in UAE</a></li>
+<li><a href="https://mazeed.com/blog/uae-vat-calculation/">mazeed.com — UAE VAT calculation, formulas and examples</a></li>
+<li><a href="https://www.cleartax.com/sa/vat-rates-saudi-arabia">ClearTax — VAT rates in Saudi Arabia (15 percent standard)</a></li>
+<li><a href="https://taxgarden.in/blog/gst-rates-list-india-item-wise-0-5-18-40-slabs-2026">Tax Garden — India GST 2.0 slabs, 0, 5, 18 and 40 percent from 22 September 2025</a></li>
+</ul>
+<p class="small">This calculator performs arithmetic on the rate you select. It is not tax advice and does not determine whether a particular supply is standard-rated, zero-rated or exempt. Confirm classifications, thresholds and filing obligations with FTA guidance or a registered tax agent.</p>
+</body></html>
