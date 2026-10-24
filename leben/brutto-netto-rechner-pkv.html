@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brutto-Netto-Rechner mit PKV 2026: Netto bei privater Krankenversicherung | Bayzubaan</title>
+<meta name="description" content="Brutto-Netto-Rechner mit privater Krankenversicherung 2026: Nettogehalt für Privatversicherte — Lohnsteuer nach dem BMF-Programmablaufplan 2026, Arbeitgeberzuschuss bis zum gesetzlichen Höchstbetrag und PKV-Beitrag als Eingabe.">
+<meta property="og:title" content="Brutto-Netto-Rechner mit PKV 2026: Was bleibt privat Versicherten netto?">
+<meta property="og:description" content="Für Privatversicherte: Brutto zu Netto 2026 mit PKV-Beitrag, Arbeitgeberzuschuss (Höchstbetrag 2026: 613,22 Euro) und Lohnsteuer nach dem BMF-Programmablaufplan — GKV nur als Vergleichskontext.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://bayzubaan.com/leben/brutto-netto-rechner-pkv/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Wie hoch ist der Arbeitgeberzuschuss zur PKV 2026?","acceptedAnswer":{"@type":"Answer","text":"Der Arbeitgeber zahlt die Hälfte Ihres tatsächlichen PKV-Beitrags, höchstens aber so viel, wie er für einen gesetzlich Versicherten zahlen müsste. 2026 liegt dieser Höchstbetrag bei 508,59 Euro im Monat zur Krankenversicherung und 104,63 Euro zur Pflegeversicherung, zusammen also 613,22 Euro im Monat. Unterhalb der Beitragsbemessungsgrenze ist der Höchstbetrag entsprechend niedriger, weil er sich am tatsächlichen Gehalt orientiert."}},
+{"@type":"Question","name":"Warum muss ich meinen PKV-Beitrag selbst eingeben?","acceptedAnswer":{"@type":"Answer","text":"Weil es keinen einheitlichen PKV-Beitrag gibt: Die Prämie hängt von Tarif, Leistungsumfang, Alter, Gesundheitszustand und Selbstbeteiligung ab und wird individuell kalkuliert. Jeder Rechner, der Ihnen eine PKV-Prämie vorgibt, ohne Ihren Tarif zu kennen, erfindet eine Zahl. Hier ist der Beitrag deshalb eine Eingabe — nehmen Sie ihn aus Ihrem Versicherungsvertrag oder Ihrer letzten Beitragsmitteilung."}},
+{"@type":"Question","name":"Zahlt der Arbeitgeber den Zuschuss auch in Steuerklasse VI?","acceptedAnswer":{"@type":"Answer","text":"Nein. Der Arbeitgeberzuschuss wird nur vom Hauptarbeitgeber gezahlt. In Steuerklasse VI, also bei einem Zweitjob, setzt dieser Rechner — wie die Vorwärtsrechnung des Brutto-Netto-Rechners — keinen Arbeitgeberzuschuss an; der volle PKV-Beitrag geht dann zu Ihren Lasten."}},
+{"@type":"Question","name":"Wer kann sich überhaupt privat versichern?","acceptedAnswer":{"@type":"Answer","text":"Als Arbeitnehmer in der Regel, wenn Ihr regelmäßiges Jahresarbeitsentgelt über der Jahresarbeitsentgeltgrenze liegt — 2026 bei 77.400 Euro im Jahr (6.450 Euro im Monat). Daneben gibt es weitere Gruppen, etwa Beamte mit Beihilfe und Selbstständige. Der Rechner prüft die Anspruchsvoraussetzung nicht; er berechnet nur, was bei einem gegebenen Brutto und einem gegebenen PKV-Beitrag netto herauskommt."}},
+{"@type":"Question","name":"Wie wirkt die PKV auf die Lohnsteuer?","acceptedAnswer":{"@type":"Answer","text":"In der Lohnsteuerberechnung tritt an die Stelle des gesetzlichen Kranken- und Pflegeanteils der Vorsorgepauschale Ihr tatsächlicher Beitrag zur privaten Basiskranken- und Pflege-Pflichtversicherung abzüglich des Arbeitgeberzuschusses. Ein höherer Eigenanteil senkt also das zu versteuernde Einkommen in der Lohnsteuerberechnung und damit die Lohnsteuer — aber nur im Rahmen der Vorsorgepauschale, nicht Euro für Euro."}},
+{"@type":"Question","name":"Ist die PKV im Alter teurer als die GKV?","acceptedAnswer":{"@type":"Answer","text":"Das lässt sich pauschal nicht sagen, und dieser Rechner behauptet es auch nicht: PKV-Beiträge steigen vor allem durch medizinische Kostenentwicklung und können im Alter deutlich steigen, auch wenn Altersrückstellungen und Beitragsentlastungstarife dämpfen. Im Ruhestand entfällt außerdem der Arbeitgeberzuschuss. Wer nur das heutige Monatsnetto vergleicht, unterschätzt die langfristige Beitragsentwicklung — vergleichen Sie deshalb immer auch, was der Tarif in 10 oder 20 Jahren kosten könnte, und lassen Sie sich vom Versicherer die Beitragsentwicklung zeigen."}},
+{"@type":"Question","name":"Was zeigt der GKV-Vergleich auf dieser Seite?","acceptedAnswer":{"@type":"Answer","text":"Nur einen Kontextwert, keine zweite Berechnung: Mit denselben Eingaben (Brutto, Steuerklasse, Bundesland, Kirche, Kinder) wird dieselbe Engine einmal im GKV-Modus durchgerechnet — 7,3 Prozent plus halber Zusatzbeitrag von 2,9 Prozent bis zur Beitragsbemessungsgrenze. So sehen Sie, wie hoch der gesetzliche Arbeitnehmeranteil wäre; eine Aussage über Leistungen oder über die Vorteilhaftigkeit eines Wechsels trifft der Vergleich nicht."}},
+{"@type":"Question","name":"Was bildet der Rechner nicht ab?","acceptedAnswer":{"@type":"Answer","text":"Den Regelfall eines gleichbleibenden Monatsgehalts mit gesetzlicher Rentenversicherung: kein Faktorverfahren in Klasse IV, keine eingetragenen Frei- oder Hinzurechnungsbeträge, keine Versorgungsbezüge, keine sonstigen Bezüge wie Weihnachtsgeld oder Boni, keine Kirchensteuerkappung, kein Übergangsbereich (Midijob) bis 2.000 Euro, keine Beihilfe-Besonderheiten für Beamte und keine Tarifdetails wie Selbstbeteiligung, Beitragsrückerstattung oder Altersrückstellungen."}},
+{"@type":"Question","name":"Ist dieser Rechner eine Steuerberatung?","acceptedAnswer":{"@type":"Answer","text":"Nein. Er liefert eine unverbindliche Orientierung auf Basis des BMF-Programmablaufplans 2026 und der Sozialversicherungswerte 2026. Er ersetzt keine Steuerberatung und keinen Steuerbescheid; maßgeblich sind Ihre Lohnabrechnung, Ihr Einkommensteuerbescheid und die Auskunft des zuständigen Finanzamts."}}
+]}</script>
+<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:860px;margin:0 auto;padding:20px;line-height:1.6;color:#1a1a1a}h1{font-size:1.7em;line-height:1.3}h2{margin-top:2em;border-top:1px solid #ddd;padding-top:.4em}label{display:block;margin:.7em 0 .2em;font-weight:600}input,select{width:100%;padding:.55em;font-size:1em;box-sizing:border-box}input[type=checkbox]{width:auto}button{padding:.7em 1.4em;font-size:1.05em;margin-top:1em;cursor:pointer}table{border-collapse:collapse;width:100%;margin:1em 0}td,th{border:1px solid #ccc;padding:.45em .6em;text-align:left}th{background:#f2f2f2}.net{font-size:1.6em;font-weight:700}.warn{background:#fff8e1;border:1px solid #e6c200;padding:.7em;margin:1em 0}.note{color:#444;font-size:.95em}.calc{background:#f7f7f7;padding:1em 1.2em;border:1px solid #ddd}.row{display:grid;grid-template-columns:1fr 1fr;gap:0 1.2em}@media(max-width:600px){.row{grid-template-columns:1fr}}</style>
+</head><body><main>
+<h1>Brutto-Netto-Rechner mit PKV 2026: Was bleibt privat Versicherten netto?</h1>
+<p>Dieser Rechner ist die PKV-Variante des Brutto-Netto-Rechners: Er ermittelt aus Ihrem Bruttogehalt das Nettogehalt für 2026, wenn Sie <strong>privat krankenversichert</strong> sind. Die Lohnsteuer folgt demselben offiziellen Verfahren — dem <strong>Programmablaufplan (PAP) 2026</strong> nach dem BMF-Schreiben vom 12. November 2025 —, dazu kommen Solidaritätszuschlag, Kirchensteuer und die Sozialversicherung mit den Sätzen und Grenzen 2026. Der entscheidende Unterschied zur gesetzlichen Krankenversicherung liegt in einem einzigen Posten: Statt eines prozentualen Beitrags bis zur Beitragsbemessungsgrenze zahlen Sie Ihren vertraglichen PKV-Beitrag abzüglich des Arbeitgeberzuschusses. Diesen Beitrag erfindet der Rechner nicht — Sie geben ihn aus Ihrem Vertrag ein, und der Rechner zeigt, was er für Ihr Netto bedeutet. Das Ergebnis ist keine Steuerberatung, sondern eine nachvollziehbare Orientierung für Gehaltsverhandlungen, Tarifvergleiche und den monatlichen Haushaltsplan. Alle Eingaben werden nur in Ihrem Browser verarbeitet und nicht versendet.</p>
+
+<section class="calc" aria-label="Brutto-Netto-Rechner mit PKV">
+<h2 style="margin-top:0;border:none;padding:0">Rechner (PKV)</h2>
+<div class="row">
+<div><label for="brutto">Bruttogehalt (€)</label><input id="brutto" type="number" min="0" step="0.01" value="7000"></div>
+<div><label for="zeitraum">Zeitraum</label><select id="zeitraum"><option value="monat">pro Monat</option><option value="jahr">pro Jahr</option></select></div>
+</div>
+<div class="row">
+<div><label for="stkl">Steuerklasse</label><select id="stkl">
+<option value="1">I — ledig / alleinstehend</option>
+<option value="2">II — alleinerziehend</option>
+<option value="3">III — verheiratet, höheres Einkommen</option>
+<option value="4">IV — verheiratet, ähnliches Einkommen</option>
+<option value="5">V — verheiratet, geringeres Einkommen</option>
+<option value="6">VI — Zweitjob / Nebenjob</option>
+</select></div>
+<div><label for="bundesland">Bundesland (Kirchensteuer, Pflegeversicherung)</label><select id="bundesland">
+<option value="BW">Baden-Württemberg (Kirchensteuer 8 %)</option>
+<option value="BY">Bayern (Kirchensteuer 8 %)</option>
+<option value="BE">Berlin (9 %)</option>
+<option value="BB">Brandenburg (9 %)</option>
+<option value="HB">Bremen (9 %)</option>
+<option value="HH">Hamburg (9 %)</option>
+<option value="HE">Hessen (9 %)</option>
+<option value="MV">Mecklenburg-Vorpommern (9 %)</option>
+<option value="NI">Niedersachsen (9 %)</option>
+<option value="NW" selected>Nordrhein-Westfalen (9 %)</option>
+<option value="RP">Rheinland-Pfalz (9 %)</option>
+<option value="SL">Saarland (9 %)</option>
+<option value="SN">Sachsen (9 %, Pflegeversicherung Sonderregel)</option>
+<option value="ST">Sachsen-Anhalt (9 %)</option>
+<option value="SH">Schleswig-Holstein (9 %)</option>
+<option value="TH">Thüringen (9 %)</option>
+</select></div>
+</div>
+<div class="row">
+<div><label for="kirche">Kirchensteuerpflichtig?</label><select id="kirche"><option value="nein" selected>Nein</option><option value="ja">Ja</option></select></div>
+<div><label for="alv">Arbeitslosenversicherung</label><select id="alv"><option value="ja" selected>Pflichtversichert</option><option value="nein">Nicht pflichtversichert</option></select></div>
+</div>
+<div class="row">
+<div><label for="pkvBeitrag">PKV-Beitrag pro Monat, Kranken- + Pflege-Pflichtversicherung (€)</label><input id="pkvBeitrag" type="number" min="0" step="0.01" value="600"><p class="note">Ihr tatsächlicher Beitrag aus Vertrag oder Beitragsmitteilung (Kranken- + Pflege-Pflichtversicherung zusammen). Der Rechner gibt keine Prämie vor.</p></div>
+<div><label for="pkvAgz">Arbeitgeberzuschuss pro Monat (€)</label><input id="pkvAgz" type="number" min="0" step="0.01" value="300"><p class="note">In Steuerklasse VI wird kein Arbeitgeberzuschuss angesetzt (Zuschuss nur vom Hauptarbeitgeber).</p></div>
+</div>
+<div><button type="button" id="maxZuschuss">Maximalzuschuss 2026 einsetzen (613,22 €-Deckel)</button>
+<p class="note">Der Knopf setzt den Zuschuss auf die Hälfte Ihres Beitrags, höchstens jedoch 613,22 Euro im Monat (508,59 Euro Kranken- + 104,63 Euro Pflegeversicherung). Dieser Deckel gilt ab der Beitragsbemessungsgrenze; darunter ist der Höchstbetrag niedriger, weil er sich am tatsächlichen Gehalt orientiert — tragen Sie dann den Zuschuss aus Ihrer Lohnabrechnung ein.</p></div>
+<div class="row">
+<div><label for="kinder">Anzahl Kinder (für Pflegeversicherung)</label><input id="kinder" type="number" min="0" max="15" step="1" value="0"></div>
+<div><label for="pvModus">Pflegeversicherung</label><select id="pvModus"><option value="auto" selected>Automatisch aus Kinderzahl</option><option value="zuschlag">Kinderlos, 23 Jahre oder älter (Zuschlag 0,6 %)</option><option value="jung">Kinderlos, unter 23 (kein Zuschlag)</option></select></div>
+</div>
+<div class="row">
+<div><label for="zkf">Kinderfreibeträge (Zähler laut ELStAM, 0,5er-Schritte)</label><input id="zkf" type="number" min="0" max="15" step="0.5" value="0"><p class="note">Wird aus Kinderzahl und Steuerklasse vorbelegt (I/II: 0,5 je Kind; III/IV: 1,0 je Kind; V/VI: 0) und ist frei anpassbar. Wirkt nur auf Solidaritätszuschlag und Kirchensteuer, nicht auf die Lohnsteuer.</p></div>
+<div><label for="gkvVergleich">GKV-Vergleich als Kontext anzeigen?</label><select id="gkvVergleich"><option value="ja" selected>Ja — gesetzlicher Arbeitnehmeranteil zum Vergleich</option><option value="nein">Nein</option></select><p class="note">Nur ein Kontextwert aus derselben Engine im GKV-Modus (7,3 % + halber Zusatzbeitrag von 2,9 % bis 69.750 Euro im Jahr). Keine Aussage über Leistungen oder über die Vorteilhaftigkeit eines Wechsels.</p></div>
+</div>
+<button type="button" id="berechnen">Netto berechnen (PKV)</button>
+<div id="warnung"></div>
+<div id="ergebnis" aria-live="polite"></div>
+</section>
+
+<h2>So funktioniert die PKV-Rechnung — und wo sie sich von der GKV unterscheidet</h2>
+<p>In der gesetzlichen Krankenversicherung ist der Arbeitnehmerbeitrag eine Prozentrechnung: 7,3 Prozent plus die Hälfte des kassenindividuellen Zusatzbeitrags (Voreinstellung: durchschnittlicher Zusatzbeitrag 2026 von 2,9 Prozent, also insgesamt 8,75 Prozent Arbeitnehmeranteil) auf das Brutto bis zur Beitragsbemessungsgrenze von 69.750 Euro im Jahr (5.812,50 Euro im Monat), dazu die Pflegeversicherung mit 1,8 Prozent Arbeitnehmeranteil (Sachsen 2,3 Prozent), zuzüglich 0,6 Prozentpunkte Kinderlosenzuschlag ab 23 Jahren oder abzüglich 0,25 Prozentpunkte je Kind ab dem zweiten bis zum fünften Kind. Steigt Ihr Gehalt, steigt Ihr Beitrag mit — bis zur Grenze, danach nicht mehr. In der privaten Krankenversicherung gibt es diese Kopplung nicht: Ihr Beitrag hängt von Ihrem Tarif ab — Leistungsumfang, Alter bei Eintritt, Gesundheitszustand, Selbstbeteiligung — und bleibt bei einer Gehaltserhöhung gleich. Was sich mit dem Gehalt ändert, ist nur die Steuer auf den Mehrbetrag und, bis zur Beitragsbemessungsgrenze, der Arbeitgeberzuschuss. Deshalb kann dasselbe Brutto in der PKV ein höheres oder ein niedrigeres Netto ergeben als in der GKV, je nachdem, ob Ihr Eigenanteil (Beitrag minus Zuschuss) über oder unter dem gesetzlichen Arbeitnehmeranteil liegt. Der Vergleich im Rechner macht genau diese eine Zahl sichtbar; alles andere — Leistungen, Selbstbeteiligung, Beitragsrückerstattung, Altersrückstellungen — steht nicht in der Lohnabrechnung und gehört in den Tarifvergleich, nicht in diesen Rechner.</p>
+<p>Die zweite Besonderheit betrifft die Lohnsteuer. In der Vorsorgepauschale — dem fiktiven Abzug, der vor Anwendung des Tarifs vom Brutto abgezogen wird — tritt bei Privatversicherten an die Stelle des gesetzlichen Kranken- und Pflegeanteils der tatsächliche Beitrag zur privaten Basiskranken- und Pflege-Pflichtversicherung abzüglich des Arbeitgeberzuschusses. Der erste Teilbetrag der Vorsorgepauschale bleibt gleich: 9,3 Prozent Rentenanteil bis zur Beitragsbemessungsgrenze von 101.400 Euro. Die Höchstbetragsrechnung von 1.900 Euro für die Arbeitslosen-, Kranken- und Pflegeanteile bei niedrigen Einkommen gilt in der PKV-Variante nach derselben Regel wie in der Vorwärtsrechnung, und in Steuerklasse VI wird sie nicht angewendet. Praktisch heißt das: Ein höherer PKV-Eigenanteil senkt das zu versteuernde Einkommen in der Lohnsteuerberechnung und damit die Lohnsteuer — aber nicht Euro für Euro, sondern nur insoweit, wie er die Vorsorgepauschale erhöht und dadurch den Tarif auf ein niedrigeres zu versteuerndes Einkommen angewendet wird. Wer nur „Beitrag minus Zuschuss“ vom Brutto abzieht und die Steuer unverändert lässt, rechnet falsch; wer umgekehrt den vollen Beitrag als steuermindernd ansetzt, rechnet ebenfalls falsch. Die Engine bildet den Zusammenhang exakt ab, weil sie denselben Programmablaufplan verwendet wie die GKV-Variante.</p>
+
+<h2>Der Arbeitgeberzuschuss 2026 im Detail</h2>
+<p>Der Arbeitgeberzuschuss ist gesetzlich geregelt und folgt einer einfachen Regel mit einer Deckelung: Der Arbeitgeber zahlt die Hälfte Ihres tatsächlichen Beitrags, höchstens aber so viel, wie er für einen gesetzlich Versicherten zahlen müsste. Für 2026 ergibt sich daraus ein Höchstbetrag von 508,59 Euro im Monat zur Krankenversicherung — das sind 8,75 Prozent von 5.812,50 Euro, also 7,3 Prozent allgemeiner Beitragssatz plus die Hälfte des durchschnittlichen Zusatzbeitrags von 2,9 Prozent, auf die Beitragsbemessungsgrenze angewendet — zuzüglich 104,63 Euro im Monat zur Pflegeversicherung, zusammen 613,22 Euro im Monat. Zwei Einschränkungen sind wichtig. Erstens: Die 613,22 Euro sind der Höchstbetrag ab der Beitragsbemessungsgrenze. Verdienen Sie weniger, ist der Zuschuss niedriger, weil der Arbeitgeber nur die Hälfte dessen zahlt, was er für einen gesetzlich Versicherten mit Ihrem tatsächlichen Gehalt zahlen würde — der Knopf „Maximalzuschuss einsetzen“ setzt deshalb die Hälfte Ihres Beitrags, gedeckelt auf 613,22 Euro, und Sie sollten bei Gehältern unterhalb der Grenze den tatsächlichen Zuschuss aus Ihrer Lohnabrechnung eintragen. Zweitens: Der Zuschuss ist steuerfrei, und er wird zusammen mit dem Lohn ausgezahlt; den vollen Beitrag führen Sie selbst an Ihren Versicherer ab. Zahlt der Arbeitgeber freiwillig mehr als den gesetzlichen Zuschuss, ist der übersteigende Anteil steuerpflichtig. In Steuerklasse VI gibt es keinen Zuschuss, weil er nur vom Hauptarbeitgeber gezahlt wird — der Rechner setzt ihn dort auf null, auch wenn Sie einen Wert eingetragen haben.</p>
+<p>Ein Beispiel zeigt, warum der Zuschuss in der Verhandlung zählt: Bei einem PKV-Beitrag von 600 Euro im Monat und einem Zuschuss von 300 Euro beträgt Ihr Eigenanteil 300 Euro. Würde der Arbeitgeber nur 200 Euro zuschießen — etwa weil Ihr Gehalt unterhalb der Beitragsbemessungsgrenze liegt und der Deckel deshalb niedriger ist —, stiege Ihr Eigenanteil auf 400 Euro und Ihr Netto sänke um 100 Euro im Monat, ohne dass sich an Ihrem Brutto oder Ihrer Steuerklasse etwas geändert hätte. Umgekehrt steigt Ihr Netto nicht automatisch, wenn Ihr Beitrag steigt: Der Zuschuss steigt nur bis zur Hälfte des Beitrags und bis zum gesetzlichen Deckel mit. Rechnen Sie deshalb jede Tarifänderung zweimal durch — einmal mit dem alten und einmal mit dem neuen Beitrag und dem jeweils passenden Zuschuss —, bevor Sie einen Tarifwechsel oder eine Gehaltserhöhung bewerten.</p>
+
+<h2>Wer sich privat versichern kann — und was der Rechner dazu nicht prüft</h2>
+<p>Als Arbeitnehmer sind Sie in der Regel versicherungsfrei in der gesetzlichen Krankenversicherung, wenn Ihr regelmäßiges Jahresarbeitsentgelt über der Jahresarbeitsentgeltgrenze liegt — 2026 bei 77.400 Euro im Jahr, also 6.450 Euro im Monat. Liegt Ihr Einkommen darunter, sind Sie grundsätzlich gesetzlich pflichtversichert; eine bestehende private Versicherung kann unter bestimmten Voraussetzungen durch eine Befreiung von der Versicherungspflicht fortgeführt werden, wofür ein Antrag innerhalb von drei Monaten nach Eintritt der Versicherungspflicht erforderlich ist. Daneben gibt es weitere Gruppen mit PKV-Zugang, etwa Beamte mit Beihilfe — für sie gelten allerdings andere Zuschussregeln (Beihilfe statt Arbeitgeberzuschuss), die dieser Rechner nicht abbildet — und Selbstständige, die keinen Arbeitgeberzuschuss erhalten. Der Rechner prüft keine dieser Voraussetzungen: Er berechnet, was bei einem gegebenen Brutto und einem gegebenen PKV-Beitrag netto herauskommt, auch wenn das eingegebene Brutto unterhalb der Jahresarbeitsentgeltgrenze liegt. In diesem Fall zeigt er einen Hinweis an, blockiert die Rechnung aber nicht — denn es gibt legitime Fälle (etwa eine bestehende Befreiung), in denen auch unterhalb der Grenze privat versichert gerechnet wird. Die Anspruchsfrage klären Sie mit Ihrer Krankenkasse, Ihrem Arbeitgeber oder — bei Beamten — mit der Beihilfestelle, nicht mit einem Rechner.</p>
+<p>Zur langfristigen Einordnung gehört ein ehrlicher Hinweis, den kein Monatsrechner ersetzen kann: PKV-Beiträge steigen im Laufe der Jahre, vor allem durch die medizinische Kostenentwicklung, und sie steigen auch im Alter weiter — Altersrückstellungen und Beitragsentlastungstarife dämpfen den Anstieg, verhindern ihn aber nicht. Im Ruhestand entfällt der Arbeitgeberzuschuss vollständig; aus der gesetzlichen Rente kann ein Zuschuss zur privaten Krankenversicherung fließen, der aber deutlich niedriger ist als der Arbeitgeberzuschuss im Erwerbsleben. Ein Monatsvergleich „PKV heute gegen GKV heute“ ist deshalb nur eine Momentaufnahme. Wer über einen Wechsel nachdenkt, sollte zusätzlich fragen: Was kostet der Tarif bei einer Beitragssteigerung von 3 oder 5 Prozent im Jahr über 20 Jahre? Was bleibt im Ruhestand ohne Arbeitgeberzuschuss netto übrig? Und welche Leistungen — etwa Zahnersatz, Heilpraktiker, Chefarztbehandlung — sind im Tarif enthalten und was kosten sie als Zusatz? Diese Fragen beantwortet kein Brutto-Netto-Rechner; sie gehören in den Tarifvergleich und in ein Beratungsgespräch.</p>
+
+<h2>Die Steuerklassen I bis VI im Überblick</h2>
+<table>
+<tr><th>Steuerklasse</th><th>Für wen</th><th>Besonderheit in der PKV-Rechnung</th></tr>
+<tr><td>I</td><td>Ledige, Geschiedene, dauernd getrennt Lebende ohne Kind in Klasse II</td><td>Grundtarif; Referenzszenario für Alleinstehende</td></tr>
+<tr><td>II</td><td>Alleinerziehende mit Kind im Haushalt</td><td>Grundtarif plus Entlastungsbetrag 4.260 Euro</td></tr>
+<tr><td>III</td><td>Verheiratete oder Lebenspartner mit deutlich höherem Einkommen, Partner in Klasse V</td><td>Splittingtarif: niedrigster Abzug — Jahresausgleich in der Veranlagung beachten</td></tr>
+<tr><td>IV</td><td>Verheiratete oder Lebenspartner mit ähnlichem Einkommen</td><td>Grundtarif je Partner; Faktorverfahren nicht abgebildet (Faktor 1,0)</td></tr>
+<tr><td>V</td><td>Verheiratete oder Lebenspartner mit deutlich geringerem Einkommen, Partner in Klasse III</td><td>Sonderverfahren nach § 39b Absatz 2 Satz 7 EStG, hoher Abzug</td></tr>
+<tr><td>VI</td><td>Zweitjob oder weiterer Job neben dem Hauptjob</td><td>Keine Pauschbeträge, kein Arbeitgeberzuschuss, keine Höchstbetragsrechnung der Vorsorgepauschale</td></tr>
+</table>
+
+<h2>Beispielrechnungen und geprüfte PKV-Fälle</h2>
+<p id="pkvfaelle"><table><tr><th>Fall (pro Monat)</th><th>Netto</th><th>Lohnsteuer</th><th>PKV-Eigenanteil</th><th>GKV-Vergleich (Kontext)</th></tr>
+<tr><td>7.000,00 € brutto, Steuerklasse I, Nordrhein-Westfalen, keine Kirchensteuer, PKV-Beitrag 600,00 €, Arbeitgeberzuschuss 300,00 €, keine Kinder</td><td>4.389,75 €</td><td>1.568,25 €</td><td>300,00 €</td><td>Arbeitnehmeranteil 648,09 €, Netto 4.179,58 €</td></tr>
+<tr><td>7.000,00 € brutto, Steuerklasse I, Nordrhein-Westfalen, keine Kirchensteuer, PKV-Beitrag 900,00 €, Arbeitgeberzuschuss 450,00 € (Hälfte des Beitrags), keine Kinder</td><td>4.302,75 €</td><td>1.505,25 €</td><td>450,00 €</td><td>Arbeitnehmeranteil 648,09 €, Netto 4.179,58 €</td></tr>
+<tr><td>5.000,00 € brutto, Steuerklasse III, Bayern, Kirchensteuer 8 %, 2 Kinder, PKV-Beitrag 700,00 €, Arbeitgeberzuschuss 350,00 €</td><td>3.662,89 €</td><td>452,00 € (Kirchensteuer 5,11 €)</td><td>350,00 €</td><td>Arbeitnehmeranteil 515,00 €, Netto 3.539,16 €</td></tr>
+<tr><td>1.500,00 € brutto, Steuerklasse I, keine Kirchensteuer, PKV-Beitrag 0,00 €, ohne Arbeitslosenversicherung (BMF-Vergleichsfall)</td><td>1.323,34 €</td><td>37,16 €</td><td>0,00 €</td><td>Arbeitnehmeranteil 167,25 €, Netto 1.184,00 €</td></tr>
+<tr><td>3.000,00 € brutto, Steuerklasse VI, Nordrhein-Westfalen, keine Kirchensteuer, PKV-Beitrag 500,00 €, eingetragener Zuschuss 250,00 € wird in Klasse VI nicht angesetzt</td><td>1.581,67 €</td><td>600,33 €</td><td>500,00 €</td><td>Arbeitnehmeranteil 334,50 €, Netto 1.682,50 €</td></tr>
+<tr><td>8.500,00 € brutto, Steuerklasse I, Nordrhein-Westfalen, keine Kirchensteuer, PKV-Beitrag 1.226,44 €, Arbeitgeberzuschuss 613,22 € (gesetzlicher Höchstbetrag 2026), keine Kinder</td><td>4.943,61 €</td><td>2.010,08 € (Solidaritätszuschlag 37,39 €)</td><td>613,22 €</td><td>Arbeitnehmeranteil 648,09 €, Netto 4.916,94 €</td></tr></table></p>
+<p>Die Fälle wurden mit der eingebauten Engine berechnet; die Lohnsteuerwerte stimmen mit der Vorwärtsrechnung des Brutto-Netto-Rechners unter denselben Einstellungen überein, weil beide Seiten dieselbe Engine verwenden. Der GKV-Vergleichswert in den Fällen ist der gesetzliche Arbeitnehmeranteil (Krankenversicherung 7,3 Prozent plus halber Zusatzbeitrag von 2,9 Prozent, Pflegeversicherung nach Kinderzahl und Bundesland) bis zur Beitragsbemessungsgrenze — ein reiner Kontextwert, keine Leistungsaussage.</p>
+
+<h2>Was der Rechner nicht abbildet</h2>
+<p>Kein Rechner kann jeden Einzelfall abbilden, und dieser macht da keine Ausnahme — aber er sagt offen, wo die Grenzen liegen. Nicht abgebildet sind: das Faktorverfahren in Steuerklasse IV (der Rechner rechnet mit Faktor 1,0); eingetragene Freibeträge und Hinzurechnungsbeträge aus den ELStAM; Versorgungsbezüge mit Versorgungsfreibetrag und Zuschlag; der Altersentlastungsbetrag für Arbeitnehmer, die vor Beginn des Kalenderjahres das 64. Lebensjahr vollendet haben; sonstige Bezüge wie Weihnachtsgeld, Boni oder Abfindungen, für die eine eigene Berechnung nach § 39b Absatz 3 EStG gilt; die Kirchensteuerkappung und Mindestkirchensteuer; der Übergangsbereich für Monatsgehälter bis 2.000 Euro (Midijob) und der Minijob bis 603 Euro im Monat; Beihilfe-Besonderheiten für Beamte; und Tarifdetails der PKV wie Selbstbeteiligung, Beitragsrückerstattung, Altersrückstellungen oder Beitragsentlastungstarife. Der eingegebene PKV-Beitrag wird als Beitrag zur Kranken- und Pflege-Pflichtversicherung zusammen behandelt, wie in der Vorwärtsrechnung; eine getrennte Aufschlüsselung nach Kranken- und Pflegeanteil ändert das Ergebnis nicht, solange die Summe und der Zuschuss gleich bleiben. Wer einen dieser Fälle hat, sollte das Ergebnis mit der eigenen Lohnabrechnung vergleichen und im Zweifel einen Steuerberater fragen.</p>
+
+<h2>Geprüft gegen den Programmablaufplan des BMF</h2>
+<p>Die Lohnsteuer-Engine dieses Rechners ist unverändert die Engine des Brutto-Netto-Rechners und wurde gegen die im endgültigen Programmablaufplan 2026 abgedruckte allgemeine Prüftabelle geprüft: 42 Bruttostufen von 5.000 bis 110.000 Euro Jahresbrutto in allen sechs Steuerklassen, berechnet mit einem Zusatzbeitrag von 2,90 Prozent. Alle 252 Werte stimmen exakt überein. Als Stichproben zur Nachprüfung: Bei 30.000 Euro Jahresbrutto in Steuerklasse I beträgt die Jahreslohnsteuer 2.248 Euro, bei 50.000 Euro in Steuerklasse III 2.810 Euro und bei 30.000 Euro in Steuerklasse V 5.588 Euro (jeweils mit Kinderlosenzuschlag in der Vorsorgepauschale, wie in der allgemeinen Prüftabelle). Zusätzlich reproduziert die Engine das vom BMF-Rechner veröffentlichte Ergebnis von 37,16 Euro Lohnsteuer im Monat bei 1.500 Euro Monatsbrutto, Steuerklasse I, ohne Kirchensteuer, PKV-Beitrag 0 und ohne Arbeitslosenversicherung. Die zugrunde liegenden Parameter sind: Grundfreibetrag 12.348 Euro, Kinderfreibetrag 4.878 Euro je 0,5-Zähler beziehungsweise 9.756 Euro je 1,0-Zähler, Solidaritätszuschlag-Freigrenze 20.350 Euro, Grenzwerte für die Steuerklassen V und VI 14.071 Euro, 34.939 Euro und 222.260 Euro, Beitragsbemessungsgrenzen 69.750 Euro (Kranken-/Pflegeversicherung) und 101.400 Euro (Renten-/Arbeitslosenversicherung). Quellen: BMF-Schreiben vom 12. November 2025 mit Anlage 1 (Programmablaufplan 2026), § 32a EStG (Einkommensteuertarif 2026), § 39b EStG (Lohnsteuerabzug) und die Sozialversicherungs-Rechengrößen 2026.</p>
+<p class="note">Hinweis: Dieser Rechner ist keine Steuer- oder Rechtsberatung. Die Ergebnisse sind unverbindlich; maßgeblich sind Ihre Lohnabrechnung, Ihr Einkommensteuerbescheid und die Auskunft des zuständigen Finanzamts. Stand der Werte: Steuerjahr 2026.</p>
+
+<h2>Häufige Fragen</h2>
+<h3>Wie hoch ist der Arbeitgeberzuschuss zur PKV 2026?</h3>
+<p>Der Arbeitgeber zahlt die Hälfte Ihres tatsächlichen PKV-Beitrags, höchstens aber so viel, wie er für einen gesetzlich Versicherten zahlen müsste. 2026 liegt dieser Höchstbetrag bei 508,59 Euro im Monat zur Krankenversicherung und 104,63 Euro zur Pflegeversicherung, zusammen also 613,22 Euro im Monat. Unterhalb der Beitragsbemessungsgrenze ist der Höchstbetrag entsprechend niedriger.</p>
+<h3>Warum muss ich meinen PKV-Beitrag selbst eingeben?</h3>
+<p>Weil es keinen einheitlichen PKV-Beitrag gibt: Die Prämie hängt von Tarif, Leistungsumfang, Alter, Gesundheitszustand und Selbstbeteiligung ab und wird individuell kalkuliert. Jeder Rechner, der Ihnen eine PKV-Prämie vorgibt, ohne Ihren Tarif zu kennen, erfindet eine Zahl.</p>
+<h3>Zahlt der Arbeitgeber den Zuschuss auch in Steuerklasse VI?</h3>
+<p>Nein. Der Arbeitgeberzuschuss wird nur vom Hauptarbeitgeber gezahlt. In Steuerklasse VI setzt dieser Rechner keinen Arbeitgeberzuschuss an; der volle PKV-Beitrag geht dann zu Ihren Lasten.</p>
+<h3>Wer kann sich überhaupt privat versichern?</h3>
+<p>Als Arbeitnehmer in der Regel, wenn Ihr regelmäßiges Jahresarbeitsentgelt über der Jahresarbeitsentgeltgrenze liegt — 2026 bei 77.400 Euro im Jahr (6.450 Euro im Monat). Daneben gibt es weitere Gruppen, etwa Beamte mit Beihilfe und Selbstständige. Der Rechner prüft die Anspruchsvoraussetzung nicht.</p>
+<h3>Wie wirkt die PKV auf die Lohnsteuer?</h3>
+<p>In der Vorsorgepauschale tritt an die Stelle des gesetzlichen Kranken- und Pflegeanteils Ihr tatsächlicher Beitrag zur privaten Basiskranken- und Pflege-Pflichtversicherung abzüglich des Arbeitgeberzuschusses. Ein höherer Eigenanteil senkt das zu versteuernde Einkommen in der Lohnsteuerberechnung und damit die Lohnsteuer — aber nur im Rahmen der Vorsorgepauschale, nicht Euro für Euro.</p>
+<h3>Ist die PKV im Alter teurer als die GKV?</h3>
+<p>Das lässt sich pauschal nicht sagen: PKV-Beiträge steigen vor allem durch medizinische Kostenentwicklung und können im Alter deutlich steigen, auch wenn Altersrückstellungen und Beitragsentlastungstarife dämpfen. Im Ruhestand entfällt außerdem der Arbeitgeberzuschuss. Vergleichen Sie deshalb immer auch die langfristige Beitragsentwicklung.</p>
+<h3>Was zeigt der GKV-Vergleich auf dieser Seite?</h3>
+<p>Nur einen Kontextwert aus derselben Engine im GKV-Modus (7,3 Prozent plus halber Zusatzbeitrag von 2,9 Prozent bis zur Beitragsbemessungsgrenze). Keine Aussage über Leistungen oder über die Vorteilhaftigkeit eines Wechsels.</p>
+<h3>Was bildet der Rechner nicht ab?</h3>
+<p>Den Regelfall eines gleichbleibenden Monatsgehalts mit gesetzlicher Rentenversicherung: kein Faktorverfahren in Klasse IV, keine eingetragenen Frei- oder Hinzurechnungsbeträge, keine Versorgungsbezüge, keine sonstigen Bezüge wie Weihnachtsgeld oder Boni, keine Kirchensteuerkappung, kein Übergangsbereich (Midijob) bis 2.000 Euro, keine Beihilfe-Besonderheiten und keine Tarifdetails wie Selbstbeteiligung oder Altersrückstellungen.</p>
+<h3>Ist dieser Rechner eine Steuerberatung?</h3>
+<p>Nein. Er liefert eine unverbindliche Orientierung auf Basis des BMF-Programmablaufplans 2026 und der Sozialversicherungswerte 2026. Er ersetzt keine Steuerberatung und keinen Steuerbescheid.</p>
+
+<h2>Quellen</h2>
+<ul>
+<li>Bundesministerium der Finanzen, Schreiben vom 12. November 2025, IV C 5 – S 2361/00025/016/028, mit Anlage 1: Programmablaufplan für die maschinelle Berechnung der vom Arbeitslohn einzubehaltenden Lohnsteuer, des Solidaritätszuschlags und der Maßstabsteuer für die Kirchenlohnsteuer für 2026 (einschließlich Prüftabellen).</li>
+<li>§ 32a Einkommensteuergesetz (EStG): Einkommensteuertarif für den Veranlagungszeitraum 2026 (Grundfreibetrag 12.348 Euro).</li>
+<li>§ 39b EStG: Einbehaltung der Lohnsteuer, einschließlich des Verfahrens für die Steuerklassen V und VI (Absatz 2 Satz 7) und der Vorsorgepauschale (Absatz 2 Satz 5).</li>
+<li>§ 51a EStG: Bemessungsgrundlage für Kirchenlohnsteuer und Solidaritätszuschlag; Freigrenze Solidaritätszuschlag 20.350 Euro (40.700 Euro im Splittingtarif).</li>
+<li>Sozialversicherungs-Rechengrößen 2026: Beitragsbemessungsgrenzen 69.750 Euro (KV/PV) und 101.400 Euro (RV/AV); Beitragssätze RV 18,6 %, AV 2,6 %, KV 14,6 % zuzüglich Zusatzbeitrag (Durchschnitt 2,9 %), PV 3,6 % zuzüglich Kinderlosenzuschlag 0,6 % beziehungsweise Abschlägen von 0,25 % je Kind ab dem zweiten bis zum fünften Kind; Jahresarbeitsentgeltgrenze 77.400 Euro.</li>
+<li>§ 38b EStG und ELStAM-Regeln: Kinderfreibetragszähler grundsätzlich 0,5 je Kind, 1,0 je Kind bei verheirateten, nicht dauernd getrennt lebenden Eltern in IV/IV und in III/V nur in Klasse III.</li>
+<li>Arbeitgeberzuschuss zur privaten Kranken- und Pflegeversicherung 2026: Höchstbetrag 508,59 Euro (Krankenversicherung) + 104,63 Euro (Pflegeversicherung) = 613,22 Euro im Monat; Regel: Hälfte des tatsächlichen Beitrags, höchstens der Arbeitgeberanteil für einen gesetzlich Versicherten. Quellen u. a.: https://www.nadr.de/aktuelles/private-krankenversicherung-2026-hoehere-zuschuesse-und-neue-einkommensgrenzen-fuer-privatversicherte/ und https://www.ottonova.de/v/private-krankenversicherung/altersteilzeit</li>
+<li>Jahresarbeitsentgeltgrenze 2026: 77.400 Euro. Quellen u. a.: https://www.sbk.org/arbeitgeberservice/fachthemen/beitraege/jahresarbeitsentgeltgrenze/ und https://www.sparkasse.de/pk/ratgeber/finanzplanung/rente-planen/beitragsbemessungsgrenze.html</li>
+</ul>
+</main>
+<script>
+"use strict";
+var GFB=12348,W1=14071,W2=34939,W3=222260;
+function tariff(x){x=Math.floor(x);if(x<=GFB)return 0;if(x<17800){var y=(x-GFB)/10000;return Math.floor((914.51*y+1400)*y);}if(x<69879){var z=(x-17799)/10000;return Math.floor((173.10*z+2397)*z+1034.87);}if(x<277826)return Math.floor(0.42*x-11135.63);return Math.floor(0.45*x-19470.38);}
+function up56(zx){var s1=tariff(1.25*zx),s2=tariff(0.75*zx);return Math.max((s1-s2)*2,zx*0.14);}
+function mst56(x){var zzx=x,zx=zzx>W2?W2:zzx,vergl=up56(zx);if(zzx>W2){if(zzx>W3)vergl=vergl+(W3-W2)*0.42+(zzx-W3)*0.45;else vergl=vergl+(zzx-W2)*0.42;}if(zzx<=W1)return Math.floor(vergl);var hoch=Math.floor(up56(W1))+(Math.min(zzx,W3)-W1)*0.42+Math.max(zzx-W3,0)*0.45;return Math.floor(Math.min(vergl,hoch));}
+function papAnnual(gross,o){
+  var kvSatzAn=o.kvz/2/100+0.07;
+  var pvSatzAn=o.sachsen?0.023:0.018;if(o.pvz)pvSatzAn+=0.006;else pvSatzAn-=o.pva*0.0025;
+  var vspr=Math.min(gross,101400)*0.093;
+  var vspKvPv=o.pkv?Math.max(o.pkpvAnnual-(o.stkl===6?0:o.pkpvAgzAnnual),0):Math.min(gross,69750)*(kvSatzAn+pvSatzAn);
+  var vsp=vspKvPv+vspr;
+  if(o.stkl!==6&&o.alv){var vspAlv=Math.min(gross,101400)*0.013;var vspHb=Math.min(vspAlv+vspKvPv,1900);var vspN=vspr+vspHb;if(vspN>vsp)vsp=vspN;}
+  var anp=o.stkl===6?0:Math.min(1230,gross),sap=o.stkl===6?0:36,efa=o.stkl===2?4260:0,kztab=o.stkl===3?2:1;
+  var ztabfb=efa+anp+sap,zve=gross-ztabfb-vsp,lst=0;
+  if(zve>=1){var x=Math.floor(zve/kztab);lst=o.stkl<5?tariff(x)*kztab:mst56(x);}
+  var jbmg=lst,kfb=0;
+  if(o.zkf>0){kfb=o.zkf*9756;var zve2=gross-(ztabfb+kfb)-vsp;if(zve2>=1){var x2=Math.floor(zve2/kztab);jbmg=o.stkl<5?tariff(x2)*kztab:mst56(x2);}else jbmg=0;}
+  var frei=20350*kztab,solz=0;if(jbmg>frei)solz=Math.min(jbmg*0.055,(jbmg-frei)*0.119);
+  return{lst:lst,jbmg:jbmg,solz:solz,vsp:vsp,ztabfb:ztabfb,zve:zve,kfb:kfb,pvSatzAn:pvSatzAn,frei:frei};
+}
+
+function r2(v){return Math.round((v+1e-9)*100)/100;}
+function fmt(v){return v.toLocaleString("de-DE",{minimumFractionDigits:2,maximumFractionDigits:2})+" €";}
+function $(id){return document.getElementById(id);}
+function syncZkf(){
+  var stkl=parseInt($("stkl").value,10),kinder=parseInt($("kinder").value,10)||0,zkf=0;
+  if(stkl===1||stkl===2)zkf=kinder*0.5;else if(stkl===3||stkl===4)zkf=kinder*1.0;else zkf=0;
+  $("zkf").value=zkf;
+}
+function collectOpts(){
+  var stkl=parseInt($("stkl").value,10);
+  var bl=$("bundesland").value,sachsen=bl==="SN",kistRate=(bl==="BW"||bl==="BY")?0.08:0.09;
+  var kirche=$("kirche").value==="ja";
+  var alv=$("alv").value==="ja";
+  var kinder=parseInt($("kinder").value,10)||0;kinder=Math.max(0,Math.min(15,kinder));
+  var zkf=parseFloat($("zkf").value)||0;if(stkl>=5)zkf=0;zkf=Math.max(0,Math.min(15,zkf));
+  var pvModus=$("pvModus").value,pvz,pva;
+  if(pvModus==="zuschlag"){pvz=1;pva=0;}
+  else if(pvModus==="jung"){pvz=0;pva=0;}
+  else if(kinder===0){pvz=1;pva=0;}
+  else{pvz=0;pva=Math.min(Math.max(kinder-1,0),4);}
+  var pkvBeitrag=parseFloat($("pkvBeitrag").value)||0,pkvAgz=parseFloat($("pkvAgz").value)||0;
+  return {stkl:stkl,zkf:zkf,kvz:2.9,sachsen:sachsen,pvz:pvz,pva:pva,pkv:true,pkpvAnnual:pkvBeitrag*12,pkpvAgzAnnual:pkvAgz*12,alv:alv,
+    kirche:kirche,kistRate:kistRate,pkvBeitrag:pkvBeitrag,pkvAgz:pkvAgz};
+}
+function vorwaerts(gm,o){
+  var ga=gm*12;
+  var pap=papAnnual(ga,o);
+  var lstM=Math.floor(pap.lst*100/12)/100,solzM=Math.floor(pap.solz*100/12)/100;
+  var bkM=o.kirche?Math.floor(pap.jbmg*100/12)/100:0,kistM=o.kirche?r2(bkM*o.kistRate):0;
+  var rvM=r2(Math.min(gm,8450)*0.093),avM=o.alv?r2(Math.min(gm,8450)*0.013):0,kvM=0,pvM=0,pkvM=0;
+  if(o.pkv){pkvM=r2(Math.max(o.pkvBeitrag-(o.stkl===6?0:o.pkvAgz),0));}
+  else{kvM=r2(Math.min(gm,5812.50)*(0.073+o.kvz/200));pvM=r2(Math.min(gm,5812.50)*pap.pvSatzAn);}
+  var sv=r2(rvM+avM+kvM+pvM+pkvM),abz=r2(lstM+solzM+kistM+sv),netto=r2(gm-abz);
+  return {gm:gm,netto:netto,lstM:lstM,solzM:solzM,bkM:bkM,kistM:kistM,rvM:rvM,avM:avM,kvM:kvM,pvM:pvM,pkvM:pkvM,sv:sv,abz:abz,pap:pap};
+}
+function berechnen(){
+  var brutto=parseFloat($("brutto").value)||0;
+  var monatlich=$("zeitraum").value==="monat";
+  var gm=monatlich?brutto:brutto/12;
+  var o=collectOpts();
+  var b=vorwaerts(gm,o);
+  var gkv=null;
+  if($("gkvVergleich").value==="ja"){
+    var og=Object.assign({},o,{pkv:false,kvz:2.9});
+    gkv=vorwaerts(gm,og);
+  }
+  var warn="";
+  if(gm>0&&gm<=603)warn='<div class="warn">Hinweis: Bis 603 Euro im Monat liegt in der Regel ein Minijob vor — dort gelten Pauschalen des Arbeitgebers statt der hier berechneten Beiträge. Das Ergebnis ist für einen Minijob nicht aussagekräftig.</div>';
+  else if(gm>0&&gm<2000)warn='<div class="warn">Hinweis: Bis 2.000 Euro im Monat gilt der Übergangsbereich (Midijob) mit reduzierten Arbeitnehmerbeiträgen zur Sozialversicherung. Dieser Rechner bildet den Übergangsbereich nicht ab — die ausgewiesenen Sozialbeiträge sind hier zu hoch.</div>';
+  if(gm*12>0&&gm*12<77400)warn+='<div class="warn">Hinweis: Ihr Jahresbrutto liegt unter der Jahresarbeitsentgeltgrenze 2026 von 77.400 Euro. Als Arbeitnehmer sind Sie dann grundsätzlich gesetzlich pflichtversichert; eine private Versicherung setzt in der Regel eine Versicherungsfreiheit oder eine Befreiung von der Versicherungspflicht voraus. Die Rechnung wird trotzdem durchgeführt, sie prüft die Anspruchsvoraussetzung nicht.</div>';
+  if(o.stkl===6&&o.pkvAgz>0)warn+='<div class="warn">Hinweis: In Steuerklasse VI wird kein Arbeitgeberzuschuss angesetzt (Zuschuss nur vom Hauptarbeitgeber). Der eingetragene Zuschuss von '+fmt(o.pkvAgz)+' wird deshalb nicht abgezogen; Ihr Eigenanteil ist der volle Beitrag.</div>';
+  $("warnung").innerHTML=warn;
+  var effAgz=o.stkl===6?0:o.pkvAgz;
+  $("ergebnis").innerHTML=
+    '<p class="net">Netto: '+fmt(b.netto)+' pro Monat</p>'+
+    '<p>'+fmt(r2(b.netto*12))+' netto pro Jahr · Nettoquote '+(gm>0?(b.netto/gm*100).toFixed(1):"0,0")+' % des Bruttogehalts · Abzüge gesamt '+fmt(b.abz)+' pro Monat</p>'+
+    '<table><tr><th>Position (pro Monat)</th><th>Betrag</th></tr>'+
+    '<tr><td>Bruttogehalt</td><td>'+fmt(gm)+'</td></tr>'+
+    '<tr><td>Lohnsteuer</td><td>− '+fmt(b.lstM)+'</td></tr>'+
+    '<tr><td>Solidaritätszuschlag</td><td>− '+fmt(b.solzM)+'</td></tr>'+
+    '<tr><td>Kirchensteuer'+(o.kirche?' ('+(o.kistRate*100).toLocaleString("de-DE")+' % von '+fmt(b.bkM)+' Bemessungsgrundlage)':" (nicht kirchensteuerpflichtig)")+'</td><td>− '+fmt(b.kistM)+'</td></tr>'+
+    '<tr><td>Rentenversicherung (9,3 %)</td><td>− '+fmt(b.rvM)+'</td></tr>'+
+    '<tr><td>Arbeitslosenversicherung</td><td>− '+fmt(b.avM)+'</td></tr>'+
+    '<tr><td>PKV-Beitrag (Kranken- + Pflege-Pflichtversicherung)</td><td>'+fmt(o.pkvBeitrag)+'</td></tr>'+
+    '<tr><td>Arbeitgeberzuschuss (abgezogen vom Beitrag)</td><td>+ '+fmt(effAgz)+'</td></tr>'+
+    '<tr><td>PKV-Eigenanteil (Beitrag minus Zuschuss)</td><td>− '+fmt(b.pkvM)+'</td></tr>'+
+    '<tr><td><strong>Sozialversicherung gesamt (inkl. PKV-Eigenanteil)</strong></td><td><strong>− '+fmt(b.sv)+'</strong></td></tr>'+
+    '<tr><td><strong>Nettogehalt</strong></td><td><strong>'+fmt(b.netto)+'</strong></td></tr></table>'+
+    (gkv?'<p><strong>GKV-Vergleich (Kontext, dieselbe Engine im GKV-Modus):</strong> Bei demselben Brutto, derselben Steuerklasse und denselben übrigen Angaben läge der gesetzliche Arbeitnehmeranteil bei '+fmt(r2(gkv.kvM+gkv.pvM))+' pro Monat (Krankenversicherung '+fmt(gkv.kvM)+' + Pflegeversicherung '+fmt(gkv.pvM)+'), und das Netto läge bei '+fmt(gkv.netto)+' pro Monat. Dieser Vergleich sagt nichts über Leistungen oder über die Vorteilhaftigkeit eines Wechsels aus.</p>':"")+
+    '<p class="note">Rechenweg (Jahr): Jahresbrutto '+fmt(gm*12)+' − Tabellenfreibeträge '+fmt(b.pap.ztabfb)+' − Vorsorgepauschale '+fmt(b.pap.vsp)+' = zu versteuerndes Einkommen '+fmt(b.pap.zve)+'. Jahreslohnsteuer nach dem Programmablaufplan: '+fmt(b.pap.lst)+'. Bemessungsgrundlage für Solidaritätszuschlag und Kirchensteuer (nach Kinderfreibeträgen von '+fmt(b.pap.kfb)+'): '+fmt(b.pap.jbmg)+' — Freigrenze Solidaritätszuschlag: '+fmt(b.pap.frei)+'. Die Monatswerte für Lohnsteuer und Solidaritätszuschlag sind die Jahreswerte durch zwölf, auf volle Cent abgerundet; das Jahresnetto ist der Monatswert mal zwölf. Unverbindliche Orientierung, keine Steuerberatung.</p>';
+}
+function maxZuschuss(){
+  var beitrag=parseFloat($("pkvBeitrag").value)||0;
+  $("pkvAgz").value=Math.min(beitrag/2,613.22).toFixed(2);
+  berechnen();
+}
+$("berechnen").addEventListener("click",berechnen);
+$("maxZuschuss").addEventListener("click",maxZuschuss);
+$("stkl").addEventListener("change",syncZkf);
+$("kinder").addEventListener("change",syncZkf);
+["brutto","zeitraum","bundesland","kirche","alv","pvModus","zkf","pkvBeitrag","pkvAgz","gkvVergleich"].forEach(function(id){$(id).addEventListener("change",berechnen);});
+berechnen();
+</script>
+</body></html>
