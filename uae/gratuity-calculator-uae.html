@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UAE Gratuity Calculator — End of Service Benefits (Article 51) | Bayzubaan</title>
+<meta name="description" content="Calculate UAE end-of-service gratuity under Federal Decree-Law No. 33 of 2021, Article 51: 21 days for the first 5 years, 30 days beyond, capped at 2 years' basic salary. Free, with worked examples.">
+<meta property="og:title" content="UAE Gratuity Calculator — End of Service Benefits (Article 51)">
+<meta property="og:description" content="Work out your UAE gratuity from your basic salary and length of service, under the current unified rules.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://bayzubaan.com/uae/gratuity-calculator-uae/">
+<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:860px;margin:0 auto;padding:20px;line-height:1.65;color:#1c2733}h1{font-size:1.9em;line-height:1.25}h2{margin-top:1.8em}.card{border:1px solid #d5dde5;border-radius:12px;padding:20px;background:#f7fafc}label{display:block;margin:12px 0 4px;font-weight:600}input,select{width:100%;padding:10px;font-size:16px;border:1px solid #b9c4cf;border-radius:8px;box-sizing:border-box}button{background:#0b5e4b;color:#fff;border:0;padding:12px 22px;font-size:17px;border-radius:8px;cursor:pointer;margin-top:16px}button:hover{background:#084a3c}.result{font-size:1.35em;font-weight:700;margin-top:16px}.small{font-size:.92em;color:#44546a}table{border-collapse:collapse;width:100%;margin:12px 0}th,td{border:1px solid #d5dde5;padding:8px;text-align:left}.warn{background:#fff7e6;border:1px solid #f0c36d;border-radius:10px;padding:14px}.note{background:#eef6ff;border:1px solid #bcd6f5;border-radius:10px;padding:14px}</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Who qualifies for UAE gratuity?","acceptedAnswer":{"@type":"Answer","text":"A full-time private-sector worker who has completed at least one year of continuous service qualifies under Article 51 of Federal Decree-Law No. 33 of 2021. Service under one year gives no gratuity."}},
+{"@type":"Question","name":"Is gratuity calculated on total salary or basic salary?","acceptedAnswer":{"@type":"Answer","text":"Basic salary only. Housing, transport, food, phone allowances, overtime, bonuses and commissions are excluded."}},
+{"@type":"Question","name":"Does resigning reduce UAE gratuity?","acceptedAnswer":{"@type":"Answer","text":"No. Under the unified rules in force since 2 February 2022, resignation does not reduce gratuity. Older calculators that apply pre-2022 limited/unlimited contract fractions are out of date."}},
+{"@type":"Question","name":"Is there a cap on UAE gratuity?","acceptedAnswer":{"@type":"Answer","text":"Yes. Total gratuity cannot exceed two years of basic salary, which is 24 times the monthly basic salary."}},
+{"@type":"Question","name":"When must gratuity be paid?","acceptedAnswer":{"@type":"Answer","text":"Article 53 requires all end-of-service entitlements to be paid within 14 days of the contract ending."}},
+{"@type":"Question","name":"Does Article 51 apply in DIFC and ADGM?","acceptedAnswer":{"@type":"Answer","text":"No. DIFC uses the DEWS workplace savings scheme and ADGM has its own employment regulations, so this calculator does not apply to employees in those financial free zones."}}]}</script>
+</head><body>
+<p><a href="https://bayzubaan.com/">Bayzubaan</a> &rsaquo; UAE tools</p>
+<h1>UAE Gratuity Calculator: End-of-Service Benefits</h1>
+<p class="small">General information only — not legal advice. Confirm your final settlement with your employer or MOHRE (the UAE Ministry of Human Resources and Emiratisation).</p>
+<div class="card">
+<label for="basic">Last monthly basic salary (AED)</label>
+<input id="basic" type="number" min="0" step="any" value="10000">
+<p class="small">Use the basic salary stated in your MOHRE-registered contract, not your total package. Allowances never enter this calculation.</p>
+<label for="years">Full years of continuous service</label>
+<input id="years" type="number" min="0" step="1" value="6">
+<label for="months">Additional full months (0–11)</label>
+<input id="months" type="number" min="0" max="11" step="1" value="0">
+<label for="unpaid">Unpaid absence days to exclude (optional)</label>
+<input id="unpaid" type="number" min="0" step="1" value="0">
+<button onclick="calc()">Calculate gratuity</button>
+<div class="result" id="out">Enter your details and calculate.</div>
+<div id="detail"></div>
+</div>
+<script>
+function fmt(n){return "AED "+n.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});}
+function calc(){
+  var b=parseFloat(document.getElementById("basic").value)||0;
+  var y=parseInt(document.getElementById("years").value)||0;
+  var m=parseInt(document.getElementById("months").value)||0;
+  var u=parseInt(document.getElementById("unpaid").value)||0;
+  if(m>11)m=11; if(m<0)m=0;
+  var service=y+m/12-u/365;
+  var daily=b/30, cap=24*b, raw=0, first=0, beyond=0;
+  if(service>=1){
+    first=Math.min(service,5); beyond=Math.max(0,service-5);
+    raw=daily*(21*first+30*beyond);
+  }
+  var total=Math.min(raw,cap), capped=raw>cap;
+  if(service<1){
+    document.getElementById("out").textContent="Estimated gratuity: AED 0.00";
+    document.getElementById("detail").innerHTML="<p>Service of "+service.toFixed(3)+" years is under the one-year qualifying threshold, so no gratuity is payable under Article 51.</p>";
+    return;
+  }
+  document.getElementById("out").textContent="Estimated gratuity: "+fmt(total);
+  document.getElementById("detail").innerHTML="<p>Service counted: <strong>"+service.toFixed(3)+" years</strong> &middot; Daily basic wage: "+fmt(daily)+" ("+fmt(b)+" &divide; 30)<br>First 5 years: "+fmt(daily*21*first)+" ("+first.toFixed(3)+" years &times; 21 days)<br>Beyond 5 years: "+fmt(daily*30*beyond)+" ("+beyond.toFixed(3)+" years &times; 30 days)<br>Before cap: "+fmt(raw)+" &middot; Cap (2 years' basic salary): "+fmt(cap)+(capped?" &middot; <strong>Cap applied</strong>":"")+"</p>";
+}
+calc();
+</script>
+
+<h2>How UAE gratuity works</h2>
+<p>End-of-service gratuity is the lump sum a private-sector employee in the UAE receives when their employment ends, and it is one of the most misunderstood figures in Gulf employment. The confusion is understandable: the law changed fundamentally in 2022, yet many calculators, payroll blogs and even some employer letters still apply the old rules. This page uses only the current law, Federal Decree-Law No. 33 of 2021, and it says plainly where that law stops applying, so that you can check your own settlement rather than simply trusting a number on a screen.</p>
+<p>The governing provision is Article 51, which covers full-time workers. It sets a qualifying threshold first: you must have completed at least one year of continuous service. If your employment ends after eleven months, the gratuity is zero, however large your salary was. Once you pass that one-year mark, every part of a further year counts proportionally. There is no second cliff at two years, three years or any other point; the calculation simply accrues year by year, month by month, from the first anniversary onwards.</p>
+<p>The rate itself has two tiers. For each of the first five years of service you earn twenty-one days of basic wage per year. For each year beyond the fifth you earn thirty days of basic wage per year. A partial year is pro-rated in whichever tier it falls in, so five years and eight months earns the full five-year tranche plus eight twelfths of a thirty-day year. The daily basic wage is your last monthly basic salary divided by thirty, whatever the calendar month actually contains. That division by thirty is fixed by practice under the law and is the same step every published worked example uses.</p>
+<p>Two features of the formula surprise people most. The first is that only basic salary counts. If your total package is AED 15,000 a month but your contract states a basic salary of AED 8,000, your gratuity is calculated on AED 8,000. Housing allowance, transport allowance, food allowance, phone allowance, overtime, commission and annual bonus are all excluded, and an employer who calculates gratuity on the total package is being generous, not following the statute. Always check the basic salary figure on your MOHRE-registered contract before you argue about a settlement, because that single figure drives the entire result. The second feature is the cap: no matter how long you serve, your total gratuity cannot exceed two years of basic salary, which is twenty-four times your monthly basic salary. In practice the cap only bites after very long service, because the formula accrues roughly one month of salary per year beyond the fifth year, but it is a real ceiling and this calculator applies it automatically.</p>
+<h2>The 2022 change that old calculators get wrong</h2>
+<p>Before 2 February 2022, the old Labour Law (Federal Law No. 8 of 1980) treated limited and unlimited contracts differently, and an employee who resigned from an unlimited contract could lose a fraction of their gratuity depending on length of service. That distinction is gone. Under the 2021 Decree-Law all employment contracts are fixed-term, unlimited contracts were converted by the end of 2023, and resignation no longer reduces gratuity at all. The Morgan Lewis summary of the new law states this explicitly: the new decree no longer has a reduction for resignation. If a calculator asks whether your contract was limited or unlimited and then cuts your gratuity for resigning, it is applying repealed law and its answer will be too low. This is the single most valuable check on this page: compare any figure you have been given against the unified formula here, and if the difference matches an old resignation fraction, you have found the error.</p>
+<p>There are related points worth knowing before you sign a final settlement. Days of unpaid absence do not count towards the service period, so this calculator lets you deduct them; a long stretch of unpaid leave genuinely reduces the service figure, though it rarely changes the tier. Article 53 requires the employer to pay all end-of-service entitlements within fourteen days of the contract ending, which gives you a clear deadline to point to if payment drifts. And dismissal for gross misconduct under Article 44 can lead to forfeiture of gratuity, which is a different matter from an ordinary termination or resignation and is the one situation where a zero figure may be lawful despite long service. If you are dismissed and told gratuity is forfeited, ask for the Article 44 ground in writing rather than accepting a verbal assertion.</p>
+<h2>Where Article 51 does not apply</h2>
+<p>Honesty about scope matters as much as accuracy within it. Employees of the Dubai International Financial Centre are not under Article 51 at all: since February 2020 the DIFC has used DEWS, the DIFC Employee Workplace Savings scheme, under which the employer contributes monthly into a regulated fund, at 5.83 percent of basic salary for service under five years and 8.33 percent from five years onwards. Abu Dhabi Global Market likewise has its own employment regulations, updated in 2024 and applying from 1 April 2025, with a separate scheme and no two-year cap of the Article 51 kind. Mainland employment and most other free zones, including DMCC, JAFZA and RAKEZ, do fall under Article 51. Cabinet Resolution 96 of 2023 also created a voluntary alternative savings scheme for mainland employers, using the same 5.83 and 8.33 percent monthly contribution rates, which an employer may adopt instead of the classic gratuity accrual; if your employer has enrolled you in that scheme, your benefit follows the fund rather than this formula, and your payslip or HR department should be able to confirm which system you are in. Domestic workers and government employees are under separate rules again. If any of these descriptions fits you, treat the figure on this page as background only and ask for the scheme-specific statement.</p>
+<p>For everyone else, the practical routine is simple. Confirm your basic salary from your contract, count your continuous service from your joining date to your last working day, deduct unpaid absence days if any, and run the two-tier formula. Keep your contract, your final payslip and the settlement sheet together, and if the employer's figure differs from yours, ask them to show their working tier by tier: the daily wage, the twenty-one-day tranche, the thirty-day tranche, and the cap check. Most genuine disagreements turn out to be a wrong basic salary figure, an old resignation fraction, or allowances wrongly included or excluded, and a tier-by-tier comparison finds all three in minutes. If the gap cannot be resolved, a complaint can be filed with MOHRE, which operates the labour dispute process for private-sector workers.</p>
+<h2>Worked examples</h2>
+<table><tr><th>Basic salary</th><th>Service</th><th>Result</th></tr>
+<tr><td>AED 6,000</td><td>2 years</td><td>AED 8,400</td></tr>
+<tr><td>AED 10,000</td><td>3 years</td><td>AED 21,000</td></tr>
+<tr><td>AED 10,000</td><td>6 years</td><td>AED 45,000</td></tr>
+<tr><td>AED 10,000</td><td>7 years</td><td>AED 55,000</td></tr>
+<tr><td>AED 10,000</td><td>5 years 8 months</td><td>AED 41,666.67</td></tr>
+<tr><td>AED 10,000</td><td>30 years</td><td>AED 240,000 (cap applied; raw AED 285,000)</td></tr>
+<tr><td>Any</td><td>11 months</td><td>AED 0 (under 1 year)</td></tr></table>
+<p class="small">Check the arithmetic on the six-year row: daily wage AED 333.33, first five years 21 &times; 333.33 &times; 5 = AED 35,000, sixth year 30 &times; 333.33 = AED 10,000, total AED 45,000. Some published guides round the daily wage to AED 333 first and reach AED 34,965 for a similar case; the unrounded method used here is the more exact one.</p>
+<div class="warn"><strong>Part-time and flexible workers:</strong> Article 52 provides for pro-rating by contractual working hours against a full-time equivalent. This calculator covers full-time workers; part-time workers should scale the result by their contractual hours fraction and confirm the treatment with their employer.</div>
+<h2>Frequently asked questions</h2>
+<p><strong>Who qualifies for UAE gratuity?</strong> A full-time private-sector worker with at least one year of continuous service, under Article 51 of Federal Decree-Law No. 33 of 2021. Under one year, no gratuity is payable.</p>
+<p><strong>Is gratuity calculated on total salary or basic salary?</strong> Basic salary only. All allowances, overtime, bonuses and commissions are excluded.</p>
+<p><strong>Does resigning reduce UAE gratuity?</strong> No. Since the unified rules took effect on 2 February 2022, resignation does not reduce gratuity, and the old limited/unlimited distinction is abolished.</p>
+<p><strong>Is there a cap on UAE gratuity?</strong> Yes: two years of basic salary, or twenty-four times the monthly basic salary.</p>
+<p><strong>When must gratuity be paid?</strong> Within fourteen days of the contract ending, under Article 53.</p>
+<p><strong>Does Article 51 apply in DIFC and ADGM?</strong> No. DIFC uses DEWS and ADGM has its own employment regulations, so employees there should use their scheme statement, not this calculator.</p>
+<h2>Sources</h2>
+<ul>
+<li>Federal Decree-Law No. 33 of 2021, Articles 51–53 (via UAE government and MOHRE guidance).</li>
+<li><a href="http://uae-labour-law.com/blog/uae-gratuity-calculation-guide-2026">uae-labour-law.com — UAE Gratuity Calculation Guide 2026</a></li>
+<li><a href="https://uaeahead.com/uae-labour-law-gratuity-calculation/">uaeahead.com — UAE Labour Law gratuity calculation</a></li>
+<li><a href="https://www.morganlewis.com/pubs/2021/12/united-arab-emirates-updates-federal-labour-law">Morgan Lewis — UAE updates federal labour law</a></li>
+<li><a href="https://bayzathelp.zendesk.com/hc/en-gb/articles/14243037048465-UAE-Gratuity-Calculation">Bayzat — UAE gratuity calculation</a></li>
+</ul>
+<p class="small">This calculator gives general information about the statutory formula. It is not legal advice and does not replace your contract, your employer's settlement sheet, or advice from MOHRE or a licensed adviser. Rules for part-time work, alternative savings schemes, DIFC/ADGM employment and dismissal for misconduct differ as described above.</p>
+</body></html>
