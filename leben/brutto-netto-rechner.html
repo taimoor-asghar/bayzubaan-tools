@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brutto-Netto-Rechner 2026: Gehalt netto berechnen | Bayzubaan</title>
+<meta name="description" content="Brutto-Netto-Rechner 2026: Aus Ihrem Bruttogehalt wird das Nettogehalt berechnet — Lohnsteuer nach dem BMF-Programmablaufplan 2026, Solidaritätszuschlag, Kirchensteuer und Sozialversicherung, für alle Steuerklassen I–VI.">
+<meta property="og:title" content="Brutto-Netto-Rechner 2026: Gehalt netto berechnen">
+<meta property="og:description" content="Brutto zu Netto für 2026: Lohnsteuer nach dem BMF-Programmablaufplan, Solidaritätszuschlag, Kirchensteuer und Sozialversicherung — Steuerklassen I–VI, GKV und PKV.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://bayzubaan.com/leben/brutto-netto-rechner/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Ist das Ergebnis mein endgültiges Nettogehalt?","acceptedAnswer":{"@type":"Answer","text":"Nein, es ist der monatliche Lohnsteuerabzug nach dem BMF-Programmablaufplan 2026. Die endgültige Einkommensteuer setzt das Finanzamt mit dem Einkommensteuerbescheid fest; die einbehaltene Lohnsteuer wird darauf angerechnet. Abweichungen entstehen zum Beispiel durch Werbungskosten über dem Pauschbetrag, Sonderausgaben oder eine andere Veranlagung."}},
+{"@type":"Question","name":"Warum senken Kinder die Lohnsteuer nicht, aber den Solidaritätszuschlag und die Kirchensteuer?","acceptedAnswer":{"@type":"Answer","text":"Weil die Kinderfreibeträge im Lohnsteuerabzug nur für die Bemessungsgrundlage der Zuschlagsteuern berücksichtigt werden. Die Lohnsteuer selbst bleibt unverändert; der Ausgleich über Kindergeld oder Kinderfreibetrag erfolgt erst in der Einkommensteuerveranlagung durch die Günstigerprüfung des Finanzamts."}},
+{"@type":"Question","name":"Welche Steuerklasse soll ich wählen?","acceptedAnswer":{"@type":"Answer","text":"Die Steuerklasse ergibt sich aus dem Familienstand und wird vom Finanzamt in den ELStAM hinterlegt, nicht frei gewählt: I für Ledige, II für Alleinerziehende, III und V für Ehepaare mit stark unterschiedlichem Einkommen, IV und IV bei ähnlichem Einkommen und VI für einen Zweitjob. Die Klasse steuert nur den monatlichen Abzug; die endgültige Steuer folgt aus der Veranlagung."}},
+{"@type":"Question","name":"Was ist der Zusatzbeitrag und warum steht hier 2,9 Prozent?","acceptedAnswer":{"@type":"Answer","text":"Der Zusatzbeitrag ist der kassenindividuelle Aufschlag auf den allgemeinen Beitragssatz von 14,6 Prozent in der gesetzlichen Krankenversicherung. Maßgeblich ist der Satz der eigenen Krankenkasse; 2,9 Prozent ist lediglich der durchschnittliche Zusatzbeitragssatz für 2026 und dient hier als Voreinstellung. Tragen Sie den Satz Ihrer Kasse ein, wenn Sie ihn kennen."}},
+{"@type":"Question","name":"Warum ist die Pflegeversicherung in Sachsen anders?","acceptedAnswer":{"@type":"Answer","text":"Weil Sachsen keinen zusätzlichen Feiertag zum Ausgleich des Pflegebeitrags abgeschafft hat. Deshalb tragen Arbeitnehmer in Sachsen 2,3 Prozent und Arbeitgeber 1,3 Prozent des Pflegebeitrags, während es in den übrigen Bundesländern je 1,8 Prozent sind. Der Kinderlosenzuschlag und die Abschläge für weitere Kinder kommen hinzu beziehungsweise werden abgezogen."}},
+{"@type":"Question","name":"Was ist die Vorsorgepauschale?","acceptedAnswer":{"@type":"Answer","text":"Die Vorsorgepauschale ist ein fiktiver Abzug im Lohnsteuerverfahren für Vorsorgeaufwendungen. Sie setzt sich aus einem Teilbetrag für die Rentenversicherung (9,3 Prozent des Bruttolohns bis zur Beitragsbemessungsgrenze) und einem Teilbetrag für Kranken- und Pflegeversicherung zusammen. Für die Arbeitslosen-, Kranken- und Pflegeversicherung gilt eine Höchstbetragsrechnung mit einer Grenze von 1.900 Euro, die bei niedrigen Einkommen greift."}},
+{"@type":"Question","name":"Wann fällt 2026 Solidaritätszuschlag an?","acceptedAnswer":{"@type":"Answer","text":"Der Solidaritätszuschlag beträgt 5,5 Prozent der Lohnsteuer, wird aber erst oberhalb einer Freigrenze erhoben: 2026 liegt sie bei 20.350 Euro Jahreslohnsteuer im Grundtarif und 40.700 Euro im Splittingtarif der Steuerklasse III. Direkt oberhalb der Grenze greift eine Milderungszone mit 11,9 Prozent des übersteigenden Betrags, sodass kein harter Sprung entsteht."}},
+{"@type":"Question","name":"Was gilt für privat Versicherte?","acceptedAnswer":{"@type":"Answer","text":"Bei privat Versicherten wird für die Vorsorgepauschale der tatsächliche Beitrag zur privaten Basiskranken- und Pflege-Pflichtversicherung abzüglich des Arbeitgeberzuschusses angesetzt. Renten- und Arbeitslosenversicherung bleiben in diesem Rechner gesetzlich versichert; der monatliche PKV-Beitrag abzüglich Arbeitgeberzuschuss wird als eigener Abzugsposten vom Brutto abgezogen."}},
+{"@type":"Question","name":"Warum weicht mein Gehaltszettel vom Rechner ab?","acceptedAnswer":{"@type":"Answer","text":"Typische Gründe sind ein eingetragener Freibetrag oder Hinzurechnungsbetrag, das Faktorverfahren in Steuerklasse IV, eine Kirchensteuerkappung, sonstige Bezüge wie Weihnachtsgeld oder Boni, der Übergangsbereich bei Monatsgehältern bis 2.000 Euro (Midijob) und unterjährige Änderungen von Gehalt oder Zusatzbeitrag. Der Rechner bildet den Regelfall eines gleichbleibenden Monatsgehalts ab."}},
+{"@type":"Question","name":"Ist dieser Rechner eine Steuerberatung?","acceptedAnswer":{"@type":"Answer","text":"Nein. Der Rechner liefert eine unverbindliche Orientierung auf Basis des BMF-Programmablaufplans 2026 und der Sozialversicherungswerte 2026. Er ersetzt keine Steuerberatung und keinen Steuerbescheid. Bei besonderen Fällen — zum Beispiel Versorgungsbezügen, Auslandsbezügen oder Abfindungen — hilft ein Steuerberater oder das zuständige Finanzamt weiter."}}
+]}</script>
+<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:860px;margin:0 auto;padding:20px;line-height:1.6;color:#1a1a1a}h1{font-size:1.7em;line-height:1.3}h2{margin-top:2em;border-top:1px solid #ddd;padding-top:.4em}label{display:block;margin:.7em 0 .2em;font-weight:600}input,select{width:100%;padding:.55em;font-size:1em;box-sizing:border-box}input[type=checkbox]{width:auto}button{padding:.7em 1.4em;font-size:1.05em;margin-top:1em;cursor:pointer}table{border-collapse:collapse;width:100%;margin:1em 0}td,th{border:1px solid #ccc;padding:.45em .6em;text-align:left}th{background:#f2f2f2}.net{font-size:1.6em;font-weight:700}.warn{background:#fff8e1;border:1px solid #e6c200;padding:.7em;margin:1em 0}.note{color:#444;font-size:.95em}.calc{background:#f7f7f7;padding:1em 1.2em;border:1px solid #ddd}.row{display:grid;grid-template-columns:1fr 1fr;gap:0 1.2em}@media(max-width:600px){.row{grid-template-columns:1fr}}</style>
+</head><body><main>
+<h1>Brutto-Netto-Rechner 2026: Was vom Bruttogehalt netto übrig bleibt</h1>
+<p>Dieser Rechner ermittelt aus Ihrem Bruttogehalt das Nettogehalt für 2026. Er rechnet mit dem offiziellen Verfahren des Bundesfinanzministeriums: Die Lohnsteuer folgt dem <strong>Programmablaufplan (PAP) 2026</strong> nach dem BMF-Schreiben vom 12. November 2025, der Solidaritätszuschlag und die Bemessungsgrundlage für die Kirchensteuer folgen aus derselben Berechnung, und die Sozialversicherung wird mit den Beitragssätzen und Beitragsbemessungsgrenzen 2026 abgezogen. Das Ergebnis ist keine Steuerberatung, sondern eine nachvollziehbare Orientierung für Gehaltsverhandlungen, Jobwechsel und den monatlichen Haushaltsplan. Alle Eingaben werden nur in Ihrem Browser verarbeitet und nicht versendet.</p>
+
+<section class="calc" aria-label="Brutto-Netto-Rechner">
+<h2 style="margin-top:0;border:none;padding:0">Rechner</h2>
+<div class="row">
+<div><label for="brutto">Bruttogehalt (€)</label><input id="brutto" type="number" min="0" step="0.01" value="4000"></div>
+<div><label for="zeitraum">Zeitraum</label><select id="zeitraum"><option value="monat">pro Monat</option><option value="jahr">pro Jahr</option></select></div>
+</div>
+<div class="row">
+<div><label for="stkl">Steuerklasse</label><select id="stkl">
+<option value="1">I — ledig / alleinstehend</option>
+<option value="2">II — alleinerziehend</option>
+<option value="3">III — verheiratet, höheres Einkommen</option>
+<option value="4">IV — verheiratet, ähnliches Einkommen</option>
+<option value="5">V — verheiratet, geringeres Einkommen</option>
+<option value="6">VI — Zweitjob / Nebenjob</option>
+</select></div>
+<div><label for="bundesland">Bundesland (Kirchensteuer, Pflegeversicherung)</label><select id="bundesland">
+<option value="BW">Baden-Württemberg (Kirchensteuer 8 %)</option>
+<option value="BY">Bayern (Kirchensteuer 8 %)</option>
+<option value="BE">Berlin (9 %)</option>
+<option value="BB">Brandenburg (9 %)</option>
+<option value="HB">Bremen (9 %)</option>
+<option value="HH">Hamburg (9 %)</option>
+<option value="HE">Hessen (9 %)</option>
+<option value="MV">Mecklenburg-Vorpommern (9 %)</option>
+<option value="NI">Niedersachsen (9 %)</option>
+<option value="NW" selected>Nordrhein-Westfalen (9 %)</option>
+<option value="RP">Rheinland-Pfalz (9 %)</option>
+<option value="SL">Saarland (9 %)</option>
+<option value="SN">Sachsen (9 %, Pflegeversicherung Sonderregel)</option>
+<option value="ST">Sachsen-Anhalt (9 %)</option>
+<option value="SH">Schleswig-Holstein (9 %)</option>
+<option value="TH">Thüringen (9 %)</option>
+</select></div>
+</div>
+<div class="row">
+<div><label for="kirche">Kirchensteuerpflichtig?</label><select id="kirche"><option value="nein" selected>Nein</option><option value="ja">Ja</option></select></div>
+<div><label for="versicherung">Krankenversicherung</label><select id="versicherung"><option value="gkv" selected>Gesetzlich (GKV)</option><option value="pkv">Privat (PKV, Basistarif)</option></select></div>
+</div>
+<div id="gkvFelder" class="row">
+<div><label for="kvz">Zusatzbeitrag Ihrer Krankenkasse (%)</label><input id="kvz" type="number" min="0" max="5" step="0.01" value="2.9"><p class="note">Voreinstellung 2,9 % = durchschnittlicher Zusatzbeitrag 2026. Maßgeblich ist Ihr kassenindividueller Satz.</p></div>
+<div><label for="alv">Arbeitslosenversicherung</label><select id="alv"><option value="ja" selected>Pflichtversichert</option><option value="nein">Nicht pflichtversichert</option></select></div>
+</div>
+<div id="pkvFelder" class="row" style="display:none">
+<div><label for="pkvBeitrag">PKV-Beitrag pro Monat, Kranken- + Pflege-Pflichtversicherung (€)</label><input id="pkvBeitrag" type="number" min="0" step="0.01" value="450"></div>
+<div><label for="pkvAgz">Arbeitgeberzuschuss pro Monat (€)</label><input id="pkvAgz" type="number" min="0" step="0.01" value="225"><p class="note">In Steuerklasse VI wird kein Arbeitgeberzuschuss angesetzt (Zuschuss nur vom Hauptarbeitgeber).</p></div>
+</div>
+<div class="row">
+<div><label for="kinder">Anzahl Kinder (für Pflegeversicherung)</label><input id="kinder" type="number" min="0" max="15" step="1" value="0"></div>
+<div><label for="pvModus">Pflegeversicherung</label><select id="pvModus"><option value="auto" selected>Automatisch aus Kinderzahl</option><option value="zuschlag">Kinderlos, 23 Jahre oder älter (Zuschlag 0,6 %)</option><option value="jung">Kinderlos, unter 23 (kein Zuschlag)</option></select></div>
+</div>
+<div class="row">
+<div><label for="zkf">Kinderfreibeträge (Zähler laut ELStAM, 0,5er-Schritte)</label><input id="zkf" type="number" min="0" max="15" step="0.5" value="0"><p class="note">Wird aus Kinderzahl und Steuerklasse vorbelegt (I/II: 0,5 je Kind; III/IV: 1,0 je Kind; V/VI: 0) und ist frei anpassbar, z. B. bei Übertragung des Freibetrags. Wirkt nur auf Solidaritätszuschlag und Kirchensteuer, nicht auf die Lohnsteuer.</p></div>
+<div><p class="note" style="margin-top:2.2em">Annahmen des Rechners: sozialversicherungspflichtige Beschäftigung mit gleichbleibendem Monatsgehalt, gesetzliche Rentenversicherung, kein Faktorverfahren, keine eingetragenen Frei- oder Hinzurechnungsbeträge, keine Versorgungsbezüge. Details stehen unten unter „Was der Rechner nicht abbildet“.</p></div>
+</div>
+<button type="button" id="berechnen">Netto berechnen</button>
+<div id="warnung"></div>
+<div id="ergebnis" aria-live="polite"></div>
+</section>
+
+<h2>So funktioniert die Berechnung — Schritt für Schritt</h2>
+<p>Der Lohnsteuerabzug ist kein pauschaler Prozentsatz, sondern eine Kette von Rechenschritten, die der Programmablaufplan des Bundesfinanzministeriums exakt festlegt. Zuerst wird das Monatsgehalt auf ein Jahresgehalt hochgerechnet. Davon werden die festen Tabellenfreibeträge abgezogen: der Arbeitnehmer-Pauschbetrag von 1.230 Euro, der Sonderausgaben-Pauschbetrag von 36 Euro und — nur in Steuerklasse II — der Entlastungsbetrag für Alleinerziehende von 4.260 Euro. In Steuerklasse VI entfallen Arbeitnehmer-Pauschbetrag und Sonderausgaben-Pauschbetrag; das ist einer der Gründe, warum ein Zweitjob zunächst so hoch besteuert wirkt.</p>
+<p>Danach wird die Vorsorgepauschale abgezogen (siehe unten). Was übrig bleibt, ist das zu versteuernde Einkommen für den Lohnsteuerabzug. Darauf wird der Einkommensteuertarif des § 32a EStG angewendet: Bis zum Grundfreibetrag von 12.348 Euro fällt keine Steuer an, danach steigt der Steuersatz in zwei Progressionszonen von 14 Prozent bis 42 Prozent an, ab 69.879 Euro gilt der Spitzensteuersatz von 42 Prozent und ab 277.826 Euro die Reichensteuer von 45 Prozent. In Steuerklasse III wird das Splittingverfahren angewendet: Das zu versteuernde Einkommen wird halbiert, der Tarif auf die Hälfte angewendet und das Ergebnis verdoppelt. In den Steuerklassen V und VI gilt ein besonderes Verfahren nach § 39b Absatz 2 Satz 7 EStG, das den Abzug an den Splittingvorteil des Partners in Klasse III angleicht. Die so ermittelte Jahreslohnsteuer wird durch zwölf geteilt (auf volle Cent abgerundet) und ergibt die monatliche Lohnsteuer.</p>
+<p>Erst danach kommen Solidaritätszuschlag und Kirchensteuer. Beide werden nicht auf die Lohnsteuer selbst, sondern auf eine gesonderte Bemessungsgrundlage berechnet: die Lohnsteuer, die sich ergäbe, wenn zusätzlich die Kinderfreibeträge abgezogen würden. Diese fiktive Steuer heißt im Programmablaufplan JBMG. Liegt sie unter der Freigrenze, fällt kein Solidaritätszuschlag an; darüber beträgt er 5,5 Prozent, in der Milderungszone zunächst nur 11,9 Prozent des übersteigenden Betrags. Die Kirchensteuer beträgt 8 Prozent der Bemessungsgrundlage in Bayern und Baden-Württemberg und 9 Prozent in allen anderen Bundesländern — aber nur, wenn Sie kirchensteuerpflichtig sind. Vom Brutto werden schließlich die Arbeitnehmeranteile zur Sozialversicherung abgezogen. Erst dann steht das Nettogehalt fest.</p>
+
+<h2>Die Steuerklassen I bis VI im Überblick</h2>
+<table>
+<tr><th>Steuerklasse</th><th>Für wen</th><th>Besonderheit im Abzug</th></tr>
+<tr><td>I</td><td>Ledige, Geschiedene, dauernd getrennt Lebende ohne Kind in Klasse II</td><td>Grundtarif, Arbeitnehmer-Pauschbetrag 1.230 Euro, Sonderausgaben-Pauschbetrag 36 Euro</td></tr>
+<tr><td>II</td><td>Alleinerziehende mit Kind im Haushalt</td><td>Grundtarif plus Entlastungsbetrag 4.260 Euro (PAP-Wert; ein höherer Betrag für weitere Kinder kann als Freibetrag eingetragen sein)</td></tr>
+<tr><td>III</td><td>Verheiratete oder Lebenspartner mit deutlich höherem Einkommen, Partner in Klasse V</td><td>Splittingtarif: doppelter Grundfreibetrag in der Wirkung, niedrigster Monatsabzug — die endgültige Steuer wird erst in der Veranlagung ausgeglichen</td></tr>
+<tr><td>IV</td><td>Verheiratete oder Lebenspartner mit ähnlichem Einkommen</td><td>Grundtarif je Partner; mit Faktorverfahren (hier nicht abgebildet) wird der Splittingvorteil bereits monatlich verteilt</td></tr>
+<tr><td>V</td><td>Verheiratete oder Lebenspartner mit deutlich geringerem Einkommen, Partner in Klasse III</td><td>Sonderverfahren nach § 39b Absatz 2 Satz 7 EStG, hoher Monatsabzug, kein Grundfreibetrag in der Wirkung</td></tr>
+<tr><td>VI</td><td>Zweitjob oder weiterer Job neben dem Hauptjob</td><td>Keine Pauschbeträge, keine Kinderfreibeträge, kein Entlastungsbetrag; Sonderverfahren wie in Klasse V</td></tr>
+</table>
+<p>Wichtig ist der Unterschied zwischen monatlichem Abzug und endgültiger Steuer: Die Steuerklasse verändert, wie viel jeden Monat einbehalten wird, nicht aber, wie viel Steuer insgesamt geschuldet wird. Wer in Klasse III wenig und in Klasse V viel Abzug hat, gleicht das in der gemeinsamen Veranlagung wieder aus — oft mit einer Nachzahlung, manchmal mit einer Erstattung. Genau deshalb sind Ehepaare mit der Kombination III/V zur Abgabe einer Steuererklärung verpflichtet, während Alleinstehende in Klasse I in der Regel keine Erklärung abgeben müssen, es sei denn, es liegen weitere Einkünfte oder besondere Tatbestände vor.</p>
+
+<h2>Die Vorsorgepauschale im Detail</h2>
+<p>Die Vorsorgepauschale ist der Teil der Berechnung, der am häufigsten missverstanden wird — und der Grund, warum zwei Menschen mit demselben Bruttogehalt unterschiedliche Lohnsteuer zahlen können. Sie ist kein echter Beitrag, sondern ein fiktiver Abzug, mit dem der Gesetzgeber pauschal berücksichtigt, dass ein Arbeitnehmer Vorsorgeaufwendungen hat. Der erste Teilbetrag betrifft die Rentenversicherung: 9,3 Prozent des Bruttolohns, höchstens bis zur Beitragsbemessungsgrenze von 101.400 Euro im Jahr. Der zweite Teilbetrag betrifft die gesetzliche Kranken- und die soziale Pflegeversicherung: Hier werden die Arbeitnehmerbeitragssätze auf den Bruttolohn bis zur Beitragsbemessungsgrenze von 69.750 Euro angewendet — also 7,3 Prozent plus die Hälfte des Zusatzbeitrags für die Krankenversicherung und der Arbeitnehmeranteil der Pflegeversicherung. Für privat Versicherte tritt an die Stelle dieses zweiten Teilbetrags der tatsächliche Beitrag zur privaten Basiskranken- und Pflege-Pflichtversicherung abzüglich des Arbeitgeberzuschusses.</p>
+<p>Bei niedrigen Einkommen greift eine Höchstbetragsrechnung: Die Teilbeträge für Arbeitslosen-, Kranken- und Pflegeversicherung werden zusammen auf 1.900 Euro begrenzt, und die Vorsorgepauschale ist dann der Renten-Teilbetrag plus dieser begrenzte Betrag, sofern das Ergebnis höher ist als die unbegrenzte Summe. Praktisch bedeutet das: Wer wenig verdient, bekommt über die Arbeitslosenversicherung einen zusätzlichen Vorsorgeanteil bis zur Grenze von 1.900 Euro angerechnet. In Steuerklasse VI wird diese Höchstbetragsrechnung nicht angewendet. Auch das ist ein Grund für den hohen Abzug im Zweitjob. Wer nicht arbeitslosenversicherungspflichtig ist, für den entfällt der Arbeitslosen-Teilbetrag ebenfalls; im Rechner lässt sich das umstellen.</p>
+
+<h2>Solidaritätszuschlag und Kirchensteuer</h2>
+<p>Der Solidaritätszuschlag wird seit 2021 nur noch von einem kleinen Teil der Arbeitnehmer gezahlt. Die Freigrenze liegt 2026 bei 20.350 Euro Jahreslohnsteuer im Grundtarif und — wegen des Splittingverfahrens — bei 40.700 Euro in Steuerklasse III. Entscheidend ist dabei nicht die tatsächlich einbehaltene Lohnsteuer, sondern die Bemessungsgrundlage JBMG, also die Lohnsteuer nach Abzug der Kinderfreibeträge. Wer Kinder hat, rutscht dadurch häufig unter die Freigrenze, auch wenn die Lohnsteuer selbst hoch ist. Oberhalb der Freigrenze beträgt der Zuschlag 5,5 Prozent der Bemessungsgrundlage, aber die Milderungszone begrenzt ihn zunächst auf 11,9 Prozent des Betrags, der die Freigrenze übersteigt. So entsteht kein Sprung: Ein Euro mehr Lohnsteuer führt nicht plötzlich zu einem vollen Zuschlag.</p>
+<p>Die Kirchensteuer funktioniert nach demselben Prinzip, aber ohne Freigrenze: Sie beträgt 8 oder 9 Prozent der Bemessungsgrundlage JBMG, je nach Bundesland. Auch hier senken Kinderfreibeträge die Bemessungsgrundlage und damit die Kirchensteuer, selbst wenn die Lohnsteuer selbst unverändert bleibt. Nicht abgebildet sind die Kirchensteuerkappung und die Mindestkirchensteuer, die einige Landeskirchen vorsehen: Bei sehr hohen Einkommen kann die Kirchensteuer auf einen Prozentsatz des zu versteuernden Einkommens begrenzt sein, bei sehr niedrigen Einkommen kann eine Mindestkirchensteuer anfallen. Auch der offizielle Rechner des Bundesfinanzministeriums bildet diese Besonderheiten nicht ab; wer davon betroffen ist, findet den genauen Betrag auf der Lohnabrechnung des Arbeitgebers.</p>
+
+<h2>Sozialversicherung 2026: Sätze und Grenzen</h2>
+<table>
+<tr><th>Zweig</th><th>Beitragssatz gesamt</th><th>Arbeitnehmeranteil</th><th>Beitragsbemessungsgrenze 2026</th></tr>
+<tr><td>Rentenversicherung</td><td>18,6 %</td><td>9,3 %</td><td>101.400 Euro im Jahr (8.450 Euro im Monat)</td></tr>
+<tr><td>Arbeitslosenversicherung</td><td>2,6 %</td><td>1,3 %</td><td>101.400 Euro im Jahr (8.450 Euro im Monat)</td></tr>
+<tr><td>Krankenversicherung</td><td>14,6 % + Zusatzbeitrag</td><td>7,3 % + halber Zusatzbeitrag</td><td>69.750 Euro im Jahr (5.812,50 Euro im Monat)</td></tr>
+<tr><td>Pflegeversicherung</td><td>3,6 % (+ 0,6 % Zuschlag für Kinderlose ab 23)</td><td>1,8 % (Sachsen 2,3 %); Kinderlose 2,4 % (Sachsen 2,9 %); Abschlag 0,25 % je Kind ab dem zweiten bis zum fünften Kind</td><td>69.750 Euro im Jahr (5.812,50 Euro im Monat)</td></tr>
+</table>
+<p>Die Beitragsbemessungsgrenze ist die entscheidende Stellschraube für hohe Einkommen: Verdienen Sie mehr als die Grenze, wird der übersteigende Teil nicht mehr mit Beiträgen belastet. Bei einem Monatsgehalt von 8.000 Euro zahlen Sie Kranken- und Pflegebeiträge nur bis 5.812,50 Euro, Renten- und Arbeitslosenbeiträge bis 8.000 Euro — die Renten- und Arbeitslosenbeiträge sind erst ab 8.450 Euro im Monat gedeckelt. Umgekehrt heißt das: Eine Gehaltserhöhung oberhalb der Krankenversicherungsgrenze kommt fast vollständig netto an, abzüglich nur der Steuer auf den Mehrbetrag. Die Unfallversicherung taucht in der Aufstellung nicht auf, weil sie allein vom Arbeitgeber getragen wird. Ebenfalls nicht enthalten sind Umlagen, die nur den Arbeitgeber belasten.</p>
+<p>Bei der Pflegeversicherung lohnt ein genauer Blick auf die Kinderregelung: Der allgemeine Satz von 3,6 Prozent wird je zur Hälfte getragen. Wer keine Kinder hat und 23 Jahre oder älter ist, zahlt zusätzlich 0,6 Prozentpunkte allein — der Arbeitnehmeranteil steigt dann auf 2,4 Prozent, in Sachsen auf 2,9 Prozent. Eltern mit mehreren Kindern erhalten dagegen Abschläge: Für das zweite bis fünfte Kind sinkt der Arbeitnehmeranteil je Kind um 0,25 Prozentpunkte, allerdings nur während der Erziehungsphase und längstens bis zum 25. Lebensjahr des jeweiligen Kindes. Der Rechner bildet die Abschläge nach der Kinderzahl ab; ob die Voraussetzungen im Einzelfall erfüllt sind, prüft die Pflegekasse beziehungsweise der Arbeitgeber.</p>
+
+<h2>Kinder: Zähler, Kindergeld und Günstigerprüfung</h2>
+<p>Für Kinder gibt es im Lohnsteuerabzug den Kinderfreibetragszähler, kurz Zähler. Er wird in den elektronischen Lohnsteuerabzugsmerkmalen (ELStAM) geführt und beträgt grundsätzlich 0,5 je Kind. Bei verheirateten, nicht dauernd getrennt lebenden Eltern beträgt er 1,0 je Kind — jeweils in Steuerklasse IV/IV und in der Kombination III/V nur in Steuerklasse III. In den Steuerklassen V und VI wird kein Zähler eingetragen. Ein Zähler von 0,5 entspricht 2026 einem Freibetrag von 4.878 Euro im Jahr, ein Zähler von 1,0 entspricht 9.756 Euro. Dieser Betrag setzt sich zusammen aus dem Freibetrag für das sächliche Existenzminimum des Kindes (3.414 Euro je Elternteil, 6.828 Euro zusammen) und dem Freibetrag für Betreuungs-, Erziehungs- oder Ausbildungsbedarf (1.464 Euro je Elternteil, 2.928 Euro zusammen). Der Rechner übernimmt den Zähler aus Kinderzahl und Steuerklasse, Sie können ihn aber anpassen, wenn Ihr ELStAM-Eintrag abweicht — etwa nach einer Übertragung des Freibetrags auf einen Elternteil.</p>
+<p>Entscheidend ist, was der Zähler bewirkt und was nicht: Er senkt nur die Bemessungsgrundlage für Solidaritätszuschlag und Kirchensteuer. Die Lohnsteuer selbst ändert sich durch Kinder im laufenden Jahr überhaupt nicht. Der Grund ist das Kindergeld: Während des Jahres erhalten Eltern Kindergeld (2026: 259 Euro monatlich je Kind), und erst bei der Einkommensteuererklärung prüft das Finanzamt automatisch in der sogenannten Günstigerprüfung, ob der Kinderfreibetrag günstiger wäre als das bereits erhaltene Kindergeld. Ist das der Fall, werden die Freibeträge angesetzt und das Kindergeld gegengerechnet; andernfalls bleibt es beim Kindergeld. Für die meisten Familien mit mittlerem Einkommen ist das Kindergeld günstiger, für hohe Einkommen lohnt sich der Freibetrag. Der Rechner zeigt deshalb bewusst nur den monatlichen Abzug — eine Aussage darüber, ob sich der Freibetrag in der Veranlagung lohnt, trifft erst die Steuererklärung.</p>
+
+<h2>Beispielrechnung</h2>
+<p id="beispiel">Ein Beispiel macht die Kette greifbar: Bei einem Monatsbrutto von 4.000 Euro in Steuerklasse I, ohne Kirchensteuerpflicht, gesetzlich krankenversichert mit dem durchschnittlichen Zusatzbeitrag von 2,9 Prozent und ohne Kinder beträgt die Jahreslohnsteuer nach dem Programmablaufplan 6.294 Euro, also 524,50 Euro im Monat. Der Solidaritätszuschlag liegt bei null, weil die Bemessungsgrundlage unter der Freigrenze bleibt. Die Sozialversicherung kostet monatlich 870,00 Euro (Rentenversicherung 372,00 Euro, Arbeitslosenversicherung 52,00 Euro, Krankenversicherung 350,00 Euro, Pflegeversicherung 96,00 Euro). Insgesamt werden 1.394,50 Euro abgezogen, das Nettogehalt beträgt 2.605,50 Euro im Monat beziehungsweise 31.266,00 Euro im Jahr — eine Nettoquote von 65,1 Prozent. Steigt dasselbe Gehalt in Steuerklasse III mit zwei Kindern und Kirchensteuer in Bayern, verändert sich das Bild deutlich: Die Lohnsteuer sinkt durch das Splittingverfahren, die Kinderfreibeträge senken die Kirchensteuer-Bemessungsgrundlage auf 324,00 Euro im Monat, und das Nettogehalt liegt trotz Kirchensteuer höher. Umgekehrt zeigt Steuerklasse VI, wie stark der Abzug im Zweitjob ausfällt: Pauschbeträge entfallen, die Höchstbetragsrechnung der Vorsorgepauschale greift nicht, und der Solidaritätszuschlag setzt früher ein.</p>
+
+<h2>Was der Rechner nicht abbildet</h2>
+<p>Kein Rechner kann jeden Einzelfall abbilden, und dieser macht da keine Ausnahme — aber er sagt offen, wo die Grenzen liegen. Nicht abgebildet sind: das Faktorverfahren in Steuerklasse IV (der Rechner rechnet mit Faktor 1,0); eingetragene Freibeträge und Hinzurechnungsbeträge aus den ELStAM; Versorgungsbezüge mit Versorgungsfreibetrag und Zuschlag; der Altersentlastungsbetrag für Arbeitnehmer, die vor Beginn des Kalenderjahres das 64. Lebensjahr vollendet haben; sonstige Bezüge wie Weihnachtsgeld, Boni oder Abfindungen, für die eine eigene Berechnung nach § 39b Absatz 3 EStG gilt; die Kirchensteuerkappung und Mindestkirchensteuer; und der Übergangsbereich für Monatsgehälter bis 2.000 Euro (Midijob), in dem die Arbeitnehmerbeiträge zur Sozialversicherung reduziert sind, sowie der Minijob bis 603 Euro im Monat, bei dem der Arbeitgeber Pauschalen trägt. Bei Monatsgehältern unter 2.000 Euro zeigt der Rechner deshalb einen Hinweis an; die ausgewiesenen Sozialbeiträge sind dann zu hoch. Ebenfalls nicht abgebildet sind berufsständische Versorgungswerke anstelle der gesetzlichen Rentenversicherung, freiwillige Krankenversicherung oberhalb der Versicherungspflichtgrenze mit anderen Beitragsregeln als dem hier verwendeten Basistarif-Modell und unterjährige Änderungen, etwa ein Gehaltswechsel mitten im Jahr oder ein Wechsel der Krankenkasse mit neuem Zusatzbeitrag. Wer einen dieser Fälle hat, sollte das Ergebnis mit der eigenen Lohnabrechnung vergleichen und im Zweifel einen Steuerberater fragen.</p>
+
+<h2>Geprüft gegen den Programmablaufplan des BMF</h2>
+<p>Die Lohnsteuer-Engine dieses Rechners wurde gegen die im endgültigen Programmablaufplan 2026 abgedruckte allgemeine Prüftabelle geprüft: 42 Bruttostufen von 5.000 bis 110.000 Euro Jahresbrutto in allen sechs Steuerklassen, berechnet mit den Merkern ALV, KRV und PKV = 0, einem Zusatzbeitrag von 2,90 Prozent und — in Steuerklasse II — ohne Kinderlosenzuschlag. Alle 252 Werte stimmen exakt überein. Zusätzlich stimmen Stichproben der besonderen Prüftabelle (kein Sozialversicherungszweig versichert) überein. Die zugrunde liegenden Parameter sind: Grundfreibetrag 12.348 Euro, Kinderfreibetrag 4.878 Euro je 0,5-Zähler beziehungsweise 9.756 Euro je 1,0-Zähler, Solidaritätszuschlag-Freigrenze 20.350 Euro, Grenzwerte für die Steuerklassen V und VI 14.071 Euro, 34.939 Euro und 222.260 Euro, Beitragsbemessungsgrenzen 69.750 Euro (Kranken-/Pflegeversicherung) und 101.400 Euro (Renten-/Arbeitslosenversicherung). Quellen: BMF-Schreiben vom 12. November 2025 mit Anlage 1 (Programmablaufplan 2026), § 32a EStG (Einkommensteuertarif 2026), § 39b EStG (Lohnsteuerabzug) und die Sozialversicherungs-Rechengrößen 2026.</p>
+<p class="note">Hinweis: Dieser Rechner ist keine Steuer- oder Rechtsberatung. Die Ergebnisse sind unverbindlich; maßgeblich sind Ihre Lohnabrechnung, Ihr Einkommensteuerbescheid und die Auskunft des zuständigen Finanzamts. Stand der Werte: Steuerjahr 2026.</p>
+
+<h2>Häufige Fragen</h2>
+<h3>Ist das Ergebnis mein endgültiges Nettogehalt?</h3>
+<p>Nein, es ist der monatliche Lohnsteuerabzug nach dem BMF-Programmablaufplan 2026. Die endgültige Einkommensteuer setzt das Finanzamt mit dem Einkommensteuerbescheid fest; die einbehaltene Lohnsteuer wird darauf angerechnet. Abweichungen entstehen zum Beispiel durch Werbungskosten über dem Pauschbetrag, Sonderausgaben oder eine andere Veranlagung.</p>
+<h3>Warum senken Kinder die Lohnsteuer nicht, aber den Solidaritätszuschlag und die Kirchensteuer?</h3>
+<p>Weil die Kinderfreibeträge im Lohnsteuerabzug nur für die Bemessungsgrundlage der Zuschlagsteuern berücksichtigt werden. Die Lohnsteuer selbst bleibt unverändert; der Ausgleich über Kindergeld oder Kinderfreibetrag erfolgt erst in der Einkommensteuerveranlagung durch die Günstigerprüfung des Finanzamts.</p>
+<h3>Welche Steuerklasse soll ich wählen?</h3>
+<p>Die Steuerklasse ergibt sich aus dem Familienstand und wird vom Finanzamt in den ELStAM hinterlegt, nicht frei gewählt: I für Ledige, II für Alleinerziehende, III und V für Ehepaare mit stark unterschiedlichem Einkommen, IV und IV bei ähnlichem Einkommen und VI für einen Zweitjob. Die Klasse steuert nur den monatlichen Abzug; die endgültige Steuer folgt aus der Veranlagung.</p>
+<h3>Was ist der Zusatzbeitrag und warum steht hier 2,9 Prozent?</h3>
+<p>Der Zusatzbeitrag ist der kassenindividuelle Aufschlag auf den allgemeinen Beitragssatz von 14,6 Prozent in der gesetzlichen Krankenversicherung. Maßgeblich ist der Satz der eigenen Krankenkasse; 2,9 Prozent ist lediglich der durchschnittliche Zusatzbeitragssatz für 2026 und dient hier als Voreinstellung. Tragen Sie den Satz Ihrer Kasse ein, wenn Sie ihn kennen.</p>
+<h3>Warum ist die Pflegeversicherung in Sachsen anders?</h3>
+<p>Weil Sachsen keinen zusätzlichen Feiertag zum Ausgleich des Pflegebeitrags abgeschafft hat. Deshalb tragen Arbeitnehmer in Sachsen 2,3 Prozent und Arbeitgeber 1,3 Prozent des Pflegebeitrags, während es in den übrigen Bundesländern je 1,8 Prozent sind. Der Kinderlosenzuschlag und die Abschläge für weitere Kinder kommen hinzu beziehungsweise werden abgezogen.</p>
+<h3>Was ist die Vorsorgepauschale?</h3>
+<p>Die Vorsorgepauschale ist ein fiktiver Abzug im Lohnsteuerverfahren für Vorsorgeaufwendungen. Sie setzt sich aus einem Teilbetrag für die Rentenversicherung (9,3 Prozent des Bruttolohns bis zur Beitragsbemessungsgrenze) und einem Teilbetrag für Kranken- und Pflegeversicherung zusammen. Für die Arbeitslosen-, Kranken- und Pflegeversicherung gilt eine Höchstbetragsrechnung mit einer Grenze von 1.900 Euro, die bei niedrigen Einkommen greift.</p>
+<h3>Wann fällt 2026 Solidaritätszuschlag an?</h3>
+<p>Der Solidaritätszuschlag beträgt 5,5 Prozent der Lohnsteuer, wird aber erst oberhalb einer Freigrenze erhoben: 2026 liegt sie bei 20.350 Euro Jahreslohnsteuer im Grundtarif und 40.700 Euro im Splittingtarif der Steuerklasse III. Direkt oberhalb der Grenze greift eine Milderungszone mit 11,9 Prozent des übersteigenden Betrags, sodass kein harter Sprung entsteht.</p>
+<h3>Was gilt für privat Versicherte?</h3>
+<p>Bei privat Versicherten wird für die Vorsorgepauschale der tatsächliche Beitrag zur privaten Basiskranken- und Pflege-Pflichtversicherung abzüglich des Arbeitgeberzuschusses angesetzt. Renten- und Arbeitslosenversicherung bleiben in diesem Rechner gesetzlich versichert; der monatliche PKV-Beitrag abzüglich Arbeitgeberzuschuss wird als eigener Abzugsposten vom Brutto abgezogen.</p>
+<h3>Warum weicht mein Gehaltszettel vom Rechner ab?</h3>
+<p>Typische Gründe sind ein eingetragener Freibetrag oder Hinzurechnungsbetrag, das Faktorverfahren in Steuerklasse IV, eine Kirchensteuerkappung, sonstige Bezüge wie Weihnachtsgeld oder Boni, der Übergangsbereich bei Monatsgehältern bis 2.000 Euro (Midijob) und unterjährige Änderungen von Gehalt oder Zusatzbeitrag. Der Rechner bildet den Regelfall eines gleichbleibenden Monatsgehalts ab.</p>
+<h3>Ist dieser Rechner eine Steuerberatung?</h3>
+<p>Nein. Der Rechner liefert eine unverbindliche Orientierung auf Basis des BMF-Programmablaufplans 2026 und der Sozialversicherungswerte 2026. Er ersetzt keine Steuerberatung und keinen Steuerbescheid. Bei besonderen Fällen — zum Beispiel Versorgungsbezügen, Auslandsbezügen oder Abfindungen — hilft ein Steuerberater oder das zuständige Finanzamt weiter.</p>
+
+<h2>Quellen</h2>
+<ul>
+<li>Bundesministerium der Finanzen, Schreiben vom 12. November 2025, IV C 5 – S 2361/00025/016/028, mit Anlage 1: Programmablaufplan für die maschinelle Berechnung der vom Arbeitslohn einzubehaltenden Lohnsteuer, des Solidaritätszuschlags und der Maßstabsteuer für die Kirchenlohnsteuer für 2026 (einschließlich Prüftabellen).</li>
+<li>§ 32a Einkommensteuergesetz (EStG): Einkommensteuertarif für den Veranlagungszeitraum 2026 (Grundfreibetrag 12.348 Euro).</li>
+<li>§ 39b EStG: Einbehaltung der Lohnsteuer, einschließlich des Verfahrens für die Steuerklassen V und VI (Absatz 2 Satz 7) und der Vorsorgepauschale (Absatz 2 Satz 5).</li>
+<li>§ 51a EStG: Bemessungsgrundlage für Kirchenlohnsteuer und Solidaritätszuschlag; Freigrenze Solidaritätszuschlag 20.350 Euro (40.700 Euro im Splittingtarif).</li>
+<li>Sozialversicherungs-Rechengrößen 2026: Beitragsbemessungsgrenzen 69.750 Euro (KV/PV) und 101.400 Euro (RV/AV); Beitragssätze RV 18,6 %, AV 2,6 %, KV 14,6 % zuzüglich Zusatzbeitrag (Durchschnitt 2,9 %), PV 3,6 % zuzüglich Kinderlosenzuschlag 0,6 % beziehungsweise Abschlägen von 0,25 % je Kind ab dem zweiten bis zum fünften Kind.</li>
+<li>§ 38b EStG und ELStAM-Regeln: Kinderfreibetragszähler grundsätzlich 0,5 je Kind, 1,0 je Kind bei verheirateten, nicht dauernd getrennt lebenden Eltern in IV/IV und in III/V nur in Klasse III.</li>
+</ul>
+</main>
+<script>
+"use strict";
+var GFB=12348,W1=14071,W2=34939,W3=222260;
+function tariff(x){x=Math.floor(x);if(x<=GFB)return 0;if(x<17800){var y=(x-GFB)/10000;return Math.floor((914.51*y+1400)*y);}if(x<69879){var z=(x-17799)/10000;return Math.floor((173.10*z+2397)*z+1034.87);}if(x<277826)return Math.floor(0.42*x-11135.63);return Math.floor(0.45*x-19470.38);}
+function up56(zx){var s1=tariff(1.25*zx),s2=tariff(0.75*zx);return Math.max((s1-s2)*2,zx*0.14);}
+function mst56(x){var zzx=x,zx=zzx>W2?W2:zzx,vergl=up56(zx);if(zzx>W2){if(zzx>W3)vergl=vergl+(W3-W2)*0.42+(zzx-W3)*0.45;else vergl=vergl+(zzx-W2)*0.42;}if(zzx<=W1)return Math.floor(vergl);var hoch=Math.floor(up56(W1))+(Math.min(zzx,W3)-W1)*0.42+Math.max(zzx-W3,0)*0.45;return Math.floor(Math.min(vergl,hoch));}
+function papAnnual(gross,o){
+  var kvSatzAn=o.kvz/2/100+0.07;
+  var pvSatzAn=o.sachsen?0.023:0.018;if(o.pvz)pvSatzAn+=0.006;else pvSatzAn-=o.pva*0.0025;
+  var vspr=Math.min(gross,101400)*0.093;
+  var vspKvPv=o.pkv?Math.max(o.pkpvAnnual-(o.stkl===6?0:o.pkpvAgzAnnual),0):Math.min(gross,69750)*(kvSatzAn+pvSatzAn);
+  var vsp=vspKvPv+vspr;
+  if(o.stkl!==6&&o.alv){var vspAlv=Math.min(gross,101400)*0.013;var vspHb=Math.min(vspAlv+vspKvPv,1900);var vspN=vspr+vspHb;if(vspN>vsp)vsp=vspN;}
+  var anp=o.stkl===6?0:Math.min(1230,gross),sap=o.stkl===6?0:36,efa=o.stkl===2?4260:0,kztab=o.stkl===3?2:1;
+  var ztabfb=efa+anp+sap,zve=gross-ztabfb-vsp,lst=0;
+  if(zve>=1){var x=Math.floor(zve/kztab);lst=o.stkl<5?tariff(x)*kztab:mst56(x);}
+  var jbmg=lst,kfb=0;
+  if(o.zkf>0){kfb=o.zkf*9756;var zve2=gross-(ztabfb+kfb)-vsp;if(zve2>=1){var x2=Math.floor(zve2/kztab);jbmg=o.stkl<5?tariff(x2)*kztab:mst56(x2);}else jbmg=0;}
+  var frei=20350*kztab,solz=0;if(jbmg>frei)solz=Math.min(jbmg*0.055,(jbmg-frei)*0.119);
+  return{lst:lst,jbmg:jbmg,solz:solz,vsp:vsp,ztabfb:ztabfb,zve:zve,kfb:kfb,pvSatzAn:pvSatzAn,frei:frei};
+}
+function r2(v){return Math.round((v+1e-9)*100)/100;}
+function fmt(v){return v.toLocaleString("de-DE",{minimumFractionDigits:2,maximumFractionDigits:2})+" €";}
+function $(id){return document.getElementById(id);}
+function syncZkf(){
+  var stkl=parseInt($("stkl").value,10),kinder=parseInt($("kinder").value,10)||0,zkf=0;
+  if(stkl===1||stkl===2)zkf=kinder*0.5;else if(stkl===3||stkl===4)zkf=kinder*1.0;else zkf=0;
+  $("zkf").value=zkf;
+}
+function toggleFelder(){
+  var pkv=$("versicherung").value==="pkv";
+  $("gkvFelder").style.display=pkv?"none":"grid";
+  $("pkvFelder").style.display=pkv?"grid":"none";
+}
+function berechnen(){
+  var brutto=parseFloat($("brutto").value)||0;
+  var monatlich=$("zeitraum").value==="monat";
+  var gm=monatlich?brutto:brutto/12,ga=gm*12;
+  var stkl=parseInt($("stkl").value,10);
+  var bl=$("bundesland").value,sachsen=bl==="SN",kistRate=(bl==="BW"||bl==="BY")?0.08:0.09;
+  var kirche=$("kirche").value==="ja";
+  var pkv=$("versicherung").value==="pkv";
+  var kvz=parseFloat($("kvz").value);if(isNaN(kvz))kvz=2.9;kvz=Math.max(0,Math.min(5,kvz));
+  var alv=$("alv").value==="ja";
+  var kinder=parseInt($("kinder").value,10)||0;kinder=Math.max(0,Math.min(15,kinder));
+  var zkf=parseFloat($("zkf").value)||0;if(stkl>=5)zkf=0;zkf=Math.max(0,Math.min(15,zkf));
+  var pvModus=$("pvModus").value,pvz,pva;
+  if(pvModus==="zuschlag"){pvz=1;pva=0;}
+  else if(pvModus==="jung"){pvz=0;pva=0;}
+  else if(kinder===0){pvz=1;pva=0;}
+  else{pvz=0;pva=Math.min(Math.max(kinder-1,0),4);}
+  var pkvBeitrag=parseFloat($("pkvBeitrag").value)||0,pkvAgz=parseFloat($("pkvAgz").value)||0;
+  var pap=papAnnual(ga,{stkl:stkl,zkf:zkf,kvz:kvz,sachsen:sachsen,pvz:pvz,pva:pva,pkv:pkv,pkpvAnnual:pkvBeitrag*12,pkpvAgzAnnual:pkvAgz*12,alv:alv});
+  var lstM=Math.floor(pap.lst*100/12)/100,solzM=Math.floor(pap.solz*100/12)/100;
+  var bkM=kirche?Math.floor(pap.jbmg*100/12)/100:0,kistM=kirche?r2(bkM*kistRate):0;
+  var rvM=r2(Math.min(gm,8450)*0.093),avM=alv?r2(Math.min(gm,8450)*0.013):0,kvM=0,pvM=0,pkvM=0;
+  if(pkv){pkvM=r2(Math.max(pkvBeitrag-(stkl===6?0:pkvAgz),0));}
+  else{kvM=r2(Math.min(gm,5812.50)*(0.073+kvz/200));pvM=r2(Math.min(gm,5812.50)*pap.pvSatzAn);}
+  var sv=r2(rvM+avM+kvM+pvM+pkvM),abz=r2(lstM+solzM+kistM+sv),netto=r2(gm-abz);
+  var warn="";
+  if(gm>0&&gm<=603)warn='<div class="warn">Hinweis: Bis 603 Euro im Monat liegt in der Regel ein Minijob vor — dort gelten Pauschalen des Arbeitgebers statt der hier berechneten Beiträge. Das Ergebnis ist für einen Minijob nicht aussagekräftig.</div>';
+  else if(gm>0&&gm<2000)warn='<div class="warn">Hinweis: Bis 2.000 Euro im Monat gilt der Übergangsbereich (Midijob) mit reduzierten Arbeitnehmerbeiträgen zur Sozialversicherung. Dieser Rechner bildet den Übergangsbereich nicht ab — die ausgewiesenen Sozialbeiträge sind hier zu hoch.</div>';
+  $("warnung").innerHTML=warn;
+  var svZeilen=pkv
+    ?"<tr><td>Rentenversicherung (9,3 %)</td><td>"+fmt(rvM)+"</td></tr><tr><td>Arbeitslosenversicherung</td><td>"+fmt(avM)+"</td></tr><tr><td>Private Kranken- + Pflegeversicherung (Beitrag abzüglich Arbeitgeberzuschuss)</td><td>"+fmt(pkvM)+"</td></tr>"
+    :"<tr><td>Rentenversicherung (9,3 %)</td><td>"+fmt(rvM)+"</td></tr><tr><td>Arbeitslosenversicherung (1,3 %)</td><td>"+fmt(avM)+"</td></tr><tr><td>Krankenversicherung (7,3 % + halber Zusatzbeitrag von "+kvz.toLocaleString("de-DE")+" %)</td><td>"+fmt(kvM)+"</td></tr><tr><td>Pflegeversicherung ("+(pap.pvSatzAn*100).toLocaleString("de-DE")+" % Arbeitnehmeranteil)</td><td>"+fmt(pvM)+"</td></tr>";
+  $("ergebnis").innerHTML=
+    '<p class="net">Netto: '+fmt(netto)+' pro Monat</p>'+
+    '<p>'+fmt(r2(netto*12))+' netto pro Jahr · Nettoquote '+(gm>0?(netto/gm*100).toFixed(1):"0,0")+' % des Bruttogehalts · Abzüge gesamt '+fmt(abz)+' pro Monat</p>'+
+    '<table><tr><th>Position (pro Monat)</th><th>Betrag</th></tr>'+
+    '<tr><td>Bruttogehalt</td><td>'+fmt(gm)+'</td></tr>'+
+    '<tr><td>Lohnsteuer</td><td>− '+fmt(lstM)+'</td></tr>'+
+    '<tr><td>Solidaritätszuschlag</td><td>− '+fmt(solzM)+'</td></tr>'+
+    '<tr><td>Kirchensteuer'+(kirche?' ('+(kistRate*100).toLocaleString("de-DE")+' % von '+fmt(bkM)+' Bemessungsgrundlage)':" (nicht kirchensteuerpflichtig)")+'</td><td>− '+fmt(kistM)+'</td></tr>'+
+    svZeilen+
+    '<tr><td><strong>Sozialversicherung gesamt</strong></td><td><strong>− '+fmt(sv)+'</strong></td></tr>'+
+    '<tr><td><strong>Nettogehalt</strong></td><td><strong>'+fmt(netto)+'</strong></td></tr></table>'+
+    '<p class="note">Rechenweg (Jahr): Jahresbrutto '+fmt(ga)+' − Tabellenfreibeträge '+fmt(pap.ztabfb)+' − Vorsorgepauschale '+fmt(pap.vsp)+' = zu versteuerndes Einkommen '+fmt(pap.zve)+' (auf volle Euro abgerundet für den Tarif). Jahreslohnsteuer nach dem Programmablaufplan: '+fmt(pap.lst)+'. Bemessungsgrundlage für Solidaritätszuschlag und Kirchensteuer (nach Kinderfreibeträgen von '+fmt(pap.kfb)+'): '+fmt(pap.jbmg)+' — Freigrenze Solidaritätszuschlag: '+fmt(pap.frei)+'. Die Monatswerte für Lohnsteuer und Solidaritätszuschlag sind die Jahreswerte durch zwölf, auf volle Cent abgerundet; das Jahresnetto ist der Monatswert mal zwölf und kann sich deshalb um wenige Cent von einer reinen Jahresrechnung unterscheiden. Unverbindliche Orientierung, keine Steuerberatung.</p>';
+}
+$("berechnen").addEventListener("click",berechnen);
+$("stkl").addEventListener("change",syncZkf);
+$("kinder").addEventListener("change",syncZkf);
+$("versicherung").addEventListener("change",toggleFelder);
+["brutto","zeitraum","bundesland","kirche","kvz","alv","pvModus","zkf","pkvBeitrag","pkvAgz"].forEach(function(id){$(id).addEventListener("change",berechnen);});
+berechnen();
+</script>
+</body></html>
