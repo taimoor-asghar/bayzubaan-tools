@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Australia GST Calculator — Add or Remove 10% GST | Bayzubaan</title>
+<meta name="description" content="Add or remove Australian GST at 10%, with ATO rounding rules, plus presets for New Zealand 15%, India 0%, 5%, 18% and 40%, and Canada GST/HST by province.">
+<meta property="og:title" content="Australia GST Calculator — Add or Remove 10% GST">
+<meta property="og:description" content="Add GST to a price or extract GST from a GST-inclusive price, at Australia's 10% rate or another preset.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://bayzubaan.com/australia/gst-calculator/">
+<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:860px;margin:0 auto;padding:20px;line-height:1.65;color:#1c2733}h1{font-size:1.9em;line-height:1.25}h2{margin-top:1.8em}.card{border:1px solid #d5dde5;border-radius:12px;padding:20px;background:#f7fafc}label{display:block;margin:12px 0 4px;font-weight:600}input,select{width:100%;padding:10px;font-size:16px;border:1px solid #b9c4cf;border-radius:8px;box-sizing:border-box}button{background:#0b3d5e;color:#fff;border:0;padding:12px 22px;font-size:17px;border-radius:8px;cursor:pointer;margin-top:16px}button:hover{background:#082c44}.result{font-size:1.3em;font-weight:700;margin-top:16px}.small{font-size:.92em;color:#44546a}table{border-collapse:collapse;width:100%;margin:12px 0}th,td{border:1px solid #d5dde5;padding:8px;text-align:left}.note{background:#eef6ff;border:1px solid #bcd6f5;border-radius:10px;padding:14px}</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is the Australian GST rate?","acceptedAnswer":{"@type":"Answer","text":"10%, applied to most goods and services sold in Australia, unchanged since GST was introduced on 1 July 2000."}},
+{"@type":"Question","name":"How do I add 10% GST?","acceptedAnswer":{"@type":"Answer","text":"Multiply the GST-exclusive price by 1.10. For example, $100 excluding GST becomes $110 including GST, with $10 of GST."}},
+{"@type":"Question","name":"How do I remove GST from a price?","acceptedAnswer":{"@type":"Answer","text":"Divide the GST-inclusive price by 1.10. The GST component itself is one eleventh of the inclusive price: $110 divided by 11 is $10 of GST."}},
+{"@type":"Question","name":"How is GST rounded under ATO rules?","acceptedAnswer":{"@type":"Answer","text":"Where GST includes a fraction of a cent, a single taxable sale on a tax invoice is rounded to the nearest cent, with 0.5 of a cent rounded up."}},
+{"@type":"Question","name":"Who must register for GST in Australia?","acceptedAnswer":{"@type":"Answer","text":"Businesses must register when annual GST turnover reaches $75,000 ($150,000 for non-profit organisations); taxi, limousine and rideshare drivers must register regardless of turnover."}},
+{"@type":"Question","name":"What is GST-free in Australia?","acceptedAnswer":{"@type":"Answer","text":"Most basic food, many health and education services, childcare, exports and some other categories are GST-free, while financial supplies and residential rent are generally input-taxed."}}]}</script>
+</head><body>
+<p><a href="https://bayzubaan.com/">Bayzubaan</a> &rsaquo; Australia tools</p>
+<h1>Australia GST Calculator: Add or Remove GST</h1>
+<p class="small">General information only — not tax advice. Confirm whether a particular supply is taxable, GST-free or input-taxed with the Australian Taxation Office (ATO) or a registered tax agent.</p>
+<div class="card">
+<label for="mode">Calculation</label>
+<select id="mode"><option value="add">Add GST (price excludes GST)</option><option value="remove">Remove GST (price includes GST)</option></select>
+<label for="amount">Amount (A$ unless another preset currency applies)</label>
+<input id="amount" type="number" min="0" step="any" value="100">
+<label for="preset">Rate preset</label>
+<select id="preset" onchange="syncRate()">
+<option value="10" data-cur="A$">Australia GST — 10%</option>
+<option value="15" data-cur="NZ$">New Zealand GST — 15%</option>
+<option value="5" data-cur="C$">Canada — federal GST 5%</option>
+<option value="13" data-cur="C$">Canada — Ontario HST 13%</option>
+<option value="15" data-cur="C$">Canada — Atlantic HST 15% (NB, NL, PEI)</option>
+<option value="14" data-cur="C$">Canada — Nova Scotia HST 14%</option>
+<option value="12" data-cur="C$">Canada — British Columbia 12% (5% GST + 7% PST)</option>
+<option value="0" data-cur="₹">India GST — 0% (nil-rated)</option>
+<option value="5" data-cur="₹">India GST — 5%</option>
+<option value="18" data-cur="₹">India GST — 18% (standard)</option>
+<option value="40" data-cur="₹">India GST — 40% (luxury / sin goods)</option>
+<option value="custom" data-cur="">Custom rate…</option>
+</select>
+<label for="rate">Rate (%)</label>
+<input id="rate" type="number" min="0" max="100" step="any" value="10">
+<button onclick="calc()">Calculate</button>
+<div class="result" id="out"></div>
+<div id="detail"></div>
+</div>
+<script>
+function syncRate(){var s=document.getElementById("preset");if(s.value!=="custom"){document.getElementById("rate").value=s.value;}calc();}
+function money(n,cur){return cur+" "+n.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});}
+function round2(n){return Math.round((n+Number.EPSILON)*100)/100;}
+function calc(){
+  var mode=document.getElementById("mode").value;
+  var amt=parseFloat(document.getElementById("amount").value)||0;
+  var rate=parseFloat(document.getElementById("rate").value)||0;
+  var cur=document.getElementById("preset").selectedOptions[0].dataset.cur||"A$";
+  var r=rate/100, net, tax, gross;
+  if(mode==="add"){net=round2(amt);tax=round2(net*r);gross=round2(net+tax);}
+  else{gross=round2(amt);net=round2(gross/(1+r));tax=round2(gross-net);}
+  document.getElementById("out").textContent="GST/tax: "+money(tax,cur)+"  ·  Total: "+money(gross,cur);
+  document.getElementById("detail").innerHTML="<p>Net (excluding tax): <strong>"+money(net,cur)+"</strong><br>Tax at "+rate+"%: <strong>"+money(tax,cur)+"</strong><br>Gross (including tax): <strong>"+money(gross,cur)+"</strong><br>"+(mode==="add"?"Formula: "+money(net,cur)+" × "+(1+r).toFixed(2)+" = "+money(gross,cur):"Formula: "+money(gross,cur)+" ÷ "+(1+r).toFixed(2)+" = "+money(net,cur))+"</p>";
+}
+calc();
+</script>
+<h2>How Australian GST works</h2>
+<p>Goods and Services Tax in Australia is a broad-based tax of 10 percent on most goods, services and other items sold or consumed in Australia. It was introduced on 1 July 2000 and the rate has never changed since, which makes the Australian calculation one of the most stable in the world: the only things that move are the classification of the supply and the price it is applied to. Registered businesses collect GST from customers on behalf of the Australian Taxation Office and report it through their Business Activity Statement, offsetting GST credits on business purchases against the GST they collected. The calculator on this page does the arithmetic of that system; it does not decide whether GST applies to your supply, and that distinction is where most real errors happen.</p>
+<p>The arithmetic itself is two formulas, and the second one is the one people get wrong. To add GST to a GST-exclusive price, multiply by 1.10: a price of $100 excluding GST carries $10 of GST and becomes $110 including GST. To remove GST from a GST-inclusive price, divide by 1.10: $110 divided by 1.10 is $100 excluding GST, with $10 of GST. The GST inside any inclusive price at the 10 percent rate is exactly one eleventh of that price, a shortcut worth memorising because it lets you check an invoice in your head. The mistake to avoid is taking 10 percent off the inclusive price: $110 less 10 percent is $99, not $100, and a quote checked that way will be a dollar short on every hundred. Retail prices shown to consumers in Australia must be GST-inclusive under Australian Consumer Law, while business-to-business and wholesale quotes are typically GST-exclusive, so the first question on any quote is always which kind of price you are looking at, not what the rate is.</p>
+<p>Rounding follows the ATO rule for a single taxable sale on a tax invoice: where GST includes a fraction of a cent, round to the nearest cent, with half a cent rounded up. That is why this calculator rounds each result to the nearest cent with halves up. On an invoice with several taxable items there are two accepted approaches to rounding, and the safer practice is to round each line rather than rounding only the final total, because rounding only at the end can drift a few cents away from the sum of the lines. A concrete case shows the rule in action: adding GST to $10.05 gives $1.005 of GST, which rounds up to $1.01, for a total of $11.06. A calculator that truncated instead of rounding would show $1.00 and $11.05, and over a long invoice those cents compound into a reconciliation gap.</p>
+<p>Classification is the harder half. Taxable sales carry the 10 percent rate and cover most goods and services sold by a GST-registered business. GST-free sales carry no GST in the price, and the seller can still claim GST credits on the costs of making them; most basic food, many health services, prescription medicines, accredited education courses, childcare and exports fall here. Input-taxed sales also carry no GST in the price, but the seller cannot claim credits; the common examples are financial supplies and residential rent. If you are unsure which category an item falls into, the ATO's lists, including its GST food list, are the authority, and a registered tax agent can settle a borderline case. Registration itself is mandatory when annual GST turnover reaches $75,000, or $150,000 for a non-profit organisation, while taxi, limousine and rideshare drivers must register regardless of turnover, and registration requires an ABN.</p>
+<h2>The other presets, and why Canada needs a province</h2>
+<p>New Zealand charges GST at a single broad rate of 15 percent on almost all goods and services, with very few exemptions, so its inclusive-price shortcut is to take 3 twenty-thirds of the total: $115 including GST contains $15 of GST. India, after the GST 2.0 reform effective 22 September 2025, runs on 0 percent nil-rated, 5 percent, 18 percent as the standard rate, and a new 40 percent rate for a narrow list of luxury and sin goods, with the old 12 percent and 28 percent slabs abolished and their items moved mostly to 5 percent or 18 percent. Older guides that still present 12 percent and 28 percent as live slabs are out of date, and this page omits them as presets for that reason, keeping a custom-rate box for any special rate a specific item requires. Canada cannot be reduced to one number at all: the federal GST is 5 percent, but provinces add their own tax, producing Harmonized Sales Tax totals of 13 percent in Ontario, 15 percent in the Atlantic provinces of New Brunswick, Newfoundland and Labrador and Prince Edward Island, and 14 percent in Nova Scotia, while British Columbia combines 5 percent GST with 7 percent PST for 12 percent in total. Pick the province, not just the country, or the answer will be wrong by design.</p>
+<h2>Worked examples (ATO-style)</h2>
+<table><tr><th>Case</th><th>Working</th><th>Result</th></tr>
+<tr><td>Add 10% to $100</td><td>100 × 0.10</td><td>GST $10.00; total $110.00</td></tr>
+<tr><td>Remove 10% from $110</td><td>110 ÷ 1.10; 110 ÷ 11</td><td>Net $100.00; GST $10.00</td></tr>
+<tr><td>Add 10% to $324</td><td>324 × 0.10</td><td>GST $32.40; total $356.40</td></tr>
+<tr><td>Remove 10% from $356.40</td><td>356.40 ÷ 1.10</td><td>Net $324.00; GST $32.40</td></tr>
+<tr><td>Add 10% to $10.05 (rounding)</td><td>10.05 × 0.10 = 1.005 → 1.01</td><td>GST $1.01; total $11.06</td></tr>
+<tr><td>Remove 10% from $220</td><td>220 ÷ 11</td><td>Net $200.00; GST $20.00</td></tr></table>
+<h2>Frequently asked questions</h2>
+<p><strong>What is the Australian GST rate?</strong> 10 percent, on most goods and services, unchanged since 1 July 2000.</p>
+<p><strong>How do I add 10% GST?</strong> Multiply the GST-exclusive price by 1.10. $100 excluding GST becomes $110 including $10 of GST.</p>
+<p><strong>How do I remove GST from a price?</strong> Divide by 1.10. The GST component is one eleventh of the inclusive price.</p>
+<p><strong>How is GST rounded under ATO rules?</strong> To the nearest cent for a single taxable sale on a tax invoice, with 0.5 of a cent rounded up.</p>
+<p><strong>Who must register for GST in Australia?</strong> Businesses at $75,000 of annual GST turnover ($150,000 for non-profits); taxi, limousine and rideshare drivers regardless of turnover.</p>
+<p><strong>What is GST-free in Australia?</strong> Most basic food, many health and education services, childcare and exports are GST-free; financial supplies and residential rent are generally input-taxed.</p>
+<h2>Sources</h2>
+<ul>
+<li>Australian Taxation Office GST framework: 10 percent rate; rounding to the nearest cent with 0.5 of a cent rounded up; registration thresholds $75,000 and $150,000.</li>
+<li><a href="https://addgst.com/">addgst.com — GST calculator and ATO rounding explanation</a></li>
+<li><a href="https://gstcalculator.net.au/">gstcalculator.net.au — GST calculator, 10 percent rate history</a></li>
+<li><a href="https://support.rentman.io/hc/en-us/articles/29588655458066-Canadian-Sales-Tax-for-Rentman-Customers">Rentman — Canadian GST/HST/PST rates by province</a></li>
+<li><a href="https://taxgarden.in/blog/gst-rates-list-india-item-wise-0-5-18-40-slabs-2026">Tax Garden — India GST 2.0 slabs from 22 September 2025</a></li>
+</ul>
+<p class="small">This calculator performs arithmetic on the rate you select. It is not tax advice and does not determine whether a supply is taxable, GST-free or input-taxed. Confirm classifications and registration obligations with the ATO or a registered tax agent.</p>
+</body></html>
