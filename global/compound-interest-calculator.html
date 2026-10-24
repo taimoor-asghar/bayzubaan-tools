@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compound Interest Calculator — Growth, Contributions &amp; Year-by-Year Table | Bayzubaan</title>
+<meta name="description" content="Calculate compound interest with daily, monthly, quarterly or annual compounding, plus regular contributions. See your final balance, total interest, year-by-year growth table and chart.">
+<meta property="og:title" content="Compound Interest Calculator — Growth, Contributions &amp; Year-by-Year Table">
+<meta property="og:description" content="Compound growth with regular contributions, a year-by-year table and a chart — using the standard compound formula.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://bayzubaan.com/global/compound-interest-calculator/">
+<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:900px;margin:0 auto;padding:20px;line-height:1.65;color:#1c2733}h1{font-size:1.9em;line-height:1.25}h2{margin-top:1.8em}.card{border:1px solid #d5dde5;border-radius:12px;padding:20px;background:#f7fafc}label{display:block;margin:12px 0 4px;font-weight:600}input,select{width:100%;padding:10px;font-size:16px;border:1px solid #b9c4cf;border-radius:8px;box-sizing:border-box}button{background:#0b5e4b;color:#fff;border:0;padding:12px 22px;font-size:17px;border-radius:8px;cursor:pointer;margin-top:16px}button:hover{background:#084a3c}.result{font-size:1.3em;font-weight:700;margin-top:16px}.small{font-size:.92em;color:#44546a}table{border-collapse:collapse;width:100%;margin:12px 0}th,td{border:1px solid #d5dde5;padding:8px;text-align:left}.note{background:#eef6ff;border:1px solid #bcd6f5;border-radius:10px;padding:14px}canvas{width:100%;max-width:820px;border:1px solid #d5dde5;border-radius:10px;background:#fff}</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is the compound interest formula?","acceptedAnswer":{"@type":"Answer","text":"A = P(1 + r/n)^(n×t), where P is principal, r is the annual rate as a decimal, n is compounding periods per year, and t is years. Regular contributions add a second term for the future value of an annuity."}},
+{"@type":"Question","name":"How is this different from simple interest?","acceptedAnswer":{"@type":"Answer","text":"Simple interest pays only on the original principal; compound interest pays on principal plus accumulated interest, so growth accelerates over time."}},
+{"@type":"Question","name":"Does compounding frequency matter much?","acceptedAnswer":{"@type":"Answer","text":"Yes, but modestly at ordinary rates: more frequent compounding gives slightly more interest, and the gap grows with the rate and the time horizon."}},
+{"@type":"Question","name":"Are contributions added before or after interest in this calculator?","acceptedAnswer":{"@type":"Answer","text":"Contributions are added at the end of each contribution period, so a contribution starts earning interest from the next period onwards. The page states this openly because timing changes the result."}},
+{"@type":"Question","name":"Is this financial advice?","acceptedAnswer":{"@type":"Answer","text":"No. This is an educational calculator using a fixed assumed rate. Real returns vary, inflation reduces purchasing power, and taxes and fees are not included."}},
+{"@type":"Question","name":"What does daily compounding mean here?","acceptedAnswer":{"@type":"Answer","text":"With no contributions, daily compounding uses (1 + r/365)^(365×t) exactly. With contributions, the monthly simulation applies a monthly factor of (1 + r/365)^(365/12), which is documented on the page."}}]}</script>
+</head><body>
+<p><a href="https://bayzubaan.com/">Bayzubaan</a> &rsaquo; Global tools</p>
+<h1>Compound Interest Calculator</h1>
+<p class="small">Educational tool only — not financial advice. The rate you enter is an assumption, not a forecast; real returns vary, and inflation, taxes and fees are not included.</p>
+<div class="card">
+<label for="principal">Initial principal</label>
+<input id="principal" type="number" min="0" step="any" value="10000">
+<label for="rate">Annual interest rate (%)</label>
+<input id="rate" type="number" min="0" step="any" value="5">
+<label for="years">Time (years)</label>
+<input id="years" type="number" min="0" max="100" step="1" value="10">
+<label for="freq">Compounding frequency</label>
+<select id="freq"><option value="365">Daily</option><option value="12" selected>Monthly</option><option value="4">Quarterly</option><option value="1">Annual</option></select>
+<label for="contrib">Regular contribution (each month, 0 for none)</label>
+<input id="contrib" type="number" min="0" step="any" value="0">
+<label for="cfreq">Contribution frequency</label>
+<select id="cfreq"><option value="1" selected>Monthly</option><option value="3">Quarterly</option><option value="12">Annually</option></select>
+<button onclick="calc()">Calculate growth</button>
+<div class="result" id="out"></div>
+<div id="detail"></div>
+<h3>Year-by-year growth</h3>
+<div id="table"></div>
+<canvas id="chart" width="820" height="320"></canvas>
+<p class="small">Chart: balance at each year-end. The darker portion is your own money (principal + contributions); the lighter portion on top is interest earned.</p>
+</div>
+<script>
+function money(n){return "$"+n.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});}
+function round2(n){return Math.round((n+Number.EPSILON)*100)/100;}
+function simulate(P,r,t,n,c,cf){
+  // Monthly simulation. Contributions added at end of each contribution period.
+  // Interest: monthly r/12 each month; quarterly r/4 at quarter ends; annual r at year ends;
+  // daily (no contributions) handled exactly outside; with contributions, monthly factor (1+r/365)^(365/12).
+  var bal=P, invested=P, rows=[], months=Math.round(t*12);
+  for(var mo=1;mo<=months;mo++){
+    if(n===12) bal*= (1+r/12);
+    else if(n===4 && mo%3===0) bal*= (1+r/4);
+    else if(n===1 && mo%12===0) bal*= (1+r);
+    else if(n===365) bal*= Math.pow(1+r/365,365/12);
+    if(c>0 && mo%cf===0){bal+=c;invested+=c;}
+    if(mo%12===0) rows.push({year:mo/12,balance:bal,invested:invested});
+  }
+  // partial final year if t not whole years
+  if(months%12!==0) rows.push({year:t,balance:bal,invested:invested});
+  return {balance:bal,invested:invested,rows:rows};
+}
+function calc(){
+  var P=parseFloat(document.getElementById("principal").value)||0;
+  var r=(parseFloat(document.getElementById("rate").value)||0)/100;
+  var t=parseFloat(document.getElementById("years").value)||0;
+  var n=parseInt(document.getElementById("freq").value);
+  var c=parseFloat(document.getElementById("contrib").value)||0;
+  var cf=parseInt(document.getElementById("cfreq").value);
+  var bal, invested;
+  if(c===0){
+    bal=P*Math.pow(1+r/n,n*t); invested=P;
+  } else {
+    var s=simulate(P,r,t,n,c,cf); bal=s.balance; invested=s.invested;
+  }
+  var interest=bal-invested;
+  document.getElementById("out").textContent="Final balance: "+money(round2(bal));
+  document.getElementById("detail").innerHTML="<p>Your money in: <strong>"+money(round2(invested))+"</strong> (principal "+money(P)+" + contributions "+money(round2(invested-P))+")<br>Total interest earned: <strong>"+money(round2(interest))+"</strong><br>Formula (no contributions): A = P(1 + r/n)<sup>nt</sup> = "+money(P)+" × (1 + "+r+"/"+n+")<sup>"+n+"×"+t+"</sup></p>";
+  // year table via simulation (or exact yearly values when no contributions)
+  var rows=[];
+  if(c===0){
+    for(var y=1;y<=Math.floor(t);y++){rows.push({year:y,balance:P*Math.pow(1+r/n,n*y),invested:P});}
+    if(t%1!==0)rows.push({year:t,balance:bal,invested:P});
+  } else {
+    rows=simulate(P,r,t,n,c,cf).rows;
+  }
+  var html="<table><tr><th>Year</th><th>Balance</th><th>Your money in</th><th>Interest</th></tr>";
+  rows.forEach(function(row){html+="<tr><td>"+row.year+"</td><td>"+money(round2(row.balance))+"</td><td>"+money(round2(row.invested))+"</td><td>"+money(round2(row.balance-row.invested))+"</td></tr>";});
+  html+="</table>";
+  document.getElementById("table").innerHTML=html;
+  drawChart(rows);
+}
+function drawChart(rows){
+  var cv=document.getElementById("chart"),ctx=cv.getContext("2d");
+  ctx.clearRect(0,0,cv.width,cv.height);
+  if(!rows.length)return;
+  var max=Math.max.apply(null,rows.map(function(x){return x.balance;}));
+  var bw=cv.width/(rows.length*1.6+1), x=20;
+  ctx.font="12px sans-serif";ctx.fillStyle="#334155";
+  rows.forEach(function(row){
+    var hInv=row.invested/max*240, hInt=Math.max(0,(row.balance-row.invested)/max*240);
+    ctx.fillStyle="#0b5e4b";ctx.fillRect(x,cv.height-40-hInv,bw,hInv);
+    ctx.fillStyle="#7fbfae";ctx.fillRect(x,cv.height-40-hInv-hInt,bw,hInt);
+    ctx.fillStyle="#334155";ctx.fillText("Y"+row.year,x,cv.height-20);
+    x+=bw*1.6;
+  });
+}
+calc();
+</script>
+<h2>What compound interest actually is</h2>
+<p>Compound interest is interest paid on interest. With simple interest, a deposit of $10,000 at 5 percent earns $500 every year, because the interest is always calculated on the original $10,000. With compound interest, the first year's $500 joins the principal, so the second year earns 5 percent of $10,500, which is $525, and the third year earns 5 percent of $11,025, which is $551.25. The yearly amounts grow even though the rate never changes, and that is the whole engine of long-term saving: time does more work than the rate does, because each year's growth becomes part of the base for every year after it. The standard formula captures this exactly: A = P(1 + r/n) raised to the power n times t, where P is the principal, r is the annual rate as a decimal, n is the number of compounding periods per year, and t is the number of years. A regular contribution adds a second stream, the future value of an annuity, which is why a modest monthly habit can matter more than a large one-off deposit made late.</p>
+<p>Compounding frequency matters, but honestly, less than most marketing suggests. At 5 percent over ten years, $10,000 compounded annually reaches $16,288.95, while monthly compounding reaches $16,470.09, a difference of about $181 on a $6,289 gain. Daily compounding adds only a few dollars more. The gap widens at higher rates and longer horizons — at 12 percent over thirty years the frequency choice is worth real money — but for ordinary saving the dominant decisions are how much you put in, how early you start, and whether you keep contributing, not whether interest is credited monthly or quarterly. This calculator therefore lets you compare frequencies directly, but it refuses to present a frequency difference as if it were the main event; the year-by-year table shows the contribution stream doing the heavy lifting in most realistic plans.</p>
+<p>The assumptions on this page are stated so that you can challenge them. Contributions are added at the end of each contribution period, which means a contribution starts earning interest from the next period onwards; a calculator that added contributions at the start of each period would show a slightly higher balance, and the difference is the interest on one period's contribution. The rate is fixed for the whole horizon, which no real investment delivers, and the result takes no account of inflation, which silently reduces what a future balance can buy, nor of taxes or fees, which reduce what you keep. A balance of $16,288.95 in ten years' time is not $16,288.95 of today's purchasing power if prices rose 2 percent a year in between; at that inflation rate it would buy roughly what $13,355 buys today. None of that makes the calculation useless — it makes it a measuring instrument for one variable, the growth of money at a stated rate, and like any instrument it should be read alongside the variables it does not measure.</p>
+<h2>Reading the table and the chart</h2>
+<p>The year-by-year table is the most useful output on this page, more useful than the headline balance, because it shows when growth changes character. In the early years the balance is mostly your own money; the interest column is small and the table looks almost linear. Somewhere in the middle, if the horizon is long enough, the interest column starts to grow faster than the contribution column, and from that point onwards the account is increasingly funding its own growth. That crossover is the moment compounding becomes visible, and it arrives later than most people expect — often well past the halfway mark of a twenty-year plan — which is why plans abandoned early never see it. The chart draws the same story: the dark lower portion is principal plus contributions, the lighter portion stacked on top is interest, and the widening of the lighter portion year by year is the compounding effect made visible. If your chart stays almost entirely dark, your plan is contribution-driven, and the honest lever is to contribute more or longer, not to hunt for a higher assumed rate.</p>
+<p>A practical way to use the tool is to run three versions of the same plan: the plan as it stands, the plan with contributions starting five years earlier, and the plan with a rate one point lower than you hope for. The first comparison usually dwarfs the second, and the third is the reality check that stops a plan from depending on an optimistic rate. Run the same exercise for a debt in reverse and the lesson sharpens further: compound interest working against you, as on a credit card balance left unpaid, grows with exactly the same mathematics, and the same year-by-year table that looks encouraging for savings looks alarming for debt. The formula has no opinion about direction; it only rewards time, and time is the one input you cannot buy back.</p>
+<h2>Worked examples (check these by hand)</h2>
+<table><tr><th>Case</th><th>Working</th><th>Result</th></tr>
+<tr><td>$10,000 at 5%, 10 years, annual</td><td>10,000 × 1.05<sup>10</sup></td><td>$16,288.95</td></tr>
+<tr><td>$1,000 at 12%, 1 year, monthly</td><td>1,000 × 1.01<sup>12</sup></td><td>$1,126.83</td></tr>
+<tr><td>$10,000 at 5%, 1 year, daily</td><td>10,000 × (1 + 0.05/365)<sup>365</sup></td><td>$10,512.67</td></tr>
+<tr><td>$5,000 at 6%, 5 years, quarterly, no contributions</td><td>5,000 × 1.015<sup>20</sup></td><td>$6,734.28</td></tr></table>
+<p class="small">The daily figure: (1 + 0.05/365)<sup>365</sup> = 1.051267, so $10,000 becomes $10,512.67. The quarterly figure: 1.015<sup>20</sup> = 1.346855, so $5,000 becomes $6,734.28. Both are verified in the node test run recorded with this build.</p>
+<h2>Frequently asked questions</h2>
+<p><strong>What is the compound interest formula?</strong> A = P(1 + r/n) raised to nt, where P is principal, r is the annual rate as a decimal, n is compounding periods per year and t is years. Regular contributions add the future value of those payments.</p>
+<p><strong>How is this different from simple interest?</strong> Simple interest pays only on the original principal. Compound interest pays on principal plus accumulated interest, so growth accelerates.</p>
+<p><strong>Does compounding frequency matter much?</strong> Modestly at ordinary rates; the gap grows with the rate and the horizon. Contributions and time matter more.</p>
+<p><strong>Are contributions added before or after interest?</strong> At the end of each contribution period, so a contribution earns interest from the next period onwards.</p>
+<p><strong>Is this financial advice?</strong> No. It is an educational calculator at a fixed assumed rate. Real returns vary, and inflation, taxes and fees are not included.</p>
+<p><strong>What does daily compounding mean here?</strong> With no contributions, (1 + r/365) raised to 365t exactly. With contributions, the monthly simulation applies (1 + r/365) raised to 365/12 per month, as documented above.</p>
+<h2>Sources</h2>
+<ul>
+<li>Standard compound interest formula, A = P(1 + r/n)<sup>nt</sup>, as used in standard financial mathematics references.</li>
+<li>Future value of an annuity for regular end-of-period contributions, used for the contribution stream in the simulation.</li>
+</ul>
+<p class="small">Educational tool only — not financial advice, not a forecast, and not a recommendation of any product. Verify any real investment decision against its prospectus or terms, including fees, taxes and the variability of returns.</p>
+</body></html>
