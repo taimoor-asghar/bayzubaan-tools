@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ATAR Calculator (Estimator) — NSW/UAC Aggregate to ATAR | Bayzubaan</title>
+<meta name="description" content="Estimate an ATAR from a NSW HSC aggregate using the published UAC 2025 aggregate-to-ATAR table, or build an aggregate from scaled subject marks. Clearly labelled as an estimate, never an official ATAR.">
+<meta property="og:title" content="ATAR Calculator (Estimator) — NSW/UAC Aggregate to ATAR">
+<meta property="og:description" content="An estimate only: convert a 2025 UAC aggregate to an ATAR, or build an aggregate from scaled marks.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://bayzubaan.com/australia/atar-calculator/">
+<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:900px;margin:0 auto;padding:20px;line-height:1.65;color:#1c2733}h1{font-size:1.9em;line-height:1.25}h2{margin-top:1.8em}.card{border:1px solid #d5dde5;border-radius:12px;padding:20px;background:#f7fafc}label{display:block;margin:10px 0 4px;font-weight:600}input,select{width:100%;padding:10px;font-size:16px;border:1px solid #b9c4cf;border-radius:8px;box-sizing:border-box}button{background:#0b3d5e;color:#fff;border:0;padding:12px 22px;font-size:17px;border-radius:8px;cursor:pointer;margin-top:16px}button:hover{background:#082c44}.result{font-size:1.35em;font-weight:700;margin-top:16px}.small{font-size:.92em;color:#44546a}table{border-collapse:collapse;width:100%;margin:12px 0}th,td{border:1px solid #d5dde5;padding:8px;text-align:left}.warn{background:#fff7e6;border:1px solid #f0c36d;border-radius:10px;padding:14px}.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}@media(max-width:640px){.grid{grid-template-columns:1fr}}</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is this an official ATAR?","acceptedAnswer":{"@type":"Answer","text":"No. This is an estimate only, based on the published UAC 2025 aggregate-to-ATAR table. Only UAC issues an official ATAR, and the conversion changes every year."}},
+{"@type":"Question","name":"What is an aggregate?","acceptedAnswer":{"@type":"Answer","text":"In NSW, the aggregate is the sum of a student's best 2 units of English plus their best 8 other units, using scaled marks out of 50 per unit, for a maximum of 500."}},
+{"@type":"Question","name":"What is scaling?","acceptedAnswer":{"@type":"Answer","text":"Scaling adjusts marks so students can be compared fairly across subjects with different candidatures. A scaled mark reflects a student's position as if the whole HSC cohort had taken that course; it is not a reward for choosing a hard subject."}},
+{"@type":"Question","name":"Why can two students with the same HSC marks get different ATARs?","acceptedAnswer":{"@type":"Answer","text":"Because scaling depends on the strength of each subject's candidature. The UAC 2025 scaling report's own example gives two students averaging 40.0 per unit, with ATARs of 60.00 and 80.00, purely because of their subject mixes."}},
+{"@type":"Question","name":"Which year's table does this calculator use?","acceptedAnswer":{"@type":"Answer","text":"The UAC Preliminary Report on the Scaling of the 2025 NSW HSC, Table A9, which gives the lowest aggregate for each selected ATAR in 2025."}},
+{"@type":"Question","name":"Does this cover states other than NSW?","acceptedAnswer":{"@type":"Answer","text":"No. This estimator is NSW/UAC first. Victoria, Queensland, South Australia and Western Australia use different aggregates and conversion tables."}}]}</script>
+</head><body>
+<p><a href="https://bayzubaan.com/">Bayzubaan</a> &rsaquo; Australia tools</p>
+<h1>ATAR Calculator — Estimator Only (NSW / UAC)</h1>
+<div class="warn"><strong>Estimate only — never an official ATAR.</strong> Only the Universities Admissions Centre (UAC) issues an official ATAR. This tool interpolates the published UAC 2025 aggregate-to-ATAR table (Table A9) and labels its year openly. Your real ATAR depends on your year's scaling, which UAC recalculates annually.</div>
+<h2>Option 1: Aggregate to estimated ATAR</h2>
+<div class="card">
+<label for="agg">Your aggregate (scaled marks out of 500)</label>
+<input id="agg" type="number" min="0" max="500" step="any" value="386.8">
+<button onclick="calcAgg()">Estimate ATAR</button>
+<div class="result" id="out1"></div>
+<div id="det1"></div>
+<p class="small">Published 2025 anchors used: 479.4 → 99.95; 459.4 → 99.50; 447.8 → 99.00; 433.2 → 98.00; 404.6 → 95.00; 370.7 → 90.00; 341.6 → 85.00; 313.8 → 80.00; 287.5 → 75.00; 262.0 → 70.00; 237.2 → 65.00; 212.9 → 60.00; 190.0 → 55.00; 165.7 → 50.00. Between anchors the tool interpolates linearly; below 50.00 it extends the lowest segment and floors at 30.00, and that extension is labelled as extrapolated.</p>
+</div>
+<h2>Option 2: Build an aggregate from scaled marks</h2>
+<div class="card">
+<p>Enter each subject's <strong>scaled mark per unit</strong> (out of 50) and its units. If you only know HSC marks, not scaled marks, use Option 1 with an estimated aggregate instead — entering HSC marks here as if they were scaled marks will give a wrong answer, because scaled marks are generally lower than HSC marks except near the top. Tick one subject as English: the tool takes your best 2 English units, then your best 8 other units.</p>
+<div id="rows"></div>
+<button onclick="addRow()">Add subject</button>
+<button onclick="calcSubj()">Build aggregate &amp; estimate ATAR</button>
+<button onclick="loadExample()">Load worked example</button>
+<div class="result" id="out2"></div>
+<div id="det2"></div>
+</div>
+<script>
+var ANCHORS=[[165.7,50.00],[190.0,55.00],[212.9,60.00],[237.2,65.00],[262.0,70.00],[287.5,75.00],[313.8,80.00],[341.6,85.00],[370.7,90.00],[404.6,95.00],[433.2,98.00],[447.8,99.00],[459.4,99.50],[479.4,99.95]];
+function atarFromAgg(a){
+  if(a>=479.4)return 99.95;
+  if(a<165.7){var est=50-(165.7-a)/(190.0-165.7)*5;return Math.max(30.00,est);}
+  for(var i=0;i<ANCHORS.length-1;i++){
+    var lo=ANCHORS[i],hi=ANCHORS[i+1];
+    if(a>=lo[0]&&a<=hi[0]){return lo[1]+(a-lo[0])/(hi[0]-lo[0])*(hi[1]-lo[1]);}
+  }
+  return 99.95;
+}
+function showAgg(a,el,det){
+  var at=atarFromAgg(a);
+  document.getElementById(el).textContent="Aggregate "+a.toFixed(1)+" of 500  →  estimated ATAR "+at.toFixed(2);
+  document.getElementById(det).innerHTML="<p>This is an <strong>estimate</strong> from the UAC 2025 table, not a prediction and not an official ATAR."+(a<165.7?" The figure below 50.00 is extrapolated beyond the published selected points.":"")+"</p>";
+}
+function calcAgg(){var a=parseFloat(document.getElementById("agg").value)||0;showAgg(a,"out1","det1");}
+var rowCount=0;
+function addRow(name,units,scaled,isEng){
+  rowCount++;
+  var d=document.createElement("div");d.className="grid";d.id="row"+rowCount;
+  d.innerHTML='<div><label>Subject</label><input class="sname" value="'+(name||"")+'"></div><div><label>Units</label><select class="sunits"><option value="2"'+(units===2?" selected":"")+'>2 units</option><option value="1"'+(units===1?" selected":"")+'>1 unit (extension)</option></select></div><div><label>Scaled mark / unit (0–50)</label><input class="sscaled" type="number" min="0" max="50" step="any" value="'+(scaled!==undefined?scaled:"")+'"></div><div><label><input type="checkbox" class="seng" '+(isEng?"checked":"")+' style="width:auto"> English subject</label></div>';
+  document.getElementById("rows").appendChild(d);
+}
+function calcSubj(){
+  var eng=[],oth=[];
+  document.querySelectorAll("#rows>div").forEach(function(r){
+    var u=parseInt(r.querySelector(".sunits").value)||2;
+    var s=parseFloat(r.querySelector(".sscaled").value);
+    if(isNaN(s))return;
+    var units=[];for(var i=0;i<u;i++)units.push(s);
+    if(r.querySelector(".seng").checked)eng=eng.concat(units);else oth=oth.concat(units);
+  });
+  eng.sort(function(a,b){return b-a;});oth.sort(function(a,b){return b-a;});
+  var take=eng.slice(0,2);var rest=oth.slice(0,8-take.length+ (take.length<2?0:0));
+  // Correct rule: best 2 English units + best 8 other units (if fewer than 2 English units, fill from others only up to 10 total)
+  var chosen=take.concat(oth.slice(0,10-take.length));
+  var agg=chosen.reduce(function(x,y){return x+y;},0);
+  document.getElementById("det2").innerHTML="<p>Units counted: "+chosen.length+" of 10 &middot; English units counted: "+take.length+" &middot; Aggregate: <strong>"+agg.toFixed(1)+" of 500</strong>. If you have fewer than 10 units entered, this aggregate is incomplete and the ATAR will read low.</p>";
+  showAgg(agg,"out2","det2b");
+  // append note into det2 without overwriting: showAgg wrote to det2b which does not exist, so handle here
+  document.getElementById("out2").textContent="Aggregate "+agg.toFixed(1)+" of 500  →  estimated ATAR "+atarFromAgg(agg).toFixed(2);
+}
+function loadExample(){
+  document.getElementById("rows").innerHTML="";rowCount=0;
+  addRow("English Advanced",2,37.9,true);
+  addRow("Mathematics Advanced",2,38.3,false);
+  addRow("Physics",2,38.8,false);
+  addRow("Chemistry",2,40.4,false);
+  addRow("Economics",2,38.1,false);
+  calcSubj();
+}
+// fix: det2b element does not exist; create rows initially
+addRow("English Advanced",2,"",true);
+addRow("Mathematics Advanced",2,"",false);
+addRow("Physics",2,"",false);
+addRow("Chemistry",2,"",false);
+addRow("Economics",2,"",false);
+calcAgg();
+</script>
+<div id="det2b" style="display:none"></div>
+
+<h2>How the ATAR is actually built</h2>
+<p>An ATAR is not a mark out of 100 and it is not a percentage. It is a percentile rank: an ATAR of 90.00 means you performed better than 90 percent of your age cohort, as measured through the admissions system, and an ATAR of 99.95 is the highest rank issued. That single fact explains most of the confusion around the number, because it means your ATAR depends on how everyone else performed as well as on how you performed, and it means the same set of marks can produce a different ATAR in a different year if the cohort changes. UAC, which issues ATARs for New South Wales and the Australian Capital Territory, states the mechanics plainly in its scaling reports, and this page follows those reports rather than any commercial rule of thumb.</p>
+<p>The construction has three stages. First, the NSW Education Standards Authority reports your HSC marks, which describe the standard you reached in each course against published performance bands. Second, those marks are scaled. Scaling adjusts for the fact that different subjects attract candidatures of different overall academic strength, so that a student can be compared fairly across subject choices. A scaled mark answers the question of where you would have placed if the entire HSC cohort had taken that course, and it is reported on a one-unit basis out of 50. UAC is explicit that scaled marks are generally lower than HSC marks except near the top, and that there is no unique scaled mark for any given HSC mark, because the conversion runs through raw marks and moderated school assessments before alignment and rounding. Any calculator that promises an exact HSC-to-scaled conversion for a subject is therefore promising something UAC itself says does not exist, and this tool refuses to fake one.</p>
+<p>Third, your aggregate is formed from your best two units of English plus your best eight other units, using scaled marks, for a maximum of 500. Note the 2025 change recorded in the preliminary scaling report: ATAR courses are no longer categorised as Category A or B, so the old restriction on counting former Category B courses no longer applies, and students counting more than two units of former Category B courses numbered 2,793 in 2025. Finally, the aggregate is converted to an ATAR using that year's published table, which is a rank table, not a formula. In 2025 the median ATAR was 70.75, 17.3 percent of students received 90.00 or above, and 53 students received 99.95. The table moves every year as participation rates and cohort composition shift, which is why this page stamps its year on every result and why last year's table is an estimate for this year's students, never a guarantee.</p>
+<p>The most vivid illustration of why scaling matters comes from the 2025 scaling report itself. It describes two students, Liam and Kellie, each averaging exactly 40.0 marks per unit across five subjects and each sitting at the 50th percentile within every one of their own courses. Liam's subjects, including English Standard and Drama, carried an average scaled mean of 21.9 per unit, while Kellie's subjects, including English Advanced, Economics and French Continuers, carried an average scaled mean of 31.3. Liam received an ATAR of 60.00 and Kellie received 80.00, a twenty-point gap produced entirely by the strength of the candidatures they were ranked against. The lesson is not that students should chase supposedly high-scaling subjects regardless of ability — UAC's own data show that a Band 6 in a modestly scaling course beats a Band 4 in a strongly scaling one — but that subject choice genuinely moves the result, and that any honest estimator must show its scaling assumptions rather than hiding them inside a single magic number.</p>
+<h2>How to use this estimator without fooling yourself</h2>
+<p>Start from scaled marks if you have them, from a school estimate, a tutoring service that shows its tables, or a previous year's report. If you only have HSC marks, do not type them into the scaled-mark boxes: instead, form a rough aggregate by judgement, or use the published percentile information for your subjects to sense-check where you sit, and then use Option 1. Treat the output as a range, not a point: an estimate of 92.40 means roughly the low nineties on 2025 conversion, not a promise of 92.40 on results day. Remember also that course cut-offs, properly called selection ranks, are a separate matter from your ATAR; a university may add adjustment factors for a subject, a location or an equity scheme, and the published cut-off for a course in one year is the lowest selection rank that received an offer, not a fixed entry bar for the next year.</p>
+<p>For students in other states, the structure is similar but the numbers are not interchangeable. Victoria's VTAC system works from scaled study scores with its own aggregate and its own published ATAR-to-aggregate table, Queensland, South Australia and Western Australia each have their own, and the aggregate that produces 95.00 in New South Wales will not produce 95.00 elsewhere. This page is NSW and UAC first by design, because that is the largest single cohort and the queue that ordered it, and it says so on every result rather than silently generalising. If you study outside New South Wales, use your own state's admissions centre tables and treat anything here as background on the concept only.</p>
+<h2>Published 2025 aggregate-to-ATAR anchors (UAC Table A9)</h2>
+<table><tr><th>ATAR</th><th>Lowest aggregate (of 500)</th></tr>
+<tr><td>99.95</td><td>479.4</td></tr><tr><td>99.50</td><td>459.4</td></tr><tr><td>99.00</td><td>447.8</td></tr><tr><td>98.00</td><td>433.2</td></tr><tr><td>95.00</td><td>404.6</td></tr><tr><td>90.00</td><td>370.7</td></tr><tr><td>85.00</td><td>341.6</td></tr><tr><td>80.00</td><td>313.8</td></tr><tr><td>75.00</td><td>287.5</td></tr><tr><td>70.00</td><td>262.0</td></tr><tr><td>65.00</td><td>237.2</td></tr><tr><td>60.00</td><td>212.9</td></tr><tr><td>55.00</td><td>190.0</td></tr><tr><td>50.00</td><td>165.7</td></tr></table>
+<p class="small">Worked check: an aggregate of 386.8 sits between 370.7 (90.00) and 404.6 (95.00); interpolation gives 90 + (386.8 − 370.7) ÷ 33.9 × 5 = 92.37, matching the published independent worked example's 92.38 within rounding. The subject example loaded above sums to 387.0 and estimates 92.40 on the same table.</p>
+<h2>Frequently asked questions</h2>
+<p><strong>Is this an official ATAR?</strong> No. This is an estimate only, from the published UAC 2025 table. Only UAC issues an official ATAR.</p>
+<p><strong>What is an aggregate?</strong> Your best 2 units of English plus your best 8 other units, in scaled marks out of 50 per unit, for a maximum of 500.</p>
+<p><strong>What is scaling?</strong> The adjustment that lets students be compared fairly across subjects with different candidatures. It is not a bonus for choosing a hard subject.</p>
+<p><strong>Why can two students with the same HSC marks get different ATARs?</strong> Because their subjects scaled differently. The UAC 2025 report's Liam and Kellie example shows identical average marks per unit producing ATARs of 60.00 and 80.00.</p>
+<p><strong>Which year's table does this calculator use?</strong> The UAC Preliminary Report on the Scaling of the 2025 NSW HSC, Table A9.</p>
+<p><strong>Does this cover states other than NSW?</strong> No. Victoria, Queensland, South Australia and Western Australia use different aggregates and tables.</p>
+<h2>Sources and honesty note</h2>
+<ul>
+<li><a href="https://ihub.uac.edu.au/assets/documents/public/atar-release/preliminary-report-on-the-scaling-of-the-hsc.pdf">UAC — Preliminary Report on the Scaling of the 2025 NSW HSC (Tables A3, A8, A9)</a></li>
+<li><a href="https://www.matrix.edu.au/beginners-guide-to-atar-scaling/scaling-hsc-marks/">Matrix Education — HSC scaling explained, citing the 2025 scaling report Table 6.1</a></li>
+<li><a href="https://www.ma99education.com.au/blog/how-is-the-atar-calculated-in-nsw.html">MA99 Education — How the ATAR is calculated in NSW (aggregate 386.8 → 92.38 worked example)</a></li>
+</ul>
+<p><strong>What this tool cannot verify, stated openly:</strong> UAC publishes scaled marks as percentile distributions per subject (Table A3), not as a unique HSC-mark-to-scaled-mark conversion table, and it warns expressly against using Table A3 as a simple conversion table. This tool therefore does not invent per-subject conversion curves. It converts a genuine aggregate (or genuine scaled marks) to an estimated ATAR on the verified 2025 table, and it says so. A future version could add per-subject percentile interpolation for individual subjects once each subject's published percentile points are transcribed and checked, but that is not claimed here.</p>
+<p class="small">Estimate only. Not an official ATAR, not a prediction, and not admissions advice. Confirm your result and your course options with UAC and your school.</p>
+</body></html>
