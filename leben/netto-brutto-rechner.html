@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Netto-Brutto-Rechner 2026: Welches Brutto brauche ich für mein Wunsch-Netto? | Bayzubaan</title>
+<meta name="description" content="Netto-Brutto-Rechner 2026: Geben Sie Ihr Wunsch-Nettogehalt ein und erfahren Sie, welches Bruttogehalt dafür nötig ist — rückwärts gerechnet mit der BMF-Programmablaufplan-Engine 2026, Steuerklassen I–VI, GKV und PKV.">
+<meta property="og:title" content="Netto-Brutto-Rechner 2026: Vom Wunsch-Netto zum nötigen Brutto">
+<meta property="og:description" content="Wunsch-Netto eingeben, nötiges Brutto erhalten: Die Umkehrung des Brutto-Netto-Rechners 2026 nach dem BMF-Programmablaufplan, inklusive Lohnsteuer, Solidaritätszuschlag, Kirchensteuer und Sozialversicherung.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://bayzubaan.com/leben/netto-brutto-rechner/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Wie funktioniert ein Netto-Brutto-Rechner?","acceptedAnswer":{"@type":"Answer","text":"Er kehrt die normale Brutto-Netto-Rechnung um: Statt aus einem Bruttogehalt das Netto zu berechnen, sucht er das Bruttogehalt, dessen Abzüge genau auf das eingegebene Wunsch-Netto führen. Weil Lohnsteuer und Sozialversicherung nicht linear vom Brutto abhängen, geschieht das durch eine systematische Suche (Bisektion) über die Vorwärtsrechnung, bis das Ergebnis auf den Cent stimmt."}},
+{"@type":"Question","name":"Warum kann man das Wunsch-Netto nicht einfach mit einem Prozentsatz hochrechnen?","acceptedAnswer":{"@type":"Answer","text":"Weil die Abzüge nicht proportional sind: Der Einkommensteuertarif steigt progressiv, die Sozialversicherung ist an Beitragsbemessungsgrenzen gedeckelt, und Freibeträge, Vorsorgepauschale und Zuschlagsteuern hängen vom Brutto ab. Ein fester Prozentsatz würde je nach Einkommenshöhe deutlich danebenliegen; nur die Umkehrung der echten Vorwärtsrechnung liefert das korrekte Brutto."}},
+{"@type":"Question","name":"Ist das gefundene Brutto exakt?","acceptedAnswer":{"@type":"Answer","text":"Der Rechner findet das kleinste Bruttogehalt in Cent-Schritten, dessen Vorwärtsrechnung mindestens das Wunsch-Netto ergibt, und zeigt die Rückrechnung offen an. Durch die Cent-Rundung der Monatsbeträge kann das zurückgegebene Netto um wenige Cent über dem Wunsch-Netto liegen; die Abweichung wird im Ergebnis ausgewiesen, sodass Sie sie sehen und nicht raten müssen."}},
+{"@type":"Question","name":"Welche Steuerklasse muss ich eingeben?","acceptedAnswer":{"@type":"Answer","text":"Die Steuerklasse, die in Ihren ELStAM hinterlegt ist: I für Ledige, II für Alleinerziehende, III und V für Ehepaare mit stark unterschiedlichem Einkommen, IV für Ehepaare mit ähnlichem Einkommen und VI für einen Zweitjob. Die Klasse verändert den monatlichen Abzug und damit das nötige Brutto erheblich, nicht aber die endgültige Jahressteuer."}},
+{"@type":"Question","name":"Warum brauche ich in Steuerklasse V so viel mehr Brutto für dasselbe Netto?","acceptedAnswer":{"@type":"Answer","text":"Weil Steuerklasse V nach einem Sonderverfahren berechnet wird, das den Splittingvorteil des Partners in Klasse III ausgleicht: Es gibt faktisch keinen Grundfreibetrag in der Wirkung, und der Abzug ist hoch. In der gemeinsamen Veranlagung gleicht sich das wieder aus; monatlich wirkt es aber so, als müssten Sie für dasselbe Netto deutlich mehr verdienen."}},
+{"@type":"Question","name":"Gilt das Ergebnis auch bei Kirchensteuer und Kindern?","acceptedAnswer":{"@type":"Answer","text":"Ja, beide Angaben fließen in die Suche ein: Die Kirchensteuer (8 Prozent in Bayern und Baden-Württemberg, 9 Prozent sonst) wird nur bei Kirchensteuerpflicht angesetzt, und die Kinderfreibeträge senken die Bemessungsgrundlage für Solidaritätszuschlag und Kirchensteuer, während die Lohnsteuer selbst unverändert bleibt. Die Pflegeversicherung berücksichtigt Kinderzahl und Bundesland, in Sachsen mit der Sonderregel."}},
+{"@type":"Question","name":"Was ist mit GKV und PKV?","acceptedAnswer":{"@type":"Answer","text":"Beide Fälle werden mit derselben Engine berechnet: In der gesetzlichen Krankenversicherung zahlen Sie 7,3 Prozent plus die Hälfte Ihres Zusatzbeitrags (Voreinstellung: durchschnittlicher Zusatzbeitrag 2026 von 2,9 Prozent) bis zur Beitragsbemessungsgrenze von 69.750 Euro im Jahr. In der privaten Krankenversicherung geben Sie Ihren tatsächlichen Beitrag und den Arbeitgeberzuschuss ein; der Eigenanteil ist dann Beitrag minus Zuschuss."}},
+{"@type":"Question","name":"Was bildet der Rechner nicht ab?","acceptedAnswer":{"@type":"Answer","text":"Wie die Vorwärtsrechnung bildet er den Regelfall eines gleichbleibenden Monatsgehalts ab: kein Faktorverfahren in Klasse IV, keine eingetragenen Frei- oder Hinzurechnungsbeträge, keine Versorgungsbezüge, keine sonstigen Bezüge wie Weihnachtsgeld oder Boni, keine Kirchensteuerkappung und keinen Übergangsbereich (Midijob) bis 2.000 Euro im Monat. Bei Monatsgehältern unter 2.000 Euro zeigt der Rechner einen Hinweis an."}},
+{"@type":"Question","name":"Ist dieser Rechner eine Steuerberatung?","acceptedAnswer":{"@type":"Answer","text":"Nein. Er liefert eine unverbindliche Orientierung auf Basis des BMF-Programmablaufplans 2026 und der Sozialversicherungswerte 2026. Er ersetzt keine Steuerberatung und keinen Steuerbescheid; maßgeblich sind Ihre Lohnabrechnung, Ihr Einkommensteuerbescheid und die Auskunft des zuständigen Finanzamts."}}
+]}</script>
+<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:860px;margin:0 auto;padding:20px;line-height:1.6;color:#1a1a1a}h1{font-size:1.7em;line-height:1.3}h2{margin-top:2em;border-top:1px solid #ddd;padding-top:.4em}label{display:block;margin:.7em 0 .2em;font-weight:600}input,select{width:100%;padding:.55em;font-size:1em;box-sizing:border-box}input[type=checkbox]{width:auto}button{padding:.7em 1.4em;font-size:1.05em;margin-top:1em;cursor:pointer}table{border-collapse:collapse;width:100%;margin:1em 0}td,th{border:1px solid #ccc;padding:.45em .6em;text-align:left}th{background:#f2f2f2}.net{font-size:1.6em;font-weight:700}.warn{background:#fff8e1;border:1px solid #e6c200;padding:.7em;margin:1em 0}.note{color:#444;font-size:.95em}.calc{background:#f7f7f7;padding:1em 1.2em;border:1px solid #ddd}.row{display:grid;grid-template-columns:1fr 1fr;gap:0 1.2em}@media(max-width:600px){.row{grid-template-columns:1fr}}</style>
+</head><body><main>
+<h1>Netto-Brutto-Rechner 2026: Welches Bruttogehalt brauche ich für mein Wunsch-Netto?</h1>
+<p>Sie wissen, was am Monatsende auf dem Konto ankommen soll — aber nicht, welches Bruttogehalt Ihr Arbeitgeber dafür zahlen muss? Dieser Rechner dreht die gewohnte Rechnung um: Geben Sie Ihr <strong>Wunsch-Nettogehalt</strong> ein, und er ermittelt das dafür nötige Bruttogehalt für 2026. Grundlage ist dieselbe Engine wie im Brutto-Netto-Rechner: die Lohnsteuer nach dem offiziellen <strong>Programmablaufplan (PAP) 2026</strong> des Bundesfinanzministeriums (BMF-Schreiben vom 12. November 2025), dazu Solidaritätszuschlag, Kirchensteuer und die Sozialversicherung mit den Beitragssätzen und Beitragsbemessungsgrenzen 2026. Das Ergebnis ist keine Steuerberatung, sondern eine nachvollziehbare Orientierung für Gehaltsverhandlungen, Jobwechsel und den monatlichen Haushaltsplan. Alle Eingaben werden nur in Ihrem Browser verarbeitet und nicht versendet.</p>
+
+<section class="calc" aria-label="Netto-Brutto-Rechner">
+<h2 style="margin-top:0;border:none;padding:0">Rechner</h2>
+<div class="row">
+<div><label for="nettoZiel">Wunsch-Nettogehalt (€)</label><input id="nettoZiel" type="number" min="0" step="0.01" value="2600"></div>
+<div><label for="zeitraum">Zeitraum</label><select id="zeitraum"><option value="monat">pro Monat</option><option value="jahr">pro Jahr</option></select></div>
+</div>
+<div class="row">
+<div><label for="stkl">Steuerklasse</label><select id="stkl">
+<option value="1">I — ledig / alleinstehend</option>
+<option value="2">II — alleinerziehend</option>
+<option value="3">III — verheiratet, höheres Einkommen</option>
+<option value="4">IV — verheiratet, ähnliches Einkommen</option>
+<option value="5">V — verheiratet, geringeres Einkommen</option>
+<option value="6">VI — Zweitjob / Nebenjob</option>
+</select></div>
+<div><label for="bundesland">Bundesland (Kirchensteuer, Pflegeversicherung)</label><select id="bundesland">
+<option value="BW">Baden-Württemberg (Kirchensteuer 8 %)</option>
+<option value="BY">Bayern (Kirchensteuer 8 %)</option>
+<option value="BE">Berlin (9 %)</option>
+<option value="BB">Brandenburg (9 %)</option>
+<option value="HB">Bremen (9 %)</option>
+<option value="HH">Hamburg (9 %)</option>
+<option value="HE">Hessen (9 %)</option>
+<option value="MV">Mecklenburg-Vorpommern (9 %)</option>
+<option value="NI">Niedersachsen (9 %)</option>
+<option value="NW" selected>Nordrhein-Westfalen (9 %)</option>
+<option value="RP">Rheinland-Pfalz (9 %)</option>
+<option value="SL">Saarland (9 %)</option>
+<option value="SN">Sachsen (9 %, Pflegeversicherung Sonderregel)</option>
+<option value="ST">Sachsen-Anhalt (9 %)</option>
+<option value="SH">Schleswig-Holstein (9 %)</option>
+<option value="TH">Thüringen (9 %)</option>
+</select></div>
+</div>
+<div class="row">
+<div><label for="kirche">Kirchensteuerpflichtig?</label><select id="kirche"><option value="nein" selected>Nein</option><option value="ja">Ja</option></select></div>
+<div><label for="versicherung">Krankenversicherung</label><select id="versicherung"><option value="gkv" selected>Gesetzlich (GKV)</option><option value="pkv">Privat (PKV, Basistarif)</option></select></div>
+</div>
+<div id="gkvFelder" class="row">
+<div><label for="kvz">Zusatzbeitrag Ihrer Krankenkasse (%)</label><input id="kvz" type="number" min="0" max="5" step="0.01" value="2.9"><p class="note">Voreinstellung 2,9 % = durchschnittlicher Zusatzbeitrag 2026. Maßgeblich ist Ihr kassenindividueller Satz.</p></div>
+<div><label for="alv">Arbeitslosenversicherung</label><select id="alv"><option value="ja" selected>Pflichtversichert</option><option value="nein">Nicht pflichtversichert</option></select></div>
+</div>
+<div id="pkvFelder" class="row" style="display:none">
+<div><label for="pkvBeitrag">PKV-Beitrag pro Monat, Kranken- + Pflege-Pflichtversicherung (€)</label><input id="pkvBeitrag" type="number" min="0" step="0.01" value="450"></div>
+<div><label for="pkvAgz">Arbeitgeberzuschuss pro Monat (€)</label><input id="pkvAgz" type="number" min="0" step="0.01" value="225"><p class="note">In Steuerklasse VI wird kein Arbeitgeberzuschuss angesetzt (Zuschuss nur vom Hauptarbeitgeber). Der Beitrag selbst ist eine Eingabe von Ihnen — der Rechner erfindet keine Prämie.</p></div>
+</div>
+<div class="row">
+<div><label for="kinder">Anzahl Kinder (für Pflegeversicherung)</label><input id="kinder" type="number" min="0" max="15" step="1" value="0"></div>
+<div><label for="pvModus">Pflegeversicherung</label><select id="pvModus"><option value="auto" selected>Automatisch aus Kinderzahl</option><option value="zuschlag">Kinderlos, 23 Jahre oder älter (Zuschlag 0,6 %)</option><option value="jung">Kinderlos, unter 23 (kein Zuschlag)</option></select></div>
+</div>
+<div class="row">
+<div><label for="zkf">Kinderfreibeträge (Zähler laut ELStAM, 0,5er-Schritte)</label><input id="zkf" type="number" min="0" max="15" step="0.5" value="0"><p class="note">Wird aus Kinderzahl und Steuerklasse vorbelegt (I/II: 0,5 je Kind; III/IV: 1,0 je Kind; V/VI: 0) und ist frei anpassbar. Wirkt nur auf Solidaritätszuschlag und Kirchensteuer, nicht auf die Lohnsteuer.</p></div>
+<div><p class="note" style="margin-top:2.2em">Annahmen: sozialversicherungspflichtige Beschäftigung mit gleichbleibendem Monatsgehalt, gesetzliche Rentenversicherung, kein Faktorverfahren, keine eingetragenen Frei- oder Hinzurechnungsbeträge, keine Versorgungsbezüge. Details stehen unten unter „Was der Rechner nicht abbildet“.</p></div>
+</div>
+<button type="button" id="berechnen">Nötiges Brutto berechnen</button>
+<div id="warnung"></div>
+<div id="ergebnis" aria-live="polite"></div>
+</section>
+
+<h2>Warum die Rückwärtsrechnung keine einfache Prozentrechnung ist</h2>
+<p>Die naheliegende Abkürzung — „Ich will 2.600 Euro netto, also rechne ich mit einer Nettoquote von 65 Prozent und verlange 4.000 Euro brutto“ — funktioniert nur zufällig. Die Nettoquote ist keine Konstante, sondern das Ergebnis einer Kette: Zuerst werden vom Jahresbrutto die Tabellenfreibeträge abgezogen (Arbeitnehmer-Pauschbetrag 1.230 Euro, Sonderausgaben-Pauschbetrag 36 Euro, in Steuerklasse II zusätzlich der Entlastungsbetrag für Alleinerziehende von 4.260 Euro; in Steuerklasse VI entfallen die Pauschbeträge). Dann wird die Vorsorgepauschale abgezogen — ein fiktiver Betrag, der sich aus 9,3 Prozent Rentenanteil bis zur Beitragsbemessungsgrenze von 101.400 Euro und einem Kranken- und Pflegeanteil bis 69.750 Euro zusammensetzt, bei niedrigen Einkommen begrenzt durch die Höchstbetragsrechnung von 1.900 Euro. Erst auf das verbleibende zu versteuernde Einkommen wird der Einkommensteuertarif des § 32a EStG angewendet: bis zum Grundfreibetrag von 12.348 Euro keine Steuer, danach zwei Progressionszonen von 14 bis 42 Prozent, ab 69.879 Euro der Spitzensteuersatz von 42 Prozent und ab 277.826 Euro die Reichensteuer von 45 Prozent. In Steuerklasse III wird das Splittingverfahren angewendet, in den Klassen V und VI ein Sonderverfahren nach § 39b Absatz 2 Satz 7 EStG. Erst danach kommen Solidaritätszuschlag (5,5 Prozent, aber erst oberhalb der Freigrenze von 20.350 Euro Jahreslohnsteuer im Grundtarif beziehungsweise 40.700 Euro im Splittingtarif, mit einer Milderungszone von 11,9 Prozent des übersteigenden Betrags) und Kirchensteuer (8 oder 9 Prozent der gesonderten Bemessungsgrundlage nach Kinderfreibeträgen). Und schließlich werden die Arbeitnehmeranteile zur Sozialversicherung abgezogen — Rentenversicherung 9,3 Prozent, Arbeitslosenversicherung 1,3 Prozent, Krankenversicherung 7,3 Prozent plus halber Zusatzbeitrag, Pflegeversicherung 1,8 Prozent (Sachsen 2,3 Prozent) zuzüglich Kinderlosenzuschlag oder abzüglich Kinderabschlägen — jeweils nur bis zu den Beitragsbemessungsgrenzen. Jeder dieser Schritte hängt vom Brutto ab, und das Brutto ist genau das, was Sie suchen. Deshalb gibt es keine geschlossene Formel, die man einfach umstellen könnte.</p>
+<p>Die ehrliche Lösung ist die systematische Suche: Der Rechner nimmt die vollständige Vorwärtsrechnung — exakt dieselbe Engine, die auch der Brutto-Netto-Rechner verwendet — und sucht per Bisektion das kleinste Bruttogehalt in Cent-Schritten, dessen Vorwärtsrechnung mindestens das Wunsch-Netto ergibt. Bisektion heißt: Er halbiert den Suchbereich so lange, bis nur noch ein Cent übrig ist. Das funktioniert zuverlässig, weil das Netto mit steigendem Brutto niemals sinkt — ein höheres Brutto kann durch die Progression zwar einen größeren Anteil an Abzügen haben, aber niemals weniger Netto ergeben. Die Suche ist deshalb nicht geraten, sondern bewiesen vollständig: Wenn ein Brutto existiert, das Ihr Wunsch-Netto erreicht, findet die Suche das kleinste davon. Und weil der Rechner die Rückrechnung offen zeigt — „Dieses Brutto ergibt in der Vorwärtsrechnung genau dieses Netto, Abweichung so viele Cent“ — können Sie das Ergebnis selbst prüfen, statt es glauben zu müssen.</p>
+
+<h2>Was das Ergebnis in der Gehaltsverhandlung bedeutet</h2>
+<p>Der wichtigste praktische Nutzen liegt in der Verhandlung: Wer „3.000 Euro netto“ als Ziel nennt, verhandelt über eine Größe, die der Arbeitgeber gar nicht direkt zusagen kann — er zahlt Brutto, und das Netto ergibt sich erst aus Steuerklasse, Kirchensteuer und Versicherung. Mit dem nötigen Brutto in der Hand verhandeln Sie dagegen über die Größe, die im Arbeitsvertrag steht. Zwei Fallstricke verdienen dabei besondere Aufmerksamkeit. Erstens die Steuerklasse: Dieselben 3.000 Euro netto erfordern in Steuerklasse V ein deutlich höheres Brutto als in Steuerklasse III, obwohl die endgültige Jahressteuer eines Ehepaars in der gemeinsamen Veranlagung dieselbe bleibt. Wer nur auf das Monatsnetto schaut, überschätzt in Klasse V leicht, was er „braucht“, und unterschätzt in Klasse III, was am Jahresende nachgezahlt werden muss. Zweitens die Beitragsbemessungsgrenzen: Oberhalb von 5.812,50 Euro Monatsbrutto steigen Kranken- und Pflegebeiträge nicht mehr mit, oberhalb von 8.450 Euro auch Renten- und Arbeitslosenbeiträge nicht mehr. Eine Gehaltserhöhung in diesem Bereich kommt deshalb fast vollständig netto an — umgekehrt heißt das: Wer sein Wunsch-Netto knapp oberhalb einer Grenze ansetzt, braucht dafür weniger zusätzliches Brutto, als eine lineare Rechnung vermuten ließe. Der Rechner bildet beides exakt ab, weil er die echte Vorwärtsrechnung invertiert und keine Näherung verwendet.</p>
+<p>Auch für den Wechsel zwischen GKV und PKV ist die Rückwärtsrechnung aufschlussreich: In der PKV hängt der Eigenanteil nicht vom Gehalt ab, sondern vom vertraglichen Beitrag abzüglich Arbeitgeberzuschuss. Steigt Ihr Brutto, steigt Ihr PKV-Eigenanteil nicht mit — das nötige Brutto für ein gegebenes Netto wächst in der PKV deshalb langsamer als in der GKV, solange der Beitrag gleich bleibt. Umgekehrt kann eine Beitragserhöhung Ihres PKV-Tarifs das nötige Brutto sprunghaft erhöhen, ohne dass sich an Ihrem Gehalt etwas geändert hätte. Geben Sie deshalb immer Ihren aktuellen Beitrag ein und prüfen Sie, wie empfindlich das Ergebnis auf Beitragsänderungen reagiert: Rechnen Sie einmal mit dem heutigen Beitrag und einmal mit einem um 50 Euro höheren Beitrag, und Sie sehen sofort, wie viel Brutto eine Tariferhöhung in der Verhandlung wert ist.</p>
+
+<h2>Die Steuerklassen I bis VI im Überblick</h2>
+<table>
+<tr><th>Steuerklasse</th><th>Für wen</th><th>Folge für das nötige Brutto</th></tr>
+<tr><td>I</td><td>Ledige, Geschiedene, dauernd getrennt Lebende ohne Kind in Klasse II</td><td>Grundtarif; das Referenzszenario für Alleinstehende</td></tr>
+<tr><td>II</td><td>Alleinerziehende mit Kind im Haushalt</td><td>Entlastungsbetrag 4.260 Euro senkt das zu versteuernde Einkommen — etwas weniger Brutto nötig</td></tr>
+<tr><td>III</td><td>Verheiratete oder Lebenspartner mit deutlich höherem Einkommen, Partner in Klasse V</td><td>Splittingtarif: deutlich weniger Brutto nötig — aber Jahresausgleich in der Veranlagung beachten</td></tr>
+<tr><td>IV</td><td>Verheiratete oder Lebenspartner mit ähnlichem Einkommen</td><td>Grundtarif je Partner; das Faktorverfahren ist hier nicht abgebildet (Faktor 1,0)</td></tr>
+<tr><td>V</td><td>Verheiratete oder Lebenspartner mit deutlich geringerem Einkommen, Partner in Klasse III</td><td>Sonderverfahren, kein Grundfreibetrag in der Wirkung — deutlich mehr Brutto nötig</td></tr>
+<tr><td>VI</td><td>Zweitjob oder weiterer Job neben dem Hauptjob</td><td>Keine Pauschbeträge, kein Arbeitgeberzuschuss zur PKV — höchstes nötiges Brutto je Netto</td></tr>
+</table>
+
+<h2>Beispielrechnungen und geprüfte Rückrechnungen</h2>
+<p>Ein Beispiel aus der Vorwärtsrechnung macht die Umkehrung greifbar: Bei einem Monatsbrutto von 4.000 Euro in Steuerklasse I, ohne Kirchensteuerpflicht, gesetzlich krankenversichert mit dem durchschnittlichen Zusatzbeitrag von 2,9 Prozent und ohne Kinder beträgt das Nettogehalt 2.605,50 Euro im Monat. Umgekehrt gefragt — „Welches Brutto brauche ich für 2.605,50 Euro netto unter denselben Bedingungen?“ — muss die Antwort also 4.000 Euro lauten, und genau das liefert die Suche. Die folgenden Fälle wurden mit der eingebauten Engine geprüft, indem das gefundene Brutto wieder durch die Vorwärtsrechnung geschickt wurde; die Abweichung ist die Differenz zwischen zurückgegebem Netto und Wunsch-Netto:</p>
+<p id="rundtrip"><table><tr><th>Wunsch-Netto (pro Monat)</th><th>Bedingungen</th><th>Gefundenes Brutto (pro Monat)</th><th>Rückrechnung: Netto</th><th>Abweichung</th></tr>
+<tr><td>2.605,50 €</td><td>Steuerklasse I, Nordrhein-Westfalen, keine Kirchensteuer, GKV (Zusatzbeitrag 2,9 %), keine Kinder</td><td>4.000,00 €</td><td>2.605,50 €</td><td>0,00 €</td></tr>
+<tr><td>3.000,00 €</td><td>Steuerklasse I, Nordrhein-Westfalen, keine Kirchensteuer, GKV (2,9 %), keine Kinder</td><td>4.747,17 €</td><td>3.000,00 €</td><td>0,00 €</td></tr>
+<tr><td>2.500,00 €</td><td>Steuerklasse V, Nordrhein-Westfalen, keine Kirchensteuer, GKV (2,9 %), keine Kinder</td><td>4.704,26 €</td><td>2.500,00 €</td><td>0,00 €</td></tr>
+<tr><td>4.000,00 €</td><td>Steuerklasse III, Bayern, Kirchensteuer 8 %, 2 Kinder, GKV (2,9 %)</td><td>5.818,16 €</td><td>4.000,00 €</td><td>0,00 €</td></tr>
+<tr><td>2.000,00 €</td><td>Steuerklasse II, Nordrhein-Westfalen, keine Kirchensteuer, 1 Kind, GKV (2,9 %)</td><td>2.722,26 €</td><td>2.000,00 €</td><td>0,00 €</td></tr>
+<tr><td>3.500,00 €</td><td>Steuerklasse I, Nordrhein-Westfalen, keine Kirchensteuer, PKV-Beitrag 600,00 €, Arbeitgeberzuschuss 300,00 €, keine Kinder</td><td>5.343,12 €</td><td>3.500,00 €</td><td>0,00 €</td></tr>
+<tr><td>5.000,00 €</td><td>Steuerklasse IV, Sachsen, Kirchensteuer 9 %, 2 Kinder, GKV (2,9 %)</td><td>8.784,65 €</td><td>5.000,00 €</td><td>0,00 €</td></tr>
+<tr><td>1.500,00 €</td><td>Steuerklasse VI, Nordrhein-Westfalen, keine Kirchensteuer, GKV (2,9 %), keine Kinder</td><td>2.620,12 €</td><td>1.500,00 €</td><td>0,00 €</td></tr></table></p>
+<p>Die Logik dahinter ist einfach zu prüfen: Wer das angegebene Brutto in den Brutto-Netto-Rechner mit denselben Einstellungen eingibt, erhält das angegebene Netto zurück — bis auf die ausgewiesene Cent-Abweichung, die aus der Rundung der Monatsbeträge auf volle Cent stammt. Größere Abweichungen als wenige Cent würden auf einen Fehler in der Suche hindeuten; in allen geprüften Fällen liegt die Abweichung bei höchstens 0,01 Euro.</p>
+
+<h2>Was der Rechner nicht abbildet</h2>
+<p>Kein Rechner kann jeden Einzelfall abbilden, und dieser macht da keine Ausnahme — aber er sagt offen, wo die Grenzen liegen. Nicht abgebildet sind: das Faktorverfahren in Steuerklasse IV (der Rechner rechnet mit Faktor 1,0); eingetragene Freibeträge und Hinzurechnungsbeträge aus den ELStAM; Versorgungsbezüge mit Versorgungsfreibetrag und Zuschlag; der Altersentlastungsbetrag für Arbeitnehmer, die vor Beginn des Kalenderjahres das 64. Lebensjahr vollendet haben; sonstige Bezüge wie Weihnachtsgeld, Boni oder Abfindungen, für die eine eigene Berechnung nach § 39b Absatz 3 EStG gilt; die Kirchensteuerkappung und Mindestkirchensteuer; und der Übergangsbereich für Monatsgehälter bis 2.000 Euro (Midijob), in dem die Arbeitnehmerbeiträge zur Sozialversicherung reduziert sind, sowie der Minijob bis 603 Euro im Monat, bei dem der Arbeitgeber Pauschalen trägt. Bei Monatsgehältern unter 2.000 Euro zeigt der Rechner deshalb einen Hinweis an; die ausgewiesenen Sozialbeiträge sind dann zu hoch. Ebenfalls nicht abgebildet sind berufsständische Versorgungswerke anstelle der gesetzlichen Rentenversicherung, freiwillige Krankenversicherung oberhalb der Versicherungspflichtgrenze mit anderen Beitragsregeln als dem hier verwendeten Basistarif-Modell und unterjährige Änderungen, etwa ein Gehaltswechsel mitten im Jahr oder ein Wechsel der Krankenkasse mit neuem Zusatzbeitrag. Wer einen dieser Fälle hat, sollte das Ergebnis mit der eigenen Lohnabrechnung vergleichen und im Zweifel einen Steuerberater fragen.</p>
+
+<h2>Geprüft gegen den Programmablaufplan des BMF</h2>
+<p>Die Lohnsteuer-Engine dieses Rechners ist unverändert die Engine des Brutto-Netto-Rechners und wurde gegen die im endgültigen Programmablaufplan 2026 abgedruckte allgemeine Prüftabelle geprüft: 42 Bruttostufen von 5.000 bis 110.000 Euro Jahresbrutto in allen sechs Steuerklassen, berechnet mit einem Zusatzbeitrag von 2,90 Prozent. Alle 252 Werte stimmen exakt überein. Als Stichproben zur Nachprüfung: Bei 30.000 Euro Jahresbrutto in Steuerklasse I beträgt die Jahreslohnsteuer 2.248 Euro, bei 50.000 Euro in Steuerklasse III 2.810 Euro und bei 30.000 Euro in Steuerklasse V 5.588 Euro (jeweils mit Kinderlosenzuschlag in der Vorsorgepauschale, wie in der allgemeinen Prüftabelle). Zusätzlich reproduziert die Engine das vom BMF-Rechner veröffentlichte Ergebnis von 37,16 Euro Lohnsteuer im Monat bei 1.500 Euro Monatsbrutto, Steuerklasse I, ohne Kirchensteuer, PKV-Beitrag 0 und ohne Arbeitslosenversicherung. Die zugrunde liegenden Parameter sind: Grundfreibetrag 12.348 Euro, Kinderfreibetrag 4.878 Euro je 0,5-Zähler beziehungsweise 9.756 Euro je 1,0-Zähler, Solidaritätszuschlag-Freigrenze 20.350 Euro, Grenzwerte für die Steuerklassen V und VI 14.071 Euro, 34.939 Euro und 222.260 Euro, Beitragsbemessungsgrenzen 69.750 Euro (Kranken-/Pflegeversicherung) und 101.400 Euro (Renten-/Arbeitslosenversicherung). Quellen: BMF-Schreiben vom 12. November 2025 mit Anlage 1 (Programmablaufplan 2026), § 32a EStG (Einkommensteuertarif 2026), § 39b EStG (Lohnsteuerabzug) und die Sozialversicherungs-Rechengrößen 2026.</p>
+<p class="note">Hinweis: Dieser Rechner ist keine Steuer- oder Rechtsberatung. Die Ergebnisse sind unverbindlich; maßgeblich sind Ihre Lohnabrechnung, Ihr Einkommensteuerbescheid und die Auskunft des zuständigen Finanzamts. Stand der Werte: Steuerjahr 2026.</p>
+
+<h2>Häufige Fragen</h2>
+<h3>Wie funktioniert ein Netto-Brutto-Rechner?</h3>
+<p>Er kehrt die normale Brutto-Netto-Rechnung um: Statt aus einem Bruttogehalt das Netto zu berechnen, sucht er das Bruttogehalt, dessen Abzüge genau auf das eingegebene Wunsch-Netto führen. Weil Lohnsteuer und Sozialversicherung nicht linear vom Brutto abhängen, geschieht das durch eine systematische Suche (Bisektion) über die Vorwärtsrechnung, bis das Ergebnis auf den Cent stimmt.</p>
+<h3>Warum kann man das Wunsch-Netto nicht einfach mit einem Prozentsatz hochrechnen?</h3>
+<p>Weil die Abzüge nicht proportional sind: Der Einkommensteuertarif steigt progressiv, die Sozialversicherung ist an Beitragsbemessungsgrenzen gedeckelt, und Freibeträge, Vorsorgepauschale und Zuschlagsteuern hängen vom Brutto ab. Ein fester Prozentsatz würde je nach Einkommenshöhe deutlich danebenliegen; nur die Umkehrung der echten Vorwärtsrechnung liefert das korrekte Brutto.</p>
+<h3>Ist das gefundene Brutto exakt?</h3>
+<p>Der Rechner findet das kleinste Bruttogehalt in Cent-Schritten, dessen Vorwärtsrechnung mindestens das Wunsch-Netto ergibt, und zeigt die Rückrechnung offen an. Durch die Cent-Rundung der Monatsbeträge kann das zurückgegebene Netto um wenige Cent über dem Wunsch-Netto liegen; die Abweichung wird im Ergebnis ausgewiesen.</p>
+<h3>Welche Steuerklasse muss ich eingeben?</h3>
+<p>Die Steuerklasse, die in Ihren ELStAM hinterlegt ist: I für Ledige, II für Alleinerziehende, III und V für Ehepaare mit stark unterschiedlichem Einkommen, IV für Ehepaare mit ähnlichem Einkommen und VI für einen Zweitjob. Die Klasse verändert den monatlichen Abzug und damit das nötige Brutto erheblich, nicht aber die endgültige Jahressteuer.</p>
+<h3>Warum brauche ich in Steuerklasse V so viel mehr Brutto für dasselbe Netto?</h3>
+<p>Weil Steuerklasse V nach einem Sonderverfahren berechnet wird, das den Splittingvorteil des Partners in Klasse III ausgleicht: Es gibt faktisch keinen Grundfreibetrag in der Wirkung, und der Abzug ist hoch. In der gemeinsamen Veranlagung gleicht sich das wieder aus.</p>
+<h3>Gilt das Ergebnis auch bei Kirchensteuer und Kindern?</h3>
+<p>Ja, beide Angaben fließen in die Suche ein: Die Kirchensteuer (8 Prozent in Bayern und Baden-Württemberg, 9 Prozent sonst) wird nur bei Kirchensteuerpflicht angesetzt, und die Kinderfreibeträge senken die Bemessungsgrundlage für Solidaritätszuschlag und Kirchensteuer, während die Lohnsteuer selbst unverändert bleibt.</p>
+<h3>Was ist mit GKV und PKV?</h3>
+<p>Beide Fälle werden mit derselben Engine berechnet: In der gesetzlichen Krankenversicherung zahlen Sie 7,3 Prozent plus die Hälfte Ihres Zusatzbeitrags bis zur Beitragsbemessungsgrenze von 69.750 Euro im Jahr. In der privaten Krankenversicherung geben Sie Ihren tatsächlichen Beitrag und den Arbeitgeberzuschuss ein; der Eigenanteil ist Beitrag minus Zuschuss.</p>
+<h3>Was bildet der Rechner nicht ab?</h3>
+<p>Wie die Vorwärtsrechnung bildet er den Regelfall eines gleichbleibenden Monatsgehalts ab: kein Faktorverfahren in Klasse IV, keine eingetragenen Frei- oder Hinzurechnungsbeträge, keine Versorgungsbezüge, keine sonstigen Bezüge wie Weihnachtsgeld oder Boni, keine Kirchensteuerkappung und keinen Übergangsbereich (Midijob) bis 2.000 Euro im Monat.</p>
+<h3>Ist dieser Rechner eine Steuerberatung?</h3>
+<p>Nein. Er liefert eine unverbindliche Orientierung auf Basis des BMF-Programmablaufplans 2026 und der Sozialversicherungswerte 2026. Er ersetzt keine Steuerberatung und keinen Steuerbescheid.</p>
+
+<h2>Quellen</h2>
+<ul>
+<li>Bundesministerium der Finanzen, Schreiben vom 12. November 2025, IV C 5 – S 2361/00025/016/028, mit Anlage 1: Programmablaufplan für die maschinelle Berechnung der vom Arbeitslohn einzubehaltenden Lohnsteuer, des Solidaritätszuschlags und der Maßstabsteuer für die Kirchenlohnsteuer für 2026 (einschließlich Prüftabellen).</li>
+<li>§ 32a Einkommensteuergesetz (EStG): Einkommensteuertarif für den Veranlagungszeitraum 2026 (Grundfreibetrag 12.348 Euro).</li>
+<li>§ 39b EStG: Einbehaltung der Lohnsteuer, einschließlich des Verfahrens für die Steuerklassen V und VI (Absatz 2 Satz 7) und der Vorsorgepauschale (Absatz 2 Satz 5).</li>
+<li>§ 51a EStG: Bemessungsgrundlage für Kirchenlohnsteuer und Solidaritätszuschlag; Freigrenze Solidaritätszuschlag 20.350 Euro (40.700 Euro im Splittingtarif).</li>
+<li>Sozialversicherungs-Rechengrößen 2026: Beitragsbemessungsgrenzen 69.750 Euro (KV/PV) und 101.400 Euro (RV/AV); Beitragssätze RV 18,6 %, AV 2,6 %, KV 14,6 % zuzüglich Zusatzbeitrag (Durchschnitt 2,9 %), PV 3,6 % zuzüglich Kinderlosenzuschlag 0,6 % beziehungsweise Abschlägen von 0,25 % je Kind ab dem zweiten bis zum fünften Kind.</li>
+<li>§ 38b EStG und ELStAM-Regeln: Kinderfreibetragszähler grundsätzlich 0,5 je Kind, 1,0 je Kind bei verheirateten, nicht dauernd getrennt lebenden Eltern in IV/IV und in III/V nur in Klasse III.</li>
+</ul>
+</main>
+<script>
+"use strict";
+var GFB=12348,W1=14071,W2=34939,W3=222260;
+function tariff(x){x=Math.floor(x);if(x<=GFB)return 0;if(x<17800){var y=(x-GFB)/10000;return Math.floor((914.51*y+1400)*y);}if(x<69879){var z=(x-17799)/10000;return Math.floor((173.10*z+2397)*z+1034.87);}if(x<277826)return Math.floor(0.42*x-11135.63);return Math.floor(0.45*x-19470.38);}
+function up56(zx){var s1=tariff(1.25*zx),s2=tariff(0.75*zx);return Math.max((s1-s2)*2,zx*0.14);}
+function mst56(x){var zzx=x,zx=zzx>W2?W2:zzx,vergl=up56(zx);if(zzx>W2){if(zzx>W3)vergl=vergl+(W3-W2)*0.42+(zzx-W3)*0.45;else vergl=vergl+(zzx-W2)*0.42;}if(zzx<=W1)return Math.floor(vergl);var hoch=Math.floor(up56(W1))+(Math.min(zzx,W3)-W1)*0.42+Math.max(zzx-W3,0)*0.45;return Math.floor(Math.min(vergl,hoch));}
+function papAnnual(gross,o){
+  var kvSatzAn=o.kvz/2/100+0.07;
+  var pvSatzAn=o.sachsen?0.023:0.018;if(o.pvz)pvSatzAn+=0.006;else pvSatzAn-=o.pva*0.0025;
+  var vspr=Math.min(gross,101400)*0.093;
+  var vspKvPv=o.pkv?Math.max(o.pkpvAnnual-(o.stkl===6?0:o.pkpvAgzAnnual),0):Math.min(gross,69750)*(kvSatzAn+pvSatzAn);
+  var vsp=vspKvPv+vspr;
+  if(o.stkl!==6&&o.alv){var vspAlv=Math.min(gross,101400)*0.013;var vspHb=Math.min(vspAlv+vspKvPv,1900);var vspN=vspr+vspHb;if(vspN>vsp)vsp=vspN;}
+  var anp=o.stkl===6?0:Math.min(1230,gross),sap=o.stkl===6?0:36,efa=o.stkl===2?4260:0,kztab=o.stkl===3?2:1;
+  var ztabfb=efa+anp+sap,zve=gross-ztabfb-vsp,lst=0;
+  if(zve>=1){var x=Math.floor(zve/kztab);lst=o.stkl<5?tariff(x)*kztab:mst56(x);}
+  var jbmg=lst,kfb=0;
+  if(o.zkf>0){kfb=o.zkf*9756;var zve2=gross-(ztabfb+kfb)-vsp;if(zve2>=1){var x2=Math.floor(zve2/kztab);jbmg=o.stkl<5?tariff(x2)*kztab:mst56(x2);}else jbmg=0;}
+  var frei=20350*kztab,solz=0;if(jbmg>frei)solz=Math.min(jbmg*0.055,(jbmg-frei)*0.119);
+  return{lst:lst,jbmg:jbmg,solz:solz,vsp:vsp,ztabfb:ztabfb,zve:zve,kfb:kfb,pvSatzAn:pvSatzAn,frei:frei};
+}
+
+function r2(v){return Math.round((v+1e-9)*100)/100;}
+function fmt(v){return v.toLocaleString("de-DE",{minimumFractionDigits:2,maximumFractionDigits:2})+" €";}
+function $(id){return document.getElementById(id);}
+function syncZkf(){
+  var stkl=parseInt($("stkl").value,10),kinder=parseInt($("kinder").value,10)||0,zkf=0;
+  if(stkl===1||stkl===2)zkf=kinder*0.5;else if(stkl===3||stkl===4)zkf=kinder*1.0;else zkf=0;
+  $("zkf").value=zkf;
+}
+function toggleFelder(){
+  var pkv=$("versicherung").value==="pkv";
+  $("gkvFelder").style.display=pkv?"none":"grid";
+  $("pkvFelder").style.display=pkv?"grid":"none";
+}
+function collectOpts(){
+  var stkl=parseInt($("stkl").value,10);
+  var bl=$("bundesland").value,sachsen=bl==="SN",kistRate=(bl==="BW"||bl==="BY")?0.08:0.09;
+  var kirche=$("kirche").value==="ja";
+  var pkv=$("versicherung").value==="pkv";
+  var kvz=parseFloat($("kvz").value);if(isNaN(kvz))kvz=2.9;kvz=Math.max(0,Math.min(5,kvz));
+  var alv=$("alv").value==="ja";
+  var kinder=parseInt($("kinder").value,10)||0;kinder=Math.max(0,Math.min(15,kinder));
+  var zkf=parseFloat($("zkf").value)||0;if(stkl>=5)zkf=0;zkf=Math.max(0,Math.min(15,zkf));
+  var pvModus=$("pvModus").value,pvz,pva;
+  if(pvModus==="zuschlag"){pvz=1;pva=0;}
+  else if(pvModus==="jung"){pvz=0;pva=0;}
+  else if(kinder===0){pvz=1;pva=0;}
+  else{pvz=0;pva=Math.min(Math.max(kinder-1,0),4);}
+  var pkvBeitrag=parseFloat($("pkvBeitrag").value)||0,pkvAgz=parseFloat($("pkvAgz").value)||0;
+  return {stkl:stkl,zkf:zkf,kvz:kvz,sachsen:sachsen,pvz:pvz,pva:pva,pkv:pkv,pkpvAnnual:pkvBeitrag*12,pkpvAgzAnnual:pkvAgz*12,alv:alv,
+    kirche:kirche,kistRate:kistRate,pkvBeitrag:pkvBeitrag,pkvAgz:pkvAgz};
+}
+function vorwaerts(gm,o){
+  var ga=gm*12;
+  var pap=papAnnual(ga,o);
+  var lstM=Math.floor(pap.lst*100/12)/100,solzM=Math.floor(pap.solz*100/12)/100;
+  var bkM=o.kirche?Math.floor(pap.jbmg*100/12)/100:0,kistM=o.kirche?r2(bkM*o.kistRate):0;
+  var rvM=r2(Math.min(gm,8450)*0.093),avM=o.alv?r2(Math.min(gm,8450)*0.013):0,kvM=0,pvM=0,pkvM=0;
+  if(o.pkv){pkvM=r2(Math.max(o.pkvBeitrag-(o.stkl===6?0:o.pkvAgz),0));}
+  else{kvM=r2(Math.min(gm,5812.50)*(0.073+o.kvz/200));pvM=r2(Math.min(gm,5812.50)*pap.pvSatzAn);}
+  var sv=r2(rvM+avM+kvM+pvM+pkvM),abz=r2(lstM+solzM+kistM+sv),netto=r2(gm-abz);
+  return {gm:gm,netto:netto,lstM:lstM,solzM:solzM,bkM:bkM,kistM:kistM,rvM:rvM,avM:avM,kvM:kvM,pvM:pvM,pkvM:pkvM,sv:sv,abz:abz,pap:pap};
+}
+function invertieren(zielNetto,o){
+  if(zielNetto<=0)return {bruttoCents:0,b:vorwaerts(0,o)};
+  var lo=0,hi=Math.max(Math.round(zielNetto*100),1);
+  while(vorwaerts(hi/100,o).netto<zielNetto){
+    hi*=2;
+    if(hi>50000000)break;
+  }
+  while(lo<hi){
+    var mid=Math.floor((lo+hi)/2);
+    if(vorwaerts(mid/100,o).netto>=zielNetto)hi=mid;else lo=mid+1;
+  }
+  return {bruttoCents:lo,b:vorwaerts(lo/100,o)};
+}
+function berechnen(){
+  var ziel=parseFloat($("nettoZiel").value)||0;
+  var monatlich=$("zeitraum").value==="monat";
+  var zielM=monatlich?ziel:ziel/12;
+  var o=collectOpts();
+  var inv=invertieren(zielM,o),gm=inv.bruttoCents/100,b=inv.b;
+  var abw=r2(b.netto-zielM);
+  var plus100=vorwaerts(gm+100,o);
+  var warn="";
+  if(gm>0&&gm<=603)warn='<div class="warn">Hinweis: Bis 603 Euro im Monat liegt in der Regel ein Minijob vor — dort gelten Pauschalen des Arbeitgebers statt der hier berechneten Beiträge. Das Ergebnis ist für einen Minijob nicht aussagekräftig.</div>';
+  else if(gm>0&&gm<2000)warn='<div class="warn">Hinweis: Bis 2.000 Euro im Monat gilt der Übergangsbereich (Midijob) mit reduzierten Arbeitnehmerbeiträgen zur Sozialversicherung. Dieser Rechner bildet den Übergangsbereich nicht ab — die ausgewiesenen Sozialbeiträge sind hier zu hoch und das nötige Brutto entsprechend überschätzt.</div>';
+  $("warnung").innerHTML=warn;
+  var svZeilen=o.pkv
+    ?"<tr><td>Rentenversicherung (9,3 %)</td><td>"+fmt(b.rvM)+"</td></tr><tr><td>Arbeitslosenversicherung</td><td>"+fmt(b.avM)+"</td></tr><tr><td>Private Kranken- + Pflegeversicherung (Beitrag abzüglich Arbeitgeberzuschuss)</td><td>"+fmt(b.pkvM)+"</td></tr>"
+    :"<tr><td>Rentenversicherung (9,3 %)</td><td>"+fmt(b.rvM)+"</td></tr><tr><td>Arbeitslosenversicherung (1,3 %)</td><td>"+fmt(b.avM)+"</td></tr><tr><td>Krankenversicherung (7,3 % + halber Zusatzbeitrag von "+o.kvz.toLocaleString("de-DE")+" %)</td><td>"+fmt(b.kvM)+"</td></tr><tr><td>Pflegeversicherung ("+(b.pap.pvSatzAn*100).toLocaleString("de-DE")+" % Arbeitnehmeranteil)</td><td>"+fmt(b.pvM)+"</td></tr>";
+  $("ergebnis").innerHTML=
+    '<p class="net">Nötiges Brutto: '+fmt(gm)+' pro Monat</p>'+
+    '<p>'+fmt(r2(gm*12))+' brutto pro Jahr · Abzüge gesamt '+fmt(b.abz)+' pro Monat · Nettoquote '+(gm>0?(b.netto/gm*100).toFixed(1):"0,0")+' %</p>'+
+    '<p><strong>Rückrechnung (Kontrolle):</strong> Dieses Brutto ergibt in der Vorwärtsrechnung ein Netto von '+fmt(b.netto)+' pro Monat — Abweichung zum Wunsch-Netto: '+fmt(abw)+' pro Monat. 100 Euro mehr Brutto würden das Netto auf '+fmt(plus100.netto)+' pro Monat bringen.</p>'+
+    '<table><tr><th>Position (pro Monat, bei diesem Brutto)</th><th>Betrag</th></tr>'+
+    '<tr><td>Bruttogehalt</td><td>'+fmt(gm)+'</td></tr>'+
+    '<tr><td>Lohnsteuer</td><td>− '+fmt(b.lstM)+'</td></tr>'+
+    '<tr><td>Solidaritätszuschlag</td><td>− '+fmt(b.solzM)+'</td></tr>'+
+    '<tr><td>Kirchensteuer'+(o.kirche?' ('+(o.kistRate*100).toLocaleString("de-DE")+' % von '+fmt(b.bkM)+' Bemessungsgrundlage)':" (nicht kirchensteuerpflichtig)")+'</td><td>− '+fmt(b.kistM)+'</td></tr>'+
+    svZeilen+
+    '<tr><td><strong>Sozialversicherung gesamt</strong></td><td><strong>− '+fmt(b.sv)+'</strong></td></tr>'+
+    '<tr><td><strong>Nettogehalt (Rückrechnung)</strong></td><td><strong>'+fmt(b.netto)+'</strong></td></tr></table>'+
+    '<p class="note">Rechenweg (Jahr): Jahresbrutto '+fmt(gm*12)+' − Tabellenfreibeträge '+fmt(b.pap.ztabfb)+' − Vorsorgepauschale '+fmt(b.pap.vsp)+' = zu versteuerndes Einkommen '+fmt(b.pap.zve)+'. Jahreslohnsteuer nach dem Programmablaufplan: '+fmt(b.pap.lst)+'. Bemessungsgrundlage für Solidaritätszuschlag und Kirchensteuer (nach Kinderfreibeträgen von '+fmt(b.pap.kfb)+'): '+fmt(b.pap.jbmg)+' — Freigrenze Solidaritätszuschlag: '+fmt(b.pap.frei)+'. Die Suche erfolgte per Bisektion über diese Vorwärtsrechnung bis auf den Cent; es wurde keine Näherungsformel verwendet. Unverbindliche Orientierung, keine Steuerberatung.</p>';
+}
+$("berechnen").addEventListener("click",berechnen);
+$("stkl").addEventListener("change",syncZkf);
+$("kinder").addEventListener("change",syncZkf);
+$("versicherung").addEventListener("change",toggleFelder);
+["nettoZiel","zeitraum","bundesland","kirche","kvz","alv","pvModus","zkf","pkvBeitrag","pkvAgz"].forEach(function(id){$(id).addEventListener("change",berechnen);});
+berechnen();
+</script>
+</body></html>
